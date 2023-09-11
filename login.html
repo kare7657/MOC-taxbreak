@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- swiper輪播 -->
+    <link rel="stylesheet" href="scss/swiper-bundle.min.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <main>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                    <li>></li>
+                    <li><span>登入</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 登入 -->
+        <section class="content-login">
+            <div class="container">
+                <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+                <h2>登入</h2>
+                <form>
+                    <div class="form-gp">
+                        <label for="BAN">單位統一編號</label>
+                        <input type="number" name="BAN" id="BAN">
+                    </div>
+                    <div class="form-gp">
+                        <label for="account">帳號</label>
+                        <input type="text" name="account" id="account">
+                    </div>
+                    <div class="form-gp">
+                        <label for="password">密碼</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <!-- 圖片驗證碼 -->
+                    <div class="code-gp">
+                        <label for="code">驗證碼</label>
+                        <div class="text-gp">
+                            <input class="code" type="text" name="code" id="code">
+                            <img class="RP" src="img/RandomPic_ForLogin.jpg" alt="圖片驗證碼">
+                            <a href=""><img class="reform" src="img/redo.svg" alt="重整"></a>
+                        </div>
+                    </div>
+                    <div class="form-gp">
+                        <input type="button" value="註冊" class="button-outline" onclick="location.href='sign-up.html'">
+                        <input type="submit" value="送出">
+                        <div class="w-100 text-center">
+                            <a href="#" data-toggle="modal" data-target="#modalChangPWD">忘記密碼？</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- modal -->
+        <div class="modal fade modal-template" id="modalChangPWD" tabindex="-1" role="dialog"
+            aria-labelledby="modalPrivateLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp" target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                class="glyphicon glyphicon-remove" aria-hidden="true"></span></button> -->
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modalPrivateLabel">變更密碼</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-gp">
+                                <label for="account">帳號<span class="notice">*</span></label>
+                                <input type="password" name="account" id="account" value="">
+                                <div class="text">
+                                    <p class="notice">testtesttesttest</p>
+                                </div>
+                            </div>
+                            <div class="form-gp">
+                                <label for="email">信箱<span class="notice">*</span></label>
+                                <input type="text" name="email" id="email" value="">
+                                <div class="text">
+                                    <p class="notice">testtesttesttest</p>
+                                </div>
+                            </div>
+                            <div class="code-gp">
+                                <label for="code">驗證碼</label>
+                                <div class="text-gp">
+                                    <input class="code" type="text" name="code" id="code">
+                                    <img class="RP" src="img/RandomPic_ForLogin.jpg" alt="圖片驗證碼">
+                                    <a href=""><img class="reform" src="img/redo.svg" alt="重整"></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="go" id="go">確認更改</button>
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+</body>
+
+</html>

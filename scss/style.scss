@@ -1,0 +1,1077 @@
+@import "./guideline";
+@import "./mixin";
+
+// 通用
+* {
+    @include all();
+}
+body.modal-open {
+    padding-right: 0px !important;
+    overflow-y: auto;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 1rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-right: 0 !important;
+    position: relative;
+    @include mobile-XS() {
+        font-size: 0.875rem;
+    }
+    @include navbar();
+    @include footer();
+    @include breadcrumb();
+    @include back-top();
+    @include form();
+    @include datepicker();
+    @include table();
+    @include searchbar();
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        position: relative;
+        padding-top: calc(123px + 32px);
+        padding-bottom: $p-2L;
+        @include web-S {
+            padding-top: 123px;
+        }
+        @include pad {
+            padding-top: 80px;
+        }
+
+        section {
+            width: 100%;
+        }
+        .brief-p {
+            margin-bottom: $m-S;
+        }
+        // 一般
+        .content-normal {
+            ul:not(.nav, .breadcrumb) {
+                padding: 0;
+                li:not(.nav-item) {
+                    line-height: 2;
+                    color: $text;
+                    list-style: decimal;
+                    list-style-position: inside;
+                }
+            }
+
+            h6 {
+                margin-bottom: $p-XXS;
+            }
+            h4 {
+                margin-bottom: $p-XXS;
+            }
+            h3,
+            h4,
+            h5 {
+                margin-top: $m-S;
+                margin-bottom: $p-XXS;
+            }
+            img {
+                margin-top: $m-XS;
+            }
+            .nav.nav-pills {
+                padding: 0;
+                .nav-item {
+                    margin: $p-XXS;
+                    margin-left: 0;
+                    @include mobile-L {
+                        margin: $p-XS;
+                        margin-left: 0;
+                    }
+                    a.tab {
+                        border: solid 1px $secondary;
+                        padding: $m-XXS $p-XXS;
+                        font-size: $size-p;
+                        color: black;
+                        border-radius: 4px;
+                        @include mobile-L {
+                            font-size: $size-h5;
+                        }
+                    }
+                    .active {
+                        background-color: rgba($color: $secondary, $alpha: 0.1);
+                    }
+                }
+            }
+            .tab-content {
+                background-color: rgba($color: $secondary, $alpha: 0.1);
+                padding: $p-XS $p-S;
+                margin-top: $m-XS;
+                .tab-pane {
+                    h4:not(:first-child) {
+                        margin-top: $m-XS;
+                    }
+                    a {
+                        width: 100%;
+                        line-height: 2;
+                    }
+                }
+                button {
+                    margin: $m-XS 0;
+                    width: 15%;
+                    @include mobile-L {
+                        width: 100%;
+                    }
+                }
+            }
+            .btn-gp {
+                margin-top: $m-S;
+                button {
+                    margin-right: $m-XS;
+                }
+            }
+            .icon-gp {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: $m-S;
+                a {
+                    margin-right: $m-S;
+                    margin-bottom: $m-S;
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        margin: 0;
+                    }
+                }
+            }
+            iframe {
+                width: 100%;
+                margin-top: $m-XS;
+            }
+        }
+        // Banner
+        .section-banner {
+            max-width: 1110px;
+            margin: auto;
+            display: block !important;
+            background-color: white !important;
+            color: $text !important;
+            padding: 0;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+        }
+        // 最新消息
+        .section-news {
+            .new-btn {
+                margin-bottom: $m-S;
+                button {
+                    margin-right: $m-XXS;
+                    opacity: 0.3;
+                    @include mobile-L {
+                        padding: $m-XXS $p-XS;
+                    }
+                    @include mobile-XS {
+                        padding: $m-XXS $p-XXS;
+                    }
+                }
+                .active-btn {
+                    opacity: 1;
+                }
+            }
+            .new {
+                @include news-list(20%, 80%);
+            }
+            .list1 {
+                .list {
+                    &:nth-of-type(odd) {
+                        background-color: rgba($color: $primary-table, $alpha: 1);
+                    }
+                }
+            }
+            .list2 {
+                .list {
+                    &:nth-of-type(odd) {
+                        background-color: rgba($color: $primary-table, $alpha: 1);
+                    }
+                }
+            }
+            .list3 {
+                .list {
+                    &:nth-of-type(odd) {
+                        background-color: rgba($color: $primary-table, $alpha: 1);
+                    }
+                }
+            }
+            .list4 {
+                .list {
+                    &:nth-of-type(odd) {
+                        background-color: rgba($color: $primary-default, $alpha: 0.1);
+                    }
+                }
+            }
+            .list1,
+            .list2,
+            .list3,
+            .list4 {
+                display: none;
+            }
+            .active-list {
+                display: block;
+            }
+            .info-top {
+                margin-top: $m-S;
+                ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    font-size: $size-p;
+                    color: $primary-default;
+                    li {
+                        display: inline;
+                        margin-right: $m-S;
+                        @include mobile-L() {
+                            display: block;
+                        }
+                    }
+                    .far {
+                        width: 13px;
+                        color: $primary-default;
+                        font-size: $size-p;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .info-body {
+                img {
+                    width: 100%;
+                    max-height: 600px;
+                    object-position: center;
+                    margin-top: $m-S;
+                    @include pad() {
+                        max-height: 400px;
+                    }
+                    @include mobile-L() {
+                        max-height: 300px;
+                    }
+                }
+                p {
+                    margin: $m-S 0;
+                }
+            }
+            .btn {
+                display: flex;
+                justify-content: center;
+                margin-bottom: $m-M;
+                @include web-S() {
+                    margin-bottom: $m-S;
+                }
+            }
+        }
+        // 活動課程
+        .section-curriculum {
+            display: flex;
+            flex-direction: column;
+            .curriculum-gp {
+                display: flex;
+                flex-wrap: wrap;
+                @include pad {
+                    justify-content: space-between;
+                }
+                .block {
+                    width: 23%;
+                    margin-bottom: $p-S;
+                    &:not(:last-child) {
+                        margin-right: $p-XS;
+                        @include web-XL {
+                            margin-right: $m-S;
+                        }
+                        @include web-S {
+                            margin-right: $p-XS;
+                        }
+                        @include pad {
+                            margin-right: 0;
+                        }
+                    }
+                    @include pad {
+                        width: 48%;
+                    }
+                    @include mobile-L {
+                        width: 100%;
+                    }
+                    a {
+                        height: auto;
+                    }
+                    img {
+                        width: 100%;
+                        height: 197px;
+                        object-fit: cover;
+                        object-position: center;
+                        outline: solid 1px $bk-20;
+                        @include web-S {
+                            height: 170px;
+                        }
+                        @include pad {
+                            height: 180px;
+                        }
+                        @include mobile-L {
+                            height: 197px;
+                        }
+                    }
+                    .text-gp {
+                        h4 {
+                            margin: $p-XXS 0;
+                            margin-top: $m-XS;
+                        }
+                        p {
+                            color: $primary-default;
+                            line-height: 1;
+                        }
+                    }
+                    i {
+                        font-size: $size-p;
+                        margin-right: $p-XXS;
+                        color: $secondary;
+                    }
+                }
+            }
+            .curriculum-intro {
+                display: flex;
+                justify-content: start;
+                align-items: start;
+                margin-bottom: $m-M;
+                @include pad {
+                    flex-wrap: wrap;
+                    margin-bottom: $m-XS;
+                }
+                img {
+                    width: 50%;
+                    max-height: 400px;
+                    margin-right: $m-S;
+                    margin-top: 0;
+                    @include pad {
+                        width: 100%;
+                        margin-bottom: $m-S;
+                        margin-right: 0;
+                    }
+                }
+                .brief {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    @include pad {
+                        width: 100%;
+                    }
+                    table {
+                        border: solid 1px $secondary;
+                        margin-bottom: $m-S;
+                        tr {
+                            background-color: transparent;
+                            @include mobile-L {
+                                display: flex;
+                                flex-direction: column;
+                                background-color: transparent;
+                            }
+                            th,
+                            td {
+                                text-align: left;
+                                padding: $p-XS $p-XS;
+                                border-bottom: solid 1px $secondary;
+                                @include mobile-L {
+                                    padding: $p-XXS $p-XS;
+                                }
+                            }
+                            th {
+                                width: 25%;
+                                @include mobile-L {
+                                    width: 100%;
+                                    background-color: rgba($color: $secondary, $alpha: 0.1);
+                                }
+                            }
+                        }
+                    }
+                    button.signup {
+                        background-color: $notice;
+                        padding: $p-XXS;
+                    }
+                }
+            }
+        }
+        // 快速連結
+        .section-fastlink {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .btn {
+                width: 49%;
+                min-height: 180px;
+                display: flex;
+                align-items: center;
+                border: solid 2px rgba($color: $primary-default, $alpha: 0.3);
+                border-radius: 8px;
+                background-image: url("../img/fast-link_5.png");
+                background-repeat: no-repeat;
+                background-position: 10% 100%;
+                margin-bottom: $p-XS;
+                @include pad {
+                    flex-wrap: wrap;
+                }
+                @include mobile-L {
+                    width: 100%;
+                    margin-bottom: $p-S;
+                }
+                img {
+                    width: 55%;
+                    max-height: 135px;
+                    object-fit: contain;
+                    @include pad {
+                        width: 100%;
+                        height: 100px;
+                        padding-top: $p-XXS;
+                    }
+                }
+                .title {
+                    width: 45%;
+                    font-size: 2.125rem;
+                    color: $primary-dark;
+                    font-weight: bold;
+                    text-align: left;
+                    @include pad {
+                        width: 100%;
+                        text-align: center;
+                        padding: $p-XXS;
+                        font-size: $size-h2;
+                    }
+                }
+            }
+        }
+        // 社群
+        .section-social {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .video {
+                width: calc(100% - 524px);
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-content: start;
+                @include web-S {
+                    width: 49%;
+                }
+                @include pad {
+                    width: 100%;
+                }
+                .block {
+                    width: 48%;
+                    margin-bottom: $p-XS;
+                    @include mobile-L {
+                        width: 100%;
+                        margin-bottom: $p-S;
+                    }
+                    img {
+                        width: 100%;
+                        height: 158px;
+                        margin-bottom: $p-XXS;
+                        object-fit: cover;
+                        object-position: center;
+                        outline: solid 1px $bk-20;
+                        @include web-S {
+                            height: 168px;
+                        }
+                    }
+                    .text-gp {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        @include mobile-L {
+                            flex-wrap: wrap;
+                        }
+                        .title {
+                            width: 72%;
+                            font-size: $size-h4;
+                            font-weight: bold;
+                            color: black;
+                            @include mobile-L {
+                                width: 100%;
+                                text-align: justify;
+                                &.ellipsis {
+                                    white-space: initial;
+                                    overflow: initial;
+                                    text-overflow: initial;
+                                }
+                            }
+                        }
+                        .view {
+                            width: 28%;
+                            color: $complementary;
+                            text-align: right;
+                            font-size: $size-p;
+                            @include mobile-L {
+                                width: 100%;
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+            .fb {
+                width: 500px;
+                text-align: right;
+                margin-top: 46px;
+                @include web-S {
+                    width: 49%;
+                }
+                @include pad {
+                    width: 100%;
+                    text-align: left;
+                }
+                iframe {
+                    width: 100% !important;
+                }
+            }
+        }
+
+        // 青諮會
+        .yc-member-gp {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: start;
+            justify-content: start;
+            @include mobile-L {
+                justify-content: space-between;
+            }
+            .block {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                margin-right: $p-S;
+                margin-bottom: $m-XS;
+                @include web-S {
+                    margin: 0 $p-XS;
+                    margin-bottom: $m-XS;
+                }
+                @include pad {
+                    margin: 0 $m-S;
+                    margin-bottom: $m-XS;
+                }
+                @include mobile-L {
+                    width: 47%;
+                    max-width: initial;
+                    margin: 0;
+                    margin-bottom: $m-XS;
+                }
+                img {
+                    width: 158px;
+                    height: 205px;
+                    border-radius: 8px;
+                    margin: 0;
+                    object-fit: cover;
+                    object-position: top center;
+                    @include mobile-L {
+                        width: 145px;
+                        height: 190px;
+                    }
+                    @include mobile-XS {
+                        width: 120px;
+                        height: 165px;
+                    }
+                }
+                h4 {
+                    width: 100%;
+                    text-align: center;
+                    margin-top: $p-XXS;
+                }
+            }
+        }
+        .member-card {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            @include mobile-L {
+                flex-direction: column;
+                align-items: start;
+            }
+            img {
+                max-height: 206px;
+                border-radius: 12px;
+                margin: 0;
+                margin-right: $m-S;
+                object-fit: contain;
+                object-position: top center;
+                @include mobile-L {
+                    width: 100%;
+                    max-height: initial;
+                    margin: 0;
+                    margin-bottom: $m-XS;
+                }
+            }
+            .text-gp {
+                h4 {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        // 職涯服務
+        .career-service {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: $m-S;
+            margin-bottom: $m-M;
+            .block {
+                display: flex;
+                flex-direction: column;
+                width: 32%;
+                border: solid 1px $secondary;
+                padding: $p-XS $p-M;
+                &:not(:last-child) {
+                    margin-right: $m-S;
+                    @include pad {
+                        margin-right: 0;
+                        margin-bottom: $m-S;
+                    }
+                }
+                @include web-S {
+                    width: 31%;
+                }
+                @include pad {
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: row;
+                }
+                @include mobile-L {
+                    flex-wrap: wrap;
+                    padding: $p-S $p-M;
+                }
+                .top {
+                    text-align: center;
+                    margin: $m-S 0;
+                    @include pad {
+                        width: 30%;
+                        margin: 0;
+                        margin-right: $m-M;
+                    }
+                    @include mobile-L {
+                        width: 100%;
+                        margin: $m-XS 0;
+                        margin-right: 0;
+                    }
+                    img {
+                        text-align: center;
+                        margin-top: 0;
+                    }
+                    h4 {
+                        margin: 0;
+                        margin-top: $m-XS;
+                        color: $primary-default;
+                        @include pad {
+                            margin: $m-XS 0;
+                            font-size: $size-h5;
+                        }
+                    }
+                }
+                .bottom {
+                    padding: 0;
+                    @include pad {
+                        width: 70%;
+                        margin-bottom: 0;
+                    }
+                    @include mobile-L {
+                        width: 100%;
+                    }
+                    li {
+                        list-style: disc;
+                        margin-left: $m-S;
+                    }
+                }
+            }
+        }
+        // 歷年成果
+        .section-lightbox {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: $m-XS;
+            .block {
+                width: 31%;
+                margin: 0;
+                padding: 0;
+                margin-right: $m-S;
+                margin-bottom: $m-S;
+                @include pad {
+                    width: 30%;
+                }
+                @include mobile-L {
+                    width: 100%;
+                    margin: 0;
+                    margin-bottom: $m-XS;
+                }
+                a {
+                    img {
+                        width: 100%;
+                        height: 320px;
+                        object-fit: cover;
+                        object-position: center;
+                        margin: 0;
+                        @include web-S {
+                            height: 220px;
+                        }
+                        @include pad {
+                            height: 130px;
+                        }
+                        @include mobile-L {
+                            height: 180px;
+                        }
+                    }
+                }
+                .title {
+                    font-size: $size-h5;
+                    margin: 0;
+                    padding: 0;
+                    margin-top: $p-XXS;
+                    line-height: 1.5;
+                    color: black;
+                }
+            }
+        }
+        // 青年品牌
+        .section-brand {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: $m-M;
+            .block {
+                display: flex;
+                align-items: center;
+                width: 48%;
+                margin-bottom: $m-M;
+                @include pad {
+                    width: 100%;
+                }
+                @include mobile-L {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                img.circle {
+                    width: 150px;
+                    height: 150px;
+                    background-color: $primary-tint;
+                    border-radius: 100%;
+                    margin: 0;
+                    margin-right: $m-S;
+                    object-fit: cover;
+                    object-position: center top;
+                }
+                .text-gp {
+                    @include mobile-L {
+                        margin-top: $m-XS;
+                    }
+                    h3 {
+                        margin: 0;
+                        margin-bottom: $p-XXS;
+                        vertical-align: middle;
+                    }
+                    h5 {
+                        margin: 0;
+                    }
+                    i {
+                        font-size: $size-h5;
+                        margin-left: $p-XXS;
+                        color: $bk-20;
+                    }
+                    .ellipsis {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2; //行數
+                        -webkit-box-orient: vertical;
+                        white-space: normal;
+                    }
+                }
+            }
+        }
+        // 雲青亮點
+        .section-video {
+            display: flex;
+            justify-content: start;
+            flex-wrap: wrap;
+            align-content: start;
+            margin-top: $m-S;
+            @include pad {
+                justify-content: space-between;
+            }
+            .block {
+                width: 23%;
+                margin-bottom: $p-XS;
+                margin-right: $p-XS;
+                @include pad {
+                    width: 49%;
+                    margin-right: 0;
+                }
+                @include mobile-L {
+                    width: 100%;
+                    margin-bottom: $p-S;
+                }
+                img {
+                    width: 100%;
+                    height: 158px;
+                    margin-bottom: $p-XXS;
+                    object-fit: cover;
+                    object-position: center;
+                    outline: solid 1px $bk-20;
+                    @include web-S {
+                        height: 168px;
+                    }
+                }
+                .text-gp {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .title {
+                        width: 75%;
+                        font-size: $size-h4;
+                        font-weight: bold;
+                        color: black;
+                    }
+                    .view {
+                        width: 20%;
+                        color: $complementary;
+                        text-align: right;
+                        font-size: $size-p;
+                    }
+                }
+            }
+        }
+        // 留言區
+        .message-video {
+            @include pad {
+                height: 400px;
+            }
+            @include mobile-L {
+                height: 200px;
+            }
+        }
+        .section-message {
+            .block {
+                border: solid 1px $secondary;
+                padding: $p-XS;
+                &:not(:last-child) {
+                    border-bottom: none;
+                }
+                .top {
+                    display: flex;
+                    justify-content: space-between;
+                    @include mobile-L {
+                        flex-wrap: wrap;
+                    }
+                    h5 {
+                        margin: 0;
+                        @include mobile-L {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        // 場地介紹
+        .tab-gp {
+            display: flex;
+            .tab {
+                border: solid 1px $secondary;
+                padding: $m-XXS $p-XXS;
+                font-size: $size-p;
+                color: black;
+                border-radius: 4px;
+                margin-right: $m-XS;
+                margin-bottom: $m-XS;
+                @include mobile-L {
+                    font-size: $size-h5;
+                }
+            }
+            .active {
+                background-color: rgba($color: $secondary, $alpha: 0.1);
+            }
+        }
+        // 資源連結
+        .section-link {
+            display: flex;
+            flex-wrap: wrap;
+            @include pad {
+                justify-content: space-between;
+            }
+            h3 {
+                width: 100%;
+            }
+            .block {
+                width: 30%;
+                border: solid 1px $secondary;
+                padding: $p-XS;
+                margin-right: $p-XS;
+                margin-bottom: $p-XS;
+                @include pad {
+                    width: 48.5%;
+                    margin-right: 0;
+                }
+                @include mobile-L {
+                    width: 100%;
+                }
+                img {
+                    width: 100%;
+                    height: 95px;
+                    object-fit: contain;
+                    margin-bottom: $m-XS;
+                }
+                .social {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: $m-XS;
+                    img {
+                        width: 25px;
+                        height: 25px;
+                        margin: 0 $p-XXS;
+                        @include mobile-L {
+                            width: 35px;
+                            height: 35px;
+                        }
+                    }
+                }
+                h5 {
+                    margin: 0;
+                    @include mobile-XS {
+                        font-size: $size-p;
+                    }
+                }
+                i {
+                    color: $bk-20;
+                    font-size: $size-h5;
+                    margin-left: $p-XXS;
+                }
+            }
+        }
+        //登入
+        .content-login {
+            h2 {
+                text-align: center;
+            }
+            .container {
+                padding: 0;
+                max-width: 600px;
+                @include mobile-L {
+                    margin: 0;
+                    max-width: unset;
+                    width: 100%;
+                }
+                .form-gp {
+                    display: flex;
+                    justify-content: space-between;
+                    input[type="button"],
+                    input[type="submit"] {
+                        width: 48%;
+                        // @include mobile-L{
+                        //     width: 100%;
+                        // }
+                    }
+                }
+            }
+        }
+        //註冊
+        .content-signup {
+            h2 {
+                text-align: center;
+            }
+            .container {
+                padding: 0;
+                max-width: 600px;
+                @include mobile-L {
+                    margin: 0;
+                    max-width: unset;
+                    width: 100%;
+                }
+                form {
+                    background-color: unset;
+                    h3 {
+                        margin-top: $m-M;
+                        margin-bottom: $m-XS;
+                    }
+                }
+                .check-curriculum {
+                    border: solid 1px $secondary;
+                    margin-bottom: $m-M;
+                    padding: $m-XS $p-XS;
+                    .title {
+                        font-size: $size-h3;
+                        color: $primary-dark;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        //註冊成功
+        .content-sign-up-success {
+            .container {
+                height: 100%;
+                text-align: center;
+                padding-top: $p-L;
+                p {
+                    text-align: center;
+                    @include pad() {
+                        margin-top: $m-XS;
+                    }
+                }
+                img {
+                    width: 80px;
+                    margin-bottom: $m-XS;
+                }
+                h2 {
+                    margin-bottom: 0;
+                }
+                .btn {
+                    margin: $m-XS 0;
+                }
+            }
+        }
+        // 會員專區
+        .content-member {
+            .container {
+                .section-member {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .block {
+                        width: 200px;
+                        margin-bottom: $m-S;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-right: $m-S;
+                        @include web-S {
+                            margin: 0 $m-S $m-S $m-S;
+                        }
+                        @include pad {
+                            width: 30%;
+                            margin: 0 $m-S $m-S 0;
+                        }
+                        @include mobile-L {
+                            width: 40%;
+                            margin: 0 $m-XS $m-S $m-XS;
+                        }
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            max-width: 200px;
+                            max-height: 200px;
+                        }
+                        h4 {
+                            text-align: center;
+                            margin-top: $p-XXS;
+                        }
+                    }
+                }
+                .totalhours {
+                    color: $notice;
+                    margin-top: $p-XS;
+                }
+            }
+        }
+    }
+}
