@@ -41,91 +41,165 @@
                 <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
                 <h2>註冊</h2>
                 <form>
-                    <div class="form-gp">
-                        <label for="account">帳號<span class="notice">*</span></label>
-                        <input type="text" name="account" id="account">
-                    </div>
-                    <div class="form-gp">
-                        <label for="password">密碼<span class="notice">*</span></label>
-                        <input type="password" name="password" id="password">
-                        <p>1.密碼需8至15字，且包含 英文字母大寫、英文字母小寫、數字、符號等四項中三項之組成，也不得與帳號相同；
-                        </p>
-                        <p>2.密碼有區分大小寫，不可輸入單引號、雙引號以及空白。</p>
-                    </div>
-                    <div class="form-gp">
-                        <label for="password-again">再次輸入密碼<span class="notice">*</span></label>
-                        <input type="password" name="password" id="password-again">
-                    </div>
-
-                    <div class="form-gp-headshot">
-                        <div class="input-gp">
-                            <div class="form-gp">
-                                <label for="name">姓名<span class="notice">*</span></label>
-                                <input type="text" name="name" id="name">
-                            </div>
-                            <div class="form-gp">
-                                <label for="id-number">身分證字號<span class="notice">*</span></label>
-                                <input type="text" name="id-number" id="id-number">
-                            </div>
-                            <div class="form-gp">
-                                <label for="birthday">生日<span class="notice">*</span></label>
-                                <div class="date-gp date-icon">
-                                    <input type="text" class="mb-nokeyboard western-date date-icon" id="birthday"
-                                        data-toggle="datepicker" placeholder="生日" value="2011-01-01">
-                                </div>
-                                <!-- <div class="time-gp time-icon">
-                                <input type="text" class="bs-timepicker" id="end-time" placeholder="結束時間">
-                            </div> -->
+                    <ul class="ps">
+                        <li>本系統將會對您提供的資訊進行審核，審核作業約需 3 個工作天</li>
+                        <li>此外，審核時間有可能會因為審核狀況而拉長</li>
+                        <li>我們將會以電子郵件告知您審核結果，請確認收件匣及垃圾信件資料夾</li>
+                    </ul>
+                    <article>
+                        <h3>單位基本資料</h3>
+                        <div class="form-gp">
+                            <label for="BAN">統一編號<span class="notice">*</span></label>
+                            <input type="number" name="BAN" id="BAN">
+                        </div>
+                        <!-- <div class="form-gp">
+                            <label for="password">密碼<span class="notice">*</span></label>
+                            <input type="password" name="password" id="password">
+                            <p>1.密碼需8至15字，且包含 英文字母大寫、英文字母小寫、數字、符號等四項中三項之組成，也不得與帳號相同；
+                            </p>
+                            <p>2.密碼有區分大小寫，不可輸入單引號、雙引號以及空白。</p>
+                        </div>
+                        <div class="form-gp">
+                            <label for="password-again">再次輸入密碼<span class="notice">*</span></label>
+                            <input type="password" name="password" id="password-again">
+                        </div> -->
+                        <div class="form-gp">
+                            <label for="unit_name">申請單位名稱<span class="notice">*</span></label>
+                            <input type="text" name="unit_name" id="unit_name">
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_RP">申請單位負責人姓名<span class="notice">*</span></label>
+                            <input type="text" name="unit_RP" id="unit_RP">
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_num">立案證號<span class="notice">*</span></label>
+                            <input type="text" name="unit_num" id="unit_num">
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_type">申請單位類型<span class="notice">*</span></label>
+                            <select name="type" id="unit_type">
+                                <option value="list1">項目1</option>
+                                <option value="list2">項目2</option>
+                                <option value="list3">項目3</option>
+                            </select>
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_ID">申請單位負責人身分證字號<span class="notice">*</span></label>
+                            <input type="text" name="unit_ID" id="unit_ID">
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_tel">申請單位電話<span class="notice">*</span></label>
+                            <input type="number" name="unit_tel" id="unit_tel">
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_registeredAddress_area4">申請單位立案地址<span class="notice">*</span></label>
+                            <div class="address">
+                                <select name="type" id="unit_registeredAddress_area1">
+                                    <option value="list1">縣市</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
+                                <select name="type" id="unit_registeredAddress_area2">
+                                    <option value="list1">區域</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
+                                <select name="type" id="unit_registeredAddress_area3">
+                                    <option value="list1">鄉鎮</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
+                                <input type="text" name="unit_registeredAddress_area4" id="unit_registeredAddress_area4"
+                                    placeholder="地址">
                             </div>
                         </div>
-                        <div class="headshot-gp">
-                            <img src="img/headshot_male.jpg" alt="" class="headshot">
-                            <div class="btn">
-                                <button class="more" type="button" onclick="javascript:location.href=''">
-                                    上傳
+                        <div class="form-gp">
+                            <div class="label-withButton">
+                                <label for="unit_mailingAddress_area4">申請單位通訊地址<span class="notice">*</span></label>
+                                <button class="" type="button" onclick="javascript:location.href=''">
+                                    同上
                                 </button>
-                                <button class="more" type="button" onclick="javascript:location.href=''">
-                                    刪除
-                                </button>
+                            </div>
+                            <div class="address">
+                                <select name="type" id="mailingAddress_area1">
+                                    <option value="list1">縣市</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
+                                <select name="type" id="mailingAddress_area2">
+                                    <option value="list1">區域</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
+                                <select name="type" id="mailingAddress_area3">
+                                    <option value="list1">鄉鎮</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
+                                <input type="text" name="mailingAddress_area4" id="mailingAddress_area4"
+                                    placeholder="地址">
                             </div>
                         </div>
-                    </div>
-
-                    <div class="form-gp">
-                        <label for="email">手機號碼 (手機/電話擇一<span class="notice">*</span>)</label>
-                        <input type="email" name="email" id="email" placeholder="0910123456">
-                    </div>
-                    <div class="form-gp">
-                        <label for="email">連絡電話</label>
-                        <input type="email" name="email" id="email" placeholder="0212345678">
-                    </div>
-                    <div class="form-gp">
-                        <label for="email">信箱<span class="notice">*</span></label>
-                        <input type="email" name="email" id="email" placeholder="simple@com.tw">
-                        <p class="notice">1.註冊後，系統會發送一封驗證信至主要連絡人信箱；</p>
-                        <p class="notice">2.若註冊後過五分鐘還沒收到驗證信，請留意是否被誤認為垃圾郵件或與我們聯繫。</p>
-                    </div>
-                    <div class="form-gp">
-                        <label for="mailingAddress">通訊地址<span class="notice">*</span></label>
-                        <div class="address">
-                            <select name="type" id="mailingAddress-area1">
-                                <option value="list1">縣市</option>
-                                <option value="list2">選單2</option>
-                                <option value="list3">選單3</option>
-                            </select>
-                            <select name="type" id="mailingAddress-area2">
-                                <option value="list1">區域</option>
-                                <option value="list2">選單2</option>
-                                <option value="list3">選單3</option>
-                            </select>
-                            <select name="type" id="mailingAddress-area3">
-                                <option value="list1">鄉鎮</option>
-                                <option value="list2">選單2</option>
-                                <option value="list3">選單3</option>
-                            </select>
-                            <input type="text" name="mailingAddress-area4" id="mailingAddress-area4" placeholder="地址">
+                    </article>
+                    <article>
+                        <h3>單位管理者資料</h3>
+                        <div class="form-gp">
+                            <label for="admin_name">單位管理者姓名<span class="notice">*</span></label>
+                            <input type="text" name="admin_name" id="admin_name">
                         </div>
-                    </div>
+                        <div class="form-gp">
+                            <label for="admin_ID">單位管理者身分證字號<span class="notice">*</span></label>
+                            <input type="text" name="admin_ID" id="admin_ID">
+                        </div>
+                        <div class="form-gp">
+                            <label for="admin_tel">申請單位電話<span class="notice">*</span></label>
+                            <input type="number" name="admin_tel" id="admin_tel">
+                        </div>
+                        <div class="form-gp">
+                            <label for="admin_email">單位管理者Email<span class="notice">*</span></label>
+                            <input type="email" name="admin_email" id="admin_email" placeholder="simple@com.tw">
+                            <!-- <p class="notice">1.註冊後，系統會發送一封驗證信至主要連絡人信箱；</p>
+                        <p class="notice">2.若註冊後過五分鐘還沒收到驗證信，請留意是否被誤認為垃圾郵件或與我們聯繫。</p> -->
+                        </div>
+                        <div class="form-gp">
+                            <label for="admin_tel">單位管理者聯絡電話<span class="notice">*</span></label>
+                            <input type="number" name="admin_tel" id="admin_tel">
+                        </div>
+                        <div class="form-gp">
+                            <label for="admin_mobile">單位管理者行動電話<span class="notice">*</span></label>
+                            <input type="number" name="admin_mobile" id="admin_mobile">
+                        </div>
+                    </article>
+                    <article>
+                        <h3>檔案上傳</h3>
+                        <div class="form-gp">
+                            <label for="document-id">申請單位設立證明或申請帳號證明<span class="notice">*</span></label>
+                            <input type="file" id="document-id">
+                            <ul class="ps">
+                                <li>公司與商業，需提供設立登記表或變更登記表、商業登記抄本等</li>
+                                <li>演藝團體、基金會、協會、學會與團體等，需提供設立登記證書，如曾有變更過設立登記資料 (如立案地址等) 請檢附事業主管機關核准變更函</li>
+                                <li>政府組織、行政法人與公立學校需提供申請註冊帳號證明書</li>
+                                <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
+                                <li>檔案請小於 20 MB</li>
+                            </ul>
+                        </div>
+                        <div class="form-gp">
+                            <label for="document-id">申請單位負責人身分證正反面影本<span class="notice">*</span></label>
+                            <input type="file" id="document-id">
+                            <ul class="ps">
+                                <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
+                                <li>檔案請小於 20 MB</li>
+                            </ul>
+                        </div>
+                        <div class="form-gp">
+                            <label for="document-id">申請註冊與帳號證明書<span class="notice">*</span></label>
+                            <input type="file" id="document-id">
+                            <ul class="ps">
+                                <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
+                                <li>檔案請小於 20 MB</li>
+                            </ul>
+                        </div>
+                    </article>
 
                     <!-- 圖片驗證碼 -->
                     <div class="code-gp">
@@ -140,12 +214,12 @@
                         <div class="item">
                             <input type="checkbox" value="" id="private-agree">
                             <label for="private-agree">
-                                <span>我同意</span> <a href="private.html" target="_blank">隱私權保護政策</a><span
+                                <span>我同意</span> <a href="clause-signup.html" target="_blank">單位註冊服務條款</a><span
                                     class="notice">*</span>
                             </label>
                         </div>
                     </div>
-                    <div class="btn">
+                    <div class="btn-tool">
                         <input type="submit" value="送出表單" class="submit">
                     </div>
                 </form>

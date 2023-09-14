@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>申請減免稅案件-表演</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- swiper輪播 -->
+    <link rel="stylesheet" href="scss/swiper-bundle.min.css">
+    <!-- jQuery 日期選擇器-->
+    <link rel="stylesheet" href="scss/jquery-ui-1.10.0.custom.min.css" />
+    <!-- timepicker 時間選擇器-->
+    <link rel="stylesheet" href="scss/timepicker.css" />
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <main>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                    <li>></li>
+                    <li><a href="tax-break.html">減免稅案件</a></li>
+                    <li>></li>
+                    <li><span>我要申請</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 我要申請 -->
+        <section class="content-signup">
+            <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+            <h2>申請減免稅案件</h2>
+            <div class="w-100 text-center">
+                <div class="way">
+                    <img src="img/icon-tax-break.png" alt="減免稅-表演圖標">
+                    <h3>表演</h3>
+                </div>
+            </div>
+            <div class="step">
+                <div class="btn-gp">
+                    <a href="tax-break-apply-performance1.html" class="btn-step">基本資料</a>
+                    <span>></span>
+                    <a href="tax-break-apply-performance2.html" class="btn-step active">進階資料</a>
+                    <span>></span>
+                    <a href="tax-break-apply-performance3.html" class="btn-step">附件檔案</a>
+                    <span>></span>
+                    <div class="btn-step">預覽提交</div>
+                </div>
+            </div>
+            <div class="container">
+                <form>
+                    <article>
+                        <h3>進階資料</h3>
+                        <div class="form-gp choice">
+                            <h5>是否有外國人士來臺演出<span class="notice">*</span></h5>
+                            <div class="item">
+                                <input type="radio" name="state" value="" id="yorn" checked>
+                                <label for="yorn">
+                                    是
+                                </label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" name="state" value="" id="yorn2">
+                                <label for="yorn2">
+                                    否
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <label for="file1">相關證明</label>
+                            <input type="file" id="file1" multiple>
+                            <ul class="ps">
+                                <li>如：勞動部已核准文件、已向勞動部提出申請之證明證件或外籍人士名冊</li>
+                                <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
+                                <li>檔案請小於 20MB</li>
+                            </ul>
+                        </div>
+                        <div class="form-gp choice">
+                            <h5>是否有大陸地區人士來臺演出<span class="notice">*</span></h5>
+                            <div class="item">
+                                <input type="radio" name="state2" value="" id="yorn3" checked>
+                                <label for="yorn3">
+                                    是
+                                </label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" name="state2" value="" id="yorn4">
+                                <label for="yorn4">
+                                    否
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <label for="file2">相關證明</label>
+                            <input type="file" id="file2" multiple>
+                            <ul class="ps">
+                                <li>如：內政部已核准文件、已向內政部提出申請之證明證件或大陸地區人士名冊</li>
+                                <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
+                                <li>檔案請小於 20MB</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <div class="btn-tool">
+                        <input type="button" value="取消" class="outline">
+                        <input type="button" value="暫存" class="outline">
+                        <input type="button" value="上一步" class="outline"
+                            onclick="location.href='tax-break-apply-performance1.html'">
+                        <input type="button" value="下一步" onclick="location.href='tax-break-apply-performance3'">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery 日期選擇器-->
+    <script src="js/jquery-ui.1.10.2.min.js"></script>
+    <!-- timepicker 時間選擇器-->
+    <script src="js/timepicker.min.js"></script>
+    <!-- InputMask 限制輸入格式-->
+    <script src="js/moment.min.js"></script>
+    <script src="js/jquery.inputmask.bundle.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+    <!-- JQ datepicker -->
+    <script>
+        $(document).ready(function () {
+            $(".chinese-date").datepicker({
+                changeYear: true,
+                changeMonth: true,
+                currentText: "Now",
+                dateFormat: "Rmmdd",
+                showButtonPanel: false,
+                yearRange: "1930:2060",
+            });
+            $(".western-date").datepicker({
+                changeYear: true,
+                changeMonth: true,
+                currentText: "Now",
+                dateFormat: "yy-mm-dd",
+                showButtonPanel: false,
+                yearRange: "1930:2060",
+            });
+        });
+        //將.datepicker改成民國年與西元年小套件同時存在
+        $(function (datepicker) {
+            //先設定預設西元年的datepicker必要功能
+            var old_generateMonthYearHeader = $.datepicker._generateMonthYearHeader;
+            var old_formatDate = $.datepicker.formatDate;
+            var old_parseDate = $.datepicker.parseDate;
+
+            $.extend($.datepicker, {
+                //選擇日期之後的value
+                formatDate: function (format, date, settings) {
+                    var oformatDate = old_formatDate(format, date, settings);
+
+                    if (format == 'Rmmdd') {
+                        var d = date.getDate();
+                        var m = date.getMonth() + 1;
+                        var y = date.getFullYear();
+                        var fm = function (v) {
+                            return (v < 10 ? '0' : '') + v;
+                        };
+
+                        if ((y - 1911) >= 100) { y = y - 1911; } else { y = "0" + String(y - 1911); }
+                        // 日期顯示格式
+                        return (y) + '/' + fm(m) + '/' + fm(d);
+                    }
+                    return oformatDate;
+
+                },
+                //點取已存在日期的parse
+                parseDate: function (format, value, settings) {
+                    var v = new String(value);
+                    var Y, M, D;
+                    if (format == 'Rmmdd') {
+                        if (v.length == 7) {/*1001215*/
+                            Y = v.substring(0, 3) - 0 + 1911;
+                            M = v.substring(3, 5) - 0 - 1;
+                            D = v.substring(5, 7) - 0;
+                            return (new Date(Y, M, D));
+                        } else if (v.length == 6) {/*0981215*/
+
+                            Y = "0" + String(v.substring(0, 2) - 0 + 1911);
+                            M = v.substring(2, 4) - 0 - 1;
+                            D = v.substring(4, 6) - 0;
+                            return (new Date(Y, M, D));
+                        }
+                        return (new Date());
+                    } else {
+                        var oparseDate = old_parseDate.apply(this, [format, value, settings]);
+                        return (oparseDate);
+                    }
+
+                },
+                //改變小工具的年-民國
+                _generateMonthYearHeader: function (inst, drawMonth, drawYear, minDate, maxDate, secondary, monthNames, monthNamesShort) {
+                    var dateFormat = this._get(inst, "dateFormat");
+                    var htmlYearMonth = old_generateMonthYearHeader.apply(this, [inst, drawMonth, drawYear, minDate, maxDate, secondary, monthNames, monthNamesShort]);
+                    if (dateFormat == 'Rmmdd') {
+                        if ($(htmlYearMonth).find(".ui-datepicker-year").length > 0) {
+                            htmlYearMonth = $(htmlYearMonth).find(".ui-datepicker-year").find("option").each(function (i, e) {
+                                if (Number(e.value) - 1911 > 0) $(e).text("民國" + (Number(e.innerText) - 1911) + "年");
+                            }).end().end().get(0).outerHTML;
+                        }
+                    }
+                    return htmlYearMonth;
+                },
+
+            });
+
+            // 中文
+            $.datepicker.regional["zh-TW"] = {
+                monthNames: ["一月", "二月", "三月", "四月", "五月", "六月",
+                    "七月", "八月", "九月", "十月", "十一月", "十二月"],
+                monthNamesShort: ["一月", "二月", "三月", "四月", "五月", "六月",
+                    "七月", "八月", "九月", "十月", "十一月", "十二月"],
+                dayNames: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+                dayNamesShort: ["週日", "週一", "週二", "週三", "週四", "週五", "週六"],
+                dayNamesMin: ["日", "一", "二", "三", "四", "五", "六"],
+                weekHeader: "週",
+                dateFormat: "yyy/mm/dd",
+            };
+            $.datepicker.setDefaults($.datepicker.regional["zh-TW"]);
+
+            return datepicker.regional["zh-TW"];
+
+        });
+
+        // 手機隱藏鍵盤
+        $(".mb-nokeyboard").focus(function () {
+            document.activeElement.blur();
+        });
+    </script>
+
+    <!-- input mask 限制填入格式 -->
+    <script>
+        $(document).ready(function () {
+            $(".western-date").inputmask({ alias: "datetime", inputFormat: "yyyy/mm/dd" });
+            // $(".chinese-date").inputmask({ alias: "datetime", inputFormat: "yyy/mm/dd" });
+        });
+    </script>
+
+    <!-- timepicker 時間選擇器-->
+    <script>
+        $(function () {
+            $('.bs-timepicker').timepicker();
+        });
+    </script>
+</body>
+
+</html>

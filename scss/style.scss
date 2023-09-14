@@ -43,13 +43,21 @@ body {
         @include pad {
             padding-top: 80px;
         }
-
+        @include mobile-L {
+            padding-bottom: $p-S;
+        }
+        // &.main-clause{
+        //     padding: $p-M 0;
+        // }
         section {
             width: 100%;
         }
         .brief-p {
             margin-bottom: $m-S;
         }
+        // .modal{
+        //     @include form();
+        // }
         // 一般
         .content-normal {
             ul:not(.nav, .breadcrumb) {
@@ -160,113 +168,6 @@ body {
                 height: 100%;
                 object-fit: cover;
                 object-position: center center;
-            }
-        }
-        // 最新消息
-        .section-news {
-            .new-btn {
-                margin-bottom: $m-S;
-                button {
-                    margin-right: $m-XXS;
-                    opacity: 0.3;
-                    @include mobile-L {
-                        padding: $m-XXS $p-XS;
-                    }
-                    @include mobile-XS {
-                        padding: $m-XXS $p-XXS;
-                    }
-                }
-                .active-btn {
-                    opacity: 1;
-                }
-            }
-            .new {
-                @include news-list(20%, 80%);
-            }
-            .list1 {
-                .list {
-                    &:nth-of-type(odd) {
-                        background-color: rgba($color: $primary-table, $alpha: 1);
-                    }
-                }
-            }
-            .list2 {
-                .list {
-                    &:nth-of-type(odd) {
-                        background-color: rgba($color: $primary-table, $alpha: 1);
-                    }
-                }
-            }
-            .list3 {
-                .list {
-                    &:nth-of-type(odd) {
-                        background-color: rgba($color: $primary-table, $alpha: 1);
-                    }
-                }
-            }
-            .list4 {
-                .list {
-                    &:nth-of-type(odd) {
-                        background-color: rgba($color: $primary-default, $alpha: 0.1);
-                    }
-                }
-            }
-            .list1,
-            .list2,
-            .list3,
-            .list4 {
-                display: none;
-            }
-            .active-list {
-                display: block;
-            }
-            .info-top {
-                margin-top: $m-S;
-                ul {
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-                    font-size: $size-p;
-                    color: $primary-default;
-                    li {
-                        display: inline;
-                        margin-right: $m-S;
-                        @include mobile-L() {
-                            display: block;
-                        }
-                    }
-                    .far {
-                        width: 13px;
-                        color: $primary-default;
-                        font-size: $size-p;
-                        margin-right: 10px;
-                    }
-                }
-            }
-            .info-body {
-                img {
-                    width: 100%;
-                    max-height: 600px;
-                    object-position: center;
-                    margin-top: $m-S;
-                    @include pad() {
-                        max-height: 400px;
-                    }
-                    @include mobile-L() {
-                        max-height: 300px;
-                    }
-                }
-                p {
-                    margin: $m-S 0;
-                }
-            }
-            .btn {
-                display: flex;
-                justify-content: center;
-                margin-bottom: $m-M;
-                @include web-S() {
-                    margin-bottom: $m-S;
-                }
             }
         }
         // 活動課程
@@ -400,342 +301,58 @@ body {
         }
         // 快速連結
         .section-fastlink {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            .btn {
-                width: 49%;
-                min-height: 180px;
+            .btn-gp {
                 display: flex;
-                align-items: center;
-                border: solid 2px rgba($color: $primary-default, $alpha: 0.3);
-                border-radius: 8px;
-                background-image: url("../img/fast-link_5.png");
-                background-repeat: no-repeat;
-                background-position: 10% 100%;
-                margin-bottom: $p-XS;
-                @include pad {
-                    flex-wrap: wrap;
-                }
-                @include mobile-L {
-                    width: 100%;
-                    margin-bottom: $p-S;
-                }
-                img {
-                    width: 55%;
-                    max-height: 135px;
-                    object-fit: contain;
-                    @include pad {
-                        width: 100%;
-                        height: 100px;
-                        padding-top: $p-XXS;
-                    }
-                }
-                .title {
-                    width: 45%;
-                    font-size: 2.125rem;
-                    color: $primary-dark;
-                    font-weight: bold;
-                    text-align: left;
-                    @include pad {
-                        width: 100%;
-                        text-align: center;
-                        padding: $p-XXS;
-                        font-size: $size-h2;
-                    }
-                }
-            }
-        }
-        // 社群
-        .section-social {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            .video {
-                width: calc(100% - 524px);
-                display: flex;
-                justify-content: space-between;
                 flex-wrap: wrap;
-                align-content: start;
-                @include web-S {
-                    width: 49%;
-                }
-                @include pad {
-                    width: 100%;
-                }
-                .block {
+                justify-content: space-between;
+                margin-top: $m-S;
+                .btn-type {
                     width: 48%;
-                    margin-bottom: $p-XS;
-                    @include mobile-L {
+                    border: solid 1px $primary-tint;
+                    border-radius: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: $p-M;
+                    background-color: white;
+                    box-shadow: 5px 5px 10px $primary-table;
+                    @include mobile-L() {
                         width: 100%;
+                        flex-wrap: wrap;
                         margin-bottom: $p-S;
+                        padding: $p-S;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
                     }
                     img {
-                        width: 100%;
-                        height: 158px;
-                        margin-bottom: $p-XXS;
-                        object-fit: cover;
-                        object-position: center;
-                        outline: solid 1px $bk-20;
-                        @include web-S {
-                            height: 168px;
+                        width: 100px;
+                        height: 100px;
+                        object-fit: contain;
+                        margin-bottom: $m-XS;
+                        @include pad {
+                            width: 70px;
+                            height: 70px;
                         }
-                    }
-                    .text-gp {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
                         @include mobile-L {
-                            flex-wrap: wrap;
-                        }
-                        .title {
-                            width: 72%;
-                            font-size: $size-h4;
-                            font-weight: bold;
-                            color: black;
-                            @include mobile-L {
-                                width: 100%;
-                                text-align: justify;
-                                &.ellipsis {
-                                    white-space: initial;
-                                    overflow: initial;
-                                    text-overflow: initial;
-                                }
-                            }
-                        }
-                        .view {
-                            width: 28%;
-                            color: $complementary;
-                            text-align: right;
-                            font-size: $size-p;
-                            @include mobile-L {
-                                width: 100%;
-                                text-align: left;
-                            }
+                            width: 60px;
+                            height: 60px;
                         }
                     }
-                }
-            }
-            .fb {
-                width: 500px;
-                text-align: right;
-                margin-top: 46px;
-                @include web-S {
-                    width: 49%;
-                }
-                @include pad {
-                    width: 100%;
-                    text-align: left;
-                }
-                iframe {
-                    width: 100% !important;
+                    h3 {
+                        margin-bottom: $m-XS;
+                    }
+                    .type {
+                        background-color: $primary-table;
+                        padding: $m-XXS $p-XS;
+                        border-radius: 6px;
+                        font-size: $size-caption;
+                    }
                 }
             }
         }
 
-        // 青諮會
-        .yc-member-gp {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: start;
-            justify-content: start;
-            @include mobile-L {
-                justify-content: space-between;
-            }
-            .block {
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: column;
-                margin-right: $p-S;
-                margin-bottom: $m-XS;
-                @include web-S {
-                    margin: 0 $p-XS;
-                    margin-bottom: $m-XS;
-                }
-                @include pad {
-                    margin: 0 $m-S;
-                    margin-bottom: $m-XS;
-                }
-                @include mobile-L {
-                    width: 47%;
-                    max-width: initial;
-                    margin: 0;
-                    margin-bottom: $m-XS;
-                }
-                img {
-                    width: 158px;
-                    height: 205px;
-                    border-radius: 8px;
-                    margin: 0;
-                    object-fit: cover;
-                    object-position: top center;
-                    @include mobile-L {
-                        width: 145px;
-                        height: 190px;
-                    }
-                    @include mobile-XS {
-                        width: 120px;
-                        height: 165px;
-                    }
-                }
-                h4 {
-                    width: 100%;
-                    text-align: center;
-                    margin-top: $p-XXS;
-                }
-            }
-        }
-        .member-card {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            @include mobile-L {
-                flex-direction: column;
-                align-items: start;
-            }
-            img {
-                max-height: 206px;
-                border-radius: 12px;
-                margin: 0;
-                margin-right: $m-S;
-                object-fit: contain;
-                object-position: top center;
-                @include mobile-L {
-                    width: 100%;
-                    max-height: initial;
-                    margin: 0;
-                    margin-bottom: $m-XS;
-                }
-            }
-            .text-gp {
-                h4 {
-                    margin-bottom: 0;
-                }
-            }
-        }
-        // 職涯服務
-        .career-service {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: $m-S;
-            margin-bottom: $m-M;
-            .block {
-                display: flex;
-                flex-direction: column;
-                width: 32%;
-                border: solid 1px $secondary;
-                padding: $p-XS $p-M;
-                &:not(:last-child) {
-                    margin-right: $m-S;
-                    @include pad {
-                        margin-right: 0;
-                        margin-bottom: $m-S;
-                    }
-                }
-                @include web-S {
-                    width: 31%;
-                }
-                @include pad {
-                    width: 100%;
-                    justify-content: space-between;
-                    align-items: center;
-                    flex-direction: row;
-                }
-                @include mobile-L {
-                    flex-wrap: wrap;
-                    padding: $p-S $p-M;
-                }
-                .top {
-                    text-align: center;
-                    margin: $m-S 0;
-                    @include pad {
-                        width: 30%;
-                        margin: 0;
-                        margin-right: $m-M;
-                    }
-                    @include mobile-L {
-                        width: 100%;
-                        margin: $m-XS 0;
-                        margin-right: 0;
-                    }
-                    img {
-                        text-align: center;
-                        margin-top: 0;
-                    }
-                    h4 {
-                        margin: 0;
-                        margin-top: $m-XS;
-                        color: $primary-default;
-                        @include pad {
-                            margin: $m-XS 0;
-                            font-size: $size-h5;
-                        }
-                    }
-                }
-                .bottom {
-                    padding: 0;
-                    @include pad {
-                        width: 70%;
-                        margin-bottom: 0;
-                    }
-                    @include mobile-L {
-                        width: 100%;
-                    }
-                    li {
-                        list-style: disc;
-                        margin-left: $m-S;
-                    }
-                }
-            }
-        }
-        // 歷年成果
-        .section-lightbox {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: $m-XS;
-            .block {
-                width: 31%;
-                margin: 0;
-                padding: 0;
-                margin-right: $m-S;
-                margin-bottom: $m-S;
-                @include pad {
-                    width: 30%;
-                }
-                @include mobile-L {
-                    width: 100%;
-                    margin: 0;
-                    margin-bottom: $m-XS;
-                }
-                a {
-                    img {
-                        width: 100%;
-                        height: 320px;
-                        object-fit: cover;
-                        object-position: center;
-                        margin: 0;
-                        @include web-S {
-                            height: 220px;
-                        }
-                        @include pad {
-                            height: 130px;
-                        }
-                        @include mobile-L {
-                            height: 180px;
-                        }
-                    }
-                }
-                .title {
-                    font-size: $size-h5;
-                    margin: 0;
-                    padding: 0;
-                    margin-top: $p-XXS;
-                    line-height: 1.5;
-                    color: black;
-                }
-            }
-        }
         // 青年品牌
         .section-brand {
             display: flex;
@@ -786,89 +403,6 @@ body {
                         -webkit-line-clamp: 2; //行數
                         -webkit-box-orient: vertical;
                         white-space: normal;
-                    }
-                }
-            }
-        }
-        // 雲青亮點
-        .section-video {
-            display: flex;
-            justify-content: start;
-            flex-wrap: wrap;
-            align-content: start;
-            margin-top: $m-S;
-            @include pad {
-                justify-content: space-between;
-            }
-            .block {
-                width: 23%;
-                margin-bottom: $p-XS;
-                margin-right: $p-XS;
-                @include pad {
-                    width: 49%;
-                    margin-right: 0;
-                }
-                @include mobile-L {
-                    width: 100%;
-                    margin-bottom: $p-S;
-                }
-                img {
-                    width: 100%;
-                    height: 158px;
-                    margin-bottom: $p-XXS;
-                    object-fit: cover;
-                    object-position: center;
-                    outline: solid 1px $bk-20;
-                    @include web-S {
-                        height: 168px;
-                    }
-                }
-                .text-gp {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    .title {
-                        width: 75%;
-                        font-size: $size-h4;
-                        font-weight: bold;
-                        color: black;
-                    }
-                    .view {
-                        width: 20%;
-                        color: $complementary;
-                        text-align: right;
-                        font-size: $size-p;
-                    }
-                }
-            }
-        }
-        // 留言區
-        .message-video {
-            @include pad {
-                height: 400px;
-            }
-            @include mobile-L {
-                height: 200px;
-            }
-        }
-        .section-message {
-            .block {
-                border: solid 1px $secondary;
-                padding: $p-XS;
-                &:not(:last-child) {
-                    border-bottom: none;
-                }
-                .top {
-                    display: flex;
-                    justify-content: space-between;
-                    @include mobile-L {
-                        flex-wrap: wrap;
-                    }
-                    h5 {
-                        margin: 0;
-                        @include mobile-L {
-                            width: 100%;
-                        }
                     }
                 }
             }
@@ -966,18 +500,97 @@ body {
                     justify-content: space-between;
                     input[type="button"],
                     input[type="submit"] {
-                        width: 48%;
-                        // @include mobile-L{
-                        //     width: 100%;
-                        // }
+                        width: 47%;
+                        @include mobile-L {
+                            width: 100%;
+                            margin-bottom: $m-XS;
+                        }
+                    }
+                    .w-100 {
+                        margin-top: $p-XS;
+                        a {
+                            margin: 0 $m-XS;
+                            @include mobile-L {
+                                display: block;
+                                width: 100%;
+                                margin: 0;
+                                margin-bottom: $m-S;
+                            }
+                        }
                     }
                 }
             }
         }
         //註冊
         .content-signup {
+            position: relative;
             h2 {
                 text-align: center;
+            }
+            .way {
+                display: inline-block;
+                border: solid 1px $primary-tint;
+                border-radius: 12px;
+                text-align: center;
+                padding: $p-S $p-XL;
+                margin-top: $m-XS;
+                margin-bottom: $m-M;
+                background-color: white;
+                box-shadow: 5px 5px 10px $primary-table;
+                @include mobile-L() {
+                }
+                img {
+                    width: 80px;
+                    height: 80px;
+                    object-fit: contain;
+                    margin-bottom: $m-XS;
+                    @include pad {
+                        width: 70px;
+                        height: 70px;
+                    }
+                    @include mobile-L {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+                h3 {
+                    margin-bottom: 0;
+                }
+            }
+            .step {
+                width: 100%;
+                // max-width: 600px;
+                margin: auto;
+                background-color: $primary-table;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: $m-M;
+                padding: $p-XS 0;
+                .btn-gp {
+                    width: 100%;
+                    max-width: 600px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    // padding: 0 $p-XXS;
+                    .btn-step {
+                        display: inline-block;
+                        font-size: $size-h5;
+                        background-color: transparent !important;
+                        padding: $m-XXS $p-XXS;
+                        border-radius: 6px;
+                        font-weight: bold;
+                        color: $primary-default;
+                        @include mobile-L {
+                            margin: 0 $m-XS;
+                            text-align: center;
+                        }
+                        &.active {
+                            border: solid 1px $primary-default;
+                        }
+                    }
+                }
             }
             .container {
                 padding: 0;
@@ -987,11 +600,51 @@ body {
                     max-width: unset;
                     width: 100%;
                 }
+
                 form {
                     background-color: unset;
                     h3 {
-                        margin-top: $m-M;
-                        margin-bottom: $m-XS;
+                        margin-top: $m-XS;
+                        margin-bottom: $m-S;
+                    }
+                    .place-gp {
+                        background-color: $primary-table;
+                        margin-bottom: $m-S;
+                        .place-header {
+                            background-color: $primary-default;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            height: 40px;
+                            .title {
+                                font-size: $size-h4;
+                                color: white;
+                                font-weight: bold;
+                                padding: 0 $p-XXS;
+                            }
+                            a {
+                                color: white;
+                                line-height: 40px;
+                                padding: 2px $p-XS;
+                                font-size: $size-h5;
+                                font-weight: bold;
+                                i {
+                                    margin-right: $p-XXS;
+                                }
+                            }
+                        }
+                        .place-body {
+                            padding: $p-S;
+                        }
+                    }
+                    button.add {
+                        height: 40px;
+                        padding: 0 $p-XS;
+                        margin-top: $m-XS;
+                        display: block;
+                        @include mobile-L {
+                            width: 100%;
+                        }
                     }
                 }
                 .check-curriculum {
@@ -1009,9 +662,9 @@ body {
         //註冊成功
         .content-sign-up-success {
             .container {
-                height: 100%;
+                height: inherit;
                 text-align: center;
-                padding-top: $p-L;
+                padding: $p-XL 0;
                 p {
                     text-align: center;
                     @include pad() {
