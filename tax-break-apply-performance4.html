@@ -59,43 +59,46 @@
                 </div>
             </div>
             <div class="container">
-                <form class="disabled">
-                    <article>
-                        <h3>基本資料</h3>
+                <form class="view">
+                    <fieldset disabled>
+                        <div class="type-title">
+                            <h3>基本資料</h3>
+                        </div>
                         <div class="form-gp">
                             <label for="activity_name">活動名稱<span class="notice">*</span></label>
-                            <input disabled type="text" name="activity_name" id="activity_name" placeholder="test">
+                            <input type="text" name="activity_name" id="activity_name" placeholder="test">
                         </div>
                         <div class="form-gp">
                             <label for="activity_name">演出團隊或演出者<span class="notice">*</span></label>
-                            <div class="performer">
-                                <select name="type" id="activity_country" disabled>
+                            <div class="performer view-nobtn">
+                                <select name="type" id="activity_country">
                                     <option value="list1">項目1</option>
                                     <option value="list2">項目2</option>
                                     <option value="list3">項目3</option>
                                 </select>
-                                <input type="text" name="activity_performer" id="activity_performer" disabled  placeholder="test">
+                                <input type="text" name="activity_performer" id="activity_performer" placeholder="test">
                             </div>
-                            <div class="performer">
-                                <select name="type" id="activity_country2" disabled>
+                            <div class="performer view-nobtn">
+                                <select name="type" id="activity_country2">
                                     <option value="list1">項目1</option>
                                     <option value="list2">項目2</option>
                                     <option value="list3">項目3</option>
                                 </select>
-                                <input type="text" name="activity_performer2" id="activity_performer2" disabled>
+                                <input type="text" name="activity_performer2" id="activity_performer2">
                             </div>
                         </div>
                         <div class="form-gp">
                             <label for="activity_purpose">辦理目的<span class="notice">*</span></label>
-                            <textarea disabled name="activity_purpose" id="activity_purpose" rows="6"  placeholder="test"></textarea>
+                            <textarea name="activity_purpose" id="activity_purpose" rows="6"
+                                placeholder="test"></textarea>
                         </div>
                         <div class="form-gp">
                             <label for="activity_content">內容簡介<span class="notice">*</span></label>
-                            <textarea disabled name="history" id="activity_content" rows="6"  placeholder="test"></textarea>
+                            <textarea name="history" id="activity_content" rows="6" placeholder="test"></textarea>
                         </div>
-                    </article>
-                    <article>
-                        <h3>申請認可範圍</h3>
+                    </fieldset>
+                    <fieldset disabled>
+                        <h4>申請認可範圍</h4>
                         <div class="place-gp">
                             <div class="place-header">
                                 <span class="title">地點 1</span>
@@ -103,7 +106,7 @@
                             <div class="place-body">
                                 <div class="form-gp">
                                     <label for="activity_area">活動區域<span class="notice">*</span></label>
-                                    <select name="type" id="activity_area" disabled>
+                                    <select name="type" id="activity_area">
                                         <option value="list1">項目1</option>
                                         <option value="list2">項目2</option>
                                         <option value="list3">項目3</option>
@@ -111,7 +114,7 @@
                                 </div>
                                 <div class="form-gp">
                                     <label for="activity_place">活動地點<span class="notice">*</span></label>
-                                    <select name="type" id="activity_place" disabled>
+                                    <select name="type" id="activity_place">
                                         <option value="list1">項目1</option>
                                         <option value="list2">項目2</option>
                                         <option value="list3">項目3</option>
@@ -120,7 +123,7 @@
                                 <div class="form-gp">
                                     <label for="place_name">場館名稱</label>
                                     <div class="session view-nobtn">
-                                        <select name="type" id="place_name" disabled>
+                                        <select name="type" id="place_name">
                                             <option value="list1">項目1</option>
                                             <option value="list2">項目2</option>
                                             <option value="list3">項目3</option>
@@ -131,25 +134,25 @@
                                     <div class="item">
                                         <label for="start-date">開始日期</label>
                                         <div class="date-gp date-icon">
-                                            <input disabled type="text" class="mb-nokeyboard western-date date-icon"
-                                                id="start-date" data-toggle="datepicker"  placeholder="2023-09-01">
+                                            <input type="text" class="mb-nokeyboard western-date date-icon"
+                                                id="start-date" data-toggle="datepicker" placeholder="2023-09-01">
                                         </div>
                                     </div>
                                     <div class="item">
                                         <label for="end-date">結束日期</label>
                                         <div class="date-gp date-icon">
-                                            <input disabled type="text" class="mb-nokeyboard western-date date-icon"
-                                                id="end-date" data-toggle="datepicker"  placeholder="2023-10-25">
+                                            <input type="text" class="mb-nokeyboard western-date date-icon"
+                                                id="end-date" data-toggle="datepicker" placeholder="2023-10-25">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-gp">
                                     <label for="session">場次</label>
-                                    <div class="session">
-                                        <input type="number" name="session" id="session" disabled placeholder="20">
-                                        <button type="button" class="add" data-toggle="modal"
-                                            data-target="#modal-session"><i class="fas fa-search"></i>場次明細</button>
-                                    </div>
+                                    <legend class="session">
+                                        <input type="number" name="session" id="session" placeholder="20">
+                                        <a href="" class="add" data-toggle="modal" data-target="#modal-session"><i
+                                                class="fas fa-search"></i>場次明細</a>
+                                    </legend>
                                 </div>
                                 <div class="form-gp choice mb-0">
                                     <h5>票價</h5>
@@ -171,28 +174,84 @@
                                         </div>
                                     </div>
                                 </div>
-                                <ul class="ps">
-                                    <li>請擇一填寫票價範圍或明列，並請確認所填票價是否包含優待折扣票價、貴賓票價</li>
-                                </ul>
-                                <div class="form-gp choice">
+                                <div class="form-gp choice mt-3">
                                     <h5>票種</h5>
-                                    <div class="ticket-price-result">
-                                        <div class="num">一般票
-                                        </div>
-                                        <div class="num">貴賓票
-                                        </div>
+                                    <div class="item">
+                                        <input type="checkbox" name="ticket-type" value="" id="normal" checked>
+                                        <label for="normal">
+                                            一般票
+                                        </label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="checkbox" name="ticket-type" value="" id="vip" checked>
+                                        <label for="vip">
+                                            貴賓票
+                                        </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </article>
+                    </fieldset>
+                    <fieldset disabled>
+                        <div class="type-title">
+                            <h3>進階資料</h3>
+                        </div>
+                        <div class="form-gp choice">
+                            <h5>是否有外國人士來臺演出<span class="notice">*</span></h5>
+                            <div class="item">
+                                <input type="radio" name="state" value="" id="yorn" checked>
+                                <label for="yorn">
+                                    是
+                                </label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" name="state" value="" id="yorn2">
+                                <label for="yorn2">
+                                    否
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <label for="file1">相關證明</label>
+                            <a href="" download="" class="download-file"><i class="fas fa-paperclip"></i>檔案下載</a>
+                        </div>
+                        <div class="form-gp choice">
+                            <h5>是否有大陸地區人士來臺演出<span class="notice">*</span></h5>
+                            <div class="item">
+                                <input type="radio" name="state2" value="" id="yorn3" checked>
+                                <label for="yorn3">
+                                    是
+                                </label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" name="state2" value="" id="yorn4">
+                                <label for="yorn4">
+                                    否
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <label for="file2">相關證明</label>
+                            <a href="" download="" class="download-file"><i class="fas fa-paperclip"></i>檔案下載</a>
+                        </div>
+                    </fieldset>
+                    <fieldset disabled>
+                        <div class="type-title">
+                            <h3>附件檔案</h3>
+                        </div>
+                        <div class="form-gp">
+                            <label for="activity_purpose">活動計劃書<span class="notice">*</span></label>
+                            <textarea name="activity_purpose" id="activity_purpose" rows="6"></textarea>
+                            <a href="" download="" class="download-file"><i class="fas fa-paperclip"></i>檔案下載</a>
+                        </div>
+                    </fieldset>
 
                     <div class="btn-tool">
                         <input type="button" value="取消" class="outline">
                         <input type="button" value="暫存" class="outline">
                         <input type="button" value="上一步" class="outline"
                             onclick="location.href='tax-break-apply-performance1.html'">
-                        <input type="submit" value="送出申請">
+                        <input type="button" value="送出申請" data-toggle="modal" data-target="#modal-notify">
                     </div>
                 </form>
             </div>
@@ -201,7 +260,7 @@
         <!-- modal 場次-->
         <div class="modal fade modal-template " id="modal-session" tabindex="-1" role="dialog"
             aria-labelledby="modal-sessionLabel" data-backdrop="static" style=" padding-top: 0;">
-            <div name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp" target="frm_ChangPWD">
+            <form name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp" target="frm_ChangPWD">
                 <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -210,476 +269,478 @@
                             </button>
                             <h2 class="modal-title" id="modal-sessionLabel">編輯場次</h2>
                         </div>
-                        <div class="modal-body">
-                            <div class="text-gp">
-                                <span>快速填入：每日</span>
-                                <input type="number" disabled placeholder="5">
-                                <span>場</span>
-                            </div>
-                            <table class="table-default">
-                                <thead>
-                                    <tr class="week">
-                                        <th>日</th>
-                                        <th>一</th>
-                                        <th>二</th>
-                                        <th>三</th>
-                                        <th>四</th>
-                                        <th>五</th>
-                                        <th>六</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="month">
-                                        <th colspan="7" class="tex-left">2023/9</th>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <p>1</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled placeholder="12">
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>2</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>3</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>4</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>5</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>6</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>7</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>8</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>9</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>10</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>11</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>12</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>13</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>14</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>15</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>16</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>17</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>18</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>19</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>20</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>21</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>22</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>23</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>24</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>25</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>26</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>27</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>28</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>29</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>30</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                                <tbody>
-                                    <tr class="month">
-                                        <th colspan="7">2023/10</th>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>1</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>2</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>3</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>4</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>5</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>6</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>7</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>8</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>9</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>10</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>11</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>12</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>13</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>14</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>15</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>16</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>17</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>18</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>19</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>20</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>16</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>21</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>22</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>23</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>24</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>25</p>
-                                            <div class="text-gp">
-                                                <input type="number" disabled>
-                                                <span>場</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p>26</p>
-                                        </td>
-                                        <td>
-                                            <p>27</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>28</p>
-                                        </td>
-                                        <td>
-                                            <p>29</p>
-                                        </td>
-                                        <td>
-                                            <p>30</p>
-                                        </td>
-                                        <td>
-                                            <p>31</p>
-                                        </td>
-                                        <td>
-                                        </td>
-                                        <td>
-                                        </td>
-                                        <td>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="modal-body session-table">
+                            <fieldset disabled>
+                                <div class="text-gp">
+                                    <span>快速填入：每日</span>
+                                    <input type="number">
+                                    <span>場</span>
+                                </div>
+                                <table class="table-default">
+                                    <thead>
+                                        <tr class="week">
+                                            <th>日</th>
+                                            <th>一</th>
+                                            <th>二</th>
+                                            <th>三</th>
+                                            <th>四</th>
+                                            <th>五</th>
+                                            <th>六</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="month">
+                                            <th colspan="7" class="tex-left">2023/9</th>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>
+                                                <p>1</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>2</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>3</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>4</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>5</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>6</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>7</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>8</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>9</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>10</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>11</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>12</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>13</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>14</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>15</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>16</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>17</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>18</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>19</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>20</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>21</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>22</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>23</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>24</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>25</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>26</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>27</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>28</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>29</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>30</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr class="month">
+                                            <th colspan="7">2023/10</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>1</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>2</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>3</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>4</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>5</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>6</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>7</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>8</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>9</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>10</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>11</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>12</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>13</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>14</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>15</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>16</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>17</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>18</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>19</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>20</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>16</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>21</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>22</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>23</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>24</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>25</p>
+                                                <div class="text-gp">
+                                                    <input type="number">
+                                                    <span>場</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>26</p>
+                                            </td>
+                                            <td>
+                                                <p>27</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>28</p>
+                                            </td>
+                                            <td>
+                                                <p>29</p>
+                                            </td>
+                                            <td>
+                                                <p>30</p>
+                                            </td>
+                                            <td>
+                                                <p>31</p>
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </fieldset>
 
                         </div>
                         <div class="modal-footer">
@@ -689,8 +750,38 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
+
+        <!-- modal 提示-->
+        <div class="modal fade modal-template " id="modal-notify" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-placeLabel">系統通知</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <p>請輸入活動名稱</p>
+                                <p>請輸入辦理目的</p>
+                                <p class="notice">申請認可範圍1 發現錯誤</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="go" id="go2">確認</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
 
     </main>
     <!-- footer -->
@@ -708,7 +799,8 @@
     <script src="js/timepicker.min.js"></script>
     <!-- InputMask 限制輸入格式-->
     <script src="js/moment.min.js"></script>
-    <script src="js/jquery.inputmask.bundle.js"></script>
+    <script src="js/jquery.inputmask.bundle.js"></script> <!-- select2 -->
+    <script src="js/select2.full.min.js"></script>
 
     <!-- 引入html header&footer -->
     <script>

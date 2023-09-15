@@ -53,10 +53,11 @@
 }
 * h4 {
   font-size: 1.25rem;
-  color: black;
+  color: #88753f;
   padding: 0;
   margin: 0;
   line-height: 1.25;
+  margin-bottom: 12px;
 }
 * h5 {
   font-size: 1.125rem;
@@ -146,6 +147,21 @@
 }
 * input[type=number] {
   -moz-appearance: textfield;
+}
+* fieldset {
+  margin-bottom: 36px;
+}
+* fieldset[disabled] input,
+* fieldset[disabled] select,
+* fieldset[disabled] textarea,
+* fieldset[disabled] .session input,
+* fieldset[disabled] .session select {
+  background-color: #ebebeb !important;
+  opacity: 1;
+  cursor: not-allowed;
+}
+* fieldset[disabled] .session.view-nobtn select {
+  width: 100%;
 }
 * label {
   width: 100%;
@@ -255,6 +271,7 @@
   background-color: white;
   color: #595757;
   padding: 0 8px;
+  line-height: 2;
 }
 * select::-ms-expand {
   display: none;
@@ -377,15 +394,6 @@
   justify-content: center;
   align-items: center;
 }
-* div.datedropper.iot {
-  --dd-color1: #2faae5;
-  --dd-color2: white;
-  --dd-color3: #595757;
-  --dd-color4: white;
-  --dd-radius: 10px;
-  --dd-width: 180px;
-  --dd-shadow: 0 0 29px 0px rgba(0, 0, 0, 0.1);
-}
 * .modal-template {
   padding: 0 !important;
 }
@@ -441,6 +449,113 @@
   overflow-y: scroll;
   height: 65vh;
 }
+@media (max-width: 568px) {
+  * .modal-template .modal-dialog .modal-content .modal-body.session-table {
+    overflow: scroll;
+  }
+}
+* .modal-template .modal-dialog .modal-content .modal-body.session-table .text-gp {
+  display: flex;
+  align-items: center;
+}
+* .modal-template .modal-dialog .modal-content .modal-body.session-table .text-gp input,
+* .modal-template .modal-dialog .modal-content .modal-body.session-table .text-gp label {
+  display: inline-block;
+  width: 50px;
+  margin: 0 8px;
+  margin-bottom: 0;
+}
+@media (max-width: 568px) {
+  * .modal-template .modal-dialog .modal-content .modal-body.session-table .text-gp input,
+  * .modal-template .modal-dialog .modal-content .modal-body.session-table .text-gp label {
+    height: 35px;
+  }
+}
+* .modal-template .modal-dialog .modal-content .modal-body.session-table .text-gp span {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+* .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default {
+  margin: 20px 0;
+  position: relative;
+  table-layout: fixed;
+}
+@media (max-width: 568px) {
+  * .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default {
+    width: 450px;
+  }
+}
+@media (max-width: 320px) {
+  * .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default {
+    width: 400px;
+  }
+}
+* .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default thead tr.week {
+  background-color: #a19163;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+* .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default tbody tr.month {
+  background-color: #f7f5f0;
+  position: sticky;
+  top: 40px;
+  z-index: 10;
+}
+@media (max-width: 320px) {
+  * .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default tbody tr.month {
+    top: 36px;
+  }
+}
+* .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default tbody tr.month th {
+  text-align: left;
+  color: #a19163;
+}
+* .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default tbody td {
+  width: 14.2%;
+  background-color: white;
+}
+* .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default tbody td p {
+  margin-bottom: 0;
+  color: #9fa0a0;
+  line-height: 1;
+  margin-bottom: 8px;
+  font-size: 0.875rem;
+}
+* .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default tbody td .text-gp {
+  padding: 12px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  * .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default tbody td .text-gp {
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+}
+* .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default tbody td .text-gp input {
+  margin: 0;
+  margin-right: 8px;
+  text-align: center;
+  display: inline-block;
+}
+@media (max-width: 1024px) {
+  * .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default tbody td .text-gp input {
+    width: 40px;
+  }
+}
+@media (max-width: 768px) {
+  * .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default tbody td .text-gp input {
+    width: 40px;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+}
+* .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default tbody td .text-gp span {
+  font-weight: normal;
+}
 * .modal-template .modal-dialog .modal-content .modal-body .form-gp {
   width: 100%;
   display: flex;
@@ -492,6 +607,12 @@
   display: flex;
   justify-content: flex-end;
   font-size: 1rem;
+}
+* .modal-template .modal-dialog .modal-content .modal-body .form-gp p {
+  margin-bottom: 20px;
+}
+* .modal-template .modal-dialog .modal-content .modal-body .form-gp p.notice {
+  text-align: right;
 }
 * .modal-template .modal-dialog .modal-content .modal-body .code-gp {
   width: 100%;
@@ -571,110 +692,12 @@
   width: 20px;
   margin: 0;
 }
-* .modal-template .modal-dialog .modal-content .modal-body .text-gp {
-  display: flex;
-  align-items: center;
-}
-* .modal-template .modal-dialog .modal-content .modal-body .text-gp input,
-* .modal-template .modal-dialog .modal-content .modal-body .text-gp label {
-  display: inline-block;
-  width: auto;
-  margin-bottom: 0;
-}
-* .modal-template .modal-dialog .modal-content .modal-body .text-gp input {
-  margin: 0 12px;
-  width: 50px;
-  text-align: center;
-}
-* .modal-template .modal-dialog .modal-content .modal-body .text-gp span {
-  font-size: 1.125rem;
-  font-weight: bold;
-}
-* .modal-template .modal-dialog .modal-content .modal-body .table-default {
-  margin: 20px 0;
-  position: relative;
-  table-layout: fixed;
-}
-@media (max-width: 568px) {
-  * .modal-template .modal-dialog .modal-content .modal-body .table-default {
-    width: 500px;
-  }
-}
-@media (max-width: 320px) {
-  * .modal-template .modal-dialog .modal-content .modal-body .table-default {
-    width: 400px;
-  }
-}
-* .modal-template .modal-dialog .modal-content .modal-body .table-default thead tr.week {
-  background-color: #a19163;
-  color: white;
-  position: sticky;
-  top: 0;
-}
-* .modal-template .modal-dialog .modal-content .modal-body .table-default tbody tr.month {
-  background-color: #f7f5f0;
-  position: sticky;
-  top: 40px;
-  z-index: 10;
-}
-@media (max-width: 320px) {
-  * .modal-template .modal-dialog .modal-content .modal-body .table-default tbody tr.month {
-    top: 36px;
-  }
-}
-* .modal-template .modal-dialog .modal-content .modal-body .table-default tbody tr.month th {
-  text-align: left;
-  color: #a19163;
-}
-* .modal-template .modal-dialog .modal-content .modal-body .table-default tbody td {
-  width: 14.2%;
-  background-color: white;
-}
-* .modal-template .modal-dialog .modal-content .modal-body .table-default tbody td p {
-  margin-bottom: 0;
-  color: #9fa0a0;
-  line-height: 1;
-  margin-bottom: 8px;
-  font-size: 0.875rem;
-}
-* .modal-template .modal-dialog .modal-content .modal-body .table-default tbody td .text-gp {
-  padding: 12px 0;
+* .modal-template .modal-dialog .modal-content .modal-body .notify-gp p {
   width: 100%;
-  display: flex;
-  justify-content: center;
-}
-@media (max-width: 768px) {
-  * .modal-template .modal-dialog .modal-content .modal-body .table-default tbody td .text-gp {
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 0;
-  }
-}
-* .modal-template .modal-dialog .modal-content .modal-body .table-default tbody td .text-gp input {
-  margin: 0;
-  margin-right: 8px;
-  text-align: center;
-}
-@media (max-width: 1024px) {
-  * .modal-template .modal-dialog .modal-content .modal-body .table-default tbody td .text-gp input {
-    width: 40px;
-  }
-}
-@media (max-width: 768px) {
-  * .modal-template .modal-dialog .modal-content .modal-body .table-default tbody td .text-gp input {
-    width: 40px;
-    margin: 0;
-    margin-bottom: 8px;
-  }
-}
-* .modal-template .modal-dialog .modal-content .modal-body .table-default tbody td .text-gp span {
-  font-weight: normal;
-}
-* .modal-template .modal-dialog .modal-content .modal-body p {
-  margin-bottom: 20px;
-}
-* .modal-template .modal-dialog .modal-content .modal-body p.notice {
-  text-align: right;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 0;
+  line-height: 2;
 }
 * .modal-template .modal-dialog .modal-content .modal-footer {
   border-top: none;
@@ -1441,20 +1464,6 @@ body form {
     padding: 0 24px;
   }
 }
-body form article {
-  margin-bottom: 36px;
-}
-body form ul.ps {
-  padding: 16px 0;
-  padding-left: 16px;
-  margin-bottom: 0;
-}
-body form ul.ps li {
-  list-style-position: outside;
-  list-style-type: disc;
-  color: #a19163;
-  line-height: 1.75;
-}
 body form .form-gp {
   padding: 0;
   margin: 0;
@@ -1574,21 +1583,21 @@ body form .form-gp .session select:disabled {
     margin-bottom: 12px;
   }
 }
-body form .form-gp .session button.add {
+body form .form-gp .session a.add {
   width: 27%;
   margin-top: 0 !important;
 }
 @media (max-width: 1024px) {
-  body form .form-gp .session button.add {
+  body form .form-gp .session a.add {
     width: 32%;
   }
 }
 @media (max-width: 568px) {
-  body form .form-gp .session button.add {
+  body form .form-gp .session a.add {
     width: 100%;
   }
 }
-body form .form-gp .session button.add i {
+body form .form-gp .session a.add i {
   font-size: 1rem;
 }
 body form .form-gp .date-gp,
@@ -1601,7 +1610,9 @@ body form .form-gp .range {
 }
 body form .form-gp .label-withButton {
   display: flex;
-  align-items: start;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 @media (max-width: 568px) {
   body form .form-gp .label-withButton {
@@ -1616,6 +1627,7 @@ body form .form-gp .label-withButton button {
   padding: 2px 8px;
   margin-left: 12px;
   margin-bottom: 8px;
+  height: initial;
 }
 @media (max-width: 568px) {
   body form .form-gp .label-withButton button {
@@ -1623,6 +1635,19 @@ body form .form-gp .label-withButton button {
     margin-bottom: 12px;
     margin-top: 0;
   }
+}
+body form .form-gp .label-withButton .download-sample {
+  font-size: 1rem;
+  padding: 8px 16px;
+  padding-right: 0;
+  text-align: left;
+  border-radius: 6px;
+  color: #a19163;
+  text-align: right;
+  margin-top: 0;
+}
+body form .form-gp .label-withButton .download-sample i {
+  margin-right: 8px;
 }
 body form .choice .item {
   display: flex;
@@ -1691,22 +1716,22 @@ body form .choice .ticket-price-result {
   width: 100%;
 }
 body form .choice .ticket-price-result .num {
-  border: solid 1px #E9C65D;
   padding: 4px 12px;
   border-radius: 8px;
-  color: #5f4d1c;
   font-size: 1.125rem;
   margin: 8px 12px;
   margin-left: 0;
   border-radius: 50px;
   font-size: 1rem;
+  border: solid 1px #e9c65d;
+  color: #5f4d1c;
   background-color: rgba(233, 198, 93, 0.2);
   font-weight: bold;
 }
 body form .choice .ticket-price-result .num i {
-  font-size: 1.125rem;
+  font-size: 1rem;
   margin-left: 4px;
-  color: #a19163;
+  color: #e9c65d;
 }
 body form .choice .ticket-price-result span {
   margin-right: 12px;
@@ -1862,27 +1887,37 @@ body form ul li {
   list-style: decimal;
   list-style-position: inside;
 }
-body form.disabled .performer select {
+body form.view fieldset .performer select {
   width: 40%;
 }
 @media (max-width: 568px) {
-  body form.disabled .performer select {
+  body form.view fieldset .performer select {
     width: 35%;
   }
 }
-body form.disabled .performer input {
+body form.view fieldset .performer input {
   width: 56%;
 }
 @media (max-width: 568px) {
-  body form.disabled .performer input {
+  body form.view fieldset .performer input {
     width: 47%;
   }
 }
-body form.disabled .session input:disabled, body form.disabled .session select:disabled {
-  background-color: #e5e5e5;
+body form.view fieldset .performer.view-nobtn select {
+  width: 40%;
 }
-body form.disabled .session.view-nobtn select {
-  width: 100%;
+@media (max-width: 568px) {
+  body form.view fieldset .performer.view-nobtn select {
+    width: 40%;
+  }
+}
+body form.view fieldset .performer.view-nobtn input {
+  width: 56%;
+}
+@media (max-width: 568px) {
+  body form.view fieldset .performer.view-nobtn input {
+    width: 55%;
+  }
 }
 body .ui-datepicker {
   font-size: 1rem;
@@ -1994,7 +2029,7 @@ body .table-default th,
 body .table-default td {
   padding: 8px 8px;
   text-align: center;
-  border: solid 1px rgba(161, 145, 99, 0.4);
+  border: solid 1px rgba(161, 145, 99, 0.4) !important;
 }
 @media (max-width: 568px) {
   body .table-default table,
@@ -2330,165 +2365,6 @@ body main .section-banner img {
   -o-object-position: center center;
      object-position: center center;
 }
-body main .section-curriculum {
-  display: flex;
-  flex-direction: column;
-}
-body main .section-curriculum .curriculum-gp {
-  display: flex;
-  flex-wrap: wrap;
-}
-@media (max-width: 768px) {
-  body main .section-curriculum .curriculum-gp {
-    justify-content: space-between;
-  }
-}
-body main .section-curriculum .curriculum-gp .block {
-  width: 23%;
-  margin-bottom: 24px;
-}
-body main .section-curriculum .curriculum-gp .block:not(:last-child) {
-  margin-right: 16px;
-}
-@media (max-width: 1550px) {
-  body main .section-curriculum .curriculum-gp .block:not(:last-child) {
-    margin-right: 20px;
-  }
-}
-@media (max-width: 1024px) {
-  body main .section-curriculum .curriculum-gp .block:not(:last-child) {
-    margin-right: 16px;
-  }
-}
-@media (max-width: 768px) {
-  body main .section-curriculum .curriculum-gp .block:not(:last-child) {
-    margin-right: 0;
-  }
-}
-@media (max-width: 768px) {
-  body main .section-curriculum .curriculum-gp .block {
-    width: 48%;
-  }
-}
-@media (max-width: 568px) {
-  body main .section-curriculum .curriculum-gp .block {
-    width: 100%;
-  }
-}
-body main .section-curriculum .curriculum-gp .block a {
-  height: auto;
-}
-body main .section-curriculum .curriculum-gp .block img {
-  width: 100%;
-  height: 197px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  outline: solid 1px #dcdddd;
-}
-@media (max-width: 1024px) {
-  body main .section-curriculum .curriculum-gp .block img {
-    height: 170px;
-  }
-}
-@media (max-width: 768px) {
-  body main .section-curriculum .curriculum-gp .block img {
-    height: 180px;
-  }
-}
-@media (max-width: 568px) {
-  body main .section-curriculum .curriculum-gp .block img {
-    height: 197px;
-  }
-}
-body main .section-curriculum .curriculum-gp .block .text-gp h4 {
-  margin: 8px 0;
-  margin-top: 12px;
-}
-body main .section-curriculum .curriculum-gp .block .text-gp p {
-  color: #88753f;
-  line-height: 1;
-}
-body main .section-curriculum .curriculum-gp .block i {
-  font-size: 1rem;
-  margin-right: 8px;
-  color: #0b3259;
-}
-body main .section-curriculum .curriculum-intro {
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  margin-bottom: 36px;
-}
-@media (max-width: 768px) {
-  body main .section-curriculum .curriculum-intro {
-    flex-wrap: wrap;
-    margin-bottom: 12px;
-  }
-}
-body main .section-curriculum .curriculum-intro img {
-  width: 50%;
-  max-height: 400px;
-  margin-right: 20px;
-  margin-top: 0;
-}
-@media (max-width: 768px) {
-  body main .section-curriculum .curriculum-intro img {
-    width: 100%;
-    margin-bottom: 20px;
-    margin-right: 0;
-  }
-}
-body main .section-curriculum .curriculum-intro .brief {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-}
-@media (max-width: 768px) {
-  body main .section-curriculum .curriculum-intro .brief {
-    width: 100%;
-  }
-}
-body main .section-curriculum .curriculum-intro .brief table {
-  border: solid 1px #0b3259;
-  margin-bottom: 20px;
-}
-body main .section-curriculum .curriculum-intro .brief table tr {
-  background-color: transparent;
-}
-@media (max-width: 568px) {
-  body main .section-curriculum .curriculum-intro .brief table tr {
-    display: flex;
-    flex-direction: column;
-    background-color: transparent;
-  }
-}
-body main .section-curriculum .curriculum-intro .brief table tr th,
-body main .section-curriculum .curriculum-intro .brief table tr td {
-  text-align: left;
-  padding: 16px 16px;
-  border-bottom: solid 1px #0b3259;
-}
-@media (max-width: 568px) {
-  body main .section-curriculum .curriculum-intro .brief table tr th,
-  body main .section-curriculum .curriculum-intro .brief table tr td {
-    padding: 8px 16px;
-  }
-}
-body main .section-curriculum .curriculum-intro .brief table tr th {
-  width: 25%;
-}
-@media (max-width: 568px) {
-  body main .section-curriculum .curriculum-intro .brief table tr th {
-    width: 100%;
-    background-color: rgba(11, 50, 89, 0.1);
-  }
-}
-body main .section-curriculum .curriculum-intro .brief button.signup {
-  background-color: #da382d;
-  padding: 8px;
-}
 body main .section-fastlink .btn-gp {
   display: flex;
   flex-wrap: wrap;
@@ -2545,85 +2421,6 @@ body main .section-fastlink .btn-gp .btn-type .type {
   padding: 4px 16px;
   border-radius: 6px;
   font-size: 0.875rem;
-}
-body main .section-brand {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 36px;
-}
-body main .section-brand .block {
-  display: flex;
-  align-items: center;
-  width: 48%;
-  margin-bottom: 36px;
-}
-@media (max-width: 768px) {
-  body main .section-brand .block {
-    width: 100%;
-  }
-}
-@media (max-width: 568px) {
-  body main .section-brand .block {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-body main .section-brand .block img.circle {
-  width: 150px;
-  height: 150px;
-  background-color: #a19163;
-  border-radius: 100%;
-  margin: 0;
-  margin-right: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center top;
-     object-position: center top;
-}
-@media (max-width: 568px) {
-  body main .section-brand .block .text-gp {
-    margin-top: 12px;
-  }
-}
-body main .section-brand .block .text-gp h3 {
-  margin: 0;
-  margin-bottom: 8px;
-  vertical-align: middle;
-}
-body main .section-brand .block .text-gp h5 {
-  margin: 0;
-}
-body main .section-brand .block .text-gp i {
-  font-size: 1.125rem;
-  margin-left: 8px;
-  color: #dcdddd;
-}
-body main .section-brand .block .text-gp .ellipsis {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  white-space: normal;
-}
-body main .tab-gp {
-  display: flex;
-}
-body main .tab-gp .tab {
-  border: solid 1px #0b3259;
-  padding: 4px 8px;
-  font-size: 1rem;
-  color: black;
-  border-radius: 4px;
-  margin-right: 12px;
-  margin-bottom: 12px;
-}
-@media (max-width: 568px) {
-  body main .tab-gp .tab {
-    font-size: 1.125rem;
-  }
-}
-body main .tab-gp .active {
-  background-color: rgba(11, 50, 89, 0.1);
 }
 body main .section-link {
   display: flex;
@@ -2783,6 +2580,11 @@ body main .content-signup .step {
   margin-bottom: 36px;
   padding: 16px 0;
 }
+@media (max-width: 568px) {
+  body main .content-signup .step {
+    margin-bottom: 20px;
+  }
+}
 body main .content-signup .step .btn-gp {
   width: 100%;
   max-width: 600px;
@@ -2826,12 +2628,37 @@ body main .content-signup .container form h3 {
   margin-top: 12px;
   margin-bottom: 20px;
 }
-body main .content-signup .container form .place-gp {
-  background-color: #f7f5f0;
+body main .content-signup .container form .type-title {
   margin-bottom: 20px;
 }
+body main .content-signup .container form .type-title h3 {
+  padding: 8px 16px;
+  padding-left: 0;
+  padding-top: 16px;
+  border-bottom: solid 3px #e9c65d;
+  color: #e9c65d;
+  margin-top: 0;
+}
+body main .content-signup .container form ul.ps {
+  padding: 16px 0;
+  padding-left: 16px;
+  margin-bottom: 0;
+}
+body main .content-signup .container form ul.ps li {
+  list-style-position: outside;
+  list-style-type: disc;
+  color: #a19163;
+  line-height: 1.75;
+}
+body main .content-signup .container form .place-gp {
+  margin-bottom: 20px;
+}
+body main .content-signup .container form .place-gp:last-child {
+  margin-bottom: 0;
+}
 body main .content-signup .container form .place-gp .place-header {
-  background-color: #88753f;
+  background-color: #a19163;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2841,7 +2668,8 @@ body main .content-signup .container form .place-gp .place-header .title {
   font-size: 1.25rem;
   color: white;
   font-weight: bold;
-  padding: 0 8px;
+  padding: 0 16px;
+  color: inherit;
 }
 body main .content-signup .container form .place-gp .place-header a {
   color: white;
@@ -2849,23 +2677,50 @@ body main .content-signup .container form .place-gp .place-header a {
   padding: 2px 16px;
   font-size: 1.125rem;
   font-weight: bold;
+  color: inherit;
 }
 body main .content-signup .container form .place-gp .place-header a i {
   margin-right: 8px;
 }
 body main .content-signup .container form .place-gp .place-body {
   padding: 24px;
+  background-color: rgba(233, 198, 93, 0.075);
 }
-body main .content-signup .container form button.add {
+body main .content-signup .container form a.add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 40px;
-  padding: 0 16px;
+  font-size: 1.125rem;
+  padding: 4px 16px;
+  border-radius: 4px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
   margin-top: 12px;
-  display: block;
+  background-color: #a19163;
+  color: white;
 }
 @media (max-width: 568px) {
-  body main .content-signup .container form button.add {
+  body main .content-signup .container form a.add {
     width: 100%;
   }
+}
+body main .content-signup .container form a.add .fas {
+  margin-right: 12px;
+}
+body main .content-signup .container form a.download-file {
+  font-size: 1rem;
+  padding: 8px 16px;
+  margin-right: 20px;
+  text-align: left;
+  border: solid 1px #a19163;
+  border-radius: 6px;
+  color: #a19163;
+  margin-top: 8px;
+}
+body main .content-signup .container form a.download-file i {
+  margin-right: 8px;
 }
 body main .content-signup .container .check-curriculum {
   border: solid 1px #0b3259;

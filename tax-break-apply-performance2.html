@@ -60,8 +60,10 @@
             </div>
             <div class="container">
                 <form>
-                    <article>
-                        <h3>進階資料</h3>
+                    <fieldset>
+                        <div class="type-title">
+                            <h3>進階資料</h3>
+                        </div>
                         <div class="form-gp choice">
                             <h5>是否有外國人士來臺演出<span class="notice">*</span></h5>
                             <div class="item">
@@ -79,7 +81,7 @@
                         </div>
                         <div class="form-gp">
                             <label for="file1">相關證明</label>
-                            <input type="file" id="file1" multiple>
+                            <input type="file" id="file1">
                             <ul class="ps">
                                 <li>如：勞動部已核准文件、已向勞動部提出申請之證明證件或外籍人士名冊</li>
                                 <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
@@ -103,21 +105,21 @@
                         </div>
                         <div class="form-gp">
                             <label for="file2">相關證明</label>
-                            <input type="file" id="file2" multiple>
+                            <input type="file" id="file2">
                             <ul class="ps">
                                 <li>如：內政部已核准文件、已向內政部提出申請之證明證件或大陸地區人士名冊</li>
                                 <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
                                 <li>檔案請小於 20MB</li>
                             </ul>
                         </div>
-                    </article>
+                    </fieldset>
 
                     <div class="btn-tool">
                         <input type="button" value="取消" class="outline">
                         <input type="button" value="暫存" class="outline">
                         <input type="button" value="上一步" class="outline"
                             onclick="location.href='tax-break-apply-performance1.html'">
-                        <input type="button" value="下一步" onclick="location.href='tax-break-apply-performance3'">
+                        <input type="button" value="下一步" onclick="location.href='tax-break-apply-performance3.html'">
                     </div>
                 </form>
             </div>

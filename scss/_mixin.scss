@@ -80,10 +80,11 @@
     }
     h4 {
         font-size: $size-h4;
-        color: black;
+        color: $primary-default;
         padding: 0;
         margin: 0;
         line-height: 1.25;
+        margin-bottom: $m-XS;
     }
     h5 {
         font-size: $size-h5;
@@ -176,6 +177,35 @@
     /* Firefox */
     input[type="number"] {
         -moz-appearance: textfield;
+    }
+    // 表單群組
+    fieldset {
+        margin-bottom: $m-M;
+        // &:last-of-type {
+        //     margin-bottom: $m-S;
+        // }
+        &[disabled] {
+            input,
+            select,
+            textarea,
+            .session input,
+            .session select {
+                background-color: $bk-8 !important;
+                // border: solid 1px $bk-20 !important;
+                // border: unset !important;
+                // background-color: rgba($color: $primary-tint, $alpha: 0.15) !important;
+                // border: solid 1px rgba($color: $primary-tint, $alpha: 0.5) !important;
+                opacity: 1;
+                cursor: not-allowed;
+            }
+            .session {
+                &.view-nobtn {
+                    select {
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
     //表單
     label {
@@ -279,6 +309,7 @@
     ::placeholder {
         color: $text;
     }
+
     select {
         width: 100%;
         height: 40px;
@@ -289,6 +320,7 @@
         background-color: white;
         color: $text;
         padding: 0 $p-XXS;
+        line-height: 2;
         &::-ms-expand {
             display: none;
         }
@@ -427,17 +459,6 @@
             align-items: center;
         }
     }
-    //date-picker datedropper
-    div.datedropper.iot {
-        --dd-color1: #2faae5;
-        --dd-color2: white;
-        --dd-color3: #595757;
-        --dd-color4: white;
-
-        --dd-radius: 10px;
-        --dd-width: 180px;
-        --dd-shadow: 0 0 29px 0px rgba(0, 0, 0, 0.1);
-    }
     //modal
     .modal-template {
         padding: 0 !important;
@@ -486,6 +507,103 @@
                     &.session-table {
                         overflow-y: scroll;
                         height: 65vh;
+                        @include mobile-L() {
+                            overflow: scroll;
+                        }
+                        .text-gp {
+                            display: flex;
+                            align-items: center;
+                            input,
+                            label {
+                                display: inline-block;
+                                width: 50px;
+                                margin: 0 $p-XXS;
+                                margin-bottom: 0;
+                                @include mobile-L() {
+                                    height: 35px;
+                                }
+                            }
+                            span {
+                                font-size: $size-h5;
+                                font-weight: bold;
+                            }
+                        }
+                        .table-default {
+                            margin: $m-S 0;
+                            position: relative;
+                            table-layout: fixed;
+                            @include mobile-L {
+                                width: 450px;
+                            }
+                            @include mobile-XS() {
+                                width: 400px;
+                            }
+                            thead {
+                                tr.week {
+                                    background-color: $primary-tint;
+                                    color: white;
+                                    position: sticky;
+                                    top: 0;
+                                }
+                            }
+                            tbody {
+                                // tr{
+                                //     min-height: 60px;
+                                // }
+                                tr.month {
+                                    background-color: $primary-table;
+                                    position: sticky;
+                                    top: 40px;
+                                    @include mobile-XS() {
+                                        top: 36px;
+                                    }
+                                    z-index: 10;
+                                    th {
+                                        text-align: left;
+                                        color: $primary-tint;
+                                    }
+                                }
+                                td {
+                                    width: 14.2%;
+                                    background-color: white;
+                                    p {
+                                        margin-bottom: 0;
+                                        color: $complementary;
+                                        line-height: 1;
+                                        margin-bottom: $p-XXS;
+                                        font-size: $size-caption;
+                                    }
+                                    .text-gp {
+                                        padding: $m-XS 0;
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: center;
+                                        @include pad() {
+                                            flex-direction: column;
+                                            flex-wrap: wrap;
+                                            padding: 0;
+                                        }
+                                        input {
+                                            margin: 0;
+                                            margin-right: $p-XXS;
+                                            text-align: center;
+                                            display: inline-block;
+                                            @include web-S {
+                                                width: 40px;
+                                            }
+                                            @include pad() {
+                                                width: 40px;
+                                                margin: 0;
+                                                margin-bottom: $p-XXS;
+                                            }
+                                        }
+                                        span {
+                                            font-weight: normal;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                     .form-gp {
                         width: 100%;
@@ -530,6 +648,12 @@
                             display: flex;
                             justify-content: flex-end;
                             font-size: $size-p;
+                        }
+                        p {
+                            margin-bottom: $m-S;
+                            &.notice {
+                                text-align: right;
+                            }
                         }
                     }
                     //圖片驗證碼
@@ -595,104 +719,13 @@
                             }
                         }
                     }
-                    .text-gp {
-                        display: flex;
-                        align-items: center;
-                        input,
-                        label {
-                            display: inline-block;
-                            width: auto;
-                            margin-bottom: 0;
-                        }
-                        input {
-                            margin: 0 $m-XS;
-                            width: 50px;
-                            text-align: center;
-                        }
-                        span {
-                            font-size: $size-h5;
+                    .notify-gp {
+                        p {
+                            width: 100%;
                             font-weight: bold;
-                        }
-                    }
-                    .table-default {
-                        margin: $m-S 0;
-                        position: relative;
-                        table-layout: fixed;
-                        @include mobile-L {
-                            width: 500px;
-                        }
-                        @include mobile-XS() {
-                            width: 400px;
-                        }
-                        thead {
-                            tr.week {
-                                background-color: $primary-tint;
-                                color: white;
-                                position: sticky;
-                                top: 0;
-                            }
-                        }
-                        tbody {
-                            // tr{
-                            //     min-height: 60px;
-                            // }
-                            tr.month {
-                                background-color: $primary-table;
-                                position: sticky;
-                                top: 40px;
-                                @include mobile-XS() {
-                                    top: 36px;
-                                }
-                                z-index: 10;
-                                th {
-                                    text-align: left;
-                                    color: $primary-tint;
-                                }
-                            }
-                            td {
-                                width: 14.2%;
-                                background-color: white;
-                                p {
-                                    margin-bottom: 0;
-                                    color: $complementary;
-                                    line-height: 1;
-                                    margin-bottom: $p-XXS;
-                                    font-size: $size-caption;
-                                }
-                                .text-gp {
-                                    padding: $m-XS 0;
-                                    width: 100%;
-                                    display: flex;
-                                    justify-content: center;
-                                    @include pad() {
-                                        flex-direction: column;
-                                        flex-wrap: wrap;
-                                        padding: 0;
-                                    }
-                                    input {
-                                        margin: 0;
-                                        margin-right: $p-XXS;
-                                        text-align: center;
-                                        @include web-S {
-                                            width: 40px;
-                                        }
-                                        @include pad() {
-                                            width: 40px;
-                                            margin: 0;
-                                            margin-bottom: $p-XXS;
-                                        }
-                                    }
-                                    span {
-                                        font-weight: normal;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    p {
-                        margin-bottom: $m-S;
-                        &.notice {
-                            text-align: right;
+                            text-align: left;
+                            margin-bottom: 0;
+                            line-height: 2;
                         }
                     }
                 }
@@ -1351,61 +1384,6 @@
     }
 }
 
-@mixin news-list($span-width, $a-width) {
-    .list {
-        display: flex;
-        padding: $p-XXS 0;
-        background-color: white;
-        @include pad() {
-            padding: $p-XXS $p-M;
-        }
-        @include mobile-L() {
-            flex-wrap: wrap;
-            flex-direction: column;
-            padding: $p-XXS $p-XS;
-        }
-        span {
-            width: $span-width;
-            text-align: center;
-            color: black;
-            font-size: $size-p;
-            line-height: 2;
-            @include pad() {
-                margin-right: $m-S;
-            }
-            @include mobile-L() {
-                width: 100%;
-                margin-right: unset;
-                text-align: left;
-            }
-        }
-        a {
-            width: $a-width;
-            padding-right: $p-M;
-            @include mobile-L() {
-                width: 100%;
-                padding-right: 0;
-            }
-            &:hover p {
-                color: $primary-default;
-            }
-            i {
-                font-size: $size-p;
-                color: $primary-default;
-                margin-right: $m-XXS;
-            }
-            p {
-                font-weight: bold;
-                font-size: $size-p;
-            }
-        }
-    }
-
-    h4 {
-        text-align: right;
-    }
-}
-
 @mixin searchbar() {
     .searchbar {
         display: flex;
@@ -1470,23 +1448,6 @@
         }
         @include mobile-L() {
             padding: 0 $p-S;
-        }
-        article {
-            margin-bottom: $m-M;
-        }
-        // .notice {
-        //     padding-left: $m-XXS;
-        // }
-        ul.ps {
-            padding: $p-XS 0;
-            padding-left: $p-XS;
-            margin-bottom: 0;
-            li {
-                list-style-position: outside;
-                list-style-type: disc;
-                color: $primary-tint;
-                line-height: 1.75;
-            }
         }
         .form-gp {
             padding: 0;
@@ -1589,7 +1550,7 @@
                         margin-bottom: $m-XS;
                     }
                 }
-                button.add {
+                a.add {
                     width: 27%;
                     margin-top: 0 !important;
                     @include web-S {
@@ -1614,7 +1575,9 @@
             }
             .label-withButton {
                 display: flex;
-                align-items: start;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
                 @include mobile-L {
                     width: 100%;
                 }
@@ -1626,10 +1589,26 @@
                     padding: $m-XXS/2 $p-XXS;
                     margin-left: $m-XS;
                     margin-bottom: $p-XXS;
+                    height: initial;
                     @include mobile-L() {
                         font-size: $size-h5;
                         margin-bottom: $m-XS;
                         margin-top: 0;
+                    }
+                }
+                .download-sample {
+                    font-size: $size-p;
+                    padding: $p-XXS $p-XS;
+                    padding-right: 0;
+                    text-align: left;
+                    border-radius: 6px;
+                    color: $primary-tint;
+                    text-align: right;
+                    margin-top: 0;
+                    // border: solid 1px $primary-tint;
+                    // margin-bottom: $m-XS;
+                    i {
+                        margin-right: $p-XXS;
                     }
                 }
             }
@@ -1699,22 +1678,21 @@
                 align-items: center;
                 width: 100%;
                 .num {
-                    border: solid 1px $ticket;
                     padding: 4px $m-XS;
                     border-radius: 8px;
-                    color: $primary-dark;
                     font-size: $size-h5;
                     margin: $p-XXS $m-XS;
                     margin-left: 0;
                     border-radius: 50px;
                     font-size: $size-p;
+                    border: solid 1px $ticket;
+                    color: $primary-dark;
                     background-color: rgba($color: $ticket, $alpha: 0.2);
-                    // color: white;
                     font-weight: bold;
                     i {
-                        font-size: $size-h5;
+                        font-size: $size-p;
                         margin-left: $m-XXS;
-                        color: $primary-tint;
+                        color: rgba($color: $ticket, $alpha: 1);
                     }
                 }
                 span {
@@ -1854,32 +1832,35 @@
                 list-style-position: inside;
             }
         }
-    }
-    form.disabled {
-        .performer {
-            select {
-                width: 40%;
-                @include mobile-L {
-                    width: 35%;
+        &.view {
+            fieldset {
+                .performer {
+                    select {
+                        width: 40%;
+                        @include mobile-L {
+                            width: 35%;
+                        }
+                    }
+                    input {
+                        width: 56%;
+                        @include mobile-L {
+                            width: 47%;
+                        }
+                    }
                 }
-            }
-            input {
-                width: 56%;
-                @include mobile-L {
-                    width: 47%;
-                }
-            }
-        }
-        .session {
-            input,select {
-                &:disabled {
-                    background-color: $bk-10;
-                    // border: unset;
-                }
-            }
-            &.view-nobtn {
-                select {
-                    width: 100%;
+                .performer.view-nobtn {
+                    select {
+                        width: 40%;
+                        @include mobile-L {
+                            width: 40%;
+                        }
+                    }
+                    input {
+                        width: 56%;
+                        @include mobile-L {
+                            width: 55%;
+                        }
+                    }
                 }
             }
         }
@@ -1990,7 +1971,7 @@
         td {
             padding: $p-XXS $p-XXS;
             text-align: center;
-            border: solid 1px rgba($color: $primary-tint, $alpha: 0.4);
+            border: solid 1px rgba($color: $primary-tint, $alpha: 0.4) !important;
             @include mobile-L() {
                 border: 1px solid $primary-tint;
             }
