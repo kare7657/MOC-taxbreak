@@ -49,6 +49,7 @@
             width: 80%;
         }
         @include mobile-L() {
+            width: 90%;
             padding-top: $p-XS;
         }
     }
@@ -135,7 +136,40 @@
     :focus > :focus-within {
         outline: #fcd256 dotted 3px !important;
     }
-
+    #AU {
+        font-size: $size-h5;
+        color: transparent;
+        margin: 0 $m-XS;
+        &:focus {
+            color: $primary-tint;
+        }
+    }
+    #AC {
+        &:focus {
+            position: absolute;
+            left: 0;
+            font-size: $size-h5;
+            color: $bk-20;
+            margin: 0 $m-XS;
+            color: $primary-tint;
+            &::after {
+                content: ":::";
+            }
+        }
+    }
+    #AZ {
+        &:focus {
+            position: absolute;
+            left: 0;
+            font-size: $size-h5;
+            color: $bk-20;
+            margin: 0 $m-XS;
+            color: white;
+            &::after {
+                content: ":::";
+            }
+        }
+    }
     .clearfix {
         clear: both;
     }
@@ -337,6 +371,17 @@
             }
         }
     }
+    .select2-container--default .select2-selection--single {
+        height: 40px;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        line-height: 40px;
+        background: url("../img/chevron-down-solid.svg") no-repeat scroll transparent;
+        background-position: 97% center;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        display: none;
+    }
     textarea {
         width: 100%;
         border-radius: 5px;
@@ -465,7 +510,6 @@
         .modal-dialog {
             // max-width: 650px;
             @include pad() {
-                // width: 90vw;
                 max-width: 600px;
             }
             // @include mobile-L(){
@@ -636,10 +680,20 @@
                         }
                         .address {
                             width: 60%;
-                            select {
+                            display: flex;
+                            @include mobile-L() {
                                 width: 100%;
-                                &:last-child {
-                                    margin-bottom: 0;
+                            }
+                            select {
+                                // width: 100%;
+                                width: 49%;
+                                margin-bottom: 0;
+                                @include mobile-L() {
+                                    width: 100%;
+                                    margin-bottom: $m-XS;
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
                                 }
                             }
                         }
@@ -713,9 +767,35 @@
                                 }
                             }
                             .reform {
-                                height: 20px;
-                                width: 20px;
-                                margin: 0;
+                                margin-right: $m-XS;
+                                height: auto;
+                                color: $primary-dark;
+                                font-weight: bold;
+                                padding: $m-XXS $p-XXS;
+                                background-color: $primary-table;
+                                @include mobile-L() {
+                                    height: 40px;
+                                    padding: $m-XXS $m-XS;
+                                }
+                                i {
+                                    margin: 0;
+                                    font-size: $size-h5;
+                                }
+                            }
+                            .btnPlayAudio {
+                                height: auto;
+                                color: $primary-dark;
+                                font-weight: bold;
+                                padding: $m-XXS $p-XXS;
+                                background-color: $primary-table;
+                                @include mobile-L() {
+                                    height: 40px;
+                                    padding: $m-XXS $m-XS;
+                                }
+                                i {
+                                    margin: 0;
+                                    font-size: $size-h5;
+                                }
                             }
                         }
                     }
@@ -869,6 +949,21 @@
                     display: flex;
                     align-items: center;
                     justify-content: end;
+                    .icon-btn {
+                        display: flex;
+                        align-items: center;
+                        margin: 0;
+                        margin-right: $m-XS;
+                        color: $primary-default;
+                        @include mobile-L() {
+                            height: 40px;
+                            padding: $m-XXS $m-XS;
+                        }
+                        i {
+                            margin: 0;
+                            font-size: $size-h2;
+                        }
+                    }
                     .btn {
                         padding: 0;
                         margin: 0;
@@ -917,7 +1012,6 @@
                     width: 1110px;
                     display: flex;
                     margin: auto;
-                    // border-right: solid 1px $primary-tint;
                     @include web-S() {
                         width: initial;
                     }
@@ -935,7 +1029,6 @@
                         position: relative;
                         width: 100%;
                         text-align: center;
-                        // border-left: solid 1px $primary-tint;
                         &:hover,
                         &:focus-within {
                             background-color: $primary-dark;
@@ -943,10 +1036,25 @@
                                 display: block;
                                 flex-direction: column;
                                 transition: 0.5s;
+                                a {
+                                    line-height: 1.5;
+                                    &:hover {
+                                        background-color: $primary-default;
+                                    }
+                                }
                             }
                         }
                         a {
+                            display: block;
                             width: 100%;
+                            font-size: $size-h5;
+                            font-weight: bold;
+                            padding: $m-XS $m-S;
+                            color: white;
+
+                            @include web-S {
+                                padding: $m-XS $p-XXS;
+                            }
                             i.before {
                                 margin-right: $m-XXS;
                                 // color: $primary-dark;
@@ -955,14 +1063,9 @@
                             //     background-color: $primary-dark;
                             // }
                         }
-                        h5 {
-                            font-size: $size-h5;
-                            padding: $m-XS $m-S;
-                            color: white;
-                            @include web-S {
-                                padding: $m-XS $p-XXS;
-                            }
-                        }
+                        // h5 {
+
+                        // }
                         .nav-function {
                             display: flex;
                             align-items: center;
@@ -1078,27 +1181,15 @@
                     @include pad() {
                         line-height: 50px;
                     }
-                    .nav-link {
-                        font-size: 1.375rem;
-                        padding: 0;
-                        @include mobile-L() {
-                            font-size: $size-h5;
-                        }
-                        @include mobile-XS() {
-                            font-size: $size-p;
-                        }
-                    }
+
                     li {
-                        font-size: 1.375rem;
-                        font-weight: bold;
-                        @include mobile-L() {
-                            font-size: $size-h5;
-                        }
-                        @include mobile-XS() {
-                            font-size: $size-p;
-                        }
-                        a {
-                            line-height: 3;
+                        line-height: 3;
+                        .nav-link {
+                            font-size: $size-h4;
+                            padding: 0;
+                            @include mobile-XS() {
+                                font-size: $size-p;
+                            }
                         }
                     }
                     .nav-item.dropdown {
@@ -1109,16 +1200,16 @@
                             box-shadow: none !important;
                             background-color: rgba($color: $primary-dark, $alpha: 1);
                             .dropdown-item {
-                                h3 {
-                                    line-height: inherit;
-                                    color: white;
-                                    @include mobile-L() {
-                                        font-size: $size-h5;
-                                    }
-                                    @include mobile-XS() {
-                                        font-size: $size-p;
-                                    }
+                                // a {
+                                display: block;
+                                font-weight: bold;
+                                line-height: inherit;
+                                color: white;
+                                font-size: $size-h4;
+                                @include mobile-XS() {
+                                    font-size: $size-p;
                                 }
+                                // }
                             }
                         }
                         .nav-link.dropdown-toggle {
@@ -1128,9 +1219,6 @@
                             }
                         }
                     }
-                }
-                h5 {
-                    color: white;
                 }
                 a {
                     color: white;
@@ -1487,11 +1575,39 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
                 select {
-                    width: 32%;
+                    // width: 32%;
+                    width: 49%;
                     margin-bottom: $m-XS;
                     @include mobile-L() {
                         width: 100%;
                     }
+                }
+            }
+            .file-upload {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                margin-top: $m-XXS;
+                @include mobile-L() {
+                    flex-wrap: wrap;
+                }
+                input[type="button"] {
+                    width: auto;
+                    color: white;
+                    background-color: $primary-default;
+                    margin: 0;
+                    margin-right: $m-XS;
+                    @include mobile-L() {
+                        width: 100%;
+                        margin-bottom: $m-XS;
+                        margin-right: 0;
+                    }
+                }
+                span,
+                p {
+                    padding: 0;
+                    margin: 0;
+                    color: $text;
                 }
             }
             .performer {
@@ -1769,18 +1885,18 @@
                 display: flex;
                 align-items: center;
                 @include mobile-L() {
-                    justify-content: space-between;
+                    flex-wrap: wrap;
                 }
                 .code {
                     width: 40%;
                     margin-right: 10px;
                     margin-bottom: 0;
                     @include mobile-L() {
-                        width: 50%;
-                        justify-content: space-between;
+                        width: 100%;
+                        margin-bottom: $m-XS;
                     }
                     @include mobile-XS() {
-                        margin-right: 0;
+                        // margin-right: 0;
                     }
                 }
                 .RP {
@@ -1793,17 +1909,39 @@
                         height: 30px;
                     }
                     @include mobile-L() {
-                        width: 30%;
-                        height: unset;
-                    }
-                    @include mobile-XS() {
-                        margin-left: $m-XS;
+                        height: 35px;
                     }
                 }
                 .reform {
-                    height: 20px;
-                    width: 20px;
-                    margin: 0;
+                    margin-right: $m-XS;
+                    height: auto;
+                    color: $primary-dark;
+                    font-weight: bold;
+                    padding: $m-XXS $p-XXS;
+                    background-color: $primary-table;
+                    @include mobile-L() {
+                        height: 40px;
+                        padding: $m-XXS $m-XS;
+                    }
+                    i {
+                        margin: 0;
+                        font-size: $size-h5;
+                    }
+                }
+                .btnPlayAudio {
+                    height: auto;
+                    color: $primary-dark;
+                    font-weight: bold;
+                    padding: $m-XXS $p-XXS;
+                    background-color: $primary-table;
+                    @include mobile-L() {
+                        height: 40px;
+                        padding: $m-XXS $m-XS;
+                    }
+                    i {
+                        margin: 0;
+                        font-size: $size-h5;
+                    }
                 }
             }
         }

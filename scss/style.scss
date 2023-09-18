@@ -52,6 +52,52 @@ body {
         .brief-p {
             margin-bottom: $m-S;
         }
+        //網站導覽
+        .content-webmap {
+            .container {
+                .list-gp {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    .text-gp {
+                        width: 23%;
+                        @include mobile-L() {
+                            width: 100%;
+                            margin-bottom: $p-XS;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                        ul {
+                            padding: $p-XS;
+                            padding-top: $p-XXS;
+                            list-style: none;
+                            font-size: $size-p;
+                            margin: 0;
+                            margin-bottom: $m-S;
+                            line-height: 2;
+                            @include mobile-L() {
+                                margin-bottom: 0;
+                                padding-bottom: 0;
+                            }
+                            a {
+                                color: $primary-default;
+                            }
+                        }
+                        .title {
+                            display: block;
+                            font-weight: bold;
+                            font-size: $size-h4;
+                            color: $primary-default;
+                            background-color: $primary-table;
+                            padding: $p-XXS $p-XS;
+                            margin: 0;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+            }
+        }
         // 一般
         .content-normal {
             ul:not(.nav, .breadcrumb) {
@@ -459,7 +505,6 @@ body {
                             padding: $p-S;
                             background-color: rgba($color: $ticket, $alpha: 0.075);
                         }
-
                     }
                     // button
                     a {
@@ -475,7 +520,7 @@ body {
                             font-weight: bold;
                             cursor: pointer;
                             margin-top: $m-XS;
-                            background-color: $primary-tint;
+                            background-color: $primary-default;
                             color: white;
                             @include mobile-L {
                                 width: 100%;
@@ -497,7 +542,6 @@ body {
                                 margin-right: $p-XXS;
                             }
                         }
-
                     }
                 }
                 .check-curriculum {

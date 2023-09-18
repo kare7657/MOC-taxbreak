@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="scss/bootstrap.4.2.css">
-    <!-- swiper輪播 -->
-    <link rel="stylesheet" href="scss/swiper-bundle.min.css">
     <!-- jQuery 日期選擇器-->
     <link rel="stylesheet" href="scss/jquery-ui-1.10.0.custom.min.css" />
     <!-- timepicker 時間選擇器-->
     <link rel="stylesheet" href="scss/timepicker.css" />
+    <!-- select2 -->
+    <link rel="stylesheet" href="scss/select2.min.css" />
     <!-- our css -->
     <link rel="stylesheet" href="scss/style.css">
 
@@ -25,6 +25,7 @@
     <header id="header"></header>
 
     <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
         <!-- breadcrumb -->
         <div class="breadcrumb">
             <div class="container">
@@ -39,7 +40,6 @@
         </div>
         <!-- 我要申請 -->
         <section class="content-signup">
-            <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
             <h2>申請減免稅案件</h2>
             <div class="w-100 text-center">
                 <div class="way">
@@ -106,7 +106,12 @@
                             <div class="place-body">
                                 <div class="form-gp">
                                     <label for="activity_area">活動區域<span class="notice">*</span></label>
-                                    <select name="type" id="activity_area">
+                                    <!-- <select name="type" id="activity_area">
+                                        <option value="list1">項目1</option>
+                                        <option value="list2">項目2</option>
+                                        <option value="list3">項目3</option>
+                                    </select> -->
+                                    <select class="select2" id="activity_area" disabled>
                                         <option value="list1">項目1</option>
                                         <option value="list2">項目2</option>
                                         <option value="list3">項目3</option>
@@ -114,7 +119,12 @@
                                 </div>
                                 <div class="form-gp">
                                     <label for="activity_place">活動地點<span class="notice">*</span></label>
-                                    <select name="type" id="activity_place">
+                                    <!-- <select name="type" id="activity_place">
+                                        <option value="list1">項目1</option>
+                                        <option value="list2">項目2</option>
+                                        <option value="list3">項目3</option>
+                                    </select> -->
+                                    <select class="select2" id="activity_place" disabled>
                                         <option value="list1">項目1</option>
                                         <option value="list2">項目2</option>
                                         <option value="list3">項目3</option>
@@ -799,7 +809,8 @@
     <script src="js/timepicker.min.js"></script>
     <!-- InputMask 限制輸入格式-->
     <script src="js/moment.min.js"></script>
-    <script src="js/jquery.inputmask.bundle.js"></script> <!-- select2 -->
+    <script src="js/jquery.inputmask.bundle.js"></script>
+    <!-- select2 -->
     <script src="js/select2.full.min.js"></script>
 
     <!-- 引入html header&footer -->
@@ -808,6 +819,15 @@
             $("#header").load('header.html');
             $("#footer").load("footer.html");
         });
+    </script>
+
+    <!-- select2 -->
+    <script>
+        $(function () {
+            //Initialize Elements
+            $('.select2').select2()
+
+        })
     </script>
 
     <!-- JQ datepicker -->
@@ -935,6 +955,7 @@
             $('.bs-timepicker').timepicker();
         });
     </script>
+
 </body>
 
 </html>

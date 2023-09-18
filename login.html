@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="scss/bootstrap.4.2.css">
-    <!-- swiper輪播 -->
-    <link rel="stylesheet" href="scss/swiper-bundle.min.css">
     <!-- our css -->
     <link rel="stylesheet" href="scss/style.css">
 
@@ -21,6 +19,7 @@
     <header id="header"></header>
 
     <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
         <!-- breadcrumb -->
         <div class="breadcrumb">
             <div class="container">
@@ -34,7 +33,6 @@
         <!-- 登入 -->
         <section class="content-login">
             <div class="container">
-                <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
                 <h2>登入</h2>
                 <form>
                     <div class="form-gp">
@@ -51,11 +49,12 @@
                     </div>
                     <!-- 圖片驗證碼 -->
                     <div class="code-gp">
-                        <label for="code">驗證碼</label>
+                        <label for="code">驗證碼<span class="notice">*</span></label>
                         <div class="text-gp">
                             <input class="code" type="text" name="code" id="code">
                             <img class="RP" src="img/RandomPic_ForLogin.jpg" alt="圖片驗證碼">
-                            <a href=""><img class="reform" src="img/redo.svg" alt="重整"></a>
+                            <button name="" id="" class="reform" onclick="" title="重新整理" type="button"><i class="fas fa-sync-alt"></i></button>
+                            <button name="audio" id="btn_Voice" class="btnPlayAudio" onclick="PlayVoice();" title="播放驗證碼語音" type="button"><i class="fas fa-volume-up"></i></button>
                         </div>
                     </div>
                     <div class="form-gp">
@@ -100,11 +99,12 @@
                                 </div>
                             </div>
                             <div class="code-gp">
-                                <label for="code">驗證碼</label>
+                                <label for="code">驗證碼<span class="notice">*</span></label>
                                 <div class="text-gp">
                                     <input class="code" type="text" name="code" id="code">
                                     <img class="RP" src="img/RandomPic_ForLogin.jpg" alt="圖片驗證碼">
-                                    <a href=""><img class="reform" src="img/redo.svg" alt="重整"></a>
+                                    <button name="" id="" class="reform" onclick="" title="重新整理" type="button"><i class="fas fa-sync-alt"></i></button>
+                                    <button name="audio" id="btn_Voice" class="btnPlayAudio" onclick="PlayVoice();" title="播放驗證碼語音" type="button"><i class="fas fa-volume-up"></i></button>
                                 </div>
                             </div>
 
