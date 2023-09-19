@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員專區</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                    <li>></li>
+                    <li><span>會員專區</span></li>
+                </ul>
+            </div>
+        </div>
+        <section class="content-member">
+            <div class="container">
+                <h2>會員專區</h2>
+                <div class="member-gp">
+                    <div class="block half">
+                        <a href="tax-break.html" title="申請減免稅">
+                            <h3>申請減免稅</h3>
+                        </a>
+                        <a href="separate-taxation.html" title="申請分離課稅">
+                            <h3>申請分離課稅</h3>
+                        </a>
+                    </div>
+                    <a href="member-person.html" title="個人資料" class="block">
+                        <img src="img/icon-person.png" alt="個人資料圖標">
+                        <h3>個人資料</h3>
+                    </a>
+                    <a href="member-unit.html" title="單位資料" class="block">
+                        <img src="img/icon-unit.png" alt="單位資料圖標">
+                        <h3>單位資料</h3>
+                    </a>
+                    <a href="member-account.html" title="帳號管理" class="block">
+                        <img src="img/icon-account.png" alt="帳號管理圖標">
+                        <h3>帳號管理</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- modal 提示-->
+        <div class="modal fade modal-template " id="modal-notify" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-placeLabel">表演注意事項</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <div class="text-gp">
+                                    <p class="notice"><i class="fas fa-exclamation-circle"></i>
+                                        申請案中若有國外人士來臺演出</p>
+                                    <p>應檢附勞動部已核准文件，或已向勞動部提出申請之文件</p>
+                                </div>
+                                <div class="text-gp">
+                                    <p class="notice"><i class="fas fa-exclamation-circle"></i>
+                                        申請案中若有大陸地區人士來臺演出</p>
+                                    <p>應檢附內政部已核准文件，或已向內政部提出申請之文件</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="go" id="go2">確認</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- modal 提示-->
+        <div class="modal fade modal-template " id="modal-notify2" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel2" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-placeLabel2">展覽注意事項</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <div class="text-gp">
+                                    <p class="notice"><i class="fas fa-exclamation-circle"></i>
+                                        申請案中若有大陸地區古物來臺展覽</p>
+                                    <p>應檢附本部已核准文件，或已向本部提出申請之文件</p>
+                                </div>
+                                <div class="text-gp">
+                                    <p class="notice"><i class="fas fa-exclamation-circle"></i>
+                                        申請案中若有國外地區中華古物來臺展覽</p>
+                                    <p>應檢附目的事業主管機關已核准文件，或已向該機關提出申請之文件</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="go" id="go2">確認</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+</body>
+
+</html>

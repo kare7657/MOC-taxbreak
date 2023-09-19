@@ -136,48 +136,6 @@
         });
     </script>
 
-    <!-- 最新消息list -->
-    <script>
-        var btn1 = document.querySelector(".btn1")
-        var btn2 = document.querySelector(".btn2")
-        var btn3 = document.querySelector(".btn3")
-        var btn4 = document.querySelector(".btn4")
-        var list1 = document.querySelector(".list1")
-        var list2 = document.querySelector(".list2")
-        var list3 = document.querySelector(".list3")
-        var list4 = document.querySelector(".list4")
-        function clear_active() {
-            btn1.classList.remove("active-btn")
-            btn2.classList.remove("active-btn")
-            btn3.classList.remove("active-btn")
-            btn4.classList.remove("active-btn")
-            list1.classList.remove("active-list")
-            list2.classList.remove("active-list")
-            list3.classList.remove("active-list")
-            list4.classList.remove("active-list")
-        }
-        btn1.onclick = function () {
-            clear_active()
-            btn1.classList.add("active-btn")
-            list1.classList.add("active-list")
-        }
-        btn2.onclick = function () {
-            clear_active()
-            btn2.classList.add("active-btn")
-            list2.classList.add("active-list")
-        }
-        btn3.onclick = function () {
-            clear_active()
-            btn3.classList.add("active-btn")
-            list3.classList.add("active-list")
-        }
-        btn4.onclick = function () {
-            clear_active()
-            btn4.classList.add("active-btn")
-            list4.classList.add("active-list")
-        }
-    </script>
-
 </body>
 
 </html>

@@ -807,13 +807,22 @@
                             margin-bottom: 0;
                             line-height: 2;
                         }
+                        .text-gp {
+                            margin-bottom: $m-XS;
+                            i {
+                                margin-right: $p-XXS;
+                            }
+                            .notice {
+                                font-size: $size-h5;
+                            }
+                        }
                     }
                 }
                 .modal-footer {
                     border-top: none;
                     margin: $m-S 0;
                     padding: 0;
-                    padding: 0 $p-XL;
+                    padding: 0 $p-S;
                     @include mobile-L() {
                         padding: 0 $p-S;
                         display: flex;
@@ -1184,11 +1193,11 @@
 
                     li {
                         line-height: 3;
-                        .nav-link {
+                        a,.nav-link {
                             font-size: $size-h4;
                             padding: 0;
                             @include mobile-XS() {
-                                font-size: $size-p;
+                                font-size: $size-h5;
                             }
                         }
                     }
@@ -1200,16 +1209,17 @@
                             box-shadow: none !important;
                             background-color: rgba($color: $primary-dark, $alpha: 1);
                             .dropdown-item {
-                                // a {
                                 display: block;
                                 font-weight: bold;
                                 line-height: inherit;
                                 color: white;
                                 font-size: $size-h4;
-                                @include mobile-XS() {
-                                    font-size: $size-p;
+                                &:focus {
+                                    background-color: inherit;
                                 }
-                                // }
+                                @include mobile-XS() {
+                                    font-size: $size-h5;
+                                }
                             }
                         }
                         .nav-link.dropdown-toggle {
@@ -1310,7 +1320,9 @@
                     }
                 }
                 .left {
-                    width: 60%;
+                    width: 25%;
+                    display: flex;
+                    flex-direction: column;
                     @include web-S() {
                         width: 50%;
                     }
@@ -1335,7 +1347,7 @@
                     }
                 }
                 .right {
-                    width: 40%;
+                    width: 65%;
                     display: flex;
                     flex-direction: column;
                     @include web-S() {
@@ -1376,6 +1388,30 @@
                         line-height: 2;
                         @include mobile-L() {
                             width: 100%;
+                        }
+                    }
+                    .text-gp {
+                        margin-bottom: $p-XXS;
+                        .underline {
+                            color: white;
+                            font-size: $size-p;
+                            font-weight: bold;
+                            text-align: right;
+                            text-decoration: underline !important;
+                            margin-right: $m-S;
+                        }
+                    }
+                }
+                .link {
+                    width: 10%;
+                    .accessibility {
+                        img {
+                            width: 113px;
+                            max-height: 40px;
+                            object-fit: contain;
+                            @include mobile-L(){
+                                margin-top: $m-XS;
+                            }
                         }
                     }
                 }
