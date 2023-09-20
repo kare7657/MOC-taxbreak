@@ -195,11 +195,17 @@
         margin: auto;
     }
     //清除預設按鈕樣式
-    input[type="button"],
-    select {
+    input[type="button"] {
         -webkit-appearance: none; /* Safari & Chrome */
         -moz-appearance: none; /* FireFox */
         appearance: none;
+    }
+    //清除search按鈕樣式
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration {
+        display: none;
     }
     // 隱藏number箭頭
     /* Chrome, Safari, Edge, Opera */
@@ -349,8 +355,8 @@
         height: 40px;
         border-radius: 5px;
         border: solid 1px $complementary;
-        background: url("../img/chevron-down-solid.svg") no-repeat scroll transparent;
-        background-position: 97% center;
+        // background: url("../img/chevron-down-solid.svg") no-repeat scroll transparent;
+        // background-position: 97% center;
         background-color: white;
         color: $text;
         padding: 0 $p-XXS;
@@ -842,8 +848,8 @@
     //頁碼
     .pagination {
         display: flex;
-        justify-content: flex-end;
-        margin-top: $p-M;
+        justify-content: center;
+        margin-top: $m-XS;
         white-space: nowrap;
         @include mobile-L() {
             justify-content: center;
@@ -1193,7 +1199,8 @@
 
                     li {
                         line-height: 3;
-                        a,.nav-link {
+                        a,
+                        .nav-link {
                             font-size: $size-h4;
                             padding: 0;
                             @include mobile-XS() {
@@ -1409,7 +1416,7 @@
                             width: 113px;
                             max-height: 40px;
                             object-fit: contain;
-                            @include mobile-L(){
+                            @include mobile-L() {
                                 margin-top: $m-XS;
                             }
                         }
@@ -1511,7 +1518,10 @@
 @mixin searchbar() {
     .searchbar {
         display: flex;
-        margin-bottom: $m-M;
+        margin-bottom: $m-S;
+        margin-top: $m-XS;
+        width: 100%;
+        position: relative;
         @include mobile-L() {
             flex-direction: column;
             flex-wrap: wrap;
@@ -1520,36 +1530,62 @@
             min-width: 150px;
             width: initial;
             margin-right: $m-S;
+            @include pad {
+                min-width: unset;
+                width: 20%;
+            }
             @include mobile-L {
                 width: 100%;
                 margin-bottom: $m-S;
             }
         }
-        input[type="search"] {
-            width: 150px;
-            padding: 2px 8px;
-            border-radius: 4px;
-            border: solid 1px $complementary;
-            background: url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 95% center;
-            @include mobile-L() {
-                width: 100%;
-                padding: 5px 8px;
+        .search-icon {
+            position: relative;
+            @include pad {
+                width: 20%;
             }
-            &:focus {
-                width: 180px;
-                transition: 0.5s;
+            input[type="search"] {
+                min-width: 150px;
+                width: initial;
+                padding: 2px 8px;
+                border-radius: 4px;
+                border: solid 1px $complementary;
+                // background: url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 95% center;
+                @include pad {
+                    min-width: unset;
+                    // width: 20%;
+                }
                 @include mobile-L() {
                     width: 100%;
+                    padding: 5px 8px;
+                }
+                &:focus {
+                    width: 180px;
+                    transition: 0.5s;
+                    @include mobile-L() {
+                        width: 100%;
+                    }
                 }
             }
-        }
-        button {
-            margin-left: $m-S;
-            @include mobile-L() {
-                width: 100%;
-                margin-top: $m-XS;
+            &::after {
+                font-family: "Font Awesome 5 Free";
+                content: "\f002";
+                font-weight: bold;
+                width: 12px;
+                line-height: 40px;
+                color: black;
+                position: absolute;
+                right: 12px;
+                color: $complementary;
             }
         }
+        // button {
+        //     margin-left: $m-S;
+        //     @include mobile-L() {
+        //         width: 100%;
+        //         margin-top: $m-XS;
+        //     }
+        // }
     }
 }
 
@@ -1903,9 +1939,8 @@
             width: 100%;
             padding: 0;
             display: flex;
-            margin-bottom: $m-XS;
+            margin-bottom: $m-S;
             flex-wrap: wrap;
-            margin-bottom: $p-S;
             @include web-S {
                 justify-content: start;
             }
@@ -2145,7 +2180,7 @@
         td {
             padding: $p-XXS $p-XXS;
             text-align: center;
-            border: solid 1px rgba($color: $primary-tint, $alpha: 0.4) !important;
+            border: solid 1px rgba($color: $primary-tint, $alpha: 0.4);
             @include mobile-L() {
                 border: 1px solid $primary-tint;
             }
@@ -2243,8 +2278,12 @@
         }
     }
     .mb-separate {
+        table,
+        th,
+        td {
+            border: none;
+        }
         thead {
-            // border: 1px solid $secondary;
             @include mobile-L {
                 display: none;
             }
@@ -2260,7 +2299,9 @@
                 }
             }
             th {
-                background-color: rgba($color: $secondary, $alpha: 0.3);
+                // background-color: rgba($color: $primary-default, $alpha: 0.3);
+                background-color: rgba($color: $primary-tint, $alpha: 1);
+                color: white;
                 text-align: center;
             }
             td {
@@ -2268,6 +2309,7 @@
                     display: block;
                     flex-wrap: wrap;
                     text-align: left;
+                    border: solid 1px rgba($color: $primary-tint, $alpha: 0.4);
                     &::before {
                         width: 100%;
                         display: block;
@@ -2279,7 +2321,7 @@
                         margin-bottom: $m-XXS;
                     }
                     &:nth-child(odd) {
-                        background-color: rgba($color: $secondary, $alpha: 0.1);
+                        background-color: rgba($color: $primary-tint, $alpha: 0.1);
                     }
                 }
             }

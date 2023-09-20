@@ -463,7 +463,6 @@ body {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    // padding: 0 $p-XXS;
                     .btn-step {
                         display: inline-block;
                         font-size: $size-h5;
@@ -478,6 +477,20 @@ body {
                         }
                         &.active {
                             border: solid 1px $primary-default;
+                        }
+                    }
+                }
+                .view-gp {
+                    width: 100%;
+                    max-width: 600px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    button {
+                        margin: 0 $p-XXS;
+                        @include mobile-L {
+                            width: 40%;
+                            justify-content: space-between;
                         }
                     }
                 }
@@ -637,8 +650,12 @@ body {
                     flex-wrap: wrap;
                     justify-content: space-between;
                     margin-top: $m-S;
+                    margin-bottom: $m-M;
                     a {
                         display: inline-block;
+                    }
+                    h3 {
+                        margin-bottom: 0;
                     }
                     .block {
                         width: 23%;
@@ -656,8 +673,8 @@ body {
                             padding: $p-XS;
                         }
                         @include pad {
-                            width: 48%;
-                            margin-bottom: $m-S;
+                            // width: 48%;
+                            margin-bottom: $m-XS;
                         }
                         @include mobile-L() {
                             width: 100%;
@@ -672,15 +689,15 @@ body {
                             margin-top: $m-XS;
                             margin-bottom: $p-XS;
                             @include pad {
-                                width: 70px;
-                                height: 70px;
+                                width: 50px;
+                                height: 50px;
                             }
                             @include mobile-L {
                                 width: 60px;
                                 height: 60px;
                             }
                         }
-                        // }
+
                         &.half {
                             border: none;
                             box-shadow: none;
@@ -698,8 +715,10 @@ body {
                                 box-shadow: 5px 5px 10px $primary-table;
                                 border-radius: 12px;
                                 width: 100%;
-                                // padding: $p-XXS $p-XXS;
                                 height: 44%;
+                                @include mobile-L {
+                                    height: initial;
+                                }
                             }
                             img {
                                 width: 30px;
@@ -707,13 +726,53 @@ body {
                                 margin-right: $p-XXS;
                             }
                         }
+                        h3 {
+                            margin-bottom: 0;
+                            @include pad {
+                                font-size: $size-h5;
+                            }
+                        }
                     }
                 }
 
-                // .totalhours {
-                //     color: $notice;
-                //     margin-top: $p-XS;
-                // }
+                .totalnum {
+                    margin-bottom: $m-XXS;
+                }
+                .case-list {
+                    table {
+                        margin-bottom: $m-XS;
+                        tbody {
+                            tr {
+                                td {
+                                    vertical-align: middle;
+                                    input[type="checkbox"] {
+                                        margin: 0;
+                                        margin-top: 4px;
+                                    }
+                                    .function {
+                                        padding-left: $p-XXS;
+                                        @include pad {
+                                            width: auto ;
+                                        }
+                                        a.link {
+                                            margin-right: $m-XS !important;
+                                            &:last-child {
+                                                margin-right: 0 !important;
+                                            }
+                                            span {
+                                                font-weight: bold;
+                                            }
+                                            i {
+                                                width: 15px;
+                                                font-size: $size-caption;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
