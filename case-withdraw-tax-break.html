@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>瀏覽減免稅案件-表演</title>
+    <title>撤回減免稅案件-表演</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
@@ -34,28 +34,46 @@
                     <li>></li>
                     <li><a href="member.html">會員專區</a></li>
                     <li>></li>
-                    <li><span>瀏覽減免稅案件</span></li>
+                    <li><span>撤回減免稅案件</span></li>
                 </ul>
             </div>
         </div>
         <!-- 瀏覽減免稅案件 -->
         <section class="content-signup">
-            <h2>瀏覽減免稅案件</h2>
+            <h2>撤回減免稅案件</h2>
             <div class="w-100 text-center">
                 <div class="way">
                     <img src="img/icon-tax-break.png" alt="減免稅-表演圖標">
                     <h3>表演</h3>
                 </div>
-
-            </div>
-            <div class="step">
-                <div class="view-gp">
-                    <button type="button"  class="button-outline"><i class="fas fa-print"></i>列印</button>
-                    <button type="button"  class="button-outline"><i class="fas fa-file-export"></i>匯出</button>
-                </div>
             </div>
             <div class="container">
                 <form class="view">
+                    <fieldset>
+                        <div class="type-title">
+                            <h3>申請撤回</h3>
+                        </div>
+                        <div class="form-gp">
+                            <h5>活動名稱</h5>
+                            <p>test</p>
+                        </div>
+                        <div class="form-gp">
+                            <h5>活動時間</h5>
+                            <p>112/09/29 ~ 112/09/29</p>
+                        </div>
+                        <div class="form-gp">
+                            <h5>活動地點</h5>
+                            <p>臺北市 Sounds Good 好聲藝集</p>
+                        </div>
+                        <div class="form-gp">
+                            <label for="withdraw_reson">案件撤回原因<span class="notice">*</span></label>
+                            <textarea name="history" id="withdraw_reson" rows="6" placeholder="test"></textarea>
+                        </div>
+                    </fieldset>
+                    <div class="btn-tool">
+                        <input type="button" value="取消" class="outline" onclick="location.href='member.html'">
+                        <input type="submit" value="送出申請">
+                    </div>
                     <fieldset disabled>
                         <div class="type-title">
                             <h3>基本資料</h3>
@@ -252,9 +270,6 @@
                         </div>
                     </fieldset>
 
-                    <div class="btn-tool">
-                        <input type="button" value="回上一頁" class="outline" onclick="location.href='member.html'">
-                    </div>
                 </form>
             </div>
         </section>

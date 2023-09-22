@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>單位管理員變更</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                    <li>></li>
+                    <li><a href="member.html">會員專區</a></li>
+                    <li>></li>
+                    <li><a href="member-unit.html">單位資料</a></li>
+                    <li>></li>
+                    <li><span>單位管理員變更</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 單位管理員變更 -->
+        <section class="content-signup">
+            <h2>單位管理員變更</h2>
+            <div class="container">
+                <form>
+                    <fieldset>
+                        <h3>單位管理者資料</h3>
+                        <div class="form-gp">
+                            <label for="admin_name">單位管理者姓名<span class="notice">*</span></label>
+                            <input type="text" name="admin_name" id="admin_name">
+                        </div>
+                        <div class="form-gp">
+                            <label for="admin_ID">單位管理者身分證字號<span class="notice">*</span></label>
+                            <input type="text" name="admin_ID" id="admin_ID">
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_tel">申請單位電話<span class="notice">*</span></label>
+                            <input type="number" name="unit_tel" id="unit_tel">
+                        </div>
+                        <div class="form-gp">
+                            <label for="admin_email">單位管理者Email<span class="notice">*</span></label>
+                            <input type="email" name="admin_email" id="admin_email" placeholder="simple@com.tw">
+                        </div>
+                        <div class="form-gp">
+                            <label for="admin_tel">單位管理者聯絡電話<span class="notice">*</span></label>
+                            <input type="number" name="admin_tel" id="admin_tel">
+                        </div>
+                        <div class="form-gp">
+                            <label for="admin_mobile">單位管理者行動電話</label>
+                            <input type="number" name="admin_mobile" id="admin_mobile">
+                        </div>
+                    </fieldset>
+
+                    <div class="btn-tool">
+                        <input type="button" value="取消" class="outline" onclick="location.href='member-unit.html'">
+                        <input type="submit" value="確認" class="submit">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+</body>
+
+</html>

@@ -420,8 +420,7 @@ body {
                 border-radius: 12px;
                 text-align: center;
                 padding: $p-S $p-XL;
-                margin-top: $m-XS;
-                margin-bottom: $m-M;
+                margin: $m-XS $m-XS $m-M $m-XS;
                 background-color: white;
                 box-shadow: 5px 5px 10px $primary-table;
                 @include mobile-L() {
@@ -486,11 +485,28 @@ body {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    @include mobile-L {
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        padding: 0 $p-S;
+                        align-items: stretch;
+                    }
                     button {
                         margin: 0 $p-XXS;
+                        height: initial;
+                        padding: 0 $m-XS;
+                        min-height: 40px;
                         @include mobile-L {
-                            width: 40%;
+                            width: 48%;
                             justify-content: space-between;
+                            margin: 0;
+                            margin-bottom: $m-XS;
+                            height: initial;
+                            padding: $p-XXS $p-XXS;
+                            &:last-child,
+                            &:nth-last-child(2) {
+                                margin-bottom: 0;
+                            }
                         }
                     }
                 }
@@ -651,6 +667,9 @@ body {
                     justify-content: space-between;
                     margin-top: $m-S;
                     margin-bottom: $m-M;
+                    @include pad {
+                        margin-bottom: $m-S;
+                    }
                     a {
                         display: inline-block;
                     }
@@ -673,14 +692,11 @@ body {
                             padding: $p-XS;
                         }
                         @include pad {
-                            // width: 48%;
                             margin-bottom: $m-XS;
+                            padding: $p-XS;
                         }
                         @include mobile-L() {
-                            width: 100%;
-                            &:last-child {
-                                margin-bottom: 0;
-                            }
+                            width: 48%;
                         }
                         img {
                             width: 60px;
@@ -693,8 +709,12 @@ body {
                                 height: 50px;
                             }
                             @include mobile-L {
-                                width: 60px;
-                                height: 60px;
+                                width: 45px;
+                                height: 45px;
+                            }
+                            @include mobile-XS {
+                                width: 40px;
+                                height: 40px;
                             }
                         }
 
@@ -717,7 +737,7 @@ body {
                                 width: 100%;
                                 height: 44%;
                                 @include mobile-L {
-                                    height: initial;
+                                    height: 46%;
                                 }
                             }
                             img {
@@ -737,6 +757,7 @@ body {
 
                 .totalnum {
                     margin-bottom: $m-XXS;
+                    color: $primary-default;
                 }
                 .case-list {
                     table {
@@ -752,7 +773,7 @@ body {
                                     .function {
                                         padding-left: $p-XXS;
                                         @include pad {
-                                            width: auto ;
+                                            width: auto;
                                         }
                                         a.link {
                                             margin-right: $m-XS !important;
@@ -769,6 +790,42 @@ body {
                                         }
                                     }
                                 }
+                            }
+                        }
+                    }
+                    .bottom {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: $m-S;
+                        @include mobile-L {
+                            flex-wrap: wrap;
+                        }
+                        .btn-gp {
+                            @include mobile-L {
+                                width: 100%;
+                            }
+
+                            button {
+                                font-size: $size-p;
+                                height: 33px;
+                                padding: 0 $m-XS;
+                                margin-right: $p-XXS;
+                                @include mobile-L {
+                                    width: 100%;
+                                    margin-right: 0;
+                                    font-size: $size-h5;
+                                    height: 40px;
+                                    margin-bottom: $p-XS;
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+                        .pagination {
+                            margin-top: 0;
+                            @include mobile-L {
+                                margin-top: $m-S;
                             }
                         }
                     }

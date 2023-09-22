@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人資料</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                    <li>></li>
+                    <li><a href="member.html">會員專區</a></li>
+                    <li>></li>
+                    <li><span>個人資料</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 個人資料 -->
+        <section class="content-signup">
+            <h2>個人資料</h2>
+            <div class="container">
+                <form>
+                    <fieldset disabled>
+                        <h3>我的資料</h3>
+                        <div class="form-gp">
+                            <label for="admin_name">案件管理員姓名<span class="notice">*</span></label>
+                            <input type="text" name="admin_name" id="admin_name">
+                        </div>
+                        <div class="form-gp">
+                            <label for="admin_ID">案件管理員身分證字號<span class="notice">*</span></label>
+                            <input type="text" name="admin_ID" id="admin_ID">
+                        </div>
+                        <div class="form-gp">
+                            <label for="admin_email">案件管理員信箱<span class="notice">*</span></label>
+                            <input type="email" name="admin_email" id="admin_email">
+                        </div>
+                    </fieldset>
+                    <div class="btn-tool">
+                        <input type="button" value="停用帳號" class="submit red">
+                        <input type="button" value="變更密碼" class="submit"
+                        onclick="location.href='member-person-password.html'">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+</body>
+
+</html>

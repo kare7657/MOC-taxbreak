@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>註冊</title>
+    <title>單位資料變更</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
@@ -26,44 +26,32 @@
                 <ul>
                     <li><a href="index.html"><i class="fas fa-home"></i></a></li>
                     <li>></li>
-                    <li><span>註冊</span></li>
+                    <li><a href="member.html">會員專區</a></li>
+                    <li>></li>
+                    <li><a href="member-unit.html">單位資料</a></li>
+                    <li>></li>
+                    <li><span>單位資料變更</span></li>
                 </ul>
             </div>
         </div>
-        <!-- 註冊 -->
+        <!-- 單位資料變更 -->
         <section class="content-signup">
+            <h2>單位資料變更</h2>
             <div class="container">
-                <h2>註冊</h2>
                 <form>
-                    <ul class="ps">
-                        <li>本系統將會對您提供的資訊進行審核，審核作業約需 3 個工作天</li>
-                        <li>此外，審核時間有可能會因為審核狀況而拉長</li>
-                        <li>我們將會以電子郵件告知您審核結果，請確認收件匣及垃圾信件資料夾</li>
-                    </ul>
                     <article>
-                        <h3>單位基本資料</h3>
+                        <h3>單位管理員資料</h3>
                         <div class="form-gp">
                             <label for="BAN">統一編號<span class="notice">*</span></label>
-                            <input type="number" name="BAN" id="BAN">
+                            <input type="number" name="BAN" id="BAN" placeholder="12345678" disabled>
                         </div>
-                        <!-- <div class="form-gp">
-                            <label for="password">密碼<span class="notice">*</span></label>
-                            <input type="password" name="password" id="password">
-                            <p>1.密碼需8至15字，且包含 英文字母大寫、英文字母小寫、數字、符號等四項中三項之組成，也不得與帳號相同；
-                            </p>
-                            <p>2.密碼有區分大小寫，不可輸入單引號、雙引號以及空白。</p>
-                        </div>
-                        <div class="form-gp">
-                            <label for="password-again">再次輸入密碼<span class="notice">*</span></label>
-                            <input type="password" name="password" id="password-again">
-                        </div> -->
                         <div class="form-gp">
                             <label for="unit_name">申請單位名稱<span class="notice">*</span></label>
-                            <input type="text" name="unit_name" id="unit_name">
+                            <input type="text" name="unit_name" id="unit_name" placeholder="123系統科技股份有限公司">
                         </div>
                         <div class="form-gp">
                             <label for="unit_RP">申請單位負責人姓名<span class="notice">*</span></label>
-                            <input type="text" name="unit_RP" id="unit_RP">
+                            <input type="text" name="unit_RP" id="unit_RP" placeholder="某某某">
                         </div>
                         <div class="form-gp">
                             <label for="unit_num">立案證號<span class="notice">*</span></label>
@@ -71,30 +59,30 @@
                         </div>
                         <div class="form-gp">
                             <label for="unit_type">申請單位類型<span class="notice">*</span></label>
-                            <select name="type" id="unit_type">
-                                <option value="list1">項目1</option>
+                            <select name="type" id="unit_type" disabled>
+                                <option value="list1">公司/商業</option>
                                 <option value="list2">項目2</option>
                                 <option value="list3">項目3</option>
                             </select>
                         </div>
                         <div class="form-gp">
                             <label for="unit_ID">申請單位負責人身分證字號<span class="notice">*</span></label>
-                            <input type="text" name="unit_ID" id="unit_ID">
+                            <input type="text" name="unit_ID" id="unit_ID" placeholder="A123456789">
                         </div>
                         <div class="form-gp">
                             <label for="unit_tel">申請單位電話<span class="notice">*</span></label>
-                            <input type="number" name="unit_tel" id="unit_tel">
+                            <input type="number" name="unit_tel" id="unit_tel" placeholder="12345678">
                         </div>
                         <div class="form-gp">
                             <label for="unit_registeredAddress_area4">申請單位立案地址<span class="notice">*</span></label>
                             <div class="address">
                                 <select name="type" id="unit_registeredAddress_area1">
-                                    <option value="list1">縣市</option>
+                                    <option value="list1">臺北市</option>
                                     <option value="list2">選單2</option>
                                     <option value="list3">選單3</option>
                                 </select>
                                 <select name="type" id="unit_registeredAddress_area2">
-                                    <option value="list1">區域</option>
+                                    <option value="list1">114 內湖區</option>
                                     <option value="list2">選單2</option>
                                     <option value="list3">選單3</option>
                                 </select>
@@ -104,7 +92,7 @@
                                     <option value="list3">選單3</option>
                                 </select> -->
                                 <input type="text" name="unit_registeredAddress_area4" id="unit_registeredAddress_area4"
-                                    placeholder="地址">
+                                    placeholder="內湖路A段B巷C號1F">
                             </div>
                         </div>
                         <div class="form-gp">
@@ -116,12 +104,12 @@
                             </div>
                             <div class="address">
                                 <select name="type" id="unit_mailingAddress_area1">
-                                    <option value="list1">縣市</option>
+                                    <option value="list1">臺北市</option>
                                     <option value="list2">選單2</option>
                                     <option value="list3">選單3</option>
                                 </select>
                                 <select name="type" id="unit_mailingAddress_area2">
-                                    <option value="list1">區域</option>
+                                    <option value="list1">114 內湖區</option>
                                     <option value="list2">選單2</option>
                                     <option value="list3">選單3</option>
                                 </select>
@@ -130,37 +118,8 @@
                                     <option value="list2">選單2</option>
                                     <option value="list3">選單3</option>
                                 </select> -->
-                                <input type="text" name="type" id="unit_mailingAddress_area4" placeholder="地址">
+                                <input type="text" name="type" id="unit_mailingAddress_area4" placeholder="內湖路A段B巷C號1F">
                             </div>
-                        </div>
-                    </article>
-                    <article>
-                        <h3>單位管理者資料</h3>
-                        <div class="form-gp">
-                            <label for="admin_name">單位管理者姓名<span class="notice">*</span></label>
-                            <input type="text" name="admin_name" id="admin_name">
-                        </div>
-                        <div class="form-gp">
-                            <label for="admin_ID">單位管理者身分證字號<span class="notice">*</span></label>
-                            <input type="text" name="admin_ID" id="admin_ID">
-                        </div>
-                        <div class="form-gp">
-                            <label for="admin_tel">申請單位電話<span class="notice">*</span></label>
-                            <input type="number" name="admin_tel" id="admin_tel">
-                        </div>
-                        <div class="form-gp">
-                            <label for="admin_email">單位管理者Email<span class="notice">*</span></label>
-                            <input type="email" name="admin_email" id="admin_email" placeholder="simple@com.tw">
-                            <!-- <p class="notice">1.註冊後，系統會發送一封驗證信至主要連絡人信箱；</p>
-                        <p class="notice">2.若註冊後過五分鐘還沒收到驗證信，請留意是否被誤認為垃圾郵件或與我們聯繫。</p> -->
-                        </div>
-                        <div class="form-gp">
-                            <label for="admin_tel2">單位管理者聯絡電話<span class="notice">*</span></label>
-                            <input type="number" name="admin_tel2" id="admin_tel2">
-                        </div>
-                        <div class="form-gp">
-                            <label for="admin_mobile">單位管理者行動電話<span class="notice">*</span></label>
-                            <input type="number" name="admin_mobile" id="admin_mobile">
                         </div>
                     </article>
                     <article>
@@ -171,6 +130,9 @@
                             <div class="file-upload">
                                 <input type="button" id="file" value="檔案上傳">
                                 <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <div class="btn-gp">
+                                <a href="" class="download-sample" download=""><i class="fas fa-paperclip"></i>檔案下載</a>
                             </div>
                             <ul class="ps">
                                 <li>公司與商業，需提供設立登記表或變更登記表、商業登記抄本等</li>
@@ -187,17 +149,26 @@
                                 <input type="button" id="file2" value="檔案上傳">
                                 <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
                             </div>
+                            <div class="btn-gp">
+                                <a href="" class="download-sample" download=""><i class="fas fa-paperclip"></i>檔案下載</a>
+                            </div>
                             <ul class="ps">
                                 <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
                                 <li>檔案請小於 20 MB</li>
                             </ul>
                         </div>
                         <div class="form-gp">
-                            <label for="file3">申請註冊與帳號證明書<span class="notice">*</span></label>
+                            <div class="label-withButton">
+                                <label for="file3">申請註冊與帳號證明書<span class="notice">*</span></label>
+                            </div>
                             <!-- <input type="file" id="file3"> -->
                             <div class="file-upload">
                                 <input type="button" id="file3" value="檔案上傳">
-                                <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                                <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <div class="btn-gp">
+                                <a href="" class="download-sample" download=""><i class="fas fa-paperclip"></i>檔案下載</a>
+                                <a href="" class="download-sample" download=""><i class="fas fa-paperclip"></i>範本下載</a>
                             </div>
                             <ul class="ps">
                                 <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
@@ -206,29 +177,9 @@
                         </div>
                     </article>
 
-                    <!-- 圖片驗證碼 -->
-                    <div class="code-gp">
-                        <label for="code">驗證碼<span class="notice">*</span></label>
-                        <div class="text-gp">
-                            <input class="code" type="text" name="code" id="code">
-                            <img class="RP" src="img/RandomPic_ForLogin.jpg" alt="圖片驗證碼">
-                            <button name="reform" id="reform" class="reform" onclick="" title="重新整理" type="button"><i
-                                    class="fas fa-sync-alt"></i></button>
-                            <button name="audio" id="btn_Voice" class="btnPlayAudio" onclick="PlayVoice();"
-                                title="播放驗證碼語音" type="button"><i class="fas fa-volume-up"></i></button>
-                        </div>
-                    </div>
-                    <div class="form-gp choice">
-                        <div class="item">
-                            <input type="checkbox" value="" id="private-agree">
-                            <label for="private-agree">
-                                <span>我同意</span> <a href="clause-signup.html" target="_blank">單位註冊服務條款</a><span
-                                    class="notice">*</span>
-                            </label>
-                        </div>
-                    </div>
                     <div class="btn-tool">
-                        <input type="submit" value="送出表單" class="submit">
+                        <input type="button" value="取消" class="outline"  onclick="location.href='member-unit.html'">
+                        <input type="submit" value="送出變更" class="submit">
                     </div>
                 </form>
             </div>

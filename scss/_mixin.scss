@@ -46,10 +46,10 @@
             padding-top: $p-XS;
         }
         @include pad() {
-            width: 80%;
+            width: 90%;
         }
         @include mobile-L() {
-            width: 90%;
+            // width: 90%;
             padding-top: $p-XS;
         }
     }
@@ -221,9 +221,6 @@
     // 表單群組
     fieldset {
         margin-bottom: $m-M;
-        // &:last-of-type {
-        //     margin-bottom: $m-S;
-        // }
         &[disabled] {
             input,
             select,
@@ -237,6 +234,9 @@
                 // border: solid 1px rgba($color: $primary-tint, $alpha: 0.5) !important;
                 opacity: 1;
                 cursor: not-allowed;
+            }
+            input[type="button"] {
+                background-color: $bk-20 !important;
             }
             .session {
                 &.view-nobtn {
@@ -345,6 +345,9 @@
         &.submit {
             width: auto !important;
         }
+        &.red{
+            background-color: $notice;
+        }
     }
     ::placeholder {
         color: $text;
@@ -443,8 +446,8 @@
                 background-color: $primary-tint;
             }
         }
-        .fas {
-            margin-right: $m-XS;
+        i {
+            margin-right: $p-XXS;
         }
         &.more {
             padding: $m-XXS $p-XS;
@@ -477,8 +480,8 @@
                 background-color: $primary-tint;
             }
         }
-        .fas {
-            margin-right: $m-XS;
+        i {
+            margin-right: $p-XXS;
         }
     }
     //swiper
@@ -1334,7 +1337,7 @@
                         width: 50%;
                     }
                     @include pad() {
-                        width: 30%;
+                        width: 25%;
                     }
                     @include mobile-L() {
                         width: 100%;
@@ -1361,7 +1364,7 @@
                         width: 50%;
                     }
                     @include pad() {
-                        width: 70%;
+                        width: 55%;
                     }
                     @include mobile-L() {
                         width: 100%;
@@ -1411,6 +1414,15 @@
                 }
                 .link {
                     width: 10%;
+                    text-align: right;
+                    @include pad() {
+                        width: 20%;
+                    }
+                    @include mobile-L() {
+                        width: 100%;
+                        text-align: left;
+                        margin-top: $m-XS;
+                    }
                     .accessibility {
                         img {
                             width: 113px;
@@ -1418,6 +1430,9 @@
                             object-fit: contain;
                             @include mobile-L() {
                                 margin-top: $m-XS;
+                                max-height: unset;
+                                width: auto;
+                                height: 50px;
                             }
                         }
                     }
@@ -1532,7 +1547,7 @@
             margin-right: $m-S;
             @include pad {
                 min-width: unset;
-                width: 20%;
+                width: 23%;
             }
             @include mobile-L {
                 width: 100%;
@@ -1542,26 +1557,30 @@
         .search-icon {
             position: relative;
             @include pad {
-                width: 20%;
+                width: 23%;
+            }
+            @include mobile-L() {
+                width: 100%;
             }
             input[type="search"] {
-                min-width: 150px;
-                width: initial;
+                width: 150px;
                 padding: 2px 8px;
                 border-radius: 4px;
                 border: solid 1px $complementary;
                 // background: url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 95% center;
                 @include pad {
                     min-width: unset;
-                    // width: 20%;
+                    width: 100%;
                 }
                 @include mobile-L() {
-                    width: 100%;
                     padding: 5px 8px;
                 }
                 &:focus {
                     width: 180px;
                     transition: 0.5s;
+                    @include pad {
+                        width: 100%;
+                    }
                     @include mobile-L() {
                         width: 100%;
                     }
@@ -1575,17 +1594,11 @@
                 line-height: 40px;
                 color: black;
                 position: absolute;
+                top: 0;
                 right: 12px;
                 color: $complementary;
             }
         }
-        // button {
-        //     margin-left: $m-S;
-        //     @include mobile-L() {
-        //         width: 100%;
-        //         margin-top: $m-XS;
-        //     }
-        // }
     }
 }
 
@@ -1597,7 +1610,7 @@
         border-radius: 20px;
         margin: auto;
         @include web-S() {
-            padding: 0 $p-M;
+            padding: 0 $m-XS;
         }
         @include mobile-L {
             border-radius: 0;
@@ -1608,6 +1621,9 @@
         }
         @include mobile-L() {
             padding: 0 $p-S;
+        }
+        article {
+            margin-top: $p-M;
         }
         .form-gp {
             padding: 0;
@@ -1658,6 +1674,7 @@
             .file-upload {
                 width: 100%;
                 display: flex;
+                // align-items: stretch;
                 align-items: center;
                 margin-top: $m-XXS;
                 @include mobile-L() {
@@ -1669,6 +1686,10 @@
                     background-color: $primary-default;
                     margin: 0;
                     margin-right: $m-XS;
+                    // width: 20%;
+                    // border-radius: 4px 0 0 4px;
+                    // height: initial;
+                    // min-height: 40px;
                     @include mobile-L() {
                         width: 100%;
                         margin-bottom: $m-XS;
@@ -1680,6 +1701,19 @@
                     padding: 0;
                     margin: 0;
                     color: $text;
+                }
+            }
+            .btn-gp {
+                width: 100%;
+                padding-top: $m-XS;
+                a {
+                    font-size: $size-p;
+                    margin-right: $m-XS;
+                    padding: $m-XXS $m-XS;
+                    padding-left: 0;
+                    i {
+                        margin-right: $p-XXS;
+                    }
                 }
             }
             .performer {
@@ -1789,12 +1823,9 @@
                     padding: $p-XXS $p-XS;
                     padding-right: 0;
                     text-align: left;
-                    border-radius: 6px;
                     color: $primary-tint;
                     text-align: right;
                     margin-top: 0;
-                    // border: solid 1px $primary-tint;
-                    // margin-bottom: $m-XS;
                     i {
                         margin-right: $p-XXS;
                     }
@@ -2291,7 +2322,10 @@
         tr {
             @include mobile-L {
                 display: block;
-                margin-bottom: $m-S !important;
+                margin-bottom: $m-S;
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
             &:nth-child(even) {
                 @include mobile-L {
