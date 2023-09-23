@@ -2779,6 +2779,10 @@ body main .content-type .text-gp a {
   display: inline-block;
   width: auto;
 }
+body main .content-type ul {
+  padding-left: 0;
+  list-style: none;
+}
 body main .content-link {
   display: flex;
   flex-wrap: wrap;
@@ -3260,6 +3264,9 @@ body main .content-member .container .totalnum {
   margin-bottom: 4px;
   color: #88753f;
 }
+body main .content-member .container .case-list {
+  margin-top: 12px;
+}
 body main .content-member .container .case-list table {
   margin-bottom: 12px;
 }
@@ -3270,16 +3277,40 @@ body main .content-member .container .case-list table tbody tr td input[type=che
   margin: 0;
   margin-top: 4px;
 }
+body main .content-member .container .case-list table tbody tr td p {
+  line-height: 1.5;
+}
 body main .content-member .container .case-list table tbody tr td .function {
   padding-left: 8px;
+  display: flex;
 }
 @media (max-width: 768px) {
   body main .content-member .container .case-list table tbody tr td .function {
     width: auto;
   }
 }
+@media (max-width: 568px) {
+  body main .content-member .container .case-list table tbody tr td .function {
+    padding-left: 0;
+    flex-wrap: wrap;
+    align-items: start;
+    margin-top: 12px;
+  }
+}
 body main .content-member .container .case-list table tbody tr td .function a.link {
   margin-right: 12px !important;
+}
+@media (max-width: 568px) {
+  body main .content-member .container .case-list table tbody tr td .function a.link {
+    border: solid 1px #88753f;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    margin-right: 8px !important;
+  }
+  body main .content-member .container .case-list table tbody tr td .function a.link.notice {
+    border: solid 1px #da382d;
+  }
 }
 body main .content-member .container .case-list table tbody tr td .function a.link:last-child {
   margin-right: 0 !important;
@@ -3290,6 +3321,33 @@ body main .content-member .container .case-list table tbody tr td .function a.li
 body main .content-member .container .case-list table tbody tr td .function a.link i {
   width: 15px;
   font-size: 0.875rem;
+}
+body main .content-member .container .case-list .custom-control.custom-switch {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  margin-left: calc(50% - 14px);
+}
+@media (max-width: 568px) {
+  body main .content-member .container .case-list .custom-control.custom-switch {
+    margin-left: 0;
+  }
+}
+body main .content-member .container .case-list .custom-control.custom-switch input {
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+@media (max-width: 568px) {
+  body main .content-member .container .case-list .custom-control.custom-switch input {
+    transform: scale(1.2);
+  }
+}
+body main .content-member .container .case-list .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #89CB4B;
+  background-color: #89CB4B;
 }
 body main .content-member .container .case-list .bottom {
   display: flex;
@@ -3330,5 +3388,57 @@ body main .content-member .container .case-list .bottom .pagination {
 @media (max-width: 568px) {
   body main .content-member .container .case-list .bottom .pagination {
     margin-top: 20px;
+  }
+}
+body main .content-member .container .add-admin-gp {
+  margin-bottom: 36px;
+}
+body main .content-member .container .add-admin-gp form {
+  width: 100%;
+  padding: 24px;
+  background-color: rgba(233, 198, 93, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+@media (max-width: 768px) {
+  body main .content-member .container .add-admin-gp form {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 568px) {
+  body main .content-member .container .add-admin-gp form {
+    margin-bottom: 12px;
+  }
+}
+body main .content-member .container .add-admin-gp form .form-gp {
+  margin-bottom: 0;
+  width: 21%;
+}
+@media (max-width: 768px) {
+  body main .content-member .container .add-admin-gp form .form-gp {
+    width: 46%;
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 568px) {
+  body main .content-member .container .add-admin-gp form .form-gp {
+    width: 100%;
+  }
+}
+body main .content-member .container .add-admin-gp form .form-gp input,
+body main .content-member .container .add-admin-gp form .form-gp label {
+  display: inline-block;
+  width: 100%;
+}
+body main .content-member .container .add-admin-gp form input[type=submit] {
+  margin: 0;
+}
+@media (max-width: 568px) {
+  body main .content-member .container .add-admin-gp form input[type=submit] {
+    width: 100% !important;
+    margin-top: 12px;
   }
 }/*# sourceMappingURL=style.css.map */

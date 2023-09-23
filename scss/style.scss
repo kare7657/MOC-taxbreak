@@ -311,6 +311,10 @@ body {
                     width: auto;
                 }
             }
+            ul {
+                padding-left: 0;
+                list-style: none;
+            }
         }
 
         // 資源連結
@@ -760,6 +764,7 @@ body {
                     color: $primary-default;
                 }
                 .case-list {
+                    margin-top: $m-XS;
                     table {
                         margin-bottom: $m-XS;
                         tbody {
@@ -770,13 +775,33 @@ body {
                                         margin: 0;
                                         margin-top: 4px;
                                     }
+                                    p {
+                                        line-height: 1.5;
+                                    }
                                     .function {
                                         padding-left: $p-XXS;
+                                        display: flex;
                                         @include pad {
                                             width: auto;
                                         }
+                                        @include mobile-L {
+                                            padding-left: 0;
+                                            flex-wrap: wrap;
+                                            align-items: start;
+                                            margin-top: $m-XS;
+                                        }
                                         a.link {
                                             margin-right: $m-XS !important;
+                                            @include mobile-L {
+                                                border: solid 1px $primary-default;
+                                                padding: $m-XXS $p-XXS;
+                                                border-radius: 4px;
+                                                margin-bottom: $p-XXS;
+                                                margin-right: $p-XXS !important;
+                                                &.notice {
+                                                    border: solid 1px $notice;
+                                                }
+                                            }
                                             &:last-child {
                                                 margin-right: 0 !important;
                                             }
@@ -792,6 +817,29 @@ body {
                                 }
                             }
                         }
+                    }
+                    .custom-control.custom-switch {
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        margin: auto;
+                        width: 100%;
+                        margin-left: calc(50% - 14px);
+                        @include mobile-L {
+                            margin-left: 0;
+                        }
+                        input {
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            @include mobile-L {
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                    .custom-control-input:checked ~ .custom-control-label::before {
+                        border-color: $enable;
+                        background-color: $enable;
                     }
                     .bottom {
                         display: flex;
@@ -826,6 +874,48 @@ body {
                             margin-top: 0;
                             @include mobile-L {
                                 margin-top: $m-S;
+                            }
+                        }
+                    }
+                }
+                .add-admin-gp {
+                    margin-bottom: $m-M;
+                    form {
+                        width: 100%;
+                        padding: $p-S;
+                        background-color: rgba($color: $ticket, $alpha: 0.1);
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: end;
+                        margin-top: $m-S;
+                        margin-bottom: $p-XXS;
+                        @include pad {
+                            flex-wrap: wrap;
+                        }
+                        @include mobile-L {
+                            margin-bottom: $m-XS;
+                        }
+                        .form-gp {
+                            margin-bottom: 0;
+                            width: 21%;
+                            @include pad {
+                                width: 46%;
+                                margin-bottom: $m-XS;
+                            }
+                            @include mobile-L {
+                                width: 100%;
+                            }
+                            input,
+                            label {
+                                display: inline-block;
+                                width: 100%;
+                            }
+                        }
+                        input[type="submit"] {
+                            margin: 0;
+                            @include mobile-L {
+                                width: 100% !important;
+                                margin-top: $m-XS;
                             }
                         }
                     }

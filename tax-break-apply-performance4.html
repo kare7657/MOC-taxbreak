@@ -158,11 +158,11 @@
                                 </div>
                                 <div class="form-gp">
                                     <label for="session">場次</label>
-                                    <legend class="session">
+                                    <div class="session">
                                         <input type="number" name="session" id="session" placeholder="20">
                                         <a href="" class="add" data-toggle="modal" data-target="#modal-session"><i
                                                 class="fas fa-search"></i>場次明細</a>
-                                    </legend>
+                                    </div>
                                 </div>
                                 <div class="form-gp choice mb-0">
                                     <h5>票價</h5>
@@ -222,7 +222,7 @@
                             </div>
                         </div>
                         <div class="form-gp">
-                            <label for="file1">相關證明</label>
+                            <label>相關證明</label>
                             <a href="" download="" class="download-file"><i class="fas fa-paperclip"></i>檔案下載</a>
                         </div>
                         <div class="form-gp choice">
@@ -241,7 +241,7 @@
                             </div>
                         </div>
                         <div class="form-gp">
-                            <label for="file2">相關證明</label>
+                            <label>相關證明</label>
                             <a href="" download="" class="download-file"><i class="fas fa-paperclip"></i>檔案下載</a>
                         </div>
                     </fieldset>
@@ -250,8 +250,8 @@
                             <h3>附件檔案</h3>
                         </div>
                         <div class="form-gp">
-                            <label for="activity_purpose">活動計劃書<span class="notice">*</span></label>
-                            <textarea name="activity_purpose" id="activity_purpose" rows="6"></textarea>
+                            <label for="activity_planning">活動計劃書<span class="notice">*</span></label>
+                            <textarea name="activity_planning" id="activity_planning" rows="6"></textarea>
                             <a href="" download="" class="download-file"><i class="fas fa-paperclip"></i>檔案下載</a>
                         </div>
                     </fieldset>
@@ -766,7 +766,7 @@
         <!-- modal 提示-->
         <div class="modal fade modal-template " id="modal-notify" tabindex="-1" role="dialog"
             aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
-            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp"
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
                 target="frm_ChangPWD">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -774,7 +774,7 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <h2 class="modal-title" id="modal-placeLabel">系統通知</h2>
+                            <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
                         </div>
                         <div class="modal-body">
                             <div class="notify-gp">

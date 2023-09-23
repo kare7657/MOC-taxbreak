@@ -43,8 +43,8 @@
                                 <p class="title">應檢附文件</p>
                                 <ul class="number">
                                     <li>活動企劃書</li>
+                                </ul>
                             </div>
-                            </ul>
                             <div class="btn-gp">
                                 <a href="" class="notice" title="表演注意事項" data-toggle="modal"
                                     data-target="#modal-notify"><i class="fas fa-exclamation-circle"></i>注意事項</a>
@@ -69,7 +69,7 @@
                                 </ul>
                             </div>
                             <div class="btn-gp">
-                                <a href="" class="notice" title="展覽注意事項" title="展覽注意事項" data-toggle="modal"
+                                <a href="" class="notice" title="展覽注意事項" data-toggle="modal"
                                     data-target="#modal-notify2"><i class="fas fa-exclamation-circle"></i>注意事項</a>
                                 <a href="" download="" class="download-file" title="[下載]展演範本"><i
                                         class="fas fa-paperclip"></i>範本下載</a>
@@ -129,9 +129,10 @@
                         ，期能提供便捷之服務管道。
                         本系統提供文化藝術事業(包含公司、團體、基金會等單位)，以線上申請方式辦理減免營業稅及娛樂稅認可案、查詢申請案件進度等相關管理功能，相關使用功能請參閱「使用手冊」。</p>
                 </div>
-                <ul class="text-gp">
+                <div class="text-gp">
                     <h3>申請相關辦法及注意事項</h3>
-                    <li> <a href="https://www.moc.gov.tw/News_Content.aspx?n=177&s=4016" target="_blank"
+                    <ul>
+                        <li> <a href="https://www.moc.gov.tw/News_Content.aspx?n=177&s=4016" target="_blank"
                             title="[另開視窗]文化藝術事業減免營業稅及娛樂稅辦法" class="download-file">
                             <i class="fas fa-external-link-alt"></i>文化藝術事業減免營業稅及娛樂稅辦法</a></li>
                     <li> <a href="https://www.moc.gov.tw/News_Content.aspx?n=170&s=3932" target="_blank"
@@ -142,14 +143,15 @@
                     <li><a href="https://www.moc.gov.tw/News_Content.aspx?n=186&s=4109" target="_blank"
                             title="[另開視窗]注意事項" class="download-file">
                             <i class="fas fa-external-link-alt"></i>注意事項</a></li>
-                </ul>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <!-- modal 提示-->
         <div class="modal fade modal-template " id="modal-notify" tabindex="-1" role="dialog"
             aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
-            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp"
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
                 target="frm_ChangPWD">
                 <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -157,7 +159,7 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <h2 class="modal-title" id="modal-placeLabel">表演注意事項</h2>
+                            <h2 class="modal-title" id="modal-notifyLabel">表演注意事項</h2>
                         </div>
                         <div class="modal-body">
                             <div class="notify-gp">
@@ -192,7 +194,7 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <h2 class="modal-title" id="modal-placeLabel2">展覽注意事項</h2>
+                            <h2 class="modal-title" id="modal-notifyLabel2">展覽注意事項</h2>
                         </div>
                         <div class="modal-body">
                             <div class="notify-gp">
@@ -209,7 +211,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" name="go" id="go2">確認</button>
+                            <button type="submit" name="go" id="go3">確認</button>
 
                         </div>
                     </div>
