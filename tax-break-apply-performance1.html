@@ -229,15 +229,6 @@
                     <div class="form-gp">
                         <a href="" class="add"><i class="fas fa-plus-circle"></i>新增表演地點</a>
                     </div>
-                    <div class="form-gp choice">
-                        <div class="item">
-                            <input type="checkbox" value="" id="private-agree">
-                            <label for="private-agree">
-                                <span>我同意</span> <a href="clause-tax-break-apply.html" target="_blank">線上申請同意條款</a><span
-                                    class="notice">*</span>
-                            </label>
-                        </div>
-                    </div>
                     <div class="btn-tool">
                         <input type="button" value="取消" class="outline">
                         <input type="button" value="暫存" class="outline">
@@ -794,6 +785,40 @@
                 </div>
             </form>
         </div>
+        <!-- modal 條款-->
+        <div class="modal fade modal-template " id="modal-clause-taxBreak" tabindex="-1" role="dialog"
+            aria-labelledby="modal-clauseLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-clauseLabel">線上申請同意條款</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="iframe-gp">
+                                <iframe src="clause-tax-break-apply.html"></iframe>
+                                <div class="form-gp choice">
+                                    <div class="item">
+                                        <input type="checkbox" value="" id="private-agree2">
+                                        <label for="private-agree2">
+                                            我已完全閱讀並同意以上內容<span class="notice">*</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel4" data-dismiss="modal">下一步</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </main>
     <!-- footer -->
     <footer id="footer"></footer>
@@ -822,8 +847,16 @@
         });
     </script>
 
-      <!-- select2 -->
-      <script>
+    <!-- modal -->
+    <script>
+        //進頁開啟條款
+        $(window).ready(() => {
+            $('#modal-clause-taxBreak').modal('show');
+        })
+    </script>
+
+    <!-- select2 -->
+    <script>
         $(function () {
             //Initialize Elements
             $('.select2').select2()

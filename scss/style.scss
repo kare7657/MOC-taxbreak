@@ -52,6 +52,13 @@ body {
         .brief-p {
             margin-bottom: $m-S;
         }
+        &.main-clause{
+            padding: 0;
+            padding-top: $p-XS;
+            @include mobile-L{
+                padding: 0;
+            }
+        }
         //網站導覽
         .content-webmap {
             .container {
@@ -818,29 +825,7 @@ body {
                             }
                         }
                     }
-                    .custom-control.custom-switch {
-                        text-align: center;
-                        display: flex;
-                        justify-content: center;
-                        margin: auto;
-                        width: 100%;
-                        margin-left: calc(50% - 14px);
-                        @include mobile-L {
-                            margin-left: 0;
-                        }
-                        input {
-                            position: absolute;
-                            top: 0;
-                            left: 50%;
-                            @include mobile-L {
-                                transform: scale(1.2);
-                            }
-                        }
-                    }
-                    .custom-control-input:checked ~ .custom-control-label::before {
-                        border-color: $enable;
-                        background-color: $enable;
-                    }
+
                     .bottom {
                         display: flex;
                         justify-content: space-between;
@@ -899,7 +884,7 @@ body {
                             margin-bottom: 0;
                             width: 21%;
                             @include pad {
-                                width: 46%;
+                                width: 47%;
                                 margin-bottom: $m-XS;
                             }
                             @include mobile-L {
