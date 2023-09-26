@@ -52,12 +52,15 @@ body {
         .brief-p {
             margin-bottom: $m-S;
         }
-        &.main-clause{
-            padding: 0;
+        &.main-clause {
+            padding: 0 $p-S;
             padding-top: $p-XS;
-            @include mobile-L{
+            @include mobile-L {
                 padding: 0;
             }
+            // .notice{
+            //     font-weight: bold;
+            // }
         }
         //網站導覽
         .content-webmap {

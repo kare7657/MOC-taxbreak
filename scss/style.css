@@ -870,6 +870,9 @@
   padding: 0;
   padding: 0 24px;
 }
+* .modal-template .modal-dialog .modal-content .modal-footer button {
+  margin-left: 12px;
+}
 @media (max-width: 568px) {
   * .modal-template .modal-dialog .modal-content .modal-footer {
     padding: 0 24px;
@@ -2139,10 +2142,12 @@ body form .code-gp .text-gp .btnPlayAudio i {
 body form .btn-tool {
   width: 100%;
   text-align: center;
+  margin-top: 36px;
 }
 @media (max-width: 568px) {
   body form .btn-tool {
     text-align: left;
+    margin-top: 20px;
   }
 }
 body form .btn-tool input {
@@ -2573,7 +2578,7 @@ body main .brief-p {
   margin-bottom: 20px;
 }
 body main.main-clause {
-  padding: 0;
+  padding: 0 24px;
   padding-top: 16px;
 }
 @media (max-width: 568px) {

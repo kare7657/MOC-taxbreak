@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>申請減免稅案件-拍賣</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- jQuery 日期選擇器-->
+    <link rel="stylesheet" href="scss/jquery-ui-1.10.0.custom.min.css" />
+    <!-- timepicker 時間選擇器-->
+    <link rel="stylesheet" href="scss/timepicker.css" />
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                    <li>></li>
+                    <li><a href="tax-break.html">減免稅案件</a></li>
+                    <li>></li>
+                    <li><span>我要申請</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 我要申請 -->
+        <section class="content-signup">
+            <h2>申請減免稅案件</h2>
+            <div class="w-100 text-center">
+                <div class="way">
+                    <img src="img/icon-auction.png" alt="減免稅-拍賣圖標">
+                    <h3>拍賣</h3>
+                </div>
+            </div>
+            <div class="step">
+                <div class="btn-gp">
+                    <a href="tax-break-apply-auction1.html" class="btn-step">基本資料</a>
+                    <span>></span>
+                    <a href="tax-break-apply-auction2.html" class="btn-step active">附件檔案</a>
+                    <span>></span>
+                    <div class="btn-step">預覽提交</div>
+                </div>
+            </div>
+            <div class="container">
+                <form>
+                    <fieldset>
+                        <div class="type-title">
+                            <h3>進階資料</h3>
+                        </div>
+                        <div class="form-gp">
+                            <div class="label-withButton">
+                                <label for="file1">拍品清單<span class="notice">*</span></label>
+                                <a href="" class="download-sample" download=""><i class="fas fa-paperclip"></i>範本下載</a>
+                            </div>
+                            <div class="file-upload">
+                                <input type="button" id="file1" value="檔案上傳">
+                                <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <ul class="ps">
+                                <li>只接受指定格式（xls、xlsx）</li>
+                                <li>檔案請小於 20MB</li>
+                            </ul>
+                        </div>
+                        <div class="form-gp">
+                            <div class="label-withButton">
+                                <label for="file2">拍品實績<span class="notice">*</span></label>
+                                <a href="" class="download-sample" download=""><i class="fas fa-paperclip"></i>範本下載</a>
+                            </div>
+                            <textarea name="activity_purpose" id="activity_purpose" rows="6"></textarea>
+                        </div>
+                        <div class="form-gp">
+                            <div class="file-upload">
+                                <input type="button" id="file2" value="檔案上傳">
+                                <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <ul class="ps">
+                                <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
+                                <li>檔案請小於 20MB</li>
+                            </ul>
+                        </div>
+                    </fieldset>
+
+                    <div class="btn-tool">
+                        <input type="button" value="取消" class="outline">
+                        <input type="button" value="暫存" class="outline">
+                        <input type="button" value="上一步" class="outline"
+                            onclick="location.href='tax-break-apply-performance1.html'">
+                            <input type="button" value="預覽提交" onclick="location.href='tax-break-apply-auction3.html'">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+         <!-- modal 提示-->
+         <div class="modal fade modal-template " id="modal-notify" tabindex="-1" role="dialog"
+         aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+         <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+             target="frm_ChangPWD">
+             <div class="modal-dialog modal-dialog-centered" role="document">
+                 <div class="modal-content">
+                     <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                         </button>
+                         <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
+                     </div>
+                     <div class="modal-body">
+                         <div class="notify-gp">
+                             <p>請輸入活動名稱</p>
+                             <p>請輸入辦理目的</p>
+                             <p class="notice">申請認可範圍1 發現錯誤</p>
+                         </div>
+                     </div>
+                     <div class="modal-footer">
+                         <button type="submit" name="go" id="go2">確認</button>
+
+                     </div>
+                 </div>
+             </div>
+         </form>
+     </div>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+</body>
+
+</html>
