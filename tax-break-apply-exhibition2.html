@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>申請減免稅案件-拍賣</title>
+    <title>申請減免稅案件-展覽</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
@@ -41,15 +41,17 @@
             <h2>申請減免稅案件</h2>
             <div class="w-100 text-center">
                 <div class="way">
-                    <img src="img/icon-auction.png" alt="減免稅-拍賣圖標">
-                    <h3>拍賣</h3>
+                    <img src="img/icon-exhibition.png" alt="減免稅-展覽圖標">
+                    <h3>展覽</h3>
                 </div>
             </div>
             <div class="step">
                 <div class="btn-gp">
-                    <a href="tax-break-apply-auction1.html" class="btn-step">基本資料</a>
+                    <a href="tax-break-apply-exhibition1.html" class="btn-step">基本資料</a>
                     <span>></span>
-                    <a href="tax-break-apply-auction2.html" class="btn-step active">附件檔案</a>
+                    <a href="tax-break-apply-exhibition2.html" class="btn-step active">進階資料</a>
+                    <span>></span>
+                    <a href="tax-break-apply-exhibition3.html" class="btn-step">附件檔案</a>
                     <span>></span>
                     <div class="btn-step">預覽提交</div>
                 </div>
@@ -60,33 +62,58 @@
                         <div class="type-title">
                             <h3>進階資料</h3>
                         </div>
-                        <div class="form-gp">
-                            <div class="label-withButton">
-                                <label for="file1">拍品清單<span class="notice">*</span></label>
-                                <a href="" class="download-sample" download=""><i class="fas fa-paperclip"></i>範本下載</a>
+                        <div class="form-gp choice">
+                            <h5>是否有大陸地區古物來臺展覽<span class="notice">*</span></h5>
+                            <div class="item">
+                                <input type="radio" name="state" value="" id="yorn" checked>
+                                <label for="yorn">
+                                    是
+                                </label>
                             </div>
+                            <div class="item">
+                                <input type="radio" name="state" value="" id="yorn2">
+                                <label for="yorn2">
+                                    否
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <label for="file1">相關證明</label>
+                            <!-- <input type="file" id="file1"> -->
                             <div class="file-upload">
                                 <input type="button" id="file1" value="檔案上傳">
                                 <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
                             </div>
                             <ul class="ps">
-                                <li>只接受指定格式（xls、xlsx）</li>
+                                <li>如：文化部已核准文件、已向文化部提出申請之證明證件</li>
+                                <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
                                 <li>檔案請小於 20MB</li>
                             </ul>
                         </div>
-                        <div class="form-gp">
-                            <div class="label-withButton">
-                                <label for="file2">拍品實績<span class="notice">*</span></label>
-                                <a href="" class="download-sample" download=""><i class="fas fa-paperclip"></i>範本下載</a>
+                        <div class="form-gp choice">
+                            <h5>是否有國外地區中華古物來臺展覽<span class="notice">*</span></h5>
+                            <div class="item">
+                                <input type="radio" name="state2" value="" id="yorn3" checked>
+                                <label for="yorn3">
+                                    是
+                                </label>
                             </div>
-                            <textarea name="activity_purpose" id="activity_purpose" rows="6"></textarea>
+                            <div class="item">
+                                <input type="radio" name="state2" value="" id="yorn4">
+                                <label for="yorn4">
+                                    否
+                                </label>
+                            </div>
                         </div>
                         <div class="form-gp">
+                            <label for="file2">相關證明</label>
+                            <!-- <input type="file" id="file2"> -->
                             <div class="file-upload">
                                 <input type="button" id="file2" value="檔案上傳">
                                 <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
                             </div>
                             <ul class="ps">
+                                <li>如：目的事業主管機關已核准文件、已向目的事業主管機關提出申請之證明證件</li>
                                 <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
                                 <li>檔案請小於 20MB</li>
                             </ul>
@@ -97,41 +124,12 @@
                         <input type="button" value="取消" class="outline">
                         <input type="button" value="暫存" class="outline">
                         <input type="button" value="上一步" class="outline"
-                            onclick="location.href='tax-break-apply-auction1.html'">
-                            <input type="button" value="預覽提交" onclick="location.href='tax-break-apply-auction3.html'">
+                            onclick="location.href='tax-break-apply-exhibition1.html'">
+                        <input type="button" value="下一步" onclick="location.href='tax-break-apply-exhibition3.html'">
                     </div>
                 </form>
             </div>
         </section>
-
-         <!-- modal 提示-->
-         <div class="modal fade modal-template " id="modal-notify" tabindex="-1" role="dialog"
-         aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
-         <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
-             target="frm_ChangPWD">
-             <div class="modal-dialog modal-dialog-centered" role="document">
-                 <div class="modal-content">
-                     <div class="modal-header">
-                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                             <span aria-hidden="true">&times;</span>
-                         </button>
-                         <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
-                     </div>
-                     <div class="modal-body">
-                         <div class="notify-gp">
-                             <p>請輸入活動名稱</p>
-                             <p>請輸入辦理目的</p>
-                             <p class="notice">申請認可範圍1 發現錯誤</p>
-                         </div>
-                     </div>
-                     <div class="modal-footer">
-                         <button type="submit" name="go" id="go2">確認</button>
-
-                     </div>
-                 </div>
-             </div>
-         </form>
-     </div>
 
     </main>
     <!-- footer -->

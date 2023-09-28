@@ -164,6 +164,7 @@
   margin: 0;
   margin: auto;
 }
+* select,
 * input[type=button] {
   -webkit-appearance: none; /* Safari & Chrome */
   -moz-appearance: none; /* FireFox */
@@ -270,7 +271,7 @@
   padding: 8px 0;
 }
 * input[disabled] {
-  background-color: #e5e5e5;
+  background-color: #ebebeb;
   opacity: 1;
   cursor: not-allowed;
 }
@@ -283,6 +284,7 @@
   line-height: 2;
   margin-right: 8px;
   display: inline;
+  accent-color: #a19163;
 }
 @media (max-width: 568px) {
   * input[type=checkbox], * input[type=radio] {
@@ -307,6 +309,8 @@
   height: 40px;
   border-radius: 5px;
   border: solid 1px #9fa0a0;
+  background: url("../img/chevron-down-solid.svg") no-repeat scroll transparent;
+  background-position: 97% center;
   background-color: white;
   color: #595757;
   padding: 0 8px;
@@ -317,9 +321,15 @@
 }
 * select option {
   color: #595757;
+  line-height: 2;
+  height: 40px;
+  padding: 10px 0;
+}
+* select option:hover {
+  background-color: #88753f;
 }
 * select[disabled] {
-  background-color: #e5e5e5;
+  background-color: #ebebeb;
   opacity: 1;
   cursor: not-allowed;
 }
@@ -332,7 +342,7 @@
 * .select2-container--default .select2-selection--single .select2-selection__rendered {
   line-height: 40px;
   background: url("../img/chevron-down-solid.svg") no-repeat scroll transparent;
-  background-position: 97% center;
+  background-position: 98% center;
 }
 * .select2-container--default .select2-selection--single .select2-selection__arrow {
   display: none;
@@ -344,7 +354,7 @@
   padding: 8px;
 }
 * textarea[disabled] {
-  background-color: #e5e5e5;
+  background-color: #ebebeb;
   opacity: 1;
   cursor: not-allowed;
 }
@@ -491,9 +501,9 @@
   padding: 0;
   margin: 36px 0;
 }
-@media (max-width: 568px) {
+@media (max-width: 1024px) {
   * .modal-template .modal-dialog .modal-content .modal-header {
-    margin: 20px 0;
+    margin: 24px 0;
   }
 }
 * .modal-template .modal-dialog .modal-content .modal-header .modal-title {
@@ -510,7 +520,7 @@
   margin: auto;
   padding: 0 56px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   * .modal-template .modal-dialog .modal-content .modal-body {
     padding: 0 32px;
   }
@@ -520,9 +530,9 @@
     padding: 0 24px;
   }
 }
-@media (max-width: 320px) {
-  * .modal-template .modal-dialog .modal-content .modal-body {
-    height: 55vh;
+@media (max-width: 568px) {
+  * .modal-template .modal-dialog .modal-content .modal-body h2 {
+    font-size: 1rem;
   }
 }
 * .modal-template .modal-dialog .modal-content .modal-body.session-table {
@@ -532,6 +542,11 @@
 @media (max-width: 568px) {
   * .modal-template .modal-dialog .modal-content .modal-body.session-table {
     overflow: scroll;
+  }
+}
+@media (max-width: 320px) {
+  * .modal-template .modal-dialog .modal-content .modal-body.session-table {
+    height: 50vh;
   }
 }
 * .modal-template .modal-dialog .modal-content .modal-body.session-table .text-gp {
@@ -830,6 +845,16 @@
 }
 * .modal-template .modal-dialog .modal-content .modal-body .notify-gp .text-gp .notice {
   font-size: 1.125rem;
+}
+@media (max-width: 568px) {
+  * .modal-template .modal-dialog .modal-content .modal-body .notify-gp ul {
+    padding-left: 16px;
+  }
+}
+* .modal-template .modal-dialog .modal-content .modal-body .notify-gp ul li {
+  font-weight: bold;
+  list-style: disc;
+  list-style-position: outside;
 }
 * .modal-template .modal-dialog .modal-content .modal-body .iframe-gp iframe {
   width: 100%;
@@ -2591,12 +2616,25 @@ body main .content-webmap .container .list-gp {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  body main .content-webmap .container .list-gp {
+    justify-content: start;
+  }
+}
 body main .content-webmap .container .list-gp .text-gp {
-  width: 23%;
+  width: 18%;
+}
+@media (max-width: 768px) {
+  body main .content-webmap .container .list-gp .text-gp {
+    width: 30%;
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
 }
 @media (max-width: 568px) {
   body main .content-webmap .container .list-gp .text-gp {
     width: 100%;
+    margin-right: 0;
     margin-bottom: 16px;
   }
   body main .content-webmap .container .list-gp .text-gp:last-child {
@@ -2745,7 +2783,7 @@ body main .content-type .taxbreak-gp {
   margin-top: 20px;
 }
 body main .content-type .taxbreak-gp .block {
-  width: 23%;
+  width: 18%;
   border: solid 1px #a19163;
   border-radius: 12px;
   display: flex;
@@ -2823,7 +2861,7 @@ body main .content-type .taxbreak-gp .block .bottom .info {
 }
 body main .content-type .taxbreak-gp .block .bottom .info .title {
   font-size: 1rem;
-  color: #88753f;
+  color: black;
   font-weight: bold;
 }
 body main .content-type .taxbreak-gp .block .bottom .info ul.number {
@@ -2836,6 +2874,21 @@ body main .content-type .taxbreak-gp .block .bottom .info ul.number li {
 }
 body main .content-type .taxbreak-gp .block .bottom .btn-gp a {
   margin-bottom: 4px !important;
+}
+body main .content-type .taxbreak-gp .block .bottom .btn-gp .apply {
+  display: block;
+  height: 40px;
+  background-color: #88753f;
+  color: white;
+  border-radius: 4px;
+  line-height: 40px;
+  font-size: 1.125rem;
+  padding: 0 24px;
+  text-align: center;
+  margin-top: 12px;
+}
+body main .content-type .taxbreak-gp .block .bottom .btn-gp .apply.button-outline {
+  margin-bottom: 0 !important;
 }
 body main .content-type .taxbreak-gp .block .bottom button {
   width: 100%;

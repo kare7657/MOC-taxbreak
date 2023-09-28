@@ -195,6 +195,7 @@
         margin: auto;
     }
     //清除預設按鈕樣式
+    select,
     input[type="button"] {
         -webkit-appearance: none; /* Safari & Chrome */
         -moz-appearance: none; /* FireFox */
@@ -238,6 +239,9 @@
             input[type="button"] {
                 background-color: $bk-20 !important;
             }
+            // input[type="checkbox"] {
+            //     background-color: $primary-default !important;
+            // }
             .session {
                 &.view-nobtn {
                     select {
@@ -322,7 +326,7 @@
             padding: $p-XXS 0;
         }
         &[disabled] {
-            background-color: $bk-10;
+            background-color: $bk-8;
             opacity: 1;
             // border: unset;
             cursor: not-allowed;
@@ -337,6 +341,7 @@
             line-height: 2;
             margin-right: $p-XXS;
             display: inline;
+            accent-color: $primary-tint;
             @include mobile-L() {
                 width: 25px;
                 height: 25px;
@@ -358,8 +363,8 @@
         height: 40px;
         border-radius: 5px;
         border: solid 1px $complementary;
-        // background: url("../img/chevron-down-solid.svg") no-repeat scroll transparent;
-        // background-position: 97% center;
+        background: url("../img/chevron-down-solid.svg") no-repeat scroll transparent;
+        background-position: 97% center;
         background-color: white;
         color: $text;
         padding: 0 $p-XXS;
@@ -369,9 +374,15 @@
         }
         option {
             color: $text;
+            line-height: 2;
+            height: 40px;
+            padding: 10px 0;
+            &:hover {
+                background-color: $primary-default;
+            }
         }
         &[disabled] {
-            background-color: $bk-10;
+            background-color: $bk-8;
             opacity: 1;
             // border: unset;
             cursor: not-allowed;
@@ -380,13 +391,14 @@
             }
         }
     }
+
     .select2-container--default .select2-selection--single {
         height: 40px;
     }
     .select2-container--default .select2-selection--single .select2-selection__rendered {
         line-height: 40px;
         background: url("../img/chevron-down-solid.svg") no-repeat scroll transparent;
-        background-position: 97% center;
+        background-position: 98% center;
     }
     .select2-container--default .select2-selection--single .select2-selection__arrow {
         display: none;
@@ -397,7 +409,7 @@
         border: solid 1px $complementary;
         padding: $p-XXS;
         &[disabled] {
-            background-color: $bk-10;
+            background-color: $bk-8;
             opacity: 1;
             // border: unset;
             cursor: not-allowed;
@@ -550,9 +562,6 @@
             @include pad() {
                 max-width: 600px;
             }
-            // @include mobile-L(){
-            //     width: unset;
-            // }
             .modal-content {
                 border-radius: 15px;
                 .modal-header {
@@ -560,8 +569,8 @@
                     border-bottom: none;
                     padding: 0;
                     margin: $m-M 0;
-                    @include mobile-L() {
-                        margin: $m-S 0;
+                    @include web-S() {
+                        margin: $p-S 0;
                     }
                     .modal-title {
                         width: 100%;
@@ -577,20 +586,25 @@
                     width: 100%;
                     margin: auto;
                     padding: 0 $p-XL;
-                    @include pad() {
+                    @include web-S() {
                         padding: 0 $p-M;
                     }
                     @include mobile-L() {
                         padding: 0 $p-S;
                     }
-                    @include mobile-XS() {
-                        height: 55vh;
+                    h2 {
+                        @include mobile-L() {
+                            font-size: $size-p;
+                        }
                     }
                     &.session-table {
                         overflow-y: scroll;
                         height: 65vh;
                         @include mobile-L() {
                             overflow: scroll;
+                        }
+                        @include mobile-XS() {
+                            height: 50vh;
                         }
                         .text-gp {
                             display: flex;
@@ -854,6 +868,17 @@
                                 font-size: $size-h5;
                             }
                         }
+                        ul {
+                            @include mobile-L() {
+                                padding-left: $p-XS;
+                            }
+
+                            li {
+                                font-weight: bold;
+                                list-style: disc;
+                                list-style-position: outside;
+                            }
+                        }
                     }
                     .iframe-gp {
                         iframe {
@@ -895,7 +920,7 @@
                     margin: $m-S 0;
                     padding: 0;
                     padding: 0 $p-S;
-                    button{
+                    button {
                         margin-left: $m-XS;
                     }
                     @include mobile-L() {
