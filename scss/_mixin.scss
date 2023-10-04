@@ -39,7 +39,7 @@
     font-family: "微軟正黑體" !important;
     box-sizing: border-box !important;
     .container {
-        width: 1110px;
+        width: 1140px;
         margin: auto;
         padding: $p-S 0;
         @include web-S {
@@ -225,6 +225,7 @@
         &[disabled] {
             input,
             select,
+            .select2-container--default .select2-selection--single,
             textarea,
             .session input,
             .session select {
@@ -599,7 +600,7 @@
                     }
                     &.session-table {
                         overflow-y: scroll;
-                        height: 65vh;
+                        height: 60vh;
                         @include mobile-L() {
                             overflow: scroll;
                         }
@@ -1031,7 +1032,7 @@
             }
             .top {
                 width: 100%;
-                max-width: 1110px;
+                max-width: 1140px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -1118,7 +1119,7 @@
                 background-color: $primary-default;
                 color: white;
                 .nav-gp {
-                    width: 1110px;
+                    width: 1140px;
                     display: flex;
                     margin: auto;
                     @include web-S() {

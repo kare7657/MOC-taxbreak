@@ -146,7 +146,8 @@ body {
         }
         // Banner
         .section-banner {
-            max-width: 1110px;
+            width: 100%;
+            max-width: 1140px;
             margin: auto;
             display: block !important;
             background-color: white !important;
@@ -232,6 +233,9 @@ body {
                 flex-wrap: wrap;
                 justify-content: space-between;
                 margin-top: $m-S;
+                @include pad {
+                    justify-content: start;
+                }
                 .block {
                     width: 18%;
                     border: solid 1px $primary-tint;
@@ -241,16 +245,21 @@ body {
                     justify-content: space-between;
                     background-color: white;
                     box-shadow: 5px 5px 10px $primary-table;
-                    // margin-bottom: $m-M;
                     @include pad {
-                        width: 48%;
+                        // width: 48%;
+                        width: 30%;
                         margin-bottom: $m-S;
+                        margin-right: $m-S;
                     }
                     @include mobile-L() {
                         width: 100%;
+                        margin-right: 0;
                         &:last-child {
                             margin-bottom: 0;
                         }
+                    }
+                    a {
+                        line-height: 2;
                     }
                     .top {
                         width: 100%;
@@ -304,13 +313,11 @@ body {
                                 li {
                                     list-style-type: decimal;
                                     color: $text;
+                                    line-height: 2;
                                 }
                             }
                         }
                         .btn-gp {
-                            a {
-                                margin-bottom: $m-XXS !important;
-                            }
                             .apply {
                                 display: block;
                                 height: 40px;
@@ -332,6 +339,21 @@ body {
                             margin: 0;
                             margin-top: $m-XS;
                         }
+                    }
+                }
+            }
+            .separate-taxation {
+                justify-content: start;
+                .block {
+                    width: 33%;
+                    margin-right: $m-M;
+                    @include pad {
+                        width: 30%;
+                        margin-right: $m-S;
+                    }
+                    @include mobile-L {
+                        width: 100%;
+                        margin-right: 0;
                     }
                 }
             }
@@ -555,123 +577,161 @@ body {
             }
             .container {
                 padding: 0;
-                max-width: 600px;
+                max-width: 1140px;
                 @include mobile-L {
                     margin: 0;
                     max-width: unset;
                     width: 100%;
                 }
-
-                form {
-                    background-color: unset;
+            }
+            form {
+                background-color: unset;
+                h3 {
+                    margin-top: $m-XS;
+                    margin-bottom: $m-S;
+                }
+                .type-title {
+                    margin-bottom: $m-S;
                     h3 {
-                        margin-top: $m-XS;
-                        margin-bottom: $m-S;
+                        padding: $p-XXS $p-XS;
+                        padding-left: 0;
+                        padding-top: $p-XS;
+                        border-bottom: solid 3px $ticket;
+                        color: $ticket;
+                        margin-top: 0;
                     }
-                    .type-title {
-                        margin-bottom: $m-S;
-                        h3 {
-                            padding: $p-XXS $p-XS;
-                            padding-left: 0;
-                            padding-top: $p-XS;
-                            border-bottom: solid 3px $ticket;
-                            color: $ticket;
-                            margin-top: 0;
-                        }
+                }
+                ul.ps {
+                    padding: $p-XS 0;
+                    padding-left: $p-XS;
+                    margin-bottom: 0;
+                    li {
+                        list-style-position: outside;
+                        list-style-type: disc;
+                        color: $primary-tint;
+                        line-height: 1.75;
                     }
-                    ul.ps {
-                        padding: $p-XS 0;
-                        padding-left: $p-XS;
+                }
+                .place-gp {
+                    margin-bottom: $m-S;
+                    &:last-child {
                         margin-bottom: 0;
-                        li {
-                            list-style-position: outside;
-                            list-style-type: disc;
-                            color: $primary-tint;
-                            line-height: 1.75;
-                        }
                     }
-                    .place-gp {
-                        margin-bottom: $m-S;
-                        &:last-child {
-                            margin-bottom: 0;
-                        }
-                        .place-header {
-                            background-color: rgba($color: $primary-tint, $alpha: 1);
+                    .place-header {
+                        background-color: rgba($color: $primary-tint, $alpha: 1);
+                        color: white;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 40px;
+                        .title {
+                            font-size: $size-h4;
                             color: white;
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-                            height: 40px;
-                            .title {
-                                font-size: $size-h4;
-                                color: white;
-                                font-weight: bold;
-                                padding: 0 $p-XS;
-                                color: inherit;
-                            }
-                            a {
-                                color: white;
-                                line-height: 40px;
-                                padding: 2px $p-XS;
-                                font-size: $size-h5;
-                                font-weight: bold;
-                                color: inherit;
-                                i {
-                                    margin-right: $p-XXS;
-                                }
-                            }
-                        }
-                        .place-body {
-                            padding: $p-S;
-                            background-color: rgba($color: $ticket, $alpha: 0.075);
-                        }
-                    }
-                    // button
-                    a {
-                        &.add {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            height: 40px;
-                            font-size: $size-h5;
-                            padding: $m-XXS $p-XS;
-                            border-radius: 4px;
-                            border: none;
                             font-weight: bold;
-                            cursor: pointer;
-                            margin-top: $m-XS;
-                            background-color: $primary-default;
-                            color: white;
-                            @include mobile-L {
-                                width: 100%;
-                            }
-                            .fas {
-                                margin-right: $m-XS;
-                            }
+                            padding: 0 $p-XS;
+                            color: inherit;
                         }
-                        &.download-file {
-                            font-size: $size-p;
-                            padding: $p-XXS $p-XS;
-                            margin-right: $m-S;
-                            text-align: left;
-                            border: solid 1px $primary-tint;
-                            border-radius: 6px;
-                            color: $primary-tint;
-                            margin-top: $p-XXS;
+                        a {
+                            color: white;
+                            line-height: 40px;
+                            padding: 2px $p-XS;
+                            font-size: $size-h5;
+                            font-weight: bold;
+                            color: inherit;
                             i {
                                 margin-right: $p-XXS;
                             }
                         }
                     }
+                    .place-body {
+                        padding: $p-S;
+                        background-color: rgba($color: $ticket, $alpha: 0.075);
+                    }
                 }
-                .check-curriculum {
-                    border: solid 1px $secondary;
-                    margin-bottom: $m-M;
-                    padding: $m-XS $p-XS;
-                    .title {
-                        font-size: $size-h3;
-                        color: $primary-dark;
+                // button
+                a {
+                    &.add {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 40px;
+                        font-size: $size-h5;
+                        padding: $m-XXS $p-XS;
+                        border-radius: 4px;
+                        border: none;
                         font-weight: bold;
+                        cursor: pointer;
+                        margin-top: $m-XS;
+                        background-color: $primary-default;
+                        color: white;
+                        @include mobile-L {
+                            width: 100%;
+                        }
+                        .fas {
+                            margin-right: $m-XS;
+                        }
+                    }
+                    &.download-file {
+                        font-size: $size-p;
+                        padding: $p-XXS $p-XS;
+                        margin-right: $m-S;
+                        text-align: left;
+                        border: solid 1px $primary-tint;
+                        border-radius: 6px;
+                        color: $primary-tint;
+                        margin-top: $p-XXS;
+                        i {
+                            margin-right: $p-XXS;
+                        }
+                    }
+                }
+            }
+            .check-curriculum {
+                border: solid 1px $secondary;
+                margin-bottom: $m-M;
+                padding: $m-XS $p-XS;
+                .title {
+                    font-size: $size-h3;
+                    color: $primary-dark;
+                    font-weight: bold;
+                }
+            }
+            .list-container {
+                max-width: 900px;
+                margin: auto;
+                @include mobile-L {
+                    margin: 0;
+                    max-width: unset;
+                    width: 100%;
+                }
+            }
+            table {
+                td {
+                    vertical-align: middle;
+                    padding: $p-XXS $m-XS;
+                    input[type="button"] {
+                        padding: $m-XXS $m-XS !important;
+                    }
+                    .file-img {
+                        position: relative;
+                        display: inline-block;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            max-height: 70px;
+                            aspect-ratio: 4 / 3;
+                            object-fit: contain;
+                        }
+                        .close {
+                            display: block;
+                            position: absolute;
+                            top: -9px;
+                            right: -9px;
+                            opacity: 1;
+                            i {
+                                font-size: $size-h5;
+                            }
+                        }
                     }
                 }
             }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>減免稅申請-表演</title>
+    <title>分離課稅申請-展覽</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
@@ -26,7 +26,7 @@
                 <ul>
                     <li><a href="index.html"><i class="fas fa-home"></i></a></li>
                     <li>></li>
-                    <li><a href="tax-break.html">減免稅申請</a></li>
+                    <li><a href="separate-taxation.html">分離課稅申請</a></li>
                     <li>></li>
                     <li><span>我要申請</span></li>
                 </ul>
@@ -34,20 +34,20 @@
         </div>
         <!-- 我要申請 -->
         <section class="content-signup">
-            <h2>減免稅申請</h2>
+            <h2>分離課稅申請</h2>
             <div class="w-100 text-center">
                 <div class="way">
-                    <img src="img/icon-tax-break.png" alt="減免稅-表演圖標">
-                    <h3>表演</h3>
+                    <img src="img/icon-exhibition.png" alt="分離課稅-展覽圖標">
+                    <h3>展覽</h3>
                 </div>
             </div>
             <div class="step">
                 <div class="btn-gp">
-                    <a href="tax-break-apply-performance1.html" class="btn-step">基本資料</a>
+                    <a href="separate-taxation-apply-exhibition1.html" class="btn-step">基本資料</a>
                     <span>></span>
-                    <a href="tax-break-apply-performance2.html" class="btn-step">進階資料</a>
+                    <a href="separate-taxation-apply-exhibition2.html" class="btn-step active">附件檔案</a>
                     <span>></span>
-                    <a href="tax-break-apply-performance3.html" class="btn-step active">附件檔案</a>
+                    <a href="separate-taxation-apply-exhibition3.html" class="btn-step">清冊資料</a>
                     <span>></span>
                     <div class="btn-step">預覽提交</div>
                 </div>
@@ -60,19 +60,34 @@
                         </div>
                         <div class="form-gp">
                             <div class="label-withButton">
-                                <label for="activity_purpose">活動計劃書<span class="notice">*</span></label>
+                                <label for="exhibition_record">近兩年展覽記錄<span class="notice">*</span></label>
                                 <a href="" class="download-sample" download=""><i class="fas fa-paperclip"></i>範本下載</a>
                             </div>
-                            <textarea name="activity_purpose" id="activity_purpose" rows="6"></textarea>
+                            <textarea name="exhibition_record" id="exhibition_record" rows="6"></textarea>
                         </div>
                         <div class="form-gp">
-                            <!-- <input type="file" id="file3"> -->
                             <div class="file-upload">
                                 <input type="button" id="file" value="檔案上傳">
-                                <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                                <span>文化藝術事業分離課稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
                             </div>
                             <ul class="ps">
                                 <li>只接受指定格式（pdf、png、jpg、jpeg、bmp）</li>
+                                <li>檔案請小於20MB</li>
+                            </ul>
+                        </div>
+                        <div class="form-gp">
+                            <div class="label-withButton">
+                                <label for="exhibition_list">展品清冊<span class="notice">*</span></label>
+                                <a href="" class="download-sample" download=""><i class="fas fa-paperclip"></i>範本下載</a>
+                            </div>
+                            <!-- <input type="file" id="file3"> -->
+                            <div class="file-upload">
+                                <input type="button" id="exhibition_list" value="檔案上傳">
+                                <span>文化藝術事業分離課稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <ul class="ps">
+                                <li>請確認此展品清冊是否與現場展出作品相符</li>
+                                <li>只接受指定格式（xls、xlsx）</li>
                                 <li>檔案請小於20MB</li>
                             </ul>
                         </div>
@@ -82,8 +97,9 @@
                         <input type="button" value="取消" class="outline">
                         <input type="button" value="暫存" class="outline">
                         <input type="button" value="上一步" class="outline"
-                            onclick="location.href='tax-break-apply-performance1.html'">
-                        <input type="button" value="預覽提交" onclick="location.href='tax-break-apply-performance4.html'">
+                            onclick="location.href='separate-taxation-apply-exhibition1.html'">
+                        <input type="button" value="下一步"
+                            onclick="location.href='separate-taxation-apply-exhibition3.html'">
                     </div>
                 </form>
             </div>

@@ -6,7 +6,7 @@
   /* Firefox */
 }
 * .container {
-  width: 1110px;
+  width: 1140px;
   margin: auto;
   padding: 24px 0;
 }
@@ -189,6 +189,7 @@
 }
 * fieldset[disabled] input,
 * fieldset[disabled] select,
+* fieldset[disabled] .select2-container--default .select2-selection--single,
 * fieldset[disabled] textarea,
 * fieldset[disabled] .session input,
 * fieldset[disabled] .session select {
@@ -537,7 +538,7 @@
 }
 * .modal-template .modal-dialog .modal-content .modal-body.session-table {
   overflow-y: scroll;
-  height: 65vh;
+  height: 60vh;
 }
 @media (max-width: 568px) {
   * .modal-template .modal-dialog .modal-content .modal-body.session-table {
@@ -1044,7 +1045,7 @@ body .navbar .pc {
 }
 body .navbar .pc .top {
   width: 100%;
-  max-width: 1110px;
+  max-width: 1140px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1136,7 +1137,7 @@ body .navbar .pc .bottom {
   color: white;
 }
 body .navbar .pc .bottom .nav-gp {
-  width: 1110px;
+  width: 1140px;
   display: flex;
   margin: auto;
 }
@@ -2691,7 +2692,8 @@ body main .content-normal h5 {
   margin-bottom: 8px;
 }
 body main .section-banner {
-  max-width: 1110px;
+  width: 100%;
+  max-width: 1140px;
   margin: auto;
   display: block !important;
   background-color: white !important;
@@ -2782,6 +2784,11 @@ body main .content-type .taxbreak-gp {
   justify-content: space-between;
   margin-top: 20px;
 }
+@media (max-width: 768px) {
+  body main .content-type .taxbreak-gp {
+    justify-content: start;
+  }
+}
 body main .content-type .taxbreak-gp .block {
   width: 18%;
   border: solid 1px #a19163;
@@ -2794,17 +2801,22 @@ body main .content-type .taxbreak-gp .block {
 }
 @media (max-width: 768px) {
   body main .content-type .taxbreak-gp .block {
-    width: 48%;
+    width: 30%;
     margin-bottom: 20px;
+    margin-right: 20px;
   }
 }
 @media (max-width: 568px) {
   body main .content-type .taxbreak-gp .block {
     width: 100%;
+    margin-right: 0;
   }
   body main .content-type .taxbreak-gp .block:last-child {
     margin-bottom: 0;
   }
+}
+body main .content-type .taxbreak-gp .block a {
+  line-height: 2;
 }
 body main .content-type .taxbreak-gp .block .top {
   width: 100%;
@@ -2871,9 +2883,7 @@ body main .content-type .taxbreak-gp .block .bottom .info ul.number {
 body main .content-type .taxbreak-gp .block .bottom .info ul.number li {
   list-style-type: decimal;
   color: #595757;
-}
-body main .content-type .taxbreak-gp .block .bottom .btn-gp a {
-  margin-bottom: 4px !important;
+  line-height: 2;
 }
 body main .content-type .taxbreak-gp .block .bottom .btn-gp .apply {
   display: block;
@@ -2894,6 +2904,25 @@ body main .content-type .taxbreak-gp .block .bottom button {
   width: 100%;
   margin: 0;
   margin-top: 12px;
+}
+body main .content-type .separate-taxation {
+  justify-content: start;
+}
+body main .content-type .separate-taxation .block {
+  width: 33%;
+  margin-right: 36px;
+}
+@media (max-width: 768px) {
+  body main .content-type .separate-taxation .block {
+    width: 30%;
+    margin-right: 20px;
+  }
+}
+@media (max-width: 568px) {
+  body main .content-type .separate-taxation .block {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 body main .content-type .text-gp {
   padding-top: 40px;
@@ -3136,7 +3165,7 @@ body main .content-signup .step .view-gp button {
 }
 body main .content-signup .container {
   padding: 0;
-  max-width: 600px;
+  max-width: 1140px;
 }
 @media (max-width: 568px) {
   body main .content-signup .container {
@@ -3145,17 +3174,17 @@ body main .content-signup .container {
     width: 100%;
   }
 }
-body main .content-signup .container form {
+body main .content-signup form {
   background-color: unset;
 }
-body main .content-signup .container form h3 {
+body main .content-signup form h3 {
   margin-top: 12px;
   margin-bottom: 20px;
 }
-body main .content-signup .container form .type-title {
+body main .content-signup form .type-title {
   margin-bottom: 20px;
 }
-body main .content-signup .container form .type-title h3 {
+body main .content-signup form .type-title h3 {
   padding: 8px 16px;
   padding-left: 0;
   padding-top: 16px;
@@ -3163,24 +3192,24 @@ body main .content-signup .container form .type-title h3 {
   color: #e9c65d;
   margin-top: 0;
 }
-body main .content-signup .container form ul.ps {
+body main .content-signup form ul.ps {
   padding: 16px 0;
   padding-left: 16px;
   margin-bottom: 0;
 }
-body main .content-signup .container form ul.ps li {
+body main .content-signup form ul.ps li {
   list-style-position: outside;
   list-style-type: disc;
   color: #a19163;
   line-height: 1.75;
 }
-body main .content-signup .container form .place-gp {
+body main .content-signup form .place-gp {
   margin-bottom: 20px;
 }
-body main .content-signup .container form .place-gp:last-child {
+body main .content-signup form .place-gp:last-child {
   margin-bottom: 0;
 }
-body main .content-signup .container form .place-gp .place-header {
+body main .content-signup form .place-gp .place-header {
   background-color: #a19163;
   color: white;
   display: flex;
@@ -3188,14 +3217,14 @@ body main .content-signup .container form .place-gp .place-header {
   align-items: center;
   height: 40px;
 }
-body main .content-signup .container form .place-gp .place-header .title {
+body main .content-signup form .place-gp .place-header .title {
   font-size: 1.25rem;
   color: white;
   font-weight: bold;
   padding: 0 16px;
   color: inherit;
 }
-body main .content-signup .container form .place-gp .place-header a {
+body main .content-signup form .place-gp .place-header a {
   color: white;
   line-height: 40px;
   padding: 2px 16px;
@@ -3203,14 +3232,14 @@ body main .content-signup .container form .place-gp .place-header a {
   font-weight: bold;
   color: inherit;
 }
-body main .content-signup .container form .place-gp .place-header a i {
+body main .content-signup form .place-gp .place-header a i {
   margin-right: 8px;
 }
-body main .content-signup .container form .place-gp .place-body {
+body main .content-signup form .place-gp .place-body {
   padding: 24px;
   background-color: rgba(233, 198, 93, 0.075);
 }
-body main .content-signup .container form a.add {
+body main .content-signup form a.add {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3226,14 +3255,14 @@ body main .content-signup .container form a.add {
   color: white;
 }
 @media (max-width: 568px) {
-  body main .content-signup .container form a.add {
+  body main .content-signup form a.add {
     width: 100%;
   }
 }
-body main .content-signup .container form a.add .fas {
+body main .content-signup form a.add .fas {
   margin-right: 12px;
 }
-body main .content-signup .container form a.download-file {
+body main .content-signup form a.download-file {
   font-size: 1rem;
   padding: 8px 16px;
   margin-right: 20px;
@@ -3243,18 +3272,58 @@ body main .content-signup .container form a.download-file {
   color: #a19163;
   margin-top: 8px;
 }
-body main .content-signup .container form a.download-file i {
+body main .content-signup form a.download-file i {
   margin-right: 8px;
 }
-body main .content-signup .container .check-curriculum {
+body main .content-signup .check-curriculum {
   border: solid 1px #0b3259;
   margin-bottom: 36px;
   padding: 12px 16px;
 }
-body main .content-signup .container .check-curriculum .title {
+body main .content-signup .check-curriculum .title {
   font-size: 1.375rem;
   color: #5f4d1c;
   font-weight: bold;
+}
+body main .content-signup .list-container {
+  max-width: 900px;
+  margin: auto;
+}
+@media (max-width: 568px) {
+  body main .content-signup .list-container {
+    margin: 0;
+    max-width: unset;
+    width: 100%;
+  }
+}
+body main .content-signup table td {
+  vertical-align: middle;
+  padding: 8px 12px;
+}
+body main .content-signup table td input[type=button] {
+  padding: 4px 12px !important;
+}
+body main .content-signup table td .file-img {
+  position: relative;
+  display: inline-block;
+}
+body main .content-signup table td .file-img img {
+  width: 100%;
+  height: 100%;
+  max-height: 70px;
+  aspect-ratio: 4/3;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body main .content-signup table td .file-img .close {
+  display: block;
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  opacity: 1;
+}
+body main .content-signup table td .file-img .close i {
+  font-size: 1.125rem;
 }
 body main .content-sign-up-success .container {
   height: inherit;

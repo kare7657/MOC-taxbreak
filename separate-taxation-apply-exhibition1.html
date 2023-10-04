@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>減免稅申請-展覽</title>
+    <title>分離課稅申請-展覽</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
@@ -32,7 +32,7 @@
                 <ul>
                     <li><a href="index.html"><i class="fas fa-home"></i></a></li>
                     <li>></li>
-                    <li><a href="tax-break.html">減免稅申請</a></li>
+                    <li><a href="separate-taxation.html">分離課稅申請</a></li>
                     <li>></li>
                     <li><span>我要申請</span></li>
                 </ul>
@@ -40,20 +40,20 @@
         </div>
         <!-- 我要申請 -->
         <section class="content-signup">
-            <h2>減免稅申請</h2>
+            <h2>分離課稅申請</h2>
             <div class="w-100 text-center">
                 <div class="way">
-                    <img src="img/icon-exhibition.png" alt="減免稅-展覽圖標">
+                    <img src="img/icon-exhibition.png" alt="分離課稅-展覽圖標">
                     <h3>展覽</h3>
                 </div>
             </div>
             <div class="step">
                 <div class="btn-gp">
-                    <a href="tax-break-apply-exhibition1.html" class="btn-step active">基本資料</a>
+                    <a href="separate-taxation-apply-exhibition1.html" class="btn-step active">基本資料</a>
                     <span>></span>
-                    <a href="tax-break-apply-exhibition2.html" class="btn-step">進階資料</a>
+                    <a href="separate-taxation-apply-exhibition2.html" class="btn-step">附件檔案</a>
                     <span>></span>
-                    <a href="tax-break-apply-exhibition3.html" class="btn-step">附件檔案</a>
+                    <a href="separate-taxation-apply-exhibition3.html" class="btn-step">清冊資料</a>
                     <span>></span>
                     <div class="btn-step">預覽提交</div>
                 </div>
@@ -63,6 +63,14 @@
                     <fieldset>
                         <div class="type-title">
                             <h3>基本資料</h3>
+                        </div>
+                        <div class="form-gp">
+                            <label for="separate-taxation-sample">近期減免稅申請案件選擇</label>
+                            <select name="type" id="separate-taxation-sample">
+                                <option value="list1">項目1</option>
+                                <option value="list2">項目2</option>
+                                <option value="list3">項目3</option>
+                            </select>
                         </div>
                         <div class="form-gp">
                             <label for="activity_name">活動名稱<span class="notice">*</span></label>
@@ -76,7 +84,15 @@
                             <label for="activity_content">內容簡介<span class="notice">*</span></label>
                             <textarea name="history" id="activity_content" rows="6"></textarea>
                         </div>
+                        <div class="form-gp">
+                            <label for="activity_type">展覽活動類型<span class="notice">*</span></label>
+                            <textarea name="history" id="activity_type" rows="6"></textarea>
+                            <ul class="ps">
+                                <li>例如：書畫類、古文物類、現代藝術類或當代藝術類⋯等</li>
+                            </ul>
+                        </div>
                     </fieldset>
+
                     <fieldset class="mb-0">
                         <h4>申請認可範圍</h4>
                         <div class="place-gp">
@@ -99,15 +115,11 @@
                                 </div>
                                 <div class="form-gp">
                                     <label for="place_name">場館名稱</label>
-                                    <div class="session view-nobtn">
-                                        <select name="type" id="place_name">
-                                            <option value="list1">項目1</option>
-                                            <option value="list2">項目2</option>
-                                            <option value="list3">項目3</option>
-                                        </select>
-                                        <a href="" class="add" data-toggle="modal" data-target="#modal-place"><i
-                                                class="fas fa-plus-circle"></i>新增地點</a>
-                                    </div>
+                                    <select name="type" id="place_name">
+                                        <option value="list1">項目1</option>
+                                        <option value="list2">項目2</option>
+                                        <option value="list3">項目3</option>
+                                    </select>
                                 </div>
                                 <div class="form-gp datetime">
                                     <div class="item">
@@ -129,80 +141,6 @@
                                     <label for="session">場次</label>
                                     <input type="number" name="session" id="session">
                                 </div>
-                                <div class="form-gp choice">
-                                    <h5>減免項目</h5>
-                                    <div class="item">
-                                        <input type="checkbox" name="taxbreak-item" value="" id="ticket">
-                                        <label for="ticket">
-                                            門票收入
-                                        </label>
-                                    </div>
-                                    <div class="item">
-                                        <input type="checkbox" name="taxbreak-item" value="" id="culture">
-                                        <label for="culture">
-                                            文化勞務收入
-                                        </label>
-                                    </div>
-                                    <div class="item">
-                                        <input type="checkbox" name="taxbreak-item" value="" id="artwork">
-                                        <label for="artwork">
-                                            藝術品銷售收入
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-gp choice">
-                                    <h5>票價</h5>
-                                    <div class="ticket-price">
-                                        <input type="radio" name="ticket-price" value="" id="price1" checked>
-                                        <div class="input-gp input2">
-                                            <input type="text" name="ticket-price" id="price_low" placeholder="最低金額"
-                                                class="">
-                                            <span>~</span>
-                                            <input type="text" name="ticket-price" id="price_high" placeholder="最高金額"
-                                                class="">
-                                        </div>
-                                    </div>
-                                    <div class="ticket-price">
-                                        <input type="radio" name="ticket-price" value="" id="price2">
-                                        <div class="input-gp withbtn">
-                                            <input type="text" name="ticket-price2" id="price_freeFormat"
-                                                placeholder="票價金額">
-                                            <a href="" title="新增票價"><i class="fas fa-plus-circle"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="ticket-price-result">
-                                        <div class="num">300
-                                            <a href="" title="刪除票價"><i class="fas fa-times"></i></a>
-                                        </div>
-                                        <div class="num">600
-                                            <a href="" title="刪除票價"><i class="fas fa-times"></i></a>
-                                        </div>
-                                        <div class="num">900
-                                            <a href="" title="刪除票價"><i class="fas fa-times"></i></a>
-                                        </div>
-                                        <div class="num">1200
-                                            <a href="" title="刪除票價"><i class="fas fa-times"></i></a>
-                                        </div>
-                                    </div>
-                                    <ul class="ps">
-                                        <li>請擇一填寫票價範圍或明列，並請確認所填票價是否包含優待折扣票價、貴賓票價</li>
-                                    </ul>
-                                </div>
-                                <div class="form-gp choice">
-                                    <h5>票種</h5>
-                                    <div class="item">
-                                        <input type="checkbox" name="ticket-type" value="" id="normal">
-                                        <label for="normal">
-                                            一般票
-                                        </label>
-                                    </div>
-                                    <div class="item">
-                                        <input type="checkbox" name="ticket-type" value="" id="vip">
-                                        <label for="vip">
-                                            貴賓票
-                                        </label>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </fieldset>
@@ -218,7 +156,8 @@
                     <div class="btn-tool">
                         <input type="button" value="取消" class="outline">
                         <input type="button" value="暫存" class="outline">
-                        <input type="button" value="下一步" onclick="location.href='tax-break-apply-exhibition2.html'">
+                        <input type="button" value="下一步"
+                            onclick="location.href='separate-taxation-apply-exhibition2.html'">
                     </div>
                 </form>
             </div>

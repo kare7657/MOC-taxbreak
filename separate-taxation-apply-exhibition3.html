@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分離課稅申請-展覽</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                    <li>></li>
+                    <li><a href="separate-taxation.html">分離課稅申請</a></li>
+                    <li>></li>
+                    <li><span>我要申請</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 我要申請 -->
+        <section class="content-signup">
+            <h2>分離課稅申請</h2>
+            <div class="w-100 text-center">
+                <div class="way">
+                    <img src="img/icon-exhibition.png" alt="分離課稅-展覽圖標">
+                    <h3>展覽</h3>
+                </div>
+            </div>
+            <div class="step">
+                <div class="btn-gp">
+                    <a href="separate-taxation-apply-exhibition1.html" class="btn-step">基本資料</a>
+                    <span>></span>
+                    <a href="separate-taxation-apply-exhibition2.html" class="btn-step">附件檔案</a>
+                    <span>></span>
+                    <a href="separate-taxation-apply-exhibition3.html" class="btn-step active">清冊資料</a>
+                    <span>></span>
+                    <div class="btn-step">預覽提交</div>
+                </div>
+            </div>
+            <div class="list-container">
+                <form>
+                    <fieldset>
+                        <div class="type-title">
+                            <h3>清冊資料</h3>
+                        </div>
+                        <div class="form-gp">
+                            <div class="file-upload">
+                                <input type="button" id="file" value="批次上傳拍品圖片">
+                                <span>照片.zip</span>
+                            </div>
+                            <ul class="ps">
+                                <li>只接受壓縮檔格式（ZIP）批次上傳</li>
+                                <li>拍品圖片檔案命名須與拍品序號一致</li>
+                                <li>拍品序號需不能重覆，以免檔案覆蓋</li>
+                                <li>拍品圖片只接受指定格式（png、jpg、jpeg），每個圖片檔案請小於 6MB</li>
+                            </ul>
+                        </div>
+                        <table class="table-default mb-separate">
+                            <thead>
+                                <tr>
+                                    <th>序號</th>
+                                    <th>作品名稱</th>
+                                    <th>作者</th>
+                                    <th>作品尺寸</th>
+                                    <th>作品媒材</th>
+                                    <th>年代</th>
+                                    <th>預估價</th>
+                                    <th style="width: 10%;">是否申請分離課稅</th>
+                                    <th>拍品圖片</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-title="序號">1234</td>
+                                    <td data-title="作品名稱">標題標題標題標題</td>
+                                    <td data-title="作者">某某某</td>
+                                    <td data-title="作品尺寸">100x100cm</td>
+                                    <td data-title="作品媒材">油畫</td>
+                                    <td data-title="年代">2023</td>
+                                    <td data-title="預估價">123456</td>
+                                    <td data-title="是否申請分離課稅">是</td>
+                                    <td data-title="拍品圖片"><input type="button" id="file2" value="上傳圖片"></td>
+                                </tr>
+                                <tr>
+                                    <td data-title="序號">1234</td>
+                                    <td data-title="作品名稱">標題標題標題標題</td>
+                                    <td data-title="作者">某某某</td>
+                                    <td data-title="作品尺寸">100x100cm</td>
+                                    <td data-title="作品媒材">油畫</td>
+                                    <td data-title="年代">2023</td>
+                                    <td data-title="預估價">123456</td>
+                                    <td data-title="是否申請分離課稅">是</td>
+                                    <td data-title="拍品圖片"><input type="button" id="file3" value="上傳圖片"></td>
+                                </tr>
+                                <tr>
+                                    <td data-title="序號">1234</td>
+                                    <td data-title="作品名稱">標題標題標題標題</td>
+                                    <td data-title="作者">某某某</td>
+                                    <td data-title="作品尺寸">100x100cm</td>
+                                    <td data-title="作品媒材">油畫</td>
+                                    <td data-title="年代">2023</td>
+                                    <td data-title="預估價">123456</td>
+                                    <td data-title="是否申請分離課稅">是</td>
+                                    <td data-title="拍品圖片">
+                                        <div class="file-img">
+                                            <img src="img/icon-exhibition.png" alt="">
+                                            <a href="" class="close"><i class="fas fa-times-circle"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-title="序號">1234</td>
+                                    <td data-title="作品名稱">標題標題標題標題</td>
+                                    <td data-title="作者">某某某</td>
+                                    <td data-title="作品尺寸">100x100cm</td>
+                                    <td data-title="作品媒材">油畫</td>
+                                    <td data-title="年代">2023</td>
+                                    <td data-title="預估價">123456</td>
+                                    <td data-title="是否申請分離課稅">是</td>
+                                    <td data-title="拍品圖片">
+                                        <div class="file-img">
+                                            <img src="img/icon-auction.png" alt="">
+                                            <a href="" class="close"><i class="fas fa-times-circle"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+
+                    <div class="btn-tool">
+                        <input type="button" value="取消" class="outline">
+                        <input type="button" value="暫存" class="outline">
+                        <input type="button" value="上一步" class="outline"
+                            onclick="location.href='separate-taxation-apply-exhibition1.html'">
+                        <input type="button" value="預覽提交"
+                            onclick="location.href='separate-taxation-apply-exhibition4.html'">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+</body>
+
+</html>

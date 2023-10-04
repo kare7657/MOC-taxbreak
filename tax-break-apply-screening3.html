@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>減免稅申請-展覽</title>
+    <title>減免稅申請-映演</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
@@ -43,47 +43,49 @@
             <h2>減免稅申請</h2>
             <div class="w-100 text-center">
                 <div class="way">
-                    <img src="img/icon-exhibition.png" alt="減免稅-展覽圖標">
-                    <h3>展覽</h3>
+                    <img src="img/icon-screening.png" alt="減免稅-映演圖標">
+                    <h3>映演</h3>
                 </div>
             </div>
             <div class="step">
                 <div class="btn-gp">
-                    <a href="tax-break-apply-exhibition1.html" class="btn-step active">基本資料</a>
+                    <a href="tax-break-apply-screening1.html" class="btn-step">基本資料</a>
                     <span>></span>
-                    <a href="tax-break-apply-exhibition2.html" class="btn-step">進階資料</a>
+                    <a href="tax-break-apply-screening2.html" class="btn-step">附件檔案</a>
                     <span>></span>
-                    <a href="tax-break-apply-exhibition3.html" class="btn-step">附件檔案</a>
-                    <span>></span>
-                    <div class="btn-step">預覽提交</div>
+                    <div class="btn-step active">預覽提交</div>
                 </div>
             </div>
             <div class="container">
-                <form>
-                    <fieldset>
+                <form class="view">
+                    <fieldset disabled>
                         <div class="type-title">
                             <h3>基本資料</h3>
                         </div>
                         <div class="form-gp">
                             <label for="activity_name">活動名稱<span class="notice">*</span></label>
-                            <input type="text" name="activity_name" id="activity_name">
+                            <input type="text" name="activity_name" id="activity_name" placeholder="test">
                         </div>
                         <div class="form-gp">
                             <label for="activity_purpose">辦理目的<span class="notice">*</span></label>
-                            <textarea name="activity_purpose" id="activity_purpose" rows="6"></textarea>
+                            <textarea name="activity_purpose" id="activity_purpose" rows="6"
+                                placeholder="test"></textarea>
                         </div>
                         <div class="form-gp">
                             <label for="activity_content">內容簡介<span class="notice">*</span></label>
-                            <textarea name="history" id="activity_content" rows="6"></textarea>
+                            <textarea name="history" id="activity_content" rows="6" placeholder="test"></textarea>
                         </div>
                     </fieldset>
-                    <fieldset class="mb-0">
+                    <fieldset disabled>
                         <h4>申請認可範圍</h4>
                         <div class="place-gp">
+                            <div class="place-header">
+                                <span class="title">地點 1</span>
+                            </div>
                             <div class="place-body">
                                 <div class="form-gp">
                                     <label for="activity_area">活動區域<span class="notice">*</span></label>
-                                    <select class="select2" id="activity_area">
+                                    <select class="select2" id="activity_area" disabled>
                                         <option value="list1">項目1</option>
                                         <option value="list2">項目2</option>
                                         <option value="list3">項目3</option>
@@ -91,7 +93,7 @@
                                 </div>
                                 <div class="form-gp">
                                     <label for="activity_place">活動地點<span class="notice">*</span></label>
-                                    <select class="select2" id="activity_place">
+                                    <select class="select2" id="activity_place" disabled>
                                         <option value="list1">項目1</option>
                                         <option value="list2">項目2</option>
                                         <option value="list3">項目3</option>
@@ -105,8 +107,6 @@
                                             <option value="list2">項目2</option>
                                             <option value="list3">項目3</option>
                                         </select>
-                                        <a href="" class="add" data-toggle="modal" data-target="#modal-place"><i
-                                                class="fas fa-plus-circle"></i>新增地點</a>
                                     </div>
                                 </div>
                                 <div class="form-gp datetime">
@@ -114,84 +114,46 @@
                                         <label for="start-date">開始日期</label>
                                         <div class="date-gp date-icon">
                                             <input type="text" class="mb-nokeyboard western-date date-icon"
-                                                id="start-date" data-toggle="datepicker">
+                                                id="start-date" data-toggle="datepicker" placeholder="2023-09-01">
                                         </div>
                                     </div>
                                     <div class="item">
                                         <label for="end-date">結束日期</label>
                                         <div class="date-gp date-icon">
                                             <input type="text" class="mb-nokeyboard western-date date-icon"
-                                                id="end-date" data-toggle="datepicker">
+                                                id="end-date" data-toggle="datepicker" placeholder="2023-10-25">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-gp">
                                     <label for="session">場次</label>
-                                    <input type="number" name="session" id="session">
-                                </div>
-                                <div class="form-gp choice">
-                                    <h5>減免項目</h5>
-                                    <div class="item">
-                                        <input type="checkbox" name="taxbreak-item" value="" id="ticket">
-                                        <label for="ticket">
-                                            門票收入
-                                        </label>
-                                    </div>
-                                    <div class="item">
-                                        <input type="checkbox" name="taxbreak-item" value="" id="culture">
-                                        <label for="culture">
-                                            文化勞務收入
-                                        </label>
-                                    </div>
-                                    <div class="item">
-                                        <input type="checkbox" name="taxbreak-item" value="" id="artwork">
-                                        <label for="artwork">
-                                            藝術品銷售收入
-                                        </label>
-                                    </div>
+                                    <input type="number" name="session" id="session" placeholder="20">
+
                                 </div>
                                 <div class="form-gp choice">
                                     <h5>票價</h5>
-                                    <div class="ticket-price">
-                                        <input type="radio" name="ticket-price" value="" id="price1" checked>
-                                        <div class="input-gp input2">
-                                            <input type="text" name="ticket-price" id="price_low" placeholder="最低金額"
-                                                class="">
-                                            <span>~</span>
-                                            <input type="text" name="ticket-price" id="price_high" placeholder="最高金額"
-                                                class="">
+                                    <div class="ticket-price-result">
+                                        <div class="num">300
                                         </div>
-                                    </div>
-                                    <div class="ticket-price">
-                                        <input type="radio" name="ticket-price" value="" id="price2">
-                                        <div class="input-gp withbtn">
-                                            <input type="text" name="ticket-price2" id="price_freeFormat"
-                                                placeholder="票價金額">
-                                            <a href="" title="新增票價"><i class="fas fa-plus-circle"></i></a>
+                                        <div class="num">600
+                                        </div>
+                                        <div class="num">900
+                                        </div>
+                                        <div class="num">1200
                                         </div>
                                     </div>
                                     <div class="ticket-price-result">
                                         <div class="num">300
-                                            <a href="" title="刪除票價"><i class="fas fa-times"></i></a>
                                         </div>
-                                        <div class="num">600
-                                            <a href="" title="刪除票價"><i class="fas fa-times"></i></a>
-                                        </div>
-                                        <div class="num">900
-                                            <a href="" title="刪除票價"><i class="fas fa-times"></i></a>
-                                        </div>
+                                        <span>~</span>
                                         <div class="num">1200
-                                            <a href="" title="刪除票價"><i class="fas fa-times"></i></a>
                                         </div>
                                     </div>
-                                    <ul class="ps">
-                                        <li>請擇一填寫票價範圍或明列，並請確認所填票價是否包含優待折扣票價、貴賓票價</li>
-                                    </ul>
                                 </div>
                                 <div class="form-gp choice">
                                     <h5>票種</h5>
                                     <div class="item">
-                                        <input type="checkbox" name="ticket-type" value="" id="normal">
+                                        <input type="checkbox" name="ticket-type" value="" id="normal" checked>
                                         <label for="normal">
                                             一般票
                                         </label>
@@ -206,19 +168,23 @@
                             </div>
                         </div>
                     </fieldset>
-                    <!-- <div class="form-gp choice">
-                        <div class="item">
-                            <input type="checkbox" value="" id="private-agree">
-                            <label for="private-agree">
-                                <span>我同意</span> <a href="#" target="_blank" data-toggle="modal"
-                                    data-target="#modal-clause-taxBreak">線上申請同意條款</a><span class="notice">*</span>
-                            </label>
+                    <fieldset disabled>
+                        <div class="type-title">
+                            <h3>附件檔案</h3>
                         </div>
-                    </div> -->
+                        <div class="form-gp">
+                            <label for="activity_planning">活動計劃書<span class="notice">*</span></label>
+                            <textarea name="activity_planning" id="activity_planning" rows="6"></textarea>
+                            <a href="" download="" class="download-file"><i class="fas fa-paperclip"></i>檔案下載</a>
+                        </div>
+                    </fieldset>
+
                     <div class="btn-tool">
                         <input type="button" value="取消" class="outline">
                         <input type="button" value="暫存" class="outline">
-                        <input type="button" value="下一步" onclick="location.href='tax-break-apply-exhibition2.html'">
+                        <input type="button" value="上一步" class="outline"
+                            onclick="location.href='tax-break-apply-screening1.html'">
+                        <input type="button" value="送出申請" data-toggle="modal" data-target="#modal-notify">
                     </div>
                 </form>
             </div>
@@ -227,7 +193,7 @@
         <!-- modal 場次-->
         <div class="modal fade modal-template " id="modal-session" tabindex="-1" role="dialog"
             aria-labelledby="modal-sessionLabel" data-backdrop="static" style=" padding-top: 0;">
-            <form name="fm_ChangPWD" id="fm_session" method="post" action="ChangPWD.jsp" target="frm_ChangPWD">
+            <form name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp" target="frm_ChangPWD">
                 <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -237,7 +203,7 @@
                             <h2 class="modal-title" id="modal-sessionLabel">編輯場次</h2>
                         </div>
                         <div class="modal-body session-table">
-                            <fieldset>
+                            <fieldset disabled>
                                 <div class="text-gp">
                                     <span>快速填入：每日</span>
                                     <input type="number">
@@ -720,50 +686,27 @@
             </form>
         </div>
 
-        <!-- modal 地點-->
-        <div class="modal fade modal-template " id="modal-place" tabindex="-1" role="dialog"
-            aria-labelledby="modal-placeLabel" data-backdrop="static" style=" padding-top: 0;">
-            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD" method="post" target="frm_ChangPWD">
-                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <!-- modal 提示-->
+        <div class="modal fade modal-template " id="modal-notify" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <h2 class="modal-title" id="modal-placeLabel">新增地點</h2>
+                            <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
                         </div>
                         <div class="modal-body">
-                            <div class="form-gp">
-                                <label for="activity_area2">活動區域<span class="notice">*</span></label>
-                                <div class="address">
-                                    <select name="type" id="activity_area2">
-                                        <option value="list1">縣市</option>
-                                        <option value="list2">選單2</option>
-                                        <option value="list3">選單3</option>
-                                    </select>
-                                    <select name="type" id="activity_area3">
-                                        <option value="list1">區域</option>
-                                        <option value="list2">選單2</option>
-                                        <option value="list3">選單3</option>
-                                    </select>
-                                </div>
+                            <div class="notify-gp">
+                                <p>請輸入活動名稱</p>
+                                <p>請輸入辦理目的</p>
+                                <p class="notice">申請認可範圍1 發現錯誤</p>
                             </div>
-                            <div class="form-gp">
-                                <label for="activity_place2">活動地點<span class="notice">*</span></label>
-                                <input type="text" name="activity_place2" id="activity_place2">
-                            </div>
-                            <div class="form-gp">
-                                <label for="place_name2">場館名稱</label>
-                                <input type="text" name="place_name2" id="place_name2">
-                            </div>
-                            <div class="form-gp">
-                                <label for="place_address">地址</label>
-                                <input type="text" name="place_address" id="place_address">
-                            </div>
-
                         </div>
                         <div class="modal-footer">
-                            <button type="button" name="cancel" id="cancel2" data-dismiss="modal">取消</button>
                             <button type="submit" name="go" id="go2">確認</button>
 
                         </div>
@@ -771,40 +714,8 @@
                 </div>
             </form>
         </div>
-        <!-- modal 條款-->
-        <div class="modal fade modal-template " id="modal-clause-taxBreak" tabindex="-1" role="dialog"
-            aria-labelledby="modal-clauseLabel" data-backdrop="static" style=" padding-top: 0;">
-            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
-                target="frm_ChangPWD">
-                <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button> -->
-                            <h2 class="modal-title" id="modal-clauseLabel">線上申請同意條款</h2>
-                        </div>
-                        <div class="modal-body">
-                            <div class="iframe-gp">
-                                <iframe src="clause-tax-break-apply.html"></iframe>
-                                <div class="form-gp choice">
-                                    <div class="item">
-                                        <input type="checkbox" value="" id="private-agree2">
-                                        <label for="private-agree2">
-                                            我已完全閱讀並同意以上內容<span class="notice">*</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" name="cancel" id="cancel4" data-dismiss="modal">下一步</button>
 
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
+
     </main>
     <!-- footer -->
     <footer id="footer"></footer>
@@ -831,14 +742,6 @@
             $("#header").load('header.html');
             $("#footer").load("footer.html");
         });
-    </script>
-
-    <!-- modal -->
-    <script>
-        //進頁開啟條款
-        $(window).ready(() => {
-            $('#modal-clause-taxBreak').modal('show');
-        })
     </script>
 
     <!-- select2 -->
@@ -975,6 +878,7 @@
             $('.bs-timepicker').timepicker();
         });
     </script>
+
 </body>
 
 </html>

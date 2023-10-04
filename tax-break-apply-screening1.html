@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>減免稅申請-展覽</title>
+    <title>減免稅申請-映演</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
@@ -43,17 +43,15 @@
             <h2>減免稅申請</h2>
             <div class="w-100 text-center">
                 <div class="way">
-                    <img src="img/icon-exhibition.png" alt="減免稅-展覽圖標">
-                    <h3>展覽</h3>
+                    <img src="img/icon-screening.png" alt="減免稅-映演圖標">
+                    <h3>映演</h3>
                 </div>
             </div>
             <div class="step">
                 <div class="btn-gp">
-                    <a href="tax-break-apply-exhibition1.html" class="btn-step active">基本資料</a>
+                    <a href="tax-break-apply-screening1.html" class="btn-step active">基本資料</a>
                     <span>></span>
-                    <a href="tax-break-apply-exhibition2.html" class="btn-step">進階資料</a>
-                    <span>></span>
-                    <a href="tax-break-apply-exhibition3.html" class="btn-step">附件檔案</a>
+                    <a href="tax-break-apply-screening2.html" class="btn-step">附件檔案</a>
                     <span>></span>
                     <div class="btn-step">預覽提交</div>
                 </div>
@@ -80,6 +78,10 @@
                     <fieldset class="mb-0">
                         <h4>申請認可範圍</h4>
                         <div class="place-gp">
+                            <div class="place-header">
+                                <span class="title">地點 1</span>
+                                <a href="" title="刪除映演演地點"><i class="fas fa-minus-circle"></i>刪除</a>
+                            </div>
                             <div class="place-body">
                                 <div class="form-gp">
                                     <label for="activity_area">活動區域<span class="notice">*</span></label>
@@ -128,27 +130,6 @@
                                 <div class="form-gp">
                                     <label for="session">場次</label>
                                     <input type="number" name="session" id="session">
-                                </div>
-                                <div class="form-gp choice">
-                                    <h5>減免項目</h5>
-                                    <div class="item">
-                                        <input type="checkbox" name="taxbreak-item" value="" id="ticket">
-                                        <label for="ticket">
-                                            門票收入
-                                        </label>
-                                    </div>
-                                    <div class="item">
-                                        <input type="checkbox" name="taxbreak-item" value="" id="culture">
-                                        <label for="culture">
-                                            文化勞務收入
-                                        </label>
-                                    </div>
-                                    <div class="item">
-                                        <input type="checkbox" name="taxbreak-item" value="" id="artwork">
-                                        <label for="artwork">
-                                            藝術品銷售收入
-                                        </label>
-                                    </div>
                                 </div>
                                 <div class="form-gp choice">
                                     <h5>票價</h5>
@@ -206,6 +187,9 @@
                             </div>
                         </div>
                     </fieldset>
+                    <div class="form-gp">
+                        <a href="" class="add"><i class="fas fa-plus-circle"></i>新增映演地點</a>
+                    </div>
                     <!-- <div class="form-gp choice">
                         <div class="item">
                             <input type="checkbox" value="" id="private-agree">
@@ -218,7 +202,7 @@
                     <div class="btn-tool">
                         <input type="button" value="取消" class="outline">
                         <input type="button" value="暫存" class="outline">
-                        <input type="button" value="下一步" onclick="location.href='tax-break-apply-exhibition2.html'">
+                        <input type="button" value="下一步" onclick="location.href='tax-break-apply-screening2.html'">
                     </div>
                 </form>
             </div>
