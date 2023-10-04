@@ -366,7 +366,7 @@ body {
                     margin-bottom: $m-XS;
                 }
                 a {
-                    line-height: 2;
+                    line-height: 2.15;
                     display: inline-block;
                     width: auto;
                 }
@@ -522,7 +522,7 @@ body {
                 }
                 .btn-gp {
                     width: 100%;
-                    max-width: 600px;
+                    max-width: 800px;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -545,7 +545,7 @@ body {
                 }
                 .view-gp {
                     width: 100%;
-                    max-width: 600px;
+                    max-width: 800px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -577,7 +577,7 @@ body {
             }
             .container {
                 padding: 0;
-                max-width: 1140px;
+                max-width: 800px;
                 @include mobile-L {
                     margin: 0;
                     max-width: unset;

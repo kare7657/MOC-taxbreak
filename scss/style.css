@@ -2934,7 +2934,7 @@ body main .content-type .text-gp h3 {
   margin-bottom: 12px;
 }
 body main .content-type .text-gp a {
-  line-height: 2;
+  line-height: 2.15;
   display: inline-block;
   width: auto;
 }
@@ -3106,7 +3106,7 @@ body main .content-signup .step {
 }
 body main .content-signup .step .btn-gp {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -3131,7 +3131,7 @@ body main .content-signup .step .btn-gp .btn-step.active {
 }
 body main .content-signup .step .view-gp {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3165,7 +3165,7 @@ body main .content-signup .step .view-gp button {
 }
 body main .content-signup .container {
   padding: 0;
-  max-width: 1140px;
+  max-width: 800px;
 }
 @media (max-width: 568px) {
   body main .content-signup .container {
