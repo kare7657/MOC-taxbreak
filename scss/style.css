@@ -404,8 +404,8 @@
   left: 2px;
 }
 * .custom-control-input:checked ~ .custom-control-label::before {
-  border-color: #89CB4B;
-  background-color: #89CB4B;
+  border-color: #89cb4b;
+  background-color: #89cb4b;
 }
 * button {
   height: 40px;
@@ -610,6 +610,7 @@
 * .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default tbody td {
   width: 14.2%;
   background-color: white;
+  padding: 8px 8px;
 }
 * .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default tbody td p {
   margin-bottom: 0;
@@ -2334,7 +2335,6 @@ body .table-default.ellipsis-table {
 body .table-default table,
 body .table-default th,
 body .table-default td {
-  padding: 8px 8px;
   text-align: center;
   border: solid 1px rgba(161, 145, 99, 0.4);
 }
@@ -2355,6 +2355,7 @@ body .table-default tr:nth-child(even) {
 }
 body .table-default tr th {
   text-align: center;
+  padding: 12px 8px;
 }
 @media (max-width: 568px) {
   body .table-default tr th.ellipsis-th {
@@ -2368,6 +2369,7 @@ body .table-default tr td {
   word-break: break-all;
   text-overflow: ellipsis;
   overflow: hidden;
+  padding: 24px 8px;
 }
 @media (max-width: 568px) {
   body .table-default tr td {
@@ -2520,6 +2522,7 @@ body .searchbar select {
 }
 body .searchbar .search-icon {
   position: relative;
+  margin-right: 20px;
 }
 @media (max-width: 768px) {
   body .searchbar .search-icon {
@@ -2532,7 +2535,7 @@ body .searchbar .search-icon {
   }
 }
 body .searchbar .search-icon input[type=search] {
-  width: 150px;
+  width: 180px;
   padding: 2px 8px;
   border-radius: 4px;
   border: solid 1px #9fa0a0;
@@ -2546,20 +2549,6 @@ body .searchbar .search-icon input[type=search] {
 @media (max-width: 568px) {
   body .searchbar .search-icon input[type=search] {
     padding: 5px 8px;
-  }
-}
-body .searchbar .search-icon input[type=search]:focus {
-  width: 180px;
-  transition: 0.5s;
-}
-@media (max-width: 768px) {
-  body .searchbar .search-icon input[type=search]:focus {
-    width: 100%;
-  }
-}
-@media (max-width: 568px) {
-  body .searchbar .search-icon input[type=search]:focus {
-    width: 100%;
   }
 }
 body .searchbar .search-icon::after {
@@ -2738,22 +2727,21 @@ body main .section-fastlink .btn-gp .btn-type {
   }
 }
 body main .section-fastlink .btn-gp .btn-type img {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   -o-object-fit: contain;
      object-fit: contain;
   margin-bottom: 12px;
 }
 @media (max-width: 768px) {
   body main .section-fastlink .btn-gp .btn-type img {
-    width: 70px;
-    height: 70px;
+    width: 40px;
+    height: 40px;
   }
 }
 @media (max-width: 568px) {
   body main .section-fastlink .btn-gp .btn-type img {
-    width: 60px;
-    height: 60px;
+    margin-bottom: 8px;
   }
 }
 body main .section-fastlink .btn-gp .btn-type h3 {
@@ -2764,6 +2752,7 @@ body main .section-fastlink .btn-gp .btn-type .type {
   padding: 4px 16px;
   border-radius: 6px;
   font-size: 0.875rem;
+  color: #5f4d1c;
 }
 body main .content-type a {
   display: inline-block;
@@ -2821,8 +2810,7 @@ body main .content-type .taxbreak-gp .block a {
 body main .content-type .taxbreak-gp .block .top {
   width: 100%;
   text-align: center;
-  border-bottom: solid 1px #88753f;
-  padding: 24px 16px;
+  padding: 20px 16px;
 }
 @media (max-width: 568px) {
   body main .content-type .taxbreak-gp .block .top {
@@ -2830,24 +2818,12 @@ body main .content-type .taxbreak-gp .block .top {
   }
 }
 body main .content-type .taxbreak-gp .block .top img {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   -o-object-fit: contain;
      object-fit: contain;
-  margin-top: 12px;
-  margin-bottom: 16px;
-}
-@media (max-width: 768px) {
-  body main .content-type .taxbreak-gp .block .top img {
-    width: 70px;
-    height: 70px;
-  }
-}
-@media (max-width: 568px) {
-  body main .content-type .taxbreak-gp .block .top img {
-    width: 60px;
-    height: 60px;
-  }
+  margin-top: 8px;
+  margin-bottom: 12px;
 }
 body main .content-type .taxbreak-gp .block .bottom {
   width: 100%;
@@ -2904,6 +2880,76 @@ body main .content-type .taxbreak-gp .block .bottom button {
   width: 100%;
   margin: 0;
   margin-top: 12px;
+}
+body main .content-type .taxbreak-gp .block.performance {
+  border: solid 1px #b05f4f;
+}
+body main .content-type .taxbreak-gp .block.performance .top {
+  background-color: #b05f4f;
+  border-radius: 10px 10px 0 0;
+}
+body main .content-type .taxbreak-gp .block.performance .top h3 {
+  color: white;
+}
+body main .content-type .taxbreak-gp .block.performance .bottom button,
+body main .content-type .taxbreak-gp .block.performance .bottom .apply {
+  background-color: #b05f4f;
+}
+body main .content-type .taxbreak-gp .block.exhibition {
+  border: solid 1px #518212;
+}
+body main .content-type .taxbreak-gp .block.exhibition .top {
+  background-color: #518212;
+  border-radius: 10px 10px 0 0;
+}
+body main .content-type .taxbreak-gp .block.exhibition .top h3 {
+  color: white;
+}
+body main .content-type .taxbreak-gp .block.exhibition .bottom button,
+body main .content-type .taxbreak-gp .block.exhibition .bottom .apply {
+  background-color: #518212;
+}
+body main .content-type .taxbreak-gp .block.screening {
+  border: solid 1px #4e74c1;
+}
+body main .content-type .taxbreak-gp .block.screening .top {
+  background-color: #4e74c1;
+  border-radius: 10px 10px 0 0;
+}
+body main .content-type .taxbreak-gp .block.screening .top h3 {
+  color: white;
+}
+body main .content-type .taxbreak-gp .block.screening .bottom button,
+body main .content-type .taxbreak-gp .block.screening .bottom .apply {
+  background-color: #4e74c1;
+}
+body main .content-type .taxbreak-gp .block.auction {
+  border: solid 1px #955ea6;
+}
+body main .content-type .taxbreak-gp .block.auction .top {
+  background-color: #955ea6;
+  border-radius: 10px 10px 0 0;
+}
+body main .content-type .taxbreak-gp .block.auction .top h3 {
+  color: white;
+}
+body main .content-type .taxbreak-gp .block.auction .bottom button,
+body main .content-type .taxbreak-gp .block.auction .bottom .apply {
+  background-color: #955ea6;
+}
+body main .content-type .taxbreak-gp .block.book {
+  border: solid 1px #88753f;
+}
+body main .content-type .taxbreak-gp .block.book .top {
+  background-color: #88753f;
+  border-radius: 10px 10px 0 0;
+}
+body main .content-type .taxbreak-gp .block.book .top h3 {
+  color: white;
+}
+body main .content-type .taxbreak-gp .block.book .bottom button,
+body main .content-type .taxbreak-gp .block.book .bottom .apply {
+  background-color: #88753f;
 }
 body main .content-type .separate-taxation {
   justify-content: start;
@@ -3062,32 +3108,49 @@ body main .content-signup .way {
   border: solid 1px #a19163;
   border-radius: 12px;
   text-align: center;
-  padding: 24px 56px;
+  padding: 24px 64px;
   margin: 12px 12px 36px 12px;
   background-color: white;
   box-shadow: 5px 5px 10px #f7f5f0;
 }
 body main .content-signup .way img {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   -o-object-fit: contain;
      object-fit: contain;
+  margin-top: 4px;
   margin-bottom: 12px;
-}
-@media (max-width: 768px) {
-  body main .content-signup .way img {
-    width: 70px;
-    height: 70px;
-  }
-}
-@media (max-width: 568px) {
-  body main .content-signup .way img {
-    width: 60px;
-    height: 60px;
-  }
 }
 body main .content-signup .way h3 {
   margin-bottom: 0;
+}
+body main .content-signup .way.performance {
+  background-color: #b05f4f;
+  border: none;
+}
+body main .content-signup .way.performance h3 {
+  color: white;
+}
+body main .content-signup .way.exhibition {
+  background-color: #518212;
+  border: none;
+}
+body main .content-signup .way.exhibition h3 {
+  color: white;
+}
+body main .content-signup .way.screening {
+  background-color: #4e74c1;
+  border: none;
+}
+body main .content-signup .way.screening h3 {
+  color: white;
+}
+body main .content-signup .way.auction {
+  background-color: #955ea6;
+  border: none;
+}
+body main .content-signup .way.auction h3 {
+  color: white;
 }
 body main .content-signup .step {
   width: 100%;
@@ -3106,7 +3169,7 @@ body main .content-signup .step {
 }
 body main .content-signup .step .btn-gp {
   width: 100%;
-  max-width: 800px;
+  max-width: 1140px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -3165,7 +3228,7 @@ body main .content-signup .step .view-gp button {
 }
 body main .content-signup .container {
   padding: 0;
-  max-width: 800px;
+  max-width: 1140px;
 }
 @media (max-width: 568px) {
   body main .content-signup .container {
@@ -3497,7 +3560,7 @@ body main .content-member .container .case-list table tbody tr td .function {
   }
 }
 body main .content-member .container .case-list table tbody tr td .function a.link {
-  margin-right: 12px !important;
+  margin-right: 20px !important;
 }
 @media (max-width: 568px) {
   body main .content-member .container .case-list table tbody tr td .function a.link {
@@ -3518,13 +3581,14 @@ body main .content-member .container .case-list table tbody tr td .function a.li
   font-weight: bold;
 }
 body main .content-member .container .case-list table tbody tr td .function a.link i {
-  width: 15px;
   font-size: 0.875rem;
+  margin-right: 2px;
+  text-align: right;
 }
 body main .content-member .container .case-list .bottom {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 @media (max-width: 568px) {
   body main .content-member .container .case-list .bottom {
@@ -3538,8 +3602,6 @@ body main .content-member .container .case-list .bottom {
 }
 body main .content-member .container .case-list .bottom .btn-gp button {
   font-size: 1rem;
-  height: 33px;
-  padding: 0 12px;
   margin-right: 8px;
 }
 @media (max-width: 568px) {
