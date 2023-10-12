@@ -26,7 +26,7 @@
   }
 }
 * h1 {
-  font-size: 1.625rem;
+  font-size: 1.875rem;
   color: black;
   padding: 0;
   margin: 0;
@@ -34,7 +34,7 @@
   font-weight: bold;
 }
 * h2 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   color: #88753f;
   padding: 0;
   margin: 0;
@@ -45,7 +45,7 @@
   margin-top: 20px;
 }
 * h3 {
-  font-size: 1.375rem;
+  font-size: 1.5rem;
   color: #88753f;
   padding: 0;
   margin: 0;
@@ -728,7 +728,6 @@
   width: 100%;
   padding: 0;
   display: flex;
-  margin-bottom: 12px;
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
@@ -767,10 +766,6 @@
     width: 100%;
     justify-content: space-between;
     margin-bottom: 15px;
-  }
-}
-@media (max-width: 320px) {
-  * .modal-template .modal-dialog .modal-content .modal-body .code-gp .text-gp .code {
     margin-right: 0;
   }
 }
@@ -1038,6 +1033,7 @@ body .navbar .pc {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  box-shadow: 0 0 10px rgba(136, 117, 63, 0.3);
 }
 @media (max-width: 768px) {
   body .navbar .pc {
@@ -1048,7 +1044,7 @@ body .navbar .pc .top {
   width: 100%;
   max-width: 1140px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 16px 0;
   background-color: white;
@@ -1286,7 +1282,7 @@ body .navbar .mobile .menu .fas.fa-bars {
 }
 @media (max-width: 320px) {
   body .navbar .mobile .menu .fas.fa-bars {
-    font-size: 1.375rem;
+    font-size: 1.5rem;
   }
 }
 body .navbar .mobile .menu ul {
@@ -1699,11 +1695,7 @@ body form {
     max-width: unset;
     width: 100%;
     background-color: transparent;
-  }
-}
-@media (max-width: 568px) {
-  body form {
-    padding: 0 24px;
+    padding: 0;
   }
 }
 body form article {
@@ -2112,6 +2104,7 @@ body form .code-gp .text-gp .code {
   body form .code-gp .text-gp .code {
     width: 100%;
     margin-bottom: 12px;
+    margin-right: 0;
   }
 }
 body form .code-gp .text-gp .RP {
@@ -2183,6 +2176,7 @@ body form .btn-tool input {
 @media (max-width: 568px) {
   body form .btn-tool input {
     width: 100% !important;
+    margin: 0;
     margin-bottom: 12px;
   }
 }
@@ -2369,12 +2363,13 @@ body .table-default tr td {
   word-break: break-all;
   text-overflow: ellipsis;
   overflow: hidden;
-  padding: 24px 8px;
+  padding: 24px 16px;
 }
 @media (max-width: 568px) {
   body .table-default tr td {
     flex-wrap: wrap;
     text-align: left;
+    padding: 12px 8px;
   }
 }
 @media (max-width: 568px) {
@@ -2570,6 +2565,7 @@ body main {
   position: relative;
   padding-top: 155px;
   padding-bottom: 64px;
+  min-height: 747px;
 }
 @media (max-width: 1024px) {
   body main {
@@ -2584,6 +2580,7 @@ body main {
 @media (max-width: 568px) {
   body main {
     padding-bottom: 24px;
+    min-height: unset;
   }
 }
 body main section {
@@ -2591,6 +2588,12 @@ body main section {
 }
 body main .brief-p {
   margin-bottom: 20px;
+}
+body main.nomenu {
+  padding-top: 104px;
+}
+body main.bgc {
+  background-color: #f7f5f0;
 }
 body main.main-clause {
   padding: 0 24px;
@@ -2604,7 +2607,7 @@ body main.main-clause {
 body main .content-webmap .container .list-gp {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
 }
 @media (max-width: 768px) {
   body main .content-webmap .container .list-gp {
@@ -2612,7 +2615,9 @@ body main .content-webmap .container .list-gp {
   }
 }
 body main .content-webmap .container .list-gp .text-gp {
-  width: 18%;
+  width: 23%;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 @media (max-width: 768px) {
   body main .content-webmap .container .list-gp .text-gp {
@@ -2708,51 +2713,88 @@ body main .section-fastlink .btn-gp .btn-type {
   border: solid 1px #a19163;
   border-radius: 12px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 32px;
+  flex-direction: column;
+  padding: 64px 64px;
   background-color: white;
-  box-shadow: 5px 5px 10px #f7f5f0;
+  box-shadow: 5px 5px 10px rgba(161, 145, 99, 0.1);
+}
+@media (max-width: 768px) {
+  body main .section-fastlink .btn-gp .btn-type {
+    padding: 40px 40px;
+  }
 }
 @media (max-width: 568px) {
   body main .section-fastlink .btn-gp .btn-type {
     width: 100%;
     flex-wrap: wrap;
     margin-bottom: 24px;
-    padding: 24px;
+    padding: 32px;
   }
   body main .section-fastlink .btn-gp .btn-type:last-child {
     margin-bottom: 0;
   }
 }
-body main .section-fastlink .btn-gp .btn-type img {
-  width: 50px;
-  height: 50px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  margin-bottom: 12px;
+body main .section-fastlink .btn-gp .btn-type .top {
+  width: 100%;
+}
+body main .section-fastlink .btn-gp .btn-type .top h2 {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 40px;
+  margin-bottom: 48px;
+  border-bottom: solid 1px #dcdddd;
 }
 @media (max-width: 768px) {
-  body main .section-fastlink .btn-gp .btn-type img {
-    width: 40px;
-    height: 40px;
+  body main .section-fastlink .btn-gp .btn-type .top h2 {
+    padding-bottom: 24px;
+    margin-bottom: 36px;
   }
 }
-@media (max-width: 568px) {
-  body main .section-fastlink .btn-gp .btn-type img {
-    margin-bottom: 8px;
+body main .section-fastlink .btn-gp .btn-type .bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: start;
+}
+@media (max-width: 768px) {
+  body main .section-fastlink .btn-gp .btn-type .bottom {
+    justify-content: space-between;
   }
 }
-body main .section-fastlink .btn-gp .btn-type h3 {
-  margin-bottom: 12px;
-}
-body main .section-fastlink .btn-gp .btn-type .type {
+body main .section-fastlink .btn-gp .btn-type .bottom .type {
   background-color: #f7f5f0;
   padding: 4px 16px;
   border-radius: 6px;
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   color: #5f4d1c;
+  width: 27%;
+  margin: 0 12px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  body main .section-fastlink .btn-gp .btn-type .bottom .type {
+    width: 25%;
+  }
+}
+@media (max-width: 768px) {
+  body main .section-fastlink .btn-gp .btn-type .bottom .type {
+    width: 45%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+body main .section-fastlink .btn-gp .btn-type:nth-child(2) {
+  border: solid 1px #518212;
+}
+body main .section-fastlink .btn-gp .btn-type:nth-child(2) h2 {
+  color: #518212;
+}
+body main .section-fastlink .btn-gp .btn-type:nth-child(2) .type {
+  background-color: rgba(81, 130, 18, 0.1);
 }
 body main .content-type a {
   display: inline-block;
@@ -3061,13 +3103,6 @@ body main .content-login .container {
   padding: 0;
   max-width: 600px;
 }
-@media (max-width: 568px) {
-  body main .content-login .container {
-    margin: 0;
-    max-width: unset;
-    width: 100%;
-  }
-}
 body main .content-login .container .form-gp {
   display: flex;
   justify-content: space-between;
@@ -3103,55 +3138,6 @@ body main .content-signup {
 body main .content-signup h2 {
   text-align: center;
 }
-body main .content-signup .way {
-  display: inline-block;
-  border: solid 1px #a19163;
-  border-radius: 12px;
-  text-align: center;
-  padding: 24px 64px;
-  margin: 12px 12px 36px 12px;
-  background-color: white;
-  box-shadow: 5px 5px 10px #f7f5f0;
-}
-body main .content-signup .way img {
-  width: 50px;
-  height: 50px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  margin-top: 4px;
-  margin-bottom: 12px;
-}
-body main .content-signup .way h3 {
-  margin-bottom: 0;
-}
-body main .content-signup .way.performance {
-  background-color: #b05f4f;
-  border: none;
-}
-body main .content-signup .way.performance h3 {
-  color: white;
-}
-body main .content-signup .way.exhibition {
-  background-color: #518212;
-  border: none;
-}
-body main .content-signup .way.exhibition h3 {
-  color: white;
-}
-body main .content-signup .way.screening {
-  background-color: #4e74c1;
-  border: none;
-}
-body main .content-signup .way.screening h3 {
-  color: white;
-}
-body main .content-signup .way.auction {
-  background-color: #955ea6;
-  border: none;
-}
-body main .content-signup .way.auction h3 {
-  color: white;
-}
 body main .content-signup .step {
   width: 100%;
   margin: auto;
@@ -3159,12 +3145,20 @@ body main .content-signup .step {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 36px;
   margin-bottom: 36px;
   padding: 16px 0;
+}
+@media (max-width: 1024px) {
+  body main .content-signup .step {
+    margin-bottom: 0;
+    padding: 16px 32px;
+  }
 }
 @media (max-width: 568px) {
   body main .content-signup .step {
     margin-bottom: 20px;
+    padding: 16px;
   }
 }
 body main .content-signup .step .btn-gp {
@@ -3224,17 +3218,6 @@ body main .content-signup .step .view-gp button {
   }
   body main .content-signup .step .view-gp button:last-child, body main .content-signup .step .view-gp button:nth-last-child(2) {
     margin-bottom: 0;
-  }
-}
-body main .content-signup .container {
-  padding: 0;
-  max-width: 1140px;
-}
-@media (max-width: 568px) {
-  body main .content-signup .container {
-    margin: 0;
-    max-width: unset;
-    width: 100%;
   }
 }
 body main .content-signup form {
@@ -3338,33 +3321,38 @@ body main .content-signup form a.download-file {
 body main .content-signup form a.download-file i {
   margin-right: 8px;
 }
+body main .content-signup form a.btn {
+  background-color: #88753f;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-right: 12px;
+  font-size: 1rem;
+}
+body main .content-signup form a.btn i {
+  margin-right: 8px;
+}
 body main .content-signup .check-curriculum {
   border: solid 1px #0b3259;
   margin-bottom: 36px;
   padding: 12px 16px;
 }
 body main .content-signup .check-curriculum .title {
-  font-size: 1.375rem;
+  font-size: 1.5rem;
   color: #5f4d1c;
   font-weight: bold;
 }
-body main .content-signup .list-container {
-  max-width: 900px;
-  margin: auto;
-}
-@media (max-width: 568px) {
-  body main .content-signup .list-container {
-    margin: 0;
-    max-width: unset;
-    width: 100%;
-  }
-}
 body main .content-signup table td {
   vertical-align: middle;
-  padding: 8px 12px;
 }
 body main .content-signup table td input[type=button] {
-  padding: 4px 12px !important;
+  padding: 4px 8px !important;
+  margin: 0;
+}
+@media (max-width: 568px) {
+  body main .content-signup table td input[type=button] {
+    margin-top: 4px;
+  }
 }
 body main .content-signup table td .file-img {
   position: relative;
@@ -3378,15 +3366,28 @@ body main .content-signup table td .file-img img {
   -o-object-fit: contain;
      object-fit: contain;
 }
+@media (max-width: 568px) {
+  body main .content-signup table td .file-img img {
+    text-align: left;
+    max-height: 100px;
+    margin-top: 8px;
+  }
+}
 body main .content-signup table td .file-img .close {
   display: block;
   position: absolute;
   top: -9px;
-  right: -9px;
+  right: 4.5px;
   opacity: 1;
+  background-color: white;
+  border-radius: 50%;
+  line-height: 18px;
+  padding: 0;
+  margin: 0;
 }
 body main .content-signup table td .file-img .close i {
   font-size: 1.125rem;
+  margin: 0;
 }
 body main .content-sign-up-success .container {
   height: inherit;
@@ -3430,7 +3431,7 @@ body main .content-member .container .member-gp h3 {
   margin-bottom: 0;
 }
 body main .content-member .container .member-gp .block {
-  width: 23%;
+  width: 30%;
   border: solid 1px #a19163;
   border-radius: 12px;
   display: flex;
@@ -3440,7 +3441,7 @@ body main .content-member .container .member-gp .block {
   background-color: white;
   box-shadow: 5px 5px 10px #f7f5f0;
   text-align: center;
-  padding: 24px 16px;
+  padding: 40px 16px;
 }
 @media (max-width: 568px) {
   body main .content-member .container .member-gp .block {

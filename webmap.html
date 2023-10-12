@@ -16,9 +16,9 @@
 
 <body>
     <!-- navbar -->
-    <header id="header"></header>
+    <header id="header-nomenu"></header>
 
-    <main>
+    <main class="nomenu">
         <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
         <!-- breadcrumb -->
         <div class="breadcrumb">
@@ -77,24 +77,30 @@
                         </ul>
                     </div> -->
                     <div class="text-gp">
-                        <a href="tax-break.html" class="title" title="減免稅申請">
-                            減免稅申請
+                        <a href="tax-break.html" class="title" title="申請減免營業稅及娛樂稅">
+                            申請減免營業稅及娛樂稅
                         </a>
 
                     </div>
                     <div class="text-gp">
-                        <a href="separate-taxation.html" class="title" title="分離課稅申請">
-                            分離課稅申請
+                        <a href="separate-taxation.html" class="title" title="申請分離課稅">
+                            申請分離課稅
                         </a>
                     </div>
                     <div class="text-gp">
-                        <a href="download.html" class="title" title="檔案下載">檔案下載</a>
-                    </div>
-                    <div class="text-gp">
-                        <a href="link.html" class="title" title="相關連結">相關連結</a>
-                    </div>
-                    <div class="text-gp">
                         <a href="login.html" class="title" title="會員專區">會員專區</a>
+                    </div>
+                    <div class="text-gp">
+                        <a href="case-manage.html" class="title" title="案件管理">案件管理</a>
+                    </div>
+                    <div class="text-gp">
+                        <a href="regulation.html" class="title" title="相關法規">相關法規</a>
+                    </div>
+                    <div class="text-gp">
+                        <a href="operating-instruction.html" class="title" title="操作說明">操作說明</a>
+                    </div>
+                    <div class="text-gp">
+                        <a href="download.html" class="title" title="檔案下載">檔案下載</a>
                     </div>
                 </div>
             </div>
@@ -114,7 +120,7 @@
     <!-- 引入html header&footer -->
     <script>
         $(function () {
-            $("#header").load('header.html');
+            $("#header-nomenu").load('header-nomenu.html');
             $("#footer").load("footer.html");
         });
     </script>

@@ -37,6 +37,7 @@ body {
         position: relative;
         padding-top: calc(123px + 32px);
         padding-bottom: $p-2L;
+        min-height: 747px;
         @include web-S {
             padding-top: 123px;
         }
@@ -45,12 +46,23 @@ body {
         }
         @include mobile-L {
             padding-bottom: $p-S;
+            min-height: unset;
         }
         section {
             width: 100%;
         }
         .brief-p {
             margin-bottom: $m-S;
+        }
+        &.nomenu {
+            padding-top: calc(72px + 32px);
+            // min-height: 747px;
+            // @include mobile-L {
+            //     min-height: unset;
+            // }
+        }
+        &.bgc {
+            background-color: $primary-table;
         }
         &.main-clause {
             padding: 0 $p-S;
@@ -69,13 +81,15 @@ body {
                 .list-gp {
                     display: flex;
                     flex-wrap: wrap;
-                    justify-content: space-between;
+                    justify-content: start;
                     @include pad {
                         justify-content: start;
                     }
                     .text-gp {
-                        // width: 23%;
-                        width: 18%;
+                        width: 23%;
+                        margin-right: $m-S;
+                        margin-bottom: $m-S;
+                        // width: 18%;
                         @include pad {
                             width: 30%;
                             margin-right: $p-XS;
@@ -172,51 +186,78 @@ body {
                     border: solid 1px $primary-tint;
                     border-radius: 12px;
                     display: flex;
-                    flex-direction: column;
-                    justify-content: center;
                     align-items: center;
-                    padding: $p-M;
+                    flex-direction: column;
+                    padding: $p-2L $p-2L;
                     background-color: white;
-                    box-shadow: 5px 5px 10px $primary-table;
+                    box-shadow: 5px 5px 10px rgba($color: $primary-tint, $alpha: 0.1);
+                    @include pad {
+                        padding: $p-L $p-L;
+                    }
                     @include mobile-L() {
                         width: 100%;
                         flex-wrap: wrap;
                         margin-bottom: $p-S;
-                        padding: $p-S;
+                        padding: $p-M;
                         &:last-child {
                             margin-bottom: 0;
                         }
                     }
-                    img {
-                        width: 50px;
-                        height: 50px;
-                        object-fit: contain;
-                        margin-bottom: $m-XS;
-                        // @include pad {
-                        //     width: 70px;
-                        //     height: 70px;
-                        // }
-                        // @include web-S {
-                        //     width: 50px;
-                        //     height: 50px;
-                        // }
+                    .top {
+                        width: 100%;
+                        h2 {
+                            width: 100%;
+                            text-align: center;
+                            padding-bottom: $p-L;
+                            margin-bottom: $m-L;
+                            border-bottom: solid 1px $bk-20;
+                            @include pad {
+                                padding-bottom: $p-S;
+                                margin-bottom: $m-M;
+                            }
+                            // @include mobile-L {
+                            //     font-size: $size-h3;
+                            // }
+                        }
+                    }
+                    .bottom {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        align-items: start;
+                        align-content: start;
                         @include pad {
-                            width: 40px;
-                            height: 40px;
+                            justify-content: space-between;
                         }
-                        @include mobile-L {
-                            margin-bottom: $p-XXS;
+                        .type {
+                            background-color: $primary-table;
+                            padding: $m-XXS $p-XS;
+                            border-radius: 6px;
+                            font-size: $size-h4;
+                            color: $primary-dark;
+                            width: 27%;
+                            margin: 0 $m-XS;
+                            margin-bottom: $m-S;
+                            text-align: center;
+                            @include web-S {
+                                width: 25%;
+                            }
+                            @include pad {
+                                width: 45%;
+                                margin: 0;
+                                margin-bottom: $m-S;
+                            }
                         }
                     }
-                    h3 {
-                        margin-bottom: $m-XS;
-                    }
-                    .type {
-                        background-color: $primary-table;
-                        padding: $m-XXS $p-XS;
-                        border-radius: 6px;
-                        font-size: $size-caption;
-                        color: $primary-dark;
+                    &:nth-child(2) {
+                        border: solid 1px $exhibition;
+                        h2 {
+                            color: $exhibition;
+                        }
+                        .type {
+                            background-color: rgba($color: $exhibition, $alpha: 0.1);
+                        }
                     }
                 }
             }
@@ -529,11 +570,6 @@ body {
             .container {
                 padding: 0;
                 max-width: 600px;
-                @include mobile-L {
-                    margin: 0;
-                    max-width: unset;
-                    width: 100%;
-                }
                 .form-gp {
                     display: flex;
                     justify-content: space-between;
@@ -566,64 +602,64 @@ body {
             h2 {
                 text-align: center;
             }
-            .way {
-                display: inline-block;
-                border: solid 1px $primary-tint;
-                border-radius: 12px;
-                text-align: center;
-                padding: $p-S $p-2L;
-                margin: $m-XS $m-XS $m-M $m-XS;
-                background-color: white;
-                box-shadow: 5px 5px 10px $primary-table;
-                @include mobile-L() {
-                }
-                img {
-                    width: 50px;
-                    height: 50px;
-                    object-fit: contain;
-                    margin-top: $m-XXS;
-                    margin-bottom: $m-XS;
-                    // @include pad {
-                    //     width: 70px;
-                    //     height: 70px;
-                    // }
-                    // @include mobile-L {
-                    //     width: 60px;
-                    //     height: 60px;
-                    // }
-                }
-                h3 {
-                    margin-bottom: 0;
-                }
-                &.performance {
-                    background-color: $performance;
-                    border: none;
-                    h3 {
-                        color: white;
-                    }
-                }
-                &.exhibition {
-                    background-color: $exhibition;
-                    border: none;
-                    h3 {
-                        color: white;
-                    }
-                }
-                &.screening {
-                    background-color: $screening;
-                    border: none;
-                    h3 {
-                        color: white;
-                    }
-                }
-                &.auction {
-                    background-color: $auction;
-                    border: none;
-                    h3 {
-                        color: white;
-                    }
-                }
-            }
+            // .way {
+            //     display: inline-block;
+            //     border: solid 1px $primary-tint;
+            //     border-radius: 12px;
+            //     text-align: center;
+            //     padding: $p-S $p-2L;
+            //     margin: $m-XS $m-XS $m-M $m-XS;
+            //     background-color: white;
+            //     box-shadow: 5px 5px 10px $primary-table;
+            //     @include mobile-L() {
+            //     }
+            //     img {
+            //         width: 50px;
+            //         height: 50px;
+            //         object-fit: contain;
+            //         margin-top: $m-XXS;
+            //         margin-bottom: $m-XS;
+            //         // @include pad {
+            //         //     width: 70px;
+            //         //     height: 70px;
+            //         // }
+            //         // @include mobile-L {
+            //         //     width: 60px;
+            //         //     height: 60px;
+            //         // }
+            //     }
+            //     h3 {
+            //         margin-bottom: 0;
+            //     }
+            //     &.performance {
+            //         background-color: $performance;
+            //         border: none;
+            //         h3 {
+            //             color: white;
+            //         }
+            //     }
+            //     &.exhibition {
+            //         background-color: $exhibition;
+            //         border: none;
+            //         h3 {
+            //             color: white;
+            //         }
+            //     }
+            //     &.screening {
+            //         background-color: $screening;
+            //         border: none;
+            //         h3 {
+            //             color: white;
+            //         }
+            //     }
+            //     &.auction {
+            //         background-color: $auction;
+            //         border: none;
+            //         h3 {
+            //             color: white;
+            //         }
+            //     }
+            // }
             .step {
                 width: 100%;
                 // max-width: 600px;
@@ -632,10 +668,16 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin-top: $m-M;
                 margin-bottom: $m-M;
                 padding: $p-XS 0;
+                @include web-S {
+                    margin-bottom: 0;
+                    padding: $p-XS $p-M;
+                }
                 @include mobile-L {
                     margin-bottom: $m-S;
+                    padding: $p-XS;
                 }
                 .btn-gp {
                     width: 100%;
@@ -692,15 +734,15 @@ body {
                     }
                 }
             }
-            .container {
-                padding: 0;
-                max-width: 1140px;
-                @include mobile-L {
-                    margin: 0;
-                    max-width: unset;
-                    width: 100%;
-                }
-            }
+            // .container {
+            //     padding: 0;
+            //     max-width: 1140px;
+            //     @include mobile-L {
+            //         margin: 0;
+            //         max-width: unset;
+            //         width: 100%;
+            //     }
+            // }
             form {
                 background-color: unset;
                 h3 {
@@ -801,6 +843,17 @@ body {
                             margin-right: $p-XXS;
                         }
                     }
+                    &.btn {
+                        background-color: $primary-default;
+                        color: white;
+                        border-radius: 6px;
+                        font-weight: bold;
+                        margin-right: $m-XS;
+                        font-size: $size-p;
+                        i {
+                            margin-right: $p-XXS;
+                        }
+                    }
                 }
             }
             .check-curriculum {
@@ -813,21 +866,15 @@ body {
                     font-weight: bold;
                 }
             }
-            .list-container {
-                max-width: 900px;
-                margin: auto;
-                @include mobile-L {
-                    margin: 0;
-                    max-width: unset;
-                    width: 100%;
-                }
-            }
             table {
                 td {
                     vertical-align: middle;
-                    padding: $p-XXS $m-XS;
                     input[type="button"] {
-                        padding: $m-XXS $m-XS !important;
+                        padding: $m-XXS $p-XXS !important;
+                        margin: 0;
+                        @include mobile-L {
+                            margin-top: $m-XXS;
+                        }
                     }
                     .file-img {
                         position: relative;
@@ -838,15 +885,28 @@ body {
                             max-height: 70px;
                             aspect-ratio: 4 / 3;
                             object-fit: contain;
+                            @include mobile-L {
+                                text-align: left;
+                                max-height: 100px;
+                                margin-top: $p-XXS;
+                            }
                         }
                         .close {
+                            // display: inline;
                             display: block;
                             position: absolute;
                             top: -9px;
-                            right: -9px;
+                            right: 4.5px;
                             opacity: 1;
+                            background-color: white;
+                            border-radius: 50%;
+                            line-height: 18px;
+                            padding: 0;
+                            margin: 0;
+                            // border: solid 1px white;
                             i {
                                 font-size: $size-h5;
+                                margin: 0;
                             }
                         }
                     }
@@ -896,7 +956,8 @@ body {
                         margin-bottom: 0;
                     }
                     .block {
-                        width: 23%;
+                        // width: 23%;
+                        width: 30%;
                         border: solid 1px $primary-tint;
                         border-radius: 12px;
                         display: flex;
@@ -906,7 +967,7 @@ body {
                         background-color: white;
                         box-shadow: 5px 5px 10px $primary-table;
                         text-align: center;
-                        padding: $p-S $p-XS;
+                        padding: $p-L $p-XS;
                         @include mobile-L {
                             padding: $p-XS;
                         }

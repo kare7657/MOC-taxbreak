@@ -769,7 +769,6 @@
                         width: 100%;
                         padding: 0;
                         display: flex;
-                        margin-bottom: $m-XS;
                         flex-wrap: wrap;
                         margin-bottom: $m-S;
                         @include web-S {
@@ -798,8 +797,6 @@
                                     width: 100%;
                                     justify-content: space-between;
                                     margin-bottom: 15px;
-                                }
-                                @include mobile-XS() {
                                     margin-right: 0;
                                 }
                             }
@@ -1028,6 +1025,7 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            box-shadow: 0 0 10px rgba($color: $primary-default, $alpha: 0.3);
             @include pad() {
                 display: none;
             }
@@ -1035,7 +1033,8 @@
                 width: 100%;
                 max-width: 1140px;
                 display: flex;
-                justify-content: space-between;
+                // justify-content: space-between;
+                justify-content: center;
                 align-items: center;
                 padding: $p-XS 0;
                 background-color: white;
@@ -1060,6 +1059,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: end;
+                    // margin-left: $m-S;
                     .icon-btn {
                         display: flex;
                         align-items: center;
@@ -1072,7 +1072,7 @@
                         }
                         i {
                             margin: 0;
-                            font-size: $size-h2;
+                            font-size: $size-h3;
                         }
                     }
                     .btn {
@@ -1712,9 +1712,7 @@
             max-width: unset;
             width: 100%;
             background-color: transparent;
-        }
-        @include mobile-L() {
-            padding: 0 $p-S;
+            padding: 0;
         }
         article {
             margin-top: $p-M;
@@ -2090,9 +2088,7 @@
                     @include mobile-L() {
                         width: 100%;
                         margin-bottom: $m-XS;
-                    }
-                    @include mobile-XS() {
-                        // margin-right: 0;
+                        margin-right: 0;
                     }
                 }
                 .RP {
@@ -2153,6 +2149,7 @@
                 width: auto !important;
                 @include mobile-L {
                     width: 100% !important;
+                    margin: 0;
                     margin-bottom: $m-XS;
                 }
             }
@@ -2332,10 +2329,11 @@
                 word-break: break-all;
                 text-overflow: ellipsis;
                 overflow: hidden;
-                padding: $p-S $p-XXS;
+                padding: $p-S $p-XS;
                 @include mobile-L {
                     flex-wrap: wrap;
                     text-align: left;
+                    padding: $m-XS $p-XXS;
                 }
                 .ellipsis {
                     @include mobile-L() {

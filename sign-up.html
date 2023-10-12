@@ -17,9 +17,9 @@
 
 <body>
     <!-- navbar -->
-    <header id="header"></header>
+    <header id="header-nomenu"></header>
 
-    <main>
+    <main class="nomenu">
         <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
         <!-- breadcrumb -->
         <div class="breadcrumb">
@@ -283,7 +283,7 @@
     <!-- 引入html header&footer -->
     <script>
         $(function () {
-            $("#header").load('header.html');
+            $("#header-nomenu").load('header-nomenu.html');
             $("#footer").load("footer.html");
         });
     </script>

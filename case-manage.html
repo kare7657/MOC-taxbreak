@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
-    <title>文化藝術事業減免營業稅及娛樂稅暨分離課稅申請系統</title>
+    <title>會員專區</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="scss/bootstrap.4.2.css">
-    <!-- swiper輪播 -->
-    <link rel="stylesheet" href="scss/swiper-bundle.min.css">
     <!-- our css -->
     <link rel="stylesheet" href="scss/style.css">
 
@@ -19,15 +17,25 @@
 
 <body>
     <!-- navbar -->
-    <header id="header-nomenu"></header>
-
-    <main class="nomenu bgc">
+    <header id="header"></header>
+    <main class="">
         <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                    <li>></li>
+                    <li><span>案件管理</span></li>
+                </ul>
+            </div>
+        </div>
         <section class="section-fastlink container">
+            <h2>案件管理</h2>
             <div class="btn-gp">
-                <a class="btn-type" href="tax-break.html">
+                <a class="btn-type" href="case-manage-tax-break.html">
                     <div class="top">
-                        <h2>申請減免營業稅及娛樂稅</h2>
+                        <h2>減免營業稅及娛樂稅</h2>
                     </div>
                     <div class="bottom">
                         <span class="type">表演</span>
@@ -37,9 +45,9 @@
                         <span class="type">圖書</span>
                     </div>
                 </a>
-                <a class="btn-type" href="separate-taxation.html">
+                <a class="btn-type" href="case-manage-separate-taxation.html">
                     <div class="top">
-                        <h2>申請分離課稅</h2>
+                        <h2>分離課稅</h2>
                     </div>
                     <div class="bottom">
                         <span class="type">展覽</span>
@@ -59,34 +67,11 @@
     <!-- bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
 
-    <!-- Swiper輪播 -->
-    <script src="js/swiper-bundle.min.js"></script>
-
     <!-- 引入html header&footer -->
     <script>
         $(function () {
-            $("#header-nomenu").load('header-nomenu.html');
+            $("#header").load('header.html');
             $("#footer").load("footer.html");
-        });
-    </script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            // loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            // autoplay: {
-            //     delay: 2500,
-            //     disableOnInteraction: false,
-            // },
         });
     </script>
 

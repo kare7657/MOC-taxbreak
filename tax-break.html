@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
-    <title>減免稅申請</title>
+    <title>申請減免營業稅及娛樂稅</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
@@ -16,8 +16,8 @@
 
 <body>
     <!-- navbar -->
-    <header id="header"></header>
-    <main>
+    <header id="header-nomenu"></header>
+    <main class="nomenu">
         <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
         <!-- breadcrumb -->
         <div class="breadcrumb">
@@ -25,17 +25,16 @@
                 <ul>
                     <li><a href="index.html"><i class="fas fa-home"></i></a></li>
                     <li>></li>
-                    <li><span>減免稅申請</span></li>
+                    <li><span>申請減免營業稅及娛樂稅</span></li>
                 </ul>
             </div>
         </div>
         <section class="content-type ">
             <div class="container">
-                <h2>減免稅申請</h2>
+                <h2>申請減免營業稅及娛樂稅</h2>
                 <div class="taxbreak-gp">
                     <div class="block performance">
                         <div class="top">
-                            <img src="img/icon-performance.svg" alt="表演圖標">
                             <h3>表演</h3>
                         </div>
                         <div class="bottom">
@@ -57,7 +56,6 @@
                     </div>
                     <div class="block exhibition">
                         <div class="top">
-                            <img src="img/icon-exhibition.svg" alt="展覽圖標">
                             <h3>展覽</h3>
                         </div>
                         <div class="bottom">
@@ -80,7 +78,6 @@
                     </div>
                     <div class="block screening">
                         <div class="top">
-                            <img src="img/icon-screening.svg" alt="映演圖標">
                             <h3>映演</h3>
                         </div>
                         <div class="bottom">
@@ -101,7 +98,6 @@
                     </div>
                     <div class="block auction">
                         <div class="top">
-                            <img src="img/icon-auction.svg" alt="拍賣圖標">
                             <h3>拍賣</h3>
                         </div>
                         <div class="bottom">
@@ -122,7 +118,6 @@
                     </div>
                     <div class="block book">
                         <div class="top">
-                            <img src="img/icon-book.svg" alt="拍賣圖標">
                             <h3>圖書</h3>
                         </div>
                         <div class="bottom">
@@ -253,7 +248,7 @@
     <!-- 引入html header&footer -->
     <script>
         $(function () {
-            $("#header").load('header.html');
+            $("#header-nomenu").load('header-nomenu.html');
             $("#footer").load("footer.html");
         });
     </script>
