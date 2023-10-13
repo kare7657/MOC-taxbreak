@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
-    <title>案件管理-減免營業稅及娛樂稅</title>
+    <title>案件管理-分離課稅</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
@@ -28,13 +28,13 @@
                     <li>></li>
                     <li><a href="case-manage.html">案件管理</a></li>
                     <li>></li>
-                    <li><span>減免營業稅及娛樂稅</span></li>
+                    <li><span>分離課稅</span></li>
                 </ul>
             </div>
         </div>
         <section class="content-member">
             <div class="container">
-                <h2>減免營業稅及娛樂稅</h2>
+                <h2>分離課稅</h2>
                 <div class="member-gp">
                     <a href="" title="申請案件" class="block apply">
                         <div class="case-num">2</div>
@@ -51,19 +51,19 @@
                 </div>
                 <div class="searchbar">
                     <div class="filter">
-                        <!-- 減免 -->
-                        <select class="select2" id="activity_way">
+                        <!-- 分離 -->
+                        <select class="select2" id="activity_way2">
                             <option value="list1">類型</option>
-                            <option value="list1">表演</option>
                             <option value="list2">展覽</option>
-                            <option value="list3">映演</option>
+                            <option value="list3">拍賣</option>
                         </select>
-                        <!-- 減免 -->
-                        <select class="select2" id="activity_status">
-                            <option value="list1">狀態</option>
+                        <!-- 分離 -->
+                        <select class="select2" id="activity_status2">
                             <option value="list1">尚未送出</option>
+                            <option value="list3">已申請 (清冊待確認)</option>
                             <option value="list2">審核中</option>
-                            <option value="list3">補訂正</option>
+                            <option value="list3">訂正</option>
+                            <option value="list2">審核完成 (審核結果將以函文為準)</option>
                             <option value="list3">已發文</option>
                             <option value="list3">已撤回</option>
                         </select>
@@ -73,7 +73,7 @@
                         <button type="button">搜尋</button>
                     </div>
                     <div class="btn-gp">
-                        <button type="button" class="button-outline"><i class="fas fa-plus-circle"></i>線上申請減免認可</button>
+                        <button type="button" class="button-outline"><i class="fas fa-plus-circle"></i>線上申請分離課稅</button>
                         <button type="button" class="button-outline"><i class="fas fa-share-square"></i>提交選擇的案件</button>
                     </div>
                 </div>
@@ -96,25 +96,25 @@
                                     <input type="checkbox" value="choice-case">
                                 </td>
                                 <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930002</a>
+                                    <a href="case-view-separate-taxation.html" title="案件瀏覽">20210930002</a>
                                 </td>
-                                <td data-title="類型">表演</td>
+                                <td data-title="類型">展覽</td>
                                 <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
+                                    <a href="case-view-separate-taxation.html" class="ellipsis" title="案件瀏覽">
                                         標題標題標題標題標題
                                     </a>
                                 </td>
                                 <td data-title="案件狀態">尚未送出</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
+                                        <a href="case-view-separate-taxation.html" class="link" title="瀏覽"><i
                                                 class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
                                         <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
                                             <span>複製</span></a>
                                         <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
-                                        <a href="case-view-tax-break.html" class="link" title="訂正"><i
+                                        <a href="case-view-separate-taxation.html" class="link" title="訂正"><i
                                                 class="fas fa-pen"></i>
                                             <span>編輯</span></a>
                                     </div>
@@ -125,23 +125,23 @@
                                     <input type="checkbox" value="choice-case" disabled>
                                 </td>
                                 <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930003</a>
+                                    <a href="case-view-separate-taxation.html" title="案件瀏覽">20210930003</a>
                                 </td>
                                 <td data-title="類型">拍賣</td>
                                 <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
+                                    <a href="case-view-separate-taxation.html" class="ellipsis" title="案件瀏覽">
                                         標題標題標題標題標題標題標題標題標題標題標題標題標題標題
                                     </a>
                                 </td>
                                 <td data-title="案件狀態">審核中</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
+                                        <a href="case-view-separate-taxation.html" class="link" title="瀏覽"><i
                                                 class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
                                         <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
                                             <span>複製</span></a>
-                                        <a href="case-withdraw-tax-break.html" class="link notice" title="撤回"><i
+                                        <a href="case-withdraw-separate-taxation.html" class="link notice" title="撤回"><i
                                                 class="fas fa-ban"></i>
                                             <span>撤回</span></a>
                                     </div>
@@ -152,25 +152,25 @@
                                     <input type="checkbox" value="choice-case">
                                 </td>
                                 <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930002</a>
+                                    <a href="case-view-separate-taxation.html" title="案件瀏覽">20210930002</a>
                                 </td>
                                 <td data-title="類型">拍賣</td>
                                 <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
+                                    <a href="case-view-separate-taxation.html" class="ellipsis" title="案件瀏覽">
                                         標題標題標題標題標題
                                     </a>
                                 </td>
                                 <td data-title="案件狀態">尚未送出</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
+                                        <a href="case-view-separate-taxation.html" class="link" title="瀏覽"><i
                                                 class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
                                         <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
                                             <span>複製</span></a>
                                         <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
-                                        <a href="case-view-tax-break.html" class="link" title="訂正"><i
+                                        <a href="case-view-separate-taxation.html" class="link" title="訂正"><i
                                                 class="fas fa-pen"></i>
                                             <span>編輯</span></a>
                                     </div>
@@ -181,23 +181,23 @@
                                     <input type="checkbox" value="choice-case" disabled>
                                 </td>
                                 <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930003</a>
+                                    <a href="case-view-separate-taxation.html" title="案件瀏覽">20210930003</a>
                                 </td>
                                 <td data-title="類型">拍賣</td>
                                 <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
+                                    <a href="case-view-separate-taxation.html" class="ellipsis" title="案件瀏覽">
                                         標題標題標題標題標題標題標題標題標題標題標題標題標題標題
                                     </a>
                                 </td>
                                 <td data-title="案件狀態">審核中</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
+                                        <a href="case-view-separate-taxation.html" class="link" title="瀏覽"><i
                                                 class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
                                         <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
                                             <span>複製</span></a>
-                                        <a href="case-withdraw-tax-break.html" class="link notice" title="撤回"><i
+                                        <a href="case-withdraw-separate-taxation.html" class="link notice" title="撤回"><i
                                                 class="fas fa-ban"></i>
                                             <span>撤回</span></a>
                                     </div>
@@ -208,25 +208,25 @@
                                     <input type="checkbox" value="choice-case">
                                 </td>
                                 <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930002</a>
+                                    <a href="case-view-separate-taxation.html" title="案件瀏覽">20210930002</a>
                                 </td>
-                                <td data-title="類型">表演</td>
+                                <td data-title="類型">展覽</td>
                                 <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
+                                    <a href="case-view-separate-taxation.html" class="ellipsis" title="案件瀏覽">
                                         標題標題標題標題標題
                                     </a>
                                 </td>
                                 <td data-title="案件狀態">尚未送出</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
+                                        <a href="case-view-separate-taxation.html" class="link" title="瀏覽"><i
                                                 class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
                                         <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
                                             <span>複製</span></a>
                                         <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
-                                        <a href="case-view-tax-break.html" class="link" title="訂正"><i
+                                        <a href="case-view-separate-taxation.html" class="link" title="訂正"><i
                                                 class="fas fa-pen"></i>
                                             <span>編輯</span></a>
                                     </div>
@@ -237,23 +237,23 @@
                                     <input type="checkbox" value="choice-case" disabled>
                                 </td>
                                 <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930003</a>
+                                    <a href="case-view-separate-taxation.html" title="案件瀏覽">20210930003</a>
                                 </td>
                                 <td data-title="類型">拍賣</td>
                                 <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
+                                    <a href="case-view-separate-taxation.html" class="ellipsis" title="案件瀏覽">
                                         標題標題標題標題標題標題標題標題標題標題標題標題標題標題
                                     </a>
                                 </td>
                                 <td data-title="案件狀態">審核中</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
+                                        <a href="case-view-separate-taxation.html" class="link" title="瀏覽"><i
                                                 class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
                                         <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
                                             <span>複製</span></a>
-                                        <a href="case-withdraw-tax-break.html" class="link notice" title="撤回"><i
+                                        <a href="case-withdraw-separate-taxation.html" class="link notice" title="撤回"><i
                                                 class="fas fa-ban"></i>
                                             <span>撤回</span></a>
                                     </div>
@@ -264,25 +264,25 @@
                                     <input type="checkbox" value="choice-case">
                                 </td>
                                 <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930002</a>
+                                    <a href="case-view-separate-taxation.html" title="案件瀏覽">20210930002</a>
                                 </td>
-                                <td data-title="類型">表演</td>
+                                <td data-title="類型">展覽</td>
                                 <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
+                                    <a href="case-view-separate-taxation.html" class="ellipsis" title="案件瀏覽">
                                         標題標題標題標題標題
                                     </a>
                                 </td>
                                 <td data-title="案件狀態">尚未送出</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
+                                        <a href="case-view-separate-taxation.html" class="link" title="瀏覽"><i
                                                 class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
                                         <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
                                             <span>複製</span></a>
                                         <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
-                                        <a href="case-view-tax-break.html" class="link" title="訂正"><i
+                                        <a href="case-view-separate-taxation.html" class="link" title="訂正"><i
                                                 class="fas fa-pen"></i>
                                             <span>編輯</span></a>
                                     </div>
@@ -293,23 +293,23 @@
                                     <input type="checkbox" value="choice-case" disabled>
                                 </td>
                                 <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930003</a>
+                                    <a href="case-view-separate-taxation.html" title="案件瀏覽">20210930003</a>
                                 </td>
                                 <td data-title="類型">拍賣</td>
                                 <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
+                                    <a href="case-view-separate-taxation.html" class="ellipsis" title="案件瀏覽">
                                         標題標題標題標題標題標題標題標題標題標題標題標題標題標題
                                     </a>
                                 </td>
                                 <td data-title="案件狀態">審核中</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
+                                        <a href="case-view-separate-taxation.html" class="link" title="瀏覽"><i
                                                 class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
                                         <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
                                             <span>複製</span></a>
-                                        <a href="case-withdraw-tax-break.html" class="link notice" title="撤回"><i
+                                        <a href="case-withdraw-separate-taxation.html" class="link notice" title="撤回"><i
                                                 class="fas fa-ban"></i>
                                             <span>撤回</span></a>
                                     </div>
@@ -320,25 +320,25 @@
                                     <input type="checkbox" value="choice-case">
                                 </td>
                                 <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930002</a>
+                                    <a href="case-view-separate-taxation.html" title="案件瀏覽">20210930002</a>
                                 </td>
-                                <td data-title="類型">表演</td>
+                                <td data-title="類型">展覽</td>
                                 <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
+                                    <a href="case-view-separate-taxation.html" class="ellipsis" title="案件瀏覽">
                                         標題標題標題標題標題
                                     </a>
                                 </td>
                                 <td data-title="案件狀態">尚未送出</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
+                                        <a href="case-view-separate-taxation.html" class="link" title="瀏覽"><i
                                                 class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
                                         <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
                                             <span>複製</span></a>
                                         <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
-                                        <a href="case-view-tax-break.html" class="link" title="訂正"><i
+                                        <a href="case-view-separate-taxation.html" class="link" title="訂正"><i
                                                 class="fas fa-pen"></i>
                                             <span>編輯</span></a>
                                     </div>
@@ -349,23 +349,23 @@
                                     <input type="checkbox" value="choice-case" disabled>
                                 </td>
                                 <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930003</a>
+                                    <a href="case-view-separate-taxation.html" title="案件瀏覽">20210930003</a>
                                 </td>
                                 <td data-title="類型">拍賣</td>
                                 <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
+                                    <a href="case-view-separate-taxation.html" class="ellipsis" title="案件瀏覽">
                                         標題標題標題標題標題標題標題標題標題標題標題標題標題標題
                                     </a>
                                 </td>
                                 <td data-title="案件狀態">審核中</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
+                                        <a href="case-view-separate-taxation.html" class="link" title="瀏覽"><i
                                                 class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
                                         <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
                                             <span>複製</span></a>
-                                        <a href="case-withdraw-tax-break.html" class="link notice" title="撤回"><i
+                                        <a href="case-withdraw-separate-taxation.html" class="link notice" title="撤回"><i
                                                 class="fas fa-ban"></i>
                                             <span>撤回</span></a>
                                     </div>
@@ -403,7 +403,7 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <h2 class="modal-title" id="modal-notifyLabel">表演注意事項</h2>
+                            <h2 class="modal-title" id="modal-notifyLabel">展覽注意事項</h2>
                         </div>
                         <div class="modal-body">
                             <div class="notify-gp">

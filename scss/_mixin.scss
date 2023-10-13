@@ -55,6 +55,7 @@
     }
     h1 {
         font-size: $size-h1;
+        // color: $primary-dark;
         color: black;
         padding: 0;
         margin: 0;
@@ -1073,6 +1074,7 @@
                         i {
                             margin: 0;
                             font-size: $size-h3;
+                            color: $primary-tint;
                         }
                     }
                     .btn {
@@ -1626,71 +1628,127 @@
 @mixin searchbar() {
     .searchbar {
         display: flex;
+        justify-content: space-between;
         margin-bottom: $m-S;
-        margin-top: $m-XS;
+        // margin-top: $m-L;
         width: 100%;
         position: relative;
+        @include pad {
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
         @include mobile-L() {
             flex-direction: column;
             flex-wrap: wrap;
         }
-        select {
-            min-width: 150px;
-            width: initial;
-            margin-right: $m-S;
+        .filter {
+            width: 55%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // background-color: rgba($color: $ticket, $alpha: 0.1);
+            // padding: $p-S;
+            // border-radius: 12px;
+            @include web-S {
+                width: 60%;
+            }
             @include pad {
-                min-width: unset;
-                width: 23%;
-            }
-            @include mobile-L {
-                width: 100%;
-                margin-bottom: $m-S;
-            }
-        }
-        .search-icon {
-            position: relative;
-            margin-right: $m-S;
-            @include pad {
-                width: 23%;
-            }
-            @include mobile-L() {
                 width: 100%;
             }
-            input[type="search"] {
-                width: 180px;
-                padding: 2px 8px;
-                border-radius: 4px;
-                border: solid 1px $complementary;
-                // background: url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 95% center;
+            @include mobile-L(){
+                flex-wrap: wrap;
+            }
+            select {
+                // min-width: 150px;
+                width: 25%;
+                margin-right: $m-S;
                 @include pad {
-                    min-width: unset;
+                    width: 26%;
+                }
+                @include mobile-L {
                     width: 100%;
+                    margin-right: 0;
+                    margin-bottom: $m-S;
+                }
+            }
+            .search-icon {
+                position: relative;
+                margin-right: $m-S;
+                width: 25%;
+                @include pad {
+                    width: 26%;
                 }
                 @include mobile-L() {
-                    padding: 5px 8px;
+                    width: 100%;
+                    margin-right: 0;
                 }
-                // &:focus {
-                //     width: 180px;
-                //     transition: 0.5s;
-                //     @include pad {
-                //         width: 100%;
-                //     }
-                //     @include mobile-L() {
-                //         width: 100%;
-                //     }
-                // }
+                input[type="search"] {
+                    // width: 180px;
+                    padding: 2px 8px;
+                    border-radius: 4px;
+                    border: solid 1px $complementary;
+                    // background: url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 95% center;
+                    @include pad {
+                        min-width: unset;
+                        width: 100%;
+                    }
+                    @include mobile-L() {
+                        padding: 5px 8px;
+                    }
+                }
+                &::after {
+                    font-family: "Font Awesome 5 Free";
+                    content: "\f002";
+                    font-weight: bold;
+                    width: 12px;
+                    line-height: 40px;
+                    color: black;
+                    position: absolute;
+                    top: 0;
+                    right: 12px;
+                    color: $complementary;
+                }
             }
-            &::after {
-                font-family: "Font Awesome 5 Free";
-                content: "\f002";
-                font-weight: bold;
-                width: 12px;
-                line-height: 40px;
-                color: black;
-                position: absolute;
-                top: 0;
-                right: 12px;
-                color: $complementary;
+            button{
+                @include mobile-L(){
+                    width: 100%;
+                    margin-top: $m-S;
+                }
+            }
+        }
+        .btn-gp {
+            width: 45%;
+            text-align: right;
+            @include web-S {
+                width: 40%;
+            }
+            @include pad {
+                width: 100%;
+                margin-top: $m-S;
+                text-align: left;
+            }
+            @include mobile-L(){
+                display: flex;
+                justify-content: space-between;
+            }
+            button {
+                margin-left: $m-S;
+                @include web-S {
+                    padding: $m-XXS $m-XS;
+                    font-size: $size-p;
+                    height: auto;
+                }
+                @include pad {
+                    margin-left: 0;
+                    margin-right: $m-S;
+                    padding: $m-XXS $m-S;
+                    font-size: $size-h5;
+                }
+                @include mobile-L(){
+                    margin: 0;
+                    margin-bottom: $m-S;
+                    width: 47%;
+                }
             }
         }
     }
