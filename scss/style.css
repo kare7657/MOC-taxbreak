@@ -1401,7 +1401,7 @@ body .navbar .mobile .logo .title {
 }
 @media (max-width: 320px) {
   body .navbar .mobile .logo .title {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 body .footer {
@@ -1590,7 +1590,7 @@ body .footer .container .copyright {
 }
 body .breadcrumb {
   width: 100%;
-  background-color: white;
+  background-color: transparent;
   padding: 0;
   margin: 0;
   margin-bottom: 20px;
@@ -2702,7 +2702,7 @@ body main .content-webmap .container .list-gp {
 }
 @media (max-width: 768px) {
   body main .content-webmap .container .list-gp {
-    justify-content: start;
+    justify-content: space-between;
   }
 }
 body main .content-webmap .container .list-gp .text-gp {
@@ -2710,10 +2710,15 @@ body main .content-webmap .container .list-gp .text-gp {
   margin-right: 20px;
   margin-bottom: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   body main .content-webmap .container .list-gp .text-gp {
     width: 30%;
-    margin-right: 16px;
+  }
+}
+@media (max-width: 768px) {
+  body main .content-webmap .container .list-gp .text-gp {
+    width: 48%;
+    margin-right: 0;
     margin-bottom: 16px;
   }
 }
@@ -3661,6 +3666,17 @@ body main .content-member .container .totalnum {
 }
 body main .content-member .container .case-list {
   margin-top: 12px;
+}
+body main .content-member .container .case-list .nav-pills .nav-item a.nav-link {
+  padding: 0 16px;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 12px;
+  font-weight: bold;
+  border: solid 1px #88753f;
+}
+body main .content-member .container .case-list .nav-pills .nav-item a.nav-link.active {
+  background-color: #88753f;
 }
 body main .content-member .container .case-list table {
   margin-bottom: 12px;

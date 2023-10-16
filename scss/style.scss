@@ -88,16 +88,19 @@ body {
                     flex-wrap: wrap;
                     justify-content: start;
                     @include pad {
-                        justify-content: start;
+                        justify-content: space-between;
                     }
                     .text-gp {
                         width: 23%;
                         margin-right: $m-S;
                         margin-bottom: $m-S;
                         // width: 18%;
-                        @include pad {
+                        @include web-S {
                             width: 30%;
-                            margin-right: $p-XS;
+                        }
+                        @include pad {
+                            width: 48%;
+                            margin-right: 0;
                             margin-bottom: $p-XS;
                         }
                         @include mobile-L() {
@@ -1093,6 +1096,21 @@ body {
                 }
                 .case-list {
                     margin-top: $m-XS;
+                    .nav-pills {
+                        .nav-item {
+                            a.nav-link {
+                                padding: 0 $p-XS;
+                                height: 40px;
+                                line-height: 40px;
+                                margin-right: $m-XS;
+                                font-weight: bold;
+                                border: solid 1px $primary-default;
+                                &.active {
+                                    background-color: $primary-default;
+                                }
+                            }
+                        }
+                    }
                     table {
                         margin-bottom: $m-XS;
                         tbody {
