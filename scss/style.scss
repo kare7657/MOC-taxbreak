@@ -30,6 +30,32 @@ body {
     @include datepicker();
     @include table();
     @include searchbar();
+    /* 跳到主要內容區塊 */
+    .for_accessibility .go-main {
+        position: absolute;
+        top: 18px;
+        left: 16px;
+        z-index: 1000;
+        width: 1px;
+        height: 1px;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #fff;
+        border-radius: 4px;
+    }
+    .for_accessibility .go-main:focus {
+        width: auto;
+        height: auto;
+        padding: 6px;
+        background-color: $primary-dark;
+    }
+    .for_accessibility div {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background-color: transparent;
+        opacity: 0.1;
+    }
     main {
         display: flex;
         flex-wrap: wrap;
@@ -75,6 +101,11 @@ body {
             // .notice{
             //     font-weight: bold;
             // }
+        }
+        .alert {
+            // font-size: $size-h5;
+            color: $primary-dark;
+            font-weight: bold;
         }
         // .alert-warning{
         //     color: $primary-dark;
@@ -202,7 +233,7 @@ body {
                     display: flex;
                     align-items: center;
                     flex-direction: column;
-                    padding: $p-2L $p-2L;
+                    padding: $p-L $p-L;
                     background-color: white;
                     box-shadow: 5px 5px 10px rgba($color: $primary-tint, $alpha: 0.1);
                     @include pad {
@@ -222,7 +253,7 @@ body {
                         h2 {
                             width: 100%;
                             text-align: center;
-                            padding-bottom: $p-L;
+                            padding-bottom: $p-M;
                             margin-bottom: $m-L;
                             border-bottom: solid 1px $bk-20;
                             @include pad {
@@ -680,14 +711,14 @@ body {
             // }
             .step {
                 width: 100%;
-                // max-width: 600px;
+                // max-width: 1140px;
                 margin: auto;
                 background-color: $primary-table;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 margin-top: $m-M;
-                margin-bottom: $m-M;
+                margin-bottom: $m-XS;
                 padding: $p-XS 0;
                 @include web-S {
                     margin-bottom: 0;
@@ -699,7 +730,8 @@ body {
                 }
                 .btn-gp {
                     width: 100%;
-                    max-width: 1140px;
+                    // max-width: 1140px;
+                    max-width: 600px;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -712,7 +744,7 @@ body {
                         font-weight: bold;
                         color: $primary-default;
                         @include mobile-L {
-                            margin: 0 $m-XS;
+                            margin: 0 $p-XXS;
                             text-align: center;
                         }
                         &.active {
@@ -722,7 +754,7 @@ body {
                 }
                 .view-gp {
                     width: 100%;
-                    max-width: 800px;
+                    max-width: 600px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -1097,6 +1129,7 @@ body {
                 .case-list {
                     margin-top: $m-XS;
                     .nav-pills {
+                        margin-bottom: $m-XS;
                         .nav-item {
                             a.nav-link {
                                 padding: 0 $p-XS;

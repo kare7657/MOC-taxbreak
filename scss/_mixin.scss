@@ -146,12 +146,13 @@
         }
     }
     #AC {
+        position: absolute;
+        left: 0;
+        font-size: $size-h5;
+        color: $bk-20;
+        margin: 0 $m-XS;
+        color: white;
         &:focus {
-            position: absolute;
-            left: 0;
-            font-size: $size-h5;
-            color: $bk-20;
-            margin: 0 $m-XS;
             color: $primary-tint;
             &::after {
                 content: ":::";
@@ -241,9 +242,20 @@
             input[type="button"] {
                 background-color: $bk-20 !important;
             }
-            // input[type="checkbox"] {
-            //     background-color: $primary-default !important;
-            // }
+            input[type="radio"] + label,
+            input[type="checkbox"] + label {
+                cursor: not-allowed !important;
+            }
+            input[type="radio"] + label,
+            input[type="checkbox"] + label {
+                color: $complementary !important;
+                border: solid 1px $complementary !important;
+            }
+            input[type="radio"]:checked + label,
+            input[type="checkbox"]:checked + label {
+                background-color: $complementary !important;
+                color: white !important;
+            }
             .session {
                 &.view-nobtn {
                     select {
@@ -520,35 +532,6 @@
         }
         i {
             margin-right: $p-XXS;
-        }
-    }
-    //swiper
-    .swiper-container {
-        .swiper-button-next,
-        .swiper-button-prev {
-            @include mobile-L() {
-                display: none;
-            }
-        }
-        .swiper-slide {
-            position: relative;
-            text-align: center;
-            font-size: 18px;
-            background: white;
-
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
         }
     }
     //modal
@@ -1061,12 +1044,12 @@
                     display: flex;
                     align-items: center;
                     justify-content: end;
-                    // margin-left: $m-S;
+                    margin-left: $m-S;
                     .icon-btn {
                         display: flex;
                         align-items: center;
                         margin: 0;
-                        margin-right: $m-XS;
+                        margin-left: $m-S;
                         color: $primary-default;
                         @include mobile-L() {
                             height: 40px;
@@ -1268,7 +1251,7 @@
                 left: 0px;
                 display: flex;
                 .fas.fa-bars {
-                    font-size: 30px;
+                    font-size: $size-h1;
                     line-height: 80px;
                     padding: 0 20px;
                     color: $primary-default;
@@ -1392,7 +1375,7 @@
         background-color: $primary-default;
         width: 100%;
         bottom: 0;
-
+        color: white;
         .container {
             display: flex;
             align-items: start;
@@ -1825,7 +1808,6 @@
             .file-upload {
                 width: 100%;
                 display: flex;
-                // align-items: stretch;
                 align-items: center;
                 margin-top: $m-XXS;
                 @include mobile-L() {
@@ -2087,6 +2069,104 @@
             }
             input[type="text"] {
                 margin-bottom: $p-XS;
+            }
+        }
+        // 申請類型
+        .choice-btn {
+            // @include mobile-L(){
+            //     display: flex;
+            //     justify-content: space-between;
+            // }
+            h5 {
+                width: 100%;
+                margin-bottom: $p-XXS;
+            }
+            .type-gp {
+                margin-top: $p-XXS;
+                @include mobile-L(){
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                }
+                a,
+                button {
+                    margin-right: $p-XXS;
+                    @include mobile-L(){
+                        margin-right: 0;
+                        margin-bottom: $m-XS;
+                        width: 47%;
+                    }
+                }
+                .performance {
+                    box-shadow: $performance 0 0 0 1px;
+                    color: $performance !important;
+                    &.active {
+                        background-color: $performance !important;
+                        color: white !important;
+                    }
+                }
+                .exhibition {
+                    box-shadow: $exhibition 0 0 0 1px;
+                    color: $exhibition !important;
+                    &.active {
+                        background-color: $exhibition !important;
+                        color: white !important;
+                    }
+                }
+                .screening {
+                    box-shadow: $screening 0 0 0 1px;
+                    color: $screening !important;
+                    &.active {
+                        background-color: $screening !important;
+                        color: white !important;
+                    }
+                }
+                .auction {
+                    box-shadow: $auction 0 0 0 1px;
+                    color: $auction !important;
+                    &.active {
+                        background-color: $auction !important;
+                        color: white !important;
+                    }
+                }
+            }
+            .item {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-bottom: $p-XXS;
+                @include mobile-L() {
+                    // width: 47%;
+                    width: auto;
+                }
+                // radio,checkbox
+                input[type="radio"],
+                input[type="checkbox"] {
+                    display: none;
+                }
+                input[type="radio"] + label,
+                input[type="checkbox"] + label {
+                    display: inline-block;
+                    color: $primary-default;
+                    border: solid 1px $primary-default;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    margin-right: $p-XXS;
+                    padding: 0 $m-S;
+                    height: 40px;
+                    line-height: 40px;
+                    transition: 0.3s;
+                    // @include mobile-L(){
+                    //     margin-right: 0;
+                    // }
+                }
+                input[type="radio"]:checked + label,
+                input[type="checkbox"]:checked + label {
+                    background-color: $primary-default;
+                    color: white;
+                }
+
             }
         }
         .datetime {

@@ -35,13 +35,13 @@
                     <li>></li>
                     <li><a href="tax-break.html">申請減免營業稅及娛樂稅</a></li>
                     <li>></li>
-                    <li><span>我要申請</span></li>
+                    <li><span>申請表演類案件</span></li>
                 </ul>
             </div>
         </div>
         <!-- 我要申請 -->
         <section class="content-signup">
-            <h2>我要申請 - 表演</h2>
+            <h2>申請表演類案件</h2>
             <div class="step">
                 <div class="btn-gp">
                     <a href="tax-break-apply-performance1.html" class="btn-step active">基本資料</a>
@@ -59,55 +59,47 @@
                         <div class="type-title">
                             <h3>基本資料</h3>
                         </div>
-                        <div class="form-gp choice">
+                        <div class="form-gp choice-btn">
                             <h5>類型<span class="notice">*</span></h5>
-                            <div class="item">
-                                <input type="radio" name="type" value="" id="type" checked>
-                                <label for="type">
-                                    表演
-                                </label>
-                            </div>
-                            <div class="item">
-                                <input type="radio" name="type" value="" id="type2">
-                                <label for="type2">
-                                    展覽
-                                </label>
-                            </div>
-                            <div class="item">
-                                <input type="radio" name="type" value="" id="type3">
-                                <label for="type3">
-                                    映演
-                                </label>
-                            </div>
-                            <div class="item">
-                                <input type="radio" name="type" value="" id="type4">
-                                <label for="type4">
-                                    拍賣
-                                </label>
+                            <div class="type-gp">
+                                <button type="button" class="button-outline performance active"
+                                data-toggle="modal"
+                                data-target="#modal-notify-performance">表演</button>
+                                <button type="button" class="button-outline exhibition"
+                                data-toggle="modal"
+                                data-target="#modal-notify-exhibition">展覽</button>
+                                <button type="button" class="button-outline screening"
+                                data-toggle="modal"
+                                data-target="#modal-notify-screening">映演</button>
+                                <button type="button" class="button-outline auction"
+                                data-toggle="modal"
+                                data-target="#modal-notify-auction">拍賣</button>
                             </div>
                         </div>
                         <div class="form-gp">
                             <label for="activity_name">活動名稱<span class="notice">*</span></label>
-                            <input type="text" name="activity_name" id="activity_name">
+                            <input type="text" name="activity_name" id="activity_name" placeholder="票面之活動名稱">
                         </div>
                         <div class="form-gp">
                             <label for="activity_name">演出團隊或演出者<span class="notice">*</span></label>
                             <div class="performer view-nobtn">
                                 <select name="type" id="activity_country">
-                                    <option value="list1">項目1</option>
+                                    <option value="list1">選擇國別</option>
                                     <option value="list2">項目2</option>
                                     <option value="list3">項目3</option>
                                 </select>
-                                <input type="text" name="activity_performer" id="activity_performer">
+                                <input type="text" name="activity_performer" id="activity_performer"
+                                    placeholder="請填入團體名稱">
                                 <a href="" title="刪除表演者"><i class="fas fa-minus-circle"></i></a>
                             </div>
                             <div class="performer view-nobtn">
                                 <select name="type" id="activity_country2">
-                                    <option value="list1">項目1</option>
+                                    <option value="list1">選擇國別</option>
                                     <option value="list2">項目2</option>
                                     <option value="list3">項目3</option>
                                 </select>
-                                <input type="text" name="activity_performer2" id="activity_performer2">
+                                <input type="text" name="activity_performer2" id="activity_performer2"
+                                    placeholder="請填入團體名稱">
                                 <a href="" title="刪除表演者"><i class="fas fa-minus-circle"></i></a>
                             </div>
                             <a href="" class="add"><i class="fas fa-plus-circle"></i>新增團隊或演出者</a>
@@ -132,7 +124,7 @@
                                 <div class="form-gp">
                                     <label for="activity_area">活動區域<span class="notice">*</span></label>
                                     <select class="select2" id="activity_area">
-                                        <option value="list1">項目1</option>
+                                        <option value="list1">選擇區域</option>
                                         <option value="list2">項目2</option>
                                         <option value="list3">項目3</option>
                                     </select>
@@ -140,7 +132,7 @@
                                 <div class="form-gp">
                                     <label for="activity_place">活動地點<span class="notice">*</span></label>
                                     <select class="select2" id="activity_place">
-                                        <option value="list1">項目1</option>
+                                        <option value="list1">請先選擇活動區域</option>
                                         <option value="list2">項目2</option>
                                         <option value="list3">項目3</option>
                                     </select>
@@ -149,7 +141,7 @@
                                     <label for="place_name">場館名稱</label>
                                     <div class="session view-nobtn">
                                         <select name="type" id="place_name">
-                                            <option value="list1">項目1</option>
+                                            <option value="list1">請先選擇活動地點</option>
                                             <option value="list2">項目2</option>
                                             <option value="list3">項目3</option>
                                         </select>
@@ -162,21 +154,21 @@
                                         <label for="start-date">開始日期</label>
                                         <div class="date-gp date-icon">
                                             <input type="text" class="mb-nokeyboard western-date date-icon"
-                                                id="start-date" data-toggle="datepicker">
+                                                id="start-date" data-toggle="datepicker" placeholder="請選擇開始日期">
                                         </div>
                                     </div>
                                     <div class="item">
                                         <label for="end-date">結束日期</label>
                                         <div class="date-gp date-icon">
                                             <input type="text" class="mb-nokeyboard western-date date-icon"
-                                                id="end-date" data-toggle="datepicker">
+                                                id="end-date" data-toggle="datepicker" placeholder="請選擇結束日期">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-gp">
                                     <label for="session">場次</label>
                                     <div class="session">
-                                        <input type="number" name="session" id="session" disabled placeholder="20">
+                                        <input type="number" name="session" id="session" disabled placeholder="點選編輯場次">
                                         <a href="" class="add" data-toggle="modal" data-target="#modal-session"><i
                                                 class="fas fa-pen"></i>編輯場次</a>
                                     </div>
@@ -220,7 +212,7 @@
                                         <li>請擇一填寫票價範圍或明列，並請確認所填票價是否包含優待折扣票價、貴賓票價</li>
                                     </ul>
                                 </div>
-                                <div class="form-gp choice">
+                                <div class="form-gp choice-btn">
                                     <h5>票種</h5>
                                     <div class="item">
                                         <input type="checkbox" name="ticket-type" value="" id="normal">
@@ -235,6 +227,9 @@
                                         </label>
                                     </div>
                                 </div>
+                                <ul class="ps">
+                                    <li>如票價含一般票及貴賓票，請同時點選兩種票種選項</li>
+                                </ul>
                             </div>
                         </div>
                     </fieldset>
@@ -835,6 +830,114 @@
                         <div class="modal-footer">
                             <button type="button" name="cancel" id="cancel4" data-dismiss="modal">下一步</button>
 
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- modal 提示-->
+        <div class="modal fade modal-template " id="modal-notify-performance" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD3" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <p>若調整類型，目前填寫的資料將會被清除，請確定是否要繼續？</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+                            <button type="button" name="go" id="go2"
+                                onclick="location.href='tax-break-apply-performance1.html'">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- modal 提示-->
+        <div class="modal fade modal-template " id="modal-notify-exhibition" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD4" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <p>若調整類型，目前填寫的資料將會被清除，請確定是否要繼續？</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+                            <button type="button" name="go" id="go2"
+                                onclick="location.href='tax-break-apply-exhibition1.html'">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- modal 提示-->
+        <div class="modal fade modal-template " id="modal-notify-screening" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD5" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <p>若調整類型，目前填寫的資料將會被清除，請確定是否要繼續？</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+                            <button type="button" name="go" id="go2"
+                                onclick="location.href='tax-break-apply-screening1.html'">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- modal 提示-->
+        <div class="modal fade modal-template " id="modal-notify-auction" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD6" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <p>若調整類型，目前填寫的資料將會被清除，請確定是否要繼續？</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+                            <button type="button" name="go" id="go2"
+                                onclick="location.href='tax-break-apply-auction1.html'">確認</button>
                         </div>
                     </div>
                 </div>

@@ -35,13 +35,13 @@
                     <li>></li>
                     <li><a href="tax-break.html">申請減免營業稅及娛樂稅</a></li>
                     <li>></li>
-                    <li><span>我要申請</span></li>
+                    <li><span>申請映演類案件</span></li>
                 </ul>
             </div>
         </div>
         <!-- 我要申請 -->
         <section class="content-signup">
-            <h2>我要申請 - 映演</h2>
+            <h2>申請映演類案件</h2>
             <div class="step">
                 <div class="btn-gp">
                     <a href="tax-break-apply-screening1.html" class="btn-step">基本資料</a>
@@ -53,6 +53,12 @@
             </div>
             <div class="container">
                 <form class="view">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        請檢視下列資料是否正確，並點選「確定提交申請」
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                     <fieldset disabled>
                         <div class="type-title">
                             <h3>基本資料</h3>
@@ -145,7 +151,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-gp choice">
+                                <div class="form-gp choice-btn">
                                     <h5>票種</h5>
                                     <div class="item">
                                         <input type="checkbox" name="ticket-type" value="" id="normal" checked>
@@ -182,7 +188,7 @@
                         <input type="button" value="暫存" class="outline">
                         <input type="button" value="上一步" class="outline"
                             onclick="location.href='tax-break-apply-screening1.html'">
-                        <input type="button" value="送出申請" data-toggle="modal" data-target="#modal-notify">
+                        <input type="button" value="確定提交申請" data-toggle="modal" data-target="#modal-notify">
                     </div>
                 </form>
             </div>
