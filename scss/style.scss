@@ -724,6 +724,9 @@ body {
                     margin-bottom: 0;
                     padding: $p-XS $p-M;
                 }
+                @include pad {
+                    margin-top: $m-S;
+                }
                 @include mobile-L {
                     margin-bottom: $m-S;
                     padding: $p-XS;
@@ -735,6 +738,9 @@ body {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    @include mobile-L {
+                        justify-content: center;
+                    }
                     .btn-step {
                         display: inline-block;
                         font-size: $size-h5;
@@ -746,6 +752,7 @@ body {
                         @include mobile-L {
                             margin: 0 $p-XXS;
                             text-align: center;
+                            width: 20%;
                         }
                         &.active {
                             border: solid 1px $primary-default;
@@ -784,15 +791,6 @@ body {
                     }
                 }
             }
-            // .container {
-            //     padding: 0;
-            //     max-width: 1140px;
-            //     @include mobile-L {
-            //         margin: 0;
-            //         max-width: unset;
-            //         width: 100%;
-            //     }
-            // }
             form {
                 background-color: unset;
                 h3 {
@@ -881,8 +879,10 @@ body {
                         }
                     }
                     &.download-file {
-                        font-size: $size-p;
-                        padding: $p-XXS $p-XS;
+                        font-size: $size-h5;
+                        padding: 0 $p-XS;
+                        height: 40px;
+                        line-height: 40px;
                         margin-right: $m-S;
                         text-align: left;
                         border: solid 1px $primary-tint;
@@ -891,6 +891,7 @@ body {
                         margin-top: $p-XXS;
                         i {
                             margin-right: $p-XXS;
+                            font-size: $size-p;
                         }
                     }
                     &.btn {

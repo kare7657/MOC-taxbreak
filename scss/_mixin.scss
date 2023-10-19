@@ -242,17 +242,18 @@
             input[type="button"] {
                 background-color: $bk-20 !important;
             }
-            input[type="radio"] + label,
-            input[type="checkbox"] + label {
+            // choice-btn radio,checkbox
+            .choice-btn input[type="radio"] + label,
+            .choice-btn input[type="checkbox"] + label {
                 cursor: not-allowed !important;
             }
-            input[type="radio"] + label,
-            input[type="checkbox"] + label {
+            .choice-btn input[type="radio"] + label,
+            .choice-btn input[type="checkbox"] + label {
                 color: $complementary !important;
                 border: solid 1px $complementary !important;
             }
-            input[type="radio"]:checked + label,
-            input[type="checkbox"]:checked + label {
+            .choice-btn input[type="radio"]:checked + label,
+            .choice-btn input[type="checkbox"]:checked + label {
                 background-color: $complementary !important;
                 color: white !important;
             }
@@ -553,7 +554,8 @@
                     width: 100%;
                     border-bottom: none;
                     padding: 0;
-                    margin: $m-M 0;
+                    margin-top: $m-M;
+                    margin-bottom: $m-XS;
                     @include web-S() {
                         margin: $p-S 0;
                     }
@@ -570,7 +572,7 @@
                 .modal-body {
                     width: 100%;
                     margin: auto;
-                    padding: 0 $p-XL;
+                    padding: $p-XS $p-2L;
                     @include web-S() {
                         padding: 0 $p-M;
                     }
@@ -1022,7 +1024,7 @@
                 justify-content: center;
                 align-items: center;
                 padding: $p-XS 0;
-                background-color: white;
+                // background-color: white;
                 @include web-S() {
                     margin-left: $m-S;
                     padding-right: $p-XXS;
@@ -1030,6 +1032,9 @@
                 .logo {
                     display: flex;
                     align-items: center;
+                    @include web-S {
+                        width: 71%;
+                    }
                     img {
                         width: 40px;
                         height: 40px;
@@ -1038,6 +1043,9 @@
                     h1 {
                         margin: 0;
                         padding: 0;
+                        @include web-S {
+                            font-size: $size-h2;
+                        }
                     }
                 }
                 .right {
@@ -1045,6 +1053,11 @@
                     align-items: center;
                     justify-content: end;
                     margin-left: $m-S;
+                    @include web-S {
+                        width: 29%;
+                        margin-left: 0;
+                        margin-right: $m-S;
+                    }
                     .icon-btn {
                         display: flex;
                         align-items: center;
@@ -1413,7 +1426,7 @@
                     display: flex;
                     flex-direction: column;
                     @include web-S() {
-                        width: 50%;
+                        width: 35%;
                     }
                     @include pad() {
                         width: 25%;
@@ -1443,7 +1456,7 @@
                         width: 50%;
                     }
                     @include pad() {
-                        width: 55%;
+                        width: 60%;
                     }
                     @include mobile-L() {
                         width: 100%;
@@ -1494,8 +1507,8 @@
                 .link {
                     width: 10%;
                     text-align: right;
-                    @include pad() {
-                        width: 20%;
+                    @include web-S {
+                        width: 15%;
                     }
                     @include mobile-L() {
                         width: 100%;
@@ -1780,7 +1793,7 @@
             }
             p {
                 width: 100%;
-                font-size: $size-p;
+                font-size: $size-h5;
                 padding-top: $p-XXS;
                 line-height: 1.5;
             }
@@ -1827,6 +1840,10 @@
                         width: 100%;
                         margin-bottom: $m-XS;
                         margin-right: 0;
+                    }
+                    &[disabled]{
+                        background-color: $complementary;
+
                     }
                 }
                 span,
@@ -2083,7 +2100,8 @@
             }
             .type-gp {
                 margin-top: $p-XXS;
-                @include mobile-L(){
+                @include mobile-L() {
+                    width: 100%;
                     display: flex;
                     justify-content: space-between;
                     flex-wrap: wrap;
@@ -2091,10 +2109,13 @@
                 a,
                 button {
                     margin-right: $p-XXS;
-                    @include mobile-L(){
+                    @include mobile-L() {
                         margin-right: 0;
                         margin-bottom: $m-XS;
-                        width: 47%;
+                        // width: 47%;
+                        width: 22%;
+                        height: auto;
+                        padding: $m-XXS $m-XS;
                     }
                 }
                 .performance {
@@ -2166,7 +2187,6 @@
                     background-color: $primary-default;
                     color: white;
                 }
-
             }
         }
         .datetime {
@@ -2282,7 +2302,7 @@
             margin-top: $m-M;
             @include mobile-L {
                 text-align: left;
-                margin-top: $m-S;
+                margin-top: $p-S;
             }
             input {
                 width: auto !important;

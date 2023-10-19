@@ -60,13 +60,14 @@
                         <div class="form-gp choice-btn">
                             <h5>是否有外國人士來臺演出<span class="notice">*</span></h5>
                             <div class="item">
-                                <input type="radio" name="state" value="" id="yorn" checked>
+                                <input type="radio" name="state" value="" id="yorn" onclick="ChangeDisabled_A(1)">
                                 <label for="yorn">
                                     是
                                 </label>
                             </div>
                             <div class="item">
-                                <input type="radio" name="state" value="" id="yorn2">
+                                <input type="radio" name="state" value="" id="yorn2" checked
+                                    onclick="ChangeDisabled_A(2)">
                                 <label for="yorn2">
                                     否
                                 </label>
@@ -76,7 +77,7 @@
                             <label for="file1">相關證明</label>
                             <!-- <input type="file" id="file1"> -->
                             <div class="file-upload">
-                                <input type="button" id="file1" value="檔案上傳">
+                                <input type="button" id="file1" value="檔案上傳" disabled>
                                 <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
                             </div>
                             <ul class="ps">
@@ -88,13 +89,14 @@
                         <div class="form-gp choice-btn">
                             <h5>是否有大陸地區人士來臺演出<span class="notice">*</span></h5>
                             <div class="item">
-                                <input type="radio" name="state2" value="" id="yorn3" checked>
+                                <input type="radio" name="state2" value="" id="yorn3" onclick="ChangeDisabled_B(1)">
                                 <label for="yorn3">
                                     是
                                 </label>
                             </div>
                             <div class="item">
-                                <input type="radio" name="state2" value="" id="yorn4">
+                                <input type="radio" name="state2" value="" id="yorn4" checked
+                                    onclick="ChangeDisabled_B(2)">
                                 <label for="yorn4">
                                     否
                                 </label>
@@ -104,7 +106,7 @@
                             <label for="file2">相關證明</label>
                             <!-- <input type="file" id="file2"> -->
                             <div class="file-upload">
-                                <input type="button" id="file2" value="檔案上傳">
+                                <input type="button" id="file2" value="檔案上傳" disabled>
                                 <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
                             </div>
                             <ul class="ps">
@@ -136,12 +138,33 @@
     <!-- bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
 
-     <!-- 引入html header&footer -->
-     <script>
+    <!-- 引入html header&footer -->
+    <script>
         $(function () {
             $("#header").load('header.html');
             $("#footer").load("footer.html");
         });
+    </script>
+
+    <!-- 相關證明停用 -->
+    <script>
+        // 是否有外國人士來臺演出
+        function ChangeDisabled_A(value) {
+            if (value == '1') {
+                document.getElementById('file1').disabled = false;// 變更欄位為可用
+            } else {
+                document.getElementById('file1').disabled = true;// 變更欄位為禁用
+            }
+        }
+        // 是否有大陸地區人士來臺演出
+        function ChangeDisabled_B(value) {
+            if (value == '1') {
+                document.getElementById('file2').disabled = false;// 變更欄位為可用
+            } else {
+                document.getElementById('file2').disabled = true;// 變更欄位為禁用
+            }
+        }
+    </script>
     </script>
 
 </body>
