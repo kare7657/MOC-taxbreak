@@ -9,6 +9,11 @@
         @content;
     }
 }
+@mixin web-M {
+    @media (max-width: $web-M) {
+        @content;
+    }
+}
 @mixin web-S {
     @media (max-width: $web-S) {
         @content;
@@ -147,16 +152,19 @@
     }
     #AC {
         position: absolute;
-        left: 0;
+        left: 7%;
         font-size: $size-h5;
         color: $bk-20;
         margin: 0 $m-XS;
-        color: white;
+        color: transparent;
         &:focus {
             color: $primary-tint;
             &::after {
                 content: ":::";
             }
+        }
+        @include web-L(){
+            left: -10px;
         }
     }
     #AZ {
@@ -192,9 +200,8 @@
         margin: 0 !important;
     }
     hr {
-        border-top: 1px solid $primary-tint;
-        margin: 0;
-        margin: auto;
+        border-top: 1px solid $bk-20;
+        margin: $m-XS auto;
     }
     //清除預設按鈕樣式
     select,

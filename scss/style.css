@@ -116,17 +116,22 @@
 }
 * #AC {
   position: absolute;
-  left: 0;
+  left: 7%;
   font-size: 1.25rem;
   color: #dcdddd;
   margin: 0 12px;
-  color: white;
+  color: transparent;
 }
 * #AC:focus {
   color: #a19163;
 }
 * #AC:focus::after {
   content: ":::";
+}
+@media (max-width: 1367px) {
+  * #AC {
+    left: -10px;
+  }
 }
 * #AZ:focus {
   position: absolute;
@@ -163,9 +168,8 @@
   margin: 0 !important;
 }
 * hr {
-  border-top: 1px solid #a19163;
-  margin: 0;
-  margin: auto;
+  border-top: 1px solid #dcdddd;
+  margin: 12px auto;
 }
 * select,
 * input[type=button] {
@@ -2789,8 +2793,9 @@ body main {
   flex-direction: column;
   position: relative;
   padding-top: 155px;
-  padding-bottom: 64px;
+  padding-bottom: 40px;
   min-height: 747px;
+  width: 100%;
 }
 @media (max-width: 1550px) {
   body main {
@@ -2821,6 +2826,7 @@ body main .brief-p {
 }
 body main.nomenu {
   padding-top: 104px;
+  position: relative;
 }
 @media (max-width: 768px) {
   body main.nomenu {
@@ -3049,6 +3055,11 @@ body main .section-fastlink .btn-gp .btn-type:nth-child(2) h2 {
 body main .section-fastlink .btn-gp .btn-type:nth-child(2) .type {
   background-color: rgba(144, 104, 156, 0.1);
 }
+@media (max-width: 768px) {
+  body main .content-type h2 {
+    text-align: center;
+  }
+}
 body main .content-type a {
   display: inline-block;
   font-weight: bold;
@@ -3175,10 +3186,22 @@ body main .content-type .taxbreak-gp .block .bottom .btn-gp .apply {
 body main .content-type .taxbreak-gp .block .bottom .btn-gp .apply.button-outline {
   margin-bottom: 0 !important;
 }
+@media (max-width: 1024px) {
+  body main .content-type .taxbreak-gp .block .bottom .btn-gp .apply {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 body main .content-type .taxbreak-gp .block .bottom button {
   width: 100%;
   margin: 0;
   margin-top: 12px;
+}
+@media (max-width: 1024px) {
+  body main .content-type .taxbreak-gp .block .bottom button {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 body main .content-type .taxbreak-gp .block.performance {
   border: solid 1px #b05f4f;
@@ -3186,6 +3209,7 @@ body main .content-type .taxbreak-gp .block.performance {
 body main .content-type .taxbreak-gp .block.performance .top {
   background-color: #b05f4f;
   border-radius: 10px 10px 0 0;
+  border-bottom: 8px solid rgba(255, 255, 255, 0.5);
 }
 body main .content-type .taxbreak-gp .block.performance .top h3 {
   color: white;
@@ -3200,6 +3224,7 @@ body main .content-type .taxbreak-gp .block.exhibition {
 body main .content-type .taxbreak-gp .block.exhibition .top {
   background-color: #548316;
   border-radius: 10px 10px 0 0;
+  border-bottom: 8px solid rgba(255, 255, 255, 0.5);
 }
 body main .content-type .taxbreak-gp .block.exhibition .top h3 {
   color: white;
@@ -3214,6 +3239,7 @@ body main .content-type .taxbreak-gp .block.screening {
 body main .content-type .taxbreak-gp .block.screening .top {
   background-color: #5075be;
   border-radius: 10px 10px 0 0;
+  border-bottom: 8px solid rgba(255, 255, 255, 0.5);
 }
 body main .content-type .taxbreak-gp .block.screening .top h3 {
   color: white;
@@ -3228,6 +3254,7 @@ body main .content-type .taxbreak-gp .block.auction {
 body main .content-type .taxbreak-gp .block.auction .top {
   background-color: #90689c;
   border-radius: 10px 10px 0 0;
+  border-bottom: 8px solid rgba(255, 255, 255, 0.5);
 }
 body main .content-type .taxbreak-gp .block.auction .top h3 {
   color: white;
@@ -3242,6 +3269,7 @@ body main .content-type .taxbreak-gp .block.book {
 body main .content-type .taxbreak-gp .block.book .top {
   background-color: #88753f;
   border-radius: 10px 10px 0 0;
+  border-bottom: 8px solid rgba(255, 255, 255, 0.5);
 }
 body main .content-type .taxbreak-gp .block.book .top h3 {
   color: white;
@@ -3269,21 +3297,139 @@ body main .content-type .separate-taxation .block {
     margin-right: 0;
   }
 }
-body main .content-type .text-gp {
-  padding-top: 40px;
+body main .info-gp {
+  box-shadow: 0 0 10px rgba(136, 117, 63, 0.3);
+  transition: 0.3s;
+  background-color: white;
+  height: inherit;
+  padding: 24px;
+  border-right: solid 5px #a19163;
+  position: absolute;
+  z-index: 900;
+  left: -26vw;
+  top: 73px;
+  width: 26vw;
+  height: auto;
+}
+@media (max-width: 1550px) {
+  body main .info-gp {
+    left: -38vw;
+    width: 38vw;
+  }
+}
+@media (max-width: 1024px) {
+  body main .info-gp {
+    left: -40vw;
+    width: 40vw;
+  }
+}
+@media (max-width: 768px) {
+  body main .info-gp {
+    top: 112px;
+    left: -65vw;
+    width: 65vw;
+  }
+}
+@media (max-width: 568px) {
+  body main .info-gp {
+    top: 120px;
+    left: -87vw;
+    width: 87vw;
+  }
+}
+body main .info-gp.active {
+  left: 0;
+}
+body main .info-gp .info-btn {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  right: -70px;
+  z-index: 900;
+  background-color: #a19163;
+  color: white;
+  width: 70px;
+  height: 55px;
+  line-height: 60px;
+  border-radius: 0 40px 40px 0;
+  text-align: center;
+}
+@media (max-width: 1280px) {
+  body main .info-gp .info-btn {
+    right: -60px;
+    width: 60px;
+    height: 45px;
+    line-height: 48px;
+  }
+}
+@media (max-width: 1024px) {
+  body main .info-gp .info-btn {
+    right: -54px;
+    width: 54px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 568px) {
+  body main .info-gp .info-btn {
+    right: -44px;
+    width: 44px;
+    height: 34px;
+    line-height: 34px;
+  }
+}
+body main .info-gp .info-btn i {
+  font-size: 1.625rem;
+  margin: 0;
+  margin-left: -4px;
+}
+@media (max-width: 1280px) {
+  body main .info-gp .info-btn i {
+    font-size: 1.375rem;
+  }
+}
+@media (max-width: 1024px) {
+  body main .info-gp .info-btn i {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  body main .info-gp .info-btn i {
+    font-size: 1rem;
+  }
+}
+body main .info-gp .info-content .block .text-gp {
   list-style: none;
   padding-left: 0;
+  margin-bottom: 36px;
+}
+body main .info-gp .info-content .block .text-gp:last-child {
   margin-bottom: 0;
 }
-body main .content-type .text-gp h3 {
+body main .info-gp .info-content .block .text-gp h3 {
   margin-bottom: 12px;
 }
-body main .content-type .text-gp a {
-  line-height: 2.15;
+@media (max-width: 568px) {
+  body main .info-gp .info-content .block .text-gp h3 {
+    font-size: 1.375rem;
+  }
+}
+body main .info-gp .info-content .block .text-gp a {
+  line-height: 2;
   display: inline-block;
   width: auto;
 }
-body main .content-type ul {
+body main .info-gp .info-content .block .text-gp a i {
+  margin-right: 8px;
+}
+body main .info-gp .info-content .block .text-gp p {
+  margin-bottom: 12px;
+}
+body main .info-gp .info-content .block .text-gp p:last-child {
+  margin-bottom: 0;
+}
+body main .info-gp .info-content .block ul {
   padding-left: 0;
   list-style: none;
 }

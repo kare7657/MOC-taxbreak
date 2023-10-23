@@ -62,8 +62,9 @@ body {
         flex-direction: column;
         position: relative;
         padding-top: calc(123px + 32px);
-        padding-bottom: $p-2L;
+        padding-bottom: $p-L;
         min-height: 747px;
+        width: 100%;
         @include web-XL {
             min-height: unset;
         }
@@ -85,6 +86,7 @@ body {
         }
         &.nomenu {
             padding-top: calc(72px + 32px);
+            position: relative;
             @include pad {
                 padding-top: 80px;
             }
@@ -309,6 +311,11 @@ body {
         }
         // 申請類型
         .content-type {
+            h2 {
+                @include pad {
+                    text-align: center;
+                }
+            }
             a {
                 display: inline-block;
                 font-weight: bold;
@@ -430,12 +437,20 @@ body {
                                 &.button-outline {
                                     margin-bottom: 0 !important;
                                 }
+                                @include web-S {
+                                    padding-left: 0;
+                                    padding-right: 0;
+                                }
                             }
                         }
                         button {
                             width: 100%;
                             margin: 0;
                             margin-top: $m-XS;
+                            @include web-S {
+                                padding-left: 0;
+                                padding-right: 0;
+                            }
                         }
                     }
                     &.performance {
@@ -443,6 +458,7 @@ body {
                         .top {
                             background-color: $performance;
                             border-radius: 10px 10px 0 0;
+                            border-bottom: 8px solid rgba($color: white, $alpha: 0.5);
                             h3 {
                                 color: white;
                             }
@@ -459,6 +475,7 @@ body {
                         .top {
                             background-color: $exhibition;
                             border-radius: 10px 10px 0 0;
+                            border-bottom: 8px solid rgba($color: white, $alpha: 0.5);
                             h3 {
                                 color: white;
                             }
@@ -475,6 +492,7 @@ body {
                         .top {
                             background-color: $screening;
                             border-radius: 10px 10px 0 0;
+                            border-bottom: 8px solid rgba($color: white, $alpha: 0.5);
                             h3 {
                                 color: white;
                             }
@@ -491,6 +509,7 @@ body {
                         .top {
                             background-color: $auction;
                             border-radius: 10px 10px 0 0;
+                            border-bottom: 8px solid rgba($color: white, $alpha: 0.5);
                             h3 {
                                 color: white;
                             }
@@ -507,6 +526,7 @@ body {
                         .top {
                             background-color: $primary-default;
                             border-radius: 10px 10px 0 0;
+                            border-bottom: 8px solid rgba($color: white, $alpha: 0.5);
                             h3 {
                                 color: white;
                             }
@@ -535,23 +555,126 @@ body {
                     }
                 }
             }
-            .text-gp {
-                padding-top: $p-L;
-                list-style: none;
-                padding-left: 0;
-                margin-bottom: 0;
-                h3 {
-                    margin-bottom: $m-XS;
+        }
+        // 側欄資訊
+        .info-gp {
+            box-shadow: 0 0 10px rgba($color: $primary-default, $alpha: 0.3);
+            transition: 0.3s;
+            background-color: white;
+            height: inherit;
+            padding: $p-S;
+            border-right: solid 5px $primary-tint;
+            position: absolute;
+            z-index: 900;
+            left: -26vw;
+            top: 73px;
+            width: 26vw;
+            height: auto;
+            @include web-XL {
+                left: -38vw;
+                width: 38vw;
+            }
+            @include web-S {
+                left: -40vw;
+                width: 40vw;
+            }
+            @include pad {
+                top: 112px;
+                left: -65vw;
+                width: 65vw;
+            }
+            @include mobile-L {
+                top: 120px;
+                left: -87vw;
+                width: 87vw;
+            }
+            &.active {
+                left: 0;
+            }
+            .info-btn {
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                right: -70px;
+                z-index: 900;
+                background-color: $primary-tint;
+                color: white;
+                width: 70px;
+                height: 55px;
+                line-height: 60px;
+                // padding: $p-XS $p-M;
+                border-radius: 0 40px 40px 0;
+                text-align: center;
+                @include web-M {
+                    right: -60px;
+                    width: 60px;
+                    height: 45px;
+                    line-height: 48px;
                 }
-                a {
-                    line-height: 2.15;
-                    display: inline-block;
-                    width: auto;
+                @include web-S {
+                    right: -54px;
+                    width: 54px;
+                    height: 40px;
+                    line-height: 40px;
+                }
+                @include mobile-L {
+                    right: -44px;
+                    width: 44px;
+                    height: 34px;
+                    line-height: 34px;
+                }
+                i {
+                    font-size: $size-h3;
+                    margin: 0;
+                    margin-left: -4px;
+                    @include web-M {
+                        font-size: $size-h4;
+                    }
+                    @include web-S {
+                        font-size: $size-h5;
+                    }
+                    @include pad {
+                        font-size: $size-p;
+                    }
                 }
             }
-            ul {
-                padding-left: 0;
-                list-style: none;
+            .info-content {
+               .block{
+                 .text-gp {
+                    // padding-top: $p-S;
+                    list-style: none;
+                    padding-left: 0;
+                    margin-bottom: $m-M;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    h3 {
+                        margin-bottom: $m-XS;
+                        @include mobile-L {
+                            font-size: $size-h4;
+                        }
+                    }
+                    a {
+                        line-height: 2;
+                        display: inline-block;
+                        width: auto;
+                        i {
+                            margin-right: $p-XXS;
+                        }
+                    }
+                    p {
+                        margin-bottom: $m-XS;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                ul {
+                    padding-left: 0;
+                    list-style: none;
+                }
+               }
             }
         }
 
