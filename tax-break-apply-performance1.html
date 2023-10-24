@@ -62,18 +62,14 @@
                         <div class="form-gp choice-btn">
                             <h5>類型<span class="notice">*</span></h5>
                             <div class="type-gp">
-                                <button type="button" class="button-outline performance active"
-                                data-toggle="modal"
-                                data-target="#modal-notify-performance">表演</button>
-                                <button type="button" class="button-outline exhibition"
-                                data-toggle="modal"
-                                data-target="#modal-notify-exhibition">展覽</button>
-                                <button type="button" class="button-outline screening"
-                                data-toggle="modal"
-                                data-target="#modal-notify-screening">映演</button>
-                                <button type="button" class="button-outline auction"
-                                data-toggle="modal"
-                                data-target="#modal-notify-auction">拍賣</button>
+                                <button type="button" class="button-outline performance active" data-toggle="modal"
+                                    data-target="#modal-notify-performance">表演</button>
+                                <button type="button" class="button-outline exhibition" data-toggle="modal"
+                                    data-target="#modal-notify-exhibition">展覽</button>
+                                <button type="button" class="button-outline screening" data-toggle="modal"
+                                    data-target="#modal-notify-screening">映演</button>
+                                <button type="button" class="button-outline auction" data-toggle="modal"
+                                    data-target="#modal-notify-auction">拍賣</button>
                             </div>
                         </div>
                         <div class="form-gp">
@@ -90,7 +86,8 @@
                                 </select>
                                 <input type="text" name="activity_performer" id="activity_performer"
                                     placeholder="請填入團體名稱">
-                                <a href="" title="刪除表演者"><i class="fas fa-minus-circle"></i></a>
+                                <!-- <a href="" title="刪除表演者"><i class="fas fa-minus-circle"></i></a> -->
+                                <button type="button" class="icon-btn"><i class="fas fa-minus-circle"></i></button>
                             </div>
                             <div class="performer view-nobtn">
                                 <select name="type" id="activity_country2">
@@ -100,9 +97,11 @@
                                 </select>
                                 <input type="text" name="activity_performer2" id="activity_performer2"
                                     placeholder="請填入團體名稱">
-                                <a href="" title="刪除表演者"><i class="fas fa-minus-circle"></i></a>
+                                <!-- <a href="" title="刪除表演者"><i class="fas fa-minus-circle"></i></a> -->
+                                <button type="button" class="icon-btn"><i class="fas fa-minus-circle"></i></button>
                             </div>
-                            <a href="" class="add"><i class="fas fa-plus-circle"></i>新增團隊或演出者</a>
+                            <!-- <a href="" class="add"><i class="fas fa-plus-circle"></i>新增團隊或演出者</a> -->
+                            <button type="button" class="add"><i class="fas fa-plus-circle"></i>新增團隊或演出者</button>
                         </div>
                         <div class="form-gp">
                             <label for="activity_purpose">辦理目的<span class="notice">*</span></label>
@@ -118,7 +117,8 @@
                         <div class="place-gp">
                             <div class="place-header">
                                 <span class="title">地點 1</span>
-                                <a href="" title="刪除表演地點"><i class="fas fa-minus-circle"></i>刪除</a>
+                                <!-- <a href="" title="刪除表演地點"><i class="fas fa-minus-circle"></i>刪除</a> -->
+                                <button type="button"><i class="fas fa-minus-circle"></i>刪除</button>
                             </div>
                             <div class="place-body">
                                 <div class="form-gp">
@@ -145,8 +145,10 @@
                                             <option value="list2">項目2</option>
                                             <option value="list3">項目3</option>
                                         </select>
-                                        <a href="" class="add" data-toggle="modal" data-target="#modal-place"><i
-                                                class="fas fa-plus-circle"></i>新增地點</a>
+                                        <!-- <a href="" class="add" data-toggle="modal" data-target="#modal-place"><i
+                                                class="fas fa-plus-circle"></i>新增地點</a> -->
+                                        <button type="button" class="add" data-toggle="modal"
+                                            data-target="#modal-place"><i class="fas fa-plus-circle"></i>新增地點</button>
                                     </div>
                                 </div>
                                 <div class="form-gp datetime">
@@ -169,8 +171,11 @@
                                     <label for="session">場次</label>
                                     <div class="session">
                                         <input type="number" name="session" id="session" disabled placeholder="點選編輯場次">
-                                        <a href="" class="add" data-toggle="modal" data-target="#modal-session"><i
-                                                class="fas fa-pen"></i>編輯場次</a>
+                                        <!-- <a href="" class="add" data-toggle="modal" data-target="#modal-session"><i
+                                                class="fas fa-pen"></i>編輯場次</a> -->
+                                        <button type="button" class="add" data-toggle="modal"
+                                            data-target="#modal-session"><i class="fas fa-pen"></i>編輯場次</button>
+
                                     </div>
                                     <p class="notice">※ 請先選擇開始日期與結束日期</p>
                                 </div>
@@ -191,21 +196,27 @@
                                         <div class="input-gp withbtn">
                                             <input type="text" name="ticket-price2" id="price_freeFormat"
                                                 placeholder="票價金額">
-                                            <a href="" title="新增票價"><i class="fas fa-plus-circle"></i></a>
+                                            <!-- <a href="" title="新增票價"><i class="fas fa-plus-circle"></i></a> -->
+                                            <button type="button" class="icon-btn"><i
+                                                    class="fas fa-plus-circle"></i></button>
                                         </div>
                                     </div>
                                     <div class="ticket-price-result">
                                         <div class="num">300
-                                            <a href="" title="刪除票價"><i class="fas fa-times"></i></a>
+                                            <!-- <a href="" title="刪除票價"><i class="fas fa-times"></i></a> -->
+                                            <button type="button" class="icon-btn"><i class="fas fa-times"></i></button>
                                         </div>
                                         <div class="num">600
-                                            <a href="" title="刪除票價"><i class="fas fa-times"></i></a>
+                                            <!-- <a href="" title="刪除票價"><i class="fas fa-times"></i></a> -->
+                                            <button type="button" class="icon-btn"><i class="fas fa-times"></i></button>
                                         </div>
                                         <div class="num">900
-                                            <a href="" title="刪除票價"><i class="fas fa-times"></i></a>
+                                            <!-- <a href="" title="刪除票價"><i class="fas fa-times"></i></a> -->
+                                            <button type="button" class="icon-btn"><i class="fas fa-times"></i></button>
                                         </div>
                                         <div class="num">1200
-                                            <a href="" title="刪除票價"><i class="fas fa-times"></i></a>
+                                            <!-- <a href="" title="刪除票價"><i class="fas fa-times"></i></a> -->
+                                            <button type="button" class="icon-btn"><i class="fas fa-times"></i></button>
                                         </div>
                                     </div>
                                     <ul class="ps">
@@ -234,7 +245,8 @@
                         </div>
                     </fieldset>
                     <div class="form-gp">
-                        <a href="" class="add"><i class="fas fa-plus-circle"></i>新增表演地點</a>
+                        <!-- <a href="" class="add"><i class="fas fa-plus-circle"></i>新增表演地點</a> -->
+                        <button type="button" class="add"><i class="fas fa-plus-circle"></i>新增表演地點</button>
                     </div>
                     <!-- <div class="form-gp choice">
                         <div class="item">

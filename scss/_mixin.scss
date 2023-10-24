@@ -163,7 +163,7 @@
                 content: ":::";
             }
         }
-        @include web-L(){
+        @include web-L() {
             left: -10px;
         }
     }
@@ -271,6 +271,9 @@
                     }
                 }
             }
+            // .form-gp p{
+            //     font-size: $size-h5;
+            // }
         }
     }
     //表單
@@ -331,7 +334,7 @@
             border-radius: 4px;
             padding: $m-XXS $p-S;
             text-decoration: none;
-            margin: $m-XXS;
+            // margin: $m-XXS;
             cursor: pointer;
             &:hover {
                 background-color: $primary-default;
@@ -447,8 +450,12 @@
         width: 12px !important;
         position: absolute;
         right: 16px;
-        top: 0%;
-        transform: translateY(25%);
+        // top: 0%;
+        // transform: translateY(25%);
+        top: calc(50% - 12px);
+        @include mobile-L() {
+            top: calc(50% - 10px);
+        }
     }
     .time-icon::after {
         font-family: "Font Awesome 5 Free";
@@ -457,8 +464,12 @@
         width: 12px;
         position: absolute;
         right: 16px;
-        top: 0%;
-        transform: translateY(25%);
+        // top: 0%;
+        // transform: translateY(25%);
+        top: calc(50% - 12px);
+        @include mobile-L() {
+            top: calc(50% - 10px);
+        }
     }
     // switch
     .custom-control.custom-switch {
@@ -1018,8 +1029,8 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            // border-bottom:solid 1px rgba($color: $primary-tint, $alpha: 0.2) ;
-            box-shadow: 0 0 10px rgba($color: $primary-default, $alpha: 0.3);
+            // border-bottom:solid 1px rgba($color: $primary-tint, $alpha: 0.3) ;
+            box-shadow: 0 0 10px rgba($color: $primary-tint, $alpha: 0.3);
             @include pad() {
                 display: none;
             }
@@ -1078,7 +1089,7 @@
                         i {
                             margin: 0;
                             font-size: $size-h3;
-                            color: $primary-tint;
+                            color: $primary-default;
                         }
                     }
                     .btn {
@@ -1257,6 +1268,7 @@
             display: none;
             height: 80px;
             @include pad() {
+                background-color: white;
                 display: block;
                 position: relative;
                 box-shadow: 0 0 20px rgba($color: $primary-dark, $alpha: 0.1);
@@ -1385,6 +1397,19 @@
                         font-size: $size-p;
                     }
                 }
+            }
+        }
+        // index
+        &.bgc {
+            position: relative;
+            // background-color: $primary-table;
+            // border-bottom: solid 1px rgba($color: $primary-tint, $alpha: 0.4);
+            background-color: transparent;
+            // background-color: white;
+            // box-shadow: 0 0 10px rgba($color: $primary-tint, $alpha: 0.3);
+            .pc {
+                box-shadow: unset;
+                position: relative;
             }
         }
     }
@@ -1556,15 +1581,18 @@
         position: fixed;
         right: 40px;
         bottom: 30px;
-        background-color: rgba($color: $primary-tint, $alpha: 1);
         border-radius: 50%;
         font-size: $size-h4;
-        color: white;
+        color: $primary-tint;
         line-height: 45px;
         text-align: center;
         @include web-S() {
             right: 25px;
             bottom: 25px;
+        }
+        @include mobile-L() {
+            background-color: rgba($color: $primary-tint, $alpha: 1);
+            color: white;
         }
         @include mobile-XS() {
             bottom: 30px;
@@ -1800,7 +1828,7 @@
             }
             p {
                 width: 100%;
-                font-size: $size-h5;
+                font-size: $size-p;
                 padding-top: $p-XXS;
                 line-height: 1.5;
             }
@@ -1848,9 +1876,8 @@
                         margin-bottom: $m-XS;
                         margin-right: 0;
                     }
-                    &[disabled]{
+                    &[disabled] {
                         background-color: $complementary;
-
                     }
                 }
                 span,
@@ -1871,6 +1898,16 @@
                     i {
                         margin-right: $p-XXS;
                     }
+                }
+            }
+            .icon-btn {
+                padding: 0 $p-XXS;
+                background-color: transparent;
+                color: $primary-default;
+                height: 35px;
+                i {
+                    margin: 0;
+                    font-size: $size-h4;
                 }
             }
             .performer {
@@ -1929,7 +1966,7 @@
                         margin-bottom: $m-XS;
                     }
                 }
-                a.add {
+                .add {
                     width: 27%;
                     margin-top: 0 !important;
                     @include web-S {
@@ -1940,7 +1977,7 @@
                         width: 100%;
                     }
                     i {
-                        font-size: $size-p;
+                        font-size: $size-h5;
                     }
                 }
             }
@@ -2043,7 +2080,10 @@
                         }
                         i {
                             font-size: $size-h4;
-                            padding: $p-XXS $m-XS;
+                        }
+                        a,
+                        .icon-btn {
+                            margin-left: $p-XXS;
                         }
                     }
                 }
@@ -2069,6 +2109,11 @@
                         font-size: $size-p;
                         margin-left: $m-XXS;
                         color: rgba($color: $ticket, $alpha: 1);
+                    }
+                    .icon-btn {
+                        height: initial;
+                        font-size: $size-p;
+                        padding: 0;
                     }
                 }
                 span {
@@ -2313,6 +2358,7 @@
             }
             input {
                 width: auto !important;
+                margin: 0 $m-XXS;
                 @include mobile-L {
                     width: 100% !important;
                     margin: 0;
