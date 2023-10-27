@@ -60,23 +60,19 @@
                         <div class="form-gp choice-btn">
                             <h5>類型<span class="notice">*</span></h5>
                             <div class="type-gp">
-                                <button type="button" class="button-outline performance"
-                                data-toggle="modal"
-                                data-target="#modal-notify-performance">表演</button>
-                                <button type="button" class="button-outline exhibition"
-                                data-toggle="modal"
-                                data-target="#modal-notify-exhibition">展覽</button>
-                                <button type="button" class="button-outline screening"
-                                data-toggle="modal"
-                                data-target="#modal-notify-screening">映演</button>
-                                <button type="button" class="button-outline auction active"
-                                data-toggle="modal"
-                                data-target="#modal-notify-auction">拍賣</button>
+                                <button type="button" class="button-outline " data-toggle="modal"
+                                    data-target="#modal-notify-performance">表演</button>
+                                <button type="button" class="button-outline" data-toggle="modal"
+                                    data-target="#modal-notify-exhibition">展覽</button>
+                                <button type="button" class="button-outline " data-toggle="modal"
+                                    data-target="#modal-notify-screening">映演</button>
+                                <button type="button" class="button-outline  active" data-toggle="modal"
+                                    data-target="#modal-notify-auction">拍賣</button>
                             </div>
                         </div>
                         <div class="form-gp">
                             <label for="activity_name">活動名稱<span class="notice">*</span></label>
-                            <input type="text" name="activity_name" id="activity_name"  placeholder="票面之活動名稱">
+                            <input type="text" name="activity_name" id="activity_name" placeholder="票面之活動名稱">
                         </div>
                         <div class="form-gp">
                             <label for="activity_purpose">辦理目的<span class="notice">*</span></label>
@@ -756,114 +752,114 @@
                 </div>
             </form>
         </div>
-         <!-- modal 提示-表演-->
-         <div class="modal fade modal-template " id="modal-notify-performance" tabindex="-1" role="dialog"
-         aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
-         <form class="form" name="fm_ChangPWD" id="fm_ChangPWD3" method="post" action="ChangPWD.jsp"
-             target="frm_ChangPWD">
-             <div class="modal-dialog modal-dialog-centered" role="document">
-                 <div class="modal-content">
-                     <div class="modal-header">
-                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                             <span aria-hidden="true">&times;</span>
-                         </button>
-                         <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
-                     </div>
-                     <div class="modal-body">
-                         <div class="notify-gp">
-                             <p>若調整類型，目前填寫的資料將會被清除，請確定是否要繼續？</p>
-                         </div>
-                     </div>
-                     <div class="modal-footer">
-                         <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
-                         <button type="button" name="go" id="go2"
-                             onclick="location.href='tax-break-apply-performance1.html'">確認</button>
-                     </div>
-                 </div>
-             </div>
-         </form>
-     </div>
-     <!-- modal 提示-展覽-->
-     <div class="modal fade modal-template " id="modal-notify-exhibition" tabindex="-1" role="dialog"
-         aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
-         <form class="form" name="fm_ChangPWD" id="fm_ChangPWD4" method="post" action="ChangPWD.jsp"
-             target="frm_ChangPWD">
-             <div class="modal-dialog modal-dialog-centered" role="document">
-                 <div class="modal-content">
-                     <div class="modal-header">
-                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                             <span aria-hidden="true">&times;</span>
-                         </button>
-                         <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
-                     </div>
-                     <div class="modal-body">
-                         <div class="notify-gp">
-                             <p>若調整類型，目前填寫的資料將會被清除，請確定是否要繼續？</p>
-                         </div>
-                     </div>
-                     <div class="modal-footer">
-                         <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
-                         <button type="button" name="go" id="go2"
-                             onclick="location.href='tax-break-apply-exhibition1.html'">確認</button>
-                     </div>
-                 </div>
-             </div>
-         </form>
-     </div>
-     <!-- modal 提示-映演-->
-     <div class="modal fade modal-template " id="modal-notify-screening" tabindex="-1" role="dialog"
-         aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
-         <form class="form" name="fm_ChangPWD" id="fm_ChangPWD5" method="post" action="ChangPWD.jsp"
-             target="frm_ChangPWD">
-             <div class="modal-dialog modal-dialog-centered" role="document">
-                 <div class="modal-content">
-                     <div class="modal-header">
-                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                             <span aria-hidden="true">&times;</span>
-                         </button>
-                         <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
-                     </div>
-                     <div class="modal-body">
-                         <div class="notify-gp">
-                             <p>若調整類型，目前填寫的資料將會被清除，請確定是否要繼續？</p>
-                         </div>
-                     </div>
-                     <div class="modal-footer">
-                         <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
-                         <button type="button" name="go" id="go2"
-                             onclick="location.href='tax-break-apply-screening1.html'">確認</button>
-                     </div>
-                 </div>
-             </div>
-         </form>
-     </div>
-     <!-- modal 提示-拍賣-->
-     <div class="modal fade modal-template " id="modal-notify-auction" tabindex="-1" role="dialog"
-         aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
-         <form class="form" name="fm_ChangPWD" id="fm_ChangPWD6" method="post" action="ChangPWD.jsp"
-             target="frm_ChangPWD">
-             <div class="modal-dialog modal-dialog-centered" role="document">
-                 <div class="modal-content">
-                     <div class="modal-header">
-                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                             <span aria-hidden="true">&times;</span>
-                         </button>
-                         <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
-                     </div>
-                     <div class="modal-body">
-                         <div class="notify-gp">
-                             <p>若調整類型，目前填寫的資料將會被清除，請確定是否要繼續？</p>
-                         </div>
-                     </div>
-                     <div class="modal-footer">
-                         <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
-                         <button type="button" name="go" id="go2"
-                             onclick="location.href='tax-break-apply-auction1.html'">確認</button>
-                     </div>
-                 </div>
-             </div>
-         </form>
-     </div>
+        <!-- modal 提示-表演-->
+        <div class="modal fade modal-template " id="modal-notify-performance" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD3" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <p>若調整類型，目前填寫的資料將會被清除，請確定是否要繼續？</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+                            <button type="button" name="go" id="go2"
+                                onclick="location.href='tax-break-apply-performance1.html'">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- modal 提示-展覽-->
+        <div class="modal fade modal-template " id="modal-notify-exhibition" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD4" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <p>若調整類型，目前填寫的資料將會被清除，請確定是否要繼續？</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+                            <button type="button" name="go" id="go2"
+                                onclick="location.href='tax-break-apply-exhibition1.html'">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- modal 提示-映演-->
+        <div class="modal fade modal-template " id="modal-notify-screening" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD5" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <p>若調整類型，目前填寫的資料將會被清除，請確定是否要繼續？</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+                            <button type="button" name="go" id="go2"
+                                onclick="location.href='tax-break-apply-screening1.html'">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- modal 提示-拍賣-->
+        <div class="modal fade modal-template " id="modal-notify-auction" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD6" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <p>若調整類型，目前填寫的資料將會被清除，請確定是否要繼續？</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+                            <button type="button" name="go" id="go2"
+                                onclick="location.href='tax-break-apply-auction1.html'">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </main>
     <!-- footer -->
     <footer id="footer"></footer>

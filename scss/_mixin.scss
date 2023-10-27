@@ -69,7 +69,8 @@
     }
     h2 {
         font-size: $size-h2;
-        color: $primary-default;
+        color: $primary-dark;
+        // color: black;
         padding: 0;
         margin: 0;
         margin-bottom: $m-XS;
@@ -81,6 +82,7 @@
     h3 {
         font-size: $size-h3;
         color: $primary-default;
+        // color: black;
         padding: 0;
         margin: 0;
         line-height: 1.25;
@@ -88,6 +90,7 @@
     h4 {
         font-size: $size-h4;
         color: $primary-default;
+        // color: black;
         padding: 0;
         margin: 0;
         line-height: 1.25;
@@ -95,7 +98,7 @@
     }
     h5 {
         font-size: $size-h5;
-        color: black;
+        // color: black;
         margin: 0;
         line-height: 1.5;
     }
@@ -1617,7 +1620,7 @@
         @include pad() {
             margin-top: 0;
             padding: $m-XXS 0;
-            background-color: $primary-table;
+            // background-color: $primary-table;
         }
         @include mobile-L() {
             padding: $p-XXS 0;
@@ -2170,6 +2173,12 @@
                         padding: $m-XXS $m-XS;
                     }
                 }
+                .button-outline {
+                    &.active {
+                        background-color: $primary-default !important;
+                        color: white !important;
+                    }
+                }
                 .performance {
                     box-shadow: $performance 0 0 0 1px;
                     color: $performance !important;
@@ -2376,6 +2385,16 @@
             }
         }
         &.view {
+            .notice{
+                font-size: $size-h2;
+                text-align: center;
+                font-weight: bold;
+                margin-bottom: $m-S !important;
+                i{
+                    margin-right: $m-XS;
+                    font-size: $size-h3;
+                }
+            }
             fieldset {
                 .performer {
                     select {

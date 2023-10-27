@@ -35,7 +35,7 @@
 }
 * h2 {
   font-size: 1.75rem;
-  color: #88753f;
+  color: #5f4d1c;
   padding: 0;
   margin: 0;
   margin-bottom: 12px;
@@ -61,7 +61,6 @@
 }
 * h5 {
   font-size: 1.25rem;
-  color: black;
   margin: 0;
   line-height: 1.5;
 }
@@ -1645,7 +1644,6 @@ body .breadcrumb {
   body .breadcrumb {
     margin-top: 0;
     padding: 4px 0;
-    background-color: #f7f5f0;
   }
 }
 @media (max-width: 568px) {
@@ -2132,6 +2130,10 @@ body form .choice-btn .type-gp button {
     padding: 4px 12px;
   }
 }
+body form .choice-btn .type-gp .button-outline.active {
+  background-color: #88753f !important;
+  color: white !important;
+}
 body form .choice-btn .type-gp .performance {
   box-shadow: #b05f4f 0 0 0 1px;
   color: #b05f4f !important;
@@ -2352,6 +2354,16 @@ body form ul li {
   color: #595757;
   list-style: decimal;
   list-style-position: inside;
+}
+body form.view .notice {
+  font-size: 1.75rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px !important;
+}
+body form.view .notice i {
+  margin-right: 12px;
+  font-size: 1.625rem;
 }
 body form.view fieldset .performer select {
   width: 40%;
@@ -2881,8 +2893,16 @@ body main.nomenu {
 body main.bgc {
   background-color: #f7f5f0;
 }
+body main.bg-gray {
+  background-color: #eee;
+}
 body main.fixpt {
   padding-top: 24px;
+}
+@media (max-width: 568px) {
+  body main.fixpt {
+    padding-top: 0;
+  }
 }
 body main.main-clause {
   padding: 0 24px;
@@ -2894,6 +2914,8 @@ body main.main-clause {
   }
 }
 body main .alert {
+  font-size: 1.625rem;
+  text-align: center;
   color: #5f4d1c;
   font-weight: bold;
 }
@@ -2956,7 +2978,7 @@ body main .content-webmap .container .list-gp .text-gp .title {
   display: block;
   font-weight: bold;
   font-size: 1.25rem;
-  color: #88753f;
+  color: #5f4d1c;
   background-color: #f7f5f0;
   padding: 8px 16px;
   margin: 0;
@@ -3173,6 +3195,8 @@ body main .content-type .taxbreak-gp .block .top {
   width: 100%;
   text-align: center;
   padding: 20px 16px;
+  background-color: #88753f;
+  border-radius: 10px 10px 0 0;
 }
 @media (max-width: 568px) {
   body main .content-type .taxbreak-gp .block .top {
@@ -3187,7 +3211,7 @@ body main .content-type .taxbreak-gp .block .top img {
   margin-top: 8px;
   margin-bottom: 12px;
 }
-body main .content-type .taxbreak-gp .block .top h2 {
+body main .content-type .taxbreak-gp .block .top h3 {
   color: white;
   margin-bottom: 0;
 }
@@ -3379,7 +3403,7 @@ body main .info-gp {
   position: absolute;
   z-index: 900;
   left: -26vw;
-  top: 73px;
+  top: 0;
   width: 26vw;
   height: auto;
 }
@@ -3397,14 +3421,14 @@ body main .info-gp {
 }
 @media (max-width: 768px) {
   body main .info-gp {
-    top: 112px;
+    top: 80px;
     left: -65vw;
     width: 65vw;
   }
 }
 @media (max-width: 568px) {
   body main .info-gp {
-    top: 120px;
+    top: 40px;
     left: -87vw;
     width: 87vw;
   }
@@ -3642,13 +3666,13 @@ body main .content-signup h2 {
 }
 body main .content-signup .step {
   width: 100%;
+  max-width: 1140px;
+  border-radius: 8px;
   margin: auto;
-  background-color: #f7f5f0;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 36px;
-  margin-bottom: 12px;
+  margin-top: 20px;
   padding: 16px 0;
 }
 @media (max-width: 1024px) {
@@ -3733,8 +3757,23 @@ body main .content-signup .step .view-gp button {
     margin-bottom: 0;
   }
 }
+body main .content-signup .container {
+  padding-top: 8px;
+}
 body main .content-signup form {
   background-color: unset;
+}
+body main .content-signup form.card {
+  background-color: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: unset;
+}
+@media (max-width: 568px) {
+  body main .content-signup form.card {
+    padding: 24px;
+  }
 }
 body main .content-signup form h3 {
   margin-top: 12px;
@@ -3783,7 +3822,8 @@ body main .content-signup form .place-gp .place-header .title {
   padding: 0 16px;
   color: inherit;
 }
-body main .content-signup form .place-gp .place-header a, body main .content-signup form .place-gp .place-header button {
+body main .content-signup form .place-gp .place-header a,
+body main .content-signup form .place-gp .place-header button {
   color: white;
   padding: 2px 16px;
   font-size: 1.25rem;
@@ -3793,7 +3833,8 @@ body main .content-signup form .place-gp .place-header a, body main .content-sig
   display: flex;
   align-items: center;
 }
-body main .content-signup form .place-gp .place-header a i, body main .content-signup form .place-gp .place-header button i {
+body main .content-signup form .place-gp .place-header a i,
+body main .content-signup form .place-gp .place-header button i {
   margin-right: 8px;
 }
 body main .content-signup form .place-gp .place-body {

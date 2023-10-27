@@ -68,6 +68,7 @@ body {
         flex-direction: column;
         position: relative;
         padding-top: calc(123px + 32px);
+        // padding-top: 32px;
         padding-bottom: $p-L;
         min-height: 747px;
         // min-height: 673px;
@@ -101,8 +102,14 @@ body {
         &.bgc {
             background-color: $primary-table;
         }
+        &.bg-gray {
+            background-color: #eee;
+        }
         &.fixpt {
             padding-top: 24px;
+            @include mobile-L{
+                padding-top: 0;
+            }
         }
         &.main-clause {
             padding: 0 $p-S;
@@ -115,7 +122,8 @@ body {
             // }
         }
         .alert {
-            // font-size: $size-h5;
+            font-size: $size-h3;
+            text-align: center;
             color: $primary-dark;
             font-weight: bold;
         }
@@ -174,7 +182,7 @@ body {
                             display: block;
                             font-weight: bold;
                             font-size: $size-h5;
-                            color: $primary-default;
+                            color: $primary-dark;
                             background-color: $primary-table;
                             padding: $p-XXS $p-XS;
                             margin: 0;
@@ -266,6 +274,7 @@ body {
                         padding-bottom: 0;
                         border-radius: 10px 10px 0 0;
                         border-top: 8px solid rgba($color: $primary-tint, $alpha: 0.8);
+
                         h2 {
                             width: 100%;
                             text-align: center;
@@ -393,6 +402,8 @@ body {
                         text-align: center;
                         // border-bottom: solid 1px $primary-default;
                         padding: $m-S $p-XS;
+                        background-color: $primary-default;
+                        border-radius: 10px 10px 0 0;
                         @include mobile-L {
                             padding: $p-XS;
                         }
@@ -411,8 +422,8 @@ body {
                             //     height: 60px;
                             // }
                         }
-                        h2 {
-                            color: white;
+                        h3 {
+                            color: white ;
                             margin-bottom: 0;
                         }
                     }
@@ -605,7 +616,8 @@ body {
             position: absolute;
             z-index: 900;
             left: -26vw;
-            top: 73px;
+            // top: 73px;
+            top: 0;
             width: 26vw;
             height: auto;
             @include web-XL {
@@ -617,12 +629,14 @@ body {
                 width: 40vw;
             }
             @include pad {
-                top: 112px;
+                // top: 112px;
+                top: 80px;
                 left: -65vw;
                 width: 65vw;
             }
             @include mobile-L {
-                top: 120px;
+                // top: 120px;
+                top: 40px;
                 left: -87vw;
                 width: 87vw;
             }
@@ -898,15 +912,18 @@ body {
             // }
             .step {
                 width: 100%;
-                // max-width: 1140px;
+                max-width: 1140px;
+                border-radius: 8px;
                 margin: auto;
-                background-color: $primary-table;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-top: $m-M;
-                margin-bottom: $m-XS;
+                margin-top: $m-S;
+                // margin-bottom: $m-XS;
                 padding: $p-XS 0;
+                // border: solid 1px $primary-default;
+                // background-color: white;
+                // box-shadow: 0 0 10px rgba($color: black, $alpha: 0.1);
                 @include web-S {
                     margin-bottom: 0;
                     padding: $p-XS $p-M;
@@ -921,6 +938,10 @@ body {
                 .btn-gp {
                     width: 100%;
                     // max-width: 1140px;
+                    // background-color: white;
+                    // background-color: $primary-table;
+                    // padding: $m-XS $p-M;
+                    // border-radius: 40px;
                     max-width: 600px;
                     display: flex;
                     justify-content: space-between;
@@ -978,8 +999,21 @@ body {
                     }
                 }
             }
+            .container {
+                padding-top: $p-XXS;
+            }
             form {
                 background-color: unset;
+                &.card {
+                    background-color: white;
+                    padding: $p-M;
+                    border-radius: 12px;
+                    box-shadow: 0 0 10px rgba($color: black, $alpha: 0.1);
+                    border: unset;
+                    @include mobile-L{
+                        padding: $p-S;
+                    }
+                }
                 h3 {
                     margin-top: $m-XS;
                     margin-bottom: $m-S;
@@ -1025,7 +1059,8 @@ body {
                             padding: 0 $p-XS;
                             color: inherit;
                         }
-                        a,button {
+                        a,
+                        button {
                             color: white;
                             // line-height: 40px;
                             padding: 2px $p-XS;
