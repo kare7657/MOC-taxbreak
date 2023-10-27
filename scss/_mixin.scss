@@ -44,9 +44,12 @@
     font-family: "微軟正黑體" !important;
     box-sizing: border-box !important;
     .container {
-        width: 1140px;
+        max-width: 1530px;
         margin: auto;
         padding: $p-S 0;
+        @include web-XL{
+            max-width: 1140px;
+        }
         @include web-S {
             padding-top: $p-XS;
         }
@@ -1039,7 +1042,7 @@
             }
             .top {
                 width: 100%;
-                max-width: 1140px;
+                max-width: 1366px;
                 display: flex;
                 // justify-content: space-between;
                 justify-content: center;
@@ -1140,7 +1143,7 @@
                 background-color: $primary-default;
                 color: white;
                 .nav-gp {
-                    width: 1140px;
+                    width: 1366px;
                     display: flex;
                     margin: auto;
                     @include web-S() {

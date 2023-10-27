@@ -20,7 +20,7 @@ body {
     padding-right: 0 !important;
     position: relative;
     @include mobile-XS() {
-        font-size: 0.875rem;
+        font-size: 0.775rem;
     }
     @include navbar();
     @include footer();
@@ -57,7 +57,8 @@ body {
         opacity: 0.1;
     }
     &.bg-img {
-        background-image: url("../img/bg.svg");
+        // background-image: url("../img/bg.svg");
+        background-image: url("../img/bg-v2.svg");
         background-size: cover;
         background-position: center top;
         // background-color: $primary-table;
@@ -107,7 +108,7 @@ body {
         }
         &.fixpt {
             padding-top: 24px;
-            @include mobile-L{
+            @include mobile-L {
                 padding-top: 0;
             }
         }
@@ -244,9 +245,10 @@ body {
             .btn-gp {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                justify-content: space-around;
                 .btn-type {
-                    width: 48%;
+                    width: 42%;
+                    // margin: 0 $m-S;
                     border: solid 1px $primary-tint;
                     border-radius: 12px;
                     display: flex;
@@ -256,9 +258,10 @@ body {
                     // padding: $p-L $p-L;
                     background-color: white;
                     position: relative;
-                    @include pad {
-                        // padding: $p-L $p-L;
-                    }
+                    box-shadow: 5px 5px 10px rgba($color: $primary-tint, $alpha: 0.1);
+                    // @include pad {
+                    //     padding: $p-L $p-L;
+                    // }
                     @include mobile-L() {
                         width: 100%;
                         // flex-wrap: wrap;
@@ -273,7 +276,7 @@ body {
                         padding: $p-L;
                         padding-bottom: 0;
                         border-radius: 10px 10px 0 0;
-                        border-top: 8px solid rgba($color: $primary-tint, $alpha: 0.8);
+                        border-top: 8px solid rgba($color: $primary-tint, $alpha: 0.7);
 
                         h2 {
                             width: 100%;
@@ -281,7 +284,7 @@ body {
                             padding-bottom: $p-M;
                             margin-bottom: $m-L;
                             border-bottom: 1px solid $bk-20;
-
+                            color: $primary-default;
                             @include pad {
                                 padding-bottom: $p-S;
                                 margin-bottom: $m-M;
@@ -302,7 +305,7 @@ body {
                         padding: $p-L;
                         padding-top: 0;
                         border-radius: 0 0 10px 10px;
-                        border-bottom: 8px solid rgba($color: $primary-tint, $alpha: 0.8);
+                        border-bottom: 8px solid rgba($color: $primary-tint, $alpha: 0.7);
                         @include pad {
                             justify-content: space-between;
                         }
@@ -332,10 +335,10 @@ body {
                             color: $auction;
                         }
                         .top {
-                            border-top: 8px solid rgba($color: $auction, $alpha: 0.8);
+                            border-top: 8px solid rgba($color: $auction, $alpha: 0.7);
                         }
                         .bottom {
-                            border-bottom: 8px solid rgba($color: $auction, $alpha: 0.8);
+                            border-bottom: 8px solid rgba($color: $auction, $alpha: 0.7);
                             .type {
                                 background-color: rgba($color: $auction, $alpha: 0.1);
                             }
@@ -368,19 +371,22 @@ body {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
-                margin-top: $m-S;
+                margin-top: $m-M;
                 @include pad {
                     justify-content: start;
                 }
                 .block {
-                    width: 18%;
+                    width: 19%;
                     border: solid 1px $primary-tint;
                     border-radius: 12px;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     background-color: white;
-                    box-shadow: 5px 5px 10px $primary-table;
+                    box-shadow: 5px 5px 10px rgba($color: $primary-tint, $alpha: 0.1);
+                    // @include web-XL{
+                    //     width: 19.5%;
+                    // }
                     @include pad {
                         // width: 48%;
                         width: 30%;
@@ -423,7 +429,7 @@ body {
                             // }
                         }
                         h3 {
-                            color: white ;
+                            color: white;
                             margin-bottom: 0;
                         }
                     }
@@ -431,7 +437,7 @@ body {
                         width: 100%;
                         height: 100%;
                         min-height: 250px;
-                        padding: $p-XS $p-S;
+                        padding: $p-S $p-S;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
@@ -455,6 +461,7 @@ body {
                                 li {
                                     list-style-type: decimal;
                                     color: $text;
+                                    font-weight: bold;
                                     line-height: 2;
                                 }
                             }
@@ -497,7 +504,6 @@ body {
                         .top {
                             background-color: $performance;
                             border-radius: 10px 10px 0 0;
-                            // border-bottom: 8px solid rgba($color: white, $alpha: 0.5);
                             h3 {
                                 color: white;
                             }
@@ -516,7 +522,6 @@ body {
                         .top {
                             background-color: $exhibition;
                             border-radius: 10px 10px 0 0;
-                            // border-bottom: 8px solid rgba($color: white, $alpha: 0.5);
                             h3 {
                                 color: white;
                             }
@@ -535,7 +540,6 @@ body {
                         .top {
                             background-color: $screening;
                             border-radius: 10px 10px 0 0;
-                            // border-bottom: 8px solid rgba($color: white, $alpha: 0.5);
                             h3 {
                                 color: white;
                             }
@@ -554,7 +558,6 @@ body {
                         .top {
                             background-color: $auction;
                             border-radius: 10px 10px 0 0;
-                            // border-bottom: 8px solid rㄥgba($color: white, $alpha: 0.5);
                             h3 {
                                 color: white;
                             }
@@ -569,24 +572,139 @@ body {
                         }
                     }
                     &.book {
-                        border: solid 1px $primary-default;
+                        border: solid 1px $book;
                         .top {
-                            background-color: $primary-default;
+                            background-color: $book;
                             border-radius: 10px 10px 0 0;
-                            // border-bottom: 8px solid rgba($color: white, $alpha: 0.5);
                             h3 {
                                 color: white;
                             }
                         }
                         .bottom {
                             border-radius: 0 0 10px 10px;
-                            border-bottom: 8px solid rgba($color: $primary-default, $alpha: 0.5);
+                            border-bottom: 8px solid rgba($color: $book, $alpha: 0.5);
                             button,
                             .apply {
-                                background-color: $primary-default;
+                                background-color: $book;
                             }
                         }
                     }
+                    // v2-線條版
+                    // &.performance {
+                    //     border: solid 1px $performance;
+                    //     .top {
+                    //         background-color: white;
+                    //         border-radius: 10px 10px 0 0;
+                    //         border-top: 8px solid rgba($color: $performance, $alpha: 0.7);
+                    //         padding: $m-S $p-S;
+                    //         padding-bottom: 0;
+                    //         h3 {
+                    //             color: $performance;
+                    //             border-bottom: solid 1px $bk-20;
+                    //             padding-bottom: $m-S;
+                    //         }
+                    //     }
+                    //     .bottom {
+                    //         border-radius: 0 0 10px 10px;
+                    //         border-bottom: 8px solid rgba($color: $performance, $alpha: 0.7);
+                    //         button,
+                    //         .apply {
+                    //             background-color: $performance;
+                    //         }
+                    //     }
+                    // }
+                    // &.exhibition {
+                    //     border: solid 1px $exhibition;
+                    //     .top {
+                    //         background-color: white;
+                    //         border-radius: 10px 10px 0 0;
+                    //         border-top: 8px solid rgba($color: $exhibition, $alpha: 0.7);
+                    //         padding: $m-S $p-S;
+                    //         padding-bottom: 0;
+                    //         h3 {
+                    //             color: $exhibition;
+                    //             border-bottom: solid 1px $bk-20;
+                    //             padding-bottom: $m-S;
+                    //         }
+                    //     }
+                    //     .bottom {
+                    //         border-radius: 0 0 10px 10px;
+                    //         border-bottom: 8px solid rgba($color: $exhibition, $alpha: 0.7);
+                    //         button,
+                    //         .apply {
+                    //             background-color: $exhibition;
+                    //         }
+                    //     }
+                    // }
+                    // &.screening {
+                    //     border: solid 1px $screening;
+                    //     .top {
+                    //         background-color: white;
+                    //         border-radius: 10px 10px 0 0;
+                    //         border-top: 8px solid rgba($color: $screening, $alpha: 0.7);
+                    //         padding: $m-S $p-S;
+                    //         padding-bottom: 0;
+                    //         h3 {
+                    //             color: $screening;
+                    //             border-bottom: solid 1px $bk-20;
+                    //             padding-bottom: $m-S;
+                    //         }
+                    //     }
+                    //     .bottom {
+                    //         border-radius: 0 0 10px 10px;
+                    //         border-bottom: 8px solid rgba($color: $screening, $alpha: 0.7);
+                    //         button,
+                    //         .apply {
+                    //             background-color: $screening;
+                    //         }
+                    //     }
+                    // }
+                    // &.auction {
+                    //     border: solid 1px $auction;
+                    //     .top {
+                    //         background-color: white;
+                    //         border-radius: 10px 10px 0 0;
+                    //         border-top: 8px solid rgba($color: $auction, $alpha: 0.7);
+                    //         padding: $m-S $p-S;
+                    //         padding-bottom: 0;
+                    //         h3 {
+                    //             color: $auction;
+                    //             border-bottom: solid 1px $bk-20;
+                    //             padding-bottom: $m-S;
+                    //         }
+                    //     }
+                    //     .bottom {
+                    //         border-radius: 0 0 10px 10px;
+                    //         border-bottom: 8px solid rgba($color: $auction, $alpha: 0.7);
+                    //         button,
+                    //         .apply {
+                    //             background-color: $auction;
+                    //         }
+                    //     }
+                    // }
+                    // &.book {
+                    //     border: solid 1px $book;
+                    //     .top {
+                    //         background-color: white;
+                    //         border-radius: 10px 10px 0 0;
+                    //         border-top: 8px solid rgba($color: $book, $alpha: 0.5);
+                    //         padding: $m-S $p-S;
+                    //         padding-bottom: 0;
+                    //         h3 {
+                    //             color: $book;
+                    //             border-bottom: solid 1px $bk-20;
+                    //             padding-bottom: $m-S;
+                    //         }
+                    //     }
+                    //     .bottom {
+                    //         border-radius: 0 0 10px 10px;
+                    //         border-bottom: 8px solid rgba($color: $book, $alpha: 0.5);
+                    //         button,
+                    //         .apply {
+                    //             background-color: $book;
+                    //         }
+                    //     }
+                    // }
                 }
             }
             .separate-taxation {
@@ -919,8 +1037,8 @@ body {
                 justify-content: center;
                 align-items: center;
                 margin-top: $m-S;
-                // margin-bottom: $m-XS;
-                padding: $p-XS 0;
+                margin-bottom: $m-XS;
+                // padding: $p-XS 0;
                 // border: solid 1px $primary-default;
                 // background-color: white;
                 // box-shadow: 0 0 10px rgba($color: black, $alpha: 0.1);
@@ -940,8 +1058,8 @@ body {
                     // max-width: 1140px;
                     // background-color: white;
                     // background-color: $primary-table;
-                    // padding: $m-XS $p-M;
                     // border-radius: 40px;
+                    padding: $p-XXS $p-S;
                     max-width: 600px;
                     display: flex;
                     justify-content: space-between;
@@ -1006,11 +1124,12 @@ body {
                 background-color: unset;
                 &.card {
                     background-color: white;
-                    padding: $p-M;
+                    padding: $p-2L;
+                    padding-top: $p-M;
                     border-radius: 12px;
                     box-shadow: 0 0 10px rgba($color: black, $alpha: 0.1);
                     border: unset;
-                    @include mobile-L{
+                    @include mobile-L {
                         padding: $p-S;
                     }
                 }
@@ -1024,8 +1143,11 @@ body {
                         padding: $p-XXS $p-XS;
                         padding-left: 0;
                         padding-top: $p-XS;
-                        border-bottom: solid 3px $ticket;
                         color: $ticket;
+                        border-bottom: solid 3px $ticket;
+                        // color: $primary-default;
+                        // border-bottom: solid 3px $bk-20;
+                        // border-bottom: solid 3px rgba($color: $primary-tint, $alpha: 0.7);
                         margin-top: 0;
                     }
                 }
@@ -1036,7 +1158,7 @@ body {
                     li {
                         list-style-position: outside;
                         list-style-type: disc;
-                        color: $primary-tint;
+                        color: $primary-default;
                         line-height: 1.75;
                     }
                 }
