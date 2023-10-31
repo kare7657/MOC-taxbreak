@@ -129,9 +129,6 @@
             color: $primary-dark;
         }
     }
-    .notice {
-        color: $notice;
-    }
     //font-awesome
     .fa,
     .fas,
@@ -1140,15 +1137,17 @@
                 width: 100%;
                 background-color: $primary-default;
                 color: white;
+                // background-color: $primary-bg;
+                // color: $primary-dark;
                 .nav-gp {
-                    width: 1366px;
+                    width: 1530px;
                     display: flex;
                     margin: auto;
                     @include web-S() {
                         width: initial;
                     }
                     h6 {
-                        color: white;
+                        color: inherit;
                         margin: 0;
                     }
                     i {
@@ -1182,7 +1181,7 @@
                             font-size: $size-h5;
                             font-weight: bold;
                             padding: $m-XS $m-S;
-                            color: white;
+                            color: inherit;
 
                             @include web-S {
                                 padding: $m-XS $p-XXS;
@@ -1422,9 +1421,12 @@
 @mixin footer() {
     .footer {
         background-color: $primary-default;
+        color: white;
+        // background-color: $primary-bg;
+        // color: $primary-dark;
+        // font-weight: bold;
         width: 100%;
         bottom: 0;
-        color: white;
         .container {
             display: flex;
             align-items: start;
@@ -1498,40 +1500,34 @@
                         width: 100%;
                     }
                     h4 {
-                        color: white;
+                        color: inherit;
                         margin: 0;
                         margin-bottom: $m-XXS;
                     }
                     p {
-                        color: white;
-                        line-height: 2;
+                        color: inherit;
                         width: 100%;
+                        font-weight: inherit;
+                        padding: 0;
+                        line-height: 2;
                     }
                     a {
-                        color: white;
+                        color: inherit;
                         line-height: 2;
                         // &:hover {
                         //     color: $primary-tint;
                         // }
                     }
                     .fas {
-                        color: white;
+                        color: inherit;
                         width: 20px;
                         margin-right: $m-XXS;
                         text-align: center;
                     }
-                    p {
-                        color: white;
-                        padding: 0;
-                        line-height: 2;
-                        @include mobile-L() {
-                            width: 100%;
-                        }
-                    }
                     .text-gp {
                         margin-bottom: $p-XXS;
                         .underline {
-                            color: white;
+                            color: inherit;
                             font-size: $size-p;
                             font-weight: bold;
                             text-align: right;
@@ -1567,7 +1563,7 @@
                 }
             }
             .copyright {
-                color: white;
+                color: inherit;
                 margin-top: $m-XS;
                 @include mobile-L() {
                     text-align: left;
@@ -2386,14 +2382,18 @@
             }
         }
         &.view {
-            .notice {
+            .top-warning {
                 font-size: $size-h2;
-                text-align: center;
                 font-weight: bold;
                 margin-bottom: $m-S !important;
+                line-height: $size-h2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $notice;
                 i {
                     margin-right: $m-XS;
-                    font-size: $size-h3;
+                    font-size: $size-h4;
                 }
             }
             fieldset {

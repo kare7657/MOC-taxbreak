@@ -93,9 +93,6 @@
 * a:hover {
   color: #57350f;
 }
-* .notice {
-  color: #da382d;
-}
 * .fa,
 * .fas,
 * .far,
@@ -1171,7 +1168,7 @@ body .navbar .pc .bottom {
   color: white;
 }
 body .navbar .pc .bottom .nav-gp {
-  width: 1366px;
+  width: 1530px;
   display: flex;
   margin: auto;
 }
@@ -1181,7 +1178,7 @@ body .navbar .pc .bottom .nav-gp {
   }
 }
 body .navbar .pc .bottom .nav-gp h6 {
-  color: white;
+  color: inherit;
   margin: 0;
 }
 body .navbar .pc .bottom .nav-gp i {
@@ -1215,7 +1212,7 @@ body .navbar .pc .bottom .nav-gp .nav-function a {
   font-size: 1.25rem;
   font-weight: bold;
   padding: 12px 20px;
-  color: white;
+  color: inherit;
 }
 @media (max-width: 1024px) {
   body .navbar .pc .bottom .nav-gp .nav-function a {
@@ -1451,9 +1448,9 @@ body .navbar.bgc .pc {
 }
 body .footer {
   background-color: #a6651c;
+  color: white;
   width: 100%;
   bottom: 0;
-  color: white;
 }
 body .footer .container {
   display: flex;
@@ -1555,40 +1552,32 @@ body .footer .container .contact .right {
   }
 }
 body .footer .container .contact .right h4 {
-  color: white;
+  color: inherit;
   margin: 0;
   margin-bottom: 4px;
 }
 body .footer .container .contact .right p {
-  color: white;
-  line-height: 2;
+  color: inherit;
   width: 100%;
-}
-body .footer .container .contact .right a {
-  color: white;
-  line-height: 2;
-}
-body .footer .container .contact .right .fas {
-  color: white;
-  width: 20px;
-  margin-right: 4px;
-  text-align: center;
-}
-body .footer .container .contact .right p {
-  color: white;
+  font-weight: inherit;
   padding: 0;
   line-height: 2;
 }
-@media (max-width: 568px) {
-  body .footer .container .contact .right p {
-    width: 100%;
-  }
+body .footer .container .contact .right a {
+  color: inherit;
+  line-height: 2;
+}
+body .footer .container .contact .right .fas {
+  color: inherit;
+  width: 20px;
+  margin-right: 4px;
+  text-align: center;
 }
 body .footer .container .contact .right .text-gp {
   margin-bottom: 8px;
 }
 body .footer .container .contact .right .text-gp .underline {
-  color: white;
+  color: inherit;
   font-size: 1rem;
   font-weight: bold;
   text-align: right;
@@ -1626,7 +1615,7 @@ body .footer .container .contact .link .accessibility img {
   }
 }
 body .footer .container .copyright {
-  color: white;
+  color: inherit;
   margin-top: 12px;
 }
 @media (max-width: 568px) {
@@ -2361,15 +2350,19 @@ body form ul li {
   list-style: decimal;
   list-style-position: inside;
 }
-body form.view .notice {
+body form.view .top-warning {
   font-size: 1.75rem;
-  text-align: center;
   font-weight: bold;
   margin-bottom: 20px !important;
+  line-height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #da382d;
 }
-body form.view .notice i {
+body form.view .top-warning i {
   margin-right: 12px;
-  font-size: 1.625rem;
+  font-size: 1.375rem;
 }
 body form.view fieldset .performer select {
   width: 40%;
@@ -2846,7 +2839,7 @@ body .for_accessibility div {
   opacity: 0.1;
 }
 body.bg-img {
-  background-image: url("../img/bg-v2.svg");
+  background-image: url("../img/bg.svg");
   background-size: cover;
   background-position: center top;
 }
@@ -2899,7 +2892,7 @@ body main.nomenu {
 body main.bgc {
   background-color: #fff7f0;
 }
-body main.bg-gray {
+body main.bgc-gray {
   background-color: #eee;
 }
 body main.fixpt {
@@ -3203,8 +3196,9 @@ body main .content-type .taxbreak-gp .block .top {
   width: 100%;
   text-align: center;
   padding: 20px 16px;
-  background-color: #a6651c;
   border-radius: 10px 10px 0 0;
+  background-color: #a6651c;
+  color: white;
 }
 @media (max-width: 568px) {
   body main .content-type .taxbreak-gp .block .top {
@@ -3220,7 +3214,7 @@ body main .content-type .taxbreak-gp .block .top img {
   margin-bottom: 12px;
 }
 body main .content-type .taxbreak-gp .block .top h3 {
-  color: white;
+  color: inherit;
   margin-bottom: 0;
 }
 body main .content-type .taxbreak-gp .block .bottom {
@@ -3383,6 +3377,37 @@ body main .content-type .taxbreak-gp .block.book .bottom button,
 body main .content-type .taxbreak-gp .block.book .bottom .apply {
   background-color: #a6651c;
 }
+body main .content-type .taxbreak-gp.v3 .middle button,
+body main .content-type .taxbreak-gp.v3 .middle .apply {
+  border-radius: unset;
+  width: 100%;
+  height: auto;
+  padding: 12px 16px;
+  text-align: center;
+  line-height: unset;
+  font-size: 1.25rem;
+  color: white;
+}
+body main .content-type .taxbreak-gp.v3 .performance button,
+body main .content-type .taxbreak-gp.v3 .performance .apply {
+  background-color: #933b2a;
+}
+body main .content-type .taxbreak-gp.v3 .exhibition button,
+body main .content-type .taxbreak-gp.v3 .exhibition .apply {
+  background-color: #3b5f0c;
+}
+body main .content-type .taxbreak-gp.v3 .screening button,
+body main .content-type .taxbreak-gp.v3 .screening .apply {
+  background-color: #30549c;
+}
+body main .content-type .taxbreak-gp.v3 .auction button,
+body main .content-type .taxbreak-gp.v3 .auction .apply {
+  background-color: #744483;
+}
+body main .content-type .taxbreak-gp.v3 .book button,
+body main .content-type .taxbreak-gp.v3 .book .apply {
+  background-color: #814909;
+}
 body main .content-type .separate-taxation {
   justify-content: start;
 }
@@ -3452,13 +3477,13 @@ body main .info-gp .info-btn {
   right: 0;
   right: -70px;
   z-index: 900;
-  background-color: #bc8649;
-  color: white;
   width: 70px;
   height: 55px;
   line-height: 60px;
   border-radius: 0 40px 40px 0;
   text-align: center;
+  background-color: #bc8649;
+  color: white;
 }
 @media (max-width: 1280px) {
   body main .info-gp .info-btn {
