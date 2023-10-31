@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 2875" style="enable-background:new 0 0 1920 2875;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_3_);}
+	.st1{fill:#EEEEEE;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:1.5;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#FFFFFF;stroke-width:1.5;}
+</style>
+<g>
+	<g>
+		<g>
+			<g>
+				<defs>
+					<rect id="SVGID_2_" width="1920" height="2875"/>
+				</defs>
+				<clipPath id="SVGID_3_">
+					<use xlink:href="#SVGID_2_"  style="overflow:visible;"/>
+				</clipPath>
+				<g id="bg" class="st0">
+					<rect class="st1" width="1920" height="2875"/>
+					<g id="BG-2" transform="translate(-412.961 -616.953)">
+						<g id="Ellipse_1" transform="translate(850.96)">
+							<circle class="st2" cx="522.5" cy="522.5" r="522.5"/>
+							<circle class="st3" cx="522.5" cy="522.5" r="522"/>
+						</g>
+						<g id="Ellipse_1-2" transform="translate(498.96 759.983)">
+							<circle class="st2" cx="575.8" cy="575.8" r="575.8"/>
+							<circle class="st3" cx="575.8" cy="575.8" r="575.3"/>
+						</g>
+						<g id="Ellipse_2" transform="translate(1752.96 1136.983)">
+							<circle class="st2" cx="445.3" cy="445.3" r="445.3"/>
+							<circle class="st3" cx="445.3" cy="445.3" r="444.8"/>
+						</g>
+						<path id="Path_1" class="st3" d="M182,1262.3l1087.9-978.5"/>
+						<path id="Path_2" class="st3" d="M0,1342.3l1087.9-978.5"/>
+						<path id="Path_4" class="st3" d="M396.3,2172.8l1773.4-1595"/>
+						<path id="Path_6" class="st3" d="M378.2,2250.6L2234.7,580.8"/>
+						<path id="Path_5" class="st3" d="M257,1477.3l1087.9-978.5"/>
+						<path id="Path_3" class="st3" d="M317.6,3074.5L2848.9,797.8"/>
+					</g>
+				</g>
+			</g>
+		</g>
+		<g>
+			<rect id="SVGID_1_" x="0" class="st2" width="1920" height="2875"/>
+		</g>
+	</g>
+</g>
+</svg>

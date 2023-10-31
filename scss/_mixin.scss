@@ -47,7 +47,7 @@
         max-width: 1530px;
         margin: auto;
         padding: $p-S 0;
-        @include web-XL{
+        @include web-XL {
             max-width: 1140px;
         }
         @include web-S {
@@ -650,17 +650,15 @@
                                     background-color: $primary-tint;
                                     color: white;
                                     position: sticky;
-                                    top: 0;
+                                    top: -20px;
+                                    left: 0;
                                 }
                             }
                             tbody {
-                                // tr{
-                                //     min-height: 60px;
-                                // }
                                 tr.month {
                                     background-color: $primary-table;
                                     position: sticky;
-                                    top: 40px;
+                                    top: 20px;
                                     @include mobile-XS() {
                                         top: 36px;
                                     }
@@ -2388,12 +2386,12 @@
             }
         }
         &.view {
-            .notice{
+            .notice {
                 font-size: $size-h2;
                 text-align: center;
                 font-weight: bold;
                 margin-bottom: $m-S !important;
-                i{
+                i {
                     margin-right: $m-XS;
                     font-size: $size-h3;
                 }

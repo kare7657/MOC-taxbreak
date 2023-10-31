@@ -594,7 +594,6 @@ body {
                     //     border: solid 1px $performance;
                     //     .top {
                     //         background-color: white;
-                    //         border-radius: 10px 10px 0 0;
                     //         border-top: 8px solid rgba($color: $performance, $alpha: 0.7);
                     //         padding: $m-S $p-S;
                     //         padding-bottom: 0;
@@ -1056,8 +1055,8 @@ body {
                 .btn-gp {
                     width: 100%;
                     // max-width: 1140px;
-                    // background-color: white;
                     // background-color: $primary-table;
+                    // background-color: white;
                     // border-radius: 40px;
                     padding: $p-XXS $p-S;
                     max-width: 600px;
