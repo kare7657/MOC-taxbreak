@@ -51,13 +51,14 @@
             max-width: 1140px;
         }
         @include web-S {
+            max-width: initial;
             padding-top: $p-XS;
+            width: 90%;
         }
         @include pad() {
             width: 90%;
         }
         @include mobile-L() {
-            // width: 90%;
             padding-top: $p-XS;
         }
     }
@@ -1143,6 +1144,9 @@
                     width: 1530px;
                     display: flex;
                     margin: auto;
+                    @include web-XL {
+                        max-width: 1140px;
+                    }
                     @include web-S() {
                         width: initial;
                     }
@@ -1422,9 +1426,9 @@
     .footer {
         background-color: $primary-default;
         color: white;
-        // background-color: $primary-bg;
-        // color: $primary-dark;
-        // font-weight: bold;
+        background-color: $primary-bg;
+        color: $primary-dark;
+        font-weight: bold;
         width: 100%;
         bottom: 0;
         .container {
@@ -1682,7 +1686,7 @@
             // padding: $p-S;
             // border-radius: 12px;
             @include web-S {
-                width: 60%;
+                width: 58%;
             }
             @include pad {
                 width: 100%;
@@ -1742,6 +1746,9 @@
                 }
             }
             button {
+                @include web-S {
+                    padding: 0 $p-XS;
+                }
                 @include mobile-L() {
                     width: 100%;
                     margin-top: $m-S;
@@ -1752,7 +1759,7 @@
             width: 45%;
             text-align: right;
             @include web-S {
-                width: 40%;
+                width: 43%;
             }
             @include pad {
                 width: 100%;
@@ -1762,15 +1769,19 @@
             @include mobile-L() {
                 display: flex;
                 justify-content: space-between;
+                flex-wrap: wrap;
             }
             button {
                 margin-left: $m-S;
+                &:first-child {
+                    margin-left: 0;
+                }
                 @include web-S {
                     padding: $m-XXS $m-XS;
                     font-size: $size-p;
-                    height: auto;
                 }
                 @include pad {
+                    height: auto;
                     margin-left: 0;
                     margin-right: $m-S;
                     padding: $m-XXS $m-S;
@@ -1779,7 +1790,7 @@
                 @include mobile-L() {
                     margin: 0;
                     margin-bottom: $m-S;
-                    width: 47%;
+                    width: 100%;
                 }
             }
         }

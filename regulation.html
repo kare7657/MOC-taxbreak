@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>相關法規</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                    <li>></li>
+                    <li><span>相關法規</span></li>
+                </ul>
+            </div>
+        </div>
+        <section class="content-regulation">
+            <div class="container">
+                <h2>相關法規</h2>
+                <div class="searchbar">
+                    <div class="filter">
+                        <select class="select2" id="activity_way">
+                            <option value="list1">全部類型</option>
+                            <option value="list2">減免營業稅及娛樂稅</option>
+                            <option value="list3">分離課稅</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="case-list">
+                    <table class="table-default  mb-separate ellipsis-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 70%;">名稱</th>
+                                <th style="width: 30%;" class="th-function">連結</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-title="名稱">
+                                    <!-- <a href="" class="ellipsis" title="文化藝術事業減免營業稅及娛樂稅辦法"  target="_blank"> -->
+                                    文化藝術事業減免營業稅及娛樂稅辦法
+                                    <!-- </a> -->
+                                </td>
+                                <td data-title="連結">
+                                    <div class="function">
+                                        <a href="https://www.moc.gov.tw/information_310_20241.html" target="_blank"
+                                            title="[另開連結]文化藝術事業減免營業稅及娛樂稅辦法">
+                                            <i class="fas fa-external-link-alt"></i>前往
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="名稱">
+                                    <!-- <a href="" class="ellipsis" title="文化藝術獎助條例"  target="_blank"> -->
+                                    文化藝術獎助條例
+                                    <!-- </a> -->
+                                </td>
+                                <td data-title="連結">
+                                    <div class="function">
+                                        <a href="https://www.moc.gov.tw/information_306_19963.html" target="_blank"
+                                            title="[另開連結]文化藝術獎助條例">
+                                            <i class="fas fa-external-link-alt"></i>前往
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom">
+                        <div class="pagination">
+                            <ul>
+                                <li><a href=""><i class="fas fa-angle-double-left"></i></a></li>
+                                <li><a href=""><i class="fas fa-angle-left"></i></a></li>
+                                <li><a href="" class="active">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                                <li><a href="">5</a></li>
+                                <li><a href=""><i class="fas fa-angle-right"></i></a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- modal 提示-->
+        <div class="modal fade modal-template " id="modal-notify" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel">表演注意事項</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <div class="text-gp">
+                                    <p class="notice"><i class="fas fa-exclamation-circle"></i>
+                                        申請案中若有國外人士來臺演出</p>
+                                    <p>應檢附勞動部已核准文件，或已向勞動部提出申請之文件</p>
+                                </div>
+                                <div class="text-gp">
+                                    <p class="notice"><i class="fas fa-exclamation-circle"></i>
+                                        申請案中若有大陸地區人士來臺演出</p>
+                                    <p>應檢附內政部已核准文件，或已向內政部提出申請之文件</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="go" id="go2">確認</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- modal 提示-->
+        <div class="modal fade modal-template " id="modal-notify2" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel2" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel2">展覽注意事項</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <div class="text-gp">
+                                    <p class="notice"><i class="fas fa-exclamation-circle"></i>
+                                        申請案中若有大陸地區古物來臺展覽</p>
+                                    <p>應檢附本部已核准文件，或已向本部提出申請之文件</p>
+                                </div>
+                                <div class="text-gp">
+                                    <p class="notice"><i class="fas fa-exclamation-circle"></i>
+                                        申請案中若有國外地區中華古物來臺展覽</p>
+                                    <p>應檢附目的事業主管機關已核准文件，或已向該機關提出申請之文件</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="go" id="go3">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+</body>
+
+</html>

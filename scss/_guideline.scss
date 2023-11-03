@@ -13,17 +13,28 @@ $primary-table: #f7f5f0;
 $primary-tint: #a19163;
 $primary-default: #88753f;
 $primary-dark: #5f4d1c;
+// v2
+$primary-table: #f0f3f9;
+$primary-tint: #8392B4;
+$primary-default: #596B91;
+$primary-dark: #3f4e69;
+// v3
+// $primary-table: #e9f4f7;
+// $primary-tint: #459eb0;
+// $primary-default: #39737F;
+// $primary-dark: #0E4B58;
+//
 // v4
-$primary-table: #fff7f0;
-$primary-tint: #bc8649;
-$primary-default: #a6651c;
-$primary-dark: #57350f;
+// $primary-table: #fff7f0;
+// $primary-tint: #bc8649;
+// $primary-default: #a6651c;
+// $primary-dark: #57350f;
 // v5
-// $primary-table: #FDFAF2;
-// $primary-bg: #d0b66c;
-// $primary-tint: #AA8E41;
-// $primary-default: #90711D;
-// $primary-dark: #280101;
+$primary-table: #fdfaf2;
+$primary-bg: #d0b66c;
+$primary-tint: #aa8e41;
+$primary-default: #90711d;
+$primary-dark: #280101;
 //
 $secondary: #0b3259;
 $complementary: #9fa0a0;
@@ -32,19 +43,20 @@ $enable: #89cb4b;
 $bk-20: #dcdddd;
 $bk-10: #e5e5e5;
 $bk-8: #ebebeb;
-// --type
+// --type v1 高彩
 $performance: #b05f4f;
-$exhibition: #548316;
+$exhibition: #90689C;
 $screening: #5075be;
-$auction: #90689c;
+$auction: #548316;
 // $book: #88753f;
 $book: #a6651c;
-// v2
-// $performance: #A36666;
-// $exhibition: #6D7878;
+
+// v2 低彩
+// $performance: #a36666;
+// $exhibition: #6d7878;
 // $screening: #428079;
-// $auction: #90689C;
-// $book: #596B91;
+// $auction: #90689c;
+// $book: #596b91;
 
 //font-color
 $text: #595757;

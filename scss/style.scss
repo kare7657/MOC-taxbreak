@@ -59,6 +59,7 @@ body {
     &.bg-img {
         background-image: url("../img/bg.svg");
         // background-image: url("../img/bg-v2.svg");
+        // background-image: url("../img/bg-v3.svg");
         background-size: cover;
         background-position: center top;
         // background-color: $primary-table;
@@ -86,6 +87,17 @@ body {
         }
         @include mobile-L {
             padding-bottom: $p-S;
+        }
+        .card {
+            background-color: white !important;
+            padding: $p-2L;
+            padding-top: $p-M;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba($color: black, $alpha: 0.1);
+            border: unset;
+            @include mobile-L {
+                padding: $p-S;
+            }
         }
         section {
             width: 100%;
@@ -445,6 +457,8 @@ body {
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
+                        border-radius: 0 0 10px 10px;
+                        border-bottom: 8px solid rgba($color: $primary-tint, $alpha: 0.5);
                         @include pad {
                             min-height: initial;
                         }
@@ -616,128 +630,129 @@ body {
                     //     }
                     // }
                     // v2-線條版
-                    // &.performance {
-                    //     border: solid 1px $performance;
-                    //     .top {
-                    //         background-color: white;
-                    //         border-top: 8px solid rgba($color: $performance, $alpha: 0.7);
-                    //         padding: $m-S $p-S;
-                    //         padding-bottom: 0;
-                    //         h3 {
-                    //             color: $performance;
-                    //             border-bottom: solid 1px $bk-20;
-                    //             padding-bottom: $m-S;
-                    //         }
-                    //     }
-                    //     .bottom {
-                    //         border-radius: 0 0 10px 10px;
-                    //         border-bottom: 8px solid rgba($color: $performance, $alpha: 0.7);
-                    //         button,
-                    //         .apply {
-                    //             background-color: $performance;
-                    //         }
-                    //     }
-                    // }
-                    // &.exhibition {
-                    //     border: solid 1px $exhibition;
-                    //     .top {
-                    //         background-color: white;
-                    //         border-radius: 10px 10px 0 0;
-                    //         border-top: 8px solid rgba($color: $exhibition, $alpha: 0.7);
-                    //         padding: $m-S $p-S;
-                    //         padding-bottom: 0;
-                    //         h3 {
-                    //             color: $exhibition;
-                    //             border-bottom: solid 1px $bk-20;
-                    //             padding-bottom: $m-S;
-                    //         }
-                    //     }
-                    //     .bottom {
-                    //         border-radius: 0 0 10px 10px;
-                    //         border-bottom: 8px solid rgba($color: $exhibition, $alpha: 0.7);
-                    //         button,
-                    //         .apply {
-                    //             background-color: $exhibition;
-                    //         }
-                    //     }
-                    // }
-                    // &.screening {
-                    //     border: solid 1px $screening;
-                    //     .top {
-                    //         background-color: white;
-                    //         border-radius: 10px 10px 0 0;
-                    //         border-top: 8px solid rgba($color: $screening, $alpha: 0.7);
-                    //         padding: $m-S $p-S;
-                    //         padding-bottom: 0;
-                    //         h3 {
-                    //             color: $screening;
-                    //             border-bottom: solid 1px $bk-20;
-                    //             padding-bottom: $m-S;
-                    //         }
-                    //     }
-                    //     .bottom {
-                    //         border-radius: 0 0 10px 10px;
-                    //         border-bottom: 8px solid rgba($color: $screening, $alpha: 0.7);
-                    //         button,
-                    //         .apply {
-                    //             background-color: $screening;
-                    //         }
-                    //     }
-                    // }
-                    // &.auction {
-                    //     border: solid 1px $auction;
-                    //     .top {
-                    //         background-color: white;
-                    //         border-radius: 10px 10px 0 0;
-                    //         border-top: 8px solid rgba($color: $auction, $alpha: 0.7);
-                    //         padding: $m-S $p-S;
-                    //         padding-bottom: 0;
-                    //         h3 {
-                    //             color: $auction;
-                    //             border-bottom: solid 1px $bk-20;
-                    //             padding-bottom: $m-S;
-                    //         }
-                    //     }
-                    //     .bottom {
-                    //         border-radius: 0 0 10px 10px;
-                    //         border-bottom: 8px solid rgba($color: $auction, $alpha: 0.7);
-                    //         button,
-                    //         .apply {
-                    //             background-color: $auction;
-                    //         }
-                    //     }
-                    // }
-                    // &.book {
-                    //     border: solid 1px $book;
-                    //     .top {
-                    //         background-color: white;
-                    //         border-radius: 10px 10px 0 0;
-                    //         border-top: 8px solid rgba($color: $book, $alpha: 0.7);
-                    //         padding: $m-S $p-S;
-                    //         padding-bottom: 0;
-                    //         h3 {
-                    //             color: $book;
-                    //             border-bottom: solid 1px $bk-20;
-                    //             padding-bottom: $m-S;
-                    //         }
-                    //     }
-                    //     .bottom {
-                    //         border-radius: 0 0 10px 10px;
-                    //         border-bottom: 8px solid rgba($color: $book, $alpha: 0.7);
-                    //         button,
-                    //         .apply {
-                    //             background-color: $book;
-                    //         }
-                    //     }
-                    // }
+                    &.performance {
+                        border: solid 1px $performance;
+                        .top {
+                            background-color: white;
+                            border-top: 8px solid rgba($color: $performance, $alpha: 0.7);
+                            padding: $m-S $p-S;
+                            padding-bottom: 0;
+                            h3 {
+                                color: $performance;
+                                border-bottom: solid 1px $bk-20;
+                                padding-bottom: $m-S;
+                            }
+                        }
+                        .bottom {
+                            border-radius: 0 0 10px 10px;
+                            border-bottom: 8px solid rgba($color: $performance, $alpha: 0.7);
+                            button,
+                            .apply {
+                                background-color: $performance;
+                            }
+                        }
+                    }
+                    &.exhibition {
+                        border: solid 1px $exhibition;
+                        .top {
+                            background-color: white;
+                            border-radius: 10px 10px 0 0;
+                            border-top: 8px solid rgba($color: $exhibition, $alpha: 0.7);
+                            padding: $m-S $p-S;
+                            padding-bottom: 0;
+                            h3 {
+                                color: $exhibition;
+                                border-bottom: solid 1px $bk-20;
+                                padding-bottom: $m-S;
+                            }
+                        }
+                        .bottom {
+                            border-radius: 0 0 10px 10px;
+                            border-bottom: 8px solid rgba($color: $exhibition, $alpha: 0.7);
+                            button,
+                            .apply {
+                                background-color: $exhibition;
+                            }
+                        }
+                    }
+                    &.screening {
+                        border: solid 1px $screening;
+                        .top {
+                            background-color: white;
+                            border-radius: 10px 10px 0 0;
+                            border-top: 8px solid rgba($color: $screening, $alpha: 0.7);
+                            padding: $m-S $p-S;
+                            padding-bottom: 0;
+                            h3 {
+                                color: $screening;
+                                border-bottom: solid 1px $bk-20;
+                                padding-bottom: $m-S;
+                            }
+                        }
+                        .bottom {
+                            border-radius: 0 0 10px 10px;
+                            border-bottom: 8px solid rgba($color: $screening, $alpha: 0.7);
+                            button,
+                            .apply {
+                                background-color: $screening;
+                            }
+                        }
+                    }
+                    &.auction {
+                        border: solid 1px $auction;
+                        .top {
+                            background-color: white;
+                            border-radius: 10px 10px 0 0;
+                            border-top: 8px solid rgba($color: $auction, $alpha: 0.7);
+                            padding: $m-S $p-S;
+                            padding-bottom: 0;
+                            h3 {
+                                color: $auction;
+                                border-bottom: solid 1px $bk-20;
+                                padding-bottom: $m-S;
+                            }
+                        }
+                        .bottom {
+                            border-radius: 0 0 10px 10px;
+                            border-bottom: 8px solid rgba($color: $auction, $alpha: 0.7);
+                            button,
+                            .apply {
+                                background-color: $auction;
+                            }
+                        }
+                    }
+                    &.book {
+                        border: solid 1px $book;
+                        .top {
+                            background-color: white;
+                            border-radius: 10px 10px 0 0;
+                            border-top: 8px solid rgba($color: $book, $alpha: 0.7);
+                            padding: $m-S $p-S;
+                            padding-bottom: 0;
+                            h3 {
+                                color: $book;
+                                border-bottom: solid 1px $bk-20;
+                                padding-bottom: $m-S;
+                            }
+                        }
+                        .bottom {
+                            border-radius: 0 0 10px 10px;
+                            border-bottom: 8px solid rgba($color: $book, $alpha: 0.7);
+                            button,
+                            .apply {
+                                background-color: $book;
+                            }
+                        }
+                    }
                 }
                 &.v3 {
+                    .top {
+                        padding: $p-XS $p-XS;
+                        h3 {
+                            border-bottom: unset !important;
+                        }
+                    }
                     .middle {
-                        // display: flex;
-                        // align-items: center;
-                        // justify-content: center;
-                        // width: 100%;
-                        // padding: $p-XS;
                         button,
                         .apply {
                             border-radius: unset;
@@ -748,40 +763,98 @@ body {
                             line-height: unset;
                             font-size: $size-h5;
                             color: white;
+                            i {
+                                font-size: $size-h5;
+                                margin-right: $p-XXS;
+                            }
                         }
                     }
                     .performance {
+                        .top {
+                            border-top: unset;
+                            // background-color: $performance;
+                            // background-color: rgba($color: $performance, $alpha: 0.2);
+                            h3 {
+                                // color: #933b2a;
+                                color: white;
+                            }
+                        }
                         button,
                         .apply {
-                            background-color: #933b2a;
-                            // background-color: #f9e1dd;
-                            // color: black;
+                            // background-color: #933b2a;
+                            // background-color: $performance;
+                            background-color: rgba($color: $performance, $alpha: 0.2);
+                            color: #933b2a;
                         }
                     }
                     .exhibition {
+                        .top {
+                            border-top: unset;
+                            background-color: $exhibition;
+                            // background-color: rgba($color: $exhibition, $alpha: 0.2);
+                            h3 {
+                                // color: #3b5f0c;
+                                color: white;
+                            }
+                        }
                         button,
                         .apply {
-                            background-color: #3b5f0c;
-                            // background-color: white;
-                            // color: #3b5f0c;
+                            // background-color: #3b5f0c;
+                            background-color: rgba($color: $exhibition, $alpha: 0.2);
+                            color: #3b5f0c;
                         }
                     }
                     .screening {
+                        .top {
+                            border-top: unset;
+                            background-color: $screening;
+                            // background-color: rgba($color: $screening, $alpha: 0.2);
+                            h3 {
+                                // color: #30549c;
+                                color: white;
+                            }
+                        }
                         button,
                         .apply {
-                            background-color: #30549c;
+                            // background-color: #30549c;
+                            background-color: rgba($color: $screening, $alpha: 0.2);
+                            color: #30549c;
                         }
                     }
                     .auction {
+                        .top {
+                            border-top: unset;
+                            background-color: $auction;
+                            // background-color: rgba($color: $auction, $alpha: 0.2);
+                            h3 {
+                                // color: #744483;
+                                color: white;
+                            }
+                        }
                         button,
                         .apply {
-                            background-color: #744483;
+                            // background-color: #744483;
+                            // background-color: $auction;
+                            background-color: rgba($color: $auction, $alpha: 0.2);
+                            color: #744483;
                         }
                     }
                     .book {
+                        .top {
+                            border-top: unset;
+                            background-color: $book;
+                            // background-color: rgba($color: $book, $alpha: 0.2);
+                            h3 {
+                                // color: #814909;
+                                color: white;
+                            }
+                        }
                         button,
                         .apply {
-                            background-color: #814909;
+                            // background-color: #814909;
+                            // background-color: $book;
+                            background-color: rgba($color: $book, $alpha: 0.2);
+                            color: #814909;
                         }
                     }
                 }
@@ -1204,17 +1277,17 @@ body {
             }
             form {
                 background-color: unset;
-                &.card {
-                    background-color: white;
-                    padding: $p-2L;
-                    padding-top: $p-M;
-                    border-radius: 12px;
-                    box-shadow: 0 0 10px rgba($color: black, $alpha: 0.1);
-                    border: unset;
-                    @include mobile-L {
-                        padding: $p-S;
-                    }
-                }
+                // &.card {
+                //     background-color: white;
+                //     padding: $p-2L;
+                //     padding-top: $p-M;
+                //     border-radius: 12px;
+                //     box-shadow: 0 0 10px rgba($color: black, $alpha: 0.1);
+                //     border: unset;
+                //     @include mobile-L {
+                //         padding: $p-S;
+                //     }
+                // }
                 h3 {
                     margin-top: $m-XS;
                     margin-bottom: $m-S;
@@ -1447,7 +1520,7 @@ body {
                     }
                     .block {
                         // width: 23%;
-                        width: 30%;
+                        width: 31%;
                         border: solid 1px $primary-tint;
                         border-radius: 12px;
                         display: flex;
@@ -1714,6 +1787,16 @@ body {
                             }
                         }
                     }
+                }
+            }
+        }
+        .content-regulation {
+            table {
+                .function {
+                    font-size: $size-p;
+                    // i{
+                    //     margin-right: $p-XXS;
+                    // }
                 }
             }
         }
