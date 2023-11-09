@@ -26,10 +26,9 @@ body {
     @include footer();
     @include breadcrumb();
     @include back-top();
-    @include form();
-    @include datepicker();
+    // @include form();
     @include table();
-    @include searchbar();
+    // @include searchbar();
     /* 跳到主要內容區塊 */
     .for_accessibility .go-main {
         position: absolute;
@@ -139,6 +138,9 @@ body {
             text-align: center;
             color: $primary-dark;
             font-weight: bold;
+            // .close{
+            //     height: 100%;
+            // }
         }
         // .alert-warning{
         //     color: $primary-dark;
@@ -1277,9 +1279,10 @@ body {
                         }
                     }
                 }
-            }
-            .container {
-                padding-top: $p-XXS;
+
+                .container {
+                    padding-top: $p-XXS;
+                }
             }
             form {
                 background-color: unset;
@@ -1299,7 +1302,7 @@ body {
                     margin-bottom: $m-S;
                 }
                 .type-title {
-                    margin-bottom: $m-S;
+                    margin-bottom: $m-M;
                     h3 {
                         padding: $p-XXS $p-XS;
                         padding-left: 0;
