@@ -1187,7 +1187,8 @@
                 background-color: $primary-bg;
                 // color: $primary-dark;
                 .nav-gp {
-                    width: 1530px;
+                    // width: 1530px;
+                    width: 1200px;
                     display: flex;
                     margin: auto;
                     @include web-XL {

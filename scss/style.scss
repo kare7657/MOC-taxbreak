@@ -26,9 +26,9 @@ body {
     @include footer();
     @include breadcrumb();
     @include back-top();
-    // @include form();
+    @include form();
     @include table();
-    // @include searchbar();
+    @include searchbar();
     /* 跳到主要內容區塊 */
     .for_accessibility .go-main {
         position: absolute;
@@ -357,6 +357,7 @@ body {
                         }
                         .bottom {
                             border-bottom: 8px solid rgba($color: $auction, $alpha: 0.7);
+                            justify-content: center;
                             .type {
                                 background-color: rgba($color: $auction, $alpha: 0.1);
                             }
@@ -1529,6 +1530,10 @@ body {
                     a {
                         display: inline-block;
                     }
+                    // button{
+                    //     height: auto;
+                    //     text-align: center;
+                    // }
                     h3 {
                         margin-bottom: 0;
                         // display: flex;
@@ -1546,12 +1551,14 @@ body {
                         border-radius: 12px;
                         display: flex;
                         flex-direction: column;
-                        justify-content: space-between;
+                        justify-content: center;
+                        align-items: center;
                         display: block;
                         background-color: white;
                         box-shadow: 5px 5px 10px $primary-table;
                         text-align: center;
                         padding: $p-L $p-XS;
+                        height: auto;
                         @include mobile-L {
                             padding: $p-XS;
                         }
