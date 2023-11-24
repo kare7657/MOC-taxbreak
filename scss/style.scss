@@ -29,6 +29,7 @@ body {
     @include form();
     @include table();
     @include searchbar();
+    @include datepicker();
     /* 跳到主要內容區塊 */
     .for_accessibility .go-main {
         position: absolute;
@@ -87,6 +88,7 @@ body {
         @include mobile-L {
             padding-bottom: $p-S;
         }
+
         .card {
             background-color: white !important;
             padding: $p-2L;
@@ -369,6 +371,7 @@ body {
         // 申請類型
         .content-type {
             h2 {
+                // text-align: center;
                 @include pad {
                     text-align: center;
                 }
@@ -867,12 +870,15 @@ body {
                 }
             }
             .separate-taxation {
-                justify-content: start;
+                justify-content: center;
                 .block {
-                    width: 33%;
+                    width: 30%;
                     margin-right: $m-M;
+                    &:last-child {
+                        margin-right: 0;
+                    }
                     @include pad {
-                        width: 30%;
+                        width: 48%;
                         margin-right: $m-S;
                     }
                     @include mobile-L {

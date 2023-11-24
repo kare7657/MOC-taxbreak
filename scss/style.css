@@ -194,52 +194,52 @@
 * input[type=number] {
   -moz-appearance: textfield;
 }
-* fieldset {
+* .fieldset-disabled {
   margin-bottom: 36px;
 }
-* fieldset[disabled] input,
-* fieldset[disabled] select,
-* fieldset[disabled] .select2-container--default .select2-selection--single,
-* fieldset[disabled] textarea,
-* fieldset[disabled] .session input,
-* fieldset[disabled] .session select {
+* .fieldset-disabled input,
+* .fieldset-disabled select,
+* .fieldset-disabled .select2-container--default .select2-selection--single,
+* .fieldset-disabled textarea,
+* .fieldset-disabled .session input,
+* .fieldset-disabled .session select {
   background-color: #e5e5e5 !important;
   opacity: 1;
   cursor: not-allowed;
 }
-* fieldset[disabled] input:hover,
-* fieldset[disabled] select:hover,
-* fieldset[disabled] .select2-container--default .select2-selection--single:hover,
-* fieldset[disabled] textarea:hover,
-* fieldset[disabled] .session input:hover,
-* fieldset[disabled] .session select:hover {
+* .fieldset-disabled input:hover,
+* .fieldset-disabled select:hover,
+* .fieldset-disabled .select2-container--default .select2-selection--single:hover,
+* .fieldset-disabled textarea:hover,
+* .fieldset-disabled .session input:hover,
+* .fieldset-disabled .session select:hover {
   filter: unset;
 }
-* fieldset[disabled] input[type=button] {
+* .fieldset-disabled input[type=button] {
   background-color: #dcdddd !important;
 }
-* fieldset[disabled] .choice-btn input[type=radio] + label,
-* fieldset[disabled] .choice-btn input[type=checkbox] + label {
+* .fieldset-disabled .choice-btn input[type=radio] + label,
+* .fieldset-disabled .choice-btn input[type=checkbox] + label {
   cursor: not-allowed !important;
 }
-* fieldset[disabled] .choice-btn input[type=radio] + label,
-* fieldset[disabled] .choice-btn input[type=checkbox] + label {
+* .fieldset-disabled .choice-btn input[type=radio] + label,
+* .fieldset-disabled .choice-btn input[type=checkbox] + label {
   color: #595757 !important;
   border: solid 1px #9fa0a0 !important;
 }
-* fieldset[disabled] .choice-btn input[type=radio]:checked + label,
-* fieldset[disabled] .choice-btn input[type=checkbox]:checked + label {
+* .fieldset-disabled .choice-btn input[type=radio]:checked + label,
+* .fieldset-disabled .choice-btn input[type=checkbox]:checked + label {
   background-color: #e5e5e5 !important;
   color: #595757 !important;
 }
-* fieldset[disabled] .choice-btn input[type=radio]:checked + label:hover,
-* fieldset[disabled] .choice-btn input[type=checkbox]:checked + label:hover {
+* .fieldset-disabled .choice-btn input[type=radio]:checked + label:hover,
+* .fieldset-disabled .choice-btn input[type=checkbox]:checked + label:hover {
   filter: unset;
 }
-* fieldset[disabled] .session.view-nobtn select {
+* .fieldset-disabled .session.view-nobtn select {
   width: 100%;
 }
-* fieldset[disabled] .file-upload input[type=button] {
+* .fieldset-disabled .file-upload input[type=button] {
   border: solid 1px #9fa0a0 !important;
   background-color: #e5e5e5 !important;
   color: #595757 !important;
@@ -1044,6 +1044,7 @@ body {
   padding: 0;
   padding-right: 0 !important;
   position: relative;
+  /* datepicker日期 */
   /* 跳到主要內容區塊 */
 }
 @media (max-width: 320px) {
@@ -2719,6 +2720,103 @@ body .searchbar .btn-gp button:first-child {
     width: 100%;
   }
 }
+body .ui-datepicker {
+  font-size: 1rem;
+  font-family: "sans-serif", "微軟正黑體";
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+body .ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+  vertical-align: middle;
+}
+body .ui-widget-header {
+  border: none;
+  background: #fff;
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+body .ui-widget-header select {
+  border: 1px solid #eee;
+  height: 35px;
+  padding-left: 10px;
+  border-radius: 4px;
+  font-size: 0.875rem !important;
+}
+body .ui-datepicker-title {
+  display: flex;
+  flex-direction: row-reverse;
+}
+body .ui-datepicker select.ui-datepicker-year {
+  width: 60%;
+  margin-right: 10px;
+}
+body .ui-datepicker select.ui-datepicker-month {
+  width: calc(40% - 10px);
+}
+body .ui-datepicker-prev.ui-corner-all,
+body .ui-datepicker-next.ui-corner-all {
+  height: 35px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 0;
+  color: #555555;
+}
+body .ui-datepicker-prev.ui-corner-all:hover,
+body .ui-datepicker-next.ui-corner-all:hover {
+  border: none;
+  background-color: #e6f4ff;
+}
+body .ui-datepicker-prev::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f053";
+  font-weight: bold;
+  width: 12px;
+  line-height: 8px;
+  position: absolute;
+  left: calc(50% - 6px);
+  top: calc(50% - 6px);
+}
+body .ui-datepicker-next::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  font-weight: bold;
+  width: 12px;
+  line-height: 8px;
+  position: absolute;
+  left: calc(50% - 6px);
+  top: calc(50% - 6px);
+}
+body .ui-state-default,
+body .ui-widget-content .ui-state-default,
+body .ui-widget-header .ui-state-default {
+  background: #fff;
+  border: none;
+}
+body .ui-state-default:hover {
+  background-color: #f1f8fe;
+}
+body .ui-datepicker-calendar thead {
+  background-color: #f4f4f4;
+  border: none;
+}
+body .ui-datepicker-calendar th {
+  padding: 5px 0;
+}
+body .ui-datepicker .highlight a {
+  cursor: pointer !important;
+}
+body .ui-state-highlight {
+  background-color: #ffffe6 !important;
+  border: solid 1px #e0e19f !important;
+}
+body td.highlight a {
+  background-color: #e6f4ff !important;
+  border: solid 1px #a1d1f5 !important;
+}
+body .ui-datepicker td a {
+  text-align: center;
+  cursor: default !important;
+}
 body .for_accessibility .go-main {
   position: absolute;
   top: 18px;
@@ -3382,15 +3480,18 @@ body main .content-type .taxbreak-gp.v3 .book .apply {
   color: #814909;
 }
 body main .content-type .separate-taxation {
-  justify-content: start;
+  justify-content: center;
 }
 body main .content-type .separate-taxation .block {
-  width: 33%;
+  width: 30%;
   margin-right: 36px;
+}
+body main .content-type .separate-taxation .block:last-child {
+  margin-right: 0;
 }
 @media (max-width: 768px) {
   body main .content-type .separate-taxation .block {
-    width: 30%;
+    width: 48%;
     margin-right: 20px;
   }
 }

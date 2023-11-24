@@ -234,64 +234,62 @@
         -moz-appearance: textfield;
     }
     // 表單群組
-    fieldset {
+    .fieldset-disabled {
         margin-bottom: $m-M;
-        &[disabled] {
-            input,
-            select,
-            .select2-container--default .select2-selection--single,
-            textarea,
-            .session input,
-            .session select {
-                background-color: $bk-10 !important;
-                // border: solid 1px $bk-20 !important;
-                // border: unset !important;
-                // background-color: rgba($color: $primary-tint, $alpha: 0.15) !important;
-                // border: solid 1px rgba($color: $primary-tint, $alpha: 0.5) !important;
-                opacity: 1;
-                cursor: not-allowed;
-                &:hover{
-                    filter: unset;
+        input,
+        select,
+        .select2-container--default .select2-selection--single,
+        textarea,
+        .session input,
+        .session select {
+            background-color: $bk-10 !important;
+            // border: solid 1px $bk-20 !important;
+            // border: unset !important;
+            // background-color: rgba($color: $primary-tint, $alpha: 0.15) !important;
+            // border: solid 1px rgba($color: $primary-tint, $alpha: 0.5) !important;
+            opacity: 1;
+            cursor: not-allowed;
+            &:hover {
+                filter: unset;
+            }
+        }
+        input[type="button"] {
+            background-color: $bk-20 !important;
+        }
+        // choice-btn radio,checkbox
+        .choice-btn input[type="radio"] + label,
+        .choice-btn input[type="checkbox"] + label {
+            cursor: not-allowed !important;
+        }
+        .choice-btn input[type="radio"] + label,
+        .choice-btn input[type="checkbox"] + label {
+            color: $text !important;
+            border: solid 1px $complementary !important;
+        }
+        .choice-btn input[type="radio"]:checked + label,
+        .choice-btn input[type="checkbox"]:checked + label {
+            // background-color: $complementary !important;
+            // color: white !important;
+            background-color: $bk-10 !important;
+            color: $text !important;
+            &:hover {
+                filter: unset;
+            }
+        }
+        .session {
+            &.view-nobtn {
+                select {
+                    width: 100%;
                 }
             }
+        }
+        .file-upload {
             input[type="button"] {
-                background-color: $bk-20 !important;
-            }
-            // choice-btn radio,checkbox
-            .choice-btn input[type="radio"] + label,
-            .choice-btn input[type="checkbox"] + label {
-                cursor: not-allowed !important;
-            }
-            .choice-btn input[type="radio"] + label,
-            .choice-btn input[type="checkbox"] + label {
-                color: $text !important;
                 border: solid 1px $complementary !important;
-            }
-            .choice-btn input[type="radio"]:checked + label,
-            .choice-btn input[type="checkbox"]:checked + label {
-                // background-color: $complementary !important;
                 // color: white !important;
+                // background-color: $complementary !important;
                 background-color: $bk-10 !important;
                 color: $text !important;
-                &:hover{
-                    filter: unset;
-                }
-            }
-            .session {
-                &.view-nobtn {
-                    select {
-                        width: 100%;
-                    }
-                }
-            }
-            .file-upload {
-                input[type="button"] {
-                    border: solid 1px $complementary !important;
-                    // color: white !important;
-                    // background-color: $complementary !important;
-                    background-color: $bk-10 !important;
-                    color: $text !important;
-                }
             }
         }
     }
@@ -1945,7 +1943,7 @@
                         // border: unset !important;
                         background-color: $bk-10 !important;
                         color: $text !important;
-                        &:hover{
+                        &:hover {
                             filter: unset;
                         }
                     }
@@ -2776,5 +2774,105 @@
                 }
             }
         }
+    }
+}
+@mixin datepicker {
+    /* datepicker日期 */
+    .ui-datepicker {
+        font-size: 1rem;
+        font-family: "sans-serif", "微軟正黑體";
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    .ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+        vertical-align: middle;
+    }
+    .ui-widget-header {
+        border: none;
+        background: #fff;
+        color: #222;
+        font-weight: bold;
+        margin-bottom: 3px;
+    }
+    .ui-widget-header select {
+        border: 1px solid #eee;
+        height: 35px;
+        padding-left: 10px;
+        border-radius: 4px;
+        font-size: 0.875rem !important;
+    }
+    .ui-datepicker-title {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .ui-datepicker select.ui-datepicker-year {
+        width: 60%;
+        margin-right: 10px;
+    }
+    .ui-datepicker select.ui-datepicker-month {
+        width: calc(40% - 10px);
+    }
+    .ui-datepicker-prev.ui-corner-all,
+    .ui-datepicker-next.ui-corner-all {
+        height: 35px;
+        margin-top: 5px;
+        cursor: pointer;
+        border-radius: 0;
+        color: #555555;
+    }
+    .ui-datepicker-prev.ui-corner-all:hover,
+    .ui-datepicker-next.ui-corner-all:hover {
+        border: none;
+        background-color: #e6f4ff;
+    }
+    .ui-datepicker-prev::after {
+        font-family: "Font Awesome 5 Free";
+        content: "\f053";
+        font-weight: bold;
+        width: 12px;
+        line-height: 8px;
+        position: absolute;
+        left: calc(50% - 6px);
+        top: calc(50% - 6px);
+    }
+    .ui-datepicker-next::after {
+        font-family: "Font Awesome 5 Free";
+        content: "\f054";
+        font-weight: bold;
+        width: 12px;
+        line-height: 8px;
+        position: absolute;
+        left: calc(50% - 6px);
+        top: calc(50% - 6px);
+    }
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default {
+        background: #fff;
+        border: none;
+    }
+    .ui-state-default:hover {
+        background-color: #f1f8fe;
+    }
+    .ui-datepicker-calendar thead {
+        background-color: #f4f4f4;
+        border: none;
+    }
+    .ui-datepicker-calendar th {
+        padding: 5px 0;
+    }
+    .ui-datepicker .highlight a {
+        cursor: pointer !important ;
+    }
+    .ui-state-highlight {
+        background-color: #ffffe6 !important;
+        border: solid 1px #e0e19f !important;
+    }
+    td.highlight a {
+        background-color: #e6f4ff !important;
+        border: solid 1px #a1d1f5 !important;
+    }
+    .ui-datepicker td a {
+        text-align: center;
+        cursor: default !important;
     }
 }
