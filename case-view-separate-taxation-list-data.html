@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>瀏覽分離課稅-清冊資料</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <!-- <header id="header"></header> -->
+
+    <main class="bgc-gray pt-4">
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                    <li>></li>
+                    <li><a href="separate-taxation-apply-exhibition4.html">瀏覽分離課稅</a></li>
+                    <li>></li>
+                    <li><span>清冊資料</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 我要申請 -->
+        <section class="content-signup">
+            <h2>清冊資料</h2>
+            <div class="step">
+                <div class="w-100 d-flex justify-content-end">
+                    <button type="button" class="button-outline"><i class="fas fa-print"></i>列印</button>
+                </div>
+            </div>
+            <div class="container">
+                <form class="card">
+                    <fieldset>
+                        <table class="table-default mb-separate list-data">
+                            <thead>
+                                <tr>
+                                    <th>編號</th>
+                                    <th style="width: 30%;">作品資訊</th>
+                                    <th>是否申請分離課稅</th>
+                                    <th>展品圖片</th>
+                                    <th style="width: 12%;">審核結果</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-title="編號">1234</td>
+                                    <td>
+                                        <ul>作品名稱
+                                            <li>標題標題標題標題</li>
+                                        </ul>
+                                        <ul>作者
+                                            <li>100x100cm</li>
+                                        </ul>
+                                        <ul>作品尺寸
+                                            <li>100x100cm</li>
+                                        </ul>
+                                        <ul>作品媒材
+                                            <li>油畫</li>
+                                        </ul>
+                                        <ul>年代
+                                            <li>2023</li>
+                                        </ul>
+                                        <ul>預估價
+                                            <li>123</li>
+                                        </ul>
+                                    </td>
+                                    <td data-title="是否申請分離課稅">是</td>
+                                    <td data-title="展品圖片">
+                                        尚未上傳
+                                    </td>
+                                    <td data-title="審核結果">無申請</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="編號">1234</td>
+                                    <td>
+                                        <ul>作品名稱
+                                            <li>標題標題標題標題</li>
+                                        </ul>
+                                        <ul>作者
+                                            <li>100x100cm</li>
+                                        </ul>
+                                        <ul>作品尺寸
+                                            <li>100x100cm</li>
+                                        </ul>
+                                        <ul>作品媒材
+                                            <li>油畫</li>
+                                        </ul>
+                                        <ul>年代
+                                            <li>2023</li>
+                                        </ul>
+                                        <ul>預估價
+                                            <li>123</li>
+                                        </ul>
+                                    </td>
+                                    <td data-title="是否申請分離課稅">是</td>
+                                    <td data-title="展品圖片">
+                                        <div class="file-img">
+                                            <img src="img/nologo.png" alt="">
+                                        </div>
+                                    </td>
+                                    <td data-title="審核結果">無申請</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="編號">1234</td>
+                                    <td>
+                                        <ul>作品名稱
+                                            <li>標題標題標題標題</li>
+                                        </ul>
+                                        <ul>作者
+                                            <li>100x100cm</li>
+                                        </ul>
+                                        <ul>作品尺寸
+                                            <li>100x100cm</li>
+                                        </ul>
+                                        <ul>作品媒材
+                                            <li>油畫</li>
+                                        </ul>
+                                        <ul>年代
+                                            <li>2023</li>
+                                        </ul>
+                                        <ul>預估價
+                                            <li>123</li>
+                                        </ul>
+                                    </td>
+                                    <td data-title="是否申請分離課稅">是</td>
+                                    <td data-title="展品圖片">
+                                        <div class="file-img">
+                                            <img src="img/nologo.png" alt="">
+                                        </div>
+                                    </td>
+                                    <td data-title="審核結果">無申請</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </fieldset>
+
+                    <div class="btn-tool">
+                        <input type="button" value="關閉">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+</body>
+
+</html>

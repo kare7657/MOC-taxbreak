@@ -41,7 +41,7 @@
         </div>
         <!-- 我要申請 -->
         <section class="content-signup">
-            <h2>申請分離課稅</h2>
+            <h2>申請展覽分離課稅</h2>
             <div class="step">
                 <div class="btn-gp">
                     <a href="separate-taxation-apply-exhibition1.html" class="btn-step active">基本資料</a>
@@ -66,6 +66,15 @@
                                 <option value="list2">項目2</option>
                                 <option value="list3">項目3</option>
                             </select>
+                        </div>
+                        <div class="form-gp choice-btn">
+                            <h5>類型<span class="notice">*</span></h5>
+                            <div class="type-gp">
+                                <button type="button" class="button-outline" data-toggle="modal"
+                                    data-target="#modal-notify-exhibition">展覽</button>
+                                <button type="button" class="button-outline" data-toggle="modal"
+                                    data-target="#modal-notify-auction">拍賣</button>
+                            </div>
                         </div>
                         <div class="form-gp">
                             <label for="activity_name">活動名稱<span class="notice">*</span></label>
@@ -734,6 +743,60 @@
                         <div class="modal-footer">
                             <button type="button" name="cancel" id="cancel4" data-dismiss="modal">下一步</button>
 
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- modal 提示-展覽-->
+        <div class="modal fade modal-template " id="modal-notify-exhibition" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel2" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD4" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel2">系統通知</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <p>若調整類型，目前填寫的資料將會被清除，請確定是否要繼續？</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel5" data-dismiss="modal">取消</button>
+                            <button type="button" name="go" id="go5"
+                                onclick="location.href='separate-taxation-apply-exhibition1.html'">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- modal 提示-拍賣-->
+        <div class="modal fade modal-template " id="modal-notify-auction" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel4" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD6" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel4">系統通知</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <p>若調整類型，目前填寫的資料將會被清除，請確定是否要繼續？</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel7" data-dismiss="modal">取消</button>
+                            <button type="button" name="go" id="go7"
+                                onclick="location.href='separate-taxation-apply-auction1.html'">確認</button>
                         </div>
                     </div>
                 </div>

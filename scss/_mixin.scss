@@ -2221,7 +2221,7 @@
                 margin-bottom: $p-XXS;
             }
             .type-gp {
-                margin-top: $p-XXS;
+                // margin-top: $p-XXS;
                 @include mobile-L() {
                     width: 100%;
                     display: flex;
