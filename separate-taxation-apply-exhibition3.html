@@ -69,14 +69,15 @@
                             <thead>
                                 <tr>
                                     <th>序號</th>
-                                    <th>作品名稱</th>
+                                    <th style="width: 12%;">作品名稱</th>
                                     <th>作者</th>
                                     <th>作品尺寸</th>
                                     <th>作品媒材</th>
                                     <th>年代</th>
-                                    <th >預估價</th>
+                                    <th>預估價</th>
                                     <th style="width: 8%;">是否申請分離課稅</th>
                                     <th>展品圖片</th>
+                                    <th style="width: 17%;">功能</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -87,34 +88,19 @@
                                     <td data-title="作品尺寸">100x100cm</td>
                                     <td data-title="作品媒材">油畫</td>
                                     <td data-title="年代">2023</td>
-                                    <td data-title="預估價">123456</td>
-                                    <td data-title="是否申請分離課稅">是</td>
-                                    <td data-title="展品圖片"><input type="button" id="file2" value="上傳圖片"></td>
-                                </tr>
-                                <tr>
-                                    <td data-title="序號">1234</td>
-                                    <td data-title="作品名稱">標題標題標題標題</td>
-                                    <td data-title="作者">某某某</td>
-                                    <td data-title="作品尺寸">100x100cm</td>
-                                    <td data-title="作品媒材">油畫</td>
-                                    <td data-title="年代">2023</td>
-                                    <td data-title="預估價">123456</td>
-                                    <td data-title="是否申請分離課稅">是</td>
-                                    <td data-title="展品圖片"><input type="button" id="file3" value="上傳圖片"></td>
-                                </tr>
-                                <tr>
-                                    <td data-title="序號">1234</td>
-                                    <td data-title="作品名稱">標題標題標題標題</td>
-                                    <td data-title="作者">某某某</td>
-                                    <td data-title="作品尺寸">100x100cm</td>
-                                    <td data-title="作品媒材">油畫</td>
-                                    <td data-title="年代">2023</td>
-                                    <td data-title="預估價">123456</td>
+                                    <td data-title="預估價">123,456</td>
                                     <td data-title="是否申請分離課稅">是</td>
                                     <td data-title="展品圖片">
-                                        <div class="file-img">
-                                            <img src="img/nologo.png" alt="">
-                                            <a href="" class="close"><i class="fas fa-times-circle"></i></a>
+                                        <input type="button" id="file2" value="上傳圖片"  data-toggle="modal"
+                                        data-target="#modal-upload">
+                                    </td>
+                                    <td data-title="功能">
+                                        <div class="function">
+                                            <a href="" class="link" title="編輯" data-toggle="modal"
+                                                data-target="#modal-form"><i class="fas fa-pen"></i>
+                                                <span>編輯</span></a>
+                                            <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                                <span>刪除</span></a>
                                         </div>
                                     </td>
                                 </tr>
@@ -125,12 +111,69 @@
                                     <td data-title="作品尺寸">100x100cm</td>
                                     <td data-title="作品媒材">油畫</td>
                                     <td data-title="年代">2023</td>
-                                    <td data-title="預估價">123456</td>
+                                    <td data-title="預估價">123,456</td>
+                                    <td data-title="是否申請分離課稅">否</td>
+                                    <td data-title="展品圖片">
+                                        <input type="button" id="file3" value="上傳圖片"  data-toggle="modal"
+                                        data-target="#modal-upload">
+                                    </td>
+                                    <td data-title="功能">
+                                        <div class="function">
+                                            <a href="" class="link" title="編輯" data-toggle="modal"
+                                                data-target="#modal-form"><i class="fas fa-pen"></i>
+                                                <span>編輯</span></a>
+                                            <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                                <span>刪除</span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-title="序號">1234</td>
+                                    <td data-title="作品名稱">標題標題標題標題</td>
+                                    <td data-title="作者">某某某</td>
+                                    <td data-title="作品尺寸">100x100cm</td>
+                                    <td data-title="作品媒材">油畫</td>
+                                    <td data-title="年代">2023</td>
+                                    <td data-title="預估價">123,456</td>
                                     <td data-title="是否申請分離課稅">是</td>
                                     <td data-title="展品圖片">
                                         <div class="file-img">
                                             <img src="img/nologo.png" alt="">
                                             <a href="" class="close"><i class="fas fa-times-circle"></i></a>
+                                        </div>
+                                    </td>
+                                    <td data-title="功能">
+                                        <div class="function">
+                                            <a href="" class="link" title="編輯" data-toggle="modal"
+                                                data-target="#modal-form"><i class="fas fa-pen"></i>
+                                                <span>編輯</span></a>
+                                            <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                                <span>刪除</span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-title="序號">1234</td>
+                                    <td data-title="作品名稱">標題標題標題標題</td>
+                                    <td data-title="作者">某某某</td>
+                                    <td data-title="作品尺寸">100x100cm</td>
+                                    <td data-title="作品媒材">油畫</td>
+                                    <td data-title="年代">2023</td>
+                                    <td data-title="預估價">123,456</td>
+                                    <td data-title="是否申請分離課稅">否</td>
+                                    <td data-title="展品圖片">
+                                        <div class="file-img">
+                                            <img src="img/nologo.png" alt="">
+                                            <a href="" class="close"><i class="fas fa-times-circle"></i></a>
+                                        </div>
+                                    </td>
+                                    <td data-title="功能">
+                                        <div class="function">
+                                            <a href="" class="link" title="編輯" data-toggle="modal"
+                                                data-target="#modal-form"><i class="fas fa-pen"></i>
+                                                <span>編輯</span></a>
+                                            <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                                <span>刪除</span></a>
                                         </div>
                                     </td>
                                 </tr>
@@ -149,6 +192,107 @@
                 </form>
             </div>
         </section>
+
+        <!-- modal 上傳-->
+        <div class="modal fade modal-template " id="modal-upload" tabindex="-1" role="dialog"
+            aria-labelledby="modal-uploadLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-uploadLabel">上傳圖片</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-gp">
+                                <input type="file">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+                            <button type="submit" name="go" id="go2">確認</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- modal 表單-->
+        <div class="modal fade modal-template " id="modal-form" tabindex="-1" role="dialog"
+            aria-labelledby="modal-formLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-formLabel">編輯清冊內容</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-gp">
+                                    <label for="art_number">序號<span class="notice">*</span></label>
+                                    <input type="text" name="art_number" id="art_number" placeholder="1234">
+                                </div>
+                                <div class="form-gp">
+                                    <label for="art_name">作品名稱<span class="notice">*</span></label>
+                                    <input type="text" name="art_name" id="art_name" placeholder="標題標題標題標題">
+                                </div>
+                                <div class="form-gp">
+                                    <label for="art_author">作者<span class="notice">*</span></label>
+                                    <input type="text" name="art_author" id="art_author" placeholder="某某某">
+                                </div>
+                                <div class="form-gp">
+                                    <label for="art_size">作者尺寸<span class="notice">*</span></label>
+                                    <input type="text" name="art_size" id="art_size" placeholder="100x100cm">
+                                </div>
+                                <div class="form-gp">
+                                    <label for="art_media">作者媒材<span class="notice">*</span></label>
+                                    <input type="text" name="art_media" id="art_media" placeholder="油畫">
+                                </div>
+                                <div class="form-gp">
+                                    <label for="art_year">年代<span class="notice">*</span></label>
+                                    <input type="text" name="art_year" id="art_year" placeholder="2023">
+                                </div>
+                                <div class="form-gp">
+                                    <label for="art_appraise">預估價<span class="notice">*</span></label>
+                                    <input type="number" name="art_appraise" id="art_appraise" placeholder="123,456">
+                                </div>
+                                <div class="form-gp choice-btn">
+                                    <h5>是否申請分離課稅<span class="notice">*</span></h5>
+                                    <div class="modal-choice-gp">
+                                        <div class="item">
+                                            <input type="radio" name="state" value="" id="yorn">
+                                            <label for="yorn">
+                                                是
+                                            </label>
+                                        </div>
+                                        <div class="item">
+                                            <input type="radio" name="state" value="" id="yorn2" checked>
+                                            <label for="yorn2">
+                                                否
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+                            <button type="submit" name="go" id="go3">確認</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
 
     </main>
     <!-- footer -->

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>交易資料通報表(核准)</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <!-- <header id="header"></header> -->
+
+    <main class="bgc-gray pt-4">
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                    <li>></li>
+                    <li><a href="case-manage-separate-taxation.html">案件管理</a></li>
+                    <li>></li>
+                    <li><span>交易資料通報表(核准適用範圍)</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 我要申請 -->
+        <section class="content-signup">
+            <h2>交易資料通報表(核准適用範圍)</h2>
+            <!-- <div class="step">
+                <div class="view-gp">
+                    <button type="button" class="button-outline"><i class="fas fa-file-upload"></i>上傳</button>
+                    <button type="button" class="button-outline"><i class="fas fa-print"></i>列印</button>
+                </div>
+            </div> -->
+            <div class="container">
+                <form class="card">
+                    <div class="info">
+                        <div class="type-title">
+                            <h3>注意事項</h3>
+                        </div>
+                        <div class="btn-gp">
+                            <button type="button" class=""><i class="fas fa-paperclip"></i>下載審查表</button>
+                            <button type="button" class=""><i class="fas fa-file-upload"></i>上傳通報表</button>
+                            <button type="button" class=""><i class="fas fa-print"></i>列印</button>
+                        </div>
+                        <ul class="ps">
+                            <li>請先下載審查表，填寫完畢後再上傳通報表，並核對下表通報內容是否正確。如需修改，可使用功能中的「更正」按鈕進行編修。</li>
+                            <li>通報內容確認完畢後，請點選表格下方的「完成通報」按鈕，以完成所有資料的通報</li>
+                            <li class="notice"><b>為配合財政部處理時間，請於 113-00-00 前完成通報</b> </li>
+                        </ul>
+                        <!-- <hr> -->
+                    </div>
+                    <fieldset disabled class="fieldset-disabled">
+                        <div class="type-title">
+                            <h3>通報內容</h3>
+                        </div>
+                        <table class="table-default mb-separate list-data">
+                            <thead>
+                                <tr>
+                                    <th style="width: 8%;">項次</th>
+                                    <th style="width: 18.5%;">交易資料類別</th>
+                                    <th style="width: 15%;">名稱</th>
+                                    <th style="width: 18.5%;">買受人</th>
+                                    <th style="width: 18.5%;">成交價</th>
+                                    <th style="width: 18.5%;">功能</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-title="項次">1234</td>
+                                    <td data-title="交易資料類別">
+                                        已成交尚未付款
+                                    </td>
+                                    <td data-title="名稱">
+                                        靜物2 still life 2
+                                    </td>
+                                    <td data-title="買受人">
+                                        程小姐
+                                    </td>
+                                    <td data-title="成交價">
+                                        200,000
+                                    </td>
+                                    <td data-title="功能">
+                                        <div class="function">
+                                            <a href="" class="link" title="更正" data-toggle="modal"
+                                                data-target="#modal-form"><i class="fas fa-pen"></i>
+                                                <span>更正</span></a>
+                                            <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                                <span>刪除</span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </fieldset>
+
+                    <div class="btn-tool">
+                        <input type="button" value="關閉">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+</body>
+
+</html>

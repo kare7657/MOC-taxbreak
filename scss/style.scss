@@ -96,6 +96,9 @@ body {
             border-radius: 12px;
             box-shadow: 0 0 10px rgba($color: black, $alpha: 0.1);
             border: unset;
+            @include pad {
+                padding: $p-S $p-M;
+            }
             @include mobile-L {
                 padding: $p-S;
             }
@@ -1305,6 +1308,23 @@ body {
                 //         padding: $p-S;
                 //     }
                 // }
+                .info{
+                    margin-bottom: $m-XS;
+                    // hr{
+                    //     margin-top: $m-M;
+                    // }
+                    .type-title{
+                        margin-bottom: 0;
+                        // h3{
+                        //     margin-bottom: 0;
+                        // }
+                    }
+                    .btn-gp{
+                        button{
+                            margin-right: $p-XXS;
+                        }
+                    }
+                }
                 fieldset {
                     margin-bottom: $m-M;
                 }
@@ -1445,6 +1465,16 @@ body {
                         }
                     }
                 }
+                .code-gp {
+                    .text-gp {
+                        .code {
+                            width: 20%;
+                            @include mobile-L() {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
             }
             .check-curriculum {
                 border: solid 1px $secondary;
@@ -1514,13 +1544,21 @@ body {
                         }
                     }
                 }
-                &.list-data{
+                &.list-data {
                     margin-top: $m-XS;
-                    th{
-                        padding: $m-XS $p-XS ;
+                    th {
+                        padding: $m-XS $p-XS;
                     }
-                    td,th{
+                    td,
+                    th {
                         text-align: left;
+                    }
+                    td {
+                        .form-gp {
+                            label {
+                                font-size: $size-p;
+                            }
+                        }
                     }
                 }
             }
@@ -1734,9 +1772,9 @@ body {
                                     .function {
                                         padding-left: $p-XXS;
                                         display: flex;
-                                        @include pad {
-                                            flex-wrap: wrap;
-                                        }
+                                        flex-wrap: wrap;
+                                        // @include pad {
+                                        // }
                                         @include mobile-L {
                                             padding-left: 0;
                                             flex-wrap: wrap;
@@ -1744,6 +1782,7 @@ body {
                                             margin-top: $m-XS;
                                         }
                                         a.link {
+                                            margin: $p-XXS 0 !important;
                                             margin-right: $m-S !important;
                                             font-size: $size-caption;
                                             @include pad {
