@@ -150,6 +150,17 @@ body {
         // .alert-warning{
         //     color: $primary-dark;
         // }
+        ul.ps {
+            padding: $p-XS 0;
+            padding-left: $p-XS;
+            margin-bottom: 0;
+            li {
+                list-style-position: outside;
+                list-style-type: disc;
+                color: $primary-default;
+                line-height: 1.75;
+            }
+        }
 
         //網站導覽
         .content-webmap {
@@ -1222,7 +1233,7 @@ body {
                     margin-top: $m-S;
                 }
                 @include mobile-L {
-                    margin-bottom: $m-S;
+                    margin: 0;
                     padding: $p-XS;
                 }
                 .btn-gp {
@@ -1234,7 +1245,7 @@ body {
                     padding: $p-XXS $p-S;
                     max-width: 600px;
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: center;
                     align-items: center;
                     @include mobile-L {
                         justify-content: center;
@@ -1248,10 +1259,12 @@ body {
                         border-radius: 6px;
                         font-weight: bold;
                         color: $primary-default;
+                        margin: 0 $m-XS;
                         @include mobile-L {
                             margin: 0 $p-XXS;
                             text-align: center;
                             width: 20%;
+                            padding: 0 $p-XXS;
                         }
                         &.active {
                             border: solid 1px $primary-default;
@@ -1354,17 +1367,7 @@ body {
                         margin-top: 0;
                     }
                 }
-                ul.ps {
-                    padding: $p-XS 0;
-                    padding-left: $p-XS;
-                    margin-bottom: 0;
-                    li {
-                        list-style-position: outside;
-                        list-style-type: disc;
-                        color: $primary-default;
-                        line-height: 1.75;
-                    }
-                }
+
                 .place-gp {
                     margin-bottom: $m-S;
                     &:last-child {
@@ -1557,6 +1560,14 @@ body {
                         .form-gp {
                             label {
                                 font-size: $size-p;
+                            }
+                        }
+                        .function{
+                            padding-left: 0;
+                            flex-wrap: wrap;
+                            flex-direction: column;
+                            a.link{
+                                margin-right: 0 !important;
                             }
                         }
                     }

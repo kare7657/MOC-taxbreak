@@ -65,107 +65,63 @@
                                 <li>展品圖片只接受指定格式（png、jpg、jpeg），每個圖片檔案請小於 6MB</li>
                             </ul>
                         </div>
-                        <table class="table-default mb-separate">
+                        <table class="table-default mb-separate  list-data">
                             <thead>
                                 <tr>
-                                    <th>序號</th>
-                                    <th style="width: 12%;">作品名稱</th>
-                                    <th>作者</th>
-                                    <th>作品尺寸</th>
-                                    <th>作品媒材</th>
-                                    <th>年代</th>
-                                    <th>預估價</th>
-                                    <th style="width: 8%;">是否申請分離課稅</th>
-                                    <th>展品圖片</th>
-                                    <th style="width: 17%;">功能</th>
+                                    <th style="width: 8%;">序號</th>
+                                    <th style="width: 19%;">作品資訊</th>
+                                    <th style="width: 15%;">作品規格</th>
+                                    <th style="width: 18%;">價格資訊</th>
+                                    <th style="width: 20%;">其他</th>
+                                    <th style="width: 10%;">展品圖片</th>
+                                    <th style="width: 10%;">功能</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td data-title="序號">1234</td>
-                                    <td data-title="作品名稱">標題標題標題標題</td>
-                                    <td data-title="作者">某某某</td>
-                                    <td data-title="作品尺寸">100x100cm</td>
-                                    <td data-title="作品媒材">油畫</td>
-                                    <td data-title="年代">2023</td>
-                                    <td data-title="預估價">123,456</td>
-                                    <td data-title="是否申請分離課稅">是</td>
+                                    <td data-title="作品資訊">
+                                        <ul>作品類型
+                                            <li>雕塑</li>
+                                        </ul>
+                                        <ul>作品名稱
+                                            <li>標題標題標題標題</li>
+                                        </ul>
+                                        <ul>作者
+                                            <li>某某某</li>
+                                        </ul>
+                                    </td>
+                                    <td data-title="作品規格">
+                                        <ul>作品尺寸
+                                            <li>100x100cm</li>
+                                        </ul>
+                                        <ul>作品媒材
+                                            <li>陶土</li>
+                                        </ul>
+                                        <ul>年代
+                                            <li>2023</li>
+                                        </ul>
+                                    </td>
+                                    <td data-title="價格資訊">
+                                        <ul>預估價
+                                            <li>123,456</li>
+                                        </ul>
+                                        <ul>是否申請分離課稅
+                                            <li>是</li>
+                                        </ul>
+                                    </td>
+
+                                    <td data-title="其他">
+                                        <ul>佐證資料
+                                            <li>尚未上傳</li>
+                                        </ul>
+                                        <ul>備註
+                                            <li>文字文字文字文字文字文字文字文字文字文字文字文字文字</li>
+                                        </ul>
+                                    </td>
                                     <td data-title="展品圖片">
-                                        <input type="button" id="file2" value="上傳圖片"  data-toggle="modal"
-                                        data-target="#modal-upload">
-                                    </td>
-                                    <td data-title="功能">
-                                        <div class="function">
-                                            <a href="" class="link" title="編輯" data-toggle="modal"
-                                                data-target="#modal-form"><i class="fas fa-pen"></i>
-                                                <span>編輯</span></a>
-                                            <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
-                                                <span>刪除</span></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-title="序號">1234</td>
-                                    <td data-title="作品名稱">標題標題標題標題</td>
-                                    <td data-title="作者">某某某</td>
-                                    <td data-title="作品尺寸">100x100cm</td>
-                                    <td data-title="作品媒材">油畫</td>
-                                    <td data-title="年代">2023</td>
-                                    <td data-title="預估價">123,456</td>
-                                    <td data-title="是否申請分離課稅">否</td>
-                                    <td data-title="展品圖片">
-                                        <input type="button" id="file3" value="上傳圖片"  data-toggle="modal"
-                                        data-target="#modal-upload">
-                                    </td>
-                                    <td data-title="功能">
-                                        <div class="function">
-                                            <a href="" class="link" title="編輯" data-toggle="modal"
-                                                data-target="#modal-form"><i class="fas fa-pen"></i>
-                                                <span>編輯</span></a>
-                                            <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
-                                                <span>刪除</span></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-title="序號">1234</td>
-                                    <td data-title="作品名稱">標題標題標題標題</td>
-                                    <td data-title="作者">某某某</td>
-                                    <td data-title="作品尺寸">100x100cm</td>
-                                    <td data-title="作品媒材">油畫</td>
-                                    <td data-title="年代">2023</td>
-                                    <td data-title="預估價">123,456</td>
-                                    <td data-title="是否申請分離課稅">是</td>
-                                    <td data-title="展品圖片">
-                                        <div class="file-img">
-                                            <img src="img/nologo.png" alt="">
-                                            <a href="" class="close"><i class="fas fa-times-circle"></i></a>
-                                        </div>
-                                    </td>
-                                    <td data-title="功能">
-                                        <div class="function">
-                                            <a href="" class="link" title="編輯" data-toggle="modal"
-                                                data-target="#modal-form"><i class="fas fa-pen"></i>
-                                                <span>編輯</span></a>
-                                            <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
-                                                <span>刪除</span></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-title="序號">1234</td>
-                                    <td data-title="作品名稱">標題標題標題標題</td>
-                                    <td data-title="作者">某某某</td>
-                                    <td data-title="作品尺寸">100x100cm</td>
-                                    <td data-title="作品媒材">油畫</td>
-                                    <td data-title="年代">2023</td>
-                                    <td data-title="預估價">123,456</td>
-                                    <td data-title="是否申請分離課稅">否</td>
-                                    <td data-title="展品圖片">
-                                        <div class="file-img">
-                                            <img src="img/nologo.png" alt="">
-                                            <a href="" class="close"><i class="fas fa-times-circle"></i></a>
-                                        </div>
+                                        <input type="button" id="file2" value="上傳圖片" data-toggle="modal"
+                                            data-target="#modal-upload">
                                     </td>
                                     <td data-title="功能">
                                         <div class="function">
@@ -238,31 +194,46 @@
                             <form>
                                 <div class="form-gp">
                                     <label for="art_number">序號<span class="notice">*</span></label>
-                                    <input type="text" name="art_number" id="art_number" placeholder="1234">
+                                    <input type="text" name="art_number" id="art_number" placeholder="請填寫序號">
+                                </div>
+                                <div class="form-gp">
+                                    <label for="art_type">作品類型<span class="notice">*</span></label>
+                                    <select name="type" id="art_type" placeholder="請選擇作品類型">
+                                        <option value="list1">文物</option>
+                                        <option value="list2">畫作</option>
+                                        <option value="list3">版畫</option>
+                                        <option value="list3">雕塑</option>
+                                        <option value="list3">數位微噴版畫</option>
+                                        <option value="list3">陶瓷</option>
+                                        <option value="list3">字畫</option>
+                                        <option value="list3">瓷器</option>
+                                        <option value="list3">玉器</option>
+                                        <option value="list3">其他</option>
+                                    </select>
                                 </div>
                                 <div class="form-gp">
                                     <label for="art_name">作品名稱<span class="notice">*</span></label>
-                                    <input type="text" name="art_name" id="art_name" placeholder="標題標題標題標題">
+                                    <input type="text" name="art_name" id="art_name" placeholder="請填寫作品名稱">
                                 </div>
                                 <div class="form-gp">
                                     <label for="art_author">作者<span class="notice">*</span></label>
-                                    <input type="text" name="art_author" id="art_author" placeholder="某某某">
+                                    <input type="text" name="art_author" id="art_author" placeholder="請填寫作者姓名">
                                 </div>
                                 <div class="form-gp">
                                     <label for="art_size">作者尺寸<span class="notice">*</span></label>
-                                    <input type="text" name="art_size" id="art_size" placeholder="100x100cm">
+                                    <input type="text" name="art_size" id="art_size" placeholder="請填寫作品尺寸">
                                 </div>
                                 <div class="form-gp">
-                                    <label for="art_media">作者媒材<span class="notice">*</span></label>
-                                    <input type="text" name="art_media" id="art_media" placeholder="油畫">
+                                    <label for="art_media">作品媒材<span class="notice">*</span></label>
+                                    <input type="text" name="art_media" id="art_media" placeholder="請填寫作品媒材">
                                 </div>
                                 <div class="form-gp">
                                     <label for="art_year">年代<span class="notice">*</span></label>
-                                    <input type="text" name="art_year" id="art_year" placeholder="2023">
+                                    <input type="text" name="art_year" id="art_year" placeholder="請填寫年代">
                                 </div>
                                 <div class="form-gp">
                                     <label for="art_appraise">預估價<span class="notice">*</span></label>
-                                    <input type="number" name="art_appraise" id="art_appraise" placeholder="123,456">
+                                    <input type="number" name="art_appraise" id="art_appraise" placeholder="請填寫預估價">
                                 </div>
                                 <div class="form-gp choice-btn">
                                     <h5>是否申請分離課稅<span class="notice">*</span></h5>
@@ -280,6 +251,79 @@
                                             </label>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="form-gp">
+                                    <label for="art_file">佐證資料<span class="notice">*</span></label>
+                                    <div class="file-upload">
+                                        <input type="file" id="file1" value="檔案上傳" multiple>
+                                        <!-- <input type="button" id="file" value="檔案上傳">
+                                        <span>3個檔案</span> -->
+                                        <ul class="ps">
+                                            <li>如：作品保證書、簽名字樣、版次說明等</li>
+                                            <li>只接受指定格式（pdf、png、jpg、jpeg、bmp）</li>
+                                            <li>檔案請小於 20 MB</li>
+                                        </ul>
+                                        <div class="finished-file-list">
+                                            <div class="file-gp">
+                                                <p class="file-name"><i
+                                                    class="fas fa-paperclip"></i>作品保證書.pdf </p>
+                                                <button type="button" class="icon-btn"><i
+                                                        class="fas fa-times"></i></button>
+                                            </div>
+                                            <div class="file-gp">
+                                                <p class="file-name"><i
+                                                    class="fas fa-paperclip"></i>簽名字樣.jpg</p>
+                                                <button type="button" class="icon-btn"><i
+                                                        class="fas fa-times"></i></button>
+                                            </div>
+                                            <div class="file-gp">
+                                                <p class="file-name"><i
+                                                    class="fas fa-paperclip"></i>版次說明版次說明版次說明版次說明版次說明版次說明版次說明版次說明.png</p> <button type="button"
+                                                    class="icon-btn"><i class="fas fa-times"></i></button>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <!-- <div class="form-gp">
+                                    <label for="art_file">佐證資料(上傳後)</label>
+                                    <div class="file-upload">
+                                        <div class="file-list">
+                                            <div class="text-gp">
+                                                <span class="file-name">作品保證書.pdf</span>
+                                                <span class="item">
+                                                    <input type="checkbox" name="state" value="" id="file10">
+                                                    <label for="file10">
+                                                        刪除
+                                                    </label>
+                                                </span>
+                                            </div>
+                                            <div class="text-gp">
+                                                <span class="file-name">簽名字樣.jpg</span>
+                                                <span class="item">
+                                                    <input type="checkbox" name="state" value="" id="file11">
+                                                    <label for="file11">
+                                                        刪除
+                                                    </label>
+                                                </span>
+                                            </div>
+                                            <div class="text-gp">
+                                                <span class="file-name">版次說明.png</span>
+                                                <span class="item">
+                                                    <input type="checkbox" name="state" value="" id="file12">
+                                                    <label for="file12">
+                                                        刪除
+                                                    </label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <div class="form-gp">
+                                    <label for="exhibition_record">備註</label>
+                                    <textarea name="exhibition_record" id="exhibition_record" rows="3"
+                                        placeholder="如：作品來源、款識/鈐印、展覽、圖錄、版次別/總版次等"></textarea>
                                 </div>
 
                             </form>

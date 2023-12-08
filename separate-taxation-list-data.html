@@ -46,7 +46,7 @@
                 <form class="card">
                     <fieldset>
                         <table class="table-default mb-separate list-data">
-                            <thead>
+                            <!-- <thead>
                                 <tr>
                                     <th style="width: 15%;">編號</th>
                                     <th style="width: 33%;">作品資訊</th>
@@ -54,36 +54,20 @@
                                     <th style="width: 20%;">展品圖片</th>
                                     <th style="width: 12%;">審核結果</th>
                                 </tr>
+                            </thead> -->
+                            <thead>
+                                <tr>
+                                    <th style="width: 8%;">序號</th>
+                                    <th style="width: 19%;">作品資訊</th>
+                                    <th style="width: 15%;">作品規格</th>
+                                    <th style="width: 18%;">價格資訊</th>
+                                    <th style="width: 20%;">其他</th>
+                                    <th style="width: 10%;">展品圖片</th>
+                                    <th style="width: 10%;">審查結果</th>
+                                </tr>
                             </thead>
-                            <tbody>
-                                <!-- <tr>
-                                    <td data-title="編號">1234</td>
-                                    <td>
-                                        <ul>作品名稱
-                                            <li>標題標題標題標題</li>
-                                        </ul>
-                                        <ul>作者
-                                            <li>100x100cm</li>
-                                        </ul>
-                                        <ul>作品尺寸
-                                            <li>100x100cm</li>
-                                        </ul>
-                                        <ul>作品媒材
-                                            <li>油畫</li>
-                                        </ul>
-                                        <ul>年代
-                                            <li>2023</li>
-                                        </ul>
-                                        <ul>預估價
-                                            <li>123</li>
-                                        </ul>
-                                    </td>
-                                    <td data-title="是否申請分離課稅">是</td>
-                                    <td data-title="展品圖片">
-                                        尚未上傳
-                                    </td>
-                                    <td data-title="審核結果">無申請</td>
-                                </tr>
+                            <!-- 原版本 -->
+                            <!-- <tbody>
                                 <tr>
                                     <td data-title="編號">1234</td>
                                     <td>
@@ -97,67 +81,7 @@
                                             <li>100x100cm</li>
                                         </ul>
                                         <ul>作品媒材
-                                            <li>油畫</li>
-                                        </ul>
-                                        <ul>年代
-                                            <li>2023</li>
-                                        </ul>
-                                        <ul>預估價
-                                            <li>123</li>
-                                        </ul>
-                                    </td>
-                                    <td data-title="是否申請分離課稅">是</td>
-                                    <td data-title="展品圖片">
-                                        <div class="file-img">
-                                            <img src="img/nologo.png" alt="">
-                                        </div>
-                                    </td>
-                                    <td data-title="審核結果">無申請</td>
-                                </tr>
-                                <tr>
-                                    <td data-title="編號">1234</td>
-                                    <td>
-                                        <ul>作品名稱
-                                            <li>標題標題標題標題</li>
-                                        </ul>
-                                        <ul>作者
-                                            <li>100x100cm</li>
-                                        </ul>
-                                        <ul>作品尺寸
-                                            <li>100x100cm</li>
-                                        </ul>
-                                        <ul>作品媒材
-                                            <li>油畫</li>
-                                        </ul>
-                                        <ul>年代
-                                            <li>2023</li>
-                                        </ul>
-                                        <ul>預估價
-                                            <li>123</li>
-                                        </ul>
-                                    </td>
-                                    <td data-title="是否申請分離課稅">是</td>
-                                    <td data-title="展品圖片">
-                                        <div class="file-img">
-                                            <img src="img/nologo.png" alt="">
-                                        </div>
-                                    </td>
-                                    <td data-title="審核結果">無申請</td>
-                                </tr> -->
-                                <tr>
-                                    <td data-title="編號">1234</td>
-                                    <td>
-                                        <ul>作品名稱
-                                            <li>標題標題標題標題</li>
-                                        </ul>
-                                        <ul>作者
-                                            <li>100x100cm</li>
-                                        </ul>
-                                        <ul>作品尺寸
-                                            <li>100x100cm</li>
-                                        </ul>
-                                        <ul>作品媒材
-                                            <li>油畫</li>
+                                            <li>畫作</li>
                                         </ul>
                                         <ul>年代
                                             <li>2023</li>
@@ -185,7 +109,7 @@
                                             <li>100x100cm</li>
                                         </ul>
                                         <ul>作品媒材
-                                            <li>油畫</li>
+                                            <li>畫作</li>
                                         </ul>
                                         <ul>年代
                                             <li>2023</li>
@@ -215,7 +139,7 @@
                                             <li>100x100cm</li>
                                         </ul>
                                         <ul>作品媒材
-                                            <li>油畫</li>
+                                            <li>畫作</li>
                                         </ul>
                                         <ul>年代
                                             <li>2023</li>
@@ -225,6 +149,164 @@
                                         </ul>
                                     </td>
                                     <td data-title="是否申請分離課稅">是</td>
+                                    <td data-title="展品圖片">
+                                        <div class="file-img">
+                                            <img src="img/nologo.png" alt="">
+                                        </div>
+                                    </td>
+                                    <td data-title="審核結果"></td>
+                                </tr>
+
+                            </tbody> -->
+                            <!-- 新增欄位 -->
+                            <tbody>
+                                <tr>
+                                    <td data-title="序號">1234</td>
+                                    <td data-title="作品資訊">
+                                        <ul>作品類型
+                                            <li>雕塑</li>
+                                        </ul>
+                                        <ul>作品名稱
+                                            <li>標題標題標題標題</li>
+                                        </ul>
+                                        <ul>作者
+                                            <li>某某某</li>
+                                        </ul>
+                                    </td>
+                                    <td data-title="作品規格">
+                                        <ul>作品尺寸
+                                            <li>100x100cm</li>
+                                        </ul>
+                                        <ul>作品媒材
+                                            <li>陶土</li>
+                                        </ul>
+                                        <ul>年代
+                                            <li>2023</li>
+                                        </ul>
+                                    </td>
+                                    <td data-title="價格資訊">
+                                        <ul>預估價
+                                            <li>123,456</li>
+                                        </ul>
+                                        <ul>是否申請分離課稅
+                                            <li>是</li>
+                                        </ul>
+                                    </td>
+
+                                    <td data-title="其他">
+                                        <ul>佐證資料
+                                            <li>
+                                                <div class="function">
+                                                    <a href="" class="link" title="編輯" data-toggle="modal"
+                                                        data-target="#modal-view-file"><i class="fas fa-eye"></i>
+                                                        <span>瀏覽</span></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>備註
+                                            <li>文字文字文字文字文字文字文字文字文字文字文字文字文字</li>
+                                        </ul>
+                                    </td>
+                                    <td data-title="展品圖片">
+                                        尚未上傳
+                                    </td>
+                                    <td data-title="審核結果"></td>
+                                </tr>
+                                <tr>
+                                    <td data-title="序號">1234</td>
+                                    <td data-title="作品資訊">
+                                        <ul>作品類型
+                                            <li>雕塑</li>
+                                        </ul>
+                                        <ul>作品名稱
+                                            <li>標題標題標題標題</li>
+                                        </ul>
+                                        <ul>作者
+                                            <li>某某某</li>
+                                        </ul>
+                                    </td>
+                                    <td data-title="作品規格">
+                                        <ul>作品尺寸
+                                            <li>100x100cm</li>
+                                        </ul>
+                                        <ul>作品媒材
+                                            <li>陶土</li>
+                                        </ul>
+                                        <ul>年代
+                                            <li>2023</li>
+                                        </ul>
+                                    </td>
+                                    <td data-title="價格資訊">
+                                        <ul>預估價
+                                            <li>123,456</li>
+                                        </ul>
+                                        <ul>是否申請分離課稅
+                                            <li>否</li>
+                                        </ul>
+                                    </td>
+
+                                    <td data-title="其他">
+                                        <ul>佐證資料
+                                            <li>
+                                                <div class="function">
+                                                    <a href="" class="link" title="編輯" data-toggle="modal"
+                                                        data-target="#modal-view-file"><i class="fas fa-eye"></i>
+                                                        <span>瀏覽</span></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>備註
+                                            <li>文字文字文字文字文字文字文字文字文字文字文字文字文字</li>
+                                        </ul>
+                                    </td>
+                                    <td data-title="展品圖片">
+                                        <div class="file-img">
+                                            <img src="img/nologo.png" alt="">
+                                        </div>
+                                    </td>
+                                    <td data-title="審核結果">無申請</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="序號">1234</td>
+                                    <td data-title="作品資訊">
+                                        <ul>作品類型
+                                            <li>雕塑</li>
+                                        </ul>
+                                        <ul>作品名稱
+                                            <li>標題標題標題標題</li>
+                                        </ul>
+                                        <ul>作者
+                                            <li>某某某</li>
+                                        </ul>
+                                    </td>
+                                    <td data-title="作品規格">
+                                        <ul>作品尺寸
+                                            <li>100x100cm</li>
+                                        </ul>
+                                        <ul>作品媒材
+                                            <li>陶土</li>
+                                        </ul>
+                                        <ul>年代
+                                            <li>2023</li>
+                                        </ul>
+                                    </td>
+                                    <td data-title="價格資訊">
+                                        <ul>預估價
+                                            <li>123,456</li>
+                                        </ul>
+                                        <ul>是否申請分離課稅
+                                            <li>是</li>
+                                        </ul>
+                                    </td>
+
+                                    <td data-title="其他">
+                                        <ul>佐證資料
+                                            <li>尚未上傳</li>
+                                        </ul>
+                                        <ul>備註
+                                            <li>文字文字文字文字文字文字文字文字文字文字文字文字文字</li>
+                                        </ul>
+                                    </td>
                                     <td data-title="展品圖片">
                                         <div class="file-img">
                                             <img src="img/nologo.png" alt="">
@@ -243,6 +325,55 @@
                 </form>
             </div>
         </section>
+
+        <!-- modal 已上傳佐證資料-->
+        <div class="modal fade modal-template " id="modal-view-file" tabindex="-1" role="dialog"
+            aria-labelledby="modal-view-fileLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-view-fileLabel">已上傳佐證資料</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-gp">
+                                <!-- <div class="ticket-price-result">
+                                <div class="num">作品保證書.pdf
+                                    <button type="button" class="icon-btn"></button>
+                                </div>
+                                <div class="num">簽名字樣.jpg
+                                    <button type="button" class="icon-btn"></button>
+                                </div>
+                                <div class="num">版次說明.png
+                                    <button type="button" class="icon-btn"></button>
+                                </div>
+                            </div> -->
+                                <div class="finished-file-list">
+
+                                    <a href="" download="" title="[下載]簽名字樣" class="download-file"><i
+                                            class="fas fa-paperclip"></i>簽名字樣.jpg</a>
+                                    <a href="" download="" title="[下載]版次說明" class="download-file"><i
+                                            class="fas fa-paperclip"></i>版次說明.png</a>
+                                </div>
+                                <div class="file-gp">
+                                    <a href="" download="" title="[下載]作品保證書" class="download-file"><i
+                                        class="fas fa-paperclip"></i>作品保證書.pdf</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+                            <button type="submit" name="go" id="go2">確認</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
 
     </main>
     <!-- footer -->
