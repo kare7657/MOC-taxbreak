@@ -835,6 +835,20 @@
   margin-right: 8px;
   font-size: 1rem;
 }
+* .modal-template .modal-dialog .modal-content .modal-body .form-gp .finished-file-list .a-gp {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: start;
+}
+* .modal-template .modal-dialog .modal-content .modal-body .form-gp .finished-file-list .a-gp a {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+* .modal-template .modal-dialog .modal-content .modal-body .form-gp .finished-file-list .a-gp a i {
+  margin-right: 8px;
+  font-size: 1rem;
+}
 * .modal-template .modal-dialog .modal-content .modal-body .form-gp .finished-file-list .text-gp {
   width: 100%;
   display: flex;
@@ -879,6 +893,12 @@
   margin-right: 12px;
   height: 40px;
   line-height: 40px;
+}
+* .modal-template .modal-dialog .modal-content .modal-body .datetime .date-gp {
+  width: 60%;
+}
+* .modal-template .modal-dialog .modal-content .modal-body .datetime .date-gp input {
+  width: 100%;
 }
 * .modal-template .modal-dialog .modal-content .modal-body .code-gp {
   width: 100%;
@@ -2527,7 +2547,7 @@ body .table-default.ellipsis-table {
 body .table-default table,
 body .table-default th,
 body .table-default td {
-  text-align: center;
+  text-align: left;
   border: solid 1px rgba(170, 142, 65, 0.4);
 }
 body .table-default tr {
@@ -2537,7 +2557,7 @@ body .table-default tr:hover {
   background-color: #f8f8f8 !important;
 }
 body .table-default tr th {
-  text-align: center;
+  text-align: left;
   padding: 12px 16px;
   background-color: #d0b66c;
   color: #280101;
@@ -2700,8 +2720,8 @@ body .mb-separate td {
 body .mb-separate tr th {
   background-color: #d0b66c;
   color: #280101;
-  text-align: center;
-  padding: 12px 8px;
+  text-align: left;
+  padding: 12px 16px;
 }
 @media (max-width: 568px) {
   body .mb-separate tr td {
@@ -3580,87 +3600,6 @@ body main .content-type .taxbreak-gp .block.book .bottom button,
 body main .content-type .taxbreak-gp .block.book .bottom .apply {
   background-color: #596b91;
 }
-body main .content-type .taxbreak-gp.v3 .top {
-  padding: 16px 16px;
-}
-body main .content-type .taxbreak-gp.v3 .top h3 {
-  border-bottom: unset !important;
-}
-body main .content-type .taxbreak-gp.v3 .middle button,
-body main .content-type .taxbreak-gp.v3 .middle .apply {
-  border-radius: unset;
-  width: 100%;
-  height: auto;
-  padding: 12px 16px;
-  text-align: center;
-  line-height: unset;
-  font-size: 1.25rem;
-  color: white;
-}
-body main .content-type .taxbreak-gp.v3 .middle button i,
-body main .content-type .taxbreak-gp.v3 .middle .apply i {
-  font-size: 1.25rem;
-  margin-right: 8px;
-}
-body main .content-type .taxbreak-gp.v3 .performance .top {
-  border-top: unset;
-}
-body main .content-type .taxbreak-gp.v3 .performance .top h3 {
-  color: white;
-}
-body main .content-type .taxbreak-gp.v3 .performance button,
-body main .content-type .taxbreak-gp.v3 .performance .apply {
-  background-color: rgba(163, 102, 102, 0.2);
-  color: #933b2a;
-}
-body main .content-type .taxbreak-gp.v3 .exhibition .top {
-  border-top: unset;
-  background-color: #6d7878;
-}
-body main .content-type .taxbreak-gp.v3 .exhibition .top h3 {
-  color: white;
-}
-body main .content-type .taxbreak-gp.v3 .exhibition button,
-body main .content-type .taxbreak-gp.v3 .exhibition .apply {
-  background-color: rgba(109, 120, 120, 0.2);
-  color: #3b5f0c;
-}
-body main .content-type .taxbreak-gp.v3 .screening .top {
-  border-top: unset;
-  background-color: #428079;
-}
-body main .content-type .taxbreak-gp.v3 .screening .top h3 {
-  color: white;
-}
-body main .content-type .taxbreak-gp.v3 .screening button,
-body main .content-type .taxbreak-gp.v3 .screening .apply {
-  background-color: rgba(66, 128, 121, 0.2);
-  color: #30549c;
-}
-body main .content-type .taxbreak-gp.v3 .auction .top {
-  border-top: unset;
-  background-color: #90689c;
-}
-body main .content-type .taxbreak-gp.v3 .auction .top h3 {
-  color: white;
-}
-body main .content-type .taxbreak-gp.v3 .auction button,
-body main .content-type .taxbreak-gp.v3 .auction .apply {
-  background-color: rgba(144, 104, 156, 0.2);
-  color: #744483;
-}
-body main .content-type .taxbreak-gp.v3 .book .top {
-  border-top: unset;
-  background-color: #596b91;
-}
-body main .content-type .taxbreak-gp.v3 .book .top h3 {
-  color: white;
-}
-body main .content-type .taxbreak-gp.v3 .book button,
-body main .content-type .taxbreak-gp.v3 .book .apply {
-  background-color: rgba(89, 107, 145, 0.2);
-  color: #814909;
-}
 body main .content-type .separate-taxation {
   justify-content: center;
 }
@@ -3954,6 +3893,11 @@ body main .content-signup {
 body main .content-signup h2 {
   text-align: center;
 }
+@media (max-width: 568px) {
+  body main .content-signup h2 {
+    padding: 0 16px;
+  }
+}
 body main .content-signup .step {
   width: 100%;
   max-width: 1140px;
@@ -4066,6 +4010,12 @@ body main .content-signup form .info .type-title {
 }
 body main .content-signup form .info .btn-gp button {
   margin-right: 8px;
+}
+@media (max-width: 568px) {
+  body main .content-signup form .info .btn-gp button {
+    width: 100%;
+    margin-bottom: 12px;
+  }
 }
 body main .content-signup form fieldset {
   margin-bottom: 36px;
@@ -4213,6 +4163,9 @@ body main .content-signup table td ul {
   text-align: left;
   font-weight: bold;
 }
+body main .content-signup table td ul:last-of-type {
+  margin-bottom: 0;
+}
 body main .content-signup table td ul li {
   list-style-type: none;
   font-weight: normal;
@@ -4260,11 +4213,22 @@ body main .content-signup table.list-data {
   margin-top: 12px;
 }
 body main .content-signup table.list-data th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
   padding: 12px 16px;
 }
 body main .content-signup table.list-data td,
 body main .content-signup table.list-data th {
   text-align: left;
+}
+@media (max-width: 568px) {
+  body main .content-signup table.list-data td.gp-title::before {
+    color: #88670c;
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+  }
 }
 body main .content-signup table.list-data td .form-gp label {
   font-size: 1rem;

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
-    <title>交易資料通報表(核准)</title>
+    <title>交易資料通報表(非核准)</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
@@ -33,13 +33,13 @@
                     <li>></li>
                     <li><a href="case-manage-separate-taxation.html">案件管理</a></li>
                     <li>></li>
-                    <li><span>交易資料通報表(核准適用範圍)</span></li>
+                    <li><span>交易資料通報表(非核准適用範圍)</span></li>
                 </ul>
             </div>
         </div>
         <!-- 我要申請 -->
         <section class="content-signup">
-            <h2>交易資料通報表(核准適用範圍)</h2>
+            <h2>交易資料通報表(非核准適用範圍)</h2>
             <div class="container">
                 <form class="card">
                     <div class="info">
@@ -65,27 +65,18 @@
                             <thead>
                                 <tr>
                                     <th style="width: 8%;">項次</th>
-                                    <th style="width: 14%;">交易資料類別</th>
-                                    <th style="width: 15%;">文物及藝術品</th>
-                                    <th style="width: 13%;">出賣人</th>
-                                    <th style="width: 13%;">買受人</th>
-                                    <th style="width: 20%;">交易資訊</th>
+                                    <th style="width: 18%;">交易品項名稱</th>
+                                    <th style="width: 18%;">出賣人</th>
+                                    <th style="width: 18%;">買受人</th>
+                                    <th style="width: 21%;">交易資訊</th>
                                     <th style="width: 10%;">功能</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td data-title="項次">1234</td>
-                                    <td data-title="交易資料類別">
-                                        已成交尚未付款
-                                    </td>
-                                    <td data-title="文物及藝術品" class="gp-title">
-                                        <ul>核准編號
-                                            <li>1220201AA003</li>
-                                        </ul>
-                                        <ul>名稱
-                                            <li>靜物2 still life 2</li>
-                                        </ul>
+                                    <td data-title="交易品項名稱">
+                                        靜物2 still life 2
                                     </td>
                                     <td data-title="出賣人" class="gp-title">
                                         <ul>統一編(證)號
@@ -109,9 +100,6 @@
                                         </ul>
                                         <ul>佣金
                                             <li>50,000</li>
-                                        </ul>
-                                        <ul>扣繳稅額
-                                            <li>17,000</li>
                                         </ul>
                                         <ul>給付價款予出賣人日期
                                             <li>112-12-05</li>
@@ -127,16 +115,8 @@
                                 </tr>
                                 <tr>
                                     <td data-title="項次">1234</td>
-                                    <td data-title="交易資料類別">
-                                        已成交尚未付款
-                                    </td>
-                                    <td data-title="文物及藝術品" class="gp-title">
-                                        <ul>核准編號
-                                            <li>1220201AA003</li>
-                                        </ul>
-                                        <ul>名稱
-                                            <li>靜物2 still life 2</li>
-                                        </ul>
+                                    <td data-title="交易品項名稱">
+                                        靜物2 still life 2
                                     </td>
                                     <td data-title="出賣人" class="gp-title">
                                         <ul>統一編(證)號
@@ -160,9 +140,6 @@
                                         </ul>
                                         <ul>佣金
                                             <li>50,000</li>
-                                        </ul>
-                                        <ul>扣繳稅額
-                                            <li>17,000</li>
                                         </ul>
                                         <ul>給付價款予出賣人日期
                                             <li>112-12-05</li>
@@ -207,28 +184,15 @@
                         <div class="modal-body">
                             <form>
                                 <div class="form-gp">
-                                    <label for="art_type">交易資料類別<span class="notice">*</span></label>
-                                    <select name="type" id="art_type" placeholder="請選擇作品類型">
-                                        <option value="list1">已辦理扣繳</option>
-                                        <option value="list2">尚未成交</option>
-                                        <option value="list3">已成交尚未付款</option>
-                                        <option value="list3">出賣人未同意分離課稅且未扣繳</option>
-                                    </select>
-                                </div>
-                                <div class="form-gp">
-                                    <label for="art_name">核准編號<span class="notice">*</span></label>
-                                    <input type="text" name="art_name" id="art_name" placeholder="1220201AA003">
-                                </div>
-                                <div class="form-gp">
-                                    <label for="art_name">作品名稱<span class="notice">*</span></label>
+                                    <label for="art_name">交易品項名稱<span class="notice">*</span></label>
                                     <input type="text" name="art_name" id="art_name" placeholder="請填寫作品名稱">
                                 </div>
                                 <div class="form-gp">
-                                    <label for="sale_ID">出賣人統一編(證)號</label>
+                                    <label for="sale_ID">出賣人統一編(證)號<span class="notice">*</span></label>
                                     <input type="text" name="sale_ID" id="sale_ID" placeholder="請填寫出賣人統一編(證)號">
                                 </div>
                                 <div class="form-gp">
-                                    <label for="sale_name">出賣人姓名</label>
+                                    <label for="sale_name">出賣人姓名<span class="notice">*</span></label>
                                     <input type="text" name="sale_name" id="sale_name" placeholder="請填寫出賣人姓名">
                                 </div>
                                 <div class="form-gp">
@@ -240,19 +204,15 @@
                                     <input type="text" name="buy_name" id="buy_name" placeholder="請填寫買受人姓名">
                                 </div>
                                 <div class="form-gp">
-                                    <label for="art_price">成交價款</label>
+                                    <label for="art_price">成交價款<span class="notice">*</span></label>
                                     <input type="number" name="art_price" id="art_price" placeholder="請填寫成交價款">
                                 </div>
                                 <div class="form-gp">
-                                    <label for="art_commission">佣金</label>
+                                    <label for="art_commission">佣金<span class="notice">*</span></label>
                                     <input type="number" name="art_commission" id="art_commission" placeholder="請填寫佣金">
                                 </div>
-                                <div class="form-gp">
-                                    <label for="art_taxbreak">扣繳稅額</label>
-                                    <input type="number" name="art_taxbreak" id="art_taxbreak" placeholder="請填寫扣繳稅額">
-                                </div>
                                 <div class="form-gp datetime">
-                                    <label for="start-date">給付價款予出賣人日期</label>
+                                    <label for="start-date">給付價款予出賣人日期<span class="notice">*</span></label>
                                     <div class="date-gp date-icon">
                                         <input type="text" class="mb-nokeyboard chinese-date date-icon" id="start-date"
                                             data-toggle="datepicker" placeholder="請選擇日期">
