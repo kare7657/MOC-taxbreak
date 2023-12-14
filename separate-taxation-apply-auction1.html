@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
-    <title>申請分離課稅-展覽</title>
+    <title>申請分離課稅-拍賣</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
@@ -41,14 +41,14 @@
         </div>
         <!-- 我要申請 -->
         <section class="content-signup">
-            <h2>申請展覽分離課稅</h2>
+            <h2>申請拍賣分離課稅</h2>
             <div class="step">
                 <div class="btn-gp">
-                    <a href="separate-taxation-apply-exhibition1.html" class="btn-step active">基本資料</a>
+                    <a href="separate-taxation-apply-auction1.html" class="btn-step active">基本資料</a>
                     <span>></span>
-                    <a href="separate-taxation-apply-exhibition2.html" class="btn-step">附件檔案</a>
+                    <a href="separate-taxation-apply-auction2.html" class="btn-step">附件檔案</a>
                     <span>></span>
-                    <a href="separate-taxation-apply-exhibition3.html" class="btn-step">清冊資料</a>
+                    <a href="separate-taxation-apply-auction3.html" class="btn-step">清冊資料</a>
                     <span>></span>
                     <div class="btn-step">預覽提交</div>
                 </div>
@@ -70,15 +70,15 @@
                         <div class="form-gp choice-btn">
                             <h5>類型<span class="notice">*</span></h5>
                             <div class="type-gp">
-                                <button type="button" class="button-outline active" data-toggle="modal"
-                                    data-target="#modal-notify-exhibition">展覽</button>
                                 <button type="button" class="button-outline" data-toggle="modal"
+                                    data-target="#modal-notify-exhibition">展覽</button>
+                                <button type="button" class="button-outline  active" data-toggle="modal"
                                     data-target="#modal-notify-auction">拍賣</button>
                             </div>
                         </div>
                         <div class="form-gp">
                             <label for="activity_name">活動名稱<span class="notice">*</span></label>
-                            <input type="text" name="activity_name" id="activity_name"  placeholder="票面之活動名稱">
+                            <input type="text" name="activity_name" id="activity_name" placeholder="票面之活動名稱">
                         </div>
                         <div class="form-gp">
                             <label for="activity_purpose">辦理目的<span class="notice">*</span></label>
@@ -89,14 +89,13 @@
                             <textarea name="history" id="activity_content" rows="6"></textarea>
                         </div>
                         <div class="form-gp">
-                            <label for="activity_type">展覽活動類型<span class="notice">*</span></label>
+                            <label for="activity_type">拍賣活動類型<span class="notice">*</span></label>
                             <textarea name="history" id="activity_type" rows="6"></textarea>
                             <ul class="ps">
                                 <li>例如：書畫類、古文物類、現代藝術類或當代藝術類⋯等</li>
                             </ul>
                         </div>
                     </fieldset>
-
                     <fieldset class="mb-0">
                         <h4>申請認可範圍</h4>
                         <div class="place-gp">
@@ -129,14 +128,14 @@
                                     <div class="item">
                                         <label for="start-date">開始日期</label>
                                         <div class="date-gp date-icon">
-                                            <input type="text" class="mb-nokeyboard western-date date-icon"
+                                            <input type="text" class="mb-nokeyboard chinese-date date-icon"
                                                 id="start-date" data-toggle="datepicker" placeholder="請選擇開始日期">
                                         </div>
                                     </div>
                                     <div class="item">
                                         <label for="end-date">結束日期</label>
                                         <div class="date-gp date-icon">
-                                            <input type="text" class="mb-nokeyboard western-date date-icon"
+                                            <input type="text" class="mb-nokeyboard chinese-date date-icon"
                                                 id="end-date" data-toggle="datepicker" placeholder="請選擇結束日期">
                                         </div>
                                     </div>
@@ -161,7 +160,7 @@
                         <input type="button" value="取消" class="outline">
                         <input type="button" value="暫存" class="outline">
                         <input type="button" value="下一步"
-                            onclick="location.href='separate-taxation-apply-exhibition2.html'">
+                            onclick="location.href='separate-taxation-apply-auction2.html'">
                     </div>
                 </form>
             </div>
@@ -715,7 +714,7 @@
             </form>
         </div>
         <!-- modal 條款-->
-        <div class="modal fade modal-template " id="modal-clause-taxBreak" tabindex="-1" role="dialog"
+        <div class="modal fade modal-template" id="modal-clause-taxBreak" tabindex="-1" role="dialog"
             aria-labelledby="modal-clauseLabel" data-backdrop="static" style=" padding-top: 0;">
             <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
                 target="frm_ChangPWD">
@@ -750,7 +749,7 @@
         </div>
         <!-- modal 提示-展覽-->
         <div class="modal fade modal-template " id="modal-notify-exhibition" tabindex="-1" role="dialog"
-            aria-labelledby="modal-notifyLabel2" data-backdrop="static" style=" padding-top: 0;">
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
             <form class="form" name="fm_ChangPWD" id="fm_ChangPWD4" method="post" action="ChangPWD.jsp"
                 target="frm_ChangPWD">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -777,7 +776,7 @@
         </div>
         <!-- modal 提示-拍賣-->
         <div class="modal fade modal-template " id="modal-notify-auction" tabindex="-1" role="dialog"
-            aria-labelledby="modal-notifyLabel4" data-backdrop="static" style=" padding-top: 0;">
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
             <form class="form" name="fm_ChangPWD" id="fm_ChangPWD6" method="post" action="ChangPWD.jsp"
                 target="frm_ChangPWD">
                 <div class="modal-dialog modal-dialog-centered" role="document">

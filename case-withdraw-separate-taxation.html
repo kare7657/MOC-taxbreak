@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>撤回分離課稅-展覽</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- jQuery 日期選擇器-->
+    <link rel="stylesheet" href="scss/jquery-ui-1.10.0.custom.min.css" />
+    <!-- timepicker 時間選擇器-->
+    <link rel="stylesheet" href="scss/timepicker.css" />
+    <!-- select2 -->
+    <link rel="stylesheet" href="scss/select2.min.css" />
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                    <li>></li>
+                    <li><a href="member.html">會員專區</a></li>
+                    <li>></li>
+                    <li><span>撤回分離課稅</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 撤回分離課稅 -->
+        <section class="content-signup">
+            <h2>撤回分離課稅</h2>
+            <div class="container">
+                <form>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        請先確認以下資料是否為需撤回案件，並至底端填寫「案件撤回原因」
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <fieldset disabled class="fieldset-disabled">
+                        <div class="type-title">
+                            <h3>基本資料</h3>
+                        </div>
+                        <div class="form-gp">
+                            <label for="separate-taxation-sample">近期減免稅申請案件選擇</label>
+                            <select name="type" id="separate-taxation-sample">
+                                <option value="list1">項目1</option>
+                                <option value="list2">項目2</option>
+                                <option value="list3">項目3</option>
+                            </select>
+                        </div>
+                        <div class="form-gp">
+                            <label for="activity_name">活動名稱<span class="notice">*</span></label>
+                            <input type="text" name="activity_name" id="activity_name">
+                        </div>
+                        <div class="form-gp">
+                            <label for="activity_purpose">辦理目的<span class="notice">*</span></label>
+                            <textarea name="activity_purpose" id="activity_purpose" rows="6"></textarea>
+                        </div>
+                        <div class="form-gp">
+                            <label for="activity_content">內容簡介<span class="notice">*</span></label>
+                            <textarea name="history" id="activity_content" rows="6"></textarea>
+                        </div>
+                        <div class="form-gp">
+                            <label for="activity_type">展覽活動類型<span class="notice">*</span></label>
+                            <textarea name="history" id="activity_type" rows="6"></textarea>
+                        </div>
+                    </fieldset>
+
+                    <fieldset disabled class="fieldset-disabled">
+                        <h4>申請認可範圍</h4>
+                        <div class="place-gp">
+                            <div class="place-body">
+                                <div class="form-gp">
+                                    <label for="activity_area">活動區域<span class="notice">*</span></label>
+                                    <select class="select2" id="activity_area" disabled>
+                                        <option value="list1">項目1</option>
+                                        <option value="list2">項目2</option>
+                                        <option value="list3">項目3</option>
+                                    </select>
+                                </div>
+                                <div class="form-gp">
+                                    <label for="activity_place">活動地點<span class="notice">*</span></label>
+                                    <select class="select2" id="activity_place" disabled>
+                                        <option value="list1">項目1</option>
+                                        <option value="list2">項目2</option>
+                                        <option value="list3">項目3</option>
+                                    </select>
+                                </div>
+                                <div class="form-gp">
+                                    <label for="place_name">場館名稱</label>
+                                    <select name="type" id="place_name">
+                                        <option value="list1">項目1</option>
+                                        <option value="list2">項目2</option>
+                                        <option value="list3">項目3</option>
+                                    </select>
+                                </div>
+                                <div class="form-gp datetime">
+                                    <div class="item">
+                                        <label for="start-date">開始日期</label>
+                                        <div class="date-gp date-icon">
+                                            <input type="text" class="mb-nokeyboard western-date date-icon"
+                                                id="start-date" data-toggle="datepicker">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <label for="end-date">結束日期</label>
+                                        <div class="date-gp date-icon">
+                                            <input type="text" class="mb-nokeyboard western-date date-icon"
+                                                id="end-date" data-toggle="datepicker">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-gp">
+                                    <label for="session">場次</label>
+                                    <input type="number" name="session" id="session">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset disabled class="fieldset-disabled">
+                        <div class="type-title">
+                            <h3>附件檔案</h3>
+                        </div>
+                        <div class="form-gp">
+                            <label for="exhibition_record">近兩年展覽記錄<span class="notice">*</span></label>
+                            <textarea name="exhibition_record" id="exhibition_record" rows="6"></textarea>
+                            <a href="" download="" class="download-file"><i class="fas fa-paperclip"></i>檔案下載</a>
+                        </div>
+                        <div class="form-gp">
+                            <label>展品清冊<span class="notice">*</span></label>
+                            <a href="" download="" class="download-file"><i class="fas fa-paperclip"></i>檔案下載</a>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="type-title">
+                            <h3>清冊資料</h3>
+                        </div>
+                        <a href="separate-taxation-list-data.html" target="_blank" class="btn"><i
+                                class="fas fa-eye"></i>檢視清冊資料</a>
+                        <a href="" target="_blank" class="btn"><i class="fas fa-print"></i>列印清冊資料</a>
+                        <a href="" target="_blank" class="btn" download><i class="fas fa-paperclip"></i>下載清冊資料</a>
+                    </fieldset>
+                    <fieldset>
+                        <div class="type-title">
+                            <h3>文化部承辦人資訊</h3>
+                        </div>
+                        <p>承辦人：林虹汝</p>
+                        <p>電話：02-85126000 #6547</p>
+                        <p>信箱：hungru@moc.gov.tw</p>
+                    </fieldset>
+                    <fieldset>
+                        <div class="type-title">
+                            <h3>申請撤回</h3>
+                        </div>
+                        <div class="form-gp">
+                            <label for="withdraw_reson">案件撤回原因<span class="notice">*</span></label>
+                            <textarea name="history" id="withdraw_reson" rows="6" placeholder="test"></textarea>
+                        </div>
+                    </fieldset>
+                    <div class="btn-tool">
+                        <input type="button" value="取消" class="outline" onclick="location.href='member.html'">
+                        <input type="submit" value="送出申請">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery 日期選擇器-->
+    <script src="js/jquery-ui.1.10.2.min.js"></script>
+    <!-- timepicker 時間選擇器-->
+    <script src="js/timepicker.min.js"></script>
+    <!-- InputMask 限制輸入格式-->
+    <script src="js/moment.min.js"></script>
+    <script src="js/jquery.inputmask.bundle.js"></script>
+    <!-- select2 -->
+    <script src="js/select2.full.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+    <!-- modal -->
+    <script>
+        //進頁開啟條款
+        $(window).ready(() => {
+            $('#modal-clause-taxBreak').modal('show');
+        })
+    </script>
+
+    <!-- select2 -->
+    <script>
+        $(function () {
+            //Initialize Elements
+            $('.select2').select2()
+
+        })
+    </script>
+
+    <!-- JQ datepicker -->
+    <script>
+        $(document).ready(function () {
+            $(".chinese-date").datepicker({
+                changeYear: true,
+                changeMonth: true,
+                currentText: "Now",
+                dateFormat: "Rmmdd",
+                showButtonPanel: false,
+                yearRange: "1930:2060",
+            });
+            $(".western-date").datepicker({
+                changeYear: true,
+                changeMonth: true,
+                currentText: "Now",
+                dateFormat: "yy-mm-dd",
+                showButtonPanel: false,
+                yearRange: "1930:2060",
+            });
+        });
+        //將.datepicker改成民國年與西元年小套件同時存在
+        $(function (datepicker) {
+            //先設定預設西元年的datepicker必要功能
+            var old_generateMonthYearHeader = $.datepicker._generateMonthYearHeader;
+            var old_formatDate = $.datepicker.formatDate;
+            var old_parseDate = $.datepicker.parseDate;
+
+            $.extend($.datepicker, {
+                //選擇日期之後的value
+                formatDate: function (format, date, settings) {
+                    var oformatDate = old_formatDate(format, date, settings);
+
+                    if (format == 'Rmmdd') {
+                        var d = date.getDate();
+                        var m = date.getMonth() + 1;
+                        var y = date.getFullYear();
+                        var fm = function (v) {
+                            return (v < 10 ? '0' : '') + v;
+                        };
+
+                        if ((y - 1911) >= 100) { y = y - 1911; } else { y = "0" + String(y - 1911); }
+                        // 日期顯示格式
+                        return (y) + '/' + fm(m) + '/' + fm(d);
+                    }
+                    return oformatDate;
+
+                },
+                //點取已存在日期的parse
+                parseDate: function (format, value, settings) {
+                    var v = new String(value);
+                    var Y, M, D;
+                    if (format == 'Rmmdd') {
+                        if (v.length == 7) {/*1001215*/
+                            Y = v.substring(0, 3) - 0 + 1911;
+                            M = v.substring(3, 5) - 0 - 1;
+                            D = v.substring(5, 7) - 0;
+                            return (new Date(Y, M, D));
+                        } else if (v.length == 6) {/*0981215*/
+
+                            Y = "0" + String(v.substring(0, 2) - 0 + 1911);
+                            M = v.substring(2, 4) - 0 - 1;
+                            D = v.substring(4, 6) - 0;
+                            return (new Date(Y, M, D));
+                        }
+                        return (new Date());
+                    } else {
+                        var oparseDate = old_parseDate.apply(this, [format, value, settings]);
+                        return (oparseDate);
+                    }
+
+                },
+                //改變小工具的年-民國
+                _generateMonthYearHeader: function (inst, drawMonth, drawYear, minDate, maxDate, secondary, monthNames, monthNamesShort) {
+                    var dateFormat = this._get(inst, "dateFormat");
+                    var htmlYearMonth = old_generateMonthYearHeader.apply(this, [inst, drawMonth, drawYear, minDate, maxDate, secondary, monthNames, monthNamesShort]);
+                    if (dateFormat == 'Rmmdd') {
+                        if ($(htmlYearMonth).find(".ui-datepicker-year").length > 0) {
+                            htmlYearMonth = $(htmlYearMonth).find(".ui-datepicker-year").find("option").each(function (i, e) {
+                                if (Number(e.value) - 1911 > 0) $(e).text("民國" + (Number(e.innerText) - 1911) + "年");
+                            }).end().end().get(0).outerHTML;
+                        }
+                    }
+                    return htmlYearMonth;
+                },
+
+            });
+
+            // 中文
+            $.datepicker.regional["zh-TW"] = {
+                monthNames: ["一月", "二月", "三月", "四月", "五月", "六月",
+                    "七月", "八月", "九月", "十月", "十一月", "十二月"],
+                monthNamesShort: ["一月", "二月", "三月", "四月", "五月", "六月",
+                    "七月", "八月", "九月", "十月", "十一月", "十二月"],
+                dayNames: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+                dayNamesShort: ["週日", "週一", "週二", "週三", "週四", "週五", "週六"],
+                dayNamesMin: ["日", "一", "二", "三", "四", "五", "六"],
+                weekHeader: "週",
+                dateFormat: "yyy/mm/dd",
+            };
+            $.datepicker.setDefaults($.datepicker.regional["zh-TW"]);
+
+            return datepicker.regional["zh-TW"];
+
+        });
+
+        // 手機隱藏鍵盤
+        $(".mb-nokeyboard").focus(function () {
+            document.activeElement.blur();
+        });
+    </script>
+
+    <!-- input mask 限制填入格式 -->
+    <script>
+        $(document).ready(function () {
+            $(".western-date").inputmask({ alias: "datetime", inputFormat: "yyyy/mm/dd" });
+            // $(".chinese-date").inputmask({ alias: "datetime", inputFormat: "yyy/mm/dd" });
+        });
+    </script>
+
+    <!-- timepicker 時間選擇器-->
+    <script>
+        $(function () {
+            $('.bs-timepicker').timepicker();
+        });
+    </script>
+</body>
+
+</html>

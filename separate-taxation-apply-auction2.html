@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>申請分離課稅-拍賣</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <main  class="bgc-gray">
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                    <li>></li>
+                    <li><a href="separate-taxation.html">申請分離課稅</a></li>
+                    <li>></li>
+                    <li><span>我要申請</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 我要申請 -->
+        <section class="content-signup">
+            <h2>申請拍賣分離課稅</h2>
+            <div class="step">
+                <div class="btn-gp">
+                    <a href="separate-taxation-apply-auction1.html" class="btn-step">基本資料</a>
+                    <span>></span>
+                    <a href="separate-taxation-apply-auction2.html" class="btn-step active">附件檔案</a>
+                    <span>></span>
+                    <a href="separate-taxation-apply-auction3.html" class="btn-step">清冊資料</a>
+                    <span>></span>
+                    <div class="btn-step">預覽提交</div>
+                </div>
+            </div>
+            <div class="container">
+                <form class="card">
+                    <fieldset>
+                        <div class="type-title">
+                            <h3>附件檔案</h3>
+                        </div>
+                        <div class="form-gp">
+                            <div class="label-withButton">
+                                <label for="exhibition_record">近兩年拍賣記錄<span class="notice">*</span></label>
+                                <a href="" class="download-sample" download=""><i class="fas fa-paperclip"></i>範本下載</a>
+                            </div>
+                            <textarea name="exhibition_record" id="exhibition_record" rows="6"></textarea>
+                        </div>
+                        <div class="form-gp">
+                            <div class="file-upload">
+                                <input type="button" id="file" value="檔案上傳">
+                                <span>文化藝術事業分離課稅暨辦理拍賣或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <ul class="ps">
+                                <li>只接受指定格式（pdf、png、jpg、jpeg、bmp）</li>
+                                <li>檔案請小於 20 MB</li>
+                            </ul>
+                        </div>
+                        <div class="form-gp">
+                            <div class="label-withButton">
+                                <label for="exhibition_list">拍品清冊<span class="notice">*</span></label>
+                                <a href="" class="download-sample" download=""><i class="fas fa-paperclip"></i>範本下載</a>
+                            </div>
+                            <!-- <input type="file" id="file3"> -->
+                            <div class="file-upload">
+                                <input type="button" id="exhibition_list" value="檔案上傳">
+                                <span>文化藝術事業分離課稅暨辦理拍賣或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <ul class="ps">
+                                <li>只接受指定格式（xls、xlsx）</li>
+                                <li>檔案請小於 20 MB</li>
+                            </ul>
+                        </div>
+                    </fieldset>
+
+                    <div class="btn-tool">
+                        <input type="button" value="取消" class="outline">
+                        <input type="button" value="暫存" class="outline">
+                        <input type="button" value="上一步" class="outline"
+                            onclick="location.href='separate-taxation-apply-auction1.html'">
+                        <input type="button" value="下一步"
+                            onclick="location.href='separate-taxation-apply-auction3.html'">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+</body>
+
+</html>
