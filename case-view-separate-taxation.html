@@ -55,93 +55,82 @@
                             <h3>基本資料</h3>
                         </div>
                         <div class="form-gp">
-                            <label for="separate-taxation-sample">近期減免稅申請案件選擇</label>
-                            <select name="type" id="separate-taxation-sample">
+                            <label for="activity_name">活動名稱<span class="notice">*</span></label>
+                            <input type="text" name="activity_name" id="activity_name" placeholder="test">
+                        </div>
+                        <div class="form-gp">
+                            <label for="activity_purpose">辦理目的<span class="notice">*</span></label>
+                            <textarea name="activity_purpose" id="activity_purpose" rows="6" placeholder="test"></textarea>
+                        </div>
+                        <div class="form-gp">
+                            <label for="activity_content">內容簡介<span class="notice">*</span></label>
+                            <textarea name="history" id="activity_content" rows="6" placeholder="test"></textarea>
+                        </div>
+                        <div class="form-gp">
+                            <label for="activity_type">展覽活動類型<span class="notice">*</span></label>
+                            <textarea name="history" id="activity_type" rows="6" placeholder="test"></textarea>
+                        </div>
+                        <div class="form-gp">
+                            <label for="activity_area">活動區域<span class="notice">*</span></label>
+                            <select class="select2" id="activity_area" disabled>
                                 <option value="list1">項目1</option>
                                 <option value="list2">項目2</option>
                                 <option value="list3">項目3</option>
                             </select>
                         </div>
                         <div class="form-gp">
-                            <label for="activity_name">活動名稱<span class="notice">*</span></label>
-                            <input type="text" name="activity_name" id="activity_name">
+                            <label for="activity_place">活動地點<span class="notice">*</span></label>
+                            <select class="select2" id="activity_place" disabled>
+                                <option value="list1">項目1</option>
+                                <option value="list2">項目2</option>
+                                <option value="list3">項目3</option>
+                            </select>
                         </div>
                         <div class="form-gp">
-                            <label for="activity_purpose">辦理目的<span class="notice">*</span></label>
-                            <textarea name="activity_purpose" id="activity_purpose" rows="6"></textarea>
+                            <label for="place_name">場館名稱</label>
+                            <select name="type" id="place_name">
+                                <option value="list1">項目1</option>
+                                <option value="list2">項目2</option>
+                                <option value="list3">項目3</option>
+                            </select>
                         </div>
-                        <div class="form-gp">
-                            <label for="activity_content">內容簡介<span class="notice">*</span></label>
-                            <textarea name="history" id="activity_content" rows="6"></textarea>
-                        </div>
-                        <div class="form-gp">
-                            <label for="activity_type">展覽活動類型<span class="notice">*</span></label>
-                            <textarea name="history" id="activity_type" rows="6"></textarea>
-                        </div>
-                    </fieldset>
-
-                    <fieldset disabled class="fieldset-disabled">
-                        <h4>申請認可範圍</h4>
-                        <div class="place-gp">
-                            <div class="place-body">
-                                <div class="form-gp">
-                                    <label for="activity_area">活動區域<span class="notice">*</span></label>
-                                    <select class="select2" id="activity_area" disabled>
-                                        <option value="list1">項目1</option>
-                                        <option value="list2">項目2</option>
-                                        <option value="list3">項目3</option>
-                                    </select>
+                        <div class="form-gp datetime">
+                            <div class="item">
+                                <label for="start-date">開始日期</label>
+                                <div class="date-gp date-icon">
+                                    <input type="text" class="mb-nokeyboard western-date date-icon"
+                                        id="start-date" data-toggle="datepicker"  placeholder="2023-09-01">
                                 </div>
-                                <div class="form-gp">
-                                    <label for="activity_place">活動地點<span class="notice">*</span></label>
-                                    <select class="select2" id="activity_place" disabled>
-                                        <option value="list1">項目1</option>
-                                        <option value="list2">項目2</option>
-                                        <option value="list3">項目3</option>
-                                    </select>
-                                </div>
-                                <div class="form-gp">
-                                    <label for="place_name">場館名稱</label>
-                                    <select name="type" id="place_name">
-                                        <option value="list1">項目1</option>
-                                        <option value="list2">項目2</option>
-                                        <option value="list3">項目3</option>
-                                    </select>
-                                </div>
-                                <div class="form-gp datetime">
-                                    <div class="item">
-                                        <label for="start-date">開始日期</label>
-                                        <div class="date-gp date-icon">
-                                            <input type="text" class="mb-nokeyboard western-date date-icon"
-                                                id="start-date" data-toggle="datepicker">
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <label for="end-date">結束日期</label>
-                                        <div class="date-gp date-icon">
-                                            <input type="text" class="mb-nokeyboard western-date date-icon"
-                                                id="end-date" data-toggle="datepicker">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-gp">
-                                    <label for="session">場次</label>
-                                    <input type="number" name="session" id="session">
+                            </div>
+                            <div class="item">
+                                <label for="end-date">結束日期</label>
+                                <div class="date-gp date-icon">
+                                    <input type="text" class="mb-nokeyboard western-date date-icon"
+                                        id="end-date" data-toggle="datepicker"  placeholder="2023-10-25">
                                 </div>
                             </div>
                         </div>
+                        <div class="form-gp">
+                            <label for="session">場次</label>
+                            <input type="number" name="session" id="session"  placeholder="20">
+                        </div>
                     </fieldset>
+
                     <fieldset disabled class="fieldset-disabled">
                         <div class="type-title">
                             <h3>附件檔案</h3>
                         </div>
                         <div class="form-gp">
                             <label for="exhibition_record">近兩年展覽記錄<span class="notice">*</span></label>
-                            <textarea name="exhibition_record" id="exhibition_record" rows="6"></textarea>
+                            <textarea name="exhibition_record" id="exhibition_record" rows="6"  placeholder="test"></textarea>
                             <a href="" download="" class="download-file"><i class="fas fa-paperclip"></i>檔案下載</a>
                         </div>
                         <div class="form-gp">
                             <label>展品清冊<span class="notice">*</span></label>
+                            <a href="" download="" class="download-file"><i class="fas fa-paperclip"></i>檔案下載</a>
+                        </div>
+                        <div class="form-gp">
+                            <label>承諾書<span class="notice">*</span></label>
                             <a href="" download="" class="download-file"><i class="fas fa-paperclip"></i>檔案下載</a>
                         </div>
                     </fieldset>

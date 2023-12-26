@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
-    <title>撤回分離課稅-展覽</title>
+    <title>申請分離課稅-拍賣</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
@@ -25,7 +25,7 @@
     <!-- navbar -->
     <header id="header"></header>
 
-    <main>
+    <main class="bgc-gray">
         <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
         <!-- breadcrumb -->
         <div class="breadcrumb">
@@ -33,106 +33,120 @@
                 <ul>
                     <li><a href="index.html"><i class="fas fa-home"></i></a></li>
                     <li>></li>
-                    <li><a href="member.html">會員專區</a></li>
+                    <li><a href="separate-taxation.html">申請分離課稅</a></li>
                     <li>></li>
-                    <li><span>撤回分離課稅</span></li>
+                    <li><span>我要申請</span></li>
                 </ul>
             </div>
         </div>
-        <!-- 撤回分離課稅 -->
+        <!-- 我要申請 -->
         <section class="content-signup">
-            <h2>撤回分離課稅</h2>
+            <h2>申請拍賣分離課稅</h2>
+            <div class="step">
+                <div class="btn-gp">
+                    <a href="separate-taxation-apply-auction1.html" class="btn-step">基本資料</a>
+                    <span>></span>
+                    <a href="separate-taxation-apply-auction2.html" class="btn-step">附件檔案</a>
+                    <span>></span>
+                    <a href="separate-taxation-apply-auction3.html" class="btn-step">清冊資料</a>
+                    <span>></span>
+                    <div class="btn-step active">預覽提交</div>
+                </div>
+            </div>
             <div class="container">
-                <form>
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        請先確認以下資料是否為需撤回案件，並至底端填寫「案件撤回原因」
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
+                <form class="card">
                     <fieldset disabled class="fieldset-disabled">
                         <div class="type-title">
                             <h3>基本資料</h3>
                         </div>
                         <div class="form-gp">
+                            <label for="separate-taxation-sample">近期減免稅申請案件選擇</label>
+                            <select name="type" id="separate-taxation-sample">
+                                <option value="list1">項目1</option>
+                                <option value="list2">項目2</option>
+                                <option value="list3">項目3</option>
+                            </select>
+                        </div>
+                        <div class="form-gp">
                             <label for="activity_name">活動名稱<span class="notice">*</span></label>
-                            <input type="text" name="activity_name" id="activity_name" placeholder="test">
+                            <input type="text" name="activity_name" id="activity_name">
                         </div>
                         <div class="form-gp">
                             <label for="activity_purpose">辦理目的<span class="notice">*</span></label>
-                            <textarea name="activity_purpose" id="activity_purpose" rows="6"
-                                placeholder="test"></textarea>
+                            <textarea name="activity_purpose" id="activity_purpose" rows="6"></textarea>
                         </div>
                         <div class="form-gp">
                             <label for="activity_content">內容簡介<span class="notice">*</span></label>
-                            <textarea name="history" id="activity_content" rows="6" placeholder="test"></textarea>
+                            <textarea name="history" id="activity_content" rows="6"></textarea>
                         </div>
                         <div class="form-gp">
-                            <label for="activity_type">展覽活動類型<span class="notice">*</span></label>
-                            <textarea name="history" id="activity_type" rows="6" placeholder="test"></textarea>
-                        </div>
-                        <div class="form-gp">
-                            <label for="activity_area">活動區域<span class="notice">*</span></label>
-                            <select class="select2" id="activity_area" disabled>
-                                <option value="list1">項目1</option>
-                                <option value="list2">項目2</option>
-                                <option value="list3">項目3</option>
-                            </select>
-                        </div>
-                        <div class="form-gp">
-                            <label for="activity_place">活動地點<span class="notice">*</span></label>
-                            <select class="select2" id="activity_place" disabled>
-                                <option value="list1">項目1</option>
-                                <option value="list2">項目2</option>
-                                <option value="list3">項目3</option>
-                            </select>
-                        </div>
-                        <div class="form-gp">
-                            <label for="place_name">場館名稱</label>
-                            <select name="type" id="place_name">
-                                <option value="list1">項目1</option>
-                                <option value="list2">項目2</option>
-                                <option value="list3">項目3</option>
-                            </select>
-                        </div>
-                        <div class="form-gp datetime">
-                            <div class="item">
-                                <label for="start-date">開始日期</label>
-                                <div class="date-gp date-icon">
-                                    <input type="text" class="mb-nokeyboard western-date date-icon" id="start-date"
-                                        data-toggle="datepicker" placeholder="2023-09-01">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <label for="end-date">結束日期</label>
-                                <div class="date-gp date-icon">
-                                    <input type="text" class="mb-nokeyboard western-date date-icon" id="end-date"
-                                        data-toggle="datepicker" placeholder="2023-10-25">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-gp">
-                            <label for="session">場次</label>
-                            <input type="number" name="session" id="session" placeholder="20">
+                            <label for="activity_type">拍賣活動類型<span class="notice">*</span></label>
+                            <textarea name="history" id="activity_type" rows="6"></textarea>
                         </div>
                     </fieldset>
 
+                    <fieldset disabled class="fieldset-disabled">
+                        <h4>申請認可範圍</h4>
+                        <div class="place-gp">
+                            <div class="place-body">
+                                <div class="form-gp">
+                                    <label for="activity_area">活動區域<span class="notice">*</span></label>
+                                    <select class="select2" id="activity_area" disabled>
+                                        <option value="list1">項目1</option>
+                                        <option value="list2">項目2</option>
+                                        <option value="list3">項目3</option>
+                                    </select>
+                                </div>
+                                <div class="form-gp">
+                                    <label for="activity_place">活動地點<span class="notice">*</span></label>
+                                    <select class="select2" id="activity_place" disabled>
+                                        <option value="list1">項目1</option>
+                                        <option value="list2">項目2</option>
+                                        <option value="list3">項目3</option>
+                                    </select>
+                                </div>
+                                <div class="form-gp">
+                                    <label for="place_name">場館名稱</label>
+                                    <select name="type" id="place_name">
+                                        <option value="list1">項目1</option>
+                                        <option value="list2">項目2</option>
+                                        <option value="list3">項目3</option>
+                                    </select>
+                                </div>
+                                <div class="form-gp datetime">
+                                    <div class="item">
+                                        <label for="start-date">開始日期</label>
+                                        <div class="date-gp date-icon">
+                                            <input type="text" class="mb-nokeyboard western-date date-icon"
+                                                id="start-date" data-toggle="datepicker">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <label for="end-date">結束日期</label>
+                                        <div class="date-gp date-icon">
+                                            <input type="text" class="mb-nokeyboard western-date date-icon"
+                                                id="end-date" data-toggle="datepicker">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-gp">
+                                    <label for="session">場次</label>
+                                    <input type="number" name="session" id="session">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
                     <fieldset disabled class="fieldset-disabled">
                         <div class="type-title">
                             <h3>附件檔案</h3>
                         </div>
                         <div class="form-gp">
-                            <label for="exhibition_record">近兩年展覽記錄<span class="notice">*</span></label>
-                            <textarea name="exhibition_record" id="exhibition_record" rows="6"
-                                placeholder="test"></textarea>
+                            <label for="exhibition_record">近兩年拍賣記錄<span class="notice">*</span></label>
+                            <textarea name="exhibition_record" id="exhibition_record" rows="6"></textarea>
                             <a href="" download="" class="download-file"><i class="fas fa-paperclip"></i>檔案下載</a>
                         </div>
                         <div class="form-gp">
-                            <label>展品清冊<span class="notice">*</span></label>
-                            <a href="" download="" class="download-file"><i class="fas fa-paperclip"></i>檔案下載</a>
-                        </div>
-                        <div class="form-gp">
-                            <label>承諾書<span class="notice">*</span></label>
+                            <label>拍品清冊<span class="notice">*</span></label>
                             <a href="" download="" class="download-file"><i class="fas fa-paperclip"></i>檔案下載</a>
                         </div>
                     </fieldset>
@@ -153,18 +167,21 @@
                         <p>電話：02-85126000 #6547</p>
                         <p>信箱：hungru@moc.gov.tw</p>
                     </fieldset>
-                    <fieldset>
-                        <div class="type-title">
-                            <h3>申請撤回</h3>
+                    <!-- <div class="form-gp choice">
+                        <div class="item">
+                            <input type="checkbox" value="" id="private-agree">
+                            <label for="private-agree">
+                                <span>我同意</span> <a href="#" target="_blank" data-toggle="modal"
+                                    data-target="#modal-clause-taxBreak">線上申請同意條款</a><span class="notice">*</span>
+                            </label>
                         </div>
-                        <div class="form-gp">
-                            <label for="withdraw_reson">案件撤回原因<span class="notice">*</span></label>
-                            <textarea name="history" id="withdraw_reson" rows="6" placeholder="test"></textarea>
-                        </div>
-                    </fieldset>
+                    </div> -->
                     <div class="btn-tool">
-                        <input type="button" value="取消" class="outline" onclick="location.href='member.html'">
-                        <input type="submit" value="送出申請">
+                        <input type="button" value="取消" class="outline">
+                        <input type="button" value="暫存" class="outline">
+                        <input type="button" value="上一步" class="outline"
+                            onclick="location.href='separate-taxation-apply-auction3.html'">
+                        <input type="button" value="送出申請">
                     </div>
                 </form>
             </div>

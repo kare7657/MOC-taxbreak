@@ -1970,7 +1970,7 @@ body form .form-gp .file-upload input[type=button] {
   color: #280101;
   border: solid 1px #aa8e41;
   margin: 0;
-  margin-right: 12px;
+  margin-right: 8px;
 }
 @media (max-width: 568px) {
   body form .form-gp .file-upload input[type=button] {
@@ -1992,6 +1992,10 @@ body form .form-gp .file-upload p {
   padding: 0;
   margin: 0;
   color: #595757;
+}
+body form .form-gp .file-upload .notice {
+  font-size: 1.25rem;
+  margin-right: 4px !important;
 }
 body form .form-gp .btn-gp {
   width: 100%;

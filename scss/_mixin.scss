@@ -1977,7 +1977,7 @@
                     color: $primary-dark;
                     border: solid 1px $primary-tint;
                     margin: 0;
-                    margin-right: $m-XS;
+                    margin-right: $p-XXS;
                     @include mobile-L() {
                         width: 100%;
                         margin-bottom: $m-XS;
@@ -1997,6 +1997,10 @@
                     padding: 0;
                     margin: 0;
                     color: $text;
+                }
+                .notice{
+                    font-size: $size-h5;
+                    margin-right: $m-XXS !important;
                 }
             }
             .btn-gp {

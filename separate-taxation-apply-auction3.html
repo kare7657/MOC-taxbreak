@@ -55,8 +55,8 @@
                         </div>
                         <div class="form-gp">
                             <div class="file-upload">
-                                <input type="button" id="file" value="批次上傳拍品圖片"  data-toggle="modal"
-                                data-target="#modal-batch-upload">
+                                <input type="button" id="file" value="批次上傳拍品圖片" data-toggle="modal"
+                                    data-target="#modal-batch-upload">
                                 <span>照片.zip</span>
                             </div>
                             <ul class="ps">
@@ -182,7 +182,7 @@
         <!-- modal 上傳-->
         <div class="modal fade modal-template " id="modal-upload" tabindex="-1" role="dialog"
             aria-labelledby="modal-uploadLabel" data-backdrop="static" style=" padding-top: 0;">
-            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD3" method="post" action="ChangPWD.jsp"
                 target="frm_ChangPWD">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -198,8 +198,8 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
-                            <button type="submit" name="go" id="go2">確認</button>
+                            <button type="button" name="cancel" id="cancel3" data-dismiss="modal">取消</button>
+                            <button type="submit" name="go" id="go3">確認</button>
 
                         </div>
                     </div>
@@ -221,14 +221,14 @@
                             <h2 class="modal-title" id="modal-formLabel">編輯清冊內容</h2>
                         </div>
                         <div class="modal-body">
-                            <form>
+
                                 <div class="form-gp">
                                     <label for="art_number">序號<span class="notice">*</span></label>
                                     <input type="text" name="art_number" id="art_number" placeholder="請填寫序號">
                                 </div>
                                 <div class="form-gp">
                                     <label for="art_type">作品類型<span class="notice">*</span></label>
-                                    <select name="type" id="art_type" placeholder="請選擇作品類型">
+                                    <select name="type" id="art_type">
                                         <option value="list1">文物</option>
                                         <option value="list2">畫作</option>
                                         <option value="list3">版畫</option>
@@ -285,7 +285,7 @@
                                 <div class="form-gp">
                                     <label for="art_file">佐證資料<span class="notice">*</span></label>
                                     <div class="file-upload">
-                                        <input type="file" id="file1" value="檔案上傳" multiple>
+                                        <input type="file" id="art_file" multiple>
                                         <!-- <input type="button" id="file" value="檔案上傳">
                                         <span>3個檔案</span> -->
                                         <ul class="ps">
@@ -321,11 +321,10 @@
                                         placeholder="如：作品來源、款識/鈐印、拍賣、圖錄、版次別/總版次等"></textarea>
                                 </div>
 
-                            </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
-                            <button type="submit" name="go" id="go3">確認</button>
+                            <button type="button" name="cancel" id="cancel5" data-dismiss="modal">取消</button>
+                            <button type="submit" name="go" id="go5">確認</button>
 
                         </div>
                     </div>

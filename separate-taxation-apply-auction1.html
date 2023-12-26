@@ -95,56 +95,49 @@
                                 <li>例如：書畫類、古文物類、現代藝術類或當代藝術類⋯等</li>
                             </ul>
                         </div>
-                    </fieldset>
-                    <fieldset class="mb-0">
-                        <h4>申請認可範圍</h4>
-                        <div class="place-gp">
-                            <div class="place-body">
-                                <div class="form-gp">
-                                    <label for="activity_area">活動區域<span class="notice">*</span></label>
-                                    <select class="select2" id="activity_area">
-                                        <option value="list1">選擇區域</option>
-                                        <option value="list2">項目2</option>
-                                        <option value="list3">項目3</option>
-                                    </select>
-                                </div>
-                                <div class="form-gp">
-                                    <label for="activity_place">活動地點<span class="notice">*</span></label>
-                                    <select class="select2" id="activity_place">
-                                        <option value="list1">請先選擇活動區域</option>
-                                        <option value="list2">項目2</option>
-                                        <option value="list3">項目3</option>
-                                    </select>
-                                </div>
-                                <div class="form-gp">
-                                    <label for="place_name">場館名稱</label>
-                                    <select name="type" id="place_name">
-                                        <option value="list1">請先選擇活動地點</option>
-                                        <option value="list2">項目2</option>
-                                        <option value="list3">項目3</option>
-                                    </select>
-                                </div>
-                                <div class="form-gp datetime">
-                                    <div class="item">
-                                        <label for="start-date">開始日期</label>
-                                        <div class="date-gp date-icon">
-                                            <input type="text" class="mb-nokeyboard chinese-date date-icon"
-                                                id="start-date" data-toggle="datepicker" placeholder="請選擇開始日期">
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <label for="end-date">結束日期</label>
-                                        <div class="date-gp date-icon">
-                                            <input type="text" class="mb-nokeyboard chinese-date date-icon"
-                                                id="end-date" data-toggle="datepicker" placeholder="請選擇結束日期">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-gp">
-                                    <label for="session">場次</label>
-                                    <input type="number" name="session" id="session" placeholder="場次數量">
+                        <div class="form-gp">
+                            <label for="activity_area">活動區域<span class="notice">*</span></label>
+                            <select class="select2" id="activity_area">
+                                <option value="list1">選擇區域</option>
+                                <option value="list2">項目2</option>
+                                <option value="list3">項目3</option>
+                            </select>
+                        </div>
+                        <div class="form-gp">
+                            <label for="activity_place">活動地點<span class="notice">*</span></label>
+                            <select class="select2" id="activity_place">
+                                <option value="list1">請先選擇活動區域</option>
+                                <option value="list2">項目2</option>
+                                <option value="list3">項目3</option>
+                            </select>
+                        </div>
+                        <div class="form-gp">
+                            <label for="place_name">場館名稱</label>
+                            <select name="type" id="place_name">
+                                <option value="list1">請先選擇活動地點</option>
+                                <option value="list2">項目2</option>
+                                <option value="list3">項目3</option>
+                            </select>
+                        </div>
+                        <div class="form-gp datetime">
+                            <div class="item">
+                                <label for="start-date">開始日期</label>
+                                <div class="date-gp date-icon">
+                                    <input type="text" class="mb-nokeyboard chinese-date date-icon"
+                                        id="start-date" data-toggle="datepicker" placeholder="請選擇開始日期">
                                 </div>
                             </div>
+                            <div class="item">
+                                <label for="end-date">結束日期</label>
+                                <div class="date-gp date-icon">
+                                    <input type="text" class="mb-nokeyboard chinese-date date-icon"
+                                        id="end-date" data-toggle="datepicker" placeholder="請選擇結束日期">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <label for="session">場次</label>
+                            <input type="number" name="session" id="session" placeholder="場次數量">
                         </div>
                     </fieldset>
                     <!-- <div class="form-gp choice">
@@ -749,7 +742,7 @@
         </div>
         <!-- modal 提示-展覽-->
         <div class="modal fade modal-template " id="modal-notify-exhibition" tabindex="-1" role="dialog"
-            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            aria-labelledby="modal-notifyLabel2" data-backdrop="static" style=" padding-top: 0;">
             <form class="form" name="fm_ChangPWD" id="fm_ChangPWD4" method="post" action="ChangPWD.jsp"
                 target="frm_ChangPWD">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -776,7 +769,7 @@
         </div>
         <!-- modal 提示-拍賣-->
         <div class="modal fade modal-template " id="modal-notify-auction" tabindex="-1" role="dialog"
-            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            aria-labelledby="modal-notifyLabelˇ" data-backdrop="static" style=" padding-top: 0;">
             <form class="form" name="fm_ChangPWD" id="fm_ChangPWD6" method="post" action="ChangPWD.jsp"
                 target="frm_ChangPWD">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -785,7 +778,7 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <h2 class="modal-title" id="modal-notifyLabel4">系統通知</h2>
+                            <h2 class="modal-title" id="modal-notifyLabelˇ">系統通知</h2>
                         </div>
                         <div class="modal-body">
                             <div class="notify-gp">
