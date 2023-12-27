@@ -4245,6 +4245,14 @@ body main .content-signup table.list-data td .function {
 body main .content-signup table.list-data td .function a.link {
   margin-right: 0 !important;
 }
+body main .content-signup table.list-data td ul li:first-of-type {
+  font-weight: bold;
+}
+@media (max-width: 568px) {
+  body main .content-signup table.list-data td ul li:first-of-type {
+    color: black;
+  }
+}
 body main .content-sign-up-success .container {
   height: inherit;
   text-align: center;

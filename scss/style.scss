@@ -1181,7 +1181,15 @@ body {
                                 margin-right: 0 !important;
                             }
                         }
-                       
+                        ul{
+                            li:first-of-type{
+                                font-weight: bold;
+                                @include mobile-L{
+                                    color: black;
+                                }
+                            }
+                        }
+
                     }
                 }
             }

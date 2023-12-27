@@ -80,40 +80,50 @@
                                         已成交尚未付款
                                     </td>
                                     <td data-title="文物及藝術品" class="gp-title">
-                                        <ul>核准編號
+                                        <ul>
+                                            <li>核准編號</li>
                                             <li>1220201AA003</li>
                                         </ul>
-                                        <ul>名稱
+                                        <ul>
+                                            <li>名稱</li>
                                             <li>靜物2 still life 2</li>
                                         </ul>
                                     </td>
                                     <td data-title="出賣人" class="gp-title">
-                                        <ul>統一編(證)號
+                                        <ul>
+                                            <li>統一編(證)號</li>
                                             <li>A123456789</li>
                                         </ul>
-                                        <ul>姓名
+                                        <ul>
+                                            <li>姓名</li>
                                             <li>程小姐</li>
                                         </ul>
                                     </td>
                                     <td data-title="買受人" class="gp-title">
-                                        <ul>統一編(證)號
+                                        <ul>
+                                            <li>統一編(證)號</li>
                                             <li>A987654321</li>
                                         </ul>
-                                        <ul>姓名
+                                        <ul>
+                                            <li>姓名</li>
                                             <li>王先生</li>
                                         </ul>
                                     </td>
                                     <td data-title="交易資訊" class="gp-title">
-                                        <ul>成交價款
+                                        <ul>
+                                            <li>成交價款</li>
                                             <li>200,000</li>
                                         </ul>
-                                        <ul>佣金
+                                        <ul>
+                                            <li>佣金</li>
                                             <li>50,000</li>
                                         </ul>
-                                        <ul>扣繳稅額
+                                        <ul>
+                                            <li>扣繳稅額</li>
                                             <li>17,000</li>
                                         </ul>
-                                        <ul>給付價款予出賣人日期
+                                        <ul>
+                                            <li>給付價款予出賣人日期</li>
                                             <li>112-12-05</li>
                                         </ul>
                                     </td>
@@ -131,40 +141,50 @@
                                         已成交尚未付款
                                     </td>
                                     <td data-title="文物及藝術品" class="gp-title">
-                                        <ul>核准編號
+                                        <ul>
+                                            <li>核准編號</li>
                                             <li>1220201AA003</li>
                                         </ul>
-                                        <ul>名稱
+                                        <ul>
+                                            <li>名稱</li>
                                             <li>靜物2 still life 2</li>
                                         </ul>
                                     </td>
                                     <td data-title="出賣人" class="gp-title">
-                                        <ul>統一編(證)號
+                                        <ul>
+                                            <li>統一編(證)號</li>
                                             <li>A123456789</li>
                                         </ul>
-                                        <ul>姓名
+                                        <ul>
+                                            <li>姓名</li>
                                             <li>程小姐</li>
                                         </ul>
                                     </td>
                                     <td data-title="買受人" class="gp-title">
-                                        <ul>統一編(證)號
+                                        <ul>
+                                            <li>統一編(證)號</li>
                                             <li>A987654321</li>
                                         </ul>
-                                        <ul>姓名
+                                        <ul>
+                                            <li>姓名</li>
                                             <li>王先生</li>
                                         </ul>
                                     </td>
                                     <td data-title="交易資訊" class="gp-title">
-                                        <ul>成交價款
+                                        <ul>
+                                            <li>成交價款</li>
                                             <li>200,000</li>
                                         </ul>
-                                        <ul>佣金
+                                        <ul>
+                                            <li>佣金</li>
                                             <li>50,000</li>
                                         </ul>
-                                        <ul>扣繳稅額
+                                        <ul>
+                                            <li>扣繳稅額</li>
                                             <li>17,000</li>
                                         </ul>
-                                        <ul>給付價款予出賣人日期
+                                        <ul>
+                                            <li>給付價款予出賣人日期</li>
                                             <li>112-12-05</li>
                                         </ul>
                                     </td>
@@ -205,10 +225,9 @@
                             <h2 class="modal-title" id="modal-formLabel">編輯清冊內容</h2>
                         </div>
                         <div class="modal-body">
-                            <form>
                                 <div class="form-gp">
                                     <label for="art_type">交易資料類別<span class="notice">*</span></label>
-                                    <select name="type" id="art_type" placeholder="請選擇作品類型">
+                                    <select name="type" id="art_type">
                                         <option value="list1">已辦理扣繳</option>
                                         <option value="list2">尚未成交</option>
                                         <option value="list3">已成交尚未付款</option>
@@ -216,8 +235,8 @@
                                     </select>
                                 </div>
                                 <div class="form-gp">
-                                    <label for="art_name">核准編號<span class="notice">*</span></label>
-                                    <input type="text" name="art_name" id="art_name" placeholder="1220201AA003" disabled>
+                                    <label for="art_id">核准編號<span class="notice">*</span></label>
+                                    <input type="text" name="art_id" id="art_id" placeholder="1220201AA003" disabled>
                                 </div>
                                 <div class="form-gp">
                                     <label for="art_name">作品名稱<span class="notice">*</span></label>
@@ -258,7 +277,6 @@
                                             data-toggle="datepicker" placeholder="請選擇日期">
                                     </div>
                                 </div>
-                            </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
