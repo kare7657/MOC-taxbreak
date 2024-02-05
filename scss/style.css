@@ -341,6 +341,9 @@
   background-color: #da382d;
   color: white;
 }
+* input::after {
+  box-sizing: border-box !important;
+}
 * ::-moz-placeholder {
   color: #595757;
 }
@@ -404,33 +407,12 @@
 * textarea[disabled]:hover {
   background-color: #e5e5e5;
 }
-* .date-icon::after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f073";
-  color: #9fa0a0;
-  width: 12px !important;
+* .ui-datepicker-trigger {
+  width: 18px;
+  height: 18px;
   position: absolute;
   right: 16px;
-  top: calc(50% - 12px);
-}
-@media (max-width: 568px) {
-  * .date-icon::after {
-    top: calc(50% - 10px);
-  }
-}
-* .time-icon::after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f017";
-  color: #9fa0a0;
-  width: 12px;
-  position: absolute;
-  right: 16px;
-  top: calc(50% - 12px);
-}
-@media (max-width: 568px) {
-  * .time-icon::after {
-    top: calc(50% - 10px);
-  }
+  top: calc(50% - 9px);
 }
 * .custom-control.custom-switch {
   padding-left: 0;
@@ -693,10 +675,11 @@
 }
 * .modal-template .modal-dialog .modal-content .modal-body .form-gp {
   width: 100%;
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: start;
+  align-items: stretch;
   margin-bottom: 20px;
 }
 @media (max-width: 568px) {
@@ -895,7 +878,7 @@
   line-height: 40px;
 }
 * .modal-template .modal-dialog .modal-content .modal-body .datetime .date-gp {
-  width: 60%;
+  width: auto;
 }
 * .modal-template .modal-dialog .modal-content .modal-body .datetime .date-gp input {
   width: 100%;
@@ -2110,7 +2093,7 @@ body form .form-gp .session .add i {
 }
 body form .form-gp .date-gp,
 body form .form-gp .time-gp {
-  width: 100%;
+  width: auto;
   position: relative;
 }
 body form .form-gp .range {
@@ -2158,9 +2141,10 @@ body form .form-gp .label-withButton .download-sample i {
 }
 body form .choice .item {
   display: flex;
-  justify-content: start;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-bottom: 8px;
 }
 @media (max-width: 568px) {

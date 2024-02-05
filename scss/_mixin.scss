@@ -380,6 +380,9 @@
             background-color: $notice;
             color: white;
         }
+        &::after {
+            box-sizing: border-box !important;
+        }
     }
     ::placeholder {
         color: $text;
@@ -443,30 +446,42 @@
             }
         }
     }
-    .date-icon::after {
-        font-family: "Font Awesome 5 Free";
-        content: "\f073";
-        color: $complementary;
-        width: 12px !important;
+    // date-icon
+    .ui-datepicker-trigger {
+        width: 18px;
+        height: 18px;
         position: absolute;
         right: 16px;
-        top: calc(50% - 12px);
-        @include mobile-L() {
-            top: calc(50% - 10px);
-        }
+        top: calc(50% - 9px);
     }
-    .time-icon::after {
-        font-family: "Font Awesome 5 Free";
-        content: "\f017";
-        color: $complementary;
-        width: 12px;
-        position: absolute;
-        right: 16px;
-        top: calc(50% - 12px);
-        @include mobile-L() {
-            top: calc(50% - 10px);
-        }
-    }
+
+    // .date-icon::after {
+    //     font-family: "Font Awesome 5 Free";
+    //     content: "\f073";
+    //     color: $complementary;
+    //     width: 12px !important;
+    //     position: absolute;
+    //     right: 24px;
+    //     // top: calc(50% - 12px);
+    //     top: 0%;
+    //     transform: translateY(25%);
+    //     @include mobile-L() {
+    //         top: calc(50% - 10px);
+    //     }
+    // }
+    // .time-icon::after {
+    //     font-family: "Font Awesome 5 Free";
+    //     content: "\f017";
+    //     color: $complementary;
+    //     width: 12px;
+    //     position: absolute;
+    //     right: 16px;
+    //     top: calc(50% - 12px);
+    //     @include mobile-L() {
+    //         top: calc(50% - 10px);
+    //     }
+    // }
+
     // switch
     .custom-control.custom-switch {
         padding-left: 0;
@@ -704,10 +719,11 @@
                     }
                     .form-gp {
                         width: 100%;
+                        position: relative;
                         display: flex;
                         justify-content: space-between;
                         flex-wrap: wrap;
-                        align-items: start;
+                        align-items: stretch;
                         margin-bottom: $m-S;
                         @include mobile-L() {
                             flex-wrap: wrap;
@@ -893,7 +909,8 @@
                     }
                     .datetime {
                         .date-gp {
-                            width: 60%;
+                            // width: 60%;
+                            width: auto;
                             input {
                                 width: 100%;
                             }
@@ -1998,7 +2015,7 @@
                     margin: 0;
                     color: $text;
                 }
-                .notice{
+                .notice {
                     font-size: $size-h5;
                     margin-right: $m-XXS !important;
                 }
@@ -2097,7 +2114,8 @@
             }
             .date-gp,
             .time-gp {
-                width: 100%;
+                // width: 100%;
+                width: auto;
                 position: relative;
             }
             .range {
@@ -2143,9 +2161,10 @@
         .choice {
             .item {
                 display: flex;
-                justify-content: start;
+                flex-direction: row;
+                justify-content: flex-start;
                 align-items: center;
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
                 margin-bottom: $p-XXS;
                 @include mobile-L() {
                     width: 100%;

@@ -79,7 +79,7 @@
                         <div class="form-gp">
                             <label for="activity_name">演出團隊或演出者<span class="notice">*</span></label>
                             <div class="performer view-nobtn">
-                                <select  class="select2" name="type" id="activity_country">
+                                <select class="select2" name="type" id="activity_country">
                                     <option value="list1">選擇國別</option>
                                     <option value="list2">項目2</option>
                                     <option value="list3">項目3</option>
@@ -90,7 +90,7 @@
                                 <button type="button" class="icon-btn"><i class="fas fa-minus-circle"></i></button>
                             </div>
                             <div class="performer view-nobtn">
-                                <select  class="select2" name="type" id="activity_country2">
+                                <select class="select2" name="type" id="activity_country2">
                                     <option value="list1">選擇國別</option>
                                     <option value="list2">項目2</option>
                                     <option value="list3">項目3</option>
@@ -155,15 +155,15 @@
                                     <div class="item">
                                         <label for="start-date">開始日期</label>
                                         <div class="date-gp date-icon">
-                                            <input type="text" class="mb-nokeyboard chinese-date date-icon"
-                                                id="start-date" data-toggle="datepicker" placeholder="請選擇開始日期">
+                                            <input type="text" class="mb-nokeyboard western-date" id="start-date"
+                                                data-toggle="datepicker" placeholder="請選擇開始日期">
                                         </div>
                                     </div>
                                     <div class="item">
                                         <label for="end-date">結束日期</label>
                                         <div class="date-gp date-icon">
-                                            <input type="text" class="mb-nokeyboard chinese-date date-icon"
-                                                id="end-date" data-toggle="datepicker" placeholder="請選擇結束日期">
+                                            <input type="text" class="mb-nokeyboard western-date" id="end-date"
+                                                data-toggle="datepicker" placeholder="請選擇結束日期">
                                         </div>
                                     </div>
                                 </div>
@@ -1010,6 +1010,11 @@
                 dateFormat: "Rmmdd",
                 showButtonPanel: false,
                 yearRange: "1930:2060",
+                // icon
+                showOn: "button",
+                buttonImage: "img/calendar-alt-regular.svg",
+                buttonImageOnly: true,
+                buttonText: "選擇日期",
             });
             $(".western-date").datepicker({
                 changeYear: true,
@@ -1018,9 +1023,14 @@
                 dateFormat: "yy-mm-dd",
                 showButtonPanel: false,
                 yearRange: "1930:2060",
+                // icon
+                showOn: "button",
+                buttonImage: "img/calendar-alt-regular.svg",
+                buttonImageOnly: true,
+                buttonText: "選擇日期",
             });
         });
-        //將.datepicker改成民國年與西元年小套件同時存在
+        // 將.datepicker改成民國年與西元年小套件同時存在
         $(function (datepicker) {
             //先設定預設西元年的datepicker必要功能
             var old_generateMonthYearHeader = $.datepicker._generateMonthYearHeader;
@@ -1106,10 +1116,12 @@
         });
 
         // 手機隱藏鍵盤
-        $(".mb-nokeyboard").focus(function () {
-            document.activeElement.blur();
-        });
+        // $(".mb-nokeyboard").focus(function () {
+        //     document.activeElement.blur();
+        // });
+
     </script>
+
 
     <!-- input mask 限制填入格式 -->
     <script>
