@@ -486,7 +486,8 @@ body {
                         a.apply {
                             width: 100%;
                             color: white !important;
-                            margin: $m-S 0 $p-XXS 0;
+                            margin: 0;
+                            margin-top: $m-XS;
                             @include web-S {
                                 padding-left: 0;
                                 padding-right: 0;
@@ -578,14 +579,12 @@ body {
                             border-radius: 0 0 10px 10px;
                             border-bottom: 8px solid rgba($color: $book, $alpha: 0.5);
                             button,
-                            .apply {
+                            a.apply {
                                 background-color: $book;
                             }
                         }
                     }
-
                 }
-
             }
             .separate-taxation {
                 justify-content: center;
@@ -844,7 +843,7 @@ body {
             position: relative;
             h2 {
                 text-align: center;
-                @include mobile-L(){
+                @include mobile-L() {
                     padding: 0 $p-XS;
                 }
             }
@@ -1180,15 +1179,14 @@ body {
                                 margin-right: 0 !important;
                             }
                         }
-                        ul{
-                            li:first-of-type{
+                        ul {
+                            li:first-of-type {
                                 font-weight: bold;
-                                @include mobile-L{
+                                @include mobile-L {
                                     color: black;
                                 }
                             }
                         }
-
                     }
                 }
             }

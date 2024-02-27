@@ -3489,7 +3489,8 @@ body main .content-type .taxbreak-gp .block .bottom button,
 body main .content-type .taxbreak-gp .block .bottom a.apply {
   width: 100%;
   color: white !important;
-  margin: 20px 0 8px 0;
+  margin: 0;
+  margin-top: 12px;
 }
 @media (max-width: 1024px) {
   body main .content-type .taxbreak-gp .block .bottom button,
@@ -3585,7 +3586,7 @@ body main .content-type .taxbreak-gp .block.book .bottom {
   border-bottom: 8px solid rgba(89, 107, 145, 0.5);
 }
 body main .content-type .taxbreak-gp .block.book .bottom button,
-body main .content-type .taxbreak-gp .block.book .bottom .apply {
+body main .content-type .taxbreak-gp .block.book .bottom a.apply {
   background-color: #596b91;
 }
 body main .content-type .separate-taxation {
