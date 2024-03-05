@@ -158,9 +158,6 @@
         color: transparent;
         &:focus {
             color: $primary-tint;
-            &::after {
-                content: ":::";
-            }
         }
         @include web-L() {
             left: -10px;
@@ -174,9 +171,6 @@
             color: $bk-20;
             margin: 0 $m-XS;
             color: white;
-            &::after {
-                content: ":::";
-            }
         }
     }
     .clearfix {
@@ -1770,7 +1764,7 @@
                     list-style: none;
                     margin-right: 2px;
                 }
-                .fas {
+                i {
                     font-size: $size-p;
                     line-height: 1.5;
                     color: $primary-default;
@@ -2395,7 +2389,7 @@
                     flex-wrap: wrap;
                 }
                 .code {
-                    width: 40%;
+                    width: 25%;
                     margin-right: 10px;
                     margin-bottom: 0;
                     @include mobile-L() {
@@ -2414,38 +2408,37 @@
                         height: 30px;
                     }
                     @include mobile-L() {
-                        height: 35px;
+                        height: 25px;
+                    }
+                    @include mobile-XS() {
+                        height: 20px;
                     }
                 }
                 .reform {
                     margin-right: $m-XS;
-                    height: auto;
                     color: $primary-dark;
                     font-weight: bold;
-                    padding: $m-XXS $p-XXS;
+                    padding: $p-XXS $m-XS;
                     background-color: $primary-table;
-                    @include mobile-L() {
-                        height: 40px;
-                        padding: $m-XXS $m-XS;
-                    }
                     i {
                         margin: 0;
                         font-size: $size-h5;
+                    }
+                    &:hover {
+                        filter: initial;
                     }
                 }
                 .btnPlayAudio {
-                    height: auto;
                     color: $primary-dark;
                     font-weight: bold;
-                    padding: $m-XXS $p-XXS;
+                    padding: $p-XXS $m-XS;
                     background-color: $primary-table;
-                    @include mobile-L() {
-                        height: 40px;
-                        padding: $m-XXS $m-XS;
-                    }
                     i {
                         margin: 0;
                         font-size: $size-h5;
+                    }
+                    &:hover {
+                        filter: initial;
                     }
                 }
             }
@@ -2826,6 +2819,9 @@
 }
 @mixin datepicker {
     /* datepicker日期 */
+    .ui-widget-header .ui-icon {
+        display: none !important;
+    }
     .ui-datepicker {
         font-size: 1rem;
         font-family: "sans-serif", "微軟正黑體";

@@ -128,9 +128,6 @@
 * #AC:focus {
   color: #aa8e41;
 }
-* #AC:focus::after {
-  content: ":::";
-}
 @media (max-width: 1367px) {
   * #AC {
     left: -10px;
@@ -143,9 +140,6 @@
   color: #dcdddd;
   margin: 0 12px;
   color: white;
-}
-* #AZ:focus::after {
-  content: ":::";
 }
 * .clearfix {
   clear: both;
@@ -1818,7 +1812,7 @@ body .breadcrumb .container ul li {
   list-style: none;
   margin-right: 2px;
 }
-body .breadcrumb .container ul .fas {
+body .breadcrumb .container ul i {
   font-size: 1rem;
   line-height: 1.5;
   color: #88670c;
@@ -2384,7 +2378,7 @@ body form .code-gp .text-gp {
   }
 }
 body form .code-gp .text-gp .code {
-  width: 40%;
+  width: 25%;
   margin-right: 10px;
   margin-bottom: 0;
 }
@@ -2409,43 +2403,40 @@ body form .code-gp .text-gp .RP {
 }
 @media (max-width: 568px) {
   body form .code-gp .text-gp .RP {
-    height: 35px;
+    height: 25px;
+  }
+}
+@media (max-width: 320px) {
+  body form .code-gp .text-gp .RP {
+    height: 20px;
   }
 }
 body form .code-gp .text-gp .reform {
   margin-right: 12px;
-  height: auto;
   color: #280101;
   font-weight: bold;
-  padding: 4px 8px;
+  padding: 8px 12px;
   background-color: #fdfaf2;
-}
-@media (max-width: 568px) {
-  body form .code-gp .text-gp .reform {
-    height: 40px;
-    padding: 4px 12px;
-  }
 }
 body form .code-gp .text-gp .reform i {
   margin: 0;
   font-size: 1.25rem;
 }
+body form .code-gp .text-gp .reform:hover {
+  filter: initial;
+}
 body form .code-gp .text-gp .btnPlayAudio {
-  height: auto;
   color: #280101;
   font-weight: bold;
-  padding: 4px 8px;
+  padding: 8px 12px;
   background-color: #fdfaf2;
-}
-@media (max-width: 568px) {
-  body form .code-gp .text-gp .btnPlayAudio {
-    height: 40px;
-    padding: 4px 12px;
-  }
 }
 body form .code-gp .text-gp .btnPlayAudio i {
   margin: 0;
   font-size: 1.25rem;
+}
+body form .code-gp .text-gp .btnPlayAudio:hover {
+  filter: initial;
 }
 body form .btn-tool {
   width: 100%;
@@ -2893,6 +2884,9 @@ body .searchbar .btn-gp button:first-child {
     margin-bottom: 20px;
     width: 100%;
   }
+}
+body .ui-widget-header .ui-icon {
+  display: none !important;
 }
 body .ui-datepicker {
   font-size: 1rem;
