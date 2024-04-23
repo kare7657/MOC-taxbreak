@@ -113,9 +113,16 @@
         word-break: break-all;
     }
     .ellipsis {
+        width: 100%;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+    }
+    .multiline-ellipsis {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
     }
     a {
         text-decoration: none !important;
@@ -558,6 +565,14 @@
         i {
             margin-right: $p-XXS;
         }
+    }
+    .ellipsis {
+        // @include mobile-L() {
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /*行數*/
+        -webkit-box-orient: vertical;
+        white-space: normal;
+        // }
     }
     //modal
     .modal-template {
@@ -1182,6 +1197,9 @@
                 justify-content: center;
                 align-items: center;
                 padding: $p-XS 0;
+                @include web-XL {
+                    max-width: 1140px;
+                }
                 @include web-S() {
                     margin-left: $m-S;
                     padding-right: $p-XXS;
@@ -1189,9 +1207,9 @@
                 .logo {
                     display: flex;
                     align-items: center;
-                    @include web-S {
-                        width: 71%;
-                    }
+                    // @include web-S {
+                    //     width: 60%;
+                    // }
                     img {
                         width: 40px;
                         height: 40px;
@@ -1201,7 +1219,8 @@
                         margin: 0;
                         padding: 0;
                         @include web-S {
-                            font-size: $size-h2;
+                            font-size: $size-h4;
+                            // width: 60%;
                         }
                     }
                 }
@@ -1210,10 +1229,10 @@
                     align-items: center;
                     justify-content: end;
                     margin-left: $m-S;
-                    @include web-S {
-                        width: 29%;
+                    @include web-XL {
                         margin-left: 0;
-                        margin-right: $m-S;
+                    }
+                    @include web-S {
                     }
                     .icon-btn {
                         display: flex;
@@ -1229,6 +1248,19 @@
                             margin: 0;
                             font-size: $size-h3;
                             color: $primary-default;
+                        }
+                    }
+                    .user-title {
+                        width: 120px;
+                        word-wrap: break-word;
+                        margin-right: $m-XS;
+                        color: $primary-dark;
+                        line-height: 1.25;
+                        text-align: right;
+                        font-weight: bold;
+                        font-size: $size-caption;
+                        @include web-XL {
+                            width: 100px;
                         }
                     }
                     .btn {
@@ -1252,10 +1284,14 @@
                                     margin: 0;
                                     color: inherit;
                                     font-weight: bold;
+                                    i {
+                                        margin-right: $p-XXS;
+                                    }
                                 }
                             }
                         }
                     }
+
                     .underline {
                         color: $primary-default;
                         font-size: $size-h5;
