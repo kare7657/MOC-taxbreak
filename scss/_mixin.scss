@@ -1228,9 +1228,9 @@
                     display: flex;
                     align-items: center;
                     justify-content: end;
-                    margin-left: $m-S;
+                    margin-left: $m-L;
                     @include web-XL {
-                        margin-left: 0;
+                        margin-left: $m-XS;
                     }
                     @include web-S {
                     }
@@ -1253,7 +1253,7 @@
                     .user-title {
                         width: 120px;
                         word-wrap: break-word;
-                        margin-right: $m-XS;
+                        margin-right: $m-S;
                         color: $primary-dark;
                         line-height: 1.25;
                         text-align: right;

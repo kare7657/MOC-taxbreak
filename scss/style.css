@@ -1249,11 +1249,11 @@ body .navbar .pc .top .right {
   display: flex;
   align-items: center;
   justify-content: end;
-  margin-left: 20px;
+  margin-left: 48px;
 }
 @media (max-width: 1550px) {
   body .navbar .pc .top .right {
-    margin-left: 0;
+    margin-left: 12px;
   }
 }
 body .navbar .pc .top .right .icon-btn {
@@ -1277,7 +1277,7 @@ body .navbar .pc .top .right .icon-btn i {
 body .navbar .pc .top .right .user-title {
   width: 120px;
   word-wrap: break-word;
-  margin-right: 12px;
+  margin-right: 20px;
   color: #280101;
   line-height: 1.25;
   text-align: right;
