@@ -22,7 +22,10 @@
     <header id="header"></header>
     <main class="nomenu fixpt">
         <a href="#C" title="中央內容區塊" id="AC" accesskey="C">:::</a>
+
         <section class="section-fastlink container">
+
+           
             <div class="btn-gp">
                 <a class="btn-type" href="tax-break.html" title="申請減免營業稅及娛樂稅">
                     <div class="top">
@@ -47,6 +50,38 @@
                 </a>
             </div>
         </section>
+
+        <!-- modal 公告-->
+        <div class="modal fade modal-template " id="modal-bulletin" tabindex="-1" role="dialog"
+            aria-labelledby="modal-clauseLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-clauseLabel">公告</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <p class="notice">【減免稅暨分離課稅系統】對外服務區資訊設備汰換移轉作業停機通知</p>
+                                <p class="notice">
+                                    資訊處通知，為提高共構機房對外服務區(DMZ)資訊設備可靠性及降低設備過報故障之風險，
+                                    爰於 113 年 8 月 9 日晚間 8 時至 113 年 8 月 10 日 7 時 59 分辦理資訊設備汰換移轉作業。
+                                    請協助配合於前揭時間停機，並提早於今日開始在系統明顯處公告停機時間。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel4" data-dismiss="modal">確認</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
 
     </main>
     <!-- footer -->
@@ -87,6 +122,14 @@
             //     disableOnInteraction: false,
             // },
         });
+    </script>
+
+    <!-- modal -->
+    <script>
+        //進頁開啟條款
+        $(window).ready(() => {
+            $('#modal-bulletin').modal('show');
+        })
     </script>
 
 </body>

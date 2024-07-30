@@ -3251,6 +3251,9 @@ body main .section-banner img {
   -o-object-position: center center;
      object-position: center center;
 }
+body main .section-fastlink {
+  padding: 0;
+}
 @media (max-width: 1550px) {
   body main .section-fastlink {
     margin-top: 36px;

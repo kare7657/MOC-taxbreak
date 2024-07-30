@@ -250,16 +250,19 @@ body {
         }
         // 快速連結
         .section-fastlink {
+            padding: 0;
             @include web-XL {
                 margin-top: $m-M;
             }
             @include mobile-L {
                 margin-top: 0;
             }
+            
             .btn-gp {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
+
                 .btn-type {
                     width: 42%;
                     border: solid 1px $primary-tint;
