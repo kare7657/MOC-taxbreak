@@ -23,7 +23,9 @@
         <!-- breadcrumb -->
         <div class="breadcrumb">
             <div class="container">
-                <ul><li><a href="index.html" title="首頁"><i class="fas fa-home"></i><span class="d-none">首頁</span></a></li>
+                <ul>
+                    <li><a href="index.html" title="首頁"><i class="fas fa-home"></i><span class="d-none">首頁</span></a>
+                    </li>
                     <li>></li>
                     <li><a href="case-manage.html">案件管理</a></li>
                     <li>></li>
@@ -148,6 +150,10 @@
                                             title="[另開視窗]交易資料通報表(非核准)" target="_blank">
                                             <i class="fas fa-file-excel"></i>
                                             <span>交易資料通報(非核准)</span></a>
+                                        <a href="#" class="link" title="[另開彈跳視窗]上傳電子圖錄" data-toggle="modal"
+                                            data-target="#modal-batch-upload">
+                                            <i class="fas fa-upload"></i>
+                                            <span>上傳電子圖錄</span></a>
                                     </div>
                                 </td>
                             </tr>
@@ -198,7 +204,7 @@
                                                 class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
                                         <a href="approved-transaction-data-report.html" class="link"
-                                            title="[另開視窗]交易資料通報表(核准)"  target="_blank">
+                                            title="[另開視窗]交易資料通報表(核准)" target="_blank">
                                             <i class="fas fa-file-alt"></i>
                                             <span>交易資料通報表(核准)</span></a>
                                     </div>
@@ -458,6 +464,34 @@
                         </div>
                         <div class="modal-footer">
                             <button type="submit" name="go" id="go3">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- modal 批次上傳-->
+        <div class="modal fade modal-template " id="modal-batch-upload" tabindex="-1" role="dialog"
+            aria-labelledby="modal-batch-uploadLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-batch-uploadLabel">批次上傳檔案</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-gp">
+                                <input type="file" multiple>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+                            <button type="submit" name="go" id="go2">確認</button>
+
                         </div>
                     </div>
                 </div>

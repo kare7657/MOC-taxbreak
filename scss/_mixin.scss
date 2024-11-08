@@ -47,6 +47,7 @@
         max-width: 1530px;
         margin: auto;
         padding: $p-S 0;
+        text-align: justify;
         @include web-XL {
             max-width: 1140px;
         }
