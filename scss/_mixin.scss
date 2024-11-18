@@ -1028,6 +1028,11 @@
                             .notice {
                                 font-size: $size-h5;
                             }
+                            .notice-S {
+                                font-size: $size-p;
+                                color: $notice;
+                                margin-top: $p-XXS;
+                            }
                         }
                         ul {
                             @include mobile-L() {
@@ -1039,6 +1044,12 @@
                                 list-style: disc;
                                 list-style-position: outside;
                             }
+                        }
+                    }
+                    .fileList-gp {
+                        hr {
+                            margin-top: $m-XS;
+                            margin-bottom: $m-M;
                         }
                     }
                     .iframe-gp {
@@ -1095,6 +1106,18 @@
                             }
                         }
                     }
+                }
+            }
+        }
+        &.limitHeight {
+            .modal-body {
+                max-height: 70vh;
+                overflow-y: auto;
+                @include mobile-L() {
+                    max-height: 75vh;
+                }
+                @include mobile-XS() {
+                    max-height: 60vh;
                 }
             }
         }
@@ -2775,6 +2798,12 @@
         }
         .green {
             color: #00ad45;
+        }
+        &.list-data {
+            td,
+            th {
+                border: none;
+            }
         }
     }
     .rowspan {

@@ -30,6 +30,7 @@ body {
     @include table();
     @include searchbar();
     @include datepicker();
+
     /* 跳到主要內容區塊 */
     .for_accessibility .go-main {
         position: absolute;

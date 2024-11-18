@@ -9,6 +9,7 @@
   max-width: 1530px;
   margin: auto;
   padding: 24px 0;
+  text-align: justify;
 }
 @media (max-width: 1550px) {
   * .container {
@@ -1009,6 +1010,11 @@
 * .modal-template .modal-dialog .modal-content .modal-body .notify-gp .text-gp .notice {
   font-size: 1.25rem;
 }
+* .modal-template .modal-dialog .modal-content .modal-body .notify-gp .text-gp .notice-S {
+  font-size: 1rem;
+  color: #da382d;
+  margin-top: 8px;
+}
 @media (max-width: 568px) {
   * .modal-template .modal-dialog .modal-content .modal-body .notify-gp ul {
     padding-left: 16px;
@@ -1018,6 +1024,10 @@
   font-weight: bold;
   list-style: disc;
   list-style-position: outside;
+}
+* .modal-template .modal-dialog .modal-content .modal-body .fileList-gp hr {
+  margin-top: 12px;
+  margin-bottom: 36px;
 }
 * .modal-template .modal-dialog .modal-content .modal-body .iframe-gp iframe {
   width: 100%;
@@ -1073,6 +1083,20 @@
   }
   * .modal-template .modal-dialog .modal-content .modal-footer button:not(:first-child) {
     margin-top: 20px;
+  }
+}
+* .modal-template.limitHeight .modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+@media (max-width: 568px) {
+  * .modal-template.limitHeight .modal-body {
+    max-height: 75vh;
+  }
+}
+@media (max-width: 320px) {
+  * .modal-template.limitHeight .modal-body {
+    max-height: 60vh;
   }
 }
 * .pagination {
@@ -2681,6 +2705,10 @@ body .table-default .state {
 }
 body .table-default .green {
   color: #00ad45;
+}
+body .table-default.list-data td,
+body .table-default.list-data th {
+  border: none;
 }
 body .rowspan .color {
   background-color: rgba(167, 229, 255, 0.1) !important;

@@ -151,9 +151,9 @@
                                             <i class="fas fa-file-excel"></i>
                                             <span>交易資料通報(非核准)</span></a>
                                         <a href="#" class="link" title="[另開彈跳視窗]上傳電子圖錄" data-toggle="modal"
-                                            data-target="#modal-batch-upload">
-                                            <i class="fas fa-upload"></i>
-                                            <span>上傳電子圖錄</span></a>
+                                            data-target="#modal-notify2">
+                                            <i class="fas fa-file-image"></i>
+                                            <span>管理電子圖錄</span></a>
                                     </div>
                                 </td>
                             </tr>
@@ -435,35 +435,107 @@
                 </div>
             </form>
         </div>
-        <!-- modal 提示-->
-        <div class="modal fade modal-template " id="modal-notify2" tabindex="-1" role="dialog"
+        <!-- modal 提示-限高-->
+        <div class="modal fade modal-template limitHeight" id="modal-notify2" tabindex="-1" role="dialog"
             aria-labelledby="modal-notifyLabel2" data-backdrop="static" style=" padding-top: 0;">
             <form class="form" name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp"
                 target="frm_ChangPWD">
-                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-dialog modal-lg modal-dialog-centered " role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <h2 class="modal-title" id="modal-notifyLabel2">展覽注意事項</h2>
+                            <h2 class="modal-title" id="modal-notifyLabel2">管理電子圖錄</h2>
                         </div>
                         <div class="modal-body">
-                            <div class="notify-gp">
+                            <div class="fileList-gp">
                                 <div class="text-gp">
-                                    <p class="notice"><i class="fas fa-exclamation-circle"></i>
-                                        申請案中若有大陸地區古物來臺展覽</p>
-                                    <p>應檢附本部已核准文件，或已向本部提出申請之文件</p>
+                                    <button type="button" data-toggle="modal" data-target="#modal-batch-upload"><i
+                                            class="fas fa-file-upload"></i>上傳電子圖錄檔案</button>
+                                    <ul class="ps">
+                                        <li>可批次上傳，檔案請小於20MB</li>
+                                        <li class="notice"><b>檔案僅限上傳一次，且上傳後即無法修改與刪除。如有問題，請聯絡管理員 00-12345678</b> </li>
+                                    </ul>
                                 </div>
-                                <div class="text-gp">
-                                    <p class="notice"><i class="fas fa-exclamation-circle"></i>
-                                        申請案中若有國外地區中華古物來臺展覽</p>
-                                    <p>應檢附目的事業主管機關已核准文件，或已向該機關提出申請之文件</p>
-                                </div>
+                                <hr>
+
+                                <h3 class="mb-3">已上傳清單</h3>
+                                <table class="table-default list-data">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 20%;">項次</th>
+                                            <th style="width: 80%;">檔名</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- 上傳前 -->
+                                        <tr>
+                                            <td data-title="提醒" colspan="2">
+                                                <span class="notice">※ 未上傳檔案。請點選上方按鈕上傳電子圖錄檔案</span>
+                                            </td>
+                                        </tr>
+                                        <!-- 上傳後 -->
+                                        <tr>
+                                            <td data-title="項次">123</td>
+                                            <td data-title="檔名">
+                                                <a href="" download title="[下載]檔名.xls"> xls下載下載下載</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="項次">123</td>
+                                            <td data-title="檔名">
+                                                <a href="" target="_blank" title="[另開視窗]檔名.pdf"> pdf另開視窗另開視窗</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="項次">123</td>
+                                            <td data-title="檔名">
+                                                <a href="" download title="[下載]檔名.xls"> xls下載下載下載</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="項次">123</td>
+                                            <td data-title="檔名">
+                                                <a href="" target="_blank" title="[另開視窗]檔名.pdf"> pdf另開視窗另開視窗</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="項次">123</td>
+                                            <td data-title="檔名">
+                                                <a href="" download title="[下載]檔名.xls"> xls下載下載下載</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="項次">123</td>
+                                            <td data-title="檔名">
+                                                <a href="" target="_blank" title="[另開視窗]檔名.pdf"> pdf另開視窗另開視窗</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="項次">123</td>
+                                            <td data-title="檔名">
+                                                <a href="" download title="[下載]檔名.xls"> xls下載下載下載</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="項次">123</td>
+                                            <td data-title="檔名">
+                                                <a href="" target="_blank" title="[另開視窗]檔名.pdf"> pdf另開視窗另開視窗</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="項次">123</td>
+                                            <td data-title="檔名">
+                                                <a href="" download title="[下載]檔名.xls"> xls下載下載下載</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" name="go" id="go3">確認</button>
+                            <button type="button" name="go" id="go3" data-dismiss="modal">關閉</button>
                         </div>
                     </div>
                 </div>
