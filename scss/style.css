@@ -3072,6 +3072,13 @@ body.bg-img {
   background-size: cover;
   background-position: center top;
 }
+body .acc-info {
+  color: black;
+  margin-bottom: 20px;
+}
+body .acc-info i {
+  margin-right: 8px;
+}
 body main {
   display: flex;
   flex-wrap: wrap;

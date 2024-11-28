@@ -62,6 +62,14 @@ body {
         background-size: cover;
         background-position: center top;
     }
+    .acc-info{
+        color: black;
+        margin-bottom: $m-S;
+        i{
+            margin-right: $p-XXS;
+        }
+
+    }
     main {
         display: flex;
         flex-wrap: wrap;
