@@ -62,13 +62,12 @@ body {
         background-size: cover;
         background-position: center top;
     }
-    .acc-info{
+    .acc-info {
         color: black;
         margin-bottom: $m-S;
-        i{
+        i {
             margin-right: $p-XXS;
         }
-
     }
     main {
         display: flex;
@@ -266,7 +265,7 @@ body {
             @include mobile-L {
                 margin-top: 0;
             }
-            
+
             .btn-gp {
                 display: flex;
                 flex-wrap: wrap;
@@ -797,7 +796,11 @@ body {
         .content-login {
             h2 {
                 text-align: center;
-                margin-bottom: $m-M;
+                // margin-bottom: $m-M;
+                margin-bottom: $m-S;
+            }
+            .ps {
+                font-weight: bold;
             }
             .container {
                 padding: 0;
@@ -810,6 +813,13 @@ body {
                     box-shadow: 0px 5px 10px rgba($color: $primary-tint, $alpha: 0.1);
                     @include mobile-L {
                         padding: $p-M $p-S;
+                    }
+                    .ps {
+                        color: $primary-default;
+                        margin-bottom: $m-S;
+                        i {
+                            margin-right: $m-XXS;
+                        }
                     }
                     .form-gp {
                         display: flex;

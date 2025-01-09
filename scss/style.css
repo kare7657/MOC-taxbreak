@@ -3876,7 +3876,10 @@ body main .content-link .block i {
 }
 body main .content-login h2 {
   text-align: center;
-  margin-bottom: 36px;
+  margin-bottom: 20px;
+}
+body main .content-login .ps {
+  font-weight: bold;
 }
 body main .content-login .container {
   padding: 0;
@@ -3893,6 +3896,20 @@ body main .content-login .container .block {
   body main .content-login .container .block {
     padding: 32px 24px;
   }
+}
+body main .content-login .container .block .ps {
+  color: #88670c;
+  margin-bottom: 20px;
+}
+body main .content-login .container .block .ps i {
+  margin-right: 4px;
+}
+body main .content-login .container .block .alert {
+  font-size: 1rem;
+  text-align: left;
+}
+body main .content-login .container .block .alert i {
+  margin-right: 8px;
 }
 body main .content-login .container .block .form-gp {
   display: flex;
