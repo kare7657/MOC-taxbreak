@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free/js/all.min.js">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- 跳到主要內容區塊 -->
+    <div class="for_accessibility">
+        <a href="#AC" class="go-main" title="跳到主要內容區塊" tabindex="1">跳到主要內容區塊</a>
+    </div>
+
+    <nav class="navbar bgc">
+        <div class="pc">
+            <div class="top">
+                <div class="logo book" title="首頁">
+                    <h1>文化藝術事業減免營業稅及娛樂稅</h1>
+                    <h2>圖書出版品類線上申請系統</h2>
+                </div>
+                <a href="#U" id="AU" title="右上方功能區塊" accesskey="U">:::</a>
+            </div>
+            <div class="mobile">
+                <div class="menu">
+                    <div class="fas fa-bars">
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="tax-break.html" title="申請減免營業稅及娛樂稅">
+                                申請減免營業稅及娛樂稅
+                            </a></li>
+                        <li> <a href="separate-taxation.html" title="申請分離課稅">
+                                申請分離課稅
+                            </a></li>
+                        <li><a href="login.html" title="登入">登入</a></li>
+                    </ul>
+                </div>
+                <div class="logo">
+                    <a href="index.html" title="首頁">
+                        <div class="title">文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統</div>
+                    </a>
+                </div>
+            </div>
+    </nav>
+
+
+    <!-- mobile-menu -->
+    <script>
+        var fas = document.querySelector(".fas.fa-bars")
+        var navbar_nav = document.querySelector(".nav.navbar-nav")
+        var nav_item = document.querySelector(".nav-item.dropdown")
+        fas.onclick = function () {
+            if (navbar_nav.classList.contains("active-ul")) {
+                navbar_nav.classList.remove("active-ul")
+            } else {
+                navbar_nav.classList.add("active-ul")
+            }
+        }
+    </script>
+
+</body>
+
+</html>

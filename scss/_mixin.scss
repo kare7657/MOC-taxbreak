@@ -150,11 +150,14 @@
         outline: #fcd256 dotted 3px !important;
     }
     #AU {
+        position: absolute;
+        left: -9999px;
         font-size: $size-h5;
         color: transparent;
         margin: 0 $m-XS;
         &:focus {
             color: $primary-tint;
+            left: 0;
         }
     }
     #AC {
@@ -984,7 +987,7 @@
                                 height: auto;
                                 color: $primary-dark;
                                 font-weight: bold;
-                                padding: $m-XXS $p-XXS;
+                                padding: 0 $p-XXS;
                                 background-color: $primary-table;
                                 @include mobile-L() {
                                     height: 40px;
@@ -999,7 +1002,7 @@
                                 height: auto;
                                 color: $primary-dark;
                                 font-weight: bold;
-                                padding: $m-XXS $p-XXS;
+                                padding: 0 $p-XXS;
                                 background-color: $primary-table;
                                 @include mobile-L() {
                                     height: 40px;
@@ -1247,17 +1250,23 @@
                             // width: 60%;
                         }
                     }
+                    &.book {
+                        flex-wrap: wrap;
+                        h1,
+                        h2 {
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
                 }
                 .right {
                     display: flex;
                     align-items: center;
                     justify-content: end;
                     margin-left: $m-L;
-                    @include web-XL {
-                        margin-left: $m-XS;
-                    }
-                    @include web-S {
-                    }
+                    // @include web-L {
+                    //     margin-left: $m-M;
+                    // }
                     .icon-btn {
                         display: flex;
                         align-items: center;
@@ -2478,7 +2487,7 @@
                     margin-right: $m-XS;
                     color: $primary-dark;
                     font-weight: bold;
-                    padding: $p-XXS $m-XS;
+                    padding: 0 $m-XS;
                     background-color: $primary-table;
                     i {
                         margin: 0;
@@ -2491,7 +2500,7 @@
                 .btnPlayAudio {
                     color: $primary-dark;
                     font-weight: bold;
-                    padding: $p-XXS $m-XS;
+                    padding: 0 $m-XS;
                     background-color: $primary-table;
                     i {
                         margin: 0;

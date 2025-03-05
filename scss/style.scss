@@ -857,6 +857,15 @@ body {
                     .code-gp {
                         margin-bottom: $m-S;
                     }
+                    hr{
+                        margin-top: $m-M;
+                        margin-bottom: $m-S;
+                    }
+                    .title{
+                        font-size: $size-h5;
+                        font-weight: bold;
+                        margin-bottom: $m-XS;
+                    }
                 }
             }
         }

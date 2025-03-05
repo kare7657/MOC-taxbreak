@@ -118,12 +118,15 @@
   outline: #fcd256 dotted 3px !important;
 }
 * #AU {
+  position: absolute;
+  left: -9999px;
   font-size: 1.25rem;
   color: transparent;
   margin: 0 12px;
 }
 * #AU:focus {
   color: #aa8e41;
+  left: 0;
 }
 * #AC {
   position: absolute;
@@ -964,7 +967,7 @@
   height: auto;
   color: #280101;
   font-weight: bold;
-  padding: 4px 8px;
+  padding: 0 8px;
   background-color: #fdfaf2;
 }
 @media (max-width: 568px) {
@@ -981,7 +984,7 @@
   height: auto;
   color: #280101;
   font-weight: bold;
-  padding: 4px 8px;
+  padding: 0 8px;
   background-color: #fdfaf2;
 }
 @media (max-width: 568px) {
@@ -1269,16 +1272,19 @@ body .navbar .pc .top .logo h1 {
     font-size: 1.375rem;
   }
 }
+body .navbar .pc .top .logo.book {
+  flex-wrap: wrap;
+}
+body .navbar .pc .top .logo.book h1,
+body .navbar .pc .top .logo.book h2 {
+  width: 100%;
+  text-align: center;
+}
 body .navbar .pc .top .right {
   display: flex;
   align-items: center;
   justify-content: end;
   margin-left: 48px;
-}
-@media (max-width: 1550px) {
-  body .navbar .pc .top .right {
-    margin-left: 12px;
-  }
 }
 body .navbar .pc .top .right .icon-btn {
   display: flex;
@@ -2468,7 +2474,7 @@ body form .code-gp .text-gp .reform {
   margin-right: 12px;
   color: #280101;
   font-weight: bold;
-  padding: 8px 12px;
+  padding: 0 12px;
   background-color: #fdfaf2;
 }
 body form .code-gp .text-gp .reform i {
@@ -2481,7 +2487,7 @@ body form .code-gp .text-gp .reform:hover {
 body form .code-gp .text-gp .btnPlayAudio {
   color: #280101;
   font-weight: bold;
-  padding: 8px 12px;
+  padding: 0 12px;
   background-color: #fdfaf2;
 }
 body form .code-gp .text-gp .btnPlayAudio i {
@@ -3904,13 +3910,6 @@ body main .content-login .container .block .ps {
 body main .content-login .container .block .ps i {
   margin-right: 4px;
 }
-body main .content-login .container .block .alert {
-  font-size: 1rem;
-  text-align: left;
-}
-body main .content-login .container .block .alert i {
-  margin-right: 8px;
-}
 body main .content-login .container .block .form-gp {
   display: flex;
   justify-content: space-between;
@@ -3953,6 +3952,15 @@ body main .content-login .container .block .form-gp p {
 }
 body main .content-login .container .block .code-gp {
   margin-bottom: 20px;
+}
+body main .content-login .container .block hr {
+  margin-top: 36px;
+  margin-bottom: 20px;
+}
+body main .content-login .container .block .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 12px;
 }
 body main .content-signup {
   position: relative;
