@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>登入</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body class="bg-img">
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <main class="nomenu fixpt">
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C">:::</a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html" title="首頁"><i class="fas fa-home"></i><span class="d-none">首頁</span></a>
+                    </li>
+                    <li>></li>
+                    <li><a href="tax-break.html" title="申請減免營業稅及娛樂稅">申請減免營業稅及娛樂稅</a>
+                    </li>
+                    <li>></li>
+                    <li><span>圖書出版品類線上申請系統</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 登入 -->
+        <section class="content-login">
+            <div class="container">
+                <div class="block">
+                    <h2>登入</h2>
+                    <form>
+                        <div class="form-gp">
+                            <label for="BAN">單位統一編號</label>
+                            <input type="number" name="BAN" id="BAN" placeholder="請輸入單位統一編號">
+                        </div>                       
+                        <div class="form-gp">
+                            <label for="account">帳號</label>
+                            <input type="text" name="account" id="account" placeholder="請輸入帳號">
+                        </div>
+                        <div class="form-gp">
+                            <label for="password">密碼</label>
+                            <input type="password" name="password" id="password" placeholder="請輸入密碼">
+                            <p>密碼長度6-12字元包含數字、英文大小寫</p>
+                        </div>
+                        <!-- 圖片驗證碼 -->
+                        <div class="code-gp">
+                            <label for="code">驗證碼</label>
+                            <div class="text-gp">
+                                <input class="code" type="text" name="code" id="code" placeholder="請輸入驗證碼">
+                                <img class="RP" src="img/RandomPic_ForLogin.jpg" alt="圖片驗證碼">
+                                <button name="reform" id="reform" class="reform" onclick="" title="刷新" type="button"><i
+                                        class="fas fa-sync-alt"></i><span class="d-none">刷新</span></button>
+                                <button name="audio" id="btn_Voice" class="btnPlayAudio" onclick="PlayVoice();"
+                                    title="播放驗證碼語音" type="button"><i class="fas fa-volume-up"></i><span
+                                        class="d-none">語音驗證</span></button>
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <input type="button" value="註冊" class="button-outline"
+                                onclick="location.href='sign-up.html'">
+                            <input type="button" value="送出" onclick="location.href='book-member.html'">
+                            <div class="w-100 text-center book-bottomLink">
+                                <a href="#" data-toggle="modal" data-target="#modalChangPWD">忘記密碼？</a>
+                                <a href="book-member-unit-admin.html">申請變更單位管理員</a>
+                                <a href="https://www.moc.gov.tw/cp.aspx?n=201" target="_blank"
+                                    title="[另開網站]政策懶人包及申請流程">政策懶人包及申請流程</a>
+                                <a href="book-approval-announcement.html" target="_blank" title="[另開視窗]認可公告">認可公告</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- modal -->
+        <div class="modal fade modal-template" id="modalChangPWD" tabindex="-1" role="dialog"
+            aria-labelledby="modalPrivateLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp" target="frm_ChangPWD">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                class="glyphicon glyphicon-remove" aria-hidden="true"></span></button> -->
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modalPrivateLabel">變更密碼</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-gp">
+                                <label for="account2">單位統一編號<span class="notice">*</span></label>
+                                <input type="password" name="account" id="account2" value="">
+                                <div class="text">
+                                    <p class="notice">testtesttesttest</p>
+                                </div>
+                            </div>
+                            <div class="form-gp">
+                                <label for="email">信箱<span class="notice">*</span></label>
+                                <input type="text" name="email" id="email" value="">
+                                <div class="text">
+                                    <p class="notice">testtesttesttest</p>
+                                </div>
+                            </div>
+                            <div class="code-gp">
+                                <label for="code2">驗證碼<span class="notice">*</span></label>
+                                <div class="text-gp">
+                                    <input class="code" type="text" name="code" id="code2">
+                                    <img class="RP" src="img/RandomPic_ForLogin.jpg" alt="圖片驗證碼">
+                                    <button name="reform" id="reform2" class="reform" onclick="" title="刷新"
+                                        type="button"><i class="fas fa-sync-alt"></i><span
+                                            class="d-none">刷新</span></button>
+                                    <button name="audio" id="btn_Voice2" class="btnPlayAudio" onclick="PlayVoice();"
+                                        title="播放驗證碼語音" type="button"><i class="fas fa-volume-up"></i><span
+                                            class="d-none">語音驗證</span></button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="go" id="go">確認更改</button>
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('book-header-nomenu-img.html', function () {
+                // header 載入完成後，綁定事件
+                initMobileMenu();
+            });
+
+            $("#footer").load("book-footer.html");
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>單位資料</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C">:::</a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html" title="首頁"><i class="fas fa-home"></i><span class="d-none">首頁</span></a>
+                    </li>
+                    <li>></li>
+                    <li><a href="tax-break.html" title="申請減免營業稅及娛樂稅">申請減免營業稅及娛樂稅</a>
+                    </li>
+                    <li>></li>
+                    <li><a href="book-login.html" title="圖書出版品類線上申請系統">圖書出版品類線上申請系統</a>
+                    <li>></li>
+                    <li><span>單位資料</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 單位資料 -->
+        <section class="content-signup book">
+            <h2>單位資料</h2>
+            <div class="step">
+                <div class="view-gp">
+                    <button type="button" class="button-brown"><i class="fas fa-building"></i>單位出版品牌申請</button>
+                    <button type="button" class="button-brown"><i class="fas fa-pen"></i>系統自動送案申請</button>
+                    <button type="button" class=""><i class="fas fa-file-export"></i>個人出版者圖書資料匯入</button>
+                    <button type="button" class=""><i class="fas fa-book-reader"></i>個人出版者系統自動送案申請</button>
+                    <button type="button" class="button-outline"><i class="fas fa-print"></i>單位資料列印</button>
+                    <button type="button" class="button-outline"><i class="fas fa-file-export"></i>單位資料匯出</button>
+                    <button type="button" class="button-outline"><i class="fas fa-pen"></i>單位資料變更</button>
+                    <button type="button" class="button-outline"><i class="fas fa-user"></i>單位管理員變更</button>
+                    <button type="button" class="button-outline red"><i class="fas fa-exchange-alt"></i>API介接申請</button>
+
+                </div>
+            </div>
+            <div class="container">
+                <form>
+                    <fieldset disabled class="fieldset-disabled">
+                        <h3>單位基本資料</h3>
+                        <div class="form-gp">
+                            <label for="BAN">統一編號</label>
+                            <input type="number" name="BAN" id="BAN" placeholder="12345678">
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_registration-num">立案證號</label>
+                            <input type="text" name="unit_registration-num" id="unit_registration-num"
+                                placeholder="12345678">
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_name">申請單位名稱</label>
+                            <input type="text" name="unit_name" id="unit_name" placeholder="123系統科技股份有限公司">
+                        </div>
+                        <div class="form-gp choice-btn">
+                            <div class="title">申請單位類型</div>
+                            <div class="item">
+                                <input type="checkbox" name="unit_type" value="" id="unit_type" checked>
+                                <label for="unit_type">
+                                    圖書出版
+                                </label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox" name="unit_type" value="" id="unit_type2" checked>
+                                <label for="unit_type2">
+                                    圖書進口
+                                </label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox" name="unit_type" value="" id="unit_type3">
+                                <label for="unit_type3">
+                                    圖書批發零售
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_responsible_name">申請單位負責人姓名</label>
+                            <input type="text" name="unit_responsible_name" id="unit_responsible_name"
+                                placeholder="某某某">
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_tel">申請單位電話</label>
+                            <input type="number" name="unit_tel" id="unit_tel" placeholder="12345678">
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_registeredAddress_area4">申請單位立案地址</label>
+                            <div class="address">
+                                <select name="type" id="unit_registeredAddress_area1">
+                                    <option value="list1">臺北市</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
+                                <select name="type" id="unit_registeredAddress_area2">
+                                    <option value="list1">114 內湖區</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
+                                <input type="text" name="unit_registeredAddress_area4" id="unit_registeredAddress_area4"
+                                    placeholder="內湖路A段B巷C號1F">
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <div class="label-withButton">
+                                <label for="unit_mailingAddress_area4">申請單位通訊地址</label>
+                            </div>
+                            <div class="address">
+                                <select name="type" id="unit_mailingAddress_area1">
+                                    <option value="list1">臺北市</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
+                                <select name="type" id="unit_mailingAddress_area2">
+                                    <option value="list1">114 內湖區</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
+                                <input type="text" name="type" id="unit_mailingAddress_area4" placeholder="內湖路A段B巷C號1F">
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_automatic">是否已申請系統自動送案</label>
+                            <input type="text" name="unit_automatic" id="unit_automatic" placeholder="否">
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_personal-automatic">是否已申請個人出版者系統自動送案</label>
+                            <input type="text" name="unit_personal-automatic" id="unit_personal-automatic"
+                                placeholder="否">
+                        </div>
+                    </fieldset>
+                    <fieldset disabled class="fieldset-disabled">
+                        <h3>檔案上傳</h3>
+                        <div class="form-gp">
+                            <label for="file">申請單位立案或登記證明</label>
+                            <div class="file-upload">
+                                <input type="button" id="file" value="檔案上傳">
+                                <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <div class="btn-gp">
+                                <a href="" class="download-sample" download=""><i class="fas fa-paperclip"></i>檔案下載</a>
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <label for="file2">申請單位負責人身分證正反面影本</label>
+                            <div class="file-upload">
+                                <input type="button" id="file2" value="檔案上傳">
+                                <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <div class="btn-gp">
+                                <a href="" class="download-sample" download=""><i class="fas fa-paperclip"></i>檔案下載</a>
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <div class="label-withButton">
+                                <label for="file3">申請帳號與註冊證明書</label>
+                            </div>
+                            <div class="file-upload">
+                                <input type="button" id="file3" value="檔案上傳">
+                                <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <div class="btn-gp">
+                                <a href="" class="download-sample" download=""><i class="fas fa-paperclip"></i>檔案下載</a>
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <div class="label-withButton">
+                                <label for="file4">需檢附文件</label>
+                            </div>
+                            <div class="file-upload">
+                                <input type="button" id="file4" value="檔案上傳">
+                                <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <div class="btn-gp">
+                                <a href="" class="download-sample" download=""><i class="fas fa-paperclip"></i>檔案下載</a>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <h2>單位出版品牌列表</h2>
+                <div class="case-list">
+                    <table class="table-default  ellipsis-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 25%;">項次</th>
+                                <th style="width: 75%;">出版品名稱</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-title="項次">
+                                    <p>1</p>
+                                </td>
+                                <td data-title="出版品名稱">哈利波特（3）：阿茲卡班的逃犯
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="項次">
+                                    <p>2</p>
+                                </td>
+                                <td data-title="出版品名稱">哈利波特（3）：阿茲卡班的逃犯
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="項次">
+                                    <p>3</p>
+                                </td>
+                                <td data-title="出版品名稱">哈利波特（3）：阿茲卡班的逃犯
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="項次">
+                                    <p>4</p>
+                                </td>
+                                <td data-title="出版品名稱">哈利波特（3）：阿茲卡班的逃犯
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="項次">
+                                    <p>5</p>
+                                </td>
+                                <td data-title="出版品名稱">哈利波特（3）：阿茲卡班的逃犯
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom">
+                        <div class="pagination">
+                            <ul>
+                                <li><a href=""><i class="fas fa-angle-double-left"></i></a></li>
+                                <li><a href=""><i class="fas fa-angle-left"></i></a></li>
+                                <li><a href="" class="active">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                                <li><a href="">5</a></li>
+                                <li><a href=""><i class="fas fa-angle-right"></i></a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <h2>通過免稅認可書籍數量</h2>
+                <div class="case-list">
+                    <table class="table-default  ellipsis-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 50%;">案件類別</th>
+                                <th style="width: 50%;">出版品名稱</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-title="案件類別">
+                                    <p>本國</p>
+                                </td>
+                                <td data-title="出版品名稱">0
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="案件類別">
+                                    <p>進口</p>
+                                </td>
+                                <td data-title="出版品名稱">0
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="案件類別">
+                                    <p>全部</p>
+                                </td>
+                                <td data-title="出版品名稱">0
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <h2>個人出版者列表</h2>
+                <div class="case-list">
+                    <table class="table-default  mb-separate ellipsis-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 20%;">項次</th>
+                                <th style="width: 26.6%;">個人出版者名稱</th>
+                                <th style="width: 26.6%;">狀態</th>
+                                <th style="width: 26.6%;" class="th-function">功能</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-title="項次">1
+                                </td>
+                                <td data-title="個人出版者名稱">某某某</td>
+                                <td data-title="狀態">尚未送出</td>
+                                <td data-title="功能" class="text-left">
+                                    <div class="function">
+                                        <a href="book-case-view-tax-break.html" class="link" title="瀏覽"><i
+                                                class="fas fa-eye"></i>
+                                            <span>瀏覽</span></a>
+                                        <a href="book-case-view-tax-break.html" class="link" title="訂正"><i
+                                                class="fas fa-pen"></i>
+                                            <span>編輯</span></a>
+                                        <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                            <span>刪除</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="項次">2
+                                </td>
+                                <td data-title="個人出版者名稱">某某某</td>
+                                <td data-title="狀態">尚未送出</td>
+                                <td data-title="功能" class="text-left">
+                                    <div class="function">
+                                        <a href="book-case-view-tax-break.html" class="link" title="瀏覽"><i
+                                                class="fas fa-eye"></i>
+                                            <span>瀏覽</span></a>
+                                        <a href="book-case-view-tax-break.html" class="link" title="訂正"><i
+                                                class="fas fa-pen"></i>
+                                            <span>編輯</span></a>
+                                        <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                            <span>刪除</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="項次">3
+                                </td>
+                                <td data-title="個人出版者名稱">某某某</td>
+                                <td data-title="狀態">尚未送出</td>
+                                <td data-title="功能" class="text-left">
+                                    <div class="function">
+                                        <a href="book-case-view-tax-break.html" class="link" title="瀏覽"><i
+                                                class="fas fa-eye"></i>
+                                            <span>瀏覽</span></a>
+                                        <a href="book-case-view-tax-break.html" class="link" title="訂正"><i
+                                                class="fas fa-pen"></i>
+                                            <span>編輯</span></a>
+                                        <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                            <span>刪除</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="項次">4
+                                </td>
+                                <td data-title="個人出版者名稱">某某某</td>
+                                <td data-title="狀態">尚未送出</td>
+                                <td data-title="功能" class="text-left">
+                                    <div class="function">
+                                        <a href="book-case-view-tax-break.html" class="link" title="瀏覽"><i
+                                                class="fas fa-eye"></i>
+                                            <span>瀏覽</span></a>
+                                        <a href="book-case-view-tax-break.html" class="link" title="訂正"><i
+                                                class="fas fa-pen"></i>
+                                            <span>編輯</span></a>
+                                        <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                            <span>刪除</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="項次">5
+                                </td>
+                                <td data-title="個人出版者名稱">某某某</td>
+                                <td data-title="狀態">尚未送出</td>
+                                <td data-title="功能" class="text-left">
+                                    <div class="function">
+                                        <a href="book-case-view-tax-break.html" class="link" title="瀏覽"><i
+                                                class="fas fa-eye"></i>
+                                            <span>瀏覽</span></a>
+                                        <a href="book-case-view-tax-break.html" class="link" title="訂正"><i
+                                                class="fas fa-pen"></i>
+                                            <span>編輯</span></a>
+                                        <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                            <span>刪除</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom">
+                        <div class="pagination">
+                            <ul>
+                                <li><a href=""><i class="fas fa-angle-double-left"></i></a></li>
+                                <li><a href=""><i class="fas fa-angle-left"></i></a></li>
+                                <li><a href="" class="active">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                                <li><a href="">5</a></li>
+                                <li><a href=""><i class="fas fa-angle-right"></i></a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('book-header.html', function () {
+                // header 載入完成後，綁定事件
+                initMobileMenu();
+            });
+
+            $("#footer").load("book-footer.html");
+        });
+
+    </script>
+</body>
+
+</html>

@@ -813,6 +813,7 @@ body {
                     box-shadow: 0px 5px 10px rgba($color: $primary-tint, $alpha: 0.1);
                     @include mobile-L {
                         padding: $p-M $p-S;
+                        margin-bottom: $m-S;
                     }
                     .ps {
                         color: $primary-default;
@@ -849,6 +850,23 @@ body {
                                     }
                                 }
                             }
+                            &.book-bottomLink {
+                                display: flex;
+                                justify-content: space-between;
+                                flex-wrap: wrap;
+                                a {
+                                    width: 47%;
+                                    margin: 0;
+                                    padding: $p-XXS 0;
+                                    margin-bottom: $m-XXS;
+                                    text-align: left;
+                                    @include mobile-L {
+                                        width: 100%;
+                                        text-align: center;
+                                        margin-bottom: $m-XS;
+                                    }
+                                }
+                            }
                         }
                         p {
                             font-size: $size-p;
@@ -857,11 +875,11 @@ body {
                     .code-gp {
                         margin-bottom: $m-S;
                     }
-                    hr{
+                    hr {
                         margin-top: $m-M;
                         margin-bottom: $m-S;
                     }
-                    .title{
+                    .title {
                         font-size: $size-h5;
                         font-weight: bold;
                         margin-bottom: $m-XS;
@@ -1219,6 +1237,48 @@ body {
                             }
                         }
                     }
+                }
+            }
+            &.book {
+                h2 {
+                    text-align: left;
+                    max-width: 1140px;
+                    margin: auto;
+                    margin-bottom: $m-XS;
+                }
+                .step {
+                    justify-content: flex-end;
+                    .view-gp {
+                        justify-content: flex-end;
+                        flex-wrap: wrap;
+                        max-width: initial;
+                        padding: 0;
+                        @include mobile-L{
+                            justify-content: space-between;
+                        }
+                        button {
+                            margin-bottom: $m-XS;
+                            margin-right: 0;
+                            margin-left: $m-XS;
+                            @include mobile-L{
+                                width: 100%;
+                                margin: 0;
+                                margin-bottom: $m-XS;
+                            }
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+                form {
+                    margin-bottom: $m-M;
+                }
+                .case-list {
+                    margin-bottom: $m-L;
+                }
+                .bottom {
+                    margin-top: $m-S;
                 }
             }
         }

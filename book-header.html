@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free/js/all.min.js">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- 跳到主要內容區塊 -->
+    <div class="for_accessibility">
+        <a href="#AC" class="go-main" title="跳到主要內容區塊" tabindex="1">跳到主要內容區塊</a>
+    </div>
+
+    <nav class="navbar">
+        <div class="pc">
+            <div class="top book-member">
+                <a href="book-member.html" class="logo" title="首頁">
+                    <h1>文化藝術事業減免營業稅及娛樂稅—圖書出版品類線上申請系統</h1>
+                </a>
+                <div class="right">
+                    <a href="#U" id="AU" title="右上方功能區塊" accesskey="U">:::</a>
+                    <span class="user-title multiline-ellipsis">臺北市立中山女高畢業學生家長協會</span>
+                    <div class="btn">
+                        <ul>
+                            <li><a href="book-member.html" title="會員專區"><i class="fas fa-cog"></i>王心汝</a></li>
+                            <li>|</li>
+                            <li><a href="book-login.html" title="登出">登出</a></li>
+                        </ul>
+                    </div>
+                    <a href="webmap.html" class="icon-btn" title="網站導覽" aria-label="網站導覽"><i
+                            class="fas fa-sitemap"></i></a>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="nav-gp">
+                    <div class="nav-function">
+                        <a href="book-member-unit.html" title="單位資料">
+                            單位資料
+                        </a>
+                    </div>
+                    <div class="nav-function">
+                        <a href="book-member-account.html" title="帳號管理">
+                            帳號管理
+                        </a>
+                    </div>
+                    <div class="nav-function">
+                        <a href="book-case-manage.html" title="案件管理">
+                            案件管理
+                        </a>
+                    </div>
+                    <div class="nav-function">
+                        <a href="book-regulation.html" title="相關法規">
+                            相關法規
+                        </a>
+                    </div>
+                    <div class="nav-function">
+                        <a href="book-operating-instruction.html" title="操作說明">
+                            操作說明
+                        </a>
+                    </div>
+                    <div class="nav-function">
+                        <a href="book-approval-announcement.html" title="[另開視窗]認可公告" target="_blank">
+                            認可公告
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile">
+            <div class="menu">
+                <div class="fas fa-bars" role="button" tabindex="0" aria-label="開啟選單" aria-controls="main-menu"
+                aria-expanded="false">
+                </div>
+                <ul class="nav navbar-nav"  id="main-menu" aria-hidden="true">
+                    <li><a href="tax-break.html" title="申請減免營業稅及娛樂稅">
+                            申請減免營業稅及娛樂稅
+                        </a></li>
+                    <li><a href="book-member.html" title="會員專區">會員專區</a></li>
+                    <li><a href="book-member-unit.html" title="單位資料">單位資料</a></li>
+                    <li><a href="book-member-account.html" title="帳號管理">帳號管理</a></li>
+                    <li><a href="book-case-manage.html" title="案件管理">案件管理</a></li>
+                    <li><a href="book-regulation.html" title="相關法規">相關法規</a></li>
+                    <li><a href="book-operating-instruction.html" title="操作說明">操作說明</a></li>
+                    <li><a href="book-approval-announcement.html" title="[另開視窗]認可公告" target="_blank">認可公告</a></li>
+                    <li><a href="" title="登出">登出</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <a href="book-member.html" title="首頁">
+                    <div class="title">文化藝術事業減免營業稅及娛樂稅—圖書出版品類線上申請系統</div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- mobile-menu -->
+    <script>
+        var fas = document.querySelector(".fas.fa-bars")
+        var navbar_nav = document.querySelector(".nav.navbar-nav")
+        var nav_item = document.querySelector(".nav-item.dropdown")
+        fas.onclick = function () {
+            if (navbar_nav.classList.contains("active-ul")) {
+                navbar_nav.classList.remove("active-ul")
+            } else {
+                navbar_nav.classList.add("active-ul")
+            }
+        }
+        // 鍵盤可操作
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.fas.fa-bars');
+            const mainMenu = document.getElementById('main-menu');
+
+            const setMenuFocusable = (isFocusable) => {
+                const menuItems = mainMenu.querySelectorAll('a, button, [tabindex]');
+                menuItems.forEach(item => {
+                    if (isFocusable) {
+                        item.removeAttribute('tabindex'); // 恢復原始聚焦能力
+                    } else {
+                        item.setAttribute('tabindex', '-1'); // 移除聚焦能力
+                    }
+                });
+            };
+
+            // 初始設置，隱藏選單時不可聚焦
+            setMenuFocusable(false);
+
+            menuToggle.addEventListener('click', function () {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+
+                // 切換屬性值
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                mainMenu.setAttribute('aria-hidden', isExpanded);
+
+                // 控制選單項目是否可聚焦
+                setMenuFocusable(!isExpanded);
+            });
+
+            // 鍵盤支持（Enter 或空格鍵）
+            menuToggle.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault(); // 防止滾動
+                    menuToggle.click(); // 觸發點擊事件
+                }
+            });
+        });
+        //AU 可聚焦
+        document.addEventListener('keydown', function (e) {
+            // 多種快捷鍵組合
+            if ((e.altKey && e.key === 'u') ||
+                (e.altKey && e.keyCode === 85) ||
+                (e.ctrlKey && e.altKey && e.key === 'u')) {
+
+                const auElement = document.getElementById('AU');
+                if (auElement) {
+                    e.preventDefault();
+                    auElement.focus();
+                }
+            }
+        });
+        // 修正enter鍵失效
+        function initMobileMenu() {
+            const menuToggle = document.querySelector('.fas.fa-bars');
+            const mainMenu = document.getElementById('main-menu');
+
+            if (!menuToggle || !mainMenu) return; // 防止錯誤
+
+            const setMenuFocusable = (isFocusable) => {
+                const menuItems = mainMenu.querySelectorAll('a, button, [tabindex]');
+                menuItems.forEach(item => {
+                    isFocusable ? item.removeAttribute('tabindex') : item.setAttribute('tabindex', '-1');
+                });
+            };
+
+            setMenuFocusable(false);
+
+            menuToggle.addEventListener('click', function () {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+                mainMenu.setAttribute('aria-hidden', String(isExpanded));
+                setMenuFocusable(!isExpanded);
+            });
+
+            // 修正 Enter 鍵無法打開選單的問題
+            menuToggle.addEventListener('keydown', function (event) {
+                if ((event.key === 'Enter' || event.key === ' ')) {
+                    event.preventDefault();
+                    menuToggle.click();
+                }
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>
