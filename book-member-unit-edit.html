@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>單位資料變更</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C">:::</a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html" title="首頁"><i class="fas fa-home"></i><span class="d-none">首頁</span></a>
+                    </li>
+                    <li>></li>
+                    <li><a href="tax-break.html" title="申請減免營業稅及娛樂稅">申請減免營業稅及娛樂稅</a>
+                    </li>
+                    <li>></li>
+                    <li><a href="book-login.html" title="圖書出版品類線上申請系統">圖書出版品類線上申請系統</a>
+                    <li>></li>
+                    <li><a href="book-member-unit.html" title="單位資料">單位資料</a>
+                    <li>></li>
+                    <li><span>單位資料變更</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 單位資料變更 -->
+        <section class="content-signup book">
+            <h2>單位資料變更</h2>
+            <div class="step">
+                <div class="view-gp">
+                    <button type="button" class="button-brown"
+                        onclick="javascript:location.href='book-member-unit-unit-apply.html'"><i
+                            class="fas fa-building"></i>單位出版品牌申請</button>
+                    <button type="button" class="button-brown"
+                        onclick="javascript:location.href='book-member-unit-unit-automatic.html'"><i
+                            class="fas fa-pen"></i>系統自動送案申請</button>
+                    <button type="button" class=""
+                        onclick="javascript:location.href='book-member-unit-personal-import.html'"><i
+                            class="fas fa-file-export"></i>個人出版者圖書資料匯入</button>
+                    <button type="button" class=""
+                        onclick="javascript:location.href='book-member-unit-personal-automatic.html'"><i
+                            class="fas fa-book-reader"></i>個人出版者系統自動送案申請</button>
+                    <button type="button" class="button-outline"><i class="fas fa-print"></i>單位資料列印</button>
+                    <button type="button" class="button-outline"><i class="fas fa-file-export"></i>單位資料匯出</button>
+                    <button type="button" class="button-outline"
+                        onclick="javascript:location.href='book-member-unit-edit.html'"><i
+                            class="fas fa-pen"></i>單位資料變更</button>
+                    <button type="button" class="button-outline"
+                        onclick="javascript:location.href='book-member-unit-admin.html'"><i
+                            class="fas fa-user"></i>單位管理員變更</button>
+                    <button type="button" class="button-outline red"><i class="fas fa-exchange-alt"></i>API介接申請</button>
+
+                </div>
+            </div>
+            <div class="container">
+                <form>
+                    <article>
+                        <p class="acc-info"><i class="fas fa-exclamation-circle"></i>標註星號（<span
+                                class="notice">*</span>）表示此欄位必須填寫</p>
+                        <h3>單位基本資料</h3>
+                        <div class="form-gp">
+                            <label for="BAN">統一編號<span class="notice">*</span></label>
+                            <input type="number" name="BAN" id="BAN" placeholder="12345678" disabled>
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_num">立案證號<span class="notice">*</span></label>
+                            <input type="text" name="unit_num" id="unit_num" placeholder="12345678">
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_name">申請單位名稱<span class="notice">*</span></label>
+                            <input type="text" name="unit_name" id="unit_name" placeholder="123系統科技股份有限公司">
+                        </div>
+                        <div class="form-gp choice-btn">
+                            <h5>申請單位類型 (可複選)<span class="notice">*</span></h5>
+                            <div class="type-gp">
+                                <button type="button" class="button-outline active">圖書出版</button>
+                                <button type="button" class="button-outline active">圖書進口</button>
+                                <button type="button" class="button-outline">圖書批發零售</button>
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_RP">申請單位負責人姓名<span class="notice">*</span></label>
+                            <input type="text" name="unit_RP" id="unit_RP" placeholder="某某某">
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_tel">申請單位電話<span class="notice">*</span></label>
+                            <input type="number" name="unit_tel" id="unit_tel" placeholder="12345678">
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_registeredAddress_area4">申請單位立案地址<span class="notice">*</span></label>
+                            <div class="address">
+                                <select name="type" id="unit_registeredAddress_area1">
+                                    <option value="list1">臺北市</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
+                                <select name="type" id="unit_registeredAddress_area2">
+                                    <option value="list1">114 內湖區</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
+                                <input type="text" name="unit_registeredAddress_area4" id="unit_registeredAddress_area4"
+                                    placeholder="內湖路A段B巷C號1F">
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <div class="label-withButton">
+                                <label for="unit_mailingAddress_area4">申請單位通訊地址<span class="notice">*</span></label>
+                                <button class="" type="button" onclick="javascript:location.href=''">
+                                    同上
+                                </button>
+                            </div>
+                            <div class="address">
+                                <select name="type" id="unit_mailingAddress_area1">
+                                    <option value="list1">臺北市</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
+                                <select name="type" id="unit_mailingAddress_area2">
+                                    <option value="list1">114 內湖區</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
+                                <input type="text" name="type" id="unit_mailingAddress_area4" placeholder="內湖路A段B巷C號1F">
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <h3>檔案上傳</h3>
+                        <div class="form-gp">
+                            <label for="file">申請單位立案或登記證明<span class="notice">*</span></label>
+                            <div class="file-upload">
+                                <input type="button" id="file" value="檔案上傳">
+                                <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <ul class="ps">
+                                <li>公司與商業，需提供設⽴登記表或變更登記表、商業登記抄本、或財政部稅務入口網稅籍登記資料查詢結果</li>
+                                <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
+                                <li>檔案請小於 20 MB</li>
+                            </ul>
+                        </div>
+                        <div class="form-gp">
+                            <label for="file2">申請單位負責人身分證正反面影本<span class="notice">*</span></label>
+                            <div class="file-upload">
+                                <input type="button" id="file2" value="檔案上傳">
+                                <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <ul class="ps">
+                                <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
+                                <li>檔案請小於 20 MB</li>
+                            </ul>
+                        </div>
+                        <div class="form-gp">
+                            <div class="label-withButton">
+                                <label for="file3">申請註冊與帳號證明書<span class="notice">*</span></label>
+                                <a href="" class="download-sample" download title="[下載檔案]申請註冊與帳號證明書.doc"><i
+                                        class="fas fa-paperclip"></i>範本下載</a>
+                            </div>
+                            <div class="file-upload">
+                                <input type="button" id="file3" value="檔案上傳">
+                                <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <ul class="ps">
+                                <li>請填寫並⽤印後將掃描檔上傳</li>
+                                <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
+                                <li>檔案請小於 20 MB</li>
+                            </ul>
+                        </div>
+                        <div class="form-gp">
+                            <label for="file2">經營圖書出版品出版、進口或銷售事務之證明文件<span class="notice">*</span></label>
+                            <div class="file-upload">
+                                <input type="button" id="file2" value="檔案上傳">
+                                <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <ul class="ps">
+                                <li>以下擇一：例如任一本所出版之書籍版權頁、任一次圖書出版、銷售或進貨紀錄，當年度書籍 出版或經銷計畫、圖書進口報單或出貨單等，可證明有出版、進口、銷售事實即可(營業稅申報
+                                    書無法作為證明文件)，如有多個檔案，請壓縮為一個檔案後上傳</li>
+                                <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
+                                <li>檔案請小於 20 MB</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <div class="btn-tool">
+                        <input type="button" value="取消" class="outline" onclick="location.href='member-unit.html'">
+                        <input type="submit" value="送出變更" class="submit">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('book-header.html', function () {
+                // header 載入完成後，綁定事件
+                initMobileMenu();
+            });
+
+            $("#footer").load("book-footer.html");
+        });
+
+    </script>
+</body>
+
+</html>

@@ -155,6 +155,19 @@ body {
                 line-height: 1.75;
             }
         }
+        ol.ps {
+            padding-left: $p-XS;
+            margin-bottom: $m-M;
+            @include mobile-L{
+                margin-bottom: $m-S;
+            }
+            li {
+                list-style-position: outside;
+                color: $text;
+                line-height: 1.75;
+            }
+        }
+        
         //網站導覽
         .content-webmap {
             .container {
@@ -1245,6 +1258,16 @@ body {
                     max-width: 1140px;
                     margin: auto;
                     margin-bottom: $m-XS;
+                    @include web-S{
+                        padding: 0 $p-XL;
+                    }
+                    @include pad{
+                        padding: 0 $p-L;
+                    }
+                    @include mobile-L{
+                        padding: 0 $p-XS;
+
+                    }
                 }
                 .step {
                     justify-content: flex-end;
@@ -1253,14 +1276,14 @@ body {
                         flex-wrap: wrap;
                         max-width: initial;
                         padding: 0;
-                        @include mobile-L{
+                        @include mobile-L {
                             justify-content: space-between;
                         }
                         button {
                             margin-bottom: $m-XS;
                             margin-right: 0;
                             margin-left: $m-XS;
-                            @include mobile-L{
+                            @include mobile-L {
                                 width: 100%;
                                 margin: 0;
                                 margin-bottom: $m-XS;

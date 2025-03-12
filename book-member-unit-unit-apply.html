@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>單位出版品牌申請</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C">:::</a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html" title="首頁"><i class="fas fa-home"></i><span class="d-none">首頁</span></a>
+                    </li>
+                    <li>></li>
+                    <li><a href="tax-break.html" title="申請減免營業稅及娛樂稅">申請減免營業稅及娛樂稅</a>
+                    </li>
+                    <li>></li>
+                    <li><a href="book-login.html" title="圖書出版品類線上申請系統">圖書出版品類線上申請系統</a>
+                    <li>></li>
+                    <li><a href="book-member-unit.html" title="單位資料">單位資料</a>
+                    <li>></li>
+                    <li><span>單位出版品牌申請</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 單位出版品牌申請 -->
+        <section class="content-signup book">
+            <h2>單位出版品牌申請</h2>
+            <div class="step">
+                <div class="view-gp">
+                    <button type="button" class="button-brown"
+                        onclick="javascript:location.href='book-member-unit-unit-apply.html'"><i
+                            class="fas fa-building"></i>單位出版品牌申請</button>
+                    <button type="button" class="button-brown"
+                        onclick="javascript:location.href='book-member-unit-unit-automatic.html'"><i
+                            class="fas fa-pen"></i>系統自動送案申請</button>
+                    <button type="button" class=""
+                        onclick="javascript:location.href='book-member-unit-personal-import.html'"><i
+                            class="fas fa-file-export"></i>個人出版者圖書資料匯入</button>
+                    <button type="button" class=""
+                        onclick="javascript:location.href='book-member-unit-personal-automatic.html'"><i
+                            class="fas fa-book-reader"></i>個人出版者系統自動送案申請</button>
+                    <button type="button" class="button-outline"><i class="fas fa-print"></i>單位資料列印</button>
+                    <button type="button" class="button-outline"><i class="fas fa-file-export"></i>單位資料匯出</button>
+                    <button type="button" class="button-outline"
+                        onclick="javascript:location.href='book-member-unit-edit.html'"><i
+                            class="fas fa-pen"></i>單位資料變更</button>
+                    <button type="button" class="button-outline"
+                        onclick="javascript:location.href='book-member-unit-admin.html'"><i
+                            class="fas fa-user"></i>單位管理員變更</button>
+                    <button type="button" class="button-outline red"><i class="fas fa-exchange-alt"></i>API介接申請</button>
+
+                </div>
+            </div>
+            <div class="container">
+                <form>
+                    <legend class="sr-only">申請表單</legend>
+                    <p class="acc-info"><i class="fas fa-exclamation-circle"></i>標註星號（<span
+                            class="notice">*</span>）表示此欄位必須填寫</p>
+                    <ol class="ps">
+                        <li>單位品牌名稱需與 貴單位於國家圖書館全國新書資訊網/出版機構網之出版機構簡稱⼀致。如有需要，可⾄ <a
+                                href="http://isbn.ncl.edu.tw/NEW_ISBNNet/" target="_blank"
+                                title="[另開視窗]國家圖書館全國新書資訊網/出版機構網">國家圖書館全國新書資訊網/出版機構網</a> 查詢</li>
+                        <li>本系統將會對您提供的出版品牌資訊進⾏審核。審核作業約需3個⼯作天。此外，審核時間有可能會因為審核狀況⽽拉⻑。我們將會以電⼦郵件告知您審核結果，請確認收件匣及垃圾信件資料夾
+                        </li>
+                        <li>請確實填寫貴單位所擁有之出版品牌，以便匯入該品牌下所有出版之圖書資料</li>
+                    </ol>
+                    <div class="form-gp">
+                        <label for="unit_name">單位出版品牌名稱 <span class="notice">*</span> </label>
+                        <input type="text" name="unit_name" id="unit_name" placeholder="請輸入名稱">
+                    </div>
+                    <div class="form-gp">
+                        <label for="file">該品牌屬於貴單位之證明文件 <span class="remark">(例如網站公示資料、書籍版權頁、出貨單)</span> </label>
+                        <div class="file-upload">
+                            <input type="button" id="file" value="檔案上傳">
+                            <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                        </div>
+                        <ul class="ps">
+                            <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
+                            <li>檔案請小於 20MB</li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-tool">
+                        <input type="button" value="取消" class="outline" onclick="location.href='book-member-unit.html'">
+                        <input type="submit" value="送出申請" class="submit">
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('book-header.html', function () {
+                // header 載入完成後，綁定事件
+                initMobileMenu();
+            });
+
+            $("#footer").load("book-footer.html");
+        });
+
+    </script>
+</body>
+
+</html>

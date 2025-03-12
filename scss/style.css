@@ -254,6 +254,12 @@
   background-color: #e5e5e5 !important;
   color: #595757 !important;
 }
+* .ui-autocomplete {
+  max-height: 200px;
+  overflow-y: auto;
+  /* prevent horizontal scrollbar */
+  overflow-x: hidden;
+}
 * label {
   width: 100%;
   padding: 0;
@@ -2126,6 +2132,7 @@ body form .form-gp .title {
   font-size: 1.25rem;
   width: 100%;
   font-weight: bold;
+  margin-bottom: 4px;
 }
 body form .form-gp p {
   width: 100%;
@@ -2556,7 +2563,6 @@ body form .choice-btn .item {
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 8px;
 }
 @media (max-width: 568px) {
   body form .choice-btn .item {
@@ -3405,6 +3411,20 @@ body main ul.ps li {
   list-style-position: outside;
   list-style-type: disc;
   color: #88670c;
+  line-height: 1.75;
+}
+body main ol.ps {
+  padding-left: 16px;
+  margin-bottom: 36px;
+}
+@media (max-width: 568px) {
+  body main ol.ps {
+    margin-bottom: 20px;
+  }
+}
+body main ol.ps li {
+  list-style-position: outside;
+  color: #595757;
   line-height: 1.75;
 }
 body main .content-webmap .container .list-gp {
@@ -4567,6 +4587,21 @@ body main .content-signup.book h2 {
   max-width: 1140px;
   margin: auto;
   margin-bottom: 12px;
+}
+@media (max-width: 1024px) {
+  body main .content-signup.book h2 {
+    padding: 0 56px;
+  }
+}
+@media (max-width: 768px) {
+  body main .content-signup.book h2 {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 568px) {
+  body main .content-signup.book h2 {
+    padding: 0 16px;
+  }
 }
 body main .content-signup.book .step {
   justify-content: flex-end;

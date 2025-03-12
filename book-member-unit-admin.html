@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>單位管理員變更</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C">:::</a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html" title="首頁"><i class="fas fa-home"></i><span class="d-none">首頁</span></a>
+                    </li>
+                    <li>></li>
+                    <li><a href="tax-break.html" title="申請減免營業稅及娛樂稅">申請減免營業稅及娛樂稅</a>
+                    </li>
+                    <li>></li>
+                    <li><a href="book-login.html" title="圖書出版品類線上申請系統">圖書出版品類線上申請系統</a>
+                    <li>></li>
+                    <li><a href="book-member-unit.html" title="單位資料">單位資料</a>
+                    <li>></li>
+                    <li><span>單位管理員變更</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 單位管理員變更 -->
+        <section class="content-signup book">
+            <h2>單位管理員變更</h2>
+            <div class="step">
+                <div class="view-gp">
+                    <button type="button" class="button-brown"
+                        onclick="javascript:location.href='book-member-unit-unit-apply.html'"><i
+                            class="fas fa-building"></i>單位出版品牌申請</button>
+                    <button type="button" class="button-brown"
+                        onclick="javascript:location.href='book-member-unit-unit-automatic.html'"><i
+                            class="fas fa-pen"></i>系統自動送案申請</button>
+                    <button type="button" class=""
+                        onclick="javascript:location.href='book-member-unit-personal-import.html'"><i
+                            class="fas fa-file-export"></i>個人出版者圖書資料匯入</button>
+                    <button type="button" class=""
+                        onclick="javascript:location.href='book-member-unit-personal-automatic.html'"><i
+                            class="fas fa-book-reader"></i>個人出版者系統自動送案申請</button>
+                    <button type="button" class="button-outline"><i class="fas fa-print"></i>單位資料列印</button>
+                    <button type="button" class="button-outline"><i class="fas fa-file-export"></i>單位資料匯出</button>
+                    <button type="button" class="button-outline"
+                        onclick="javascript:location.href='book-member-unit-edit.html'"><i
+                            class="fas fa-pen"></i>單位資料變更</button>
+                    <button type="button" class="button-outline"
+                        onclick="javascript:location.href='book-member-unit-admin.html'"><i
+                            class="fas fa-user"></i>單位管理員變更</button>
+                    <button type="button" class="button-outline red"><i class="fas fa-exchange-alt"></i>API介接申請</button>
+
+                </div>
+            </div>
+            <div class="container">
+                <form>
+                    <p class="acc-info"><i class="fas fa-exclamation-circle"></i>標註星號（<span
+                            class="notice">*</span>）表示此欄位必須填寫</p>
+
+                    <legend>
+                        <h3>單位管理者資料</h3>
+                    </legend>
+                    <div class="form-gp">
+                        <label for="BAN">統一編號<span class="notice">*</span></label>
+                        <input type="number" name="BAN" id="BAN" placeholder="12345678" disabled>
+                    </div>
+                    <div class="form-gp">
+                        <label for="admin_name">單位管理者姓名<span class="notice">*</span></label>
+                        <input type="text" name="admin_name" id="admin_name" placeholder="請輸入姓名">
+                    </div>
+                    <div class="form-gp">
+                        <label for="admin_ID">單位管理者身分證字號<span class="notice">*</span></label>
+                        <input type="text" name="admin_ID" id="admin_ID"  placeholder="請輸入身分證字號">
+                    </div>
+                    <div class="form-gp">
+                        <label for="unit_tel">申請單位電話<span class="notice">*</span></label>
+                        <input type="number" name="unit_tel" id="unit_tel"  placeholder="請輸入單位電話">
+                    </div>
+                    <div class="form-gp">
+                        <label for="admin_email">單位管理者Email<span class="notice">*</span></label>
+                        <input type="email" name="admin_email" id="admin_email" placeholder="請輸入Email">
+                    </div>
+                    <div class="form-gp">
+                        <label for="admin_tel">單位管理者聯絡電話<span class="notice">*</span></label>
+                        <input type="number" name="admin_tel" id="admin_tel"  placeholder="請輸入管理者電話">
+                    </div>
+                    <div class="form-gp">
+                        <label for="admin_mobile">單位管理者行動電話</label>
+                        <input type="number" name="admin_mobile" id="admin_mobile" placeholder="請輸入管理者手機">
+                    </div>
+
+                    <div class="btn-tool">
+                        <input type="button" value="取消" class="outline" onclick="location.href='member-unit.html'">
+                        <input type="submit" value="確認" class="submit">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('book-header.html', function () {
+                // header 載入完成後，綁定事件
+                initMobileMenu();
+            });
+
+            $("#footer").load("book-footer.html");
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>個人出版者系統自動送案申請</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C">:::</a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html" title="首頁"><i class="fas fa-home"></i><span class="d-none">首頁</span></a>
+                    </li>
+                    <li>></li>
+                    <li><a href="tax-break.html" title="申請減免營業稅及娛樂稅">申請減免營業稅及娛樂稅</a>
+                    </li>
+                    <li>></li>
+                    <li><a href="book-login.html" title="圖書出版品類線上申請系統">圖書出版品類線上申請系統</a>
+                    <li>></li>
+                    <li><a href="book-member-unit.html" title="單位資料">單位資料</a>
+                    <li>></li>
+                    <li><span>個人出版者系統自動送案申請</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 個人出版者系統自動送案申請 -->
+        <section class="content-signup book">
+            <h2>個人出版者系統自動送案申請</h2>
+            <div class="step">
+                <div class="view-gp">
+                    <button type="button" class="button-brown"
+                        onclick="javascript:location.href='book-member-unit-unit-apply.html'"><i
+                            class="fas fa-building"></i>單位出版品牌申請</button>
+                    <button type="button" class="button-brown"
+                        onclick="javascript:location.href='book-member-unit-unit-automatic.html'"><i
+                            class="fas fa-pen"></i>系統自動送案申請</button>
+                    <button type="button" class=""
+                        onclick="javascript:location.href='book-member-unit-personal-import.html'"><i
+                            class="fas fa-file-export"></i>個人出版者圖書資料匯入</button>
+                    <button type="button" class=""
+                        onclick="javascript:location.href='book-member-unit-personal-automatic.html'"><i
+                            class="fas fa-book-reader"></i>個人出版者系統自動送案申請</button>
+                    <button type="button" class="button-outline"><i class="fas fa-print"></i>單位資料列印</button>
+                    <button type="button" class="button-outline"><i class="fas fa-file-export"></i>單位資料匯出</button>
+                    <button type="button" class="button-outline"
+                        onclick="javascript:location.href='book-member-unit-edit.html'"><i
+                            class="fas fa-pen"></i>單位資料變更</button>
+                    <button type="button" class="button-outline"
+                        onclick="javascript:location.href='book-member-unit-admin.html'"><i
+                            class="fas fa-user"></i>單位管理員變更</button>
+                    <button type="button" class="button-outline red"><i class="fas fa-exchange-alt"></i>API介接申請</button>
+
+                </div>
+            </div>
+            <div class="container">
+                <form>
+                    <ol class="ps">
+                        <li>請下載申請書格式，由申請單位及個人出版者填寫用印後，掃描上傳進行申請</li>
+                        <li>申請通過後，已綁定的個人出版者未來由國家圖書館新核發書號之圖書，皆會由系統自動送出申請(不含已逾申請時限之圖書)</li>
+
+                    </ol>
+
+                    <div class="form-gp">
+                        <label for="file">個人出版者代申請案件自動化送出免稅認可案件服務 </label>
+                        <div class="file-upload">
+                            <input type="button" id="file" value="檔案上傳">
+                            <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                        </div>
+                        <ul class="ps">
+                            <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
+                            <li>檔案請小於 20MB</li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-tool">
+                        <input type="button" value="取消" class="outline" onclick="location.href='book-member-unit.html'">
+                        <input type="submit" value="送出申請" class="submit">
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('book-header.html', function () {
+                // header 載入完成後，綁定事件
+                initMobileMenu();
+            });
+
+            $("#footer").load("book-footer.html");
+        });
+
+    </script>
+</body>
+
+</html>
