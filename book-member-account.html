@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>帳號管理</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C">:::</a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html" title="首頁"><i class="fas fa-home"></i><span class="d-none">首頁</span></a>
+                    </li>
+                    <li>></li>
+                    <li><a href="tax-break.html" title="申請減免營業稅及娛樂稅">申請減免營業稅及娛樂稅</a>
+                    </li>
+                    <li>></li>
+                    <li><a href="book-login.html" title="圖書出版品類線上申請系統">圖書出版品類線上申請系統</a>
+                    <li>></li>
+                    <li><span>帳號管理</span></li>
+                </ul>
+            </div>
+        </div>
+        <section class="content-member">
+            <div class="container">
+                <h2>新增案件管理員</h2>
+                <p class="acc-info"><i class="fas fa-exclamation-circle"></i>標註星號（<span
+                        class="notice">*</span>）表示此欄位必須填寫</p>
+                <div class="add-admin-gp">
+                    <form>
+                        <div class="form-gp">
+                            <label for="admin_name">單位/個人出版品牌<span class="notice">*</span></label>
+                            <input type="text" name="admin_name" id="admin_name" placeholder="請輸入品牌名稱">
+                        </div>
+                        <div class="form-gp">
+                            <label for="admin_ID">案件管理員姓名<span class="notice">*</span></label>
+                            <input type="text" name="admin_ID" id="admin_ID" placeholder="請輸入姓名">
+                        </div>
+                        <div class="form-gp">
+                            <label for="admin_tel">案件管理員聯絡電話<span class="notice">*</span></label>
+                            <input type="number" name="admin_tel" id="admin_tel" placeholder="請輸入連絡電話">
+                        </div>
+                        <div class="form-gp">
+                            <label for="admin_email">案件管理員Email<span class="notice">*</span></label>
+                            <input type="email" name="admin_email" id="admin_email" placeholder="請輸入Email">
+                        </div>
+                        <div class="form-gp account">
+                            <label for="unit_notify_mail">是否要收到提醒郵件
+                                <span
+                                    class="remark">（如申請單位有新核發書號但未申請免稅之圖書，系統將每週一次MAIL告知，另於申請期限截止前3天另行MAIL提醒）</span><span
+                                    class="notice">*</span></label>
+                            <div class="select-withButton">
+                                <select name="type" id="notify_mail">
+                                    <option value="list1">是</option>
+                                    <option value="list2">否</option>
+                                </select>
+                                <input type="submit" value="新增" class="submit">
+                            </div>
+                        </div>
+                    </form>
+                    <ol class="ps">
+                        <li>案件管理員新增完成後，本系統將會以電⼦郵件⽅式發送帳號認證通知信，請案件管理員確認收件匣及垃圾資料夾</li>
+                        <li>每⼀單位品牌最多可設置30個案件管理員</li>
+                    </ol>
+                </div>
+                <!-- <h3>帳號列表</h3> -->
+                <div class="case-list">
+                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
+                                role="tab" aria-controls="pills-home" aria-selected="true">啟用中</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+                                role="tab" aria-controls="pills-profile" aria-selected="false">停用中</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <!-- 啟用中 -->
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <table class="table-default  mb-separate ellipsis-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 5%;">項次</th>
+                                        <th style="width: 16%;">單位/個人出版品牌名稱</th>
+                                        <th style="width: 22%;">帳號</th>
+                                        <th style="width: 9%;">姓名</th>
+                                        <th style="width: 7%;">啟用</th>
+                                        <th style="width: 12%;">單位管理者</th>
+                                        <th style="width: 19%;">上次登入時間</th>
+                                        <th style="width: 20%;" class="th-function">功能</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-title="項次">1</td>
+                                        <td data-title="單位/個人出版品牌名稱">
+                                            名稱
+                                        </td>
+                                        <td data-title="帳號">123456@sample.com.tw</td>
+                                        <td data-title="姓名">某某某某某</td>
+                                        <td data-title="啟用">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1"
+                                                    checked>
+                                                <label class="custom-control-label" for="customSwitch1"></label>
+                                            </div>
+                                        </td>
+                                        <td data-title="單位管理者">是</td>
+                                        <td data-title="上次登入時間">
+                                            112年09月22日 16:00:33 從 61.59.16.65
+                                        </td>
+                                        <td data-title="功能" class="text-left">
+                                            <div class="function">
+                                                <a href="member-account-edit.html" class="link" title="編輯"><i
+                                                        class="fas fa-pen"></i>
+                                                    <span>編輯</span></a>
+                                                <a href="" class="link" title="重設密碼" data-toggle="modal"
+                                                    data-target="#modal-notify">
+                                                    <i class="fas fa-key"></i>
+                                                    <span>重設密碼</span></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="項次">2</td>
+                                        <td data-title="單位/個人出版品牌名稱">
+                                            名稱
+                                        </td>
+                                        <td data-title="帳號">123456@sample.com.tw</td>
+                                        <td data-title="姓名">某某某</td>
+                                        <td data-title="啟用">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch2"
+                                                    checked>
+                                                <label class="custom-control-label" for="customSwitch2"></label>
+                                            </div>
+                                        </td>
+                                        <td data-title="單位管理者">是</td>
+                                        <td data-title="上次登入時間">
+                                            112年09月22日 16:00:33 從 61.59.16.65
+                                        </td>
+                                        <td data-title="功能" class="text-left">
+                                            <div class="function">
+                                                <a href="member-account-edit.html" class="link" title="編輯"><i
+                                                        class="fas fa-pen"></i>
+                                                    <span>編輯</span></a>
+                                                <a href="" class="link" title="重設密碼" data-toggle="modal"
+                                                    data-target="#modal-notify">
+                                                    <i class="fas fa-key"></i>
+                                                    <span>重設密碼</span></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="項次">3</td>
+                                        <td data-title="單位/個人出版品牌名稱">
+                                            名稱
+                                        </td>
+                                        <td data-title="帳號">123456@sample.com.tw</td>
+                                        <td data-title="姓名">某某某</td>
+                                        <td data-title="啟用">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch3"
+                                                    checked>
+                                                <label class="custom-control-label" for="customSwitch3"></label>
+                                            </div>
+                                        </td>
+                                        <td data-title="單位管理者">是</td>
+                                        <td data-title="上次登入時間">
+                                            112年09月22日 16:00:33 從 61.59.16.65
+                                        </td>
+                                        <td data-title="功能" class="text-left">
+                                            <div class="function">
+                                                <a href="member-account-edit.html" class="link" title="編輯"><i
+                                                        class="fas fa-pen"></i>
+                                                    <span>編輯</span></a>
+                                                <a href="" class="link" title="重設密碼" data-toggle="modal"
+                                                    data-target="#modal-notify">
+                                                    <i class="fas fa-key"></i>
+                                                    <span>重設密碼</span></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="項次">4</td>
+                                        <td data-title="單位/個人出版品牌名稱">
+                                            名稱
+                                        </td>
+                                        <td data-title="帳號">123456@sample.com.tw</td>
+                                        <td data-title="姓名">某某某</td>
+                                        <td data-title="啟用">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch4"
+                                                    checked>
+                                                <label class="custom-control-label" for="customSwitch4"></label>
+                                            </div>
+                                        </td>
+                                        <td data-title="單位管理者">是</td>
+                                        <td data-title="上次登入時間">
+                                            112年09月22日 16:00:33 從 61.59.16.65
+                                        </td>
+                                        <td data-title="功能" class="text-left">
+                                            <div class="function">
+                                                <a href="member-account-edit.html" class="link" title="編輯"><i
+                                                        class="fas fa-pen"></i>
+                                                    <span>編輯</span></a>
+                                                <a href="" class="link" title="重設密碼" data-toggle="modal"
+                                                    data-target="#modal-notify">
+                                                    <i class="fas fa-key"></i>
+                                                    <span>重設密碼</span></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="項次">5</td>
+                                        <td data-title="單位/個人出版品牌名稱">
+                                            名稱
+                                        </td>
+                                        <td data-title="帳號">123456@sample.com.tw</td>
+                                        <td data-title="姓名">某某某</td>
+                                        <td data-title="啟用">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch5"
+                                                    checked>
+                                                <label class="custom-control-label" for="customSwitch5"></label>
+                                            </div>
+                                        </td>
+                                        <td data-title="單位管理者">是</td>
+                                        <td data-title="上次登入時間">
+                                            112年09月22日 16:00:33 從 61.59.16.65
+                                        </td>
+                                        <td data-title="功能" class="text-left">
+                                            <div class="function">
+                                                <a href="member-account-edit.html" class="link" title="編輯"><i
+                                                        class="fas fa-pen"></i>
+                                                    <span>編輯</span></a>
+                                                <a href="" class="link" title="重設密碼" data-toggle="modal"
+                                                    data-target="#modal-notify">
+                                                    <i class="fas fa-key"></i>
+                                                    <span>重設密碼</span></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="項次">6</td>
+                                        <td data-title="單位/個人出版品牌名稱">
+                                            名稱
+                                        </td>
+                                        <td data-title="帳號">123456@sample.com.tw</td>
+                                        <td data-title="姓名">某某某</td>
+                                        <td data-title="啟用">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch6"
+                                                    checked>
+                                                <label class="custom-control-label" for="customSwitch6"></label>
+                                            </div>
+                                        </td>
+                                        <td data-title="單位管理者">是</td>
+                                        <td data-title="上次登入時間">
+                                            112年09月22日 16:00:33 從 61.59.16.65
+                                        </td>
+                                        <td data-title="功能" class="text-left">
+                                            <div class="function">
+                                                <a href="member-account-edit.html" class="link" title="編輯"><i
+                                                        class="fas fa-pen"></i>
+                                                    <span>編輯</span></a>
+                                                <a href="" class="link" title="重設密碼" data-toggle="modal"
+                                                    data-target="#modal-notify">
+                                                    <i class="fas fa-key"></i>
+                                                    <span>重設密碼</span></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 停用中 -->
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+                            <table class="table-default  mb-separate ellipsis-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 5%;">項次</th>
+                                        <th style="width: 16%;">單位/個人出版品牌名稱</th>
+                                        <th style="width: 22%;">帳號</th>
+                                        <th style="width: 9%;">姓名</th>
+                                        <th style="width: 7%;">啟用</th>
+                                        <th style="width: 12%;">單位管理者</th>
+                                        <th style="width: 19%;">上次登入時間</th>
+                                        <th style="width: 20%;" class="th-function">功能</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-title="項次">1</td>
+                                        <td data-title="單位/個人出版品牌名稱">
+                                            名稱
+                                        </td>
+                                        <td data-title="帳號">123456@sample.com.tw</td>
+                                        <td data-title="姓名">某某某某某</td>
+                                        <td data-title="啟用">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch10">
+                                                <label class="custom-control-label" for="customSwitch1"></label>
+                                            </div>
+                                        </td>
+                                        <td data-title="單位管理者">是</td>
+                                        <td data-title="上次登入時間">
+                                            112年09月22日 16:00:33 從 61.59.16.65
+                                        </td>
+                                        <td data-title="功能" class="text-left">
+                                            <div class="function">
+                                                <a href="member-account-edit.html" class="link" title="編輯"><i
+                                                        class="fas fa-pen"></i>
+                                                    <span>編輯</span></a>
+                                                <a href="" class="link" title="重設密碼" data-toggle="modal"
+                                                    data-target="#modal-notify">
+                                                    <i class="fas fa-key"></i>
+                                                    <span>重設密碼</span></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="項次">2</td>
+                                        <td data-title="單位/個人出版品牌名稱">
+                                            名稱
+                                        </td>
+                                        <td data-title="帳號">123456@sample.com.tw</td>
+                                        <td data-title="姓名">某某某</td>
+                                        <td data-title="啟用">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch20">
+                                                <label class="custom-control-label" for="customSwitch2"></label>
+                                            </div>
+                                        </td>
+                                        <td data-title="單位管理者">是</td>
+                                        <td data-title="上次登入時間">
+                                            112年09月22日 16:00:33 從 61.59.16.65
+                                        </td>
+                                        <td data-title="功能" class="text-left">
+                                            <div class="function">
+                                                <a href="member-account-edit.html" class="link" title="編輯"><i
+                                                        class="fas fa-pen"></i>
+                                                    <span>編輯</span></a>
+                                                <a href="" class="link" title="重設密碼" data-toggle="modal"
+                                                    data-target="#modal-notify">
+                                                    <i class="fas fa-key"></i>
+                                                    <span>重設密碼</span></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="項次">3</td>
+                                        <td data-title="單位/個人出版品牌名稱">
+                                            名稱
+                                        </td>
+                                        <td data-title="帳號">123456@sample.com.tw</td>
+                                        <td data-title="姓名">某某某</td>
+                                        <td data-title="啟用">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch30">
+                                                <label class="custom-control-label" for="customSwitch3"></label>
+                                            </div>
+                                        </td>
+                                        <td data-title="單位管理者">是</td>
+                                        <td data-title="上次登入時間">
+                                            112年09月22日 16:00:33 從 61.59.16.65
+                                        </td>
+                                        <td data-title="功能" class="text-left">
+                                            <div class="function">
+                                                <a href="member-account-edit.html" class="link" title="編輯"><i
+                                                        class="fas fa-pen"></i>
+                                                    <span>編輯</span></a>
+                                                <a href="" class="link" title="重設密碼" data-toggle="modal"
+                                                    data-target="#modal-notify">
+                                                    <i class="fas fa-key"></i>
+                                                    <span>重設密碼</span></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="bottom">
+                        <div class="pagination">
+                            <ul>
+                                <li><a href=""><i class="fas fa-angle-double-left"></i></a></li>
+                                <li><a href=""><i class="fas fa-angle-left"></i></a></li>
+                                <li><a href="" class="active">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                                <li><a href="">5</a></li>
+                                <li><a href=""><i class="fas fa-angle-right"></i></a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- modal 提示-->
+        <div class="modal fade modal-template " id="modal-notify" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel">重設密碼</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <div class="text-gp">
+                                    <p>系統會透過郵件將重設密碼連結寄送給使用者？按下「確定」，即完成重設</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel2" data-dismiss="modal">取消</button>
+                            <button type="submit" name="go" id="go2">確認</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- modal 提示-->
+        <div class="modal fade modal-template " id="modal-notify2" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel2" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel2">系統通知</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <div class="text-gp">
+                                    <p>若帳號停用，您將無法申請與維護認可申請案件。按下「確定」，即完成停用申請？</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="go" id="go3">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('book-header.html', function () {
+                // header 載入完成後，綁定事件
+                initMobileMenu();
+            });
+
+            $("#footer").load("book-footer.html");
+        });
+
+    </script>
+
+</body>
+
+</html>

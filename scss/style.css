@@ -428,7 +428,6 @@
 }
 * .custom-control.custom-switch {
   padding-left: 0;
-  margin-left: calc(50% - 12px);
 }
 @media (max-width: 568px) {
   * .custom-control.custom-switch {
@@ -488,6 +487,18 @@
 * button.button-brown {
   background-color: #280101;
   color: white;
+}
+* button.btn-big {
+  font-size: 1.625rem;
+  padding: 6px 24px;
+  height: initial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* button.btn-big i {
+  font-size: 1.25rem;
+  padding-top: 4px;
 }
 * .button-outline {
   border-radius: 4px;
@@ -2338,8 +2349,16 @@ body form .form-gp .label-withButton {
 }
 @media (max-width: 568px) {
   body form .form-gp .label-withButton {
+    flex-wrap: wrap;
     width: 100%;
   }
+  body form .form-gp .label-withButton a {
+    padding: 8px 8px 8px 0 !important;
+    margin-bottom: 4px;
+  }
+}
+body form .form-gp .label-withButton.after-title {
+  justify-content: flex-start;
 }
 body form .form-gp .label-withButton label {
   width: initial;
@@ -2400,11 +2419,53 @@ body form .form-gp .input-withButton input {
     margin-bottom: 12px;
   }
 }
-body form .form-gp .input-withButton button {
+body form .form-gp .input-withButton button,
+body form .form-gp .input-withButton input[type=submit] {
   width: auto;
 }
 @media (max-width: 568px) {
-  body form .form-gp .input-withButton button {
+  body form .form-gp .input-withButton button,
+  body form .form-gp .input-withButton input[type=submit] {
+    width: 100%;
+  }
+}
+body form .form-gp .select-withButton {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+body form .form-gp .select-withButton select {
+  width: 90%;
+}
+@media (max-width: 1550px) {
+  body form .form-gp .select-withButton select {
+    width: 88%;
+  }
+}
+@media (max-width: 1024px) {
+  body form .form-gp .select-withButton select {
+    width: 85%;
+  }
+}
+@media (max-width: 768px) {
+  body form .form-gp .select-withButton select {
+    width: 80%;
+  }
+}
+@media (max-width: 568px) {
+  body form .form-gp .select-withButton select {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+}
+body form .form-gp .select-withButton button,
+body form .form-gp .select-withButton input[type=submit] {
+  width: auto;
+}
+@media (max-width: 568px) {
+  body form .form-gp .select-withButton button,
+  body form .form-gp .select-withButton input[type=submit] {
     width: 100%;
   }
 }
@@ -2603,6 +2664,7 @@ body form .choice-btn .item input[type=checkbox]:checked + label {
 }
 body form .datetime {
   justify-content: space-between;
+  align-items: flex-end;
 }
 body form .datetime .item {
   width: 48%;
@@ -4734,6 +4796,13 @@ body main .content-member .container .member-gp .block.history .case-num,
 body main .content-member .container .member-gp .block.history h3 {
   color: #428079;
 }
+body main .content-member .container .member-gp .block.pending-apply {
+  border: solid 1px #90689c;
+}
+body main .content-member .container .member-gp .block.pending-apply .case-num,
+body main .content-member .container .member-gp .block.pending-apply h3 {
+  color: #90689c;
+}
 body main .content-member .container .member-gp .block .case-num {
   font-size: 3.75rem;
   font-weight: bold;
@@ -4933,6 +5002,7 @@ body main .content-member .container .add-admin-gp form {
   background-color: rgba(233, 198, 93, 0.1);
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: end;
   margin-top: 20px;
   margin-bottom: 8px;
@@ -4967,6 +5037,12 @@ body main .content-member .container .add-admin-gp form .form-gp label {
   display: inline-block;
   width: 100%;
 }
+body main .content-member .container .add-admin-gp form .form-gp.account {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
 body main .content-member .container .add-admin-gp form input[type=submit] {
   margin: 0;
 }
@@ -4975,6 +5051,39 @@ body main .content-member .container .add-admin-gp form input[type=submit] {
     width: 100% !important;
     margin-top: 12px;
   }
+}
+body main .content-member.book .btn-gp {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+body main .content-member.book .btn-gp button {
+  margin-left: 20px;
+}
+body main .content-member.book .member-gp {
+  margin-bottom: 36px;
+}
+body main .content-member.book .member-gp .block {
+  width: 23%;
+}
+body main .content-member.book .searchbar {
+  background-color: #fdfaf2;
+  padding: 32px;
+  border-radius: 16px;
+}
+body main .content-member.book .searchbar .filter {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+body main .content-member.book .searchbar .filter select {
+  width: 32%;
+  margin-right: 0;
+  margin-bottom: 12px;
+}
+body main .content-member.book .searchbar .filter .form-gp {
+  width: 48%;
 }
 body main .content-regulation table th,
 body main .content-regulation table td {

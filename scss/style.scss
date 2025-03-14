@@ -158,7 +158,7 @@ body {
         ol.ps {
             padding-left: $p-XS;
             margin-bottom: $m-M;
-            @include mobile-L{
+            @include mobile-L {
                 margin-bottom: $m-S;
             }
             li {
@@ -167,7 +167,7 @@ body {
                 line-height: 1.75;
             }
         }
-        
+
         //網站導覽
         .content-webmap {
             .container {
@@ -1258,15 +1258,14 @@ body {
                     max-width: 1140px;
                     margin: auto;
                     margin-bottom: $m-XS;
-                    @include web-S{
+                    @include web-S {
                         padding: 0 $p-XL;
                     }
-                    @include pad{
+                    @include pad {
                         padding: 0 $p-L;
                     }
-                    @include mobile-L{
+                    @include mobile-L {
                         padding: 0 $p-XS;
-
                     }
                 }
                 .step {
@@ -1390,6 +1389,13 @@ body {
                             .case-num,
                             h3 {
                                 color: $screening;
+                            }
+                        }
+                        &.pending-apply {
+                            border: solid 1px $auction;
+                            .case-num,
+                            h3 {
+                                color: $auction;
                             }
                         }
                         .case-num {
@@ -1580,6 +1586,7 @@ body {
                         background-color: rgba($color: $ticket, $alpha: 0.1);
                         display: flex;
                         justify-content: space-between;
+                        flex-wrap: wrap;
                         align-items: end;
                         margin-top: $m-S;
                         margin-bottom: $p-XXS;
@@ -1604,6 +1611,12 @@ body {
                                 display: inline-block;
                                 width: 100%;
                             }
+                            &.account {
+                                margin-top: $m-S;
+                                width: 100%;
+                                display: flex;
+                                flex-wrap: wrap;
+                            }
                         }
                         input[type="submit"] {
                             margin: 0;
@@ -1611,6 +1624,41 @@ body {
                                 width: 100% !important;
                                 margin-top: $m-XS;
                             }
+                        }
+                    }
+                }
+            }
+            &.book {
+                .btn-gp {
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-bottom: $m-S;
+                    button {
+                        margin-left: $m-S;
+                    }
+                }
+                .member-gp {
+                    margin-bottom: $m-M;
+                    .block {
+                        width: 23%;
+                    }
+                }
+                .searchbar {
+                    background-color: $primary-table;
+                    padding: $p-M;
+                    border-radius: 16px;
+                    .filter {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        select{
+                            width: 32%;
+                            margin-right: 0;
+                            margin-bottom: $m-XS;
+                        }
+                        .form-gp{
+                            width: 48%;
                         }
                     }
                 }

@@ -183,7 +183,7 @@
             margin: 0 $m-XS;
             color: white;
         }
-    }   
+    }
     .clearfix {
         clear: both;
     }
@@ -289,7 +289,7 @@
             }
         }
     }
-    
+
     // jquery UI
     .ui-autocomplete {
         max-height: 200px;
@@ -502,7 +502,7 @@
     // switch
     .custom-control.custom-switch {
         padding-left: 0;
-        margin-left: calc(50% - 12px);
+        // margin-left: calc(50% - 12px);
         @include mobile-L {
             margin-left: 0;
         }
@@ -560,6 +560,18 @@
         &.button-brown {
             background-color: $primary-dark;
             color: white;
+        }
+        &.btn-big {
+            font-size: $size-h3;
+            padding: 6px $p-S;
+            height: initial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+                font-size: $size-h5;
+                padding-top: 4px;
+            }
         }
     }
 
@@ -2364,7 +2376,15 @@
                 justify-content: space-between;
                 width: 100%;
                 @include mobile-L {
+                    flex-wrap: wrap;
                     width: 100%;
+                    a {
+                        padding: $p-XXS $p-XXS $p-XXS 0 !important;
+                        margin-bottom: $m-XXS;
+                    }
+                }
+                &.after-title {
+                    justify-content: flex-start;
                 }
                 label {
                     width: initial;
@@ -2415,7 +2435,37 @@
                         margin-bottom: $m-XS;
                     }
                 }
-                button {
+                button,
+                input[type="submit"] {
+                    width: auto;
+                    @include mobile-L() {
+                        width: 100%;
+                    }
+                }
+            }
+            .select-withButton {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                select {
+                    width: 90%;
+                    @include web-XL {
+                        width: 88%;
+                    }
+                    @include web-S {
+                        width: 85%;
+                    }
+                    @include pad {
+                        width: 80%;
+                    }
+                    @include mobile-L() {
+                        width: 100%;
+                        margin-bottom: $m-XS;
+                    }
+                }
+                button,
+                input[type="submit"] {
                     width: auto;
                     @include mobile-L() {
                         width: 100%;
@@ -2617,6 +2667,7 @@
         }
         .datetime {
             justify-content: space-between;
+            align-items: flex-end;
             .item {
                 width: 48%;
                 @include mobile-L() {
