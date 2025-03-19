@@ -1295,12 +1295,103 @@ body {
                 }
                 form {
                     margin-bottom: $m-M;
+                    &.searchbar {
+                        width: 100%;
+                        background-color: $primary-table;
+                        padding: $p-M;
+                        border-radius: 16px;
+                        flex-wrap: wrap;
+                        @include mobile-L {
+                            padding: $p-S;
+                        }
+                        .filter {
+                            width: 100%;
+                            justify-content: space-between;
+                            .form-gp {
+                                &.three-col {
+                                    margin-bottom: 0;
+                                    .item {
+                                        width: 50px;
+                                        flex: 1 1 auto;
+                                        margin-bottom: $m-S;
+                                        margin-right: $m-S;
+                                        &:last-child {
+                                            margin-right: 0;
+                                        }
+                                        @include mobile-L {
+                                            width: 100%;
+                                            margin-right: 0;
+                                        }
+                                    }
+                                }
+                            }
+
+                            select {
+                                margin-right: 0;
+                                margin-bottom: $m-XS !important;
+                            }
+                        }
+                        .bottom-btn-gp {
+                            margin-top: $m-M;
+                            margin-bottom: 0;
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: flex-start;
+                            @include pad {
+                                justify-content: space-between;
+                            }
+                            button,
+                            a {
+                                margin-left: 0;
+                                margin-right: $m-XS;
+                                margin-bottom: $m-XS;
+                                @include pad {
+                                    height: initial;
+                                    padding: $m-XXS $p-XS;
+                                    width: 49%;
+                                    margin-right: 0;
+                                }
+                                @include mobile-L {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
                 }
                 .case-list {
                     margin-bottom: $m-L;
                 }
                 .bottom {
                     margin-top: $m-S;
+                }
+                .card {
+                    .btn-gp {
+                        margin-bottom: $m-M;
+                        display: flex;
+                        justify-content: flex-end;
+                        @include pad {
+                            flex-wrap: wrap;
+                            justify-content: flex-start;
+                            margin-bottom: $m-S;
+                        }
+                        @include mobile-L {
+                            flex-wrap: wrap;
+                        }
+                        button {
+                            margin-left: $m-XS;
+                            @include pad {
+                                width: 47%;
+                                height: initial;
+                                margin-bottom: $m-XS;
+                                padding: $m-XXS $p-XXS;
+                            }
+                            @include mobile-L {
+                                width: 100%;
+                                margin-left: 0;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1467,7 +1558,45 @@ body {
                     color: $primary-default;
                 }
                 .case-list {
-                    margin-top: $m-XS;
+                    margin: $m-XS 0;
+                    .list-btn-gp {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        .left {
+                            margin-top: $m-XXS;
+                            margin-bottom: $m-S;
+                            @include mobile-L {
+                                width: 100%;
+                                margin-bottom: 0;
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: space-between;
+                            }
+                            button {
+                                margin-right: $m-XS;
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+                                @include mobile-L {
+                                    width: 48%;
+                                    margin-bottom: $m-XS;
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                        .right {
+                            @include mobile-L {
+                                width: 100%;
+                            }
+                            button {
+                                @include mobile-L {
+                                    width: 48%;
+                                    margin-bottom: $m-S;
+                                }
+                            }
+                        }
+                    }
                     .nav-pills {
                         margin-bottom: $m-XS;
                         .nav-item {
@@ -1525,17 +1654,6 @@ body {
                                                 &.notice {
                                                     border: solid 1px $notice;
                                                 }
-                                            }
-                                            &:last-child {
-                                                margin-right: 0 !important;
-                                            }
-                                            span {
-                                                font-weight: bold;
-                                            }
-                                            i {
-                                                font-size: $size-p;
-                                                margin-right: 2px;
-                                                text-align: right;
                                             }
                                         }
                                     }
@@ -1633,32 +1751,64 @@ body {
                     display: flex;
                     justify-content: flex-end;
                     margin-bottom: $m-S;
+                    @include mobile-L {
+                        width: 100%;
+                        flex-wrap: wrap;
+                    }
                     button {
                         margin-left: $m-S;
+                        @include mobile-L {
+                            width: 100%;
+                            margin-left: 0;
+                            margin-bottom: $m-XS;
+                            font-size: $size-h4;
+                        }
                     }
                 }
                 .member-gp {
                     margin-bottom: $m-M;
+                    @include mobile-L {
+                        margin-bottom: $m-XS;
+                    }
                     .block {
                         width: 23%;
+                        @include mobile-L {
+                            width: 48%;
+                        }
                     }
                 }
                 .searchbar {
                     background-color: $primary-table;
                     padding: $p-M;
                     border-radius: 16px;
+                    @include mobile-L {
+                        padding: $p-S;
+                    }
                     .filter {
                         width: 100%;
                         display: flex;
                         flex-wrap: wrap;
                         justify-content: space-between;
-                        select{
+                        select {
                             width: 32%;
                             margin-right: 0;
                             margin-bottom: $m-XS;
+                            @include mobile-L {
+                                width: 100%;
+                            }
                         }
-                        .form-gp{
+                        .form-gp {
                             width: 48%;
+                            &.datetime {
+                                @include mobile-L {
+                                    width: 100%;
+                                }
+                                .item {
+                                    @include mobile-L {
+                                        width: 100%;
+                                    }
+                                }
+                            }
                         }
                     }
                 }

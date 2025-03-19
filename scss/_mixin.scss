@@ -88,6 +88,7 @@
         padding: 0;
         margin: 0;
         line-height: 1.25;
+        margin-bottom: $p-XXS;       
     }
     h4 {
         font-size: $size-h4;
@@ -557,10 +558,6 @@
             background-color: $notice !important;
             color: white !important;
         }
-        &.button-brown {
-            background-color: $primary-dark;
-            color: white;
-        }
         &.btn-big {
             font-size: $size-h3;
             padding: 6px $p-S;
@@ -573,9 +570,14 @@
                 padding-top: 4px;
             }
         }
+        &.brown {
+            background-color: $primary-dark;
+            color: white;
+        }
     }
 
     .button-outline {
+        height: 40px;
         border-radius: 4px;
         font-size: $size-h5;
         padding: $m-XXS $p-S;
@@ -584,6 +586,9 @@
         border: solid 1px $primary-tint;
         font-weight: bold;
         cursor: pointer;
+        @include pad{
+            height: initial;
+        }
         &:hover {
             filter: brightness(1.05);
         }
@@ -601,6 +606,14 @@
         &.red {
             border: solid 1px $notice !important;
             color: $notice !important;
+        }
+        &.green {
+            border: solid 1px $export !important;
+            color: $export !important;
+        }
+        &.brown {
+            border: solid 1px $primary-dark !important;
+            color: $primary-dark !important;
         }
     }
     .ellipsis {
@@ -2042,6 +2055,7 @@
             display: flex;
             align-items: center;
             justify-content: start;
+            flex-wrap: wrap;
             @include web-XL {
                 width: 55%;
             }
@@ -2190,7 +2204,7 @@
             h3 {
                 margin-bottom: $m-XS;
                 text-align: left;
-                width: 100%;
+                width: 100%;                
             }
             .title {
                 font-size: $size-h5;
@@ -2470,6 +2484,28 @@
                     @include mobile-L() {
                         width: 100%;
                     }
+                }
+            }
+        }
+        .search-gp {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .search-icon {
+                width: initial;
+                flex: 1 1 auto;
+                
+            }
+            button {
+                display: inline-block;
+                flex: 0 1 auto;
+                padding: $m-XXS $p-XS;
+                &:last-child {
+                    margin-left: $m-S;
+                }
+                @include mobile-L(){
+                    margin-left: 0 !important;
                 }
             }
         }
@@ -3029,8 +3065,13 @@
                         }
                         i {
                             font-size: $size-p;
-                            margin-right: 2px;
-                            text-align: right;
+                            margin-right: 3px;
+                            text-align: center;
+                            vertical-align: middle;
+                            width: 18px;
+                            &.fa-times {
+                                font-size: 1.175rem;
+                            }
                         }
                     }
                 }

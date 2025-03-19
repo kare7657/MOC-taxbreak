@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- jQuery 日期選擇器-->
+    <link rel="stylesheet" href="scss/jquery-ui.min.css" />
+    <!-- timepicker 時間選擇器-->
+    <link rel="stylesheet" href="scss/timepicker.css" />
+    <!-- select2 -->
+    <link rel="stylesheet" href="scss/select2.min.css" />
     <!-- our css -->
     <link rel="stylesheet" href="scss/style.css">
 
@@ -65,36 +71,36 @@
                 </div>
                 <form class="searchbar">
                     <div class="filter">
-                        <select class="select2" id="activity_way">
-                            <option value="list1">請選擇案件類別</option>
+                        <select id="activity_way">
+                            <option value="list1">請全選案件類別</option>
                             <option value="list2">本國</option>
                             <option value="list3">進口</option>
                         </select>
-                        <select class="select2" id="book_type">
-                            <option value="list1">請選擇書籍類型</option>
+                        <select id="book_type">
+                            <option value="list1">請全選書籍類型</option>
                             <option value="list2">實體</option>
                             <option value="list3">電子</option>
                         </select>
-                        <select class="select2" id="case_status">
-                            <option value="list1">請選擇案件狀態</option>
+                        <select id="case_status">
+                            <option value="list1">請全選案件狀態</option>
                             <option value="list2">項目1</option>
                             <option value="list3">項目2</option>
                             <option value="list3">項目3</option>
                         </select>
-                        <select class="select2" id="unit_brand">
-                            <option value="list1">請選擇單位出版品牌</option>
+                        <select id="unit_brand">
+                            <option value="list1">請全選單位出版品牌</option>
                             <option value="list2">項目1</option>
                             <option value="list3">項目2</option>
                             <option value="list3">項目3</option>
                         </select>
-                        <select class="select2" id="personal_publish">
-                            <option value="list1">請選擇已綁定個人出版者</option>
+                        <select id="personal_publish">
+                            <option value="list1">請全選已綁定個人出版者</option>
                             <option value="list2">項目1</option>
                             <option value="list3">項目2</option>
                             <option value="list3">項目3</option>
                         </select>
-                        <select class="select2" id="sort">
-                            <option value="list1">請選擇排列方式</option>
+                        <select id="sort">
+                            <option value="list1">請全選排列方式</option>
                             <option value="list2">項目1</option>
                             <option value="list3">項目2</option>
                             <option value="list3">項目3</option>
@@ -129,304 +135,404 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="search-icon">
-                            <input type="search" placeholder="搜尋關鍵字">
+                        <div class="search-gp">
+                            <div class="search-icon">
+                                <input type="search" placeholder="搜尋關鍵字">
+                            </div>
+                            <button type="button">搜尋</button>
+                            <button type="button" class="button-outline">清除</button>
                         </div>
-                        <button type="button">搜尋</button>
                     </div>
 
                 </form>
                 <div class="case-list">
                     <p class="totalnum">總共 10 筆案件</p>
+                    <div class="list-btn-gp">
+                        <div class="left">
+                            <button type="button" class="button-outline"><i
+                                    class="fas fa-share-square"></i>批次提交</button>
+                            <button type="button" class="button-outline"><i
+                                    class="fas fa-share-square"></i>全部提交</button>
+                            <button type="button" class="button-outline brown"><i
+                                    class="fas fa-trash-alt"></i>批次刪除</button>
+                            <button type="button" class="button-outline brown"><i
+                                    class="fas fa-trash-alt"></i>全選刪除</button>
+                            <button type="button" class="button-outline red"><i class="fas fa-ban"></i>批次撤回</button>
+                            <button type="button" class="button-outline red"><i class="fas fa-ban"></i>全選撤回</button>
+
+                        </div>
+                        <div class="right">
+                            <button type="button" class="button-outline green"><i class="fas fa-file-export"></i>匯出
+                                Excel</button>
+                        </div>
+                    </div>
                     <table class="table-default  mb-separate ellipsis-table">
                         <thead>
                             <tr>
-                                <th style="width: 8%;">選擇</th>
-                                <th style="width: 14%;">案號</th>
-                                <th style="width: 8%;">類型</th>
-                                <th style="width: 30%;">活動名稱</th>
-                                <th style="width: 10%;">案件狀態</th>
-                                <th style="width: 30%;" class="th-function">功能</th>
+                                <th style="width: 5%;">全選</th>
+                                <th style="width: 5%;">項次</th>
+                                <th style="width: 7%;">案件類別</th>
+                                <th style="width: 7%;">書籍類型</th>
+                                <th style="width: 7%;">書號</th>
+                                <th style="width: 9%;">書名</th>
+                                <th style="width: 5%;">冊次</th>
+                                <th style="width: 8%;">作者</th>
+                                <th style="width: 8%;">出版者</th>
+                                <th style="width: 10%;">出版/進口日期</th>
+                                <th style="width: 10%;">認可日期</th>
+                                <th style="width: 8%;">案件狀態</th>
+                                <th style="width: 11%;" class="th-function">功能</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-title="選擇">
+                                <td data-title="全選">
                                     <input type="checkbox" value="choice-case">
                                 </td>
-                                <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930002</a>
+                                <td data-title="項次">
+                                    1
                                 </td>
-                                <td data-title="類型">表演</td>
-                                <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
-                                        標題標題標題標題標題
-                                    </a>
+                                <td data-title="案件類別">
+                                    本國
                                 </td>
+                                <td data-title="書籍類型">
+                                    實體
+                                </td>
+                                <td data-title="書號">
+                                    <a href="book-case-view.html" title="案件瀏覽">9786263350717</a>
+                                </td>
+                                <td data-title="書名">底層邏輯：看清這個世界的底牌</td>
+                                <td data-title="冊次"></td>
+                                <td data-title="作者">劉潤</td>
+                                <td data-title="出版者">時報文化出版企業股份有限公司</td>
+                                <td data-title="出版/進口日期">2022年 3月 29日</td>
+                                <td data-title="認可日期"></td>
                                 <td data-title="案件狀態">尚未送出</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
-                                                class="fas fa-eye"></i>
+                                        <a href="book-case-view.html" class="link" title="瀏覽"><i class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
-                                        <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
-                                            <span>複製</span></a>
+                                        <a href="book-case-view.html" class="link" title="編輯"><i class="fas fa-pen"></i>
+                                            <span>編輯</span></a>
+                                        <a href="" class="link" title="確定不申請"><i class="fas fa-times"></i>
+                                            <span>確定不申請</span></a>
                                         <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
-                                        <a href="case-view-tax-break.html" class="link" title="訂正"><i
-                                                class="fas fa-pen"></i>
-                                            <span>編輯</span></a>
+
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td data-title="選擇">
+                                <td data-title="全選">
+                                    <input type="checkbox" value="choice-case">
+                                </td>
+                                <td data-title="項次">
+                                    2
+                                </td>
+                                <td data-title="案件類別">
+                                    本國
+                                </td>
+                                <td data-title="書籍類型">
+                                    實體
+                                </td>
+                                <td data-title="書號">
+                                    <a href="book-case-view.html" title="案件瀏覽">9786263350717</a>
+                                </td>
+                                <td data-title="書名">底層邏輯：看清這個世界的底牌</td>
+                                <td data-title="冊次"></td>
+                                <td data-title="作者">劉潤</td>
+                                <td data-title="出版者">時報文化出版企業股份有限公司</td>
+                                <td data-title="出版/進口日期">2022年 3月 29日</td>
+                                <td data-title="認可日期"></td>
+                                <td data-title="案件狀態">補正</td>
+                                <td data-title="功能" class="text-left">
+                                    <div class="function">
+                                        <a href="book-case-view.html" class="link" title="瀏覽"><i class="fas fa-eye"></i>
+                                            <span>瀏覽</span></a>
+                                        <a href="book-case-view.html" class="link" title="編輯"><i
+                                                class="fas fa-file-alt"></i>
+                                            <span>補正</span></a>
+                                        <a href="" class="link notice" title="撤回"><i class="fas fa-ban"></i>
+                                            <span>撤回</span></a>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="全選">
                                     <input type="checkbox" value="choice-case" disabled>
                                 </td>
-                                <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930003</a>
+                                <td data-title="項次">
+                                    3
                                 </td>
-                                <td data-title="類型">拍賣</td>
-                                <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
-                                        標題標題標題標題標題標題標題標題標題標題標題標題標題標題
-                                    </a>
+                                <td data-title="案件類別">
+                                    進口
                                 </td>
+                                <td data-title="書籍類型">
+                                    實體
+                                </td>
+                                <td data-title="書號">
+                                    <a href="book-case-view.html" title="案件瀏覽">9573318008</a>
+                                </td>
+                                <td data-title="書名">哈利波特（3）：阿茲卡班的逃犯</td>
+                                <td data-title="冊次"></td>
+                                <td data-title="作者">J．K．羅琳</td>
+                                <td data-title="出版者">皇冠文化出版有限公司</td>
+                                <td data-title="出版/進口日期">2001年 6月 22日</td>
+                                <td data-title="認可日期"></td>
                                 <td data-title="案件狀態">審核中</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
-                                                class="fas fa-eye"></i>
+                                        <a href="book-case-view.html" class="link" title="瀏覽"><i class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
-                                        <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
-                                            <span>複製</span></a>
-                                        <a href="case-withdraw-tax-break.html" class="link notice" title="撤回"><i
-                                                class="fas fa-ban"></i>
+                                        <a href="" class="link notice" title="撤回"><i class="fas fa-ban"></i>
                                             <span>撤回</span></a>
+
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td data-title="選擇">
+                                <td data-title="全選">
                                     <input type="checkbox" value="choice-case">
                                 </td>
-                                <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930002</a>
+                                <td data-title="項次">
+                                    4
                                 </td>
-                                <td data-title="類型">拍賣</td>
-                                <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
-                                        標題標題標題標題標題
-                                    </a>
+                                <td data-title="案件類別">
+                                    進口
                                 </td>
+                                <td data-title="書籍類型">
+                                    實體
+                                </td>
+                                <td data-title="書號">
+                                    <a href="book-case-view.html" title="案件瀏覽">9573318008</a>
+                                </td>
+                                <td data-title="書名">哈利波特（3）：阿茲卡班的逃犯</td>
+                                <td data-title="冊次"></td>
+                                <td data-title="作者">J．K．羅琳</td>
+                                <td data-title="出版者">皇冠文化出版有限公司</td>
+                                <td data-title="出版/進口日期">2001年 6月 22日</td>
+                                <td data-title="認可日期"></td>
                                 <td data-title="案件狀態">尚未送出</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
-                                                class="fas fa-eye"></i>
+                                        <a href="book-case-view.html" class="link" title="瀏覽"><i class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
-                                        <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
-                                            <span>複製</span></a>
+                                        <a href="book-case-view.html" class="link" title="編輯"><i class="fas fa-pen"></i>
+                                            <span>編輯</span></a>
                                         <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
-                                        <a href="case-view-tax-break.html" class="link" title="訂正"><i
-                                                class="fas fa-pen"></i>
-                                            <span>編輯</span></a>
+
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td data-title="選擇">
-                                    <input type="checkbox" value="choice-case" disabled>
-                                </td>
-                                <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930003</a>
-                                </td>
-                                <td data-title="類型">拍賣</td>
-                                <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
-                                        標題標題標題標題標題標題標題標題標題標題標題標題標題標題
-                                    </a>
-                                </td>
-                                <td data-title="案件狀態">審核中</td>
-                                <td data-title="功能" class="text-left">
-                                    <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
-                                                class="fas fa-eye"></i>
-                                            <span>瀏覽</span></a>
-                                        <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
-                                            <span>複製</span></a>
-                                        <a href="case-withdraw-tax-break.html" class="link notice" title="撤回"><i
-                                                class="fas fa-ban"></i>
-                                            <span>撤回</span></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td data-title="選擇">
+                                <td data-title="全選">
                                     <input type="checkbox" value="choice-case">
                                 </td>
-                                <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930002</a>
+                                <td data-title="項次">
+                                    5
                                 </td>
-                                <td data-title="類型">表演</td>
-                                <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
-                                        標題標題標題標題標題
-                                    </a>
+                                <td data-title="案件類別">
+                                    進口
                                 </td>
+                                <td data-title="書籍類型">
+                                    實體
+                                </td>
+                                <td data-title="書號">
+                                    <a href="book-case-view.html" title="案件瀏覽">9573318008</a>
+                                </td>
+                                <td data-title="書名">哈利波特（3）：阿茲卡班的逃犯</td>
+                                <td data-title="冊次"></td>
+                                <td data-title="作者">J．K．羅琳</td>
+                                <td data-title="出版者">皇冠文化出版有限公司</td>
+                                <td data-title="出版/進口日期">2001年 6月 22日</td>
+                                <td data-title="認可日期"></td>
                                 <td data-title="案件狀態">尚未送出</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
-                                                class="fas fa-eye"></i>
+                                        <a href="book-case-view.html" class="link" title="瀏覽"><i class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
-                                        <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
-                                            <span>複製</span></a>
+                                        <a href="book-case-view.html" class="link" title="編輯"><i class="fas fa-pen"></i>
+                                            <span>編輯</span></a>
                                         <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
-                                        <a href="case-view-tax-break.html" class="link" title="訂正"><i
-                                                class="fas fa-pen"></i>
-                                            <span>編輯</span></a>
+
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td data-title="選擇">
-                                    <input type="checkbox" value="choice-case" disabled>
-                                </td>
-                                <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930003</a>
-                                </td>
-                                <td data-title="類型">拍賣</td>
-                                <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
-                                        標題標題標題標題標題標題標題標題標題標題標題標題標題標題
-                                    </a>
-                                </td>
-                                <td data-title="案件狀態">審核中</td>
-                                <td data-title="功能" class="text-left">
-                                    <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
-                                                class="fas fa-eye"></i>
-                                            <span>瀏覽</span></a>
-                                        <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
-                                            <span>複製</span></a>
-                                        <a href="case-withdraw-tax-break.html" class="link notice" title="撤回"><i
-                                                class="fas fa-ban"></i>
-                                            <span>撤回</span></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td data-title="選擇">
+                                <td data-title="全選">
                                     <input type="checkbox" value="choice-case">
                                 </td>
-                                <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930002</a>
+                                <td data-title="項次">
+                                    6
                                 </td>
-                                <td data-title="類型">表演</td>
-                                <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
-                                        標題標題標題標題標題
-                                    </a>
+                                <td data-title="案件類別">
+                                    進口
                                 </td>
+                                <td data-title="書籍類型">
+                                    實體
+                                </td>
+                                <td data-title="書號">
+                                    <a href="book-case-view.html" title="案件瀏覽">9573318008</a>
+                                </td>
+                                <td data-title="書名">哈利波特（3）：阿茲卡班的逃犯</td>
+                                <td data-title="冊次"></td>
+                                <td data-title="作者">J．K．羅琳</td>
+                                <td data-title="出版者">皇冠文化出版有限公司</td>
+                                <td data-title="出版/進口日期">2001年 6月 22日</td>
+                                <td data-title="認可日期"></td>
                                 <td data-title="案件狀態">尚未送出</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
-                                                class="fas fa-eye"></i>
+                                        <a href="book-case-view.html" class="link" title="瀏覽"><i class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
-                                        <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
-                                            <span>複製</span></a>
+                                        <a href="book-case-view.html" class="link" title="編輯"><i class="fas fa-pen"></i>
+                                            <span>編輯</span></a>
                                         <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
-                                        <a href="case-view-tax-break.html" class="link" title="訂正"><i
-                                                class="fas fa-pen"></i>
-                                            <span>編輯</span></a>
+
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td data-title="選擇">
-                                    <input type="checkbox" value="choice-case" disabled>
-                                </td>
-                                <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930003</a>
-                                </td>
-                                <td data-title="類型">拍賣</td>
-                                <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
-                                        標題標題標題標題標題標題標題標題標題標題標題標題標題標題
-                                    </a>
-                                </td>
-                                <td data-title="案件狀態">審核中</td>
-                                <td data-title="功能" class="text-left">
-                                    <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
-                                                class="fas fa-eye"></i>
-                                            <span>瀏覽</span></a>
-                                        <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
-                                            <span>複製</span></a>
-                                        <a href="case-withdraw-tax-break.html" class="link notice" title="撤回"><i
-                                                class="fas fa-ban"></i>
-                                            <span>撤回</span></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td data-title="選擇">
+                                <td data-title="全選">
                                     <input type="checkbox" value="choice-case">
                                 </td>
-                                <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930002</a>
+                                <td data-title="項次">
+                                    7
                                 </td>
-                                <td data-title="類型">表演</td>
-                                <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
-                                        標題標題標題標題標題
-                                    </a>
+                                <td data-title="案件類別">
+                                    進口
                                 </td>
+                                <td data-title="書籍類型">
+                                    實體
+                                </td>
+                                <td data-title="書號">
+                                    <a href="book-case-view.html" title="案件瀏覽">9573318008</a>
+                                </td>
+                                <td data-title="書名">哈利波特（3）：阿茲卡班的逃犯</td>
+                                <td data-title="冊次"></td>
+                                <td data-title="作者">J．K．羅琳</td>
+                                <td data-title="出版者">皇冠文化出版有限公司</td>
+                                <td data-title="出版/進口日期">2001年 6月 22日</td>
+                                <td data-title="認可日期"></td>
                                 <td data-title="案件狀態">尚未送出</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
-                                                class="fas fa-eye"></i>
+                                        <a href="book-case-view.html" class="link" title="瀏覽"><i class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
-                                        <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
-                                            <span>複製</span></a>
+                                        <a href="book-case-view.html" class="link" title="編輯"><i class="fas fa-pen"></i>
+                                            <span>編輯</span></a>
                                         <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
-                                        <a href="case-view-tax-break.html" class="link" title="訂正"><i
-                                                class="fas fa-pen"></i>
-                                            <span>編輯</span></a>
+
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td data-title="選擇">
-                                    <input type="checkbox" value="choice-case" disabled>
+                                <td data-title="全選">
+                                    <input type="checkbox" value="choice-case">
                                 </td>
-                                <td data-title="案號">
-                                    <a href="case-view-tax-break.html" title="案件瀏覽">20210930003</a>
+                                <td data-title="項次">
+                                    8
                                 </td>
-                                <td data-title="類型">拍賣</td>
-                                <td data-title="活動名稱">
-                                    <a href="case-view-tax-break.html" class="ellipsis" title="案件瀏覽">
-                                        標題標題標題標題標題標題標題標題標題標題標題標題標題標題
-                                    </a>
+                                <td data-title="案件類別">
+                                    進口
                                 </td>
-                                <td data-title="案件狀態">審核中</td>
+                                <td data-title="書籍類型">
+                                    實體
+                                </td>
+                                <td data-title="書號">
+                                    <a href="book-case-view.html" title="案件瀏覽">9573318008</a>
+                                </td>
+                                <td data-title="書名">哈利波特（3）：阿茲卡班的逃犯</td>
+                                <td data-title="冊次"></td>
+                                <td data-title="作者">J．K．羅琳</td>
+                                <td data-title="出版者">皇冠文化出版有限公司</td>
+                                <td data-title="出版/進口日期">2001年 6月 22日</td>
+                                <td data-title="認可日期"></td>
+                                <td data-title="案件狀態">尚未送出</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="case-view-tax-break.html" class="link" title="瀏覽"><i
-                                                class="fas fa-eye"></i>
+                                        <a href="book-case-view.html" class="link" title="瀏覽"><i class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
-                                        <a href="" class="link" title="複製"><i class="fas fa-copy"></i>
-                                            <span>複製</span></a>
-                                        <a href="case-withdraw-tax-break.html" class="link notice" title="撤回"><i
-                                                class="fas fa-ban"></i>
-                                            <span>撤回</span></a>
+                                        <a href="book-case-view.html" class="link" title="編輯"><i class="fas fa-pen"></i>
+                                            <span>編輯</span></a>
+                                        <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                            <span>刪除</span></a>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="全選">
+                                    <input type="checkbox" value="choice-case">
+                                </td>
+                                <td data-title="項次">
+                                    9
+                                </td>
+                                <td data-title="案件類別">
+                                    進口
+                                </td>
+                                <td data-title="書籍類型">
+                                    實體
+                                </td>
+                                <td data-title="書號">
+                                    <a href="book-case-view.html" title="案件瀏覽">9573318008</a>
+                                </td>
+                                <td data-title="書名">哈利波特（3）：阿茲卡班的逃犯</td>
+                                <td data-title="冊次"></td>
+                                <td data-title="作者">J．K．羅琳</td>
+                                <td data-title="出版者">皇冠文化出版有限公司</td>
+                                <td data-title="出版/進口日期">2001年 6月 22日</td>
+                                <td data-title="認可日期"></td>
+                                <td data-title="案件狀態">尚未送出</td>
+                                <td data-title="功能" class="text-left">
+                                    <div class="function">
+                                        <a href="book-case-view.html" class="link" title="瀏覽"><i class="fas fa-eye"></i>
+                                            <span>瀏覽</span></a>
+                                        <a href="book-case-view.html" class="link" title="編輯"><i class="fas fa-pen"></i>
+                                            <span>編輯</span></a>
+                                        <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                            <span>刪除</span></a>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="全選">
+                                    <input type="checkbox" value="choice-case">
+                                </td>
+                                <td data-title="項次">
+                                    10
+                                </td>
+                                <td data-title="案件類別">
+                                    進口
+                                </td>
+                                <td data-title="書籍類型">
+                                    實體
+                                </td>
+                                <td data-title="書號">
+                                    <a href="book-case-view.html" title="案件瀏覽">9573318008</a>
+                                </td>
+                                <td data-title="書名">哈利波特（3）：阿茲卡班的逃犯</td>
+                                <td data-title="冊次"></td>
+                                <td data-title="作者">J．K．羅琳</td>
+                                <td data-title="出版者">皇冠文化出版有限公司</td>
+                                <td data-title="出版/進口日期">2001年 6月 22日</td>
+                                <td data-title="認可日期"></td>
+                                <td data-title="案件狀態">尚未送出</td>
+                                <td data-title="功能" class="text-left">
+                                    <div class="function">
+                                        <a href="book-case-view.html" class="link" title="瀏覽"><i class="fas fa-eye"></i>
+                                            <span>瀏覽</span></a>
+                                        <a href="book-case-view.html" class="link" title="編輯"><i class="fas fa-pen"></i>
+                                            <span>編輯</span></a>
+                                        <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                            <span>刪除</span></a>
+
                                     </div>
                                 </td>
                             </tr>
@@ -530,6 +636,16 @@
     <!-- bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
 
+    <!-- jQuery 日期選擇器-->
+    <script src="js/jquery-ui.min.js"></script>
+    <!-- timepicker 時間選擇器-->
+    <script src="js/timepicker.min.js"></script>
+    <!-- InputMask 限制輸入格式-->
+    <script src="js/moment.min.js"></script>
+    <script src="js/jquery.inputmask.bundle.js"></script>
+    <!-- select2 -->
+    <script src="js/select2.full.min.js"></script>
+
     <!-- 引入html header&footer -->
     <script>
         $(function () {
@@ -541,6 +657,144 @@
             $("#footer").load("book-footer.html");
         });
 
+    </script>
+
+    <!-- JQ datepicker -->
+    <script>
+        $(document).ready(function () {
+            $(".chinese-date").datepicker({
+                changeYear: true,
+                changeMonth: true,
+                currentText: "Now",
+                dateFormat: "Rmmdd",
+                showButtonPanel: false,
+                yearRange: "1930:2060",
+                // icon
+                showOn: "both",
+                buttonImage: "img/calendar-alt-regular.svg",
+                buttonImageOnly: true,
+                buttonText: "選擇日期",
+            });
+            $(".western-date").datepicker({
+                changeYear: true,
+                changeMonth: true,
+                currentText: "Now",
+                dateFormat: "yy-mm-dd",
+                showButtonPanel: false,
+                yearRange: "1930:2060",
+                // icon
+                showOn: "both",
+                buttonImage: "img/calendar-alt-regular.svg",
+                buttonImageOnly: true,
+                buttonText: "選擇日期",
+            });
+        });
+        // 將.datepicker改成民國年與西元年小套件同時存在
+        $(function (datepicker) {
+            //先設定預設西元年的datepicker必要功能
+            var old_generateMonthYearHeader = $.datepicker._generateMonthYearHeader;
+            var old_formatDate = $.datepicker.formatDate;
+            var old_parseDate = $.datepicker.parseDate;
+
+            $.extend($.datepicker, {
+                //選擇日期之後的value
+                formatDate: function (format, date, settings) {
+                    var oformatDate = old_formatDate(format, date, settings);
+
+                    if (format == 'Rmmdd') {
+                        var d = date.getDate();
+                        var m = date.getMonth() + 1;
+                        var y = date.getFullYear();
+                        var fm = function (v) {
+                            return (v < 10 ? '0' : '') + v;
+                        };
+
+                        if ((y - 1911) >= 100) { y = y - 1911; } else { y = "0" + String(y - 1911); }
+                        // 日期顯示格式
+                        return (y) + '/' + fm(m) + '/' + fm(d);
+                    }
+                    return oformatDate;
+
+                },
+                //點取已存在日期的parse
+                parseDate: function (format, value, settings) {
+                    var v = new String(value);
+                    var Y, M, D;
+                    if (format == 'Rmmdd') {
+                        if (v.length == 7) {/*1001215*/
+                            Y = v.substring(0, 3) - 0 + 1911;
+                            M = v.substring(3, 5) - 0 - 1;
+                            D = v.substring(5, 7) - 0;
+                            return (new Date(Y, M, D));
+                        } else if (v.length == 6) {/*0981215*/
+
+                            Y = "0" + String(v.substring(0, 2) - 0 + 1911);
+                            M = v.substring(2, 4) - 0 - 1;
+                            D = v.substring(4, 6) - 0;
+                            return (new Date(Y, M, D));
+                        }
+                        return (new Date());
+                    } else {
+                        var oparseDate = old_parseDate.apply(this, [format, value, settings]);
+                        return (oparseDate);
+                    }
+
+                },
+                //改變小工具的年-民國
+                _generateMonthYearHeader: function (inst, drawMonth, drawYear, minDate, maxDate, secondary, monthNames, monthNamesShort) {
+                    var dateFormat = this._get(inst, "dateFormat");
+                    var htmlYearMonth = old_generateMonthYearHeader.apply(this, [inst, drawMonth, drawYear, minDate, maxDate, secondary, monthNames, monthNamesShort]);
+                    if (dateFormat == 'Rmmdd') {
+                        if ($(htmlYearMonth).find(".ui-datepicker-year").length > 0) {
+                            htmlYearMonth = $(htmlYearMonth).find(".ui-datepicker-year").find("option").each(function (i, e) {
+                                if (Number(e.value) - 1911 > 0) $(e).text("民國" + (Number(e.innerText) - 1911) + "年");
+                            }).end().end().get(0).outerHTML;
+                        }
+                    }
+                    return htmlYearMonth;
+                },
+
+            });
+
+            // 中文
+            $.datepicker.regional["zh-TW"] = {
+                monthNames: ["一月", "二月", "三月", "四月", "五月", "六月",
+                    "七月", "八月", "九月", "十月", "十一月", "十二月"],
+                monthNamesShort: ["一月", "二月", "三月", "四月", "五月", "六月",
+                    "七月", "八月", "九月", "十月", "十一月", "十二月"],
+                dayNames: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+                dayNamesShort: ["週日", "週一", "週二", "週三", "週四", "週五", "週六"],
+                dayNamesMin: ["日", "一", "二", "三", "四", "五", "六"],
+                weekHeader: "週",
+                dateFormat: "yyy/mm/dd",
+            };
+            $.datepicker.setDefaults($.datepicker.regional["zh-TW"]);
+
+            return datepicker.regional["zh-TW"];
+
+        });
+
+        // 手機隱藏鍵盤
+        // $(".mb-nokeyboard").focus(function () {
+        //     document.activeElement.blur();
+        // });
+
+    </script>
+
+
+    <!-- input mask 限制填入格式 -->
+    <script>
+        $(document).ready(function () {
+            $(".western-date").inputmask({ alias: "datetime", inputFormat: "yyyy/mm/dd" });
+            // $(".chinese-date").inputmask({ alias: "datetime", inputFormat: "yyy/mm/dd" });
+        });
+    </script>
+
+    <!-- timepicker 時間選擇器-->
+    <script>
+        $(function () {
+            $('.bs-timepicker').timepicker();
+        });
     </script>
 
 </body>
