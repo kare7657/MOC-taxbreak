@@ -451,41 +451,50 @@
   border-color: #89cb4b;
   background-color: #89cb4b;
 }
-* button {
-  height: 40px;
+* button,
+* .button {
   font-size: 1.25rem;
-  padding: 0 12px;
   border: none;
   background-color: #d0b66c;
   color: #280101;
   border-radius: 4px;
   font-weight: bold;
-  line-height: inherit;
+  padding: 4px 24px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-* button:hover {
+* button:hover,
+* .button:hover {
   filter: brightness(1.05);
 }
-* button[disabled] {
+* button[disabled],
+* .button[disabled] {
   background-color: #aa8e41;
   opacity: 1;
   cursor: not-allowed;
 }
-* button[disabled]:hover {
+* button[disabled]:hover,
+* .button[disabled]:hover {
   background-color: #aa8e41;
 }
-* button i {
+* button i,
+* .button i {
   margin-right: 8px;
 }
-* button.more {
+* button.more,
+* .button.more {
   padding: 4px 16px;
   background-color: #88670c;
 }
-* button.notice {
+* button.notice,
+* .button.notice {
   background-color: #da382d !important;
   color: white !important;
 }
-* button.btn-big {
+* button.btn-big,
+* .button.btn-big {
   font-size: 1.625rem;
   padding: 6px 24px;
   height: initial;
@@ -493,16 +502,17 @@
   justify-content: center;
   align-items: center;
 }
-* button.btn-big i {
+* button.btn-big i,
+* .button.btn-big i {
   font-size: 1.25rem;
   padding-top: 4px;
 }
-* button.brown {
+* button.brown,
+* .button.brown {
   background-color: #280101;
   color: white;
 }
 * .button-outline {
-  height: 40px;
   border-radius: 4px;
   font-size: 1.25rem;
   padding: 4px 24px;
@@ -511,11 +521,9 @@
   border: solid 1px #aa8e41;
   font-weight: bold;
   cursor: pointer;
-}
-@media (max-width: 768px) {
-  * .button-outline {
-    height: initial;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 * .button-outline:hover {
   filter: brightness(1.05);
@@ -1146,7 +1154,7 @@
 * .pagination {
   display: flex;
   justify-content: center;
-  margin-top: 12px;
+  margin-top: 24px;
   white-space: nowrap;
 }
 @media (max-width: 568px) {
@@ -1154,7 +1162,6 @@
     justify-content: center;
     text-align: left;
     white-space: initial;
-    margin-top: 20px;
   }
 }
 @media (max-width: 320px) {
@@ -2408,40 +2415,36 @@ body form .form-gp .input-withButton {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-}
-body form .form-gp .input-withButton input {
-  width: 88%;
-}
-@media (max-width: 1550px) {
-  body form .form-gp .input-withButton input {
-    width: 85%;
-  }
-}
-@media (max-width: 1024px) {
-  body form .form-gp .input-withButton input {
-    width: 81%;
-  }
-}
-@media (max-width: 768px) {
-  body form .form-gp .input-withButton input {
-    width: 75%;
-  }
 }
 @media (max-width: 568px) {
-  body form .form-gp .input-withButton input {
+  body form .form-gp .input-withButton {
+    flex-wrap: wrap;
+  }
+}
+body form .form-gp .input-withButton input,
+body form .form-gp .input-withButton .date-gp {
+  flex: 1 1 auto;
+}
+@media (max-width: 568px) {
+  body form .form-gp .input-withButton input,
+  body form .form-gp .input-withButton .date-gp {
     width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 }
 body form .form-gp .input-withButton button,
 body form .form-gp .input-withButton input[type=submit] {
   width: auto;
+  min-width: 150px;
+  display: inline-block;
+  flex: 0 1 auto;
+  margin-left: 20px;
 }
 @media (max-width: 568px) {
   body form .form-gp .input-withButton button,
   body form .form-gp .input-withButton input[type=submit] {
     width: 100%;
+    margin-left: 0;
   }
 }
 body form .form-gp .select-withButton {
@@ -4690,13 +4693,19 @@ body main .content-signup table.list-data td ul li:first-of-type {
 }
 body main .content-signup.book h2 {
   text-align: left;
-  max-width: 1140px;
+  max-width: 1530px;
   margin: auto;
   margin-bottom: 12px;
+}
+@media (max-width: 1550px) {
+  body main .content-signup.book h2 {
+    max-width: 1140px;
+  }
 }
 @media (max-width: 1024px) {
   body main .content-signup.book h2 {
     padding: 0 56px;
+    width: 90%;
   }
 }
 @media (max-width: 768px) {
@@ -4711,12 +4720,30 @@ body main .content-signup.book h2 {
 }
 body main .content-signup.book .step {
   justify-content: flex-end;
+  flex-wrap: wrap;
+  max-width: 1530px;
+}
+@media (max-width: 1550px) {
+  body main .content-signup.book .step {
+    max-width: 1140px;
+  }
 }
 body main .content-signup.book .step .view-gp {
+  width: 70%;
   justify-content: flex-end;
   flex-wrap: wrap;
   max-width: initial;
   padding: 0;
+}
+@media (max-width: 1550px) {
+  body main .content-signup.book .step .view-gp {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  body main .content-signup.book .step .view-gp {
+    justify-content: flex-start;
+  }
 }
 @media (max-width: 568px) {
   body main .content-signup.book .step .view-gp {
@@ -4727,6 +4754,11 @@ body main .content-signup.book .step .view-gp button {
   margin-bottom: 12px;
   margin-right: 0;
   margin-left: 12px;
+}
+@media (max-width: 1024px) {
+  body main .content-signup.book .step .view-gp button {
+    width: 47%;
+  }
 }
 @media (max-width: 568px) {
   body main .content-signup.book .step .view-gp button {
@@ -4757,22 +4789,51 @@ body main .content-signup.book form.searchbar .filter {
   width: 100%;
   justify-content: space-between;
 }
-body main .content-signup.book form.searchbar .filter .form-gp.three-col {
+body main .content-signup.book form.searchbar .filter .three-col {
   margin-bottom: 0;
 }
-body main .content-signup.book form.searchbar .filter .form-gp.three-col .item {
+body main .content-signup.book form.searchbar .filter .three-col .item {
   width: 50px;
   flex: 1 1 auto;
   margin-bottom: 20px;
   margin-right: 20px;
 }
-body main .content-signup.book form.searchbar .filter .form-gp.three-col .item:last-child {
+body main .content-signup.book form.searchbar .filter .three-col .item:last-child {
   margin-right: 0;
 }
 @media (max-width: 568px) {
-  body main .content-signup.book form.searchbar .filter .form-gp.three-col .item {
+  body main .content-signup.book form.searchbar .filter .three-col .item {
     width: 100%;
     margin-right: 0;
+  }
+}
+body main .content-signup.book form.searchbar .filter .two-col {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+@media (max-width: 568px) {
+  body main .content-signup.book form.searchbar .filter .two-col {
+    flex-wrap: wrap;
+  }
+}
+body main .content-signup.book form.searchbar .filter .two-col .form-gp {
+  width: 25%;
+  margin-bottom: 0;
+}
+@media (max-width: 568px) {
+  body main .content-signup.book form.searchbar .filter .two-col .form-gp {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+body main .content-signup.book form.searchbar .filter .two-col .search-gp {
+  width: 73%;
+}
+@media (max-width: 568px) {
+  body main .content-signup.book form.searchbar .filter .two-col .search-gp {
+    width: 100%;
   }
 }
 body main .content-signup.book form.searchbar .filter select {
@@ -4787,7 +4848,7 @@ body main .content-signup.book form.searchbar .bottom-btn-gp {
   flex-wrap: wrap;
   justify-content: flex-start;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   body main .content-signup.book form.searchbar .bottom-btn-gp {
     justify-content: space-between;
   }
@@ -4798,10 +4859,9 @@ body main .content-signup.book form.searchbar .bottom-btn-gp a {
   margin-right: 12px;
   margin-bottom: 12px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   body main .content-signup.book form.searchbar .bottom-btn-gp button,
   body main .content-signup.book form.searchbar .bottom-btn-gp a {
-    height: initial;
     padding: 4px 16px;
     width: 49%;
     margin-right: 0;
@@ -4813,9 +4873,6 @@ body main .content-signup.book form.searchbar .bottom-btn-gp a {
     width: 100%;
   }
 }
-body main .content-signup.book .case-list {
-  margin-bottom: 48px;
-}
 body main .content-signup.book .bottom {
   margin-top: 20px;
 }
@@ -4824,7 +4881,7 @@ body main .content-signup.book .card .btn-gp {
   display: flex;
   justify-content: flex-end;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   body main .content-signup.book .card .btn-gp {
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -4836,19 +4893,21 @@ body main .content-signup.book .card .btn-gp {
     flex-wrap: wrap;
   }
 }
-body main .content-signup.book .card .btn-gp button {
+body main .content-signup.book .card .btn-gp button,
+body main .content-signup.book .card .btn-gp .button {
   margin-left: 12px;
 }
-@media (max-width: 768px) {
-  body main .content-signup.book .card .btn-gp button {
+@media (max-width: 1024px) {
+  body main .content-signup.book .card .btn-gp button,
+  body main .content-signup.book .card .btn-gp .button {
     width: 47%;
-    height: initial;
     margin-bottom: 12px;
     padding: 4px 8px;
   }
 }
 @media (max-width: 568px) {
-  body main .content-signup.book .card .btn-gp button {
+  body main .content-signup.book .card .btn-gp button,
+  body main .content-signup.book .card .btn-gp .button {
     width: 100%;
     margin-left: 0;
   }
@@ -5164,14 +5223,6 @@ body main .content-member .container .case-list .bottom .btn-gp button {
   }
   body main .content-member .container .case-list .bottom .btn-gp button:last-child {
     margin-bottom: 0;
-  }
-}
-body main .content-member .container .case-list .bottom .pagination {
-  margin-top: 0;
-}
-@media (max-width: 568px) {
-  body main .content-member .container .case-list .bottom .pagination {
-    margin-top: 20px;
   }
 }
 body main .content-member .container .add-admin-gp {

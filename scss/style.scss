@@ -1255,11 +1255,15 @@ body {
             &.book {
                 h2 {
                     text-align: left;
-                    max-width: 1140px;
+                    max-width: 1530px;
                     margin: auto;
                     margin-bottom: $m-XS;
+                    @include web-XL {
+                        max-width: 1140px;
+                    }
                     @include web-S {
                         padding: 0 $p-XL;
+                        width: 90%;
                     }
                     @include pad {
                         padding: 0 $p-L;
@@ -1270,11 +1274,23 @@ body {
                 }
                 .step {
                     justify-content: flex-end;
+                    flex-wrap: wrap;
+                    max-width: 1530px;
+                    @include web-XL {
+                        max-width: 1140px;
+                    }
                     .view-gp {
+                        width: 70%;
                         justify-content: flex-end;
                         flex-wrap: wrap;
                         max-width: initial;
                         padding: 0;
+                        @include web-XL {
+                            width: 100%;
+                        }
+                        @include web-S {
+                            justify-content: flex-start;
+                        }
                         @include mobile-L {
                             justify-content: space-between;
                         }
@@ -1282,6 +1298,9 @@ body {
                             margin-bottom: $m-XS;
                             margin-right: 0;
                             margin-left: $m-XS;
+                            @include web-S {
+                                width: 47%;
+                            }
                             @include mobile-L {
                                 width: 100%;
                                 margin: 0;
@@ -1307,21 +1326,42 @@ body {
                         .filter {
                             width: 100%;
                             justify-content: space-between;
-                            .form-gp {
-                                &.three-col {
+                            .three-col {
+                                margin-bottom: 0;
+                                .item {
+                                    width: 50px;
+                                    flex: 1 1 auto;
+                                    margin-bottom: $m-S;
+                                    margin-right: $m-S;
+                                    &:last-child {
+                                        margin-right: 0;
+                                    }
+                                    @include mobile-L {
+                                        width: 100%;
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                            .two-col{
+                                width: 100%;
+                                display: flex;
+                                align-items: flex-end;
+                                justify-content: space-between;
+                                @include mobile-L{
+                                   flex-wrap: wrap;
+                                }
+                                .form-gp{
+                                    width: 25%;
                                     margin-bottom: 0;
-                                    .item {
-                                        width: 50px;
-                                        flex: 1 1 auto;
+                                    @include mobile-L{
+                                        width: 100%;
                                         margin-bottom: $m-S;
-                                        margin-right: $m-S;
-                                        &:last-child {
-                                            margin-right: 0;
-                                        }
-                                        @include mobile-L {
-                                            width: 100%;
-                                            margin-right: 0;
-                                        }
+                                    }
+                                }
+                                .search-gp{
+                                    width: 73%;
+                                    @include mobile-L{
+                                        width: 100%;
                                     }
                                 }
                             }
@@ -1338,7 +1378,7 @@ body {
                             display: flex;
                             flex-wrap: wrap;
                             justify-content: flex-start;
-                            @include pad {
+                            @include web-S {
                                 justify-content: space-between;
                             }
                             button,
@@ -1346,8 +1386,7 @@ body {
                                 margin-left: 0;
                                 margin-right: $m-XS;
                                 margin-bottom: $m-XS;
-                                @include pad {
-                                    height: initial;
+                                @include web-S {
                                     padding: $m-XXS $p-XS;
                                     width: 49%;
                                     margin-right: 0;
@@ -1359,9 +1398,6 @@ body {
                         }
                     }
                 }
-                .case-list {
-                    margin-bottom: $m-L;
-                }
                 .bottom {
                     margin-top: $m-S;
                 }
@@ -1370,7 +1406,7 @@ body {
                         margin-bottom: $m-M;
                         display: flex;
                         justify-content: flex-end;
-                        @include pad {
+                        @include web-S {
                             flex-wrap: wrap;
                             justify-content: flex-start;
                             margin-bottom: $m-S;
@@ -1378,11 +1414,11 @@ body {
                         @include mobile-L {
                             flex-wrap: wrap;
                         }
-                        button {
+                        button,
+                        .button {
                             margin-left: $m-XS;
-                            @include pad {
+                            @include web-S {
                                 width: 47%;
-                                height: initial;
                                 margin-bottom: $m-XS;
                                 padding: $m-XXS $p-XXS;
                             }
@@ -1686,12 +1722,6 @@ body {
                                         margin-bottom: 0;
                                     }
                                 }
-                            }
-                        }
-                        .pagination {
-                            margin-top: 0;
-                            @include mobile-L {
-                                margin-top: $m-S;
                             }
                         }
                     }

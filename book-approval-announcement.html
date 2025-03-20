@@ -39,6 +39,7 @@
                     </li>
                     <li>></li>
                     <li><a href="book-login.html" title="圖書出版品類線上申請系統">圖書出版品類線上申請系統</a>
+                    <li>></li>
                     <li><span>認可公告</span></li>
                 </ul>
             </div>
@@ -49,14 +50,12 @@
             <div class="container">
                 <div class="card">
                     <div class="btn-gp">
-                        <button type="button" onclick="javascript:location.href='book-member-unit-unit-apply.html'"><i
-                                class="fas fa-building"></i>放棄免稅認可名單</button>
-                        <button type="button"
-                            onclick="javascript:location.href='book-member-unit-unit-automatic.html'"><i
-                                class="fas fa-magic"></i>系統自動送案申請</button>
-                        <button type="button"
-                            onclick="javascript:location.href='book-member-unit-personal-import.html'"><i
-                                class="fas fa-search"></i>個人出版者圖書資料匯入</button>
+                        <a href="book-approval-announcement-waived.html" target="_blank" title="[另開視窗]放棄免稅認可名單"
+                            class="button"><i class="fas fa-file-alt"></i>放棄免稅認可名單</a>
+                        <a href="book-approval-announcement-automatic.html" target="_blank" title="[下載]自動比對認可資料"
+                            class="button"><i class="fas fa-magic"></i>自動比對認可資料</a>
+                        <a href="book-approval-announcement-EAN.html" target="_blank" title="[另開視窗]EAN條碼查詢"
+                            class="button"><i class="fas fa-search"></i>EAN條碼查詢</a>
                     </div>
                     <form class="searchbar">
                         <div class="filter">
@@ -96,11 +95,12 @@
                                     class="fas fa-file-export"></i>匯出完整認可清單Excel</button>
                             <button type="button" class="button-outline brown"><i
                                     class="fas fa-file-export"></i>匯出完整認可清單CSV</button>
-                            <a href="" download title="[下載]110年1月底以前已有書號之本國圖書認可資料.zip" class="d-block button-outline"><i
+                            <a href="" download title="[下載]110年1月底以前已有書號之本國圖書認可資料.zip" class="button-outline"><i
                                     class="fas fa-paperclip"></i>110年1月底以前已有書號之本國圖書認可資料</a>
-                            <a href="" download title="[下載]資料查詢與介接說明.pdf" class="d-block button-outline"><i
+                            <a href="" download title="[下載]資料查詢與介接說明.pdf" class="button-outline"><i
                                     class="fas fa-paperclip"></i>資料查詢與介接說明</a>
-                            <button type="button" class="button-outline red"><i
+                            <button type="button" class="button-outline red"
+                                onclick="javascript:location.href='book-approval-announcement-API.html'"><i
                                     class="fas fa-exchange-alt"></i>API介接申請</button>
                         </div>
 
