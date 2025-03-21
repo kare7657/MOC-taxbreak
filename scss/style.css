@@ -2435,9 +2435,8 @@ body form .form-gp .input-withButton .date-gp {
 body form .form-gp .input-withButton button,
 body form .form-gp .input-withButton input[type=submit] {
   width: auto;
-  min-width: 150px;
   display: inline-block;
-  flex: 0 1 auto;
+  flex: 1 0 auto;
   margin-left: 20px;
 }
 @media (max-width: 568px) {
@@ -2581,6 +2580,7 @@ body form .choice .ticket-price-result {
   width: 100%;
 }
 body form .choice .ticket-price-result .num {
+  display: flex;
   padding: 4px 12px;
   border-radius: 8px;
   font-size: 1.25rem;
@@ -2634,10 +2634,12 @@ body form .choice-btn h5 {
   width: 100%;
   margin-bottom: 8px;
 }
+body form .choice-btn .type-gp {
+  width: 100%;
+  display: flex;
+}
 @media (max-width: 568px) {
   body form .choice-btn .type-gp {
-    width: 100%;
-    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
@@ -3219,11 +3221,6 @@ body .searchbar .filter .search-icon::after {
   right: 12px;
   color: #9fa0a0;
 }
-@media (max-width: 1550px) {
-  body .searchbar .filter button {
-    padding: 0 12px;
-  }
-}
 @media (max-width: 568px) {
   body .searchbar .filter button {
     width: 100%;
@@ -3233,6 +3230,8 @@ body .searchbar .filter .search-icon::after {
 body .searchbar .btn-gp {
   width: 35%;
   text-align: right;
+  display: flex;
+  justify-content: flex-end;
 }
 @media (max-width: 1550px) {
   body .searchbar .btn-gp {
@@ -4428,7 +4427,7 @@ body main .content-signup .step .view-gp button {
 @media (max-width: 568px) {
   body main .content-signup .step .view-gp button {
     width: 48%;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0;
     margin-bottom: 12px;
     height: initial;
@@ -4818,18 +4817,30 @@ body main .content-signup.book form.searchbar .filter .two-col {
     flex-wrap: wrap;
   }
 }
-body main .content-signup.book form.searchbar .filter .two-col .form-gp {
-  width: 25%;
+body main .content-signup.book form.searchbar .filter .two-col .item {
+  flex: 1 1 450px;
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  body main .content-signup.book form.searchbar .filter .two-col .item {
+    flex: 1 1 auto;
+  }
+}
+@media (max-width: 568px) {
+  body main .content-signup.book form.searchbar .filter .two-col .item {
+    margin-right: 0;
+  }
+}
+body main .content-signup.book form.searchbar .filter .two-col .item .form-gp {
   margin-bottom: 0;
 }
 @media (max-width: 568px) {
-  body main .content-signup.book form.searchbar .filter .two-col .form-gp {
-    width: 100%;
+  body main .content-signup.book form.searchbar .filter .two-col .item .form-gp {
     margin-bottom: 20px;
   }
 }
 body main .content-signup.book form.searchbar .filter .two-col .search-gp {
-  width: 73%;
+  flex: 1 1 auto;
 }
 @media (max-width: 568px) {
   body main .content-signup.book form.searchbar .filter .two-col .search-gp {
@@ -4875,6 +4886,9 @@ body main .content-signup.book form.searchbar .bottom-btn-gp a {
 }
 body main .content-signup.book .bottom {
   margin-top: 20px;
+}
+body main .content-signup.book .case-list {
+  margin-bottom: 48px;
 }
 body main .content-signup.book .card .btn-gp {
   margin-bottom: 36px;

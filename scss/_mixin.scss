@@ -527,7 +527,6 @@
     //按鈕
     button,
     .button {
-        // height: 40px;
         font-size: $size-h5;
         border: none;
         background-color: $primary-bg;
@@ -2116,9 +2115,6 @@
                 }
             }
             button {
-                @include web-XL {
-                    padding: 0 $m-XS;
-                }
                 @include mobile-L() {
                     width: 100%;
                     margin-top: $m-S;
@@ -2128,6 +2124,8 @@
         .btn-gp {
             width: 35%;
             text-align: right;
+            display: flex;
+            justify-content: flex-end;
             @include web-XL {
                 width: 45%;
             }
@@ -2433,6 +2431,7 @@
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
+                
                 @include mobile-L(){
                     flex-wrap: wrap;
                 }
@@ -2447,9 +2446,8 @@
                 button,
                 input[type="submit"] {
                     width: auto;
-                    min-width: 150px;
                     display: inline-block;
-                    flex: 0 1 auto;
+                    flex: 1 0 auto;
                     margin-left: $m-S;
                     @include mobile-L() {
                         width: 100%;
@@ -2577,6 +2575,7 @@
                 align-items: center;
                 width: 100%;
                 .num {
+                    display: flex;
                     padding: 4px $m-XS;
                     border-radius: 8px;
                     font-size: $size-h5;
@@ -2634,9 +2633,9 @@
                 margin-bottom: $p-XXS;
             }
             .type-gp {
+                width: 100%;
+                display: flex;
                 @include mobile-L() {
-                    width: 100%;
-                    display: flex;
                     justify-content: space-between;
                     flex-wrap: wrap;
                 }

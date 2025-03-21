@@ -981,7 +981,7 @@ body {
                         border: solid 1px $primary-tint;
                         @include mobile-L {
                             width: 48%;
-                            justify-content: space-between;
+                            justify-content: center;
                             margin: 0;
                             margin-bottom: $m-XS;
                             height: initial;
@@ -1342,25 +1342,33 @@ body {
                                     }
                                 }
                             }
-                            .two-col{
+                            .two-col {
                                 width: 100%;
                                 display: flex;
                                 align-items: flex-end;
                                 justify-content: space-between;
-                                @include mobile-L{
-                                   flex-wrap: wrap;
+                                @include mobile-L {
+                                    flex-wrap: wrap;
                                 }
-                                .form-gp{
-                                    width: 25%;
-                                    margin-bottom: 0;
-                                    @include mobile-L{
-                                        width: 100%;
-                                        margin-bottom: $m-S;
+                                .item {
+                                    flex: 1 1 450px;
+                                    margin-right: $m-S;
+                                    @include pad {
+                                        flex: 1 1 auto;
+                                    }
+                                    @include mobile-L {
+                                        margin-right: 0;
+                                    }
+                                    .form-gp {
+                                        margin-bottom: 0;
+                                        @include mobile-L {
+                                            margin-bottom: $m-S;
+                                        }
                                     }
                                 }
-                                .search-gp{
-                                    width: 73%;
-                                    @include mobile-L{
+                                .search-gp {
+                                    flex: 1 1 auto;
+                                    @include mobile-L {
                                         width: 100%;
                                     }
                                 }
@@ -1400,6 +1408,9 @@ body {
                 }
                 .bottom {
                     margin-top: $m-S;
+                }
+                .case-list {
+                    margin-bottom: $m-L;
                 }
                 .card {
                     .btn-gp {
