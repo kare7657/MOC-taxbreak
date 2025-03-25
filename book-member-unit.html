@@ -67,7 +67,9 @@
             <div class="container">
                 <form>
                     <fieldset disabled class="fieldset-disabled">
-                        <legend><h3>單位基本資料</h3></legend>                        
+                        <legend>
+                            <h3>單位基本資料</h3>
+                        </legend>
                         <div class="form-gp">
                             <label for="BAN">統一編號</label>
                             <input type="number" name="BAN" id="BAN" placeholder="12345678">
@@ -83,20 +85,20 @@
                         <div class="form-gp choice-btn">
                             <div class="title">申請單位類型</div>
                             <div class="item">
-                                <input type="checkbox" name="unit_type" value="" id="unit_type" checked>
-                                <label for="unit_type">
+                                <input type="checkbox" name="book-state" value="" id="type1" checked>
+                                <label for="type1">
                                     圖書出版
                                 </label>
                             </div>
                             <div class="item">
-                                <input type="checkbox" name="unit_type" value="" id="unit_type2" checked>
-                                <label for="unit_type2">
+                                <input type="checkbox" name="book-state" value="" id="type2" checked>
+                                <label for="type2">
                                     圖書進口
                                 </label>
                             </div>
                             <div class="item">
-                                <input type="checkbox" name="unit_type" value="" id="unit_type3">
-                                <label for="unit_type3">
+                                <input type="checkbox" name="book-state" value="" id="type3">
+                                <label for="type3">
                                     圖書批發零售
                                 </label>
                             </div>
@@ -156,7 +158,9 @@
                         </div>
                     </fieldset>
                     <fieldset disabled class="fieldset-disabled">
-                        <legend><h3>檔案上傳</h3></legend>  
+                        <legend>
+                            <h3>檔案上傳</h3>
+                        </legend>
                         <div class="form-gp">
                             <label for="file">申請單位立案或登記證明</label>
                             <div class="file-upload">
@@ -324,11 +328,9 @@
                                 <td data-title="狀態">尚未送出</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="book-case-view-tax-break.html" class="link" title="瀏覽"><i
-                                                class="fas fa-eye"></i>
+                                        <a href="book-case-view.html" class="link" title="瀏覽"><i class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
-                                        <a href="book-case-view-tax-break.html" class="link" title="訂正"><i
-                                                class="fas fa-pen"></i>
+                                        <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
                                         <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
@@ -342,11 +344,9 @@
                                 <td data-title="狀態">尚未送出</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="book-case-view-tax-break.html" class="link" title="瀏覽"><i
-                                                class="fas fa-eye"></i>
+                                        <a href="book-case-view.html" class="link" title="瀏覽"><i class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
-                                        <a href="book-case-view-tax-break.html" class="link" title="訂正"><i
-                                                class="fas fa-pen"></i>
+                                        <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
                                         <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
@@ -360,11 +360,9 @@
                                 <td data-title="狀態">尚未送出</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="book-case-view-tax-break.html" class="link" title="瀏覽"><i
-                                                class="fas fa-eye"></i>
+                                        <a href="book-case-view.html" class="link" title="瀏覽"><i class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
-                                        <a href="book-case-view-tax-break.html" class="link" title="訂正"><i
-                                                class="fas fa-pen"></i>
+                                        <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
                                         <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
@@ -378,11 +376,9 @@
                                 <td data-title="狀態">尚未送出</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="book-case-view-tax-break.html" class="link" title="瀏覽"><i
-                                                class="fas fa-eye"></i>
+                                        <a href="book-case-view.html" class="link" title="瀏覽"><i class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
-                                        <a href="book-case-view-tax-break.html" class="link" title="訂正"><i
-                                                class="fas fa-pen"></i>
+                                        <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
                                         <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
@@ -396,11 +392,9 @@
                                 <td data-title="狀態">尚未送出</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
-                                        <a href="book-case-view-tax-break.html" class="link" title="瀏覽"><i
-                                                class="fas fa-eye"></i>
+                                        <a href="book-case-view.html" class="link" title="瀏覽"><i class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
-                                        <a href="book-case-view-tax-break.html" class="link" title="訂正"><i
-                                                class="fas fa-pen"></i>
+                                        <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
                                         <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>

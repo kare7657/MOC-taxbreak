@@ -2123,11 +2123,6 @@ body form {
   border-radius: 20px;
   margin: auto;
 }
-@media (max-width: 1024px) {
-  body form {
-    padding: 0 12px;
-  }
-}
 @media (max-width: 568px) {
   body form {
     border-radius: 0;
@@ -2408,6 +2403,11 @@ body form .form-gp .label-withButton .download-sample {
   text-align: right;
   margin-top: 0;
 }
+@media (max-width: 568px) {
+  body form .form-gp .label-withButton .download-sample {
+    padding-left: 16px !important;
+  }
+}
 body form .form-gp .label-withButton .download-sample i {
   margin-right: 8px;
 }
@@ -2450,35 +2450,27 @@ body form .form-gp .select-withButton {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+}
+@media (max-width: 568px) {
+  body form .form-gp .select-withButton {
+    flex-wrap: wrap;
+  }
 }
 body form .form-gp .select-withButton select {
-  width: 90%;
-}
-@media (max-width: 1550px) {
-  body form .form-gp .select-withButton select {
-    width: 88%;
-  }
-}
-@media (max-width: 1024px) {
-  body form .form-gp .select-withButton select {
-    width: 85%;
-  }
-}
-@media (max-width: 768px) {
-  body form .form-gp .select-withButton select {
-    width: 80%;
-  }
+  flex: 1 1 auto;
+  margin-right: 20px;
 }
 @media (max-width: 568px) {
   body form .form-gp .select-withButton select {
     width: 100%;
+    margin-right: 0;
     margin-bottom: 12px;
   }
 }
 body form .form-gp .select-withButton button,
 body form .form-gp .select-withButton input[type=submit] {
   width: auto;
+  flex: 1 0 auto;
 }
 @media (max-width: 568px) {
   body form .form-gp .select-withButton button,
@@ -4703,18 +4695,13 @@ body main .content-signup.book h2 {
 }
 @media (max-width: 1024px) {
   body main .content-signup.book h2 {
-    padding: 0 56px;
     width: 90%;
-  }
-}
-@media (max-width: 768px) {
-  body main .content-signup.book h2 {
-    padding: 0 40px;
   }
 }
 @media (max-width: 568px) {
   body main .content-signup.book h2 {
-    padding: 0 16px;
+    width: 100%;
+    padding: 0 24px;
   }
 }
 body main .content-signup.book .step {
@@ -4725,6 +4712,21 @@ body main .content-signup.book .step {
 @media (max-width: 1550px) {
   body main .content-signup.book .step {
     max-width: 1140px;
+  }
+}
+@media (max-width: 1024px) {
+  body main .content-signup.book .step {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 768px) {
+  body main .content-signup.book .step {
+    padding: 0 32px;
+  }
+}
+@media (max-width: 568px) {
+  body main .content-signup.book .step {
+    padding: 0 24px;
   }
 }
 body main .content-signup.book .step .view-gp {
@@ -5108,42 +5110,51 @@ body main .content-member .container .case-list .list-btn-gp {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-body main .content-member .container .case-list .list-btn-gp .left {
   margin-top: 4px;
   margin-bottom: 20px;
+}
+body main .content-member .container .case-list .list-btn-gp .left {
+  display: flex;
+}
+@media (max-width: 1024px) {
+  body main .content-member .container .case-list .list-btn-gp .left {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 @media (max-width: 568px) {
   body main .content-member .container .case-list .list-btn-gp .left {
     width: 100%;
     margin-bottom: 0;
+  }
+}
+@media (max-width: 1024px) {
+  body main .content-member .container .case-list .list-btn-gp .right {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 }
-body main .content-member .container .case-list .list-btn-gp .left button {
+body main .content-member .container .case-list .list-btn-gp button {
   margin-right: 12px;
+  padding: 4px 16px;
 }
-body main .content-member .container .case-list .list-btn-gp .left button:last-child {
+body main .content-member .container .case-list .list-btn-gp button:last-child {
   margin-right: 0;
 }
-@media (max-width: 568px) {
-  body main .content-member .container .case-list .list-btn-gp .left button {
-    width: 48%;
+@media (max-width: 1024px) {
+  body main .content-member .container .case-list .list-btn-gp button {
+    width: 32%;
     margin-bottom: 12px;
     margin-right: 0;
   }
 }
-@media (max-width: 568px) {
-  body main .content-member .container .case-list .list-btn-gp .right {
-    width: 100%;
-  }
-}
-@media (max-width: 568px) {
-  body main .content-member .container .case-list .list-btn-gp .right button {
+@media (max-width: 768px) {
+  body main .content-member .container .case-list .list-btn-gp button {
     width: 48%;
-    margin-bottom: 20px;
+    margin-right: 0;
   }
 }
 body main .content-member .container .case-list .nav-pills {
@@ -5289,6 +5300,11 @@ body main .content-member .container .add-admin-gp form .form-gp.account {
   display: flex;
   flex-wrap: wrap;
 }
+@media (max-width: 1024px) {
+  body main .content-member .container .add-admin-gp form .form-gp.account {
+    margin-top: 0;
+  }
+}
 body main .content-member .container .add-admin-gp form input[type=submit] {
   margin: 0;
 }
@@ -5296,6 +5312,24 @@ body main .content-member .container .add-admin-gp form input[type=submit] {
   body main .content-member .container .add-admin-gp form input[type=submit] {
     width: 100% !important;
     margin-top: 12px;
+  }
+}
+body main .content-member.book .add-admin-gp .form-gp {
+  width: auto;
+  flex: 1 1 auto;
+  margin-right: 20px;
+}
+body main .content-member.book .add-admin-gp .form-gp:nth-child(4), body main .content-member.book .add-admin-gp .form-gp:last-child {
+  margin-right: 0;
+}
+@media (max-width: 1024px) {
+  body main .content-member.book .add-admin-gp .form-gp:nth-child(even), body main .content-member.book .add-admin-gp .form-gp:last-child {
+    margin-right: 0;
+  }
+}
+@media (max-width: 568px) {
+  body main .content-member.book .add-admin-gp .form-gp {
+    margin-right: 0;
   }
 }
 body main .content-member.book .btn-gp {
@@ -5365,7 +5399,7 @@ body main .content-member.book .searchbar .filter select {
 body main .content-member.book .searchbar .filter .form-gp {
   width: 48%;
 }
-@media (max-width: 568px) {
+@media (max-width: 768px) {
   body main .content-member.book .searchbar .filter .form-gp.datetime {
     width: 100%;
   }

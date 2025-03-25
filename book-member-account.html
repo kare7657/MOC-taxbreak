@@ -8,6 +8,8 @@
     <title>帳號管理</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- jquery UI -->
+    <link rel="stylesheet" href="scss/jquery-ui.min.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="scss/bootstrap.4.2.css">
     <!-- our css -->
@@ -36,7 +38,7 @@
                 </ul>
             </div>
         </div>
-        <section class="content-member">
+        <section class="content-member book">
             <div class="container">
                 <h2>新增案件管理員</h2>
                 <p class="acc-info"><i class="fas fa-exclamation-circle"></i>標註星號（<span
@@ -44,8 +46,9 @@
                 <div class="add-admin-gp">
                     <form>
                         <div class="form-gp">
-                            <label for="admin_name">單位/個人出版品牌<span class="notice">*</span></label>
-                            <input type="text" name="admin_name" id="admin_name" placeholder="請輸入品牌名稱">
+                            <!-- jquery Autocomplete -->
+                            <label for="publisher">單位/個人出版品牌<span class="notice">*</span></label>
+                            <input type="text" name="publisher" id="publisher" placeholder="請輸入品牌名稱">
                         </div>
                         <div class="form-gp">
                             <label for="admin_ID">案件管理員姓名<span class="notice">*</span></label>
@@ -53,7 +56,7 @@
                         </div>
                         <div class="form-gp">
                             <label for="admin_tel">案件管理員聯絡電話<span class="notice">*</span></label>
-                            <input type="number" name="admin_tel" id="admin_tel" placeholder="請輸入連絡電話">
+                            <input type="number" name="admin_tel" id="admin_tel" placeholder="請輸入聯絡電話">
                         </div>
                         <div class="form-gp">
                             <label for="admin_email">案件管理員Email<span class="notice">*</span></label>
@@ -482,6 +485,9 @@
     <!-- jquery -->
     <script src="js/jquery.min.js"></script>
 
+    <!-- jquery UI -->
+    <script src="js/jquery-ui.min.js"></script>
+
     <!-- bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
 
@@ -496,6 +502,24 @@
             $("#footer").load("book-footer.html");
         });
 
+    </script>
+
+    <!-- jquery Autocomplete -->
+    <script>
+        $(document).ready(function () {
+            var publisherList = ["出版者A", "出版者B", "出版者C", "出版者D", "出版者E", "出版者F", "出版者G", "出版者H", "出版者I", "出版者J"];
+
+            $("#publisher").autocomplete({
+                source: publisherList,
+                minLength: 1, // 需輸入 1 個字才開始建議
+                autoFocus: true, // 自動選中第一個選項
+                select: function (event, ui) {
+                    // 選擇後填入輸入框
+                    $("#publisher").val(ui.item.value);
+                    return false;
+                }
+            });
+        });
     </script>
 
 </body>

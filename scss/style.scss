@@ -1262,14 +1262,11 @@ body {
                         max-width: 1140px;
                     }
                     @include web-S {
-                        padding: 0 $p-XL;
                         width: 90%;
                     }
-                    @include pad {
-                        padding: 0 $p-L;
-                    }
                     @include mobile-L {
-                        padding: 0 $p-XS;
+                        width: 100%;
+                        padding: 0 $p-S;
                     }
                 }
                 .step {
@@ -1278,6 +1275,15 @@ body {
                     max-width: 1530px;
                     @include web-XL {
                         max-width: 1140px;
+                    }
+                    @include web-S {
+                        padding: 0 $p-L;
+                    }
+                    @include pad {
+                        padding: 0 $p-M;
+                    }
+                    @include mobile-L {
+                        padding: 0 $p-S;
                     }
                     .view-gp {
                         width: 70%;
@@ -1610,37 +1616,54 @@ body {
                         display: flex;
                         justify-content: space-between;
                         flex-wrap: wrap;
+                        margin-top: $m-XXS;
+                        margin-bottom: $m-S;
                         .left {
-                            margin-top: $m-XXS;
-                            margin-bottom: $m-S;
+                            display: flex;
+                            @include web-S{
+                                width: 100%;
+                                flex-wrap: wrap;
+                                justify-content: space-between;
+                            }
                             @include mobile-L {
                                 width: 100%;
                                 margin-bottom: 0;
+                            }
+                            
+                        }
+                        .right {
+                            @include web-S{
+                                width: 100%;
                                 display: flex;
                                 flex-wrap: wrap;
                                 justify-content: space-between;
                             }
-                            button {
-                                margin-right: $m-XS;
-                                &:last-child {
-                                    margin-right: 0;
-                                }
-                                @include mobile-L {
-                                    width: 48%;
-                                    margin-bottom: $m-XS;
-                                    margin-right: 0;
-                                }
-                            }
+                            // button {
+                            //     padding: $m-XXS $p-XS;
+                            //     @include web-S{
+                            //         width: 30%;
+                            //         margin-bottom: $m-XS;
+                            //     }
+                            //     @include pad {
+                            //         width: 48%;
+                            //         margin-bottom: $m-S;
+                            //     }
+                            // }
                         }
-                        .right {
-                            @include mobile-L {
-                                width: 100%;
+                        button {
+                            margin-right: $m-XS;
+                            padding: $m-XXS $p-XS;
+                            &:last-child {
+                                margin-right: 0;
                             }
-                            button {
-                                @include mobile-L {
-                                    width: 48%;
-                                    margin-bottom: $m-S;
-                                }
+                            @include web-S{
+                                width: 32%;
+                                margin-bottom: $m-XS;
+                                margin-right: 0;
+                            }
+                            @include pad {
+                                width: 48%;
+                                margin-right: 0;
                             }
                         }
                     }
@@ -1775,6 +1798,9 @@ body {
                                 width: 100%;
                                 display: flex;
                                 flex-wrap: wrap;
+                                @include web-S {
+                                    margin-top: 0;
+                                }
                             }
                         }
                         input[type="submit"] {
@@ -1788,6 +1814,26 @@ body {
                 }
             }
             &.book {
+                .add-admin-gp {
+                    .form-gp {
+                        width: auto;
+                        flex: 1 1 auto;
+                        margin-right: $m-S;
+                        &:nth-child(4),
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                        @include web-S {
+                            &:nth-child(even),
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                        @include mobile-L {
+                            margin-right: 0;
+                        }
+                    }
+                }
                 .btn-gp {
                     display: flex;
                     justify-content: flex-end;
@@ -1841,7 +1887,7 @@ body {
                         .form-gp {
                             width: 48%;
                             &.datetime {
-                                @include mobile-L {
+                                @include pad {
                                     width: 100%;
                                 }
                                 .item {
