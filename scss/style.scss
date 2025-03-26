@@ -252,6 +252,12 @@ body {
                 margin-top: $m-S;
                 margin-bottom: $p-XXS;
             }
+            .text-gp{
+                margin-bottom: $m-XS;
+                ul{
+                    margin-bottom: 0;
+                }
+            }
         }
         // Banner
         .section-banner {
@@ -953,7 +959,7 @@ body {
                         @include mobile-L {
                             margin: 0 $p-XXS;
                             text-align: center;
-                            width: 20%;
+                            width: 19%;
                             padding: 0 $p-XXS;
                         }
                         &.active {
@@ -1000,6 +1006,16 @@ body {
             }
             form {
                 background-color: unset;
+                .top-btn-gp{
+                    margin-bottom: $m-XS;
+                    display: flex;
+                    justify-content: flex-end;
+                    button{
+                        @include mobile-L{
+                            width: 100%;
+                        }
+                    }
+                }
                 .info {
                     margin-bottom: $m-XS;
                     .type-title {
@@ -1317,6 +1333,18 @@ body {
                             }
                         }
                     }
+                    // .btn-gp{
+                    //     @include mobile-L{
+                    //         justify-content: space-between;
+                    //     }
+                    //     .btn-step{
+                    //         @include mobile-L{
+                    //             width: 42%;
+                    //             margin: $m-XS 0;
+                    //             padding: $m-XXS 0;
+                    //         }
+                    //     }
+                    // }
                 }
                 form {
                     margin-bottom: $m-M;
@@ -1332,53 +1360,6 @@ body {
                         .filter {
                             width: 100%;
                             justify-content: space-between;
-                            .three-col {
-                                margin-bottom: 0;
-                                .item {
-                                    width: 50px;
-                                    flex: 1 1 auto;
-                                    margin-bottom: $m-S;
-                                    margin-right: $m-S;
-                                    &:last-child {
-                                        margin-right: 0;
-                                    }
-                                    @include mobile-L {
-                                        width: 100%;
-                                        margin-right: 0;
-                                    }
-                                }
-                            }
-                            .two-col {
-                                width: 100%;
-                                display: flex;
-                                align-items: flex-end;
-                                justify-content: space-between;
-                                @include mobile-L {
-                                    flex-wrap: wrap;
-                                }
-                                .item {
-                                    flex: 1 1 450px;
-                                    margin-right: $m-S;
-                                    @include pad {
-                                        flex: 1 1 auto;
-                                    }
-                                    @include mobile-L {
-                                        margin-right: 0;
-                                    }
-                                    .form-gp {
-                                        margin-bottom: 0;
-                                        @include mobile-L {
-                                            margin-bottom: $m-S;
-                                        }
-                                    }
-                                }
-                                .search-gp {
-                                    flex: 1 1 auto;
-                                    @include mobile-L {
-                                        width: 100%;
-                                    }
-                                }
-                            }
 
                             select {
                                 margin-right: 0;
@@ -1612,61 +1593,7 @@ body {
                 }
                 .case-list {
                     margin: $m-XS 0;
-                    .list-btn-gp {
-                        display: flex;
-                        justify-content: space-between;
-                        flex-wrap: wrap;
-                        margin-top: $m-XXS;
-                        margin-bottom: $m-S;
-                        .left {
-                            display: flex;
-                            @include web-S{
-                                width: 100%;
-                                flex-wrap: wrap;
-                                justify-content: space-between;
-                            }
-                            @include mobile-L {
-                                width: 100%;
-                                margin-bottom: 0;
-                            }
-                            
-                        }
-                        .right {
-                            @include web-S{
-                                width: 100%;
-                                display: flex;
-                                flex-wrap: wrap;
-                                justify-content: space-between;
-                            }
-                            // button {
-                            //     padding: $m-XXS $p-XS;
-                            //     @include web-S{
-                            //         width: 30%;
-                            //         margin-bottom: $m-XS;
-                            //     }
-                            //     @include pad {
-                            //         width: 48%;
-                            //         margin-bottom: $m-S;
-                            //     }
-                            // }
-                        }
-                        button {
-                            margin-right: $m-XS;
-                            padding: $m-XXS $p-XS;
-                            &:last-child {
-                                margin-right: 0;
-                            }
-                            @include web-S{
-                                width: 32%;
-                                margin-bottom: $m-XS;
-                                margin-right: 0;
-                            }
-                            @include pad {
-                                width: 48%;
-                                margin-right: 0;
-                            }
-                        }
-                    }
+
                     .nav-pills {
                         margin-bottom: $m-XS;
                         .nav-item {
@@ -1875,26 +1802,95 @@ body {
                         width: 100%;
                         display: flex;
                         flex-wrap: wrap;
+                        flex-direction: row;
                         justify-content: space-between;
                         select {
-                            width: 32%;
-                            margin-right: 0;
+                            flex: 1 1 auto;
                             margin-bottom: $m-XS;
                             @include mobile-L {
                                 width: 100%;
                             }
+                            &:nth-child(3n) {
+                                margin-right: 0;
+                            }
                         }
-                        .form-gp {
-                            width: 48%;
-                            &.datetime {
-                                @include pad {
-                                    width: 100%;
-                                }
-                                .item {
+                        .two-col {
+                            .form-gp {
+                                margin-bottom: $m-S;
+                                display: flex;
+                                justify-content: space-between;
+                                &:first-child {
+                                    margin-right: $m-S;
                                     @include mobile-L {
-                                        width: 100%;
+                                        margin-right: 0;
                                     }
                                 }
+                                &.datetime {
+                                    @include pad {
+                                        width: 100%;
+                                    }
+                                    .item {
+                                        width: 46%;
+                                        flex: 1 1 auto;
+                                        margin-right: $m-S;
+                                        &:last-child {
+                                            margin-right: 0;
+                                        }
+                                        @include pad {
+                                            width: 100%;
+                                            margin-right: 0;
+                                            &:first-child {
+                                                margin-bottom: $m-XS;
+                                            }
+                                        }
+                                    }
+                                   
+                                }
+                            }
+                        }
+                    }
+                }
+                .case-list {
+                    .list-btn-gp {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        margin-top: $m-XXS;
+                        margin-bottom: $m-S;
+                        .left {
+                            display: flex;
+                            @include web-S {
+                                width: 100%;
+                                flex-wrap: wrap;
+                                justify-content: space-between;
+                            }
+                            @include mobile-L {
+                                width: 100%;
+                                margin-bottom: 0;
+                            }
+                        }
+                        .right {
+                            @include web-S {
+                                width: 100%;
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: space-between;
+                            }
+                        }
+                        button {
+                            margin-right: $m-XS;
+                            padding: $m-XXS $p-XS;
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                            @include web-S {
+                                width: 32%;
+                                margin-bottom: $m-XS;
+                                margin-right: 0;
+                            }
+                            @include pad {
+                                width: 48%;
+                                margin-right: 0;
                             }
                         }
                     }

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>新增案件</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- jQuery 日期選擇器-->
+    <!-- <link rel="stylesheet" href="scss/jquery-ui-1.10.0.custom.min.css" /> -->
+    <link rel="stylesheet" href="scss/jquery-ui.min.css" />
+    <!-- timepicker 時間選擇器-->
+    <link rel="stylesheet" href="scss/timepicker.css" />
+    <!-- select2 -->
+    <link rel="stylesheet" href="scss/select2.min.css" />
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <main class="bgc-gray">
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C">:::</a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    </li>
+                    <li><a href="index.html" title="首頁"><i class="fas fa-home"></i><span class="d-none">首頁</span></a>
+                    </li>
+                    <li>></li>
+                    <li><a href="tax-break.html" title="申請減免營業稅及娛樂稅">申請減免營業稅及娛樂稅</a>
+                    </li>
+                    <li>></li>
+                    <li><a href="book-login.html" title="圖書出版品類線上申請系統">圖書出版品類線上申請系統</a>
+                    <li>></li>
+                    <li><a href="book-case-manage.html" title="案件管理">案件管理</a>
+                    <li>></li>
+                    <li><span>新增案件</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 我要申請 -->
+        <section class="content-signup">
+            <h2>新增案件</h2>
+            <div class="step">
+                <div class="btn-gp">
+                    <a href="book-apply-domestic.html" class="btn-step active">申請資料</a>
+                    <span>></span>
+                    <div class="btn-step">預覽提交</div>
+                </div>
+            </div>
+            <div class="container">
+                <form class="card">
+                    <div class="top-btn-gp">
+                        <button type="button" onclick="javascript:location.href='book-apply-domestic-batch.html'"><i
+                                class="fas fa-plus-circle"></i>批次新增</button>
+                    </div>
+                    <ol class="ps">
+                        <li>請輸入書號即可，其他欄位將由系統自動帶入</li>
+                        <li>本國圖書出版品資料係介接國家圖書館書號中心資料，如有需修正之處，請逕洽該館申請更正，系統將於該館資料更新後，同步更正</li>
+                    </ol>
+                    <p class="acc-info"><i class="fas fa-exclamation-circle"></i>標註星號（<span
+                            class="notice">*</span>）表示此欄位必須填寫</p>
+                    <fieldset>
+                        <div class="type-title">
+                            <h3>基本資料</h3>
+                        </div>
+                        <div class="form-gp choice-btn">
+                            <h5>案件類別<span class="notice">*</span></h5>
+                            <div class="type-gp">
+                                <button type="button" class="button-outline active" data-toggle="modal"
+                                    data-target="#modal-notify-domestic">本國</button>
+                                <button type="button" class="button-outline" data-toggle="modal"
+                                    data-target="#modal-notify-import">進口</button>
+                            </div>
+                            <ul class="ps">
+                                <li>本國：代出版者為自然人，或出版者已解散或歇業申請</li>
+                            </ul>
+                        </div>
+                        <div class="form-gp">
+                            <label for="book_type">書籍類型<span class="notice">*</span></label>
+                            <select name="type" id="book_type">
+                                <option value="list1">實體</option>
+                                <option value="list2">電子</option>
+                            </select>
+                        </div>
+                        <div class="form-gp">
+                            <label for="book_ISBN">書號<span class="notice">*</span></label>
+                            <input type="text" name="book_ISBN" id="book_ISBN" placeholder="請輸入書號">
+                        </div>
+                        <div class="form-gp">
+                            <label for="book_name">書名<span class="notice">*</span></label>
+                            <input type="text" name="book_name" id="book_name" placeholder="請輸入書名">
+                        </div>
+                        <div class="form-gp">
+                            <label for="book_author">作者<span class="notice">*</span></label>
+                            <input type="text" name="book_author" id="book_author" placeholder="請輸入作者">
+                        </div>
+                        <div class="form-gp">
+                            <label for="book_publisher">出版者<span class="notice">*</span></label>
+                            <input type="text" name="book_publisher" id="book_publisher" placeholder="請輸入出版者">
+                        </div>
+                        <div class="form-gp">
+                            <div class="label-withButton after-title">
+
+                                <div class="form-gp">
+                                    <div class="label-withButton after-title">
+                                        <label for="publication-year">出版日期<span class="notice">*</span></label>
+                                    </div>
+                                    <div class="address">
+                                        <select name="type" id="publication-year">
+                                            <option value="list1">請選擇年份</option>
+                                            <option value="list2">選單2</option>
+                                            <option value="list3">選單3</option>
+                                        </select>
+                                        <select name="type" id="publication-month">
+                                            <option value="list1">請選擇月份</option>
+                                            <option value="list2">選單2</option>
+                                            <option value="list3">選單3</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                    </fieldset>
+                    <fieldset class="mb-0">
+                        <div class="type-title">
+                            <h3>附件資料</h3>
+                        </div>
+                        <div class="form-gp">
+                            <label for="file">代申請證明⽂件 <span class="remark">（出版者為⾃然⼈，請附委託書；出版者已解散或歇業，請附相關證明⽂件）</span></label>
+                            <div class="file-upload">
+                                <input type="button" id="file" value="檔案上傳">
+                                <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <ul class="ps">
+                                <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
+                                <li>檔案請小於 20 MB</li>
+                            </ul>
+                        </div>
+                    </fieldset>
+                    <div class="btn-tool">
+                        <input type="button" value="取消" class="outline">
+                        <input type="button" value="暫存" class="outline">
+                        <input type="button" value="預覽提交" onclick="location.href='book-apply-domestic2.html'">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+     
+        <!-- modal 條款-->
+        <div class="modal fade modal-template " id="modal-clause-taxBreak" tabindex="-1" role="dialog"
+            aria-labelledby="modal-clauseLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button> -->
+                            <h2 class="modal-title" id="modal-clauseLabel">線上申請同意條款</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="iframe-gp">
+                                <iframe src="book-clause-apply.html"></iframe>
+                                <div class="form-gp choice">
+                                    <div class="item">
+                                        <input type="checkbox" value="" id="private-agree2">
+                                        <label for="private-agree2">
+                                            我已完全閱讀並同意以上內容<span class="notice">*</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel4" data-dismiss="modal">下一步</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- modal 提示-本國-->
+        <div class="modal fade modal-template " id="modal-notify-domestic" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD3" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <p>若調整類型，目前填寫的資料將會被清除，請確定是否要繼續？</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel3" data-dismiss="modal">取消</button>
+                            <button type="button" name="go" id="go3"
+                                onclick="location.href='book-apply-domestic.html'">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- modal 提示-外國-->
+        <div class="modal fade modal-template " id="modal-notify-import" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD4" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel2">系統通知</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <p>若調整類型，目前填寫的資料將會被清除，請確定是否要繼續？</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel5" data-dismiss="modal">取消</button>
+                            <button type="button" name="go" id="go5"
+                                onclick="location.href='book-apply-import.html'">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery 日期選擇器-->
+    <script src="js/jquery-ui.min.js"></script>
+    <!-- timepicker 時間選擇器-->
+    <script src="js/timepicker.min.js"></script>
+    <!-- InputMask 限制輸入格式-->
+    <script src="js/moment.min.js"></script>
+    <script src="js/jquery.inputmask.bundle.js"></script>
+    <!-- select2 -->
+    <script src="js/select2.full.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('book-header.html', function () {
+                // header 載入完成後，綁定事件
+                initMobileMenu();
+            });
+
+            $("#footer").load("book-footer.html");
+        });
+
+    </script>
+
+    <!-- modal -->
+    <script>
+        //進頁開啟條款
+        $(window).ready(() => {
+            $('#modal-clause-taxBreak').modal('show');
+        })
+    </script>
+
+    <!-- select2 -->
+    <script>
+        $(function () {
+            //Initialize Elements
+            $('.select2').select2()
+
+        })
+    </script>
+
+    <!-- JQ datepicker -->
+    <script>
+        $(document).ready(function () {
+            $(".chinese-date").datepicker({
+                changeYear: true,
+                changeMonth: true,
+                currentText: "Now",
+                dateFormat: "Rmmdd",
+                showButtonPanel: false,
+                yearRange: "1930:2060",
+                // icon
+                showOn: "both",
+                buttonImage: "img/calendar-alt-regular.svg",
+                buttonImageOnly: true,
+                buttonText: "選擇日期",
+            });
+            $(".western-date").datepicker({
+                changeYear: true,
+                changeMonth: true,
+                currentText: "Now",
+                dateFormat: "yy-mm-dd",
+                showButtonPanel: false,
+                yearRange: "1930:2060",
+                // icon
+                showOn: "both",
+                buttonImage: "img/calendar-alt-regular.svg",
+                buttonImageOnly: true,
+                buttonText: "選擇日期",
+            });
+        });
+        // 將.datepicker改成民國年與西元年小套件同時存在
+        $(function (datepicker) {
+            //先設定預設西元年的datepicker必要功能
+            var old_generateMonthYearHeader = $.datepicker._generateMonthYearHeader;
+            var old_formatDate = $.datepicker.formatDate;
+            var old_parseDate = $.datepicker.parseDate;
+
+            $.extend($.datepicker, {
+                //選擇日期之後的value
+                formatDate: function (format, date, settings) {
+                    var oformatDate = old_formatDate(format, date, settings);
+
+                    if (format == 'Rmmdd') {
+                        var d = date.getDate();
+                        var m = date.getMonth() + 1;
+                        var y = date.getFullYear();
+                        var fm = function (v) {
+                            return (v < 10 ? '0' : '') + v;
+                        };
+
+                        if ((y - 1911) >= 100) { y = y - 1911; } else { y = "0" + String(y - 1911); }
+                        // 日期顯示格式
+                        return (y) + '/' + fm(m) + '/' + fm(d);
+                    }
+                    return oformatDate;
+
+                },
+                //點取已存在日期的parse
+                parseDate: function (format, value, settings) {
+                    var v = new String(value);
+                    var Y, M, D;
+                    if (format == 'Rmmdd') {
+                        if (v.length == 7) {/*1001215*/
+                            Y = v.substring(0, 3) - 0 + 1911;
+                            M = v.substring(3, 5) - 0 - 1;
+                            D = v.substring(5, 7) - 0;
+                            return (new Date(Y, M, D));
+                        } else if (v.length == 6) {/*0981215*/
+
+                            Y = "0" + String(v.substring(0, 2) - 0 + 1911);
+                            M = v.substring(2, 4) - 0 - 1;
+                            D = v.substring(4, 6) - 0;
+                            return (new Date(Y, M, D));
+                        }
+                        return (new Date());
+                    } else {
+                        var oparseDate = old_parseDate.apply(this, [format, value, settings]);
+                        return (oparseDate);
+                    }
+
+                },
+                //改變小工具的年-民國
+                _generateMonthYearHeader: function (inst, drawMonth, drawYear, minDate, maxDate, secondary, monthNames, monthNamesShort) {
+                    var dateFormat = this._get(inst, "dateFormat");
+                    var htmlYearMonth = old_generateMonthYearHeader.apply(this, [inst, drawMonth, drawYear, minDate, maxDate, secondary, monthNames, monthNamesShort]);
+                    if (dateFormat == 'Rmmdd') {
+                        if ($(htmlYearMonth).find(".ui-datepicker-year").length > 0) {
+                            htmlYearMonth = $(htmlYearMonth).find(".ui-datepicker-year").find("option").each(function (i, e) {
+                                if (Number(e.value) - 1911 > 0) $(e).text("民國" + (Number(e.innerText) - 1911) + "年");
+                            }).end().end().get(0).outerHTML;
+                        }
+                    }
+                    return htmlYearMonth;
+                },
+
+            });
+
+            // 中文
+            $.datepicker.regional["zh-TW"] = {
+                monthNames: ["一月", "二月", "三月", "四月", "五月", "六月",
+                    "七月", "八月", "九月", "十月", "十一月", "十二月"],
+                monthNamesShort: ["一月", "二月", "三月", "四月", "五月", "六月",
+                    "七月", "八月", "九月", "十月", "十一月", "十二月"],
+                dayNames: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+                dayNamesShort: ["週日", "週一", "週二", "週三", "週四", "週五", "週六"],
+                dayNamesMin: ["日", "一", "二", "三", "四", "五", "六"],
+                weekHeader: "週",
+                dateFormat: "yyy/mm/dd",
+            };
+            $.datepicker.setDefaults($.datepicker.regional["zh-TW"]);
+
+            return datepicker.regional["zh-TW"];
+
+        });
+
+        // 手機隱藏鍵盤
+        // $(".mb-nokeyboard").focus(function () {
+        //     document.activeElement.blur();
+        // });
+
+    </script>
+
+
+    <!-- input mask 限制填入格式 -->
+    <script>
+        $(document).ready(function () {
+            $(".western-date").inputmask({ alias: "datetime", inputFormat: "yyyy/mm/dd" });
+            // $(".chinese-date").inputmask({ alias: "datetime", inputFormat: "yyy/mm/dd" });
+        });
+    </script>
+
+    <!-- timepicker 時間選擇器-->
+    <script>
+        $(function () {
+            $('.bs-timepicker').timepicker();
+        });
+    </script>
+</body>
+
+</html>

@@ -71,7 +71,7 @@
                             class="fas fa-pen"></i>EAN條碼管理</button>
                 </div>
                 <form class="searchbar">
-                    <div class="filter">
+                    <div class="filter case-manage">
                         <select id="activity_way">
                             <option value="list1">請全選案件類別</option>
                             <option value="list2">本國</option>
@@ -106,36 +106,41 @@
                             <option value="list3">項目2</option>
                             <option value="list3">項目3</option>
                         </select>
-                        <div class="form-gp datetime">
-                            <div class="item">
-                                <label for="apply_start-date">申請日期</label>
-                                <div class="date-gp date-icon">
-                                    <input type="text" class="mb-nokeyboard western-date" id="apply_start-date"
-                                        data-toggle="datepicker" placeholder="請選擇開始日期" readonly>
+
+                        <div class="two-col">
+                            <div class="form-gp datetime">
+                                <div class="item">
+                                    <label for="apply_start-date">申請日期</label>
+                                    <div class="date-gp date-icon">
+                                        <input type="text" class="mb-nokeyboard western-date" id="apply_start-date"
+                                            data-toggle="datepicker" placeholder="請選擇開始日期" readonly>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="date-gp date-icon">
+                                        <input type="text" class="mb-nokeyboard western-date" id="apply_end-date"
+                                            data-toggle="datepicker" placeholder="請選擇結束日期">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="date-gp date-icon">
-                                    <input type="text" class="mb-nokeyboard western-date" id="apply_end-date"
-                                        data-toggle="datepicker" placeholder="請選擇結束日期">
+                            <div class="form-gp datetime">
+                                <div class="item">
+                                    <label for="approve_start-date">認可日期</label>
+                                    <div class="date-gp date-icon">
+                                        <input type="text" class="mb-nokeyboard western-date" id="approve_start-date"
+                                            data-toggle="datepicker" placeholder="請選擇開始日期" readonly>
+                                    </div>
+                                </div>            
+                                <div class="item">
+                                    <div class="date-gp date-icon">
+                                        <input type="text" class="mb-nokeyboard western-date" id="approve_end-date"
+                                            data-toggle="datepicker" placeholder="請選擇結束日期">
+                                    </div>
                                 </div>
-                            </div>
+                            </div>                            
+
                         </div>
-                        <div class="form-gp datetime">
-                            <div class="item">
-                                <label for="approve_start-date">認可日期</label>
-                                <div class="date-gp date-icon">
-                                    <input type="text" class="mb-nokeyboard western-date" id="approve_start-date"
-                                        data-toggle="datepicker" placeholder="請選擇開始日期" readonly>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="date-gp date-icon">
-                                    <input type="text" class="mb-nokeyboard western-date" id="approve_end-date"
-                                        data-toggle="datepicker" placeholder="請選擇結束日期">
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="search-gp">
                             <div class="search-icon">
                                 <input type="search" placeholder="搜尋關鍵字">
