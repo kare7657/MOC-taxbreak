@@ -71,10 +71,10 @@
                             class="notice">*</span>）表示此欄位必須填寫</p>
                     <fieldset>
                         <div class="type-title">
-                            <h3>基本資料</h3>
+                            <legend>基本資料</legend>
                         </div>
                         <div class="form-gp choice-btn">
-                            <h5>案件類別<span class="notice">*</span></h5>
+                            <div class="title">案件類別<span class="notice">*</span></div>
                             <div class="type-gp">
                                 <button type="button" class="button-outline active" data-toggle="modal"
                                     data-target="#modal-notify-domestic">本國</button>
@@ -109,34 +109,28 @@
                             <input type="text" name="book_publisher" id="book_publisher" placeholder="請輸入出版者">
                         </div>
                         <div class="form-gp">
-                            <div class="label-withButton after-title">
-
-                                <div class="form-gp">
-                                    <div class="label-withButton after-title">
-                                        <label for="publication-year">出版日期<span class="notice">*</span></label>
-                                    </div>
-                                    <div class="address">
-                                        <select name="type" id="publication-year">
-                                            <option value="list1">請選擇年份</option>
-                                            <option value="list2">選單2</option>
-                                            <option value="list3">選單3</option>
-                                        </select>
-                                        <select name="type" id="publication-month">
-                                            <option value="list1">請選擇月份</option>
-                                            <option value="list2">選單2</option>
-                                            <option value="list3">選單3</option>
-                                        </select>
-                                    </div>
-                                </div>
-
+                            <label for="publication-year">出版日期<span class="notice">*</span></label>
+                            <div class="address">
+                                <select name="type" id="publication-year">
+                                    <option value="list1">請選擇年份</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
+                                <select name="type" id="publication-month">
+                                    <option value="list1">請選擇月份</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
                             </div>
+                        </div>
                     </fieldset>
                     <fieldset class="mb-0">
                         <div class="type-title">
-                            <h3>附件資料</h3>
+                            <legend>附件資料</legend>
                         </div>
                         <div class="form-gp">
-                            <label for="file">代申請證明⽂件 <span class="remark">（出版者為⾃然⼈，請附委託書；出版者已解散或歇業，請附相關證明⽂件）</span></label>
+                            <label for="file">代申請證明⽂件 <span
+                                    class="remark">（出版者為⾃然⼈，請附委託書；出版者已解散或歇業，請附相關證明⽂件）</span></label>
                             <div class="file-upload">
                                 <input type="button" id="file" value="檔案上傳">
                                 <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
@@ -156,7 +150,7 @@
             </div>
         </section>
 
-     
+
         <!-- modal 條款-->
         <div class="modal fade modal-template " id="modal-clause-taxBreak" tabindex="-1" role="dialog"
             aria-labelledby="modal-clauseLabel" data-backdrop="static" style=" padding-top: 0;">

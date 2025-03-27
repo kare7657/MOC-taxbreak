@@ -52,7 +52,7 @@
 * h2:not(:first-of-type) {
   margin-top: 20px;
 }
-* h3 {
+* h3, * legend {
   font-size: 1.625rem;
   color: #88670c;
   padding: 0;
@@ -161,7 +161,8 @@
 * h3,
 * h4,
 * h5,
-* h6 {
+* h6,
+* legend {
   font-weight: bold;
 }
 * ::-moz-selection {
@@ -229,8 +230,26 @@
 * .fieldset-disabled input[type=button]:hover {
   filter: initial;
 }
+* .fieldset-disabled .choice-btn input[type=radio] + label,
+* .fieldset-disabled .choice-btn input[type=checkbox] + label {
+  cursor: not-allowed !important;
+}
+* .fieldset-disabled .choice-btn input[type=radio] + label,
+* .fieldset-disabled .choice-btn input[type=checkbox] + label {
+  color: #595757 !important;
+  border: solid 1px #9fa0a0 !important;
+}
+* .fieldset-disabled .choice-btn input[type=radio]:checked + label,
+* .fieldset-disabled .choice-btn input[type=checkbox]:checked + label {
+  background-color: #e5e5e5 !important;
+  color: #595757 !important;
+}
+* .fieldset-disabled .choice-btn input[type=radio]:checked + label:hover,
+* .fieldset-disabled .choice-btn input[type=checkbox]:checked + label:hover {
+  filter: unset;
+}
 * .fieldset-disabled .session.view-nobtn select {
-  width: 100%;
+  width: 100% !important;
 }
 * .fieldset-disabled .file-upload input[type=button] {
   border: solid 1px #9fa0a0 !important;
@@ -328,18 +347,6 @@
     width: 25px;
     height: 25px;
   }
-}
-* input[type=checkbox]:disabled + label, * input[type=radio]:disabled + label {
-  cursor: not-allowed !important;
-  color: #595757 !important;
-  border: solid 1px #9fa0a0 !important;
-}
-* input[type=checkbox]:disabled:checked + label, * input[type=radio]:disabled:checked + label {
-  background-color: #e5e5e5 !important;
-  color: #595757 !important;
-}
-* input[type=checkbox]:disabled:checked + label:hover, * input[type=radio]:disabled:checked + label:hover {
-  filter: unset;
 }
 * input.submit {
   width: auto !important;
@@ -2113,12 +2120,14 @@ body .back-top {
     border-radius: unset;
   }
 }
-body form {
+body form,
+body .place-gp {
   border-radius: 20px;
   margin: auto;
 }
 @media (max-width: 568px) {
-  body form {
+  body form,
+  body .place-gp {
     border-radius: 0;
     padding: 0;
     max-width: unset;
@@ -2127,10 +2136,12 @@ body form {
     padding: 0;
   }
 }
-body form article {
+body form article,
+body .place-gp article {
   margin-top: 32px;
 }
-body form .form-gp {
+body form .form-gp,
+body .place-gp .form-gp {
   padding: 0;
   margin: 0;
   width: 100%;
@@ -2142,64 +2153,107 @@ body form .form-gp {
   margin-bottom: 20px;
   text-align: justify;
 }
-body form .form-gp:nth-last-of-type(1) {
+body form .form-gp:nth-last-of-type(1),
+body .place-gp .form-gp:nth-last-of-type(1) {
   margin-bottom: 0;
 }
-body form .form-gp h3 {
+body form .form-gp h3,
+body .place-gp .form-gp h3 {
   margin-bottom: 12px;
   text-align: left;
   width: 100%;
 }
-body form .form-gp .title {
+body form .form-gp .title,
+body .place-gp .form-gp .title {
   font-size: 1.25rem;
   width: 100%;
   font-weight: bold;
   margin-bottom: 4px;
 }
-body form .form-gp p {
+body form .form-gp p,
+body .place-gp .form-gp p {
   width: 100%;
   font-size: 1rem;
   padding-top: 8px;
   line-height: 1.5;
 }
-body form .form-gp .remark {
+body form .form-gp .remark,
+body .place-gp .form-gp .remark {
   font-size: 1rem;
   font-weight: normal;
 }
-body form .form-gp a {
+body form .form-gp a,
+body .place-gp .form-gp a {
   font-size: 1.25rem;
   line-height: 1.25rem;
   font-weight: bold;
   text-align: center;
   margin-top: 4px;
 }
-body form .form-gp .address {
+body form .form-gp .address,
+body .place-gp .form-gp .address {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-body form .form-gp .address select {
+body form .form-gp .address select,
+body .place-gp .form-gp .address select {
   width: 49%;
   margin-bottom: 12px;
 }
 @media (max-width: 568px) {
-  body form .form-gp .address select {
+  body form .form-gp .address select,
+  body .place-gp .form-gp .address select {
     width: 100%;
   }
 }
-body form .form-gp .file-upload {
+body form .form-gp .three-col,
+body .place-gp .form-gp .three-col {
+  width: 100%;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 568px) {
+  body form .form-gp .three-col,
+  body .place-gp .form-gp .three-col {
+    flex-wrap: wrap;
+  }
+}
+body form .form-gp .three-col select,
+body .place-gp .form-gp .three-col select {
+  flex: 1 1 30%;
+  margin-right: 20px;
+}
+body form .form-gp .three-col select:last-child,
+body .place-gp .form-gp .three-col select:last-child {
+  margin-right: 0;
+}
+@media (max-width: 568px) {
+  body form .form-gp .three-col select,
+  body .place-gp .form-gp .three-col select {
+    flex: initial;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+}
+body form .form-gp .file-upload,
+body .place-gp .form-gp .file-upload {
   width: 100%;
   display: flex;
   align-items: center;
   margin-top: 4px;
 }
 @media (max-width: 568px) {
-  body form .form-gp .file-upload {
+  body form .form-gp .file-upload,
+  body .place-gp .form-gp .file-upload {
     flex-wrap: wrap;
   }
 }
-body form .form-gp .file-upload input[type=button] {
+body form .form-gp .file-upload input[type=button],
+body .place-gp .form-gp .file-upload input[type=button] {
   width: auto;
   color: white;
   background-color: #d0b66c;
@@ -2209,172 +2263,215 @@ body form .form-gp .file-upload input[type=button] {
   margin-right: 8px;
 }
 @media (max-width: 568px) {
-  body form .form-gp .file-upload input[type=button] {
+  body form .form-gp .file-upload input[type=button],
+  body .place-gp .form-gp .file-upload input[type=button] {
     width: 100%;
     margin-bottom: 12px;
     margin-right: 0;
   }
 }
-body form .form-gp .file-upload input[type=button][disabled] {
+body form .form-gp .file-upload input[type=button][disabled],
+body .place-gp .form-gp .file-upload input[type=button][disabled] {
   border: solid 1px #9fa0a0;
   background-color: #e5e5e5 !important;
   color: #595757 !important;
 }
-body form .form-gp .file-upload input[type=button][disabled]:hover {
+body form .form-gp .file-upload input[type=button][disabled]:hover,
+body .place-gp .form-gp .file-upload input[type=button][disabled]:hover {
   filter: unset;
 }
 body form .form-gp .file-upload span,
-body form .form-gp .file-upload p {
+body form .form-gp .file-upload p,
+body .place-gp .form-gp .file-upload span,
+body .place-gp .form-gp .file-upload p {
   padding: 0;
   margin: 0;
   color: #595757;
 }
-body form .form-gp .file-upload .notice {
+body form .form-gp .file-upload .notice,
+body .place-gp .form-gp .file-upload .notice {
   font-size: 1.25rem;
   margin-right: 4px !important;
 }
-body form .form-gp .btn-gp {
+body form .form-gp .btn-gp,
+body .place-gp .form-gp .btn-gp {
   width: 100%;
   padding-top: 12px;
 }
-body form .form-gp .btn-gp a {
+body form .form-gp .btn-gp a,
+body .place-gp .form-gp .btn-gp a {
   font-size: 1rem;
   margin-right: 12px;
   padding: 4px 12px;
   padding-left: 0;
 }
-body form .form-gp .btn-gp a i {
+body form .form-gp .btn-gp a i,
+body .place-gp .form-gp .btn-gp a i {
   margin-right: 8px;
 }
-body form .form-gp .icon-btn {
+body form .form-gp .icon-btn,
+body .place-gp .form-gp .icon-btn {
   padding: 0 8px;
   background-color: transparent;
   color: #280101;
   height: 35px;
 }
-body form .form-gp .icon-btn i {
+body form .form-gp .icon-btn i,
+body .place-gp .form-gp .icon-btn i {
   margin: 0;
   font-size: 1.375rem;
 }
-body form .form-gp .performer {
+body form .form-gp .performer,
+body .place-gp .form-gp .performer {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
 }
-body form .form-gp .performer:last-of-type {
+body form .form-gp .performer:last-of-type,
+body .place-gp .form-gp .performer:last-of-type {
   margin-bottom: 0;
 }
 @media (max-width: 568px) {
-  body form .form-gp .performer {
+  body form .form-gp .performer,
+  body .place-gp .form-gp .performer {
     flex-wrap: wrap;
   }
 }
-body form .form-gp .performer select {
+body form .form-gp .performer select,
+body .place-gp .form-gp .performer select {
   width: 40%;
 }
 @media (max-width: 568px) {
-  body form .form-gp .performer select {
+  body form .form-gp .performer select,
+  body .place-gp .form-gp .performer select {
     width: 35%;
   }
 }
-body form .form-gp .performer input {
+body form .form-gp .performer input,
+body .place-gp .form-gp .performer input {
   width: 50%;
 }
 @media (max-width: 568px) {
-  body form .form-gp .performer input {
+  body form .form-gp .performer input,
+  body .place-gp .form-gp .performer input {
     width: 47%;
   }
 }
-body form .form-gp .performer a {
+body form .form-gp .performer a,
+body .place-gp .form-gp .performer a {
   padding: 8px;
 }
-body form .form-gp .performer a i {
+body form .form-gp .performer a i,
+body .place-gp .form-gp .performer a i {
   font-size: 1.375rem;
 }
-body form .form-gp .session {
+body form .form-gp .session,
+body .place-gp .form-gp .session {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
 @media (max-width: 568px) {
-  body form .form-gp .session {
+  body form .form-gp .session,
+  body .place-gp .form-gp .session {
     flex-wrap: wrap;
   }
 }
 body form .form-gp .session input,
-body form .form-gp .session select {
+body form .form-gp .session select,
+body .place-gp .form-gp .session input,
+body .place-gp .form-gp .session select {
   width: 70%;
 }
 body form .form-gp .session input:disabled,
-body form .form-gp .session select:disabled {
+body form .form-gp .session select:disabled,
+body .place-gp .form-gp .session input:disabled,
+body .place-gp .form-gp .session select:disabled {
   cursor: not-allowed;
   background-color: white;
   border: solid 1px #9fa0a0;
 }
 @media (max-width: 1024px) {
   body form .form-gp .session input,
-  body form .form-gp .session select {
+  body form .form-gp .session select,
+  body .place-gp .form-gp .session input,
+  body .place-gp .form-gp .session select {
     width: 65%;
   }
 }
 @media (max-width: 568px) {
   body form .form-gp .session input,
-  body form .form-gp .session select {
+  body form .form-gp .session select,
+  body .place-gp .form-gp .session input,
+  body .place-gp .form-gp .session select {
     width: 100%;
     margin-bottom: 12px;
   }
 }
-body form .form-gp .session .add {
+body form .form-gp .session .add,
+body .place-gp .form-gp .session .add {
   width: 27%;
   margin-top: 0 !important;
 }
 @media (max-width: 1024px) {
-  body form .form-gp .session .add {
+  body form .form-gp .session .add,
+  body .place-gp .form-gp .session .add {
     width: 32%;
   }
 }
 @media (max-width: 568px) {
-  body form .form-gp .session .add {
+  body form .form-gp .session .add,
+  body .place-gp .form-gp .session .add {
     width: 100%;
   }
 }
-body form .form-gp .session .add i {
+body form .form-gp .session .add i,
+body .place-gp .form-gp .session .add i {
   font-size: 1.25rem;
 }
 body form .form-gp .date-gp,
-body form .form-gp .time-gp {
+body form .form-gp .time-gp,
+body .place-gp .form-gp .date-gp,
+body .place-gp .form-gp .time-gp {
   width: auto;
   position: relative;
 }
-body form .form-gp .range {
+body form .form-gp .range,
+body .place-gp .form-gp .range {
   margin-bottom: 12px;
 }
-body form .form-gp .label-withButton {
+body form .form-gp .label-withButton,
+body .place-gp .form-gp .label-withButton {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
 @media (max-width: 568px) {
-  body form .form-gp .label-withButton {
+  body form .form-gp .label-withButton,
+  body .place-gp .form-gp .label-withButton {
     flex-wrap: wrap;
     width: 100%;
   }
-  body form .form-gp .label-withButton a {
+  body form .form-gp .label-withButton a,
+  body .place-gp .form-gp .label-withButton a {
     padding: 8px 8px 8px 0 !important;
     margin-bottom: 4px;
   }
 }
-body form .form-gp .label-withButton.after-title {
+body form .form-gp .label-withButton.after-title,
+body .place-gp .form-gp .label-withButton.after-title {
   justify-content: flex-start;
 }
-body form .form-gp .label-withButton label {
+body form .form-gp .label-withButton label,
+body .place-gp .form-gp .label-withButton label {
   width: initial;
 }
-body form .form-gp .label-withButton button {
+body form .form-gp .label-withButton button,
+body .place-gp .form-gp .label-withButton button {
   font-size: 1rem;
   padding: 2px 8px;
   margin-left: 12px;
@@ -2382,13 +2479,15 @@ body form .form-gp .label-withButton button {
   height: initial;
 }
 @media (max-width: 568px) {
-  body form .form-gp .label-withButton button {
+  body form .form-gp .label-withButton button,
+  body .place-gp .form-gp .label-withButton button {
     font-size: 1.25rem;
     margin-bottom: 12px;
     margin-top: 0;
   }
 }
-body form .form-gp .label-withButton .download-sample {
+body form .form-gp .label-withButton .download-sample,
+body .place-gp .form-gp .label-withButton .download-sample {
   font-size: 1rem;
   padding: 8px 16px;
   padding-right: 0;
@@ -2398,36 +2497,46 @@ body form .form-gp .label-withButton .download-sample {
   margin-top: 0;
 }
 @media (max-width: 568px) {
-  body form .form-gp .label-withButton .download-sample {
+  body form .form-gp .label-withButton .download-sample,
+  body .place-gp .form-gp .label-withButton .download-sample {
     padding-left: 16px !important;
   }
 }
-body form .form-gp .label-withButton .download-sample i {
+body form .form-gp .label-withButton .download-sample i,
+body .place-gp .form-gp .label-withButton .download-sample i {
   margin-right: 8px;
 }
-body form .form-gp .input-withButton {
+body form .form-gp .input-withButton,
+body .place-gp .form-gp .input-withButton {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 568px) {
-  body form .form-gp .input-withButton {
+  body form .form-gp .input-withButton,
+  body .place-gp .form-gp .input-withButton {
     flex-wrap: wrap;
   }
 }
 body form .form-gp .input-withButton input,
-body form .form-gp .input-withButton .date-gp {
+body form .form-gp .input-withButton .date-gp,
+body .place-gp .form-gp .input-withButton input,
+body .place-gp .form-gp .input-withButton .date-gp {
   flex: 1 1 auto;
 }
 @media (max-width: 568px) {
   body form .form-gp .input-withButton input,
-  body form .form-gp .input-withButton .date-gp {
+  body form .form-gp .input-withButton .date-gp,
+  body .place-gp .form-gp .input-withButton input,
+  body .place-gp .form-gp .input-withButton .date-gp {
     width: 100%;
     margin-bottom: 8px;
   }
 }
 body form .form-gp .input-withButton button,
-body form .form-gp .input-withButton input[type=submit] {
+body form .form-gp .input-withButton input[type=submit],
+body .place-gp .form-gp .input-withButton button,
+body .place-gp .form-gp .input-withButton input[type=submit] {
   width: auto;
   display: inline-block;
   flex: 1 0 auto;
@@ -2435,67 +2544,83 @@ body form .form-gp .input-withButton input[type=submit] {
 }
 @media (max-width: 568px) {
   body form .form-gp .input-withButton button,
-  body form .form-gp .input-withButton input[type=submit] {
+  body form .form-gp .input-withButton input[type=submit],
+  body .place-gp .form-gp .input-withButton button,
+  body .place-gp .form-gp .input-withButton input[type=submit] {
     width: 100%;
     margin-left: 0;
   }
 }
-body form .form-gp .select-withButton {
+body form .form-gp .select-withButton,
+body .place-gp .form-gp .select-withButton {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 568px) {
-  body form .form-gp .select-withButton {
+  body form .form-gp .select-withButton,
+  body .place-gp .form-gp .select-withButton {
     flex-wrap: wrap;
   }
 }
-body form .form-gp .select-withButton select {
+body form .form-gp .select-withButton select,
+body .place-gp .form-gp .select-withButton select {
   flex: 1 1 auto;
   margin-right: 20px;
 }
 @media (max-width: 568px) {
-  body form .form-gp .select-withButton select {
+  body form .form-gp .select-withButton select,
+  body .place-gp .form-gp .select-withButton select {
     width: 100%;
     margin-right: 0;
     margin-bottom: 12px;
   }
 }
 body form .form-gp .select-withButton button,
-body form .form-gp .select-withButton input[type=submit] {
+body form .form-gp .select-withButton input[type=submit],
+body .place-gp .form-gp .select-withButton button,
+body .place-gp .form-gp .select-withButton input[type=submit] {
   width: auto;
   flex: 1 0 auto;
 }
 @media (max-width: 568px) {
   body form .form-gp .select-withButton button,
-  body form .form-gp .select-withButton input[type=submit] {
+  body form .form-gp .select-withButton input[type=submit],
+  body .place-gp .form-gp .select-withButton button,
+  body .place-gp .form-gp .select-withButton input[type=submit] {
     width: 100%;
   }
 }
-body form .search-gp {
+body form .search-gp,
+body .place-gp .search-gp {
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-body form .search-gp .search-icon {
+body form .search-gp .search-icon,
+body .place-gp .search-gp .search-icon {
   width: initial;
   flex: 1 1 auto;
 }
-body form .search-gp button {
+body form .search-gp button,
+body .place-gp .search-gp button {
   display: inline-block;
   flex: 0 1 auto;
   padding: 4px 16px;
 }
-body form .search-gp button:last-child {
+body form .search-gp button:last-child,
+body .place-gp .search-gp button:last-child {
   margin-left: 20px;
 }
 @media (max-width: 568px) {
-  body form .search-gp button {
+  body form .search-gp button,
+  body .place-gp .search-gp button {
     margin-left: 0 !important;
   }
 }
-body form .choice .item {
+body form .choice .item,
+body .place-gp .choice .item {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -2504,68 +2629,85 @@ body form .choice .item {
   margin-bottom: 8px;
 }
 @media (max-width: 568px) {
-  body form .choice .item {
+  body form .choice .item,
+  body .place-gp .choice .item {
     width: 100%;
   }
-  body form .choice .item:not(:nth-last-child(1)) {
+  body form .choice .item:not(:nth-last-child(1)),
+  body .place-gp .choice .item:not(:nth-last-child(1)) {
     margin-bottom: 16px;
   }
 }
-body form .choice .ticket-price {
+body form .choice .ticket-price,
+body .place-gp .choice .ticket-price {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   margin-bottom: 16px;
 }
-body form .choice .ticket-price:last-child {
+body form .choice .ticket-price:last-child,
+body .place-gp .choice .ticket-price:last-child {
   margin-bottom: 0;
 }
-body form .choice .ticket-price input[type=radio] {
+body form .choice .ticket-price input[type=radio],
+body .place-gp .choice .ticket-price input[type=radio] {
   line-height: inherit;
   vertical-align: middle;
   margin-right: 20px;
   margin-left: 4px;
 }
-body form .choice .ticket-price input[type=text] {
+body form .choice .ticket-price input[type=text],
+body .place-gp .choice .ticket-price input[type=text] {
   margin-bottom: 0;
 }
-body form .choice .ticket-price .input-gp {
+body form .choice .ticket-price .input-gp,
+body .place-gp .choice .ticket-price .input-gp {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-body form .choice .ticket-price .input-gp.input2 {
+body form .choice .ticket-price .input-gp.input2,
+body .place-gp .choice .ticket-price .input-gp.input2 {
   display: flex;
   justify-content: space-between;
 }
-body form .choice .ticket-price .input-gp.input2 input[type=text] {
+body form .choice .ticket-price .input-gp.input2 input[type=text],
+body .place-gp .choice .ticket-price .input-gp.input2 input[type=text] {
   width: 46%;
 }
-body form .choice .ticket-price .input-gp.input2 span {
+body form .choice .ticket-price .input-gp.input2 span,
+body .place-gp .choice .ticket-price .input-gp.input2 span {
   line-height: 40px;
 }
-body form .choice .ticket-price .input-gp.withbtn {
+body form .choice .ticket-price .input-gp.withbtn,
+body .place-gp .choice .ticket-price .input-gp.withbtn {
   justify-content: start;
 }
-body form .choice .ticket-price .input-gp.withbtn input[type=text] {
+body form .choice .ticket-price .input-gp.withbtn input[type=text],
+body .place-gp .choice .ticket-price .input-gp.withbtn input[type=text] {
   width: 46%;
 }
-body form .choice .ticket-price .input-gp.withbtn i {
+body form .choice .ticket-price .input-gp.withbtn i,
+body .place-gp .choice .ticket-price .input-gp.withbtn i {
   font-size: 1.375rem;
 }
 body form .choice .ticket-price .input-gp.withbtn a,
-body form .choice .ticket-price .input-gp.withbtn .icon-btn {
+body form .choice .ticket-price .input-gp.withbtn .icon-btn,
+body .place-gp .choice .ticket-price .input-gp.withbtn a,
+body .place-gp .choice .ticket-price .input-gp.withbtn .icon-btn {
   margin-left: 8px;
 }
-body form .choice .ticket-price-result {
+body form .choice .ticket-price-result,
+body .place-gp .choice .ticket-price-result {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   width: 100%;
 }
-body form .choice .ticket-price-result .num {
+body form .choice .ticket-price-result .num,
+body .place-gp .choice .ticket-price-result .num {
   display: flex;
   padding: 4px 12px;
   border-radius: 8px;
@@ -2579,25 +2721,30 @@ body form .choice .ticket-price-result .num {
   background-color: rgba(233, 198, 93, 0.2);
   font-weight: bold;
 }
-body form .choice .ticket-price-result .num i {
+body form .choice .ticket-price-result .num i,
+body .place-gp .choice .ticket-price-result .num i {
   font-size: 1rem;
   margin-left: 4px;
   color: #88670c;
 }
-body form .choice .ticket-price-result .num .icon-btn {
+body form .choice .ticket-price-result .num .icon-btn,
+body .place-gp .choice .ticket-price-result .num .icon-btn {
   height: initial;
   font-size: 1rem;
   padding: 0;
 }
-body form .choice .ticket-price-result span {
+body form .choice .ticket-price-result span,
+body .place-gp .choice .ticket-price-result span {
   margin-right: 12px;
 }
-body form .choice h5 {
+body form .choice h5,
+body .place-gp .choice h5 {
   width: 100%;
   text-align: left;
   margin-bottom: 8px;
 }
-body form .choice label {
+body form .choice label,
+body .place-gp .choice label {
   width: initial;
   font-size: 1rem;
   color: #595757;
@@ -2605,38 +2752,48 @@ body form .choice label {
   margin-bottom: 0;
   margin-right: 20px;
 }
-body form .choice a {
+body form .choice a,
+body .place-gp .choice a {
   font-size: 1rem;
 }
-body form .choice input[type=text] {
+body form .choice input[type=text],
+body .place-gp .choice input[type=text] {
   margin-bottom: 16px;
 }
 @media (max-width: 568px) {
-  body form .choice-btn {
+  body form .choice-btn,
+  body .place-gp .choice-btn {
     justify-content: space-between;
   }
 }
-body form .choice-btn h5 {
+body form .choice-btn h5,
+body .place-gp .choice-btn h5 {
   width: 100%;
   margin-bottom: 8px;
 }
-body form .choice-btn .type-gp {
+body form .choice-btn .type-gp,
+body .place-gp .choice-btn .type-gp {
   width: 100%;
   display: flex;
 }
 @media (max-width: 568px) {
-  body form .choice-btn .type-gp {
+  body form .choice-btn .type-gp,
+  body .place-gp .choice-btn .type-gp {
     justify-content: space-between;
     flex-wrap: wrap;
   }
 }
 body form .choice-btn .type-gp a,
-body form .choice-btn .type-gp button {
+body form .choice-btn .type-gp button,
+body .place-gp .choice-btn .type-gp a,
+body .place-gp .choice-btn .type-gp button {
   margin-right: 8px;
 }
 @media (max-width: 568px) {
   body form .choice-btn .type-gp a,
-  body form .choice-btn .type-gp button {
+  body form .choice-btn .type-gp button,
+  body .place-gp .choice-btn .type-gp a,
+  body .place-gp .choice-btn .type-gp button {
     margin-right: 0;
     margin-bottom: 12px;
     width: 48%;
@@ -2644,32 +2801,40 @@ body form .choice-btn .type-gp button {
     padding: 4px 12px;
   }
 }
-body form .choice-btn .type-gp .button-outline.active {
+body form .choice-btn .type-gp .button-outline.active,
+body .place-gp .choice-btn .type-gp .button-outline.active {
   background-color: #d0b66c !important;
   color: #280101 !important;
 }
-body form .choice-btn .item {
+body form .choice-btn .item,
+body .place-gp .choice-btn .item {
   display: flex;
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
 }
 @media (max-width: 568px) {
-  body form .choice-btn .item {
+  body form .choice-btn .item,
+  body .place-gp .choice-btn .item {
     width: auto;
     width: 48%;
     margin-bottom: 12px;
   }
-  body form .choice-btn .item label {
+  body form .choice-btn .item label,
+  body .place-gp .choice-btn .item label {
     margin: 0 !important;
   }
 }
 body form .choice-btn .item input[type=radio],
-body form .choice-btn .item input[type=checkbox] {
+body form .choice-btn .item input[type=checkbox],
+body .place-gp .choice-btn .item input[type=radio],
+body .place-gp .choice-btn .item input[type=checkbox] {
   display: none;
 }
 body form .choice-btn .item input[type=radio] + label,
-body form .choice-btn .item input[type=checkbox] + label {
+body form .choice-btn .item input[type=checkbox] + label,
+body .place-gp .choice-btn .item input[type=radio] + label,
+body .place-gp .choice-btn .item input[type=checkbox] + label {
   display: inline-block;
   color: #88670c;
   border: solid 1px #aa8e41;
@@ -2682,46 +2847,73 @@ body form .choice-btn .item input[type=checkbox] + label {
   transition: 0.3s;
 }
 body form .choice-btn .item input[type=radio] + label:hover,
-body form .choice-btn .item input[type=checkbox] + label:hover {
+body form .choice-btn .item input[type=checkbox] + label:hover,
+body .place-gp .choice-btn .item input[type=radio] + label:hover,
+body .place-gp .choice-btn .item input[type=checkbox] + label:hover {
   filter: brightness(1.05);
 }
 body form .choice-btn .item input[type=radio]:checked + label,
-body form .choice-btn .item input[type=checkbox]:checked + label {
+body form .choice-btn .item input[type=checkbox]:checked + label,
+body .place-gp .choice-btn .item input[type=radio]:checked + label,
+body .place-gp .choice-btn .item input[type=checkbox]:checked + label {
   color: white;
   background-color: #d0b66c;
   color: #280101;
 }
-body form .datetime {
+body form .choice-btn .item input:disabled + label,
+body .place-gp .choice-btn .item input:disabled + label {
+  cursor: not-allowed !important;
+  color: #595757 !important;
+  border: solid 1px #9fa0a0 !important;
+}
+body form .choice-btn .item input:disabled + label:hover,
+body .place-gp .choice-btn .item input:disabled + label:hover {
+  filter: initial;
+}
+body form .choice-btn .item input:disabled:checked + label,
+body .place-gp .choice-btn .item input:disabled:checked + label {
+  background-color: #e5e5e5 !important;
+  color: #595757 !important;
+}
+body form .datetime,
+body .place-gp .datetime {
   justify-content: space-between;
   align-items: flex-end;
 }
-body form .datetime .item {
+body form .datetime .item,
+body .place-gp .datetime .item {
   width: 48%;
 }
 @media (max-width: 568px) {
-  body form .datetime .item {
+  body form .datetime .item,
+  body .place-gp .datetime .item {
     width: 100%;
   }
-  body form .datetime .item:not(:last-child) {
+  body form .datetime .item:not(:last-child),
+  body .place-gp .datetime .item:not(:last-child) {
     margin-bottom: 12px;
   }
 }
-body form .datetime .item .time {
+body form .datetime .item .time,
+body .place-gp .datetime .item .time {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-body form .datetime .item .time select {
+body form .datetime .item .time select,
+body .place-gp .datetime .item .time select {
   width: 45%;
 }
-body form .datetime .item .time p {
+body form .datetime .item .time p,
+body .place-gp .datetime .item .time p {
   font-size: 1.25rem;
   line-height: 2;
   color: #595757;
   padding: 0;
   width: auto;
 }
-body form .code-gp {
+body form .code-gp,
+body .place-gp .code-gp {
   width: 100%;
   padding: 0;
   display: flex;
@@ -2729,122 +2921,146 @@ body form .code-gp {
   flex-wrap: wrap;
 }
 @media (max-width: 1024px) {
-  body form .code-gp {
+  body form .code-gp,
+  body .place-gp .code-gp {
     justify-content: start;
   }
 }
-body form .code-gp label {
+body form .code-gp label,
+body .place-gp .code-gp label {
   width: 25%;
   text-align: left;
 }
 @media (max-width: 568px) {
-  body form .code-gp label {
+  body form .code-gp label,
+  body .place-gp .code-gp label {
     width: 30%;
   }
 }
-body form .code-gp .text-gp {
+body form .code-gp .text-gp,
+body .place-gp .code-gp .text-gp {
   width: 100%;
   display: flex;
   align-items: center;
 }
 @media (max-width: 568px) {
-  body form .code-gp .text-gp {
+  body form .code-gp .text-gp,
+  body .place-gp .code-gp .text-gp {
     flex-wrap: wrap;
   }
 }
-body form .code-gp .text-gp .code {
+body form .code-gp .text-gp .code,
+body .place-gp .code-gp .text-gp .code {
   width: 25%;
   margin-right: 10px;
   margin-bottom: 0;
 }
 @media (max-width: 568px) {
-  body form .code-gp .text-gp .code {
+  body form .code-gp .text-gp .code,
+  body .place-gp .code-gp .text-gp .code {
     width: 100%;
     margin-bottom: 12px;
     margin-right: 0;
   }
 }
-body form .code-gp .text-gp .RP {
+body form .code-gp .text-gp .RP,
+body .place-gp .code-gp .text-gp .RP {
   height: 25px;
   margin: 0;
   margin-right: 10px;
 }
 @media (max-width: 1367px) {
-  body form .code-gp .text-gp .RP {
+  body form .code-gp .text-gp .RP,
+  body .place-gp .code-gp .text-gp .RP {
     width: auto;
     max-height: unset;
     height: 30px;
   }
 }
 @media (max-width: 568px) {
-  body form .code-gp .text-gp .RP {
+  body form .code-gp .text-gp .RP,
+  body .place-gp .code-gp .text-gp .RP {
     height: 25px;
   }
 }
 @media (max-width: 320px) {
-  body form .code-gp .text-gp .RP {
+  body form .code-gp .text-gp .RP,
+  body .place-gp .code-gp .text-gp .RP {
     height: 20px;
   }
 }
-body form .code-gp .text-gp .reform {
+body form .code-gp .text-gp .reform,
+body .place-gp .code-gp .text-gp .reform {
   margin-right: 12px;
   color: #280101;
   font-weight: bold;
   padding: 0 12px;
   background-color: #fdfaf2;
 }
-body form .code-gp .text-gp .reform i {
+body form .code-gp .text-gp .reform i,
+body .place-gp .code-gp .text-gp .reform i {
   margin: 0;
   font-size: 1.25rem;
 }
-body form .code-gp .text-gp .reform:hover {
+body form .code-gp .text-gp .reform:hover,
+body .place-gp .code-gp .text-gp .reform:hover {
   filter: initial;
 }
-body form .code-gp .text-gp .btnPlayAudio {
+body form .code-gp .text-gp .btnPlayAudio,
+body .place-gp .code-gp .text-gp .btnPlayAudio {
   color: #280101;
   font-weight: bold;
   padding: 0 12px;
   background-color: #fdfaf2;
 }
-body form .code-gp .text-gp .btnPlayAudio i {
+body form .code-gp .text-gp .btnPlayAudio i,
+body .place-gp .code-gp .text-gp .btnPlayAudio i {
   margin: 0;
   font-size: 1.25rem;
 }
-body form .code-gp .text-gp .btnPlayAudio:hover {
+body form .code-gp .text-gp .btnPlayAudio:hover,
+body .place-gp .code-gp .text-gp .btnPlayAudio:hover {
   filter: initial;
 }
-body form .btn-tool {
+body form .btn-tool,
+body .place-gp .btn-tool {
   width: 100%;
   text-align: center;
   margin-top: 36px;
 }
 @media (max-width: 568px) {
-  body form .btn-tool {
+  body form .btn-tool,
+  body .place-gp .btn-tool {
     text-align: left;
     margin-top: 24px;
   }
 }
-body form .btn-tool input {
+body form .btn-tool input,
+body .place-gp .btn-tool input {
   width: auto !important;
   margin: 0 4px;
 }
 @media (max-width: 568px) {
-  body form .btn-tool input {
+  body form .btn-tool input,
+  body .place-gp .btn-tool input {
     width: 100% !important;
     margin: 0;
     margin-bottom: 12px;
   }
 }
-body form ul {
+body form ul,
+body .place-gp ul {
   padding: 0;
 }
-body form ul li {
+body form ul li,
+body .place-gp ul li {
   line-height: 2;
   color: #595757;
   list-style: decimal;
   list-style-position: inside;
 }
-body form.view .top-warning {
+body form.view .top-warning,
+body .place-gp.view .top-warning {
   font-size: 1.75rem;
   font-weight: bold;
   margin-bottom: 20px !important;
@@ -2854,39 +3070,48 @@ body form.view .top-warning {
   justify-content: center;
   color: #da382d;
 }
-body form.view .top-warning i {
+body form.view .top-warning i,
+body .place-gp.view .top-warning i {
   margin-right: 12px;
   font-size: 1.375rem;
 }
-body form.view fieldset .performer select {
+body form.view fieldset .performer select,
+body .place-gp.view fieldset .performer select {
   width: 40%;
 }
 @media (max-width: 568px) {
-  body form.view fieldset .performer select {
+  body form.view fieldset .performer select,
+  body .place-gp.view fieldset .performer select {
     width: 35%;
   }
 }
-body form.view fieldset .performer input {
+body form.view fieldset .performer input,
+body .place-gp.view fieldset .performer input {
   width: 56%;
 }
 @media (max-width: 568px) {
-  body form.view fieldset .performer input {
+  body form.view fieldset .performer input,
+  body .place-gp.view fieldset .performer input {
     width: 47%;
   }
 }
-body form.view fieldset .performer.view-nobtn select {
+body form.view fieldset .performer.view-nobtn select,
+body .place-gp.view fieldset .performer.view-nobtn select {
   width: 40%;
 }
 @media (max-width: 568px) {
-  body form.view fieldset .performer.view-nobtn select {
+  body form.view fieldset .performer.view-nobtn select,
+  body .place-gp.view fieldset .performer.view-nobtn select {
     width: 40%;
   }
 }
-body form.view fieldset .performer.view-nobtn input {
+body form.view fieldset .performer.view-nobtn input,
+body .place-gp.view fieldset .performer.view-nobtn input {
   width: 56%;
 }
 @media (max-width: 568px) {
-  body form.view fieldset .performer.view-nobtn input {
+  body form.view fieldset .performer.view-nobtn input,
+  body .place-gp.view fieldset .performer.view-nobtn input {
     width: 55%;
   }
 }
@@ -4446,10 +4671,16 @@ body main .content-signup .step .btn-gp .btn-step {
 }
 @media (max-width: 568px) {
   body main .content-signup .step .btn-gp .btn-step {
+    width: 19%;
     margin: 0 8px;
     text-align: center;
-    width: 19%;
     padding: 0 8px;
+  }
+}
+@media (max-width: 320px) {
+  body main .content-signup .step .btn-gp .btn-step {
+    width: 20%;
+    padding: 2px;
   }
 }
 body main .content-signup .step .btn-gp .btn-step.active {
@@ -4534,7 +4765,7 @@ body main .content-signup form h3 {
 body main .content-signup form .type-title {
   margin-bottom: 36px;
 }
-body main .content-signup form .type-title h3 {
+body main .content-signup form .type-title h3, body main .content-signup form .type-title legend {
   padding: 8px 16px;
   padding-left: 0;
   padding-top: 16px;
@@ -5292,6 +5523,20 @@ body main .content-member.book .add-admin-gp .form-gp:nth-child(4), body main .c
   body main .content-member.book .add-admin-gp .form-gp {
     margin-right: 0;
   }
+}
+body main .content-member.book .add-admin-gp.EAN .form-gp {
+  flex: 1 1 auto;
+  width: auto;
+}
+body main .content-member.book .add-admin-gp.EAN .btn-gp {
+  margin-bottom: 0;
+}
+body main .content-member.book .add-admin-gp.EAN .btn-gp button {
+  flex: 1 0 auto;
+  min-height: 40px;
+}
+body main .content-member.book .add-admin-gp.EAN .btn-gp button:first-child {
+  margin-left: 0;
 }
 body main .content-member.book .btn-gp {
   display: flex;

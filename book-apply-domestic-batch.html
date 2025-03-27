@@ -44,7 +44,7 @@
                     <li><a href="book-case-manage.html" title="案件管理">案件管理</a>
                     <li>></li>
                     <li><a href="book-apply-domestic.html" title="新增案件">新增案件</a>
-                        <li>></li>
+                    <li>></li>
                     <li><span>批次新增案件</span></li>
                 </ul>
             </div>
@@ -56,51 +56,51 @@
                 <form class="card">
                     <p class="acc-info"><i class="fas fa-exclamation-circle"></i>標註星號（<span
                             class="notice">*</span>）表示此欄位必須填寫</p>
-                    <fieldset>                        
-                        <div class="form-gp choice-btn">
-                            <div class="title">案件類別</div>
-                            <div class="item">
-                                <input type="radio" name="unit_type" value="" id="unit_type" checked disabled>
-                                <label for="unit_type">
-                                    本國
-                                </label>
-                            </div>
-                            <div class="item">
-                                <input type="radio" name="unit_type" value="" id="unit_type2" disabled>
-                                <label for="unit_type2">
-                                    進口
-                                </label>
-                            </div>
+
+                    <div class="form-gp choice-btn">
+                        <div class="title">案件類別<span class="notice">*</span></div>
+                        <div class="item">
+                            <input type="radio" name="unit_type" value="" id="unit_type" checked disabled>
+                            <label for="unit_type">
+                                本國
+                            </label>
                         </div>
-                        <div class="form-gp">
-                            <label for="book_type">書籍類型<span class="notice">*</span></label>
-                            <select name="type" id="book_type">
-                                <option value="list1">實體</option>
-                                <option value="list2">電子</option>
-                            </select>
+                        <div class="item">
+                            <input type="radio" name="unit_type" value="" id="unit_type2" disabled>
+                            <label for="unit_type2">
+                                進口
+                            </label>
                         </div>
-                        <div class="form-gp">
-                            <div class="label-withButton after-title">
-                                <label for="apply-list">申請清單<span class="notice">*</span></label>
-                                <a href="" class="download-sample" download title="[下載]申請清單.doc"><i
-                                        class="fas fa-paperclip"></i>範本下載</a>
-                            </div>
-                            <div class="file-upload">
-                                <input type="button" id="apply-list" value="檔案上傳">
-                                <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
-                            </div>
+                    </div>
+                    <div class="form-gp">
+                        <label for="book_type">書籍類型<span class="notice">*</span></label>
+                        <select name="type" id="book_type">
+                            <option value="list1">實體</option>
+                            <option value="list2">電子</option>
+                        </select>
+                    </div>
+                    <div class="form-gp">
+                        <div class="label-withButton after-title">
+                            <label for="apply-list">申請清單<span class="notice">*</span></label>
+                            <a href="" class="download-sample" download title="[下載]申請清單.doc"><i
+                                    class="fas fa-paperclip"></i>範本下載 (本國)</a>
                         </div>
-                        
-                    </fieldset>
+                        <div class="file-upload">
+                            <input type="button" id="apply-list" value="檔案上傳">
+                            <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                        </div>
+                    </div>
+
                     <div class="btn-tool">
-                        <input type="button" value="取消" class="outline" onclick="location.href='book-apply-domestic.html'">
-                        <input type="button" value="上傳" >
+                        <input type="button" value="取消" class="outline"
+                            onclick="location.href='book-apply-domestic.html'">
+                        <input type="button" value="上傳">
                     </div>
                 </form>
             </div>
         </section>
 
-     
+
         <!-- modal 條款-->
         <div class="modal fade modal-template " id="modal-clause-taxBreak" tabindex="-1" role="dialog"
             aria-labelledby="modal-clauseLabel" data-backdrop="static" style=" padding-top: 0;">

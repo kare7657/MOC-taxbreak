@@ -957,10 +957,14 @@ body {
                         color: $primary-default;
                         margin: 0 $m-XS;
                         @include mobile-L {
+                            width: 19%;
                             margin: 0 $p-XXS;
                             text-align: center;
-                            width: 19%;
                             padding: 0 $p-XXS;
+                        }
+                        @include mobile-XS{
+                            width: 20%;
+                            padding: 2px;
                         }
                         &.active {
                             border: solid 1px $primary-default;
@@ -1043,7 +1047,7 @@ body {
                 }
                 .type-title {
                     margin-bottom: $m-M;
-                    h3 {
+                    h3,legend {
                         padding: $p-XXS $p-XS;
                         padding-left: 0;
                         padding-top: $p-XS;
@@ -1758,6 +1762,24 @@ body {
                         }
                         @include mobile-L {
                             margin-right: 0;
+                        }
+                    }
+                    &.EAN{
+                        // flex-wrap: nowrap;
+                        .form-gp{
+                            flex: 1 1 auto;
+                            width: auto;
+                        }
+                        .btn-gp{
+                            margin-bottom: 0;
+                            button{
+                                flex: 1 0 auto;
+                                min-height: 40px;
+                                &:first-child{
+                                    margin-left: 0;
+                                }
+                            }
+
                         }
                     }
                 }

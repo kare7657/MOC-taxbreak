@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
-    <title>新增案件</title>
+    <title>批次新增案件</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
@@ -43,86 +43,58 @@
                     <li>></li>
                     <li><a href="book-case-manage.html" title="案件管理">案件管理</a>
                     <li>></li>
-                    <li><span>新增案件</span></li>
+                    <li><a href="book-apply-import.html" title="新增案件">新增案件</a>
+                    <li>></li>
+                    <li><span>批次新增案件</span></li>
                 </ul>
             </div>
         </div>
         <!-- 我要申請 -->
         <section class="content-signup">
-            <h2>新增案件</h2>
-            <div class="step">
-                <div class="btn-gp">
-                    <a href="book-apply-domestic.html" class="btn-step ">申請資料</a>
-                    <span>></span>
-                    <div class="btn-step active">預覽提交</div>
-                </div>
-            </div>
+            <h2>批次新增案件</h2>
             <div class="container">
-                <form class="card view">
-                    <fieldset disabled class="fieldset-disabled">
-                        <div class="type-title">
-                            <legend>基本資料</legend>
+                <form class="card">
+                    <p class="acc-info"><i class="fas fa-exclamation-circle"></i>標註星號（<span
+                            class="notice">*</span>）表示此欄位必須填寫</p>
+
+                    <div class="form-gp choice-btn">
+                        <div class="title">案件類別<span class="notice">*</span></div>
+                        <div class="item">
+                            <input type="radio" name="unit_type" value="" id="unit_type" disabled>
+                            <label for="unit_type">
+                                本國
+                            </label>
                         </div>
-                        <div class="form-gp choice-btn">
-                            <div class="title">案件類別</div>
-                            <div class="item">
-                                <input type="radio" name="unit_type" value="" id="unit_type" checked>
-                                <label for="unit_type">
-                                    本國
-                                </label>
-                            </div>
-                            <div class="item">
-                                <input type="radio" name="unit_type" value="" id="unit_type2">
-                                <label for="unit_type2">
-                                    進口
-                                </label>
-                            </div>
+                        <div class="item">
+                            <input type="radio" name="unit_type" value="" id="unit_type2" checked disabled>
+                            <label for="unit_type2">
+                                進口
+                            </label>
                         </div>
-                        <div class="form-gp">
-                            <label for="book_type">書籍類型</label>
-                            <select name="type" id="book_type">
-                                <option value="list1">實體</option>
-                                <option value="list2">電子</option>
-                            </select>
+                    </div>
+                    <div class="form-gp">
+                        <label for="book_type">書籍類型<span class="notice">*</span></label>
+                        <select name="type" id="book_type">
+                            <option value="list1">實體</option>
+                            <option value="list2">電子</option>
+                        </select>
+                    </div>
+                    <div class="form-gp">
+                        <div class="label-withButton after-title">
+                            <label for="apply-list">申請清單<span class="notice">*</span></label>
+                            <a href="" class="download-sample" download title="[下載]申請清單.doc"><i
+                                    class="fas fa-paperclip"></i>範本下載 (進口)</a>
                         </div>
-                        <div class="form-gp">
-                            <label for="book_ISBN">書號</label>
-                            <input type="text" name="book_ISBN" id="book_ISBN" placeholder="請輸入書號">
+                        <div class="file-upload">
+                            <input type="button" id="apply-list" value="檔案上傳">
+                            <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
                         </div>
-                        <div class="form-gp">
-                            <label for="book_name">書名</label>
-                            <input type="text" name="book_name" id="book_name" placeholder="請輸入書名">
-                        </div>
-                        <div class="form-gp">
-                            <label for="book_author">作者</label>
-                            <input type="text" name="book_author" id="book_author" placeholder="請輸入作者">
-                        </div>
-                        <div class="form-gp">
-                            <label for="book_publisher">出版者</label>
-                            <input type="text" name="book_publisher" id="book_publisher" placeholder="請輸入出版者">
-                        </div>
-                        <div class="form-gp">
-                            <label for="publication-year">出版日期</label>
-                            <input type="text" name="publication-year" id="publication-year" placeholder="2000年12月25日">
-                        </div>
-                    </fieldset>
-                    <fieldset disabled class="mb-0 fieldset-disabled">
-                        <div class="type-title">
-                            <legend>附件資料</legend>
-                        </div>
-                        <div class="form-gp">
-                            <label for="file">代申請證明⽂件 <span
-                                    class="remark">（出版者為⾃然⼈，請附委託書；出版者已解散或歇業，請附相關證明⽂件）</span></label>
-                            <a href="" download class="download-file" title="[下載]代申請證明⽂件.pdf"><i
-                                    class="fas fa-paperclip"></i>檔案下載</a>
-                        </div>
-                    </fieldset>
+                    </div>
+
                     <div class="btn-tool">
-                        <input type="button" value="取消" class="outline">
-                        <input type="button" value="暫存" class="outline">
-                        <input type="button" value="上一步" class="outline"
+                        <input type="button" value="取消" class="outline"
                             onclick="location.href='book-apply-domestic.html'">
-                        <input type="button" value="確定提交申請">
+                        <input type="button" value="上傳">
                     </div>
                 </form>
             </div>
@@ -149,7 +121,7 @@
                                     <div class="item">
                                         <input type="checkbox" value="" id="private-agree2">
                                         <label for="private-agree2">
-                                            我已完全閱讀並同意以上內容
+                                            我已完全閱讀並同意以上內容<span class="notice">*</span>
                                         </label>
                                     </div>
                                 </div>

@@ -52,45 +52,48 @@
             <h2>新增案件</h2>
             <div class="step">
                 <div class="btn-gp">
-                    <a href="book-apply-domestic.html" class="btn-step ">申請資料</a>
+                    <a href="book-apply-domestic.html" class="btn-step active">申請資料</a>
                     <span>></span>
-                    <div class="btn-step active">預覽提交</div>
+                    <div class="btn-step">預覽提交</div>
                 </div>
             </div>
             <div class="container">
-                <form class="card view">
-                    <fieldset disabled class="fieldset-disabled">
+                <form class="card">
+                    <div class="top-btn-gp">
+                        <button type="button" onclick="javascript:location.href='book-apply-import-batch.html'"><i
+                                class="fas fa-plus-circle"></i>批次新增</button>
+                    </div>
+                    <p class="acc-info"><i class="fas fa-exclamation-circle"></i>標註星號（<span
+                            class="notice">*</span>）表示此欄位必須填寫</p>
+                    <fieldset>
                         <div class="type-title">
                             <legend>基本資料</legend>
                         </div>
                         <div class="form-gp choice-btn">
-                            <div class="title">案件類別</div>
-                            <div class="item">
-                                <input type="radio" name="unit_type" value="" id="unit_type" checked>
-                                <label for="unit_type">
-                                    本國
-                                </label>
+                            <div class="title">案件類別<span class="notice">*</span></div>
+                            <div class="type-gp">
+                                <button type="button" class="button-outline " data-toggle="modal"
+                                    data-target="#modal-notify-domestic">本國</button>
+                                <button type="button" class="button-outline active" data-toggle="modal"
+                                    data-target="#modal-notify-import">進口</button>
                             </div>
-                            <div class="item">
-                                <input type="radio" name="unit_type" value="" id="unit_type2">
-                                <label for="unit_type2">
-                                    進口
-                                </label>
-                            </div>
+                            <ul class="ps">
+                                <li>本國：代出版者為自然人，或出版者已解散或歇業申請</li>
+                            </ul>
                         </div>
                         <div class="form-gp">
-                            <label for="book_type">書籍類型</label>
+                            <label for="book_type">書籍類型<span class="notice">*</span></label>
                             <select name="type" id="book_type">
                                 <option value="list1">實體</option>
                                 <option value="list2">電子</option>
                             </select>
                         </div>
                         <div class="form-gp">
-                            <label for="book_ISBN">書號</label>
+                            <label for="book_ISBN">書號<span class="notice">*</span></label>
                             <input type="text" name="book_ISBN" id="book_ISBN" placeholder="請輸入書號">
                         </div>
                         <div class="form-gp">
-                            <label for="book_name">書名</label>
+                            <label for="book_name">書名<span class="notice">*</span></label>
                             <input type="text" name="book_name" id="book_name" placeholder="請輸入書名">
                         </div>
                         <div class="form-gp">
@@ -102,27 +105,77 @@
                             <input type="text" name="book_publisher" id="book_publisher" placeholder="請輸入出版者">
                         </div>
                         <div class="form-gp">
-                            <label for="publication-year">出版日期</label>
-                            <input type="text" name="publication-year" id="publication-year" placeholder="2000年12月25日">
+                            <label for="import-year">進口日期<span class="notice">*</span></label>
+                            <div class="three-col">
+                                <select name="type" id="import-year">
+                                    <option value="list1">請選擇年份</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
+                                <select name="type" id="import-month">
+                                    <option value="list1">請選擇月份</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
+                                <select name="type" id="import-day">
+                                    <option value="list1">請選擇日期</option>
+                                    <option value="list2">選單2</option>
+                                    <option value="list3">選單3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_notify_mail">進口國別<span class="notice">*</span></label>
+                            <select class="select2" name="type" id="notify_mail">
+                                <option value="list1">請選擇國別</option>
+                                <option value="list2">選單2</option>
+                                <option value="list3">選單3</option>
+                            </select>
+
                         </div>
                     </fieldset>
-                    <fieldset disabled class="mb-0 fieldset-disabled">
+                    <fieldset class="mb-0">
                         <div class="type-title">
                             <legend>附件資料</legend>
                         </div>
+                        <p class="acc-info"><i class="fas fa-exclamation-circle"></i>進口證明(請填寫報單號碼或上傳證明文件，擇一即可)
+                            <span class="notice">*</span>
+                        </p>
                         <div class="form-gp">
-                            <label for="file">代申請證明⽂件 <span
-                                    class="remark">（出版者為⾃然⼈，請附委託書；出版者已解散或歇業，請附相關證明⽂件）</span></label>
-                            <a href="" download class="download-file" title="[下載]代申請證明⽂件.pdf"><i
-                                    class="fas fa-paperclip"></i>檔案下載</a>
+                            <label for="declaration-num">報單號碼</label>
+                            <input type="text" name="declaration-num" id="declaration-num" placeholder="請輸入報單號碼">
+                            <ul class="ps">
+                                <li>填寫進口該本圖書之進口報單報單號碼，共12或14碼(不含空格及符號，例如AW12345U6789，請勿填寫為提單號碼) ，系統將介接關務署資料進行確認</li>
+                            </ul>
+                        </div>
+                        <div class="form-gp">
+                            <label for="file">進口證明文件 <span class="remark">（如進口報單、訂購紀錄、授權經銷證明等，擇一即可）</span></label>
+                            <div class="file-upload">
+                                <input type="button" id="file" value="檔案上傳">
+                                <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <ul class="ps">
+                                <li>只接受指定格式（pdf、png、jpg、jpeg、bmp、zip）</li>
+                                <li>請壓縮成一個檔案上傳</li>
+                                <li>檔案請小於 50 MB</li>
+                            </ul>
+                        </div>
+                        <div class="form-gp">
+                            <label for="file">大陸地區簡體字圖書進口銷售許可函 <span class="notice">*</span> </label>
+                            <div class="file-upload">
+                                <input type="button" id="file" value="檔案上傳">
+                                <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <ul class="ps">
+                                <li>只接受指定格式（pdf、png、jpg、jpeg、bmp）</li>
+                                <li>檔案請小於 20 MB</li>
+                            </ul>
                         </div>
                     </fieldset>
                     <div class="btn-tool">
                         <input type="button" value="取消" class="outline">
                         <input type="button" value="暫存" class="outline">
-                        <input type="button" value="上一步" class="outline"
-                            onclick="location.href='book-apply-domestic.html'">
-                        <input type="button" value="確定提交申請">
+                        <input type="button" value="預覽提交" onclick="location.href='book-apply-import2.html'">
                     </div>
                 </form>
             </div>
@@ -149,7 +202,7 @@
                                     <div class="item">
                                         <input type="checkbox" value="" id="private-agree2">
                                         <label for="private-agree2">
-                                            我已完全閱讀並同意以上內容
+                                            我已完全閱讀並同意以上內容<span class="notice">*</span>
                                         </label>
                                     </div>
                                 </div>
@@ -251,6 +304,13 @@
 
     </script>
 
+    <!-- modal -->
+    <script>
+        //進頁開啟條款
+        $(window).ready(() => {
+            $('#modal-clause-taxBreak').modal('show');
+        })
+    </script>
 
     <!-- select2 -->
     <script>
