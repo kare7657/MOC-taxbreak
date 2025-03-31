@@ -67,7 +67,7 @@
                 <div class="btn-gp">
                     <button type="button" class="btn-big" onclick="location.href='book-apply-domestic.html'"><i
                             class="fas fa-plus-circle"></i>新增案件</button>
-                    <button type="button" class="btn-big" onclick="location.href='book-case-manage-EAN.html'"><i
+                    <button type="button" class="btn-big" onclick="location.href='book-EAN-manage.html'"><i
                             class="fas fa-pen"></i>EAN條碼管理</button>
                 </div>
                 <form class="searchbar">
@@ -130,14 +130,14 @@
                                         <input type="text" class="mb-nokeyboard western-date" id="approve_start-date"
                                             data-toggle="datepicker" placeholder="請選擇開始日期" readonly>
                                     </div>
-                                </div>            
+                                </div>
                                 <div class="item">
                                     <div class="date-gp date-icon">
                                         <input type="text" class="mb-nokeyboard western-date" id="approve_end-date"
                                             data-toggle="datepicker" placeholder="請選擇結束日期">
                                     </div>
                                 </div>
-                            </div>                            
+                            </div>
 
                         </div>
 
@@ -220,9 +220,9 @@
                                             <span>瀏覽</span></a>
                                         <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
-                                        <a href="" class="link" title="確定不申請"><i class="fas fa-times"></i>
+                                        <a href="" class="link" title="確定不申請" data-toggle="modal" data-target="#modal-notify-dontApply"><i class="fas fa-times"></i>
                                             <span>確定不申請</span></a>
-                                        <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                        <a href="" class="link notice" title="刪除" data-toggle="modal" data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
 
                                     </div>
@@ -255,10 +255,10 @@
                                     <div class="function">
                                         <a href="book-case-view.html" class="link" title="瀏覽"><i class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
-                                        <a href="book-case-edit.html" class="link" title="編輯"><i
+                                        <a href="book-case-corrective.html" class="link" title="編輯"><i
                                                 class="fas fa-file-alt"></i>
                                             <span>補正</span></a>
-                                        <a href="" class="link notice" title="撤回"><i class="fas fa-ban"></i>
+                                        <a href="" class="link notice" title="撤回" data-toggle="modal" data-target="#modal-notify-cancel"><i class="fas fa-ban"></i>
                                             <span>撤回</span></a>
 
                                     </div>
@@ -291,7 +291,7 @@
                                     <div class="function">
                                         <a href="book-case-view.html" class="link" title="瀏覽"><i class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
-                                        <a href="" class="link notice" title="撤回"><i class="fas fa-ban"></i>
+                                        <a href="" class="link notice" title="撤回" data-toggle="modal" data-target="#modal-notify-cancel"><i class="fas fa-ban"></i>
                                             <span>撤回</span></a>
 
                                     </div>
@@ -326,7 +326,7 @@
                                             <span>瀏覽</span></a>
                                         <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
-                                        <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                        <a href="" class="link notice" title="刪除" data-toggle="modal" data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
 
                                     </div>
@@ -361,7 +361,7 @@
                                             <span>瀏覽</span></a>
                                         <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
-                                        <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                        <a href="" class="link notice" title="刪除" data-toggle="modal" data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
 
                                     </div>
@@ -396,7 +396,7 @@
                                             <span>瀏覽</span></a>
                                         <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
-                                        <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                        <a href="" class="link notice" title="刪除" data-toggle="modal" data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
 
                                     </div>
@@ -431,7 +431,7 @@
                                             <span>瀏覽</span></a>
                                         <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
-                                        <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                        <a href="" class="link notice" title="刪除" data-toggle="modal" data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
 
                                     </div>
@@ -466,7 +466,7 @@
                                             <span>瀏覽</span></a>
                                         <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
-                                        <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                        <a href="" class="link notice" title="刪除" data-toggle="modal" data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
 
                                     </div>
@@ -501,7 +501,7 @@
                                             <span>瀏覽</span></a>
                                         <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
-                                        <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                        <a href="" class="link notice" title="刪除" data-toggle="modal" data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
 
                                     </div>
@@ -536,7 +536,7 @@
                                             <span>瀏覽</span></a>
                                         <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
-                                        <a href="" class="link notice" title="刪除"><i class="fas fa-trash-alt"></i>
+                                        <a href="" class="link notice" title="刪除" data-toggle="modal" data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
 
                                     </div>
@@ -563,34 +563,49 @@
             </div>
         </section>
 
-        <!-- modal 提示-->
-        <div class="modal fade modal-template " id="modal-notify" tabindex="-1" role="dialog"
-            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
-            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+        <!-- modal 提示-確定不申請-->
+        <div class="modal fade modal-template " id="modal-notify-dontApply" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel2" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp"
                 target="frm_ChangPWD">
-                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-dialog  modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <h2 class="modal-title" id="modal-notifyLabel">表演注意事項</h2>
+                            <h2 class="modal-title" id="modal-notifyLabel2">系統通知</h2>
                         </div>
-                        <div class="modal-body">
-                            <div class="notify-gp">
-                                <div class="text-gp">
-                                    <p class="notice"><i class="fas fa-exclamation-circle"></i>
-                                        申請案中若有國外人士來臺演出</p>
-                                    <p>應檢附勞動部已核准文件，或已向勞動部提出申請之文件</p>
-                                </div>
-                                <div class="text-gp">
-                                    <p class="notice"><i class="fas fa-exclamation-circle"></i>
-                                        申請案中若有大陸地區人士來臺演出</p>
-                                    <p>應檢附內政部已核准文件，或已向內政部提出申請之文件</p>
-                                </div>
-                            </div>
+                        <div class="modal-body">                            
+                            <p>您是否確定不申請此筆案件？</p>
                         </div>
                         <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+                            <button type="submit" name="go" id="go3">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- modal 提示-撤回-->
+        <div class="modal fade modal-template " id="modal-notify-cancel" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog  modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>您是否確認要撤回此筆案件？</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
                             <button type="submit" name="go" id="go2">確認</button>
 
                         </div>
@@ -598,34 +613,24 @@
                 </div>
             </form>
         </div>
-        <!-- modal 提示-->
-        <div class="modal fade modal-template " id="modal-notify2" tabindex="-1" role="dialog"
+        <!-- modal 提示-刪除-->
+        <div class="modal fade modal-template " id="modal-notify-delete" tabindex="-1" role="dialog"
             aria-labelledby="modal-notifyLabel2" data-backdrop="static" style=" padding-top: 0;">
             <form class="form" name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp"
                 target="frm_ChangPWD">
-                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-dialog  modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <h2 class="modal-title" id="modal-notifyLabel2">展覽注意事項</h2>
+                            <h2 class="modal-title" id="modal-notifyLabel2">系統通知</h2>
                         </div>
-                        <div class="modal-body">
-                            <div class="notify-gp">
-                                <div class="text-gp">
-                                    <p class="notice"><i class="fas fa-exclamation-circle"></i>
-                                        申請案中若有大陸地區古物來臺展覽</p>
-                                    <p>應檢附本部已核准文件，或已向本部提出申請之文件</p>
-                                </div>
-                                <div class="text-gp">
-                                    <p class="notice"><i class="fas fa-exclamation-circle"></i>
-                                        申請案中若有國外地區中華古物來臺展覽</p>
-                                    <p>應檢附目的事業主管機關已核准文件，或已向該機關提出申請之文件</p>
-                                </div>
-                            </div>
+                        <div class="modal-body">                            
+                            <p>您是否確認要刪除此筆案件？</p>
                         </div>
                         <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
                             <button type="submit" name="go" id="go3">確認</button>
                         </div>
                     </div>

@@ -252,9 +252,9 @@ body {
                 margin-top: $m-S;
                 margin-bottom: $p-XXS;
             }
-            .text-gp{
+            .text-gp {
                 margin-bottom: $m-XS;
-                ul{
+                ul {
                     margin-bottom: 0;
                 }
             }
@@ -962,7 +962,7 @@ body {
                             text-align: center;
                             padding: 0 $p-XXS;
                         }
-                        @include mobile-XS{
+                        @include mobile-XS {
                             width: 20%;
                             padding: 2px;
                         }
@@ -1010,12 +1010,12 @@ body {
             }
             form {
                 background-color: unset;
-                .top-btn-gp{
+                .top-btn-gp {
                     margin-bottom: $m-XS;
                     display: flex;
                     justify-content: flex-end;
-                    button{
-                        @include mobile-L{
+                    button {
+                        @include mobile-L {
                             width: 100%;
                         }
                     }
@@ -1047,7 +1047,8 @@ body {
                 }
                 .type-title {
                     margin-bottom: $m-M;
-                    h3,legend {
+                    h3,
+                    legend {
                         padding: $p-XXS $p-XS;
                         padding-left: 0;
                         padding-top: $p-XS;
@@ -1764,22 +1765,27 @@ body {
                             margin-right: 0;
                         }
                     }
-                    &.EAN{
-                        // flex-wrap: nowrap;
-                        .form-gp{
-                            flex: 1 1 auto;
+                    &.EAN {
+                        .form-gp {
+                            flex: 1 1 100px;
                             width: auto;
+                            @include mobile-L {
+                                flex: initial;
+                                width: 100%;
+                            }
                         }
-                        .btn-gp{
+                        .btn-gp {
+                            flex: 0 1 auto;
                             margin-bottom: 0;
-                            button{
-                                flex: 1 0 auto;
+                            @include mobile-L {
+                                margin-top: $m-XS;
+                            }
+                            button {
                                 min-height: 40px;
-                                &:first-child{
+                                &:first-child {
                                     margin-left: 0;
                                 }
                             }
-
                         }
                     }
                 }
@@ -1798,6 +1804,23 @@ body {
                             margin-left: 0;
                             margin-bottom: $m-XS;
                             font-size: $size-h4;
+                        }
+                    }
+                }
+                .search-gp {
+                    width: 60%;
+                    display: flex;
+                    @include pad {
+                        width: 70%;
+                    }
+                    @include mobile-L {
+                        width: 100%;
+                        flex-wrap: wrap;
+                    }
+                    .search-icon {
+                        flex: 1 1 auto;
+                        @include mobile-L {
+                            margin-bottom: $m-S;
                         }
                     }
                 }
@@ -1866,7 +1889,6 @@ body {
                                             }
                                         }
                                     }
-                                   
                                 }
                             }
                         }
@@ -1889,6 +1911,9 @@ body {
                             @include mobile-L {
                                 width: 100%;
                                 margin-bottom: 0;
+                            }
+                            .nav {
+                                margin-bottom: 0 !important;
                             }
                         }
                         .right {
@@ -1913,6 +1938,22 @@ body {
                             @include pad {
                                 width: 48%;
                                 margin-right: 0;
+                            }
+                        }
+                    }
+                    .activate-btn-gp {
+                        display: flex;
+                        justify-content: space-between;
+                        @include mobile-L {
+                            flex-wrap: wrap;
+                            margin-bottom: $m-S;
+                        }
+                        .right {
+                            @include mobile-L {
+                                width: 100%;
+                                button {
+                                    width: 100%;
+                                }
                             }
                         }
                     }

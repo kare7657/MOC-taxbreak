@@ -68,14 +68,11 @@
                             <input type="text" name="admin_tel" id="admin_tel" placeholder="請輸入商品套組名稱">
                         </div>
                         <div class="btn-gp">
-                            <button type="button"
-                            onclick="javascript:location.href='book-member-unit-personal-import.html'"><i
-                                class="fas fa-plus-circle"></i>新增</button>
-                            <button type="button"
-                                onclick="javascript:location.href='book-member-unit-personal-import.html'"><i
+                            <button type="button"><i class="fas fa-plus-circle"></i>新增</button>
+                            <button type="button" onclick="javascript:location.href='book-EAN-manage-batch.html'"><i
                                     class="fas fa-pen"></i>批次新增</button>
-                            <button type="button" class="brown"
-                                onclick="javascript:location.href='book-member-unit-unit-automatic.html'"><i
+                            <button type="button" class="button-outline brown"
+                                onclick="javascript:location.href='book-EAN-manage-crossUnit.html'"><i
                                     class="fas fa-pen"></i>跨單位EAN管理申請</button>
                         </div>
                     </form>
@@ -84,215 +81,207 @@
                     <div class="search-icon">
                         <input type="search" placeholder="搜尋關鍵字">
                     </div>
-                    <button type="button">搜尋</button>
-                    <button type="button" class="button-outline">清除</button>
+                    <div class="btn-gp">
+                        <button type="button">搜尋</button>
+                        <button type="button" class="button-outline">清除</button>
+                    </div>
                 </div>
                 <div class="case-list">
-                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
-                                role="tab" aria-controls="pills-home" aria-selected="true">啟用中</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
-                                role="tab" aria-controls="pills-profile" aria-selected="false">停用中</a>
-                        </li>
-                    </ul>
+                    <div class="activate-btn-gp">
+                        <div class="left">
+                            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
+                                        role="tab" aria-controls="pills-home" aria-selected="true">啟用中</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+                                        role="tab" aria-controls="pills-profile" aria-selected="false">停用中</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <button type="button" class="button-outline green"><i
+                                    class="fas fa-file-export"></i>匯出excel</button>
+                        </div>                        
+                    </div>
                     <div class="tab-content" id="pills-tabContent">
+
                         <!-- 啟用中 -->
                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                             aria-labelledby="pills-home-tab">
                             <table class="table-default  mb-separate ellipsis-table">
                                 <thead>
                                     <tr>
-                                        <th style="width: 5%;">項次</th>
-                                        <th style="width: 16%;">單位/個人出版品牌名稱</th>
-                                        <th style="width: 22%;">帳號</th>
-                                        <th style="width: 9%;">姓名</th>
-                                        <th style="width: 7%;">啟用</th>
-                                        <th style="width: 12%;">單位管理者</th>
-                                        <th style="width: 19%;">上次登入時間</th>
-                                        <th style="width: 20%;" class="th-function">功能</th>
+                                        <th style="width: 10%;">項次</th>
+                                        <th style="width: 15%;">EAN條碼</th>
+                                        <th style="width: 19%;">商品套組名稱</th>
+                                        <th style="width: 19%;">書號</th>
+                                        <th style="width: 15%;">啟用</th>
+                                        <th style="width: 22%;" class="th-function">功能</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td data-title="項次">1</td>
-                                        <td data-title="單位/個人出版品牌名稱">
-                                            名稱
+                                        <td data-title="EAN條碼">
+                                            123123123
                                         </td>
-                                        <td data-title="帳號">123456@sample.com.tw</td>
-                                        <td data-title="姓名">某某某某某</td>
+                                        <td data-title="商品套組名稱">test</td>
+                                        <td data-title="書號">9573318008</td>
                                         <td data-title="啟用">
                                             <div class="custom-control custom-switch">
-                                                <input type="checkbox" class="custom-control-input" id="customSwitch1"
-                                                    checked>
+                                                <input type="checkbox" class="custom-control-input"
+                                                    id="customSwitch1" checked>
                                                 <label class="custom-control-label" for="customSwitch1"></label>
                                             </div>
                                         </td>
-                                        <td data-title="單位管理者">是</td>
-                                        <td data-title="上次登入時間">
-                                            112年09月22日 16:00:33 從 61.59.16.65
-                                        </td>
+
                                         <td data-title="功能" class="text-left">
                                             <div class="function">
                                                 <a href="member-account-edit.html" class="link" title="編輯"><i
                                                         class="fas fa-pen"></i>
                                                     <span>編輯</span></a>
-                                                <a href="" class="link" title="重設密碼" data-toggle="modal"
+                                                <a href="" class="link notice" title="刪除" data-toggle="modal"
                                                     data-target="#modal-notify">
-                                                    <i class="fas fa-key"></i>
-                                                    <span>重設密碼</span></a>
+                                                    <i class="fas fa-trash-alt"></i>
+                                                    <span>刪除</span></a>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td data-title="項次">2</td>
-                                        <td data-title="單位/個人出版品牌名稱">
-                                            名稱
+                                        <td data-title="EAN條碼">
+                                            123123123
                                         </td>
-                                        <td data-title="帳號">123456@sample.com.tw</td>
-                                        <td data-title="姓名">某某某</td>
+                                        <td data-title="商品套組名稱">test</td>
+                                        <td data-title="書號">9573318008</td>
                                         <td data-title="啟用">
                                             <div class="custom-control custom-switch">
-                                                <input type="checkbox" class="custom-control-input" id="customSwitch2"
-                                                    checked>
+                                                <input type="checkbox" class="custom-control-input"
+                                                    id="customSwitch2" checked>
                                                 <label class="custom-control-label" for="customSwitch2"></label>
                                             </div>
                                         </td>
-                                        <td data-title="單位管理者">是</td>
-                                        <td data-title="上次登入時間">
-                                            112年09月22日 16:00:33 從 61.59.16.65
-                                        </td>
+
                                         <td data-title="功能" class="text-left">
                                             <div class="function">
                                                 <a href="member-account-edit.html" class="link" title="編輯"><i
                                                         class="fas fa-pen"></i>
                                                     <span>編輯</span></a>
-                                                <a href="" class="link" title="重設密碼" data-toggle="modal"
+                                                <a href="" class="link notice" title="刪除" data-toggle="modal"
                                                     data-target="#modal-notify">
-                                                    <i class="fas fa-key"></i>
-                                                    <span>重設密碼</span></a>
+                                                    <i class="fas fa-trash-alt"></i>
+                                                    <span>刪除</span></a>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td data-title="項次">3</td>
-                                        <td data-title="單位/個人出版品牌名稱">
-                                            名稱
+                                        <td data-title="EAN條碼">
+                                            123123123
                                         </td>
-                                        <td data-title="帳號">123456@sample.com.tw</td>
-                                        <td data-title="姓名">某某某</td>
+                                        <td data-title="商品套組名稱">test</td>
+                                        <td data-title="書號">9573318008</td>
                                         <td data-title="啟用">
                                             <div class="custom-control custom-switch">
-                                                <input type="checkbox" class="custom-control-input" id="customSwitch3"
-                                                    checked>
+                                                <input type="checkbox" class="custom-control-input"
+                                                    id="customSwitch3" checked>
                                                 <label class="custom-control-label" for="customSwitch3"></label>
                                             </div>
                                         </td>
-                                        <td data-title="單位管理者">是</td>
-                                        <td data-title="上次登入時間">
-                                            112年09月22日 16:00:33 從 61.59.16.65
-                                        </td>
+
                                         <td data-title="功能" class="text-left">
                                             <div class="function">
                                                 <a href="member-account-edit.html" class="link" title="編輯"><i
                                                         class="fas fa-pen"></i>
                                                     <span>編輯</span></a>
-                                                <a href="" class="link" title="重設密碼" data-toggle="modal"
+                                                <a href="" class="link notice" title="刪除" data-toggle="modal"
                                                     data-target="#modal-notify">
-                                                    <i class="fas fa-key"></i>
-                                                    <span>重設密碼</span></a>
+                                                    <i class="fas fa-trash-alt"></i>
+                                                    <span>刪除</span></a>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td data-title="項次">4</td>
-                                        <td data-title="單位/個人出版品牌名稱">
-                                            名稱
+                                        <td data-title="EAN條碼">
+                                            123123123
                                         </td>
-                                        <td data-title="帳號">123456@sample.com.tw</td>
-                                        <td data-title="姓名">某某某</td>
+                                        <td data-title="商品套組名稱">test</td>
+                                        <td data-title="書號">9573318008</td>
                                         <td data-title="啟用">
                                             <div class="custom-control custom-switch">
-                                                <input type="checkbox" class="custom-control-input" id="customSwitch4"
-                                                    checked>
+                                                <input type="checkbox" class="custom-control-input"
+                                                    id="customSwitch4" checked>
                                                 <label class="custom-control-label" for="customSwitch4"></label>
                                             </div>
                                         </td>
-                                        <td data-title="單位管理者">是</td>
-                                        <td data-title="上次登入時間">
-                                            112年09月22日 16:00:33 從 61.59.16.65
-                                        </td>
+
                                         <td data-title="功能" class="text-left">
                                             <div class="function">
                                                 <a href="member-account-edit.html" class="link" title="編輯"><i
                                                         class="fas fa-pen"></i>
                                                     <span>編輯</span></a>
-                                                <a href="" class="link" title="重設密碼" data-toggle="modal"
+                                                <a href="" class="link notice" title="刪除" data-toggle="modal"
                                                     data-target="#modal-notify">
-                                                    <i class="fas fa-key"></i>
-                                                    <span>重設密碼</span></a>
+                                                    <i class="fas fa-trash-alt"></i>
+                                                    <span>刪除</span></a>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td data-title="項次">5</td>
-                                        <td data-title="單位/個人出版品牌名稱">
-                                            名稱
+                                        <td data-title="EAN條碼">
+                                            123123123
                                         </td>
-                                        <td data-title="帳號">123456@sample.com.tw</td>
-                                        <td data-title="姓名">某某某</td>
+                                        <td data-title="商品套組名稱">test</td>
+                                        <td data-title="書號">9573318008</td>
                                         <td data-title="啟用">
                                             <div class="custom-control custom-switch">
-                                                <input type="checkbox" class="custom-control-input" id="customSwitch5"
-                                                    checked>
+                                                <input type="checkbox" class="custom-control-input"
+                                                    id="customSwitch5" checked>
                                                 <label class="custom-control-label" for="customSwitch5"></label>
                                             </div>
                                         </td>
-                                        <td data-title="單位管理者">是</td>
-                                        <td data-title="上次登入時間">
-                                            112年09月22日 16:00:33 從 61.59.16.65
-                                        </td>
+
                                         <td data-title="功能" class="text-left">
                                             <div class="function">
                                                 <a href="member-account-edit.html" class="link" title="編輯"><i
                                                         class="fas fa-pen"></i>
                                                     <span>編輯</span></a>
-                                                <a href="" class="link" title="重設密碼" data-toggle="modal"
+                                                <a href="" class="link notice" title="刪除" data-toggle="modal"
                                                     data-target="#modal-notify">
-                                                    <i class="fas fa-key"></i>
-                                                    <span>重設密碼</span></a>
+                                                    <i class="fas fa-trash-alt"></i>
+                                                    <span>刪除</span></a>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td data-title="項次">6</td>
-                                        <td data-title="單位/個人出版品牌名稱">
-                                            名稱
+                                        <td data-title="EAN條碼">
+                                            123123123
                                         </td>
-                                        <td data-title="帳號">123456@sample.com.tw</td>
-                                        <td data-title="姓名">某某某</td>
+                                        <td data-title="商品套組名稱">test</td>
+                                        <td data-title="書號">9573318008</td>
                                         <td data-title="啟用">
                                             <div class="custom-control custom-switch">
-                                                <input type="checkbox" class="custom-control-input" id="customSwitch6"
-                                                    checked>
+                                                <input type="checkbox" class="custom-control-input"
+                                                    id="customSwitch6" checked>
                                                 <label class="custom-control-label" for="customSwitch6"></label>
                                             </div>
                                         </td>
-                                        <td data-title="單位管理者">是</td>
-                                        <td data-title="上次登入時間">
-                                            112年09月22日 16:00:33 從 61.59.16.65
-                                        </td>
+
                                         <td data-title="功能" class="text-left">
                                             <div class="function">
                                                 <a href="member-account-edit.html" class="link" title="編輯"><i
                                                         class="fas fa-pen"></i>
                                                     <span>編輯</span></a>
-                                                <a href="" class="link" title="重設密碼" data-toggle="modal"
+                                                <a href="" class="link notice" title="刪除" data-toggle="modal"
                                                     data-target="#modal-notify">
-                                                    <i class="fas fa-key"></i>
-                                                    <span>重設密碼</span></a>
+                                                    <i class="fas fa-trash-alt"></i>
+                                                    <span>刪除</span></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -305,101 +294,92 @@
                             <table class="table-default  mb-separate ellipsis-table">
                                 <thead>
                                     <tr>
-                                        <th style="width: 5%;">項次</th>
-                                        <th style="width: 16%;">單位/個人出版品牌名稱</th>
-                                        <th style="width: 22%;">帳號</th>
-                                        <th style="width: 9%;">姓名</th>
-                                        <th style="width: 7%;">啟用</th>
-                                        <th style="width: 12%;">單位管理者</th>
-                                        <th style="width: 19%;">上次登入時間</th>
-                                        <th style="width: 20%;" class="th-function">功能</th>
+                                        <th style="width: 7%;">項次</th>
+                                        <th style="width: 19%;">EAN條碼</th>
+                                        <th style="width: 19%;">商品套組名稱</th>
+                                        <th style="width: 19%;">書號</th>
+                                        <th style="width: 15%;">啟用</th>
+                                        <th style="width: 21%;" class="th-function">功能</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td data-title="項次">1</td>
-                                        <td data-title="單位/個人出版品牌名稱">
-                                            名稱
+                                        <td data-title="EAN條碼">
+                                            123123123
                                         </td>
-                                        <td data-title="帳號">123456@sample.com.tw</td>
-                                        <td data-title="姓名">某某某某某</td>
+                                        <td data-title="商品套組名稱">test</td>
+                                        <td data-title="書號">9573318008</td>
                                         <td data-title="啟用">
                                             <div class="custom-control custom-switch">
-                                                <input type="checkbox" class="custom-control-input" id="customSwitch10">
+                                                <input type="checkbox" class="custom-control-input"
+                                                    id="customSwitch10">
                                                 <label class="custom-control-label" for="customSwitch1"></label>
                                             </div>
-                                        </td>
-                                        <td data-title="單位管理者">是</td>
-                                        <td data-title="上次登入時間">
-                                            112年09月22日 16:00:33 從 61.59.16.65
                                         </td>
                                         <td data-title="功能" class="text-left">
                                             <div class="function">
                                                 <a href="member-account-edit.html" class="link" title="編輯"><i
                                                         class="fas fa-pen"></i>
                                                     <span>編輯</span></a>
-                                                <a href="" class="link" title="重設密碼" data-toggle="modal"
+                                                <a href="" class="link notice" title="刪除" data-toggle="modal"
                                                     data-target="#modal-notify">
-                                                    <i class="fas fa-key"></i>
-                                                    <span>重設密碼</span></a>
+                                                    <i class="fas fa-trash-alt"></i>
+                                                    <span>刪除</span></a>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td data-title="項次">2</td>
-                                        <td data-title="單位/個人出版品牌名稱">
-                                            名稱
+                                        <td data-title="EAN條碼">
+                                            123123123
                                         </td>
-                                        <td data-title="帳號">123456@sample.com.tw</td>
-                                        <td data-title="姓名">某某某</td>
+                                        <td data-title="商品套組名稱">test</td>
+                                        <td data-title="書號">9573318008</td>
                                         <td data-title="啟用">
                                             <div class="custom-control custom-switch">
-                                                <input type="checkbox" class="custom-control-input" id="customSwitch20">
+                                                <input type="checkbox" class="custom-control-input"
+                                                    id="customSwitch20">
                                                 <label class="custom-control-label" for="customSwitch2"></label>
                                             </div>
                                         </td>
-                                        <td data-title="單位管理者">是</td>
-                                        <td data-title="上次登入時間">
-                                            112年09月22日 16:00:33 從 61.59.16.65
-                                        </td>
+
                                         <td data-title="功能" class="text-left">
                                             <div class="function">
                                                 <a href="member-account-edit.html" class="link" title="編輯"><i
                                                         class="fas fa-pen"></i>
                                                     <span>編輯</span></a>
-                                                <a href="" class="link" title="重設密碼" data-toggle="modal"
+                                                <a href="" class="link notice" title="刪除" data-toggle="modal"
                                                     data-target="#modal-notify">
-                                                    <i class="fas fa-key"></i>
-                                                    <span>重設密碼</span></a>
+                                                    <i class="fas fa-trash-alt"></i>
+                                                    <span>刪除</span></a>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td data-title="項次">3</td>
-                                        <td data-title="單位/個人出版品牌名稱">
-                                            名稱
+                                        <td data-title="EAN條碼">
+                                            123123123
                                         </td>
-                                        <td data-title="帳號">123456@sample.com.tw</td>
-                                        <td data-title="姓名">某某某</td>
+                                        <td data-title="商品套組名稱">test</td>
+                                        <td data-title="書號">9573318008</td>
                                         <td data-title="啟用">
                                             <div class="custom-control custom-switch">
-                                                <input type="checkbox" class="custom-control-input" id="customSwitch30">
+                                                <input type="checkbox" class="custom-control-input"
+                                                    id="customSwitch30">
                                                 <label class="custom-control-label" for="customSwitch3"></label>
                                             </div>
                                         </td>
-                                        <td data-title="單位管理者">是</td>
-                                        <td data-title="上次登入時間">
-                                            112年09月22日 16:00:33 從 61.59.16.65
-                                        </td>
+
                                         <td data-title="功能" class="text-left">
                                             <div class="function">
                                                 <a href="member-account-edit.html" class="link" title="編輯"><i
                                                         class="fas fa-pen"></i>
                                                     <span>編輯</span></a>
-                                                <a href="" class="link" title="重設密碼" data-toggle="modal"
+                                                <a href="" class="link notice" title="刪除" data-toggle="modal"
                                                     data-target="#modal-notify">
-                                                    <i class="fas fa-key"></i>
-                                                    <span>重設密碼</span></a>
+                                                    <i class="fas fa-trash-alt"></i>
+                                                    <span>刪除</span></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -427,6 +407,42 @@
             </div>
         </section>
 
+        <!-- modal 條款-->
+        <div class="modal fade modal-template " id="modal-clause-signup" tabindex="-1" role="dialog"
+            aria-labelledby="modal-clauseLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                         </button> -->
+                            <h2 class="modal-title" id="modal-clauseLabel">EAN條碼管理功能注意事項</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="iframe-gp">
+                                <iframe src="book-clause-EAN.html" style="height: 330px;"></iframe>
+                                <div class="form-gp choice">
+                                    <div class="item">
+                                        <input type="checkbox" value="" id="private-agree2">
+                                        <label for="private-agree2">
+                                            我已完全閱讀並同意以上內容<span class="notice">*</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel4" data-dismiss="modal">下一步</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
         <!-- modal 提示-->
         <div class="modal fade modal-template " id="modal-notify" tabindex="-1" role="dialog"
             aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
@@ -438,12 +454,12 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <h2 class="modal-title" id="modal-notifyLabel">重設密碼</h2>
+                            <h2 class="modal-title" id="modal-notifyLabel">刪除</h2>
                         </div>
                         <div class="modal-body">
                             <div class="notify-gp">
                                 <div class="text-gp">
-                                    <p>系統會透過郵件將重設密碼連結寄送給使用者？按下「確定」，即完成重設</p>
+                                    <p>系統會透過郵件將刪除連結寄送給使用者？按下「確定」，即完成重設</p>
                                 </div>
                             </div>
                         </div>
@@ -507,6 +523,14 @@
             $("#footer").load("book-footer.html");
         });
 
+    </script>
+
+    <!-- modal -->
+    <script>
+        //進頁開啟條款
+        $(window).ready(() => {
+            $('#modal-clause-signup').modal('show');
+        })
     </script>
 
     <!-- jquery Autocomplete -->

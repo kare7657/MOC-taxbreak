@@ -87,19 +87,19 @@
                         </div>
                         <div class="form-gp">
                             <label for="book_ISBN">書號</label>
-                            <input type="text" name="book_ISBN" id="book_ISBN" placeholder="請輸入書號">
+                            <input type="text" name="book_ISBN" id="book_ISBN" placeholder="9573317583">
                         </div>
                         <div class="form-gp">
                             <label for="book_name">書名</label>
-                            <input type="text" name="book_name" id="book_name" placeholder="請輸入書名">
+                            <input type="text" name="book_name" id="book_name" placeholder="哈利波特（2）：消失的密室">
                         </div>
                         <div class="form-gp">
                             <label for="book_author">作者</label>
-                            <input type="text" name="book_author" id="book_author" placeholder="請輸入作者">
+                            <input type="text" name="book_author" id="book_author" placeholder="J．K．羅琳">
                         </div>
                         <div class="form-gp">
                             <label for="book_publisher">出版者</label>
-                            <input type="text" name="book_publisher" id="book_publisher" placeholder="請輸入出版者">
+                            <input type="text" name="book_publisher" id="book_publisher" placeholder="皇冠文化出版有限公司">
                         </div>
                         <div class="form-gp">
                             <label for="publication-year">出版日期</label>
@@ -122,7 +122,7 @@
                         <input type="button" value="暫存" class="outline">
                         <input type="button" value="上一步" class="outline"
                             onclick="location.href='book-apply-domestic.html'">
-                        <input type="button" value="確定提交申請">
+                        <input type="button" value="確定提交申請" data-toggle="modal" data-target="#modal-clause-apply">
                     </div>
                 </form>
             </div>
@@ -130,34 +130,39 @@
 
 
         <!-- modal 條款-->
-        <div class="modal fade modal-template " id="modal-clause-taxBreak" tabindex="-1" role="dialog"
+        <div class="modal fade modal-template " id="modal-clause-apply" tabindex="-1" role="dialog"
             aria-labelledby="modal-clauseLabel" data-backdrop="static" style=" padding-top: 0;">
             <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
                 target="frm_ChangPWD">
-                <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button> -->
-                            <h2 class="modal-title" id="modal-clauseLabel">線上申請同意條款</h2>
+                            <h2 class="modal-title" id="modal-clauseLabel">提交案件申請注意事項</h2>
                         </div>
                         <div class="modal-body">
+                            <p>即將提交申請，在提出案件申請前，請您仔細閱讀以下說明並同意遵守:</p>
                             <div class="iframe-gp">
-                                <iframe src="book-clause-apply.html"></iframe>
+                                <ol class="ps">
+                                    <li>本國圖書出版品資料係由國家圖書館ISBN資料庫介接匯入，如實際出版之資料須加以調整，可洽該館更新，本系統將於該館ISBN資料庫更新後同步調整</li>
+                                    <li>請確實檢視資料正確性，並確認其未違反「文化藝術事業減免營業稅及娛樂稅辦法」第5條各款規定，如刻意填寫不實內容，或所申請之圖書出版品違反法規規定者，文化部得，於查明後撤銷、廢止其免稅認可，並由申請單位承擔相應法律責任</li>
+                                    <li>審核約需3-5個工作日，接獲補正通知時，應於通知限定之期日內補齊，認可通過之當日起銷售收入方得免徵營業稅，請及早提出申請，以免影響自身權益</li>
+                                </ol>
                                 <div class="form-gp choice">
                                     <div class="item">
                                         <input type="checkbox" value="" id="private-agree2">
                                         <label for="private-agree2">
-                                            我已完全閱讀並同意以上內容
+                                            我已完全閱讀並同意以上內容<span class="notice">*</span>
                                         </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" name="cancel" id="cancel4" data-dismiss="modal">下一步</button>
-
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+                            <button type="submit" name="go" id="go">確認</button>
                         </div>
                     </div>
                 </div>

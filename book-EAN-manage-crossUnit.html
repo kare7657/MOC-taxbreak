@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>跨單位EAN管理申請</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- jquery UI -->
+    <link rel="stylesheet" href="scss/jquery-ui.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C">:::</a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html" title="首頁"><i class="fas fa-home"></i><span class="d-none">首頁</span></a>
+                    </li>
+                    <li>></li>
+                    <li><a href="tax-break.html" title="申請減免營業稅及娛樂稅">申請減免營業稅及娛樂稅</a>
+                    </li>
+                    <li>></li>
+                    <li><a href="book-login.html" title="圖書出版品類線上申請系統">圖書出版品類線上申請系統</a>
+                    <li>></li>
+                    <li><a href="book-case-manage.html" title="案件管理">案件管理</a>
+                    <li>></li>
+                    <li><a href="book-EAN-manage.html" title="EAN條碼管理">EAN條碼管理</a>
+                    <li>></li>
+                    <li><span>跨單位EAN管理申請</span></li>
+                </ul>
+            </div>
+        </div>
+        <section class="content-member book">
+            <div class="container">
+                <h2>跨單位EAN管理申請</h2>
+                <p class="acc-info"><i class="fas fa-exclamation-circle"></i>標註星號（<span
+                        class="notice">*</span>）表示此欄位必須填寫</p>
+                <ol class="ps">
+                    <li>如因特殊原因，須要將申請單位與其他申請單位所出版、且已獲免稅認可的圖書，組成套組並備註對應之EAN條碼(例如為關係企業，雙方圖書經常組成套書流通)，可於此進行申請</li>
+                    <li>下載申請書格式，由雙方單位填寫用印後，掃描上傳進行申請</li>
+                    <li class="notice">申請通過後，申請單位雙方皆可為對方所出版、且已獲免稅認可的圖書進行EAN條碼管理(不限特定圖書)，請慎重評估是否須申請</li>
+                </ol>
+                <form>
+                    <div class="form-gp">
+                        <label for="BAN">請輸入欲共同管理EAN條碼的單位之統一編號<span class="notice">*</span></label>
+                        <input type="number" name="BAN" id="BAN" placeholder="請輸入統一編號">
+                    </div>
+                    <div class="form-gp">
+                        <div class="label-withButton after-title">
+                            <label for="file">請上傳跨單位 EAN 管理申請書<span class="notice">*</span></label>
+                            <a href="" class="download-sample notice" download title="[下載檔案]申請書格式.doc"><i
+                                    class="fas fa-paperclip"></i>申請書格式下載</a>
+                        </div>
+                        <div class="file-upload">
+                            <input type="button" id="file" value="檔案上傳">
+                            <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                        </div>
+                        <ul class="ps">
+                            <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
+                            <li>檔案請小於 20 MB</li>
+                        </ul>
+                    </div>
+                    <div class="btn-tool">
+                        <input type="button" value="取消" class="outline" onclick="location.href='book-EAN-manage.html'">
+                        <input type="submit" value="送出申請" class="submit">
+                    </div>
+                </form>
+                </form>
+
+
+            </div>
+        </section>
+
+        <!-- modal 條款-->
+        <div class="modal fade modal-template " id="modal-clause-signup" tabindex="-1" role="dialog"
+            aria-labelledby="modal-clauseLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                         </button> -->
+                            <h2 class="modal-title" id="modal-clauseLabel">EAN條碼管理功能注意事項</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="iframe-gp">
+                                <iframe src="book-clause-EAN.html" style="height: 330px;"></iframe>
+                                <div class="form-gp choice">
+                                    <div class="item">
+                                        <input type="checkbox" value="" id="private-agree2">
+                                        <label for="private-agree2">
+                                            我已完全閱讀並同意以上內容<span class="notice">*</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel4" data-dismiss="modal">下一步</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+        <!-- modal 提示-->
+        <div class="modal fade modal-template " id="modal-notify" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel">重設密碼</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <div class="text-gp">
+                                    <p>系統會透過郵件將重設密碼連結寄送給使用者？按下「確定」，即完成重設</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel2" data-dismiss="modal">取消</button>
+                            <button type="submit" name="go" id="go2">確認</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- modal 提示-->
+        <div class="modal fade modal-template " id="modal-notify2" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel2" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel2">系統通知</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <div class="text-gp">
+                                    <p>若帳號停用，您將無法申請與維護認可申請案件。按下「確定」，即完成停用申請？</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="go" id="go3">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- jquery UI -->
+    <script src="js/jquery-ui.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('book-header.html', function () {
+                // header 載入完成後，綁定事件
+                initMobileMenu();
+            });
+
+            $("#footer").load("book-footer.html");
+        });
+
+    </script>
+
+
+    <!-- jquery Autocomplete -->
+    <script>
+        $(document).ready(function () {
+            var publisherList = ["出版者A", "出版者B", "出版者C", "出版者D", "出版者E", "出版者F", "出版者G", "出版者H", "出版者I", "出版者J"];
+
+            $("#publisher").autocomplete({
+                source: publisherList,
+                minLength: 1, // 需輸入 1 個字才開始建議
+                autoFocus: true, // 自動選中第一個選項
+                select: function (event, ui) {
+                    // 選擇後填入輸入框
+                    $("#publisher").val(ui.item.value);
+                    return false;
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
