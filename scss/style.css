@@ -2034,7 +2034,7 @@ body .breadcrumb {
   background-color: transparent;
   padding: 0;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
 }
 @media (max-width: 1024px) {
   body .breadcrumb {

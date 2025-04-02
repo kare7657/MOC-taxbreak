@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
-    <title>瀏覽案件</title>
+    <title>補正案件</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
@@ -43,17 +43,20 @@
                     <li>></li>
                     <li><a href="book-case-manage.html" title="案件管理">案件管理</a>
                     <li>></li>
-                    <li><span>瀏覽案件</span></li>
+                    <li><span>補正案件</span></li>
                 </ul>
             </div>
         </div>
         <!-- 我要申請 -->
         <section class="content-signup">
-            <h2>瀏覽案件</h2>
+            <h2>補正案件</h2>
             <div class="step">
-                <div class="view-gp">
-                    <button type="button" class="button-outline"><i class="fas fa-print"></i>列印</button>
-                    <button type="button" class="button-outline"><i class="fas fa-file-export"></i>匯出</button>
+                <div class="btn-gp">
+                    <a href="book-case-corrective.html" class="btn-step">案件資料</a>
+                    <span>></span>
+                    <a href="book-case-corrective2.html" class="btn-step">補正資料</a>
+                    <span>></span>
+                    <a href="book-case-corrective3.html" class="btn-step active">預覽提交</a>
                 </div>
             </div>
             <div class="container">
@@ -61,10 +64,6 @@
                     <fieldset disabled class="fieldset-disabled">
                         <div class="type-title">
                             <legend>基本資料</legend>
-                        </div>
-                        <div class="form-gp">
-                            <label for="apply-year">申請日期</label>
-                            <input type="text" name="apply-year" id="apply-year" placeholder="2025/01/09">
                         </div>
                         <div class="form-gp choice-btn">
                             <div class="title">案件類別</div>
@@ -107,7 +106,7 @@
                         <div class="form-gp">
                             <label for="import-year">進口日期</label>
                             <input type="text" name="import-year" id="import-year" placeholder="2000年12月25日">
-                        </div> 
+                        </div>
                         <div class="form-gp">
                             <label for="import_country">進口國別</label>
                             <select class="select2" name="type" id="import_country" disabled>
@@ -122,7 +121,7 @@
                         </div>
 
                     </fieldset>
-                    <fieldset disabled class="mb-0 fieldset-disabled">
+                    <fieldset>
                         <div class="type-title">
                             <legend>附件資料</legend>
                         </div>
@@ -131,10 +130,18 @@
                             <a href="" download class="download-file" title="[下載]代申請證明⽂件.pdf"><i
                                     class="fas fa-paperclip"></i>檔案下載</a>
                         </div>
+                        <div class="form-gp">
+                            <label for="file">補充資料 <span class="remark">（請依補正說明上傳資料）</span></label>
+                            <a href="" download class="download-file" title="[下載]代申請證明⽂件.pdf"><i
+                                    class="fas fa-paperclip"></i>檔案下載</a>
+                        </div>
                     </fieldset>
                     <div class="btn-tool">
-                        <input type="button" value="回上一頁" class="outline" onclick="location.href='book-case-manage.html'">
-                        
+                        <input type="button" value="取消" class="outline">
+                        <input type="button" value="暫存" class="outline">
+                        <input type="button" value="上一步" class="outline"
+                            onclick="location.href='book-case-corrective2.html'">
+                        <input type="submit" value="確定提交補正">
                     </div>
                 </form>
             </div>

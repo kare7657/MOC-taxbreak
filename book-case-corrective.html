@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
-    <title>瀏覽案件</title>
+    <title>補正案件</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
@@ -43,17 +43,20 @@
                     <li>></li>
                     <li><a href="book-case-manage.html" title="案件管理">案件管理</a>
                     <li>></li>
-                    <li><span>瀏覽案件</span></li>
+                    <li><span>補正案件</span></li>
                 </ul>
             </div>
         </div>
         <!-- 我要申請 -->
         <section class="content-signup">
-            <h2>瀏覽案件</h2>
+            <h2>補正案件</h2>
             <div class="step">
-                <div class="view-gp">
-                    <button type="button" class="button-outline"><i class="fas fa-print"></i>列印</button>
-                    <button type="button" class="button-outline"><i class="fas fa-file-export"></i>匯出</button>
+                <div class="btn-gp">
+                    <a href="book-case-corrective.html" class="btn-step active">案件資料</a>
+                    <span>></span>
+                    <div class="btn-step">補正資料</div>
+                    <span>></span>
+                    <div class="btn-step">預覽提交</div>
                 </div>
             </div>
             <div class="container">
@@ -105,9 +108,13 @@
                             <input type="text" name="book_publisher" id="book_publisher" placeholder="皇冠文化出版有限公司">
                         </div>
                         <div class="form-gp">
+                            <label for="import-date">出版者</label>
+                            <input type="text" name="import-date" id="import-date" placeholder="2000年12月25日">
+                        </div>
+                        <div class="form-gp">
                             <label for="import-year">進口日期</label>
                             <input type="text" name="import-year" id="import-year" placeholder="2000年12月25日">
-                        </div> 
+                        </div>
                         <div class="form-gp">
                             <label for="import_country">進口國別</label>
                             <select class="select2" name="type" id="import_country" disabled>
@@ -122,7 +129,7 @@
                         </div>
 
                     </fieldset>
-                    <fieldset disabled class="mb-0 fieldset-disabled">
+                    <fieldset>
                         <div class="type-title">
                             <legend>附件資料</legend>
                         </div>
@@ -132,9 +139,42 @@
                                     class="fas fa-paperclip"></i>檔案下載</a>
                         </div>
                     </fieldset>
+                    <fieldset class="mb-0">
+                        <div class="type-title">
+                            <legend>補正內容</legend>
+                        </div>
+                        <div class="form-gp">
+                            <div class="title">
+                                補正說明
+                            </div>
+                            <p>刪除案件，可至【案件管理】-【請選擇案件狀態】-選擇【待補正】-點選【搜尋】-再點選【全選撤回】，即可撤回所有待補正案件，再選擇案件狀態為【尚未送出】點選【搜尋】後【全選刪除】，便可將案件刪除
+                            </p>
+                        </div>
+                        <div class="form-gp">
+                            <div class="title">
+                                補正期限
+                            </div>
+                            <p>2025/03/21</p>
+                        </div>
+                        <div class="form-gp">
+                            <div class="title">
+                                文化部承辦人聯絡資訊
+                            </div>
+                            <p>王心汝  :  booktax@moc.gov.tw</p>
+                        </div>
+                        <div class="form-gp choice">
+                            <div class="item">
+                                <input type="checkbox" value="" id="agree-content">
+                                <label for="agree-content">
+                                    我已完全閱讀並同意以上內容
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
                     <div class="btn-tool">
-                        <input type="button" value="回上一頁" class="outline" onclick="location.href='book-case-manage.html'">
-                        
+                        <input type="button" value="取消" class="outline">
+                        <input type="button" value="開始補正" onclick="location.href='book-case-corrective2.html'">
+
                     </div>
                 </form>
             </div>
