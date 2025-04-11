@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>申請中個人出版者-修正資料</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C">:::</a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    </li>
+                    <li><a href="index.html" title="首頁"><i class="fas fa-home"></i><span class="d-none">首頁</span></a>
+                    </li>
+                    <li>></li>
+                    <li><a href="tax-break.html" title="申請減免營業稅及娛樂稅">申請減免營業稅及娛樂稅</a>
+                    </li>
+                    <li>></li>
+                    <li><a href="book-login.html" title="圖書出版品類線上申請系統">圖書出版品類線上申請系統</a>
+                    <li>></li>
+                    <li><a href="book-member-unit.html" title="單位資料">單位資料</a>
+                    <li>></li>
+                    <li><span>修正資料</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 我要申請 -->
+        <section class="content-signup">
+            <h2>申請中個人出版者-修正資料</h2>
+            <div class="container">
+                <form class="view">
+                    <fieldset>
+                        <p class="acc-info"><i class="fas fa-exclamation-circle"></i>標註星號（<span
+                                class="notice">*</span>）表示此欄位必須填寫</p>
+                        <div class="type-title">
+                            <legend>基本資料</legend>
+                        </div>
+                        <div class="form-gp">
+                            <!-- jquery Autocomplete -->
+                            <label for="personal_publisher">個人出版者名稱</label>
+                            <input type="text" name="personal_publisher" id="personal_publisher" placeholder="某某某"
+                                disabled>
+                        </div>
+
+                        <div class="form-gp">
+                            <label for="personal_name">個人出版者本名<span class="notice">*</span> </label>
+                            <input type="text" name="personal_name" id="personal_name" placeholder="某某某">
+                        </div>
+                        <div class="form-gp">
+                            <label for="personal_ID">個人出版者身分證字號<span class="notice">*</span></label>
+                            <input type="text" name="personal_ID" id="personal_ID" placeholder="F000111222">
+                        </div>
+                        <div class="form-gp">
+                            <label for="personal_tel">個人出版者電話<span class="notice">*</span></label>
+                            <input type="number" name="personal_tel" id="personal_tel" placeholder="0900123456">
+                        </div>
+                        <div class="form-gp">
+                            <label for="personal_email">個人出版者Email<span class="remark notice"> (個人出版者已同意，無法更改
+                                    Email)</span></label>
+                            <input type="email" name="personal_email" id="personal_email" placeholder="sample@gmail.com"
+                                disabled>
+                        </div>
+
+                    </fieldset>
+                    <fieldset>
+                        <div class="type-title">
+                            <legend>附件資料</legend>
+                        </div>
+                        <div class="form-gp">
+                            <div class="label-withButton after-title">
+                                <label for="file">個人出版者委託書</label>
+                                <a href="" class="download-sample" download title="[下載]已上傳檔案.doc"><i
+                                        class="fas fa-paperclip"></i>下載已上傳檔案</a>
+                            </div>
+                            <div class="file-upload">
+                                <input type="button" id="file" value="檔案上傳">
+                                <span>文化藝術事業減免稅暨辦理展覽或拍賣分離課稅系統.pdf</span>
+                            </div>
+                            <ul class="ps">
+                                <li>請填寫並用印後將掃描檔上傳</li>
+                                <li>只接受指定格式 (pdf、png、jpg、jpeg、bmp)</li>
+                                <li>檔案請小於 20MB</li>
+                            </ul>
+                        </div>
+                    </fieldset>
+
+                    <div class="btn-tool">
+                        <input type="button" value="取消" class="outline" onclick="location.href='book-member-unit.html'">
+                        <input type="button" value="修正資料">
+
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- modal 條款-->
+        <div class="modal fade modal-template " id="modal-clause-taxBreak" tabindex="-1" role="dialog"
+            aria-labelledby="modal-clauseLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button> -->
+                            <h2 class="modal-title" id="modal-clauseLabel">線上申請同意條款</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="iframe-gp">
+                                <iframe src="book-clause-apply.html"></iframe>
+                                <div class="form-gp choice">
+                                    <div class="item">
+                                        <input type="checkbox" value="" id="private-agree2">
+                                        <label for="private-agree2">
+                                            我已完全閱讀並同意以上內容
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel4" data-dismiss="modal">下一步</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- modal 提示-本國-->
+        <div class="modal fade modal-template " id="modal-notify-domestic" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD3" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <p>若調整類型，目前填寫的資料將會被清除，請確定是否要繼續？</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel3" data-dismiss="modal">取消</button>
+                            <button type="button" name="go" id="go3"
+                                onclick="location.href='book-apply-domestic.html'">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- modal 提示-外國-->
+        <div class="modal fade modal-template " id="modal-notify-import" tabindex="-1" role="dialog"
+            aria-labelledby="modal-notifyLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD4" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-notifyLabel2">系統通知</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="notify-gp">
+                                <p>若調整類型，目前填寫的資料將會被清除，請確定是否要繼續？</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel5" data-dismiss="modal">取消</button>
+                            <button type="button" name="go" id="go5"
+                                onclick="location.href='book-apply-import.html'">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- jquery UI -->
+    <script src="js/jquery-ui.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('book-header.html', function () {
+                // header 載入完成後，綁定事件
+                initMobileMenu();
+            });
+
+            $("#footer").load("book-footer.html");
+        });
+
+    </script>
+
+    <!-- jquery Autocomplete -->
+    <script>
+        $(document).ready(function () {
+            var publisherList = ["個人出版者A", "個人出版者B", "個人出版者C", "個人出版者D", "個人出版者E", "個人出版者F", "個人出版者G", "個人出版者H", "個人出版者I", "個人出版者J"];
+
+            $("#personal_publisher").autocomplete({
+                source: publisherList,
+                minLength: 1, // 需輸入 1 個字才開始建議
+                autoFocus: true, // 自動選中第一個選項
+                select: function (event, ui) {
+                    // 選擇後填入輸入框
+                    $("#personal_publisher").val(ui.item.value);
+                    return false;
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
