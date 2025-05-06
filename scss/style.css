@@ -52,7 +52,8 @@
 * h2:not(:first-of-type) {
   margin-top: 20px;
 }
-* h3, * legend {
+* h3,
+* legend {
   font-size: 1.625rem;
   color: #88670c;
   padding: 0;
@@ -4770,8 +4771,9 @@ body main .content-signup form h3 {
 body main .content-signup form .type-title {
   margin-bottom: 36px;
 }
-body main .content-signup form .type-title h3,
+body main .content-signup form .type-title h2, body main .content-signup form .type-title h3,
 body main .content-signup form .type-title legend {
+  text-align: left;
   padding: 8px 16px;
   padding-left: 0;
   padding-top: 16px;
@@ -5176,6 +5178,52 @@ body main .content-signup.book .card .btn-gp .button {
     width: 100%;
     margin-left: 0;
   }
+}
+@media (max-width: 568px) {
+  body main .content-signup.print h1 {
+    padding-top: 24px;
+    padding-bottom: 8px;
+  }
+}
+body main .content-signup.print .form-gp {
+  border-bottom: solid 1px #dcdddd;
+}
+body main .content-signup.print .form-gp:last-of-type {
+  border-bottom: none;
+}
+body main .content-signup.print .form-gp input,
+body main .content-signup.print .form-gp select,
+body main .content-signup.print .form-gp textarea,
+body main .content-signup.print .form-gp .select2-selection,
+body main .content-signup.print .form-gp .select2-selection__rendered {
+  border: none;
+  background-color: white !important;
+  padding-left: 0;
+  background: initial;
+}
+body main .content-signup.print .form-gp p {
+  padding: 0;
+  height: 40px;
+  line-height: 40px;
+}
+body main .content-signup.print .form-gp .file-list {
+  padding-left: 0;
+  margin-bottom: 12px;
+}
+body main .content-signup.print .form-gp .file-list li {
+  list-style: none;
+}
+body main .content-signup.print .form-gp .download-file {
+  font-size: 1rem;
+  padding: 0;
+  height: 40px;
+  line-height: 40px;
+  text-align: left;
+  color: #88670c;
+}
+body main .content-signup.print .form-gp .download-file i {
+  margin-right: 8px;
+  font-size: 1rem;
 }
 body main .content-sign-up-success .container {
   height: inherit;

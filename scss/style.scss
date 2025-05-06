@@ -1047,8 +1047,9 @@ body {
                 }
                 .type-title {
                     margin-bottom: $m-M;
-                    h3,
+                    h2,h3,
                     legend {
+                        text-align: left;
                         padding: $p-XXS $p-XS;
                         padding-left: 0;
                         padding-top: $p-XS;
@@ -1429,6 +1430,54 @@ body {
                                 width: 100%;
                                 margin-left: 0;
                             }
+                        }
+                    }
+                }
+            }
+            &.print {
+                h1{
+                    @include mobile-L{
+                        padding-top: $p-S;
+                        padding-bottom: $p-XXS;
+                    }
+                }
+                .form-gp {
+                    border-bottom: solid 1px $bk-20;
+                    &:last-of-type{
+                        border-bottom: none;
+                    }
+                    input,
+                    select,
+                    textarea,
+                    .select2-selection,
+                    .select2-selection__rendered {
+                        border: none;
+                        background-color: white !important;
+                        padding-left: 0;
+                        background: initial;
+                    }
+                    p {
+                        padding: 0;
+                        height: 40px;
+                        line-height: 40px;
+                    }
+                    .file-list{
+                        padding-left: 0;
+                        margin-bottom: $m-XS;
+                        li{
+                            list-style: none;
+                        }
+                    }
+                    .download-file {
+                        font-size: $size-p;
+                        padding: 0;
+                        height: 40px;
+                        line-height: 40px;
+                        text-align: left;
+                        color: $primary-default;
+                        i {
+                            margin-right: $p-XXS;
+                            font-size: $size-p;
                         }
                     }
                 }

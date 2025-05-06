@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>列印案件</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- select2 -->
+    <link rel="stylesheet" href="scss/select2.min.css" />
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+
+    <main class="nomenu fixpt">
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C">:::</a>
+        <!-- 我要申請 -->
+        <section class="content-signup print">
+            <h1 class="text-center">列印案件</h1>
+            <div class="container">
+                <form class="view">
+                    <fieldset disabled class="fieldset-disabled">
+                        <div class="type-title">
+                            <legend>基本資料</legend>
+                        </div>
+                        <div class="form-gp">
+                            <label for="apply-year">申請日期</label>
+                            <input type="text" name="apply-year" id="apply-year" placeholder="2025/01/09">
+                        </div>
+                        <div class="form-gp choice-btn">
+                            <div class="title">案件類別</div>
+                            <p>本國</p>
+                        </div>
+                        <div class="form-gp">
+                            <label for="book_type">書籍類型</label>
+                            <select name="type" id="book_type">
+                                <option value="list1">實體</option>
+                                <option value="list2">電子</option>
+                            </select>
+                        </div>
+                        <div class="form-gp">
+                            <label for="book_ISBN">書號</label>
+                            <input type="text" name="book_ISBN" id="book_ISBN" placeholder="9573317583">
+                        </div>
+                        <div class="form-gp">
+                            <label for="book_name">書名</label>
+                            <input type="text" name="book_name" id="book_name" placeholder="哈利波特（2）：消失的密室">
+                        </div>
+                        <div class="form-gp">
+                            <label for="book_author">作者</label>
+                            <input type="text" name="book_author" id="book_author" placeholder="J．K．羅琳">
+                        </div>
+                        <div class="form-gp">
+                            <label for="book_publisher">出版者</label>
+                            <input type="text" name="book_publisher" id="book_publisher" placeholder="皇冠文化出版有限公司">
+                        </div>
+                        <div class="form-gp">
+                            <label for="import-year">進口日期</label>
+                            <input type="text" name="import-year" id="import-year" placeholder="2000年12月25日">
+                        </div>
+                        <div class="form-gp">
+                            <label for="import_country">進口國別</label>
+                            <select class="select2" name="type" id="import_country" disabled>
+                                <option value="list1">英國</option>
+                                <option value="list2">選單2</option>
+                                <option value="list3">選單3</option>
+                            </select>
+                        </div>
+                        <div class="form-gp">
+                            <label for="declaration_num">報單號碼</label>
+                            <input type="text" name="declaration_num" id="declaration_num" placeholder="無">
+                        </div>
+                        <div class="form-gp">
+                            <label for="unit_registeredAddress_area4">申請單位立案地址</label>
+                            <p>臺北市114內湖區內湖路A段B巷C號1F</p>
+                        </div>
+
+                    </fieldset>
+                    <fieldset disabled class="mb-0 fieldset-disabled">
+                        <div class="type-title">
+                            <legend>附件資料</legend>
+                        </div>
+                        <div class="form-gp">
+                            <label for="file">多個附檔 <span class="remark"></span></label>
+                            <ul class="file-list">
+                                <li class="download-file"><i class="fas fa-paperclip"></i>檔案名稱檔案名稱檔案名稱.pdf</li>
+                                <li class="download-file"><i class="fas fa-paperclip"></i>檔案名稱檔案名稱檔案名稱.pdf</li>
+                                <li class="download-file"><i class="fas fa-paperclip"></i>檔案名稱檔案名稱檔案名稱.pdf</li>
+                            </ul>
+                        </div>
+                        <div class="form-gp">
+                            <label for="file">進口證明文件 <span class="remark">（如進口報單、訂購紀錄、授權經銷證明等，擇一即可）</span></label>
+                            <ul class="file-list">
+                                <li class="download-file"><i class="fas fa-paperclip"></i>檔案名稱檔案名稱檔案名稱.pdf</li>
+                            </ul>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- select2 -->
+    <script src="js/select2.full.min.js"></script>
+
+
+    <!-- select2 -->
+    <script>
+        $(function () {
+            //Initialize Elements
+            $('.select2').select2()
+
+        })
+    </script>
+
+
+</body>
+
+</html>
