@@ -186,6 +186,18 @@
             color: white;
         }
     }
+    // 讓內容對視覺使用者隱藏、但螢幕閱讀器仍可讀
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
     .clearfix {
         clear: both;
     }

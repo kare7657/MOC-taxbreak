@@ -68,7 +68,7 @@ body {
         i {
             margin-right: $p-XXS;
         }
-    }
+    }    
     main {
         display: flex;
         flex-wrap: wrap;
@@ -1045,17 +1045,45 @@ body {
                     margin-top: $m-XS;
                     margin-bottom: $m-S;
                 }
+                .checkbox-title {
+                    display: flex;
+                    align-items: center;
+                    padding: $p-XXS $p-XS;
+                    padding-left: 0;
+                    padding-top: $p-XS;
+                    margin-top: $m-2L;
+                    &:first-of-type {
+                        margin: 0;
+                    }
+                    label {
+                        text-align: left;
+                        margin: 0;
+
+                        margin-top: 0;
+                        font-size: $size-h3;
+                        color: $primary-default;
+                        .info {
+                            font-size: $size-h5;
+                            padding-left: $p-XXS;
+                        }
+                    }
+                }
                 .type-title {
                     margin-bottom: $m-M;
-                    h2,h3,
-                    legend {
+                    color: $primary-default;
+                    border-bottom: solid 3px rgba($color: $primary-bg, $alpha: 0.5);
+                    h2,
+                    h3,
+                    legend,
+                    label {
                         text-align: left;
                         padding: $p-XXS $p-XS;
                         padding-left: 0;
                         padding-top: $p-XS;
-                        color: $primary-default;
-                        border-bottom: solid 3px rgba($color: $primary-bg, $alpha: 0.5);
+                        padding-bottom: $m-XXS;
                         margin-top: 0;
+                        font-size: $size-h3;
+                        color: $primary-default;
                     }
                 }
 
@@ -1435,15 +1463,15 @@ body {
                 }
             }
             &.print {
-                h1{
-                    @include mobile-L{
+                h1 {
+                    @include mobile-L {
                         padding-top: $p-S;
                         padding-bottom: $p-XXS;
                     }
                 }
                 .form-gp {
                     border-bottom: solid 1px $bk-20;
-                    &:last-of-type{
+                    &:last-of-type {
                         border-bottom: none;
                     }
                     input,
@@ -1461,10 +1489,10 @@ body {
                         height: 40px;
                         line-height: 40px;
                     }
-                    .file-list{
+                    .file-list {
                         padding-left: 0;
                         margin-bottom: $m-XS;
-                        li{
+                        li {
                             list-style: none;
                         }
                     }
