@@ -68,7 +68,7 @@ body {
         i {
             margin-right: $p-XXS;
         }
-    }    
+    }
     main {
         display: flex;
         flex-wrap: wrap;
@@ -1010,6 +1010,21 @@ body {
             }
             form {
                 background-color: unset;
+                .inventory-upload {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: start;
+                    @include pad {
+                        flex-wrap: wrap;
+                        margin-bottom: $m-S;
+                    }
+                    .form-gp {
+                        width: 48%;
+                        @include pad {
+                            width: 100%;
+                        }
+                    }
+                }
                 .top-btn-gp {
                     margin-bottom: $m-XS;
                     display: flex;

@@ -25,7 +25,8 @@
         <div class="breadcrumb">
             <div class="container">
                 <ul>
-                    <li><a href="index.html" title="首頁"><i class="fas fa-home"></i><span class="d-none">首頁</span></a></li>
+                    <li><a href="index.html" title="首頁"><i class="fas fa-home"></i><span class="d-none">首頁</span></a>
+                    </li>
                     <li>></li>
                     <li><a href="separate-taxation.html">申請分離課稅</a></li>
                     <li>></li>
@@ -53,18 +54,34 @@
                         <div class="type-title">
                             <h3>清冊資料</h3>
                         </div>
-                        <div class="form-gp">
-                            <div class="file-upload">
-                                <input type="button" id="file" value="批次上傳展品圖片"  data-toggle="modal"
-                                data-target="#modal-batch-upload">
-                                <span>照片.zip</span>
+                        <div class="inventory-upload">
+                            <div class="form-gp">
+                                <div class="file-upload">
+                                    <input type="button" id="file" value="批次上傳拍品圖片" data-toggle="modal"
+                                        data-target="#modal-batch-upload">
+                                    <span>照片.zip</span>
+                                </div>
+                                <ul class="ps">
+                                    <li>只接受壓縮檔格式（ZIP）批次上傳</li>
+                                    <li>拍品圖片檔案命名須與拍品序號一致</li>
+                                    <li>拍品序號需不能重覆，以免檔案覆蓋</li>
+                                    <li>拍品圖片只接受指定格式（png、jpg、jpeg），每個圖片檔案請小於 6MB</li>
+                                </ul>
                             </div>
-                            <ul class="ps">
-                                <li>只接受壓縮檔格式（ZIP）批次上傳</li>
-                                <li>展品圖片檔案命名須與展品序號一致</li>
-                                <li>展品序號需不能重覆，以免檔案覆蓋</li>
-                                <li>展品圖片只接受指定格式（png、jpg、jpeg），每個圖片檔案請小於 6MB</li>
-                            </ul>
+                            <div class="form-gp">
+                                <div class="file-upload">
+                                    <input type="button" id="file" value="批次上傳佐證資料" data-toggle="modal"
+                                        data-target="#modal-batch-upload2">
+                                    <span>照片.zip</span>
+                                </div>
+                                <ul class="ps">
+                                    <li>無作者之作品，均應提供佐證資料供審核，如第三方鑑定文件、近年交易或拍賣紀錄或其他說明資料等</li>
+                                    <li>只接受壓縮檔格式(ZIP)上傳，壓縮檔請小於100MB</li>
+                                    <li>佐證資料檔案命名須與作品序號一致(假設序號1作品有1件佐證資料，檔名為1.doc;序號2作品有3件佐證資料，檔名分別為2-1.doc、2-2.jpg、2-3.pdf，依此類推)
+                                    </li>
+                                    <li>佐證資料檔名需不能重複，以免檔案覆蓋</li>
+                                </ul>
+                            </div>
                         </div>
                         <table class="table-default mb-separate  list-data">
                             <thead>
@@ -188,6 +205,34 @@
             </form>
         </div>
 
+         <!-- modal 批次上傳2-->
+        <div class="modal fade modal-template " id="modal-batch-upload2" tabindex="-1" role="dialog"
+            aria-labelledby="modal-batch-uploadLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-batch-uploadLabel">批次上傳檔案</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-gp">
+                                <input type="file" multiple>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+                            <button type="submit" name="go" id="go2">確認</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
 
         <!-- modal 上傳-->
         <div class="modal fade modal-template " id="modal-upload" tabindex="-1" role="dialog"
@@ -232,104 +277,102 @@
                         </div>
                         <div class="modal-body">
 
-                                <div class="form-gp">
-                                    <label for="art_number">序號<span class="notice">*</span></label>
-                                    <input type="text" name="art_number" id="art_number" placeholder="1234" disabled>
-                                </div>
-                                <div class="form-gp">
-                                    <label for="art_type">作品類型<span class="notice">*</span></label>
-                                    <select name="type" id="art_type">
-                                        <option value="list1">文物</option>
-                                        <option value="list2">畫作</option>
-                                        <option value="list3">版畫</option>
-                                        <option value="list3">雕塑</option>
-                                        <option value="list3">數位微噴版畫</option>
-                                        <option value="list3">陶瓷</option>
-                                        <option value="list3">字畫</option>
-                                        <option value="list3">瓷器</option>
-                                        <option value="list3">玉器</option>
-                                        <option value="list3">其他</option>
-                                    </select>
-                                </div>
-                                <div class="form-gp">
-                                    <label for="art_name">作品名稱<span class="notice">*</span></label>
-                                    <input type="text" name="art_name" id="art_name" placeholder="請填寫作品名稱">
-                                </div>
-                                <div class="form-gp">
-                                    <label for="art_author">作者<span class="notice">*</span></label>
-                                    <input type="text" name="art_author" id="art_author" placeholder="請填寫作者姓名">
-                                </div>
-                                <div class="form-gp">
-                                    <label for="art_size">作者尺寸<span class="notice">*</span></label>
-                                    <input type="text" name="art_size" id="art_size" placeholder="請填寫作品尺寸">
-                                </div>
-                                <div class="form-gp">
-                                    <label for="art_media">作品媒材<span class="notice">*</span></label>
-                                    <input type="text" name="art_media" id="art_media" placeholder="請填寫作品媒材">
-                                </div>
-                                <div class="form-gp">
-                                    <label for="art_year">年代<span class="notice">*</span></label>
-                                    <input type="text" name="art_year" id="art_year" placeholder="請填寫切確年份或區間">
-                                </div>
-                                <div class="form-gp">
-                                    <label for="art_appraise">預估價<span class="notice">*</span></label>
-                                    <input type="number" name="art_appraise" id="art_appraise" placeholder="請填寫預估價">
-                                </div>
-                                <div class="form-gp choice-btn">
-                                    <h5>是否申請分離課稅<span class="notice">*</span></h5>
-                                    <div class="modal-choice-gp">
-                                        <div class="item">
-                                            <input type="radio" name="state" value="" id="yorn">
-                                            <label for="yorn">
-                                                是
-                                            </label>
-                                        </div>
-                                        <div class="item">
-                                            <input type="radio" name="state" value="" id="yorn2" checked>
-                                            <label for="yorn2">
-                                                否
-                                            </label>
-                                        </div>
+                            <div class="form-gp">
+                                <label for="art_number">序號<span class="notice">*</span></label>
+                                <input type="text" name="art_number" id="art_number" placeholder="1234" disabled>
+                            </div>
+                            <div class="form-gp">
+                                <label for="art_type">作品類型<span class="notice">*</span></label>
+                                <select name="type" id="art_type">
+                                    <option value="list1">文物</option>
+                                    <option value="list2">畫作</option>
+                                    <option value="list3">版畫</option>
+                                    <option value="list3">雕塑</option>
+                                    <option value="list3">數位微噴版畫</option>
+                                    <option value="list3">陶瓷</option>
+                                    <option value="list3">字畫</option>
+                                    <option value="list3">瓷器</option>
+                                    <option value="list3">玉器</option>
+                                    <option value="list3">其他</option>
+                                </select>
+                            </div>
+                            <div class="form-gp">
+                                <label for="art_name">作品名稱<span class="notice">*</span></label>
+                                <input type="text" name="art_name" id="art_name" placeholder="請填寫作品名稱">
+                            </div>
+                            <div class="form-gp">
+                                <label for="art_author">作者<span class="notice">*</span></label>
+                                <input type="text" name="art_author" id="art_author" placeholder="請填寫作者姓名">
+                            </div>
+                            <div class="form-gp">
+                                <label for="art_size">作者尺寸<span class="notice">*</span></label>
+                                <input type="text" name="art_size" id="art_size" placeholder="請填寫作品尺寸">
+                            </div>
+                            <div class="form-gp">
+                                <label for="art_media">作品媒材<span class="notice">*</span></label>
+                                <input type="text" name="art_media" id="art_media" placeholder="請填寫作品媒材">
+                            </div>
+                            <div class="form-gp">
+                                <label for="art_year">年代<span class="notice">*</span></label>
+                                <input type="text" name="art_year" id="art_year" placeholder="請填寫切確年份或區間">
+                            </div>
+                            <div class="form-gp">
+                                <label for="art_appraise">預估價<span class="notice">*</span></label>
+                                <input type="number" name="art_appraise" id="art_appraise" placeholder="請填寫預估價">
+                            </div>
+                            <div class="form-gp choice-btn">
+                                <h5>是否申請分離課稅<span class="notice">*</span></h5>
+                                <div class="modal-choice-gp">
+                                    <div class="item">
+                                        <input type="radio" name="state" value="" id="yorn">
+                                        <label for="yorn">
+                                            是
+                                        </label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="state" value="" id="yorn2" checked>
+                                        <label for="yorn2">
+                                            否
+                                        </label>
                                     </div>
                                 </div>
-                                <div class="form-gp">
-                                    <label for="art_file">佐證資料<span class="notice">*</span></label>
-                                    <div class="file-upload">
-                                        <input type="file" id="art_file" multiple>
-                                        <!-- <input type="button" id="file" value="檔案上傳">
+                            </div>
+                            <div class="form-gp">
+                                <label for="art_file">佐證資料<span class="notice">*</span></label>
+                                <div class="file-upload">
+                                    <input type="file" id="art_file" multiple>
+                                    <!-- <input type="button" id="file" value="檔案上傳">
                                         <span>3個檔案</span> -->
-                                        <ul class="ps">
-                                            <li>如：作品保證書、簽名字樣、版次說明等</li>
-                                            <li>只接受指定格式（pdf、png、jpg、jpeg、bmp）</li>
-                                            <li>檔案請小於 20 MB</li>
-                                        </ul>
-                                        <div class="finished-file-list">
-                                            <div class="file-gp">
-                                                <p class="file-name"><i class="fas fa-paperclip"></i>作品保證書.pdf </p>
-                                                <button type="button" class="icon-btn"><i
-                                                        class="fas fa-times"></i></button>
-                                            </div>
-                                            <div class="file-gp">
-                                                <p class="file-name"><i class="fas fa-paperclip"></i>簽名字樣.jpg</p>
-                                                <button type="button" class="icon-btn"><i
-                                                        class="fas fa-times"></i></button>
-                                            </div>
-                                            <div class="file-gp">
-                                                <p class="file-name"><i
-                                                        class="fas fa-paperclip"></i>版次說明版次說明版次說明版次說明版次說明版次說明版次說明版次說明.png
-                                                </p> <button type="button" class="icon-btn"><i
-                                                        class="fas fa-times"></i></button>
-                                            </div>
+                                    <ul class="ps">
+                                        <li>如：作品保證書、簽名字樣、版次說明等</li>
+                                        <li>只接受指定格式（pdf、png、jpg、jpeg、bmp）</li>
+                                        <li>檔案請小於 20 MB</li>
+                                    </ul>
+                                    <div class="finished-file-list">
+                                        <div class="file-gp">
+                                            <p class="file-name"><i class="fas fa-paperclip"></i>作品保證書.pdf </p>
+                                            <button type="button" class="icon-btn"><i class="fas fa-times"></i></button>
                                         </div>
-
-
+                                        <div class="file-gp">
+                                            <p class="file-name"><i class="fas fa-paperclip"></i>簽名字樣.jpg</p>
+                                            <button type="button" class="icon-btn"><i class="fas fa-times"></i></button>
+                                        </div>
+                                        <div class="file-gp">
+                                            <p class="file-name"><i
+                                                    class="fas fa-paperclip"></i>版次說明版次說明版次說明版次說明版次說明版次說明版次說明版次說明.png
+                                            </p> <button type="button" class="icon-btn"><i
+                                                    class="fas fa-times"></i></button>
+                                        </div>
                                     </div>
+
+
                                 </div>
-                                <div class="form-gp">
-                                    <label for="exhibition_record">備註</label>
-                                    <textarea name="exhibition_record" id="exhibition_record" rows="3"
-                                        placeholder="如：作品來源、款識/鈐印、展覽、圖錄、版次別/總版次等"></textarea>
-                                </div>
+                            </div>
+                            <div class="form-gp">
+                                <label for="exhibition_record">備註</label>
+                                <textarea name="exhibition_record" id="exhibition_record" rows="3"
+                                    placeholder="如：作品來源、款識/鈐印、展覽、圖錄、版次別/總版次等"></textarea>
+                            </div>
 
                         </div>
                         <div class="modal-footer">

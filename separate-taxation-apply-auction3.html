@@ -25,7 +25,8 @@
         <div class="breadcrumb">
             <div class="container">
                 <ul>
-                    <li><a href="index.html" title="首頁"><i class="fas fa-home"></i><span class="d-none">首頁</span></a></li>
+                    <li><a href="index.html" title="首頁"><i class="fas fa-home"></i><span class="d-none">首頁</span></a>
+                    </li>
                     <li>></li>
                     <li><a href="separate-taxation.html">申請分離課稅</a></li>
                     <li>></li>
@@ -53,18 +54,34 @@
                         <div class="type-title">
                             <h3>清冊資料</h3>
                         </div>
-                        <div class="form-gp">
-                            <div class="file-upload">
-                                <input type="button" id="file" value="批次上傳拍品圖片" data-toggle="modal"
-                                    data-target="#modal-batch-upload">
-                                <span>照片.zip</span>
+                        <div class="inventory-upload">
+                            <div class="form-gp">
+                                <div class="file-upload">
+                                    <input type="button" id="file" value="批次上傳拍品圖片" data-toggle="modal"
+                                        data-target="#modal-batch-upload">
+                                    <span>照片.zip</span>
+                                </div>
+                                <ul class="ps">
+                                    <li>只接受壓縮檔格式（ZIP）批次上傳</li>
+                                    <li>拍品圖片檔案命名須與拍品序號一致</li>
+                                    <li>拍品序號需不能重覆，以免檔案覆蓋</li>
+                                    <li>拍品圖片只接受指定格式（png、jpg、jpeg），每個圖片檔案請小於 6MB</li>
+                                </ul>
                             </div>
-                            <ul class="ps">
-                                <li>只接受壓縮檔格式（ZIP）批次上傳</li>
-                                <li>拍品圖片檔案命名須與拍品序號一致</li>
-                                <li>拍品序號需不能重覆，以免檔案覆蓋</li>
-                                <li>拍品圖片只接受指定格式（png、jpg、jpeg），每個圖片檔案請小於 6MB</li>
-                            </ul>
+                            <div class="form-gp">
+                                <div class="file-upload">
+                                    <input type="button" id="file" value="批次上傳佐證資料" data-toggle="modal"
+                                        data-target="#modal-batch-upload2">
+                                    <span>照片.zip</span>
+                                </div>
+                                <ul class="ps">
+                                    <li>無作者之作品，均應提供佐證資料供審核，如第三方鑑定文件、近年交易或拍賣紀錄或其他說明資料等</li>
+                                    <li>只接受壓縮檔格式(ZIP)上傳，壓縮檔請小於100MB</li>
+                                    <li>佐證資料檔案命名須與作品序號一致(假設序號1作品有1件佐證資料，檔名為1.doc;序號2作品有3件佐證資料，檔名分別為2-1.doc、2-2.jpg、2-3.pdf，依此類推)
+                                    </li>
+                                    <li>佐證資料檔名需不能重複，以免檔案覆蓋</li>
+                                </ul>
+                            </div>
                         </div>
                         <table class="table-default mb-separate list-data">
                             <thead>
@@ -189,6 +206,33 @@
             </form>
         </div>
 
+        <!-- modal 批次上傳2-->
+        <div class="modal fade modal-template " id="modal-batch-upload2" tabindex="-1" role="dialog"
+            aria-labelledby="modal-batch-uploadLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form class="form" name="fm_ChangPWD" id="fm_ChangPWD2" method="post" action="ChangPWD.jsp"
+                target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modal-batch-uploadLabel">批次上傳檔案</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-gp">
+                                <input type="file" multiple>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+                            <button type="submit" name="go" id="go2">確認</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
 
         <!-- modal 上傳-->
         <div class="modal fade modal-template " id="modal-upload" tabindex="-1" role="dialog"

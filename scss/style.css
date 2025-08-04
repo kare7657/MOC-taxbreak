@@ -4744,6 +4744,25 @@ body main .content-signup .step .container {
 body main .content-signup form {
   background-color: unset;
 }
+body main .content-signup form .inventory-upload {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  body main .content-signup form .inventory-upload {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+}
+body main .content-signup form .inventory-upload .form-gp {
+  width: 48%;
+}
+@media (max-width: 768px) {
+  body main .content-signup form .inventory-upload .form-gp {
+    width: 100%;
+  }
+}
 body main .content-signup form .top-btn-gp {
   margin-bottom: 12px;
   display: flex;
