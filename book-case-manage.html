@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="scss/timepicker.css" />
     <!-- select2 -->
     <link rel="stylesheet" href="scss/select2.min.css" />
+    <!-- google字型 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
     <!-- our css -->
     <link rel="stylesheet" href="scss/style.css">
 
@@ -155,7 +159,8 @@
                     <p class="totalnum">總共 10 筆案件</p>
                     <div class="list-btn-gp">
                         <div class="left">
-                            <button type="button" class="button-outline"><i
+                            <!-- 鏤空按鈕 -->
+                            <!-- <button type="button" class="button-outline"><i
                                     class="fas fa-share-square"></i>批次提交</button>
                             <button type="button" class="button-outline"><i
                                     class="fas fa-share-square"></i>全部提交</button>
@@ -164,30 +169,46 @@
                             <button type="button" class="button-outline brown"><i
                                     class="fas fa-trash-alt"></i>全選刪除</button>
                             <button type="button" class="button-outline red"><i class="fas fa-ban"></i>批次撤回</button>
-                            <button type="button" class="button-outline red"><i class="fas fa-ban"></i>全選撤回</button>
+                            <button type="button" class="button-outline red"><i class="fas fa-ban"></i>全選撤回</button> -->
+
+                            <!-- 有底色按鈕 -->
+                            <button type="button" class="button default"><i
+                                    class="fas fa-share-square"></i>批次提交</button>
+                            <button type="button" class="button darkBlue"><i
+                                    class="fas fa-share-square"></i>全部提交</button>
+                            <button type="button" class="button purple"><i class="fas fa-trash-alt"></i>批次刪除</button>
+                            <button type="button" class="button red"><i class="fas fa-trash-alt"></i>全選刪除</button>
+                            <button type="button" class="button blue"><i class="fas fa-ban"></i>批次撤回</button>
+                            <button type="button" class="button brown"><i class="fas fa-ban"></i>全選撤回</button>
 
                         </div>
                         <div class="right">
-                            <button type="button" class="button-outline green"><i class="fas fa-file-export"></i>匯出
+                            <!-- 鏤空按鈕 -->
+                            <!-- <button type="button" class="button-outline green"><i class="fas fa-file-export"></i>匯出
+                                Excel</button> -->
+                            <!-- 有底色按鈕 -->
+                            <button type="button" class="button green"><i class="fas fa-file-export"></i>匯出
                                 Excel</button>
                         </div>
                     </div>
                     <table class="table-default  mb-separate ellipsis-table">
                         <thead>
                             <tr>
-                                <th style="width: 5%;">全選</th>
-                                <th style="width: 5%;">項次</th>
-                                <th style="width: 7%;">案件類別</th>
-                                <th style="width: 7%;">書籍類型</th>
-                                <th style="width: 7%;">書號</th>
-                                <th style="width: 9%;">書名</th>
-                                <th style="width: 4%;">冊次</th>
-                                <th style="width: 8%;">作者</th>
-                                <th style="width: 8%;">出版者</th>
-                                <th style="width: 10%;">出版/進口日期</th>
-                                <th style="width: 10%;">認可日期</th>
-                                <th style="width: 9%;">案件狀態</th>
-                                <th style="width: 11%;" class="th-function">功能</th>
+                                <th style="width: 5%;" class="caption">
+                                    <a href="" class="check-all" title="全選案件">全選</a>
+                                </th>
+                                <th style="width: 5%;" class="caption">項次</th>
+                                <th style="width: 7%;" class="caption">案件類別</th>
+                                <th style="width: 7%;" class="caption">書籍類型</th>
+                                <th style="width: 12%;" class="caption">書號</th>
+                                <th style="width: 8%;" class="caption">書名</th>
+                                <th style="width: 5%;" class="caption">冊次</th>
+                                <th style="width: 7%;" class="caption">作者</th>
+                                <th style="width: 8%;" class="caption">出版者</th>
+                                <th style="width: 10%;" class="caption">出版/進口日期</th>
+                                <th style="width: 8%;" class="caption">認可日期</th>
+                                <th style="width: 8%;" class="caption">案件狀態</th>
+                                <th style="width: 10%;" class="caption th-function">功能</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -211,8 +232,8 @@
                                 <td data-title="冊次"></td>
                                 <td data-title="作者">劉潤</td>
                                 <td data-title="出版者">時報文化出版企業股份有限公司</td>
-                                <td data-title="出版/進口日期">2022年 3月 29日</td>
-                                <td data-title="認可日期"></td>
+                                <td data-title="出版/進口日期">2022/3/29</td>
+                                <td data-title="認可日期">2022/3/29</td>
                                 <td data-title="案件狀態">尚未送出</td>
                                 <td data-title="功能" class="text-left">
                                     <div class="function">
@@ -220,9 +241,11 @@
                                             <span>瀏覽</span></a>
                                         <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
-                                        <a href="" class="link" title="確定不申請" data-toggle="modal" data-target="#modal-notify-dontApply"><i class="fas fa-times"></i>
+                                        <a href="" class="link" title="確定不申請" data-toggle="modal"
+                                            data-target="#modal-notify-dontApply"><i class="fas fa-times"></i>
                                             <span>確定不申請</span></a>
-                                        <a href="" class="link notice" title="刪除" data-toggle="modal" data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
+                                        <a href="" class="link notice" title="刪除" data-toggle="modal"
+                                            data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
 
                                     </div>
@@ -258,7 +281,8 @@
                                         <a href="book-case-corrective.html" class="link" title="編輯"><i
                                                 class="fas fa-file-alt"></i>
                                             <span>補正</span></a>
-                                        <a href="" class="link notice" title="撤回" data-toggle="modal" data-target="#modal-notify-cancel"><i class="fas fa-ban"></i>
+                                        <a href="" class="link notice" title="撤回" data-toggle="modal"
+                                            data-target="#modal-notify-cancel"><i class="fas fa-ban"></i>
                                             <span>撤回</span></a>
 
                                     </div>
@@ -291,7 +315,8 @@
                                     <div class="function">
                                         <a href="book-case-view.html" class="link" title="瀏覽"><i class="fas fa-eye"></i>
                                             <span>瀏覽</span></a>
-                                        <a href="" class="link notice" title="撤回" data-toggle="modal" data-target="#modal-notify-cancel"><i class="fas fa-ban"></i>
+                                        <a href="" class="link notice" title="撤回" data-toggle="modal"
+                                            data-target="#modal-notify-cancel"><i class="fas fa-ban"></i>
                                             <span>撤回</span></a>
 
                                     </div>
@@ -326,7 +351,8 @@
                                             <span>瀏覽</span></a>
                                         <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
-                                        <a href="" class="link notice" title="刪除" data-toggle="modal" data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
+                                        <a href="" class="link notice" title="刪除" data-toggle="modal"
+                                            data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
 
                                     </div>
@@ -361,7 +387,8 @@
                                             <span>瀏覽</span></a>
                                         <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
-                                        <a href="" class="link notice" title="刪除" data-toggle="modal" data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
+                                        <a href="" class="link notice" title="刪除" data-toggle="modal"
+                                            data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
 
                                     </div>
@@ -396,7 +423,8 @@
                                             <span>瀏覽</span></a>
                                         <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
-                                        <a href="" class="link notice" title="刪除" data-toggle="modal" data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
+                                        <a href="" class="link notice" title="刪除" data-toggle="modal"
+                                            data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
 
                                     </div>
@@ -431,7 +459,8 @@
                                             <span>瀏覽</span></a>
                                         <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
-                                        <a href="" class="link notice" title="刪除" data-toggle="modal" data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
+                                        <a href="" class="link notice" title="刪除" data-toggle="modal"
+                                            data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
 
                                     </div>
@@ -466,7 +495,8 @@
                                             <span>瀏覽</span></a>
                                         <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
-                                        <a href="" class="link notice" title="刪除" data-toggle="modal" data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
+                                        <a href="" class="link notice" title="刪除" data-toggle="modal"
+                                            data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
 
                                     </div>
@@ -501,7 +531,8 @@
                                             <span>瀏覽</span></a>
                                         <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
-                                        <a href="" class="link notice" title="刪除" data-toggle="modal" data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
+                                        <a href="" class="link notice" title="刪除" data-toggle="modal"
+                                            data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
 
                                     </div>
@@ -536,7 +567,8 @@
                                             <span>瀏覽</span></a>
                                         <a href="book-case-edit.html" class="link" title="編輯"><i class="fas fa-pen"></i>
                                             <span>編輯</span></a>
-                                        <a href="" class="link notice" title="刪除" data-toggle="modal" data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
+                                        <a href="" class="link notice" title="刪除" data-toggle="modal"
+                                            data-target="#modal-notify-delete"><i class="fas fa-trash-alt"></i>
                                             <span>刪除</span></a>
 
                                     </div>
@@ -576,7 +608,7 @@
                             </button>
                             <h2 class="modal-title" id="modal-notifyLabel2">系統通知</h2>
                         </div>
-                        <div class="modal-body">                            
+                        <div class="modal-body">
                             <p>您是否確定不申請此筆案件？</p>
                         </div>
                         <div class="modal-footer">
@@ -626,7 +658,7 @@
                             </button>
                             <h2 class="modal-title" id="modal-notifyLabel2">系統通知</h2>
                         </div>
-                        <div class="modal-body">                            
+                        <div class="modal-body">
                             <p>您是否確認要刪除此筆案件？</p>
                         </div>
                         <div class="modal-footer">

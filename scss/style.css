@@ -1,6 +1,6 @@
 @charset "UTF-8";
 * {
-  font-family: "微軟正黑體" !important;
+  font-family: "Noto Sans TC", sans-serif;
   box-sizing: border-box !important;
   /* Chrome, Safari, Edge, Opera */
   /* Firefox */
@@ -12,6 +12,11 @@
   text-align: justify;
 }
 @media (max-width: 1550px) {
+  * .container {
+    max-width: 1280px;
+  }
+}
+@media (max-width: 1280px) {
   * .container {
     max-width: 1140px;
   }
@@ -84,6 +89,9 @@
   text-align: justify;
   word-wrap: break-word;
   word-break: break-all;
+}
+* .caption {
+  font-size: 0.875rem;
 }
 * .ellipsis {
   width: 100%;
@@ -523,6 +531,36 @@
 * button.brown,
 * .button.brown {
   background-color: #280101;
+  color: white;
+}
+* button.green,
+* .button.green {
+  background-color: #148248;
+  color: white;
+}
+* button.red,
+* .button.red {
+  background-color: #da382d;
+  color: white;
+}
+* button.default,
+* .button.default {
+  background-color: #88670c;
+  color: white;
+}
+* button.darkBlue,
+* .button.darkBlue {
+  background-color: #0b3259;
+  color: white;
+}
+* button.purple,
+* .button.purple {
+  background-color: #90689c;
+  color: white;
+}
+* button.blue,
+* .button.blue {
+  background-color: #596b91;
   color: white;
 }
 * .button-outline {
@@ -3157,10 +3195,21 @@ body .table-default tr th {
   background-color: #d0b66c;
   color: #280101;
 }
+@media (max-width: 1550px) {
+  body .table-default tr th {
+    padding: 12px 8px;
+  }
+}
 @media (max-width: 568px) {
   body .table-default tr th.ellipsis-th {
     width: 100%;
   }
+}
+body .table-default tr th .check-all {
+  color: #280101;
+  border: solid 1px;
+  border-radius: 4px;
+  padding: 0 4px;
 }
 body .table-default tr td {
   color: #595757;
@@ -3170,6 +3219,11 @@ body .table-default tr td {
   text-overflow: ellipsis;
   overflow: hidden;
   padding: 24px 16px;
+}
+@media (max-width: 1550px) {
+  body .table-default tr td {
+    padding: 12px 8px;
+  }
 }
 @media (max-width: 568px) {
   body .table-default tr td {
@@ -3326,6 +3380,11 @@ body .mb-separate tr th {
   color: #280101;
   text-align: left;
   padding: 12px 16px;
+}
+@media (max-width: 1550px) {
+  body .mb-separate tr th {
+    padding: 12px 8px;
+  }
 }
 @media (max-width: 568px) {
   body .mb-separate tr td {
@@ -5057,7 +5116,7 @@ body main .content-signup.book h2 {
 }
 @media (max-width: 1550px) {
   body main .content-signup.book h2 {
-    max-width: 1140px;
+    max-width: 1280px;
   }
 }
 @media (max-width: 1024px) {

@@ -41,7 +41,7 @@
 }
 // 通用
 @mixin all() {
-    font-family: "微軟正黑體" !important;
+    font-family: "Noto Sans TC", sans-serif;
     box-sizing: border-box !important;
     .container {
         max-width: 1530px;
@@ -49,6 +49,9 @@
         padding: $p-S 0;
         text-align: justify;
         @include web-XL {
+            max-width: 1280px;
+        }
+        @include web-M {
             max-width: 1140px;
         }
         @include web-S {
@@ -114,6 +117,9 @@
         text-align: justify;
         word-wrap: break-word;
         word-break: break-all;
+    }
+    .caption {
+        font-size: $size-caption;
     }
     .ellipsis {
         width: 100%;
@@ -588,6 +594,30 @@
         }
         &.brown {
             background-color: $primary-dark;
+            color: white;
+        }
+        &.green {
+            background-color: $export;
+            color: white;
+        }
+        &.red {
+            background-color: $notice;
+            color: white;
+        }
+        &.default {
+            background-color: $primary-default;
+            color: white;
+        }
+        &.darkBlue {
+            background-color: $secondary;
+            color: white;
+        }
+        &.purple {
+            background-color: $auction;
+            color: white;
+        }
+        &.blue {
+            background-color: $book;
             color: white;
         }
     }
@@ -3109,10 +3139,20 @@
                 padding: $m-XS $p-XS;
                 background-color: $primary-bg;
                 color: $primary-dark;
+                @include web-XL {
+                    padding: $m-XS $p-XXS;
+                }
                 &.ellipsis-th {
                     @include mobile-L() {
                         width: 100%;
                     }
+                }
+                .check-all {
+                    color: $primary-dark;
+                    border: solid 1px;
+                    border-radius: 4px;
+                    padding: 0 4px;
+                    // border-bottom: solid 1px $primary-dark;
                 }
             }
             td {
@@ -3123,6 +3163,9 @@
                 text-overflow: ellipsis;
                 overflow: hidden;
                 padding: $p-S $p-XS;
+                @include web-XL {
+                    padding: $m-XS $p-XXS;
+                }
                 @include mobile-L {
                     flex-wrap: wrap;
                     text-align: left;
@@ -3275,6 +3318,9 @@
                 color: $primary-dark;
                 text-align: left;
                 padding: $m-XS $p-XS;
+                @include web-XL {
+                    padding: $m-XS $p-XXS;
+                }
             }
             td {
                 @include mobile-L {
