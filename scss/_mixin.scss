@@ -120,6 +120,7 @@
     }
     .caption {
         font-size: $size-caption;
+        font-weight: bold ;
     }
     .ellipsis {
         width: 100%;
@@ -215,6 +216,9 @@
     h6,
     legend {
         font-weight: bold;
+    }
+    .caption {
+        font-size: $size-caption;
     }
     ::selection {
         color: white;
@@ -833,13 +837,15 @@
                             flex-wrap: wrap;
                             margin-bottom: $m-XS;
                         }
+
                         label {
-                            width: 40%;
+                            width: 45%;
                             font-size: $size-h5;
                             line-height: 1.5;
                             font-weight: bold;
                             color: black;
                             margin: 0;
+                            padding-right: $p-XS;
                             @include mobile-L() {
                                 width: 100%;
                             }
@@ -847,7 +853,7 @@
                         input,
                         select,
                         textarea {
-                            width: 60%;
+                            width: 55%;
                             @include mobile-L() {
                                 width: 100%;
                             }
@@ -1175,6 +1181,7 @@
                                     height: 20px;
                                 }
                                 label {
+                                    padding-right: $p-XS;
                                     @include mobile-L() {
                                         font-size: $size-p;
                                     }

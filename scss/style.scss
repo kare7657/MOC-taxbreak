@@ -1041,6 +1041,8 @@ body {
                         margin-bottom: 0;
                     }
                     .btn-gp {
+                        display: flex;
+                        margin-top: $m-S;
                         button {
                             margin-right: $p-XXS;
                             @include mobile-L {

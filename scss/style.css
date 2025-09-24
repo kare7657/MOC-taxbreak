@@ -92,6 +92,7 @@
 }
 * .caption {
   font-size: 0.875rem;
+  font-weight: bold;
 }
 * .ellipsis {
   width: 100%;
@@ -184,6 +185,9 @@
 * h6,
 * legend {
   font-weight: bold;
+}
+* .caption {
+  font-size: 0.875rem;
 }
 * ::-moz-selection {
   color: white;
@@ -800,12 +804,13 @@
   }
 }
 * .modal-template .modal-dialog .modal-content .modal-body .form-gp label {
-  width: 40%;
+  width: 45%;
   font-size: 1.25rem;
   line-height: 1.5;
   font-weight: bold;
   color: black;
   margin: 0;
+  padding-right: 16px;
 }
 @media (max-width: 568px) {
   * .modal-template .modal-dialog .modal-content .modal-body .form-gp label {
@@ -815,7 +820,7 @@
 * .modal-template .modal-dialog .modal-content .modal-body .form-gp input,
 * .modal-template .modal-dialog .modal-content .modal-body .form-gp select,
 * .modal-template .modal-dialog .modal-content .modal-body .form-gp textarea {
-  width: 60%;
+  width: 55%;
 }
 @media (max-width: 568px) {
   * .modal-template .modal-dialog .modal-content .modal-body .form-gp input,
@@ -1164,6 +1169,9 @@
 * .modal-template .modal-dialog .modal-content .modal-body .iframe-gp .form-gp .item input[type=checkbox] {
   width: 20px;
   height: 20px;
+}
+* .modal-template .modal-dialog .modal-content .modal-body .iframe-gp .form-gp .item label {
+  padding-right: 16px;
 }
 @media (max-width: 568px) {
   * .modal-template .modal-dialog .modal-content .modal-body .iframe-gp .form-gp .item label {
@@ -4837,6 +4845,10 @@ body main .content-signup form .info {
 }
 body main .content-signup form .info .type-title {
   margin-bottom: 0;
+}
+body main .content-signup form .info .btn-gp {
+  display: flex;
+  margin-top: 20px;
 }
 body main .content-signup form .info .btn-gp button {
   margin-right: 8px;
