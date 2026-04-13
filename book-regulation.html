@@ -54,8 +54,8 @@
                                 <td data-title="相關網址">
                                     <div class="function">
                                         <a class="button-outline"
-                                            href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0170008" target="_blank"
-                                            title="[另開連結]文化藝術事業減免營業稅及娛樂稅辦法">
+                                            href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0170008"
+                                            target="_blank" title="[另開連結]文化藝術事業減免營業稅及娛樂稅辦法">
                                             <i class="fas fa-external-link-alt"></i>前往
                                         </a>
                                     </div>
@@ -68,8 +68,8 @@
                                 <td data-title="相關網址">
                                     <div class="function">
                                         <a class="button-outline"
-                                            href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340085" target="_blank"
-                                            title="[另開連結]兼營營業人營業稅額計算辦法">
+                                            href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340085"
+                                            target="_blank" title="[另開連結]兼營營業人營業稅額計算辦法">
                                             <i class="fas fa-external-link-alt"></i>前往
                                         </a>
                                     </div>
@@ -81,8 +81,8 @@
                                 <td data-title="相關網址">
                                     <div class="function">
                                         <a class="button-outline"
-                                            href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340080" target="_blank"
-                                            title="[另開連結]加值型及非加值型營業稅法">
+                                            href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340080"
+                                            target="_blank" title="[另開連結]加值型及非加值型營業稅法">
                                             <i class="fas fa-external-link-alt"></i>前往
                                         </a>
                                     </div>
@@ -93,15 +93,22 @@
                     <div class="bottom">
                         <div class="pagination">
                             <ul>
-                                <li><a href=""><i class="fas fa-angle-double-left"></i></a></li>
-                                <li><a href=""><i class="fas fa-angle-left"></i></a></li>
+                                <li><a href="" aria-label="回到第一頁"><i class="fas fa-angle-double-left"
+                                            aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="" aria-label="上一頁"><i class="fas fa-angle-left" aria-hidden="true"></i></a>
+                                </li>
                                 <li><a href="" class="active">1</a></li>
                                 <li><a href="">2</a></li>
                                 <li><a href="">3</a></li>
                                 <li><a href="">4</a></li>
                                 <li><a href="">5</a></li>
-                                <li><a href=""><i class="fas fa-angle-right"></i></a></li>
-                                <li><a href=""><i class="fas fa-angle-double-right"></i></a></li>
+                                <li><a href="" aria-label="下一頁"><i class="fas fa-angle-right"
+                                            aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="" aria-label="跳到最後一頁"><i class="fas fa-angle-double-right"
+                                            aria-hidden="true"></i></a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -188,8 +195,8 @@
     <!-- bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
 
-     <!-- 引入html header&footer -->
-     <script>
+    <!-- 引入html header&footer -->
+    <script>
         $(function () {
             $("#header").load('book-header.html', function () {
                 // header 載入完成後，綁定事件

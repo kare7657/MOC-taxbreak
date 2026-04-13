@@ -1243,6 +1243,7 @@
         ul {
             margin: 0;
             padding: 0 !important;
+            display: flex;
             @include mobile-L {
                 display: flex;
                 flex-wrap: wrap;
@@ -1259,12 +1260,12 @@
                     margin-bottom: $p-XXS;
                 }
                 a {
-                    display: inline;
+                    display: block;
                     padding: $m-XXS $m-XS;
                     border: solid 1px rgba($color: $primary-tint, $alpha: 0.5);
-                    margin: -2px;
+                    margin: 0;
                     font-size: $size-p;
-                    line-height: 2;
+                    line-height: 1.75;
                     color: $primary-default;
                     @include mobile-L() {
                         padding: $p-XXS $m-XS;

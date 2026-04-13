@@ -2,8 +2,6 @@
 * {
   font-family: "Noto Sans TC", sans-serif;
   box-sizing: border-box !important;
-  /* Chrome, Safari, Edge, Opera */
-  /* Firefox */
 }
 * .container {
   max-width: 1530px;
@@ -218,10 +216,16 @@
 * input[type=search]::-webkit-search-results-decoration {
   display: none;
 }
+* {
+  /* Chrome, Safari, Edge, Opera */
+}
 * input[type=number]::-webkit-outer-spin-button,
 * input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+* {
+  /* Firefox */
 }
 * input[type=number] {
   -moz-appearance: textfield;
@@ -729,12 +733,14 @@
 * .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default tbody tr.month {
   position: sticky;
   top: 20px;
-  z-index: 10;
 }
 @media (max-width: 320px) {
   * .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default tbody tr.month {
     top: 36px;
   }
+}
+* .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default tbody tr.month {
+  z-index: 10;
 }
 * .modal-template .modal-dialog .modal-content .modal-body.session-table .table-default tbody tr.month th {
   text-align: left;
@@ -1236,6 +1242,7 @@
 * .pagination ul {
   margin: 0;
   padding: 0 !important;
+  display: flex;
 }
 @media (max-width: 568px) {
   * .pagination ul {
@@ -1260,12 +1267,12 @@
   }
 }
 * .pagination ul li a {
-  display: inline;
+  display: block;
   padding: 4px 12px;
   border: solid 1px rgba(170, 142, 65, 0.5);
-  margin: -2px;
+  margin: 0;
   font-size: 1rem;
-  line-height: 2;
+  line-height: 1.75;
   color: #88670c;
 }
 @media (max-width: 568px) {
@@ -1312,8 +1319,6 @@ body {
   padding: 0;
   padding-right: 0 !important;
   position: relative;
-  /* datepicker日期 */
-  /* 跳到主要內容區塊 */
 }
 @media (max-width: 320px) {
   body {
@@ -3636,6 +3641,9 @@ body .searchbar .btn-gp button:first-child {
     width: 100%;
   }
 }
+body {
+  /* datepicker日期 */
+}
 body .ui-widget-header .ui-icon {
   display: none !important;
 }
@@ -3735,6 +3743,9 @@ body td.highlight a {
 body .ui-datepicker td a {
   text-align: center;
   cursor: default !important;
+}
+body {
+  /* 跳到主要內容區塊 */
 }
 body .for_accessibility .go-main {
   position: absolute;

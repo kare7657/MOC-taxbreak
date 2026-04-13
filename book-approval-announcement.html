@@ -63,13 +63,13 @@
                                     <label for="start-date">認可日期</label>
                                     <div class="date-gp date-icon">
                                         <input type="text" class="mb-nokeyboard western-date" id="start-date"
-                                            data-toggle="datepicker" placeholder="請選擇開始日期" readonly>
+                                            data-toggle="datepicker" placeholder="請選擇開始日期" aria-label="認可開始日期" readonly>
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class="date-gp date-icon">
                                         <input type="text" class="mb-nokeyboard western-date" id="end-date"
-                                            data-toggle="datepicker" placeholder="請選擇結束日期">
+                                            data-toggle="datepicker" placeholder="請選擇結束日期" aria-label="認可結束日期">
                                     </div>
                                 </div>
                                 <div class="item">
@@ -79,7 +79,7 @@
                             </div>
                             <div class="search-gp">
                                 <div class="search-icon">
-                                    <input type="search" placeholder="搜尋關鍵字">
+                                    <input type="search" placeholder="搜尋關鍵字" aria-label="搜尋關鍵字">
                                 </div>
                                 <button type="button">搜尋</button>
                                 <button type="button" class="button-outline">清除</button>
@@ -362,15 +362,21 @@
                         <div class="bottom">
                             <div class="pagination">
                                 <ul>
-                                    <li><a href=""><i class="fas fa-angle-double-left"></i></a></li>
-                                    <li><a href=""><i class="fas fa-angle-left"></i></a></li>
+                                    <li><a href="" aria-label="回到第一頁"><i class="fas fa-angle-double-left"
+                                                aria-hidden="true"></i></a>
+                                    </li>
+                                    <li><a href="" aria-label="上一頁"><i class="fas fa-angle-left"
+                                                aria-hidden="true"></i></a></li>
                                     <li><a href="" class="active">1</a></li>
                                     <li><a href="">2</a></li>
                                     <li><a href="">3</a></li>
                                     <li><a href="">4</a></li>
                                     <li><a href="">5</a></li>
-                                    <li><a href=""><i class="fas fa-angle-right"></i></a></li>
-                                    <li><a href=""><i class="fas fa-angle-double-right"></i></a></li>
+                                    <li><a href="" aria-label="下一頁"><i class="fas fa-angle-right"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a href="" aria-label="跳到最後一頁"><i class="fas fa-angle-double-right"
+                                                aria-hidden="true"></i></a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
