@@ -120,7 +120,7 @@
     }
     .caption {
         font-size: $size-caption;
-        font-weight: bold ;
+        font-weight: bold;
     }
     .ellipsis {
         width: 100%;
@@ -153,46 +153,66 @@
     }
     //無障礙框線
     :focus {
-        outline: #fcd256 dotted 3px !important;
+        outline: $focus dotted 3px !important;
+        outline-offset: 2px;
     }
     :focus > :focus-within {
-        outline: #fcd256 dotted 3px !important;
+        outline: $focus dotted 3px !important;
     }
     #AU {
         position: absolute;
-        left: -9999px;
-        font-size: $size-h5;
         color: transparent;
+        // top: 0;
+        // left: 5%;
+        font-size: $size-h5;
         margin: 0 $m-XS;
+        transform: translateY(-200%);
+        left: 0;
+        padding: 2px 8px;
+        color: $primary-default;
+        transition: transform 0.2s;
         &:focus {
-            color: $primary-tint;
-            left: 0;
+            transform: translateY(0);
         }
     }
     #AC {
         position: absolute;
         left: 7%;
+        top: 18px;
         font-size: $size-h5;
-        color: $bk-20;
+        color: $primary-default;
         margin: 0 $m-XS;
-        color: transparent;
         &:focus {
-            color: $primary-tint;
+            color: $focus;
+        }
+        @include web-XL {
+            left: 5%;
         }
         @include web-L() {
-            left: -10px;
+            top: 0;
+        }
+        @include web-M() {
+            top: 18px;
+        }
+        @include web-S {
+            top: 0;
+        }
+        @include pad {
+            left: 0;
+            top: 6px;
         }
     }
     #AZ {
+        color: $primary-dark;
+        padding: $m-XXS $p-XXS;
         &:focus {
             position: absolute;
             left: 0;
-            font-size: $size-h5;
-            color: $bk-20;
-            margin: 0 $m-XS;
-            color: white;
+            font-size: $size-p;
+            color: $focus;
         }
     }
+
     // 讓內容對視覺使用者隱藏、但螢幕閱讀器仍可讀
     .sr-only {
         position: absolute;
@@ -1404,20 +1424,20 @@
                         align-items: center;
                         ul {
                             margin: 0;
-                            padding: 0 $p-XXS;
-                            background-color: $primary-dark;
-                            color: white;
-                            border-radius: 4px;
-                            font-size: $size-h5;
+                            padding: 0;
                             li {
                                 display: inline;
                                 color: inherit;
                                 a {
-                                    padding: 0 $p-XXS;
                                     line-height: 40px;
                                     margin: 0;
-                                    color: inherit;
                                     font-weight: bold;
+                                    padding: 0 $p-XS;
+                                    background-color: $primary-dark;
+                                    color: white;
+                                    border-radius: 4px;
+                                    font-size: $size-h5;
+                                    display: inline-block;
                                     i {
                                         margin-right: $p-XXS;
                                     }
@@ -1858,6 +1878,7 @@
                         margin-top: $m-XS;
                     }
                     .accessibility {
+                        color: initial !important;
                         img {
                             width: 113px;
                             max-height: 40px;
@@ -2017,7 +2038,7 @@
         bottom: 30px;
         border-radius: 50%;
         font-size: $size-h4;
-        color: $primary-tint;
+        color: $primary-dark;
         line-height: 45px;
         text-align: center;
         @include web-S() {
@@ -2025,7 +2046,7 @@
             bottom: 25px;
         }
         @include mobile-L() {
-            background-color: rgba($color: $primary-tint, $alpha: 1);
+            background-color: rgba($color: $primary-dark, $alpha: 1);
             color: white;
         }
         @include mobile-XS() {
@@ -2045,15 +2066,18 @@
         padding: 0;
         margin: 0;
         margin-bottom: $m-M;
+        @include web-L() {
+            padding-left: 80px;
+        }
         @include web-S {
-            margin-top: $p-XS;
+            padding-left: 40px;
+            margin-top: $p-XXS;
         }
         @include pad() {
-            margin-top: 0;
             padding: $m-XXS 0;
         }
         @include mobile-L() {
-            padding: $p-XXS 0;
+            padding-left: $p-S;
         }
         .container {
             padding: 0;

@@ -63,10 +63,11 @@ body {
         background-position: center top;
     }
     .acc-info {
-        color: black;
-        margin-bottom: $m-S;
+        color: $primary-default;
+        margin-bottom: $p-S;
+        font-weight: bold;
         i {
-            margin-right: $p-XXS;
+            margin-right: $m-XXS;
         }
     }
     main {
@@ -79,7 +80,7 @@ body {
         min-height: 747px;
         width: 100%;
         @include web-XL {
-            min-height: unset;
+            min-height: 65vh;
         }
         @include web-S {
             padding-top: 123px;
@@ -127,7 +128,7 @@ body {
         }
         &.fixpt {
             padding-top: 24px;
-            @include mobile-L {
+            @include web-S {
                 padding-top: 0;
             }
         }
