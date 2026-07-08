@@ -47,7 +47,7 @@
                 <form class="view">
                     <div class="alert alert-warning alert-dismissible fade show" role="alert">
                         請先確認以下資料是否為需撤回案件，並至底端填寫「案件撤回原因」
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -136,14 +136,14 @@
                                         <label for="start-date">開始日期</label>
                                         <div class="date-gp date-icon">
                                             <input type="text" class="mb-nokeyboard western-date date-icon"
-                                                id="start-date" data-toggle="datepicker" placeholder="2023-09-01">
+                                                id="start-date" data-bs-toggle="datepicker" placeholder="2023-09-01">
                                         </div>
                                     </div>
                                     <div class="item">
                                         <label for="end-date">結束日期</label>
                                         <div class="date-gp date-icon">
                                             <input type="text" class="mb-nokeyboard western-date date-icon"
-                                                id="end-date" data-toggle="datepicker" placeholder="2023-10-25">
+                                                id="end-date" data-bs-toggle="datepicker" placeholder="2023-10-25">
                                         </div>
                                     </div>
                                 </div>
@@ -151,7 +151,7 @@
                                     <label for="session">場次</label>
                                     <div class="session">
                                         <input type="number" name="session" id="session" placeholder="20">
-                                        <a href="" class="add" data-toggle="modal" data-target="#modal-session"><i
+                                        <a href="" class="add" data-bs-toggle="modal" data-bs-target="#modal-session"><i
                                                 class="fas fa-search"></i>場次明細</a>
                                     </div>
                                 </div>
@@ -271,7 +271,7 @@
                 <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                             <h2 class="modal-title" id="modal-sessionLabel">編輯場次</h2>
@@ -751,7 +751,7 @@
 
                         </div>
                         <div class="modal-footer">
-                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+                            <button type="button" name="cancel" id="cancel" data-bs-dismiss="modal">取消</button>
                             <button type="submit" name="go" id="go">確認</button>
 
                         </div>
@@ -768,7 +768,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                             <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>

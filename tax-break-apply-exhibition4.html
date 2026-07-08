@@ -57,7 +57,7 @@
                 <form class="card">
                     <div class="alert alert-warning alert-dismissible fade show" role="alert">
                         請檢視下列資料是否正確，並點選「確定提交申請」
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -113,14 +113,14 @@
                                         <label for="start-date">開始日期</label>
                                         <div class="date-gp date-icon">
                                             <input type="text" class="mb-nokeyboard western-date date-icon"
-                                                id="start-date" data-toggle="datepicker">
+                                                id="start-date" data-bs-toggle="datepicker">
                                         </div>
                                     </div>
                                     <div class="item">
                                         <label for="end-date">結束日期</label>
                                         <div class="date-gp date-icon">
                                             <input type="text" class="mb-nokeyboard western-date date-icon"
-                                                id="end-date" data-toggle="datepicker">
+                                                id="end-date" data-bs-toggle="datepicker">
                                         </div>
                                     </div>
                                 </div>
@@ -245,7 +245,7 @@
                         <input type="button" value="暫存" class="outline">
                         <input type="button" value="上一步" class="outline"
                             onclick="location.href='tax-break-apply-exhibition3.html'">
-                        <input type="button" value="確定提交申請" data-toggle="modal" data-target="#modal-notify2">
+                        <input type="button" value="確定提交申請" data-bs-toggle="modal" data-bs-target="#modal-notify2">
                     </div>
                 </form>
             </div>
@@ -259,7 +259,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                             <h2 class="modal-title" id="modal-notifyLabel2">申請完成</h2>
@@ -281,7 +281,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" name="cancel" id="cancel" data-dismiss="modal"
+                            <button type="button" name="cancel" id="cancel" data-bs-dismiss="modal"
                                 class="button-outline">結束</button>
                             <button type="submit" name="go" id="go2">需要申請分離課稅</button>
                         </div>

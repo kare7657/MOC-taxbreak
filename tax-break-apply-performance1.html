@@ -65,14 +65,14 @@
                         <div class="form-gp choice-btn">
                             <h5>類型<span class="notice">*</span></h5>
                             <div class="type-gp">
-                                <button type="button" class="button-outline active" data-toggle="modal"
-                                    data-target="#modal-notify-performance">表演</button>
-                                <button type="button" class="button-outline" data-toggle="modal"
-                                    data-target="#modal-notify-exhibition">展覽</button>
-                                <button type="button" class="button-outline" data-toggle="modal"
-                                    data-target="#modal-notify-screening">映演</button>
-                                <button type="button" class="button-outline" data-toggle="modal"
-                                    data-target="#modal-notify-auction">拍賣</button>
+                                <button type="button" class="button-outline active" data-bs-toggle="modal"
+                                    data-bs-target="#modal-notify-performance">表演</button>
+                                <button type="button" class="button-outline" data-bs-toggle="modal"
+                                    data-bs-target="#modal-notify-exhibition">展覽</button>
+                                <button type="button" class="button-outline" data-bs-toggle="modal"
+                                    data-bs-target="#modal-notify-screening">映演</button>
+                                <button type="button" class="button-outline" data-bs-toggle="modal"
+                                    data-bs-target="#modal-notify-auction">拍賣</button>
                             </div>
                         </div>
                         <div class="form-gp">
@@ -148,10 +148,10 @@
                                             <option value="list2">項目2</option>
                                             <option value="list3">項目3</option>
                                         </select>
-                                        <!-- <a href="" class="add" data-toggle="modal" data-target="#modal-place"><i
+                                        <!-- <a href="" class="add" data-bs-toggle="modal" data-bs-target="#modal-place"><i
                                                 class="fas fa-plus-circle"></i>新增地點</a> -->
-                                        <button type="button" class="add" data-toggle="modal"
-                                            data-target="#modal-place"><i class="fas fa-plus-circle"></i>新增地點</button>
+                                        <button type="button" class="add" data-bs-toggle="modal"
+                                            data-bs-target="#modal-place"><i class="fas fa-plus-circle"></i>新增地點</button>
                                     </div>
                                 </div>
                                 <div class="form-gp datetime">
@@ -159,14 +159,14 @@
                                         <label for="start-date">開始日期</label>
                                         <div class="date-gp date-icon">
                                             <input type="text" class="mb-nokeyboard western-date" id="start-date"
-                                                data-toggle="datepicker" placeholder="請選擇開始日期" readonly>
+                                                data-bs-toggle="datepicker" placeholder="請選擇開始日期" readonly>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <label for="end-date">結束日期</label>
                                         <div class="date-gp date-icon">
                                             <input type="text" class="mb-nokeyboard western-date" id="end-date"
-                                                data-toggle="datepicker" placeholder="請選擇結束日期">
+                                                data-bs-toggle="datepicker" placeholder="請選擇結束日期">
                                         </div>
                                     </div>
                                 </div>
@@ -174,10 +174,10 @@
                                     <label for="session">場次</label>
                                     <div class="session">
                                         <input type="number" name="session" id="session" disabled placeholder="點選編輯場次">
-                                        <!-- <a href="" class="add" data-toggle="modal" data-target="#modal-session"><i
+                                        <!-- <a href="" class="add" data-bs-toggle="modal" data-bs-target="#modal-session"><i
                                                 class="fas fa-pen"></i>編輯場次</a> -->
-                                        <button type="button" class="add" data-toggle="modal"
-                                            data-target="#modal-session"><i class="fas fa-pen"></i>編輯場次</button>
+                                        <button type="button" class="add" data-bs-toggle="modal"
+                                            data-bs-target="#modal-session"><i class="fas fa-pen"></i>編輯場次</button>
 
                                     </div>
                                     <p class="notice">※ 請先選擇開始日期與結束日期</p>
@@ -256,8 +256,8 @@
                         <div class="item">
                             <input type="checkbox" value="" id="private-agree">
                             <label for="private-agree">
-                                <span>我同意</span> <a href="#" target="_blank" data-toggle="modal"
-                                    data-target="#modal-clause-taxBreak">線上申請同意條款</a><span class="notice">*</span>
+                                <span>我同意</span> <a href="#" target="_blank" data-bs-toggle="modal"
+                                    data-bs-target="#modal-clause-taxBreak">線上申請同意條款</a><span class="notice">*</span>
                             </label>
                         </div>
                     </div> -->
@@ -277,7 +277,7 @@
                 <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                             <h2 class="modal-title" id="modal-sessionLabel">編輯場次</h2>
@@ -757,7 +757,7 @@
 
                         </div>
                         <div class="modal-footer">
-                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+                            <button type="button" name="cancel" id="cancel" data-bs-dismiss="modal">取消</button>
                             <button type="submit" name="go" id="go">確認</button>
 
                         </div>
@@ -773,7 +773,7 @@
                 <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                             <h2 class="modal-title" id="modal-placeLabel">新增地點</h2>
@@ -809,7 +809,7 @@
 
                         </div>
                         <div class="modal-footer">
-                            <button type="button" name="cancel" id="cancel2" data-dismiss="modal">取消</button>
+                            <button type="button" name="cancel" id="cancel2" data-bs-dismiss="modal">取消</button>
                             <button type="submit" name="go" id="go2">確認</button>
 
                         </div>
@@ -825,7 +825,7 @@
                 <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button> -->
                             <h2 class="modal-title" id="modal-clauseLabel">線上申請同意條款</h2>
@@ -844,7 +844,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" name="cancel" id="cancel4" data-dismiss="modal">下一步</button>
+                            <button type="button" name="cancel" id="cancel4" data-bs-dismiss="modal">下一步</button>
 
                         </div>
                     </div>
@@ -859,7 +859,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                             <h2 class="modal-title" id="modal-notifyLabel">系統通知</h2>
@@ -870,7 +870,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" name="cancel" id="cancel3" data-dismiss="modal">取消</button>
+                            <button type="button" name="cancel" id="cancel3" data-bs-dismiss="modal">取消</button>
                             <button type="button" name="go" id="go3"
                                 onclick="location.href='tax-break-apply-performance1.html'">確認</button>
                         </div>
@@ -886,7 +886,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                             <h2 class="modal-title" id="modal-notifyLabel2">系統通知</h2>
@@ -897,7 +897,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" name="cancel" id="cancel5" data-dismiss="modal">取消</button>
+                            <button type="button" name="cancel" id="cancel5" data-bs-dismiss="modal">取消</button>
                             <button type="button" name="go" id="go5"
                                 onclick="location.href='tax-break-apply-exhibition1.html'">確認</button>
                         </div>
@@ -913,7 +913,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                             <h2 class="modal-title" id="modal-notifyLabel3">系統通知</h2>
@@ -924,7 +924,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" name="cancel" id="cancel6" data-dismiss="modal">取消</button>
+                            <button type="button" name="cancel" id="cancel6" data-bs-dismiss="modal">取消</button>
                             <button type="button" name="go" id="go6"
                                 onclick="location.href='tax-break-apply-screening1.html'">確認</button>
                         </div>
@@ -940,7 +940,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                             <h2 class="modal-title" id="modal-notifyLabel4">系統通知</h2>
@@ -951,7 +951,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" name="cancel" id="cancel7" data-dismiss="modal">取消</button>
+                            <button type="button" name="cancel" id="cancel7" data-bs-dismiss="modal">取消</button>
                             <button type="button" name="go" id="go7"
                                 onclick="location.href='tax-break-apply-auction1.html'">確認</button>
                         </div>
